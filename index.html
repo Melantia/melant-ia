@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MELANT IA — Productividad Agrícola Inteligente</title>
+  <meta name="theme-color" content="#0C1A0E">
+  <meta name="description" content="Asistente Técnico Rural con IA offline, tienda agrícola y Agricultura Regenerativa.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0C1A0E;
+      --bg-surface: #122416;
+      --bg-card: #182E1C;
+      --bg-hover: #1F3A24;
+      --bg-input: #0F1F13;
+      --fg: #EDE8D5;
+      --fg-dim: #C4BFA8;
+      --fg-muted: #7B8F7D;
+      --accent: #D4A017;
+      --accent-glow: rgba(212,160,23,0.25);
+      --accent-soft: rgba(212,160,23,0.1);
+      --green: #4ADE80;
+      --green-dim: #22C55E;
+      --green-soft: rgba(74,222,128,0.12);
+      --orange: #F59E0B;
+      --cyan: #06B6D4;
+      --cyan-soft: rgba(6,182,212,0.12);
+      --rose: #F43F5E;
+      --rose-soft: rgba(244,63,94,0.12);
+      --violet: #A78BFA;
+      --violet-soft: rgba(167,139,250,0.12);
+      --danger: #EF4444;
+      --border: rgba(255,255,255,0.06);
+      --border-light: rgba(255,255,255,0.1);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+      --shadow: 0 8px 32px rgba(0,0,0,0.4);
+      --ease: cubic-bezier(0.4,0,0.2,1);
+    }
+    ,::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    body{
+font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;}
+    h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;}
+    input,select,textarea,button{font-family:inherit;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:transparent;}
+    ::-webkit-scrollbar-thumb{background:var(--border-light);border-radius:4px;}
+
+    /* ═══ FONDO ═══ */
+    .bg-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+    .bg-ambient .orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.25;animation:orbDrift 25s ease-in-out infinite alternate;}
+    .bg-ambient .orb:nth-child(1){width:400px;height:400px;background:#1a5c2a;top:-15%;left:-10%;}
+    .bg-ambient .orb:nth-child(2){width:300px;height:300px;background:var(--accent);bottom:-10%;right:-5%;animation-delay:-8s;animation-duration:20s;}
+    .bg-ambient .orb:nth-child(3){width:200px;height:200px;background:var(--green);top:40%;left:60%;animation-delay:-15s;animation-duration:30s;opacity:0.12;}
+    @keyframes orbDrift{0%{transform:translate(0,0) scale(1);}50%{transform:translate(40px,-30px) scale(1.1);}100%{transform:translate(-20px,20px) scale(0.95);}}
+
+    /* ═══ SPLASH ═══ */
+    #splash{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s var(--ease),visibility 0.6s;}
+    #splash.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+    .splash-icon{width:72px;height:72px;position:relative;margin-bottom:20px;}
+    .splash-leaf{width:72px;height:72px;background:var(--accent);border-radius:4px 72px 4px 72px;transform:rotate(-15deg);animation:leafPop 0.8s var(--ease) both;box-shadow:0 0 40px var(--accent-glow);}
+    .splash-leaf::after{content:'';position:absolute;width:2px;height:50px;background:var(--fg-muted);top:60px;left:50%;transform:translateX(-50%);border-radius:2px;animation:stemGrow 0.6s var(--ease) 0.4s both;}
+    @keyframes leafPop{from{transform:rotate(-15deg) scale(0);opacity:0;}to{transform:rotate(-15deg) scale(1);opacity:1;}}
+    @keyframes stemGrow{from{height:0;}to{height:50px;}}
+    .splash-title{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;letter-spacing:3px;margin-bottom:6px;}
+    .splash-title span{color:var(--accent);}
+    .splash-sub{font-size:13px;color:var(--fg-muted);letter-spacing:1px;margin-bottom:32px;}
+    .splash-bar{width:180px;height:3px;background:var(--border-light);border-radius:3px;overflow:hidden;}
+    .splash-bar::after{content:'';display:block;width:35%;height:100%;background:var(--accent);border-radius:3px;animation:barSlide 1s ease infinite;}
+    @keyframes barSlide{0%{transform:translateX(-120%);}100%{transform:translateX(400%);}}
+
+    /* ═══ AUTH ═══ */
+    #authScreen{position:fixed;inset:0;z-index:800;background:var(--bg);display:none;overflow-y:auto;}
+    #authScreen.show{display:flex;}
+    .auth-layout{display:flex;min-height:100vh;min-height:100dvh;width:100%;}
+    .auth-brand{flex:1;background:linear-gradient(160deg,#0f2b15 0%,#1a4025 50%,#0f2b15 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;position:relative;overflow:hidden;}
+    .auth-brand::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(212,160,23,0.08) 0%,transparent 60%);}
+    .auth-brand-icon{width:100px;height:100px;background:var(--accent);border-radius:6px 100px 6px 100px;transform:rotate(-15deg);margin-bottom:28px;box-shadow:0 0 60px var(--accent-glow);animation:leafFloat 4s ease-in-out infinite;}
+    @keyframes leafFloat{0%,100%{transform:rotate(-15deg) translateY(0);}50%{transform:rotate(-12deg) translateY(-8px);}}
+    .auth-brand h2{font-size:36px;font-weight:700;letter-spacing:4px;text-align:center;}
+    .auth-brand h2 span{color:var(--accent);}
+    .auth-brand p{color:var(--fg-muted);font-size:14px;margin-top:10px;text-align:center;max-width:280px;line-height:1.6;}
+    .auth-form-side{flex:1;display:flex;align-items:center;justify-content:center;padding:40px;}
+    .auth-form-box{width:100%;max-width:380px;}
+    .auth-tabs{display:flex;gap:4px;margin-bottom:28px;background:var(--bg-surface);border-radius:var(--radius-xs);padding:4px;}
+    .auth-tab{flex:1;padding:10px;text-align:center;border-radius:5px;border:none;background:none;color:var(--fg-muted);cursor:pointer;font-size:14px;font-weight:600;transition:all 0.3s var(--ease);}
+    .auth-tab.active{background:var(--accent);color:#0C1A0E;}
+    .auth-field{margin-bottom:16px;}
+    .auth-field label{display:block;font-size:12px;color:var(--fg-muted);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
+    .auth-field input{width:100%;padding:12px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--fg);font-size:15px;outline:none;transition:border 0.3s var(--ease),box-shadow 0.3s var(--ease);}
+    .auth-field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+    .auth-geo-toggle{display:flex;align-items:center;gap:10px;margin:20px 0;padding:12px 14px;background:var(--bg-input);border-radius:var(--radius-sm);border:1px solid var(--border);cursor:pointer;}
+    .auth-geo-toggle input[type="checkbox"]{display:none;}
+    .toggle-track{width:40px;height:22px;background:var(--border-light);border-radius:11px;position:relative;transition:background 0.3s;flex-shrink:0;}
+    .toggle-track::after{content:'';position:absolute;width:18px;height:18px;background:var(--fg);border-radius:50%;top:2px;left:2px;transition:transform 0.3s var(--ease);}
+    .auth-geo-toggle input:checked+.toggle-track{background:var(--green);}
+    .auth-geo-toggle input:checked+.toggle-track::after{transform:translateX(18px);background:#fff;}
+    .toggle-label{font-size:13px;color:var(--fg-dim);line-height:1.4;}
+    .toggle-label strong{color:var(--fg);display:block;font-size:14px;}
+    .auth-error{color:var(--danger);font-size:13px;margin-bottom:12px;display:none;}
+    .auth-error.show{display:block;}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--radius-sm);border:none;cursor:pointer;font-size:14px;font-weight:600;transition:all 0.3s var(--ease);width:100%;}
+    .btn-primary{background:var(--accent);color:#0C1A0E;box-shadow:0 0 20px var(--accent-glow);}
+    .btn-primary:hover{box-shadow:0 4px 28px var(--accent-glow);transform:translateY(-1px);}
+    .btn-primary:active{transform:translateY(0);}
+    .btn-green{background:var(--green-dim);color:#0C1A0E;box-shadow:0 0 20px rgba(34,197,94,0.25);}
+    .btn-green:hover{box-shadow:0 4px 28px rgba(34,197,94,0.3);transform:translateY(-1px);}
+    .btn-ghost{background:var(--bg-card);color:var(--fg);border:1px solid var(--border);}
+    .btn-ghost:hover{background:var(--bg-hover);}
+    .btn-danger{background:rgba(239,68,68,0.12);color:var(--danger);}
+    .btn-sm{padding:9px 18px;font-size:12px;width:auto;}
+
+    /* ═══ GEO-LOCK ═══ */
+    #geoLockScreen{position:fixed;inset:0;z-index:850;background:rgba(12,26,14,0.97);display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px;}
+    #geoLockScreen.show{display:flex;}
+    .geo-pin{width:80px;height:80px;border-radius:50%;background:rgba(239,68,68,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:24px;position:relative;}
+    .geo-pin i{font-size:32px;color:var(--danger);}
+    .geo-pin::after{content:'';position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(239,68,68,0.3);animation:geoPulse 2s ease infinite;}
+    @keyframes geoPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.3);opacity:0;}}
+    .geo-coords{font-family:'Space Grotesk',monospace;font-size:13px;color:var(--fg-muted);margin:12px 0 8px;}
+    .geo-distance{font-size:14px;color:var(--danger);font-weight:600;margin-bottom:28px;}
+
+    /* ═══ APP SHELL ═══ */
+    #appShell{display:none;position:relative;z-index:1;}
+    #appShell.show{display:flex;min-height:100vh;min-height:100dvh;}
+
+    .sidebar{width:250px;background:var(--bg-surface);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:20px 12px;position:fixed;top:0;left:0;bottom:0;z-index:100;transition:transform 0.35s var(--ease);}
+    .sidebar-logo{display:flex;align-items:center;gap:10px;padding:0 10px 20px;border-bottom:1px solid var(--border);margin-bottom:16px;}
+    .sidebar-logo .s-icon{width:34px;height:34px;background:var(--accent);border-radius:6px 34px 6px 34px;transform:rotate(-15deg);flex-shrink:0;}
+    .sidebar-logo span{font-family:'Space Grotesk';font-weight:700;font-size:18px;letter-spacing:2px;}
+    .sidebar-logo span em{color:var(--accent);font-style:normal;}
+    .nav-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--fg-muted);padding:10px 12px 6px;font-weight:600;}
+    .nav-item{display:flex;align-items:center;gap:11px;padding:11px 12px;border-radius:var(--radius-xs);cursor:pointer;font-size:13.5px;color:var(--fg-muted);transition:all 0.25s var(--ease);position:relative;font-weight:500;margin-bottom:2px;}
+    .nav-item:hover{background:var(--bg-hover);color:var(--fg);}
+    .nav-item.active{background:var(--accent-soft);color:var(--accent);}
+    .nav-item.active::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:18px;background:var(--accent);border-radius:0 3px 3px 0;}
+    .nav-item i{width:18px;text-align:center;font-size:14px;}
+    .sidebar-footer{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);}
+    .sidebar-user{display:flex;align-items:center;gap:10px;padding:10px 12px;}
+    .sidebar-avatar{width:34px;height:34px;border-radius:50%;background:var(--bg-card);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--accent);border:1px solid var(--border);}
+    .sidebar-user-info{flex:1;min-width:0;}
+    .sidebar-user-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .sidebar-user-finc{font-size:11px;color:var(--fg-muted);}
+    .btn-logout{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-xs);cursor:pointer;font-size:13px;color:var(--danger);background:none;border:none;width:100%;transition:background 0.25s;font-family:inherit;margin-top:6px;}
+    .btn-logout:hover{background:rgba(239,68,68,0.08);}
+    .btn-logout i{width:18px;text-align:center;}
+
+    .main-area{flex:1;margin-left:250px;display:flex;flex-direction:column;min-height:100vh;}
+
+    /* ═══ HEADER HOME ═══ */
+    .home-header{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .home-brand{display:flex;align-items:center;gap:10px;}
+    .home-brand-icon{width:36px;height:36px;background:var(--accent);border-radius:5px 36px 5px 36px;transform:rotate(-15deg);flex-shrink:0;box-shadow:0 0 16px var(--accent-glow);}
+    .home-brand h1{font-size:20px;font-weight:700;letter-spacing:2px;}
+    .home-brand h1 span{color:var(--accent);}
+
+    .status-badge{display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:20px;font-size:12px;font-weight:600;transition:all 0.3s;}
+    .status-badge.online{background:var(--green-soft);color:var(--green);border:1px solid rgba(74,222,128,0.2);}
+    .status-badge.offline{background:rgba(239,68,68,0.1);color:var(--danger);border:1px solid rgba(239,68,68,0.2);}
+    .status-badge.syncing{background:rgba(245,158,11,0.1);color:var(--orange);border:1px solid rgba(245,158,11,0.2);}
+    .status-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+    .status-badge.online .status-dot{background:var(--green);box-shadow:0 0 6px var(--green);}
+    .status-badge.offline .status-dot{background:var(--danger);box-shadow:0 0 6px var(--danger);}
+    .status-badge.syncing .status-dot{background:var(--orange);animation:syncBlink 1s ease infinite;}
+    @keyframes syncBlink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+
+    .home-greeting{padding:8px 24px 4px;}
+    .home-greeting h2{font-size:24px;font-weight:700;}
+    .home-greeting p{font-size:13px;color:var(--fg-muted);margin-top:2px;}
+    .content{padding:16px 24px 100px;flex:1;}
+    .view{display:none;animation:viewIn 0.4s var(--ease);}
+    .view.active{display:block;}
+    @keyframes viewIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+
+    .mobile-toggle{display:none;position:fixed;top:14px;left:14px;z-index:150;width:40px;height:40px;border-radius:var(--radius-xs);background:var(--bg-card);border:1px solid var(--border);color:var(--fg);cursor:pointer;align-items:center;justify-content:center;font-size:16px;}
+    .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:90;}
+
+    /* ═══ COMPONENTES ═══ */
+    .card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:all 0.3s var(--ease);}
+    .card:hover{border-color:var(--border-light);}
+    .empty-state{text-align:center;padding:40px 20px;color:var(--fg-muted);}
+    .empty-state i{font-size:36px;opacity:0.25;margin-bottom:12px;display:block;}
+    .empty-state p{font-size:13px;}
+
+    /* ═══ HOME — QUICK ACCESS ═══ */
+    .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+    .quick-card{
+      background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+      padding:20px 16px;cursor:pointer;transition:all 0.3s var(--ease);
+      display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden;
+      min-height:140px;
+    }
+    .quick-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border-light);}
+    .quick-card:active{transform:translateY(-1px);}
+    .quick-card.featured{grid-column:span 2;flex-direction:row;align-items:center;min-height:auto;padding:22px 20px;}
+    .quick-card.featured .qc-icon{width:56px;height:56px;font-size:24px;}
+    .quick-card.featured .qc-body{flex:1;}
+    .quick-card.featured .qc-arrow{font-size:18px;color:var(--fg-muted);opacity:0.5;}
+
+    .qc-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+    .qc-body{flex:1;min-width:0;}
+    .qc-body h3{font-size:15px;font-weight:700;margin-bottom:3px;line-height:1.3;}
+    .qc-body p{font-size:12px;color:var(--fg-muted);line-height:1.4;}
+    .qc-badge{position:absolute;top:12px;right:12px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:10px;letter-spacing:0.3px;}
+
+    /* ═══ HOME — IMPACTO ═══ */
+    .impact-card{background:linear-gradient(135deg,var(--bg-card) 0%,rgba(74,222,128,0.04) 100%);border:1px solid rgba(74,222,128,0.15);border-radius:var(--radius);padding:22px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .impact-card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:var(--green);opacity:0.03;}
+    .impact-title{font-size:14px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+    .impact-title i{color:var(--green);}
+    .impact-bars{display:flex;flex-direction:column;gap:14px;}
+    .impact-row{}
+    .impact-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:12px;}
+    .impact-row-header span:first-child{color:var(--fg-dim);font-weight:500;}
+    .impact-row-header span:last-child{font-family:'Space Grotesk';font-weight:700;}
+    .impact-bar-track{height:10px;background:var(--bg-input);border-radius:5px;overflow:hidden;}
+    .impact-bar-fill{height:100%;border-radius:5px;transition:width 1.2s cubic-bezier(0.4,0,0.2,1);}
+    .impact-bar-fill.quimico{background:linear-gradient(90deg,var(--danger),#F97316);}
+    .impact-bar-fill.regenerativo{background:linear-gradient(90deg,var(--green-dim),var(--green));}
+    .impact-savings{text-align:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--border);}
+    .impact-savings .save-val{font-family:'Space Grotesk';font-size:28px;font-weight:700;color:var(--green);}
+    .impact-savings .save-label{font-size:12px;color:var(--fg-muted);margin-top:2px;}
+
+    /* ═══ HOME — PAGO ═══ */
+    .pay-btn{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      padding:18px 24px;border-radius:var(--radius);border:2px solid var(--accent);
+      background:var(--accent-soft);color:var(--accent);cursor:pointer;
+      font-size:16px;font-weight:700;transition:all 0.3s var(--ease);
+      width:100%;font-family:'Space Grotesk',sans-serif;letter-spacing:0.5px;
+    }
+    .pay-btn:hover{background:var(--accent);color:#0C1A0E;box-shadow:0 0 30px var(--accent-glow);transform:translateY(-2px);}
+    .pay-btn i{font-size:20px;}
+
+    /* ═══ CARBON MODULE ═══ */
+    .carbon-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
+    .carbon-header h1{font-size:22px;flex:1;}
+    .btn-capture{
+      display:flex;align-items:center;gap:10px;padding:14px 24px;border-radius:var(--radius-sm);
+      background:var(--green-dim);color:#0C1A0E;border:none;cursor:pointer;
+      font-size:15px;font-weight:700;transition:all 0.3s var(--ease);
+      box-shadow:0 0 20px rgba(34,197,94,0.3);font-family:inherit;
+    }
+    .btn-capture:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(34,197,94,0.35);}
+    .btn-capture:active{transform:translateY(0);}
+    .btn-capture i{font-size:18px;}
+    .btn-capture.capturing{animation:capturePulse 1.5s ease infinite;}
+    @keyframes capturePulse{0%,100%{box-shadow:0 0 20px rgba(34,197,94,0.3);}50%{box-shadow:0 0 35px rgba(34,197,94,0.5);}}
+
+    .carbon-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;}
+    .carbon-stat{text-align:center;padding:16px 10px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);}
+    .carbon-stat .cs-val{font-family:'Space Grotesk';font-size:24px;font-weight:700;line-height:1;}
+    .carbon-stat .cs-label{font-size:11px;color:var(--fg-muted);margin-top:5px;}
+
+    .carbon-progress{margin-bottom:20px;}
+    .carbon-progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px;}
+    .carbon-progress-header span:first-child{font-weight:600;}
+    .carbon-progress-header span:last-child{color:var(--accent);font-family:'Space Grotesk';font-weight:700;}
+    .carbon-bar-track{height:12px;background:var(--bg-input);border-radius:6px;overflow:hidden;}
+    .carbon-bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--accent),#F59E0B);transition:width 0.8s var(--ease);position:relative;}
+    .carbon-bar-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(255,255,255,0.2));border-radius:6px;}
+
+    .carbon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+    .carbon-photo-card{
+      background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+      overflow:hidden;transition:all 0.3s var(--ease);animation:photoIn 0.4s var(--ease);
+    }
+    .carbon-photo-card:hover{border-color:var(--border-light);box-shadow:var(--shadow);}
+    @keyframes photoIn{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+    .carbon-photo-card img{width:100%;height:180px;object-fit:cover;display:block;background:var(--bg-input);}
+    .carbon-photo-body{padding:14px;}
+    .carbon-photo-meta{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--fg-muted);}
+    .carbon-photo-meta i{width:16px;color:var(--fg-muted);opacity:0.6;}
+    .carbon-photo-meta span{display:flex;align-items:center;gap:6px;}
+    .carbon-photo-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--border);}
+    .sync-tag{font-size:10px;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:0.3px;text-transform:uppercase;}
+    .sync-tag.pending{background:rgba(245,158,11,0.12);color:var(--orange);}
+    .sync-tag.synced{background:var(--green-soft);color:var(--green);}
+    .btn-del-photo{background:none;border:none;color:var(--fg-muted);cursor:pointer;font-size:14px;padding:4px 8px;border-radius:var(--radius-xs);transition:all 0.25s;}
+    .btn-del-photo:hover{color:var(--danger);background:rgba(239,68,68,0.1);}
+
+    /* Camera modal */
+    .cam-modal{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
+    .cam-modal.show{display:flex;}
+    .cam-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;max-width:420px;width:100%;text-align:center;}
+    .cam-box h3{font-size:18px;margin-bottom:6px;}
+    .cam-box p{font-size:13px;color:var(--fg-muted);margin-bottom:20px;line-height:1.5;}
+    .cam-preview{width:100%;max-height:280px;border-radius:var(--radius-sm);margin-bottom:16px;background:var(--bg-input);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+    .cam-preview img{max-width:100%;max-height:280px;object-fit:contain;border-radius:var(--radius-sm);}
+    .cam-preview .cam-placeholder{color:var(--fg-muted);font-size:13px;}
+    .cam-preview .cam-placeholder i{font-size:40px;opacity:0.2;display:block;margin-bottom:8px;}
+    .cam-coords{font-family:'Space Grotesk',monospace;font-size:12px;color:var(--green);margin-bottom:16px;padding:8px 12px;background:var(--green-soft);border-radius:var(--radius-xs);display:none;}
+    .cam-coords.show{display:block;}
+    .cam-coords i{margin-right:6px;}
+    .cam-actions{display:flex;gap:10px;}
+
+    /* Toast */
+    .toast-box{position:fixed;top:16px;right:16px;z-index:9999;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+    .toast{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xs);padding:12px 18px;font-size:13px;font-weight:500;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;min-width:240px;pointer-events:auto;animation:toastIn 0.35s var(--ease),toastOut 0.35s var(--ease) 2.8s forwards;}
+    .toast.success i{color:var(--green);}.toast.error i{color:var(--danger);}.toast.info i{color:var(--accent);}
+    @keyframes toastIn{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
+    @keyframes toastOut{to{opacity:0;transform:translateY(-8px);}}
+
+    /* Modal */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all 0.3s;backdrop-filter:blur(4px);}
+    .modal-overlay.show{opacity:1;visibility:visible;}
+    .modal-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;max-width:380px;width:100%;transform:scale(0.92);transition:transform 0.3s var(--ease);}
+    .modal-overlay.show .modal-box{transform:scale(1);}
+    .modal-box h3{font-size:17px;margin-bottom:8px;}
+    .modal-box p{font-size:13px;color:var(--fg-muted);margin-bottom:22px;line-height:1.6;}
+    .modal-actions{display:flex;gap:10px;justify-content:flex-end;}
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:768px){
+      .mobile-toggle{display:flex;}
+      .sidebar{transform:translateX(-100%);}
+      .sidebar.open{transform:translateX(0);}
+      .sidebar-overlay.show{display:block;}
+      .main-area{margin-left:0;}
+      .home-header{padding:14px 16px 0;padding-top:58px;}
+      .home-greeting{padding:4px 16px;}
+      .content{padding:14px 16px 100px;}
+      .auth-layout{flex-direction:column;}
+      .auth-brand{padding:40px 24px 30px;min-height:auto;}
+      .auth-brand-icon{width:70px;height:70px;border-radius:5px 70px 5px 70px;}
+      .auth-brand h2{font-size:28px;}
+      .quick-card.featured{flex-direction:column;text-align:center;}
+      .quick-card.featured .qc-arrow{display:none;}
+      .carbon-stats{grid-template-columns:1fr 1fr 1fr;}
+      .carbon-grid{grid-template-columns:1fr;}
+      .pay-btn{font-size:14px;padding:16px 20px;}
+    }
+    @media(max-width:380px){
+      .carbon-stats{grid-template-columns:1fr;}
+      .quick-grid{grid-template-columns:1fr;}
+      .quick-card.featured{grid-column:span 1;}
+    }
+    @media(prefers-reduced-motion:reduce){,::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+  </style>
+</head>
+<body>
+
+<div class="bg-ambient"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
+<div class="toast-box" id="toastBox"></div>
+<div class="modal-overlay" id="modalOverlay"><div class="modal-box"><h3 id="modalTitle"></h3><p id="modalMsg"></p><div class="modal-actions"><button class="btn btn-ghost btn-sm" id="modalCancel">Cancelar</button><button class="btn btn-danger btn-sm" id="modalConfirm">Confirmar</button></div></div></div>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="splash-icon"><div class="splash-leaf"></div></div>
+  <div class="splash-title">MELANT <span>IA</span></div>
+  <div class="splash-sub">PRODUCTIVIDAD AGRICOLA INTELIGENTE</div>
+  <div class="splash-bar"></div>
+</div>
+
+<!-- GEO-LOCK -->
+<div id="geoLockScreen">
+  <div class="geo-pin"><i class="fa-solid fa-location-crosshairs"></i></div>
+  <h2 style="font-size:22px;margin-bottom:6px;">Acceso restringido</h2>
+  <p style="color:var(--fg-muted);font-size:14px;max-width:320px;margin-bottom:4px;">Tu ubicacion no coincide con la zona registrada de tu finca.</p>
+  <div class="geo-coords" id="geoCoords"></div>
+  <div class="geo-distance" id="geoDistance"></div>
+  <button class="btn btn-primary" style="max-width:260px;" onclick="Geo.retryLock()"><i class="fa-solid fa-rotate"></i> Reintentar ubicacion</button>
+</div>
+
+<!-- AUTH -->
+<div id="authScreen">
+  <div class="auth-layout">
+    <div class="auth-brand">
+      <div class="auth-brand-icon"></div>
+      <h2>MELANT <span>IA</span></h2>
+      <p>Asistente Tecnico Rural con Inteligencia Artificial. Funciona sin internet.</p>
+    </div>
+    <div class="auth-form-side">
+      <div class="auth-form-box">
+        <div class="auth-tabs"><button class="auth-tab active" data-tab="login">Ingresar</button><button class="auth-tab" data-tab="register">Registrarse</button></div>
+        <div id="authError" class="auth-error"></div>
+        <div id="loginForm">
+          <div class="auth-field"><label>Correo electronico</label><input type="email" id="loginEmail" placeholder="tu@correo.com" autocomplete="email"></div>
+          <div class="auth-field"><label>Contrasena</label><input type="password" id="loginPass" placeholder="Tu contrasena" autocomplete="current-password"></div>
+          <button class="btn btn-primary" onclick="Auth.login()" style="margin-top:8px;"><i class="fa-solid fa-right-to-bracket"></i> Ingresar</button>
+        </div>
+        <div id="registerForm" style="display:none;">
+          <div class="auth-field"><label>Nombre completo</label><input type="text" id="regName" placeholder="Tu nombre"></div>
+          <div class="auth-field"><label>Correo electronico</label><input type="email" id="regEmail" placeholder="tu@correo.com"></div>
+          <div class="auth-field"><label>Nombre de la finca</label><input type="text" id="regFinca" placeholder="Finca El Paraiso"></div>
+          <div class="auth-field"><label>Contrasena (min. 6)</label><input type="password" id="regPass" placeholder="Crea una contrasena"></div>
+          <label class="auth-geo-toggle"><input type="checkbox" id="regGeoLock" checked><div class="toggle-track"></div><div class="toggle-label"><strong>Bloqueo geografico</strong>Restringir acceso a la zona de tu finca</div></label>
+          <button class="btn btn-primary" onclick="Auth.register()" style="margin-top:8px;"><i class="fa-solid fa-user-plus"></i> Crear cuenta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- APP -->
+<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div id="appShell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo"><div class="s-icon"></div><span>MELANT <em>IA</em></span></div>
+    <div class="nav-label">Principal</div>
+    <div class="nav-item active" data-view="home"><i class="fa-solid fa-house"></i> Inicio</div>
+    <div class="nav-item" data-view="carbon"><i class="fa-solid fa-leaf"></i> Tareas Agricultura Regenerativa</div>
+    <div class="nav-label">Herramientas</div>
+    <div class="nav-item" data-view="assistant"><i class="fa-solid fa-robot"></i> Asistente IA</div>
+    <div class="nav-item" data-view="store"><i class="fa-solid fa-store"></i> Tienda</div>
+    <div class="nav-item" data-view="school"><i class="fa-solid fa-graduation-cap"></i> Escuela de Campo</div>
+    <div class="nav-item" data-view="referrals"><i class="fa-solid fa-users"></i> Referidos</div>
+    <div class="sidebar-footer">
+      <div class="sidebar-user"><div class="sidebar-avatar"><i class="fa-solid fa-user"></i></div><div class="sidebar-user-info"><div class="sidebar-user-name" id="sidebarName">—</div><div class="sidebar-user-finc" id="sidebarFinca">—</div></div></div>
+      <button class="btn-logout" onclick="Auth.logout()"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion</button>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <div class="content">
+
+      <!-- ═══ HOME ═══ -->
+      <section class="view active" id="view-home">
+        <header class="home-header">
+          <div class="home-brand">
+            <div class="home-brand-icon"></div>
+            <h1>MELANT <span>IA</span></h1>
+          </div>
+          <div class="status-badge online" id="homeStatus">
+            <div class="status-dot"></div>
+            <span id="homeStatusText">Conectado</span>
+          </div>
+        </header>
+
+        <div class="home-greeting">
+          <h2 id="homeGreeting">Buenos dias</h2>
+          <p id="homeFincaName">Finca —</p>
+        </div>
+
+        <!-- Acceso rapido -->
+        <div class="quick-grid">
+          <!-- Asistente — DESTACADO -->
+          <div class="quick-card featured" onclick="Router.go('assistant')" style="border-color:rgba(74,222,128,0.2);background:linear-gradient(135deg,var(--bg-card),rgba(74,222,128,0.05));">
+            <div class="qc-icon" style="background:var(--green-soft);color:var(--green);"><i class="fa-solid fa-robot"></i></div>
+            <div class="qc-body">
+              <h3>Asistente Tecnico Rural</h3>
+              <p>Consulta sobre plagas, suelos, riego y fertilizacion. IA que funciona sin internet.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right qc-arrow"></i>
+          </div>
+
+          <!-- Escuela -->
+          <div class="quick-card" onclick="Router.go('school')">
+            <div class="qc-icon" style="background:var(--cyan-soft);color:var(--cyan);"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="qc-body">
+              <h3>Escuela de Campo</h3>
+              <p id="homeSchoolProgress">0/24 fotos cumplidas</p>
+            </div>
+            <div class="qc-badge" style="background:var(--cyan-soft);color:var(--cyan);" id="homeSchoolBadge">0%</div>
+          </div>
+
+          <!-- Tienda -->
+          <div class="quick-card" onclick="Router.go('store')">
+            <div class="qc-icon" style="background:rgba(245,158,11,0.12);color:var(--orange);"><i class="fa-solid fa-store"></i></div>
+            <div class="qc-body">
+              <h3>Tienda Melant</h3>
+              <p>Insumos y herramientas agricolas</p>
+            </div>
+            <div class="qc-badge" style="background:rgba(245,158,11,0.12);color:var(--orange);">-5%</div>
+          </div>
+
+          <!-- Agricultura Regenerativa — DESTACADO -->
+          <div class="quick-card featured" onclick="Router.go('carbon')" style="border-color:rgba(212,160,23,0.25);background:linear-gradient(135deg,var(--bg-card),rgba(212,160,23,0.06));">
+            <div class="qc-icon" style="background:var(--accent-soft);color:var(--accent);"><i class="fa-solid fa-camera"></i></div>
+            <div class="qc-body">
+              <h3>Agricultura Regenerativa</h3>
+              <p>Abre la camara, toma la foto y las coordenadas GPS se guardan automaticamente.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right qc-arrow"></i>
+          </div>
+        </div>
+
+        <!-- Impacto -->
+        <div class="impact-card">
+          <div class="impact-title"><i class="fa-solid fa-chart-line"></i> Tu Impacto Financiero</div>
+          <div class="impact-bars">
+            <div class="impact-row">
+              <div class="impact-row-header"><span>Gasto quimico tradicional</span><span style="color:var(--danger);" id="impactQuimico">$ 0</span></div>
+              <div class="impact-bar-track"><div class="impact-bar-fill quimico" id="impactQuimicoBar" style="width:0%;"></div></div>
+            </div>
+            <div class="impact-row">
+              <div class="impact-row-header"><span>Ahorro regenerativo</span><span style="color:var(--green);" id="impactRegen">$ 0</span></div>
+              <div class="impact-bar-track"><div class="impact-bar-fill regenerativo" id="impactRegenBar" style="width:0%;"></div></div>
+            </div>
+          </div>
+          <div class="impact-savings">
+            <div class="save-val" id="impactSave">-$ 0</div>
+            <div class="save-label">de ahorro estimado vs. quimico tradicional</div>
+          </div>
+        </div>
+
+        <!-- Boton de pago -->
+        <a href="https://deuna.com/banco-pichincha" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <button class="pay-btn" type="button">
+            <i class="fa-solid fa-credit-card"></i>
+            Pagar con De Una — Banco Pichincha
+          </button>
+        </a>
+      </section>
+
+      <!-- ═══ AGRICULTURA REGENERATIVA ═══ -->
+      <section class="view" id="view-carbon">
+        <div class="carbon-header">
+          <h1>Agricultura Regenerativa</h1>
+          <button class="btn-capture" id="btnCapture" onclick="Carbon.openCamera()">
+            <i class="fa-solid fa-camera"></i> Tomar foto
+          </button>
+        </div>
+
+        <input type="file" id="camInput" accept="image/*" capture="environment" style="display:none;">
+
+        <div class="carbon-stats">
+          <div class="carbon-stat">
+            <div class="cs-val" style="color:var(--green);" id="carbonTotal">0</div>
+            <div class="cs-label">Fotos tomadas</div>
+          </div>
+          <div class="carbon-stat">
+            <div class="cs-val" style="color:var(--orange);" id="carbonPending">0</div>
+            <div class="cs-label">Pendientes sync</div>
+          </div>
+          <div class="carbon-stat">
+            <div class="cs-val" style="color:var(--cyan);" id="carbonSynced">0</div>
+            <div class="cs-label">Sincronizadas</div>
+          </div>
+        </div>
+
+        <div class="carbon-progress">
+          <div class="carbon-progress-header">
+            <span>Meta: 24 fotos</span>
+            <span id="carbonProgressText">0/24</span>
+          </div>
+          <div class="carbon-bar-track">
+            <div class="carbon-bar-fill" id="carbonBarFill" style="width:0%;"></div>
+          </div>
+        </div>
+
+        <div class="carbon-grid" id="carbonGrid"></div>
+      </section>
+
+      <!-- ═══ PLACEHOLDERS (otros modulos) ═══ -->
+      <section class="view" id="view-assistant">
+        <h1 style="font-size:22px;margin-bottom:10px;">Asistente Tecnico Rural</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Modulo de IA — Implementado en version modular.</p>
+        <div class="empty-state"><i class="fa-solid fa-robot"></i><p>El asistente IA se carga como modulo independiente (assistant.js)</p></div>
+      </section>
+      <section class="view" id="view-store">
+        <h1 style="font-size:22px;margin-bottom:10px;">Tienda Melant</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">5% de descuento activo para usuarios MELANT.</p>
+        <div class="empty-state"><i class="fa-solid fa-store"></i><p>La tienda se carga como modulo independiente (store.js)</p></div>
+      </section>
+      <section class="view" id="view-school">
+        <h1 style="font-size:22px;margin-bottom:10px;">Escuela de Campo</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Certificacion con 24 fotos de practica.</p>
+        <div class="empty-state"><i class="fa-solid fa-graduation-cap"></i><p>La escuela se carga como modulo independiente (school.js)</p></div>
+      </section>
+      <section class="view" id="view-referrals">
+        <h1 style="font-size:22px;margin-bottom:10px;">Referidos</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Invita y gana puntos.</p>
+        <div class="empty-state"><i class="fa-solid fa-users"></i><p>Referidos se carga como modulo independiente (referrals.js)</p></div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal de camara -->
+<div class="cam-modal" id="camModal">
+  <div class="cam-box">
+    <h3><i class="fa-solid fa-camera" style="color:var(--green);margin-right:6px;"></i> Captura de Carbono</h3>
+    <p>Toma la foto de tu practica regenerativa. Las coordenadas GPS se obtienen automaticamente.</p>
+    <div class="cam-preview" id="camPreview">
+      <div class="cam-placeholder" id="camPlaceholder"><i class="fa-solid fa-image"></i>La foto aparecera aqui</div>
+    </div>
+    <div class="cam-coords" id="camCoords"><i class="fa-solid fa-location-dot"></i> <span id="camCoordsText">Obteniendo GPS...</span></div>
+    <div class="cam-actions">
+      <button class="btn btn-ghost btn-sm" onclick="Carbon.closeCamera()" style="flex:1;">Cancelar</button>
+      <button class="btn btn-green btn-sm" id="btnSavePhoto" onclick="Carbon.savePhoto()" style="flex:1;display:none;"><i class="fa-solid fa-check"></i> Guardar foto</button>
+    </div>
+  </div>
+
+  /* TARJETA CIUDADANO RURAL */
+    .citizen-card {
+      background: var(--bg-card);
+      border: 1px solid var(--accent-soft);
+      padding: 20px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .citizen-info { display: flex; align-items: center; gap: 15px; }
+    .citizen-info i { font-size: 32px; color: var(--accent); }
+    .citizen-info h3 { font-size: 18px; color: #fff; }
+
+    /* SECCIÓN PROGRAMAS */
+    .program-card {
+      background: var(--bg-surface);
+      padding: 20px;
+      border-radius: var(--radius);
+      margin-bottom: 15px;
+      border-left: 5px solid var(--accent);
+    }
+
+    .badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .btn-audio {
+      width: 100%;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    /* MENÚ NAVEGACIÓN */
+    nav {
+      position: fixed;
+      bottom: 0; width: 100%;
+      background: rgba(18, 36, 22, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      border-top: 1px solid var(--accent-soft);
+    }
+
+    .nav-item { color: var(--fg-muted); text-align: center; font-size: 11px; text-decoration: none; }
+    .nav-item i { font-size: 20px; display: block; margin-bottom: 4px; }
+    .nav-item.active { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MELANT <span>IA</span></h1>
+    <p style="color: var(--fg-muted)">Productividad Agrícola Inteligente</p>
+  </header>
+
+  <div class="container">
+    
+    <!-- Sección Potente: Ciudadano Rural -->
+    <div class="citizen-card">
+      <div class="citizen-info">
+        <i class="fa-solid fa-id-card"></i>
+        <div>
+          <h3>Ciudadano Rural</h3>
+          <p style="font-size: 12px; color: var(--fg-muted)">Derechos y Beneficios</p>
+        </div>
+      </div>
+      <i class="fa-solid fa-chevron-right" style="color: var(--accent)"></i>
+    </div>
+
+    <h2 style="margin-bottom: 15px; font-size: 18px;">Programas Disponibles</h2>
+
+    <!-- Programa 1 -->
+    <div class="program-card">
+      <span class="badge">BANECUADOR</span>
+      <h4>Crédito de las Oportunidades</h4>
+      <p style="font-size: 13px; color: var(--fg-muted); margin-top: 5px;">Tasa del 1% hasta $5,000. Plazo 30 años.</p>
+      <button class="btn-audio" onclick="hablar('Crédito al uno por ciento. Use su reporte de Melant IA en el banco.')">
+        <i class="fa-solid fa-volume-high"></i> ESCUCHAR GUÍA
+      </button>
+    </div>
+
+    <!-- Programa 2 -->
+    <div class="program-card">
+      <span class="badge">SUBSIDIO MAG</span>
+      <h4>Semillas y Urea</h4>
+      <p style="font-size: 13px; color: var(--fg-muted); margin-top: 5px;">Hasta 50% de descuento en insumos básicos.</p>
+      <button class="btn-audio" onclick="hablar('El gobierno paga la mitad de su urea. Debe estar en el registro nacional.')">
+        <i class="fa-solid fa-volume-high"></i> ESCUCHAR GUÍA
+      </button>
+    </div>
+  </div>
+</div>
+
+  <nav>
+    <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i>Inicio</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-microscope"></i>IA Scan</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-store"></i>Tienda</a>
+    <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>Perfil</a>
+  </nav>
+
+  <script>
+    function hablar(mensaje) {
+      const v = new SpeechSynthesisUtterance(mensaje);
+      v.lang = 'es-EC';
+      window.speechSynthesis.speak(v);
+    }
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   CONFIGURACION
+══════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  DB_NAME: 'melant_ia_db',
+  DB_VERSION: 1,
+  GEO_MAX_KM: 50,
+  SYNC_INTERVAL: 30000,
+  SESSION_KEY: 'melant_session',
+  _PEPPER: 'M3L4NT_RUR4L_2024_K3Y',
+  CARBON_GOAL: 24,
+  // Compresion de imagen
+  IMG_MAX_WIDTH: 800,
+  IMG_MAX_HEIGHT: 800,
+  IMG_QUALITY: 0.55
+};
+
+/* ══════════════════════════════════════════════════════════════
+   UTILIDADES
+══════════════════════════════════════════════════════════════ */
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function $(s){return document.querySelector(s);}
+function $$(s){return document.querySelectorAll(s);}
+function todayStr(){return new Date().toISOString().split('T')[0];}
+function fmtDate(iso){return new Date(iso).toLocaleDateString('es-ES',{day:'numeric',month:'short',year:'numeric'});}
+function fmtTime(iso){return new Date(iso).toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});}
+
+function toast(msg,type='info'){
+  const icons={success:'fa-circle-check',error:'fa-circle-xmark',info:'fa-circle-info'};
+  const el=document.createElement('div');
+  el.className=toast ${type};
+  el.innerHTML=<i class="fa-solid ${icons[type]||icons.info}"></i><span>${esc(msg)}</span>;
+  $('#toastBox').appendChild(el);
+  setTimeout(()=>el.remove(),3200);
+}
+
+let _modalCb=null;
+function showModal(title,msg,onConfirm){
+  $('#modalTitle').textContent=title;
+  $('#modalMsg').textContent=msg;
+  $('#modalOverlay').classList.add('show');
+  _modalCb=onConfirm;
+}
+ $('#modalCancel').onclick=()=>{$('#modalOverlay').classList.remove('show');_modalCb=null;};
+ $('#modalConfirm').onclick=()=>{$('#modalOverlay').classList.remove('show');if(_modalCb)_modalCb();_modalCb=null;};
+
+/* ══════════════════════════════════════════════════════════════
+   BASE DE DATOS — IndexedDB nativo
+══════════════════════════════════════════════════════════════ */
+const DB={
+  db:null,
+  STORES:{
+    users:{keyPath:'id'},
+    fincas:{keyPath:'id',indexes:[['userId','userId']]},
+    carbon_fotos:{keyPath:'id',indexes:[['userId','userId'],['synced','synced'],['fecha','fecha']]},
+    sync_queue:{keyPath:'id',autoIncrement:true,indexes:[['entity','entity'],['timestamp','timestamp']]},
+    actividad:{keyPath:'id',autoIncrement:true,indexes:[['userId','userId']]}
+  },
+  init(){
+    return new Promise((resolve,reject)=>{
+      const req=indexedDB.open(CONFIG.DB_NAME,CONFIG.DB_VERSION);
+      req.onupgradeneeded=(e)=>{
+        const db=e.target.result;
+        for(const[name,def]of Object.entries(this.STORES)){
+          if(!db.objectStoreNames.contains(name)){
+            const store=db.createObjectStore(name,{keyPath:def.keyPath,autoIncrement:def.autoIncrement||false});
+            if(def.indexes)def.indexes.forEach(([iname,key])=>store.createIndex(iname,key,{unique:false}));
+          }
+        }
+      };
+      req.onsuccess=(e)=>{this.db=e.target.result;resolve();};
+      req.onerror=(e)=>reject(e.target.error);
+    });
+  },
+  _store(name,mode){return this.db.transaction(name,mode).objectStore(name);},
+  add(name,data){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readwrite').add({...data,id:data.id||Date.now().toString(36)+Math.random().toString(36).slice(2,6)});
+      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+    });
+  },
+  put(name,data){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readwrite').put(data);
+      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+    });
+  },
+  get(name,key){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readonly').get(key);
+      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+    });
+  },
+  getAll(name){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readonly').getAll();
+      r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
+    });
+  },
+  getByIndex(name,indexName,key){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readonly').index(indexName).getAll(key);
+      r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
+    });
+  },
+  delete(name,key){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readwrite').delete(key);
+      r.onsuccess=()=>res();r.onerror=()=>rej(r.error);
+    });
+  },
+  count(name){
+    return new Promise((res,rej)=>{
+      const r=this._store(name,'readonly').count();
+      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+    });
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   CRIPTOGRAFIA — Web Crypto API
+══════════════════════════════════════════════════════════════ */
+const Crypto={
+  async hash(text){
+    const enc=new TextEncoder().encode(text);
+    const buf=await crypto.subtle.digest('SHA-256',enc);
+    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  },
+  async makeSessionToken(userId){
+    return await this.hash(userId+CONFIG._PEPPER+navigator.userAgent.slice(0,40));
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   GEOLOCALIZACION
+══════════════════════════════════════════════════════════════ */
+const Geo={
+  _currentPos:null,
+  getCurrent(){return this._currentPos;},
+  getPosition(){
+    return new Promise((resolve,reject)=>{
+      if(!navigator.geolocation)return reject(new Error('GPS no disponible'));
+      navigator.geolocation.getCurrentPosition(
+        pos=>resolve({lat:pos.coords.latitude,lon:pos.coords.longitude,acc:pos.coords.accuracy}),
+        err=>reject(err),
+        {enableHighAccuracy:true,timeout:12000,maximumAge:60000}
+      );
+    });
+  },
+  haversine(lat1,lon1,lat2,lon2){
+    const R=6371;
+    const dLat=(lat2-lat1)*Math.PI/180;
+    const dLon=(lon2-lon1)*Math.PI/180;
+    const a=Math.sin(dLat/2)*2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)*2;
+    return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+  },
+  async checkLock(user){
+    if(!user.geoLock||!user.geoLat||!user.geoLon)return true;
+    try{
+      this._currentPos=await this.getPosition();
+      return this.haversine(user.geoLat,user.geoLon,this._currentPos.lat,this._currentPos.lon)<=CONFIG.GEO_MAX_KM;
+    }catch(e){console.warn('Geo check fallido:',e.message);return true;}
+  },
+  async retryLock(){
+    const session=JSON.parse(sessionStorage.getItem(CONFIG.SESSION_KEY)||'null');
+    if(!session)return;
+    const user=await DB.get('users',session.userId);
+    if(!user)return;
+    const ok=await this.checkLock(user);
+    if(ok){$('#geoLockScreen').classList.remove('show');toast('Ubicacion verificada','success');}
+  },
+  showLock(coords,dist){
+    $('#geoCoords').textContent=${coords.lat.toFixed(5)}, ${coords.lon.toFixed(5)};
+    $('#geoDistance').textContent=Distancia: ${dist.toFixed(1)} km del limite permitido;
+    $('#geoLockScreen').classList.add('show');
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   SYNC ENGINE
+══════════════════════════════════════════════════════════════ */
+const Sync={
+  isOnline:navigator.onLine,
+  init(){
+    window.addEventListener('online',()=>{this.isOnline=true;this.updateUI();});
+    window.addEventListener('offline',()=>{this.isOnline=false;this.updateUI();});
+    setInterval(()=>this.probe(),CONFIG.SYNC_INTERVAL);
+    this.updateUI();
+  },
+  async probe(){
+    if(this.isOnline)return;
+    try{
+      await fetch('https://httpbin.org/get',{mode:'no-cors',cache:'no-store',signal:AbortSignal.timeout(3000)});
+      this.isOnline=true;this.updateUI();
+    }catch{/* sigue offline */}
+  },
+  async enqueue(entity,operation,data){
+    await DB.add('sync_queue',{entity,operation,data,timestamp:Date.now()});
+    this.updateUI();
+  },
+  async getPendingCount(){return await DB.count('sync_queue');},
+  updateUI(){
+    const badge=$('#homeStatus');
+    const txt=$('#homeStatusText');
+    if(this.isOnline){badge.className='status-badge online';txt.textContent='Conectado';}
+    else{badge.className='status-badge offline';txt.textContent='Offline';}
+    this.getPendingCount().then(n=>{
+      if(n>0&&this.isOnline){badge.className='status-badge syncing';txt.textContent=Sync ${n}...;}
+    });
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   AUTENTICACION
+══════════════════════════════════════════════════════════════ */
+const Auth={
+  currentUser:null,
+  init(){
+    $$('.auth-tab').forEach(tab=>{
+      tab.onclick=()=>{
+        $$('.auth-tab').forEach(t=>t.classList.remove('active'));
+        tab.classList.add('active');
+        const isLogin=tab.dataset.tab==='login';
+        $('#loginForm').style.display=isLogin?'block':'none';
+        $('#registerForm').style.display=isLogin?'none':'block';
+        $('#authError').classList.remove('show');
+      };
+    });
+  },
+  showAuthError(msg){$('#authError').textContent=msg;$('#authError').classList.add('show');},
+  async login(){
+    const email=$('#loginEmail').value.trim().toLowerCase();
+    const pass=$('#loginPass').value;
+    if(!email||!pass)return this.showAuthError('Completa todos los campos');
+    if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
+    const users=await DB.getAll('users');
+    const user=users.find(u=>u.email===email);
+    if(!user)return this.showAuthError('No existe una cuenta con ese correo');
+    const hash=await Crypto.hash(pass);
+    if(hash!==user.passHash)return this.showAuthError('Contrasena incorrecta');
+    const geoOk=await Geo.checkLock(user);
+    if(!geoOk){const pos=Geo.getCurrent();const dist=Geo.haversine(user.geoLat,user.geoLon,pos.lat,pos.lon);Geo.showLock(pos,dist-CONFIG.GEO_MAX_KM);return;}
+    await this._startSession(user);
+  },
+  async register(){
+    const name=$('#regName').value.trim();
+    const email=$('#regEmail').value.trim().toLowerCase();
+    const finca=$('#regFinca').value.trim();
+    const pass=$('#regPass').value;
+    const geoLock=$('#regGeoLock').checked;
+    if(!name||!email||!finca||!pass)return this.showAuthError('Completa todos los campos');
+    if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
+    if(!email.includes('@'))return this.showAuthError('Correo no valido');
+    const users=await DB.getAll('users');
+    if(users.find(u=>u.email===email))return this.showAuthError('Ya existe una cuenta con ese correo');
+    let geoLat=null,geoLon=null;
+    if(geoLock){try{const pos=await Geo.getPosition();geoLat=pos.lat;geoLon=pos.lon;}catch{return this.showAuthError('Necesitamos acceso a tu ubicacion');}}
+    const passHash=await Crypto.hash(pass);
+    const userId=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    const user={id:userId,name,email,finca,passHash,geoLock,geoLat,geoLon,createdAt:new Date().toISOString(),refCode:'ML-'+name.slice(0,3).toUpperCase()+userId.slice(-4).toUpperCase()};
+    await DB.add('users',user);
+    await DB.add('fincas',{id:'finca_'+userId,userId,nombre:finca,createdAt:new Date().toISOString()});
+    await this._startSession(user);
+    toast('Cuenta creada exitosamente','success');
+  },
+  async _startSession(user){
+    this.currentUser=user;
+    const token=await Crypto.makeSessionToken(user.id);
+    sessionStorage.setItem(CONFIG.SESSION_KEY,JSON.stringify({userId:user.id,token}));
+    $('#authScreen').classList.remove('show');
+    $('#geoLockScreen').classList.remove('show');
+    $('#appShell').classList.add('show');
+    $('#sidebarName').textContent=user.name;
+    $('#sidebarFinca').textContent=user.finca;
+    Home.render();
+    Router.go('home');
+  },
+  async restoreSession(){
+    const raw=sessionStorage.getItem(CONFIG.SESSION_KEY);
+    if(!raw)return false;
+    try{
+      const session=JSON.parse(raw);
+      const user=await DB.get('users',session.userId);
+      if(!user)return false;
+      const token=await Crypto.makeSessionToken(user.id);
+      if(token!==session.token)return false;
+      const geoOk=await Geo.checkLock(user);
+      if(!geoOk){const pos=Geo.getCurrent();if(pos){const dist=Geo.haversine(user.geoLat,user.geoLon,pos.lat,pos.lon);Geo.showLock(pos,dist-CONFIG.GEO_MAX_KM);}return false;}
+      await this._startSession(user);
+      return true;
+    }catch{return false;}
+  },
+  logout(){
+    showModal('Cerrar sesion','Se cerrara tu sesion en este dispositivo.',()=>{
+      this.currentUser=null;
+      sessionStorage.removeItem(CONFIG.SESSION_KEY);
+      $('#appShell').classList.remove('show');
+      $('#authScreen').classList.add('show');
+    });
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   ROUTER
+══════════════════════════════════════════════════════════════ */
+const Router={
+  go(view){
+    $$('.view').forEach(v=>v.classList.remove('active'));
+    $$('.nav-item').forEach(n=>n.classList.remove('active'));
+    const el=$(#view-${view});
+    const nav=$(.nav-item[data-view="${view}"]);
+    if(el)el.classList.add('active');
+    if(nav)nav.classList.add('active');
+    $('#sidebar').classList.remove('open');
+    $('#sidebarOverlay').classList.remove('show');
+    if(view==='home')Home.render();
+    if(view==='carbon')Carbon.render();
+  }
+};
+ $$('.nav-item[data-view]').forEach(item=>item.addEventListener('click',()=>Router.go(item.dataset.view)));
+ $('#mobileToggle').onclick=()=>{$('#sidebar').classList.add('open');$('#sidebarOverlay').classList.add('show');};
+ $('#sidebarOverlay').onclick=()=>{$('#sidebar').classList.remove('open');$('#sidebarOverlay').classList.remove('show');};
+
+/* ══════════════════════════════════════════════════════════════
+   HOME
+══════════════════════════════════════════════════════════════ */
+const Home={
+  async render(){
+    if(!Auth.currentUser)return;
+    const user=Auth.currentUser;
+
+    // Saludo
+    const hour=new Date().getHours();
+    let greeting='Buenas noches';
+    if(hour>=5&&hour<12)greeting='Buenos dias';
+    else if(hour>=12&&hour<19)greeting='Buenas tardes';
+    $('#homeGreeting').textContent=greeting+', '+user.name.split(' ')[0];
+    $('#homeFincaName').textContent=user.finca;
+
+    // Status
+    Sync.updateUI();
+
+    // Escuela progreso (basado en carbon_fotos del usuario)
+    const fotos=await DB.getByIndex('carbon_fotos','userId',user.id);
+    const totalFotos=fotos.length;
+    const pct=Math.min(100,Math.round((totalFotos/CONFIG.CARBON_GOAL)*100));
+    $('#homeSchoolProgress').textContent=${totalFotos}/${CONFIG.CARBON_GOAL} fotos cumplidas;
+    $('#homeSchoolBadge').textContent=pct+'%';
+
+    // Impacto financiero — simulacion basada en fotos de carbono
+    // Cada practica regenerativa ahorra ~$35.000 COP vs quimico tradicional
+    const ahorroPorFoto=35000;
+    const gastoQuimicoBase=totalFotos*ahorroPorFoto*2.2; // Quimico cuesta ~2.2x mas
+    const gastoRegen=totalFotos*ahorroPorFoto*0.8; // Regen cuesta ~0.8x
+    const ahorro=gastoQuimicoBase-gastoRegen;
+
+    $('#impactQuimico').textContent='$ '+gastoQuimicoBase.toLocaleString('es-CO');
+    $('#impactRegen').textContent='$ '+gastoRegen.toLocaleString('es-CO');
+    $('#impactSave').textContent='-$ '+ahorro.toLocaleString('es-CO');
+
+    // Barras relativas (max = quimico)
+    const maxVal=Math.max(gastoQuimicoBase,1);
+    setTimeout(()=>{
+      $('#impactQuimicoBar').style.width='100%';
+      $('#impactRegenBar').style.width=Math.round((gastoRegen/maxVal)*100)+'%';
+    },200);
+  }
+};
+
+/* ══════════════════════════════════════════════════════════════
+   MODULO DE AGRICULTURA REGENERATIVA
+   - Camara con compresion
+   - GPS automatico
+   - Base64 en IndexedDB
+   - sync: false por defecto
+   - 100% offline
+══════════════════════════════════════════════════════════════ */
+const Carbon={
+  _photoData: null,   // Base64 comprimido
+  _gpsData: null,     // {lat, lon, acc}
+  _capturing: false,
+
+  openCamera(){
+    // Disparar el input de archivo (camara en movil, dialogo en desktop)
+    const input=$('#camInput');
+    input.value='';
+    input.click();
+  },
+
+  async render(){
+    if(!Auth.currentUser)return;
+    const uid=Auth.currentUser.id;
+    const fotos=await DB.getByIndex('carbon_fotos','userId',uid);
+    const pending=fotos.filter(f=>!f.synced).length;
+    const synced=fotos.filter(f=>f.synced).length;
+    const total=fotos.length;
+
+    $('#carbonTotal').textContent=total;
+    $('#carbonPending').textContent=pending;
+    $('#carbonSynced').textContent=synced;
+
+    const pct=Math.min(100,Math.round((total/CONFIG.CARBON_GOAL)*100));
+    $('#carbonProgressText').textContent=${total}/${CONFIG.CARBON_GOAL};
+    $('#carbonBarFill').style.width=pct+'%';
+
+    const grid=$('#carbonGrid');
+    if(total===0){
+      grid.innerHTML='<div class="empty-state" style="grid-column:1/-1;"><i class="fa-solid fa-camera"></i><p>Toma tu primera foto de practica regenerativa</p></div>';
+      return;
+    }
+
+    // Mostrar mas recientes primero
+    const sorted=[...fotos].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
+    grid.innerHTML=sorted.map(f=>`
+      <div class="carbon-photo-card">
+        <img src="data:image/jpeg;base64,${f.imagenBase64}" alt="Foto carbono ${f.id}" loading="lazy">
+        <div class="carbon-photo-body">
+          <div class="carbon-photo-meta">
+            <span><i class="fa-solid fa-calendar"></i> ${fmtDate(f.fecha)} — ${fmtTime(f.fecha)}</span>
+            <span><i class="fa-solid fa-location-dot"></i> ${f.lat.toFixed(5)}, ${f.lon.toFixed(5)}</span>
+            <span><i class="fa-solid fa-crosshairs"></i> Precision: ${Math.round(f.accuracy)}m</span>
+          </div>
+          <div class="carbon-photo-footer">
+            <span class="sync-tag ${f.synced?'synced':'pending'}">${f.synced?'Sincronizado':'Pendiente'}</span>
+            <button class="btn-del-photo" onclick="Carbon.deletePhoto('${f.id}')" aria-label="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  // Se llama cuando el input file selecciona una imagen
+  async onFileSelected(file){
+    if(!file)return;
+
+    this._capturing=true;
+    $('#btnCapture').classList.add('capturing');
+    $('#btnCapture').innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
+
+    try{
+      // 1. Comprimir imagen a Base64
+      this._photoData=await this._compressImage(file);
+
+      // 2. Obtener GPS automaticamente
+      $('#camCoords').classList.add('show');
+      $('#camCoordsText').textContent='Obteniendo GPS...';
+      $('#camModal').classList.add('show');
+      $('#camPlaceholder').style.display='none';
+
+      // Mostrar preview
+      const previewImg=document.createElement('img');
+      previewImg.src='data:image/jpeg;base64,'+this._photoData;
+      previewImg.alt='Preview';
+      $('#camPreview').appendChild(previewImg);
+
+      try{
+        this._gpsData=await Geo.getPosition();
+        $('#camCoordsText').textContent=${this._gpsData.lat.toFixed(6)}, ${this._gpsData.lon.toFixed(6)} (${Math.round(this._gpsData.acc)}m precision);
+        $('#camCoords').style.color='var(--green)';
+        $('#btnSavePhoto').
+          this.closeCamera();
+      this.render();
+      // Actualizar home si esta activo
+      Home.render();
+    }catch(err){
+      console.error('Error guardando foto:',err);
+      toast('Error al guardar en base de datos','error');
+    }
+  },
+
+  async deletePhoto(id){
+    showModal('Eliminar foto','Esta foto se eliminara permanentemente de tu dispositivo.',async()=>{
+      try{
+        await DB.delete('carbon_fotos',id);
+        await Sync.enqueue('carbon_fotos','DELETE',{id});
+        toast('Foto eliminada','info');
+        this.render();
+        Home.render();
+      }catch(err){
+        toast('Error al eliminar','error');
+      }
+    });
+  },
+
+  closeCamera(){
+    $('#camModal').classList.remove('show');
+    // Limpiar preview
+    const preview=$('#camPreview');
+    const img=preview.querySelector('img');
+    if(img)img.remove();
+    $('#camPlaceholder').style.display='';
+    $('#camCoords').classList.remove('show');
+    $('#btnSavePhoto').style.display='none';
+    this._photoData=null;
+    this._gpsData=null;
+  }
+};
+
+// Listener del input de archivo
+ $('#camInput').addEventListener('change',(e)=>{
+  const file=e.target.files[0];
+  if(file)Carbon.onFileSelected(file);
+});
+
+/* ══════════════════════════════════════════════════════════════
+   INICIALIZACION
+══════════════════════════════════════════════════════════════ */
+async function boot(){
+  try{
+    // Iniciar IndexedDB
+    await DB.init();
+    // Iniciar sync
+    Sync.init();
+    // Iniciar auth
+    Auth.init();
+
+    // Ocultar splash
+    await new Promise(r=>setTimeout(r,1200));
+    $('#splash').classList.add('hidden');
+
+    // Intentar restaurar sesion
+    const restored=await Auth.restoreSession();
+    if(!restored){
+      $('#authScreen').classList.add('show');
+    }
+  }catch(err){
+    console.error('Error de inicializacion:',err);
+    $('#splash').classList.add('hidden');
+    $('#authScreen').classList.add('show');
+    toast('Error al iniciar la aplicacion','error');
+  }
+}
+
+boot();
+</script>
+</body>
+</html>

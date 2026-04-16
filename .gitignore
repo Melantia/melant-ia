@@ -1,0 +1,5 @@
+.env
+.venv/
+node_modules/
+_pycache_/
+agricloud.db
