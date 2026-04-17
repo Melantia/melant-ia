@@ -43,7 +43,7 @@
       --shadow: 0 8px 32px rgba(0,0,0,0.4);
       --ease: cubic-bezier(0.4,0,0.2,1);
     }
-    ,::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    *::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     body{
 font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;}
     h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;}
@@ -216,7 +216,7 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     .impact-title{font-size:14px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
     .impact-title i{color:var(--green);}
     .impact-bars{display:flex;flex-direction:column;gap:14px;}
-    .impact-row{}
+    /* .impact-row{}  Eliminada regla vacía */
     .impact-row-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:12px;}
     .impact-row-header span:first-child{color:var(--fg-dim);font-weight:500;}
     .impact-row-header span:last-child{font-family:'Space Grotesk';font-weight:700;}
@@ -342,7 +342,12 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
       .quick-grid{grid-template-columns:1fr;}
       .quick-card.featured{grid-column:span 1;}
     }
-    @media(prefers-reduced-motion:reduce){,::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+    @media (prefers-reduced-motion: reduce) {
+      *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -708,6 +713,7 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
   </div>
 </div>
 
+
   <nav>
     <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i>Inicio</a>
     <a href="#" class="nav-item"><i class="fa-solid fa-microscope"></i>IA Scan</a>
@@ -715,192 +721,132 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>Perfil</a>
   </nav>
 
+
   <script>
     function hablar(mensaje) {
       const v = new SpeechSynthesisUtterance(mensaje);
       v.lang = 'es-EC';
       window.speechSynthesis.speak(v);
     }
-</div>
 
-<script>
-/* ══════════════════════════════════════════════════════════════
-   CONFIGURACION
-══════════════════════════════════════════════════════════════ */
-const CONFIG = {
-  DB_NAME: 'melant_ia_db',
-  DB_VERSION: 1,
-  GEO_MAX_KM: 50,
-  SYNC_INTERVAL: 30000,
-  SESSION_KEY: 'melant_session',
-  _PEPPER: 'M3L4NT_RUR4L_2024_K3Y',
-  CARBON_GOAL: 24,
-  // Compresion de imagen
-  IMG_MAX_WIDTH: 800,
-  IMG_MAX_HEIGHT: 800,
-  IMG_QUALITY: 0.55
-};
+    /* ══════════════════════════════════════════════════════════════
+       CONFIGURACION
+    ══════════════════════════════════════════════════════════════ */
+    const CONFIG = {
+      DB_NAME: 'melant_ia_db',
+      DB_VERSION: 1,
+      GEO_MAX_KM: 50,
+      SYNC_INTERVAL: 30000,
+      SESSION_KEY: 'melant_session',
+      _PEPPER: 'M3L4NT_RUR4L_2024_K3Y',
+      CARBON_GOAL: 24,
+      // Compresion de imagen
+      IMG_MAX_WIDTH: 800,
+      IMG_MAX_HEIGHT: 800,
+      IMG_QUALITY: 0.55
+    };
 
-/* ══════════════════════════════════════════════════════════════
-   UTILIDADES
-══════════════════════════════════════════════════════════════ */
-function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
-function $(s){return document.querySelector(s);}
-function $$(s){return document.querySelectorAll(s);}
-function todayStr(){return new Date().toISOString().split('T')[0];}
-function fmtDate(iso){return new Date(iso).toLocaleDateString('es-ES',{day:'numeric',month:'short',year:'numeric'});}
-function fmtTime(iso){return new Date(iso).toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});}
+    /* ══════════════════════════════════════════════════════════════
+       UTILIDADES
+    ══════════════════════════════════════════════════════════════ */
+    function esc(s) {
+      const d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+    function $(s) { return document.querySelector(s); }
+    function $$(s) { return document.querySelectorAll(s); }
+    function todayStr() { return new Date().toISOString().split('T')[0]; }
+    function fmtDate(iso) { return new Date(iso).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }); }
+    function fmtTime(iso) { return new Date(iso).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' }); }
 
-function toast(msg,type='info'){
-  const icons={success:'fa-circle-check',error:'fa-circle-xmark',info:'fa-circle-info'};
-  const el=document.createElement('div');
-  el.className=toast ${type};
-  el.innerHTML=<i class="fa-solid ${icons[type]||icons.info}"></i><span>${esc(msg)}</span>;
-  $('#toastBox').appendChild(el);
-  setTimeout(()=>el.remove(),3200);
-}
+    function toast(msg, type = 'info') {
+      const icons = { success: 'fa-circle-check', error: 'fa-circle-xmark', info: 'fa-circle-info' };
+      const el = document.createElement('div');
+      el.className = `toast ${type}`;
+      el.innerHTML = `<i class="fa-solid ${icons[type] || icons.info}"></i><span>${esc(msg)}</span>`;
+      $('#toastBox').appendChild(el);
+      setTimeout(() => el.remove(), 3200);
+    }
 
-let _modalCb=null;
-function showModal(title,msg,onConfirm){
-  $('#modalTitle').textContent=title;
-  $('#modalMsg').textContent=msg;
-  $('#modalOverlay').classList.add('show');
-  _modalCb=onConfirm;
-}
- $('#modalCancel').onclick=()=>{$('#modalOverlay').classList.remove('show');_modalCb=null;};
- $('#modalConfirm').onclick=()=>{$('#modalOverlay').classList.remove('show');if(_modalCb)_modalCb();_modalCb=null;};
+    let _modalCb=null;
+    function showModal(title,msg,onConfirm){
+      $('#modalTitle').textContent = title;
+      $('#modalMsg').textContent = msg;
+      $('#modalOverlay').classList.add('show');
+      _modalCb = onConfirm;
+    }
 
-/* ══════════════════════════════════════════════════════════════
-   BASE DE DATOS — IndexedDB nativo
-══════════════════════════════════════════════════════════════ */
-const DB={
-  db:null,
-  STORES:{
-    users:{keyPath:'id'},
-    fincas:{keyPath:'id',indexes:[['userId','userId']]},
-    carbon_fotos:{keyPath:'id',indexes:[['userId','userId'],['synced','synced'],['fecha','fecha']]},
-    sync_queue:{keyPath:'id',autoIncrement:true,indexes:[['entity','entity'],['timestamp','timestamp']]},
-    actividad:{keyPath:'id',autoIncrement:true,indexes:[['userId','userId']]}
-  },
-  init(){
-    return new Promise((resolve,reject)=>{
-      const req=indexedDB.open(CONFIG.DB_NAME,CONFIG.DB_VERSION);
-      req.onupgradeneeded=(e)=>{
-        const db=e.target.result;
-        for(const[name,def]of Object.entries(this.STORES)){
-          if(!db.objectStoreNames.contains(name)){
-            const store=db.createObjectStore(name,{keyPath:def.keyPath,autoIncrement:def.autoIncrement||false});
-            if(def.indexes)def.indexes.forEach(([iname,key])=>store.createIndex(iname,key,{unique:false}));
-          }
-        }
-      };
-      req.onsuccess=(e)=>{this.db=e.target.result;resolve();};
-      req.onerror=(e)=>reject(e.target.error);
-    });
-  },
-  _store(name,mode){return this.db.transaction(name,mode).objectStore(name);},
-  add(name,data){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readwrite').add({...data,id:data.id||Date.now().toString(36)+Math.random().toString(36).slice(2,6)});
-      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
-    });
-  },
-  put(name,data){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readwrite').put(data);
-      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
-    });
-  },
-  get(name,key){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readonly').get(key);
-      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
-    });
-  },
-  getAll(name){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readonly').getAll();
-      r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
-    });
-  },
-  getByIndex(name,indexName,key){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readonly').index(indexName).getAll(key);
-      r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
-    });
-  },
-  delete(name,key){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readwrite').delete(key);
-      r.onsuccess=()=>res();r.onerror=()=>rej(r.error);
-    });
-  },
-  count(name){
-    return new Promise((res,rej)=>{
-      const r=this._store(name,'readonly').count();
-      r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
-    });
-  }
-};
+    $('#modalCancel').onclick = () => {
+      $('#modalOverlay').classList.remove('show');
+      _modalCb = null;
+    };
+    $('#modalConfirm').onclick = () => {
+      $('#modalOverlay').classList.remove('show');
+      if (_modalCb) _modalCb();
+      _modalCb = null;
+    };
 
-/* ══════════════════════════════════════════════════════════════
-   CRIPTOGRAFIA — Web Crypto API
-══════════════════════════════════════════════════════════════ */
-const Crypto={
-  async hash(text){
-    const enc=new TextEncoder().encode(text);
-    const buf=await crypto.subtle.digest('SHA-256',enc);
-    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  },
-  async makeSessionToken(userId){
-    return await this.hash(userId+CONFIG._PEPPER+navigator.userAgent.slice(0,40));
-  }
-};
-
-/* ══════════════════════════════════════════════════════════════
-   GEOLOCALIZACION
-══════════════════════════════════════════════════════════════ */
-const Geo={
-  _currentPos:null,
-  getCurrent(){return this._currentPos;},
-  getPosition(){
-    return new Promise((resolve,reject)=>{
-      if(!navigator.geolocation)return reject(new Error('GPS no disponible'));
-      navigator.geolocation.getCurrentPosition(
-        pos=>resolve({lat:pos.coords.latitude,lon:pos.coords.longitude,acc:pos.coords.accuracy}),
-        err=>reject(err),
-        {enableHighAccuracy:true,timeout:12000,maximumAge:60000}
-      );
-    });
-  },
-  haversine(lat1,lon1,lat2,lon2){
-    const R=6371;
-    const dLat=(lat2-lat1)*Math.PI/180;
-    const dLon=(lon2-lon1)*Math.PI/180;
-    const a=Math.sin(dLat/2)*2+Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)*2;
-    return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
-  },
-  async checkLock(user){
-    if(!user.geoLock||!user.geoLat||!user.geoLon)return true;
-    try{
-      this._currentPos=await this.getPosition();
-      return this.haversine(user.geoLat,user.geoLon,this._currentPos.lat,this._currentPos.lon)<=CONFIG.GEO_MAX_KM;
-    }catch(e){console.warn('Geo check fallido:',e.message);return true;}
-  },
-  async retryLock(){
-    const session=JSON.parse(sessionStorage.getItem(CONFIG.SESSION_KEY)||'null');
-    if(!session)return;
-    const user=await DB.get('users',session.userId);
-    if(!user)return;
-    const ok=await this.checkLock(user);
-    if(ok){$('#geoLockScreen').classList.remove('show');toast('Ubicacion verificada','success');}
-  },
-  showLock(coords,dist){
-    $('#geoCoords').textContent=${coords.lat.toFixed(5)}, ${coords.lon.toFixed(5)};
-    $('#geoDistance').textContent=Distancia: ${dist.toFixed(1)} km del limite permitido;
-    $('#geoLockScreen').classList.add('show');
-  }
-};
+    /* ══════════════════════════════════════════════════════════════
+       BASE DE DATOS — IndexedDB nativo
+    ══════════════════════════════════════════════════════════════ */
+    const DB={
+      db:null,
+      STORES:{
+        users:{keyPath:'id'},
+        fincas:{keyPath:'id',indexes:[['userId','userId']]},
+        carbon_fotos:{keyPath:'id',indexes:[['userId','userId'],['synced','synced'],['fecha','fecha']]},
+        sync_queue:{keyPath:'id',autoIncrement:true,indexes:[['entity','entity'],['timestamp','timestamp']]},
+        actividad:{keyPath:'id',autoIncrement:true,indexes:[['userId','userId']]}
+      },
+      init(){
+        return new Promise((resolve,reject)=>{
+          const req=indexedDB.open(CONFIG.DB_NAME,CONFIG.DB_VERSION);
+          req.onupgradeneeded=(e)=>{
+            const db=e.target.result;
+            for(const[name,def]of Object.entries(this.STORES)){
+              if(!db.objectStoreNames.contains(name)){
+                const store=db.createObjectStore(name,{keyPath:def.keyPath,autoIncrement:def.autoIncrement||false});
+                if(def.indexes)def.indexes.forEach(([iname,key])=>store.createIndex(iname,key,{unique:false}));
+              }
+            }
+          };
+          req.onsuccess=(e)=>{this.db=e.target.result;resolve();};
+          req.onerror=(e)=>reject(e.target.error);
+        });
+      },
+      _store(name,mode){return this.db.transaction(name,mode).objectStore(name);},
+      add(name,data){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readwrite').add({...data,id:data.id||Date.now().toString(36)+Math.random().toString(36).slice(2,6)});
+          r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+        });
+      },
+      put(name,data){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readwrite').put(data);
+          r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
+        });
+      },
+      getByIndex(name,indexName,key){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readonly').index(indexName).getAll(key);
+          r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
+        });
+      },
+      delete(name,key){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readwrite').delete(key);
+          r.onsuccess=()=>res();r.onerror=()=>rej(r.error);
+        });
+      },
+      getAll(name){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readonly').getAll();
+          r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
+        });
+      }
+    };
 
 /* ══════════════════════════════════════════════════════════════
    SYNC ENGINE
@@ -931,7 +877,7 @@ const Sync={
     if(this.isOnline){badge.className='status-badge online';txt.textContent='Conectado';}
     else{badge.className='status-badge offline';txt.textContent='Offline';}
     this.getPendingCount().then(n=>{
-      if(n>0&&this.isOnline){badge.className='status-badge syncing';txt.textContent=Sync ${n}...;}
+      if(n>0&&this.isOnline){badge.className='status-badge syncing';txt.textContent=`Sync ${n}...`;}
     });
   }
 };
@@ -1033,8 +979,8 @@ const Router={
   go(view){
     $$('.view').forEach(v=>v.classList.remove('active'));
     $$('.nav-item').forEach(n=>n.classList.remove('active'));
-    const el=$(#view-${view});
-    const nav=$(.nav-item[data-view="${view}"]);
+    const el = $(`#view-${view}`);
+    const nav = $(`.nav-item[data-view="${view}"]`);
     if(el)el.classList.add('active');
     if(nav)nav.classList.add('active');
     $('#sidebar').classList.remove('open');
@@ -1070,7 +1016,7 @@ const Home={
     const fotos=await DB.getByIndex('carbon_fotos','userId',user.id);
     const totalFotos=fotos.length;
     const pct=Math.min(100,Math.round((totalFotos/CONFIG.CARBON_GOAL)*100));
-    $('#homeSchoolProgress').textContent=${totalFotos}/${CONFIG.CARBON_GOAL} fotos cumplidas;
+    $('#homeSchoolProgress').textContent = `${totalFotos}/${CONFIG.CARBON_GOAL} fotos cumplidas`;
     $('#homeSchoolBadge').textContent=pct+'%';
 
     // Impacto financiero — simulacion basada en fotos de carbono
@@ -1126,7 +1072,7 @@ const Carbon={
     $('#carbonSynced').textContent=synced;
 
     const pct=Math.min(100,Math.round((total/CONFIG.CARBON_GOAL)*100));
-    $('#carbonProgressText').textContent=${total}/${CONFIG.CARBON_GOAL};
+    $('#carbonProgressText').textContent = `${total}/${CONFIG.CARBON_GOAL}`;
     $('#carbonBarFill').style.width=pct+'%';
 
     const grid=$('#carbonGrid');
@@ -1181,7 +1127,7 @@ const Carbon={
 
       try{
         this._gpsData=await Geo.getPosition();
-        $('#camCoordsText').textContent=${this._gpsData.lat.toFixed(6)}, ${this._gpsData.lon.toFixed(6)} (${Math.round(this._gpsData.acc)}m precision);
+        $('#camCoordsText').textContent = `${this._gpsData.lat.toFixed(6)}, ${this._gpsData.lon.toFixed(6)} (${Math.round(this._gpsData.acc)}m precision)`;
         $('#camCoords').style.color='var(--green)';
         $('#btnSavePhoto').
           this.closeCamera();
@@ -1223,7 +1169,7 @@ const Carbon={
 };
 
 // Listener del input de archivo
- $('#camInput').addEventListener('change',(e)=>{
+$('#camInput').addEventListener('change',(e)=>{
   const file=e.target.files[0];
   if(file)Carbon.onFileSelected(file);
 });
