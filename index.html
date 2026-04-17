@@ -1104,39 +1104,39 @@ const Carbon={
   // Se llama cuando el input file selecciona una imagen
   async onFileSelected(file){
     if(!file)return;
-
     this._capturing=true;
     $('#btnCapture').classList.add('capturing');
     $('#btnCapture').innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
-
     try{
       // 1. Comprimir imagen a Base64
       this._photoData=await this._compressImage(file);
-
       // 2. Obtener GPS automaticamente
       $('#camCoords').classList.add('show');
       $('#camCoordsText').textContent='Obteniendo GPS...';
       $('#camModal').classList.add('show');
       $('#camPlaceholder').style.display='none';
-
       // Mostrar preview
       const previewImg=document.createElement('img');
       previewImg.src='data:image/jpeg;base64,'+this._photoData;
       previewImg.alt='Preview';
       $('#camPreview').appendChild(previewImg);
-
       try{
         this._gpsData=await Geo.getPosition();
         $('#camCoordsText').textContent = `${this._gpsData.lat.toFixed(6)}, ${this._gpsData.lon.toFixed(6)} (${Math.round(this._gpsData.acc)}m precision)`;
         $('#camCoords').style.color='var(--green)';
-        $('#btnSavePhoto').
-          this.closeCamera();
-      this.render();
-      // Actualizar home si esta activo
-      Home.render();
+        $('#btnSavePhoto').style.display='block';
+      }catch(err){
+        $('#camCoordsText').textContent = 'No se pudo obtener GPS';
+        $('#camCoords').style.color='var(--danger)';
+      }
     }catch(err){
-      console.error('Error guardando foto:',err);
-      toast('Error al guardar en base de datos','error');
+      console.error('Error procesando imagen:',err);
+      toast('Error al procesar la imagen','error');
+      this.closeCamera();
+    }finally{
+      this._capturing=false;
+      $('#btnCapture').classList.remove('capturing');
+      $('#btnCapture').innerHTML='<i class="fa-solid fa-camera"></i> Tomar foto';
     }
   },
 
