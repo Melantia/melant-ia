@@ -50,6 +50,19 @@ const pool = new Pool({
   }
 });
 
+const normalizePhone = (value) => (value || '').toString().replace(/\D/g, '');
+const isEmail = (value) => typeof value === 'string' && value.includes('@');
+const isValidPhone = (value) => /^\d{10,15}$/.test(value || '');
+
+const ensureUsersPhoneColumn = async () => {
+  try {
+    await pool.query('ALTER TABLE users ADD COLUMN IF NOT EXISTS phone TEXT');
+    await pool.query('CREATE UNIQUE INDEX IF NOT EXISTS users_phone_unique_idx ON users (phone) WHERE phone IS NOT NULL');
+  } catch (error) {
+    console.warn('No se pudo asegurar la columna phone en users:', error.message);
+  }
+};
+
 // ==========================================
 // CONFIGURACIÓN DE CLOUDINARY
 // ==========================================
@@ -88,22 +101,48 @@ const authenticateToken = (req, res, next) => {
 // Registro de usuario
 app.post('/api/auth/register', async (req, res) => {
   try {
-    const { name, email, password, finca, geoLock, geoLat, geoLon } = req.body;
+    const { name, email, phone, password, finca } = req.body;
+    const normalizedEmail = (email || '').trim().toLowerCase();
+    const normalizedPhone = normalizePhone(phone);
     
     // Validar campos requeridos
-    if (!name || !email || !password || !finca) {
+    if (!name || !password || !finca) {
       return res.status(400).json({ error: 'Campos requeridos incompletos' });
     }
+    if (!normalizedEmail && !normalizedPhone) {
+      return res.status(400).json({ error: 'Debes enviar email o celular' });
+    }
+    if (normalizedEmail && !isEmail(normalizedEmail)) {
+      return res.status(400).json({ error: 'Email inválido' });
+    }
+    if (normalizedPhone && !isValidPhone(normalizedPhone)) {
+      return res.status(400).json({ error: 'Celular inválido. Debe tener entre 10 y 15 dígitos' });
+    }
     
-    // Verificar si el email ya existe
-    const { data: existingUser } = await supabase
-      .from('users')
-      .select('id')
-      .eq('email', email)
-      .single();
-    
-    if (existingUser) {
-      return res.status(400).json({ error: 'El email ya está registrado' });
+    if (normalizedEmail) {
+      const { data: existingEmailUser, error: emailCheckError } = await supabase
+        .from('users')
+        .select('id')
+        .eq('email', normalizedEmail)
+        .maybeSingle();
+
+      if (emailCheckError) throw emailCheckError;
+      if (existingEmailUser) {
+        return res.status(400).json({ error: 'El email ya está registrado' });
+      }
+    }
+
+    if (normalizedPhone) {
+      const { data: existingPhoneUser, error: phoneCheckError } = await supabase
+        .from('users')
+        .select('id')
+        .eq('phone', normalizedPhone)
+        .maybeSingle();
+
+      if (phoneCheckError) throw phoneCheckError;
+      if (existingPhoneUser) {
+        return res.status(400).json({ error: 'El celular ya está registrado' });
+      }
     }
     
     // Hashear contraseña
@@ -116,13 +155,14 @@ app.post('/api/auth/register', async (req, res) => {
     const { data: newUser, error } = await supabase
       .from('users')
       .insert([{
-        email,
+        email: normalizedEmail || null,
+        phone: normalizedPhone || null,
         password_hash: hashedPassword,
         name,
         finca,
-        geo_lock: geoLock || false,
-        geo_lat: geoLat || null,
-        geo_lon: geoLon || null,
+        geo_lock: false,
+        geo_lat: null,
+        geo_lon: null,
         ref_code: refCode
       }])
       .select()
@@ -142,7 +182,7 @@ app.post('/api/auth/register', async (req, res) => {
     
     // Generar token JWT
     const token = jwt.sign(
-      { id: newUser.id, email: newUser.email },
+      { id: newUser.id, email: newUser.email, phone: newUser.phone || null },
       process.env.SECRET_KEY,
       { expiresIn: `${process.env.ACCESS_TOKEN_EXPIRE_MINUTES || 10080}m` }
     );
@@ -154,6 +194,7 @@ app.post('/api/auth/register', async (req, res) => {
         id: newUser.id,
         name: newUser.name,
         email: newUser.email,
+        phone: newUser.phone || null,
         finca: newUser.finca,
         refCode: newUser.ref_code
       }
@@ -168,18 +209,27 @@ app.post('/api/auth/register', async (req, res) => {
 // Login
 app.post('/api/auth/login', async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, phone, identifier, password } = req.body;
+    const normalizedIdentifier = (identifier || '').trim().toLowerCase();
+    const normalizedEmail = (email || '').trim().toLowerCase();
+    const normalizedPhone = normalizePhone(phone || identifier || '');
+    const loginValue = normalizedIdentifier || normalizedEmail || normalizedPhone;
     
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email y contraseña requeridos' });
+    if (!loginValue || !password) {
+      return res.status(400).json({ error: 'Correo/celular y contraseña requeridos' });
     }
     
+    const query = supabase.from('users').select('*');
+    const byEmail = isEmail(loginValue) || isEmail(normalizedEmail);
+
+    if (byEmail) {
+      query.eq('email', normalizedIdentifier || normalizedEmail);
+    } else {
+      query.eq('phone', normalizedPhone || normalizePhone(loginValue));
+    }
+
     // Buscar usuario
-    const { data: user, error } = await supabase
-      .from('users')
-      .select('*')
-      .eq('email', email)
-      .single();
+    const { data: user, error } = await query.maybeSingle();
     
     if (error || !user) {
       return res.status(401).json({ error: 'Credenciales inválidas' });
@@ -191,15 +241,9 @@ app.post('/api/auth/login', async (req, res) => {
       return res.status(401).json({ error: 'Credenciales inválidas' });
     }
     
-    // Verificar geo-lock si está activo
-    if (user.geo_lock) {
-      // Aquí iría la lógica de verificación de ubicación
-      // Por ahora, permitimos el login
-    }
-    
     // Generar token JWT
     const token = jwt.sign(
-      { id: user.id, email: user.email },
+      { id: user.id, email: user.email, phone: user.phone || null },
       process.env.SECRET_KEY,
       { expiresIn: `${process.env.ACCESS_TOKEN_EXPIRE_MINUTES || 10080}m` }
     );
@@ -211,6 +255,7 @@ app.post('/api/auth/login', async (req, res) => {
         id: user.id,
         name: user.name,
         email: user.email,
+        phone: user.phone || null,
         finca: user.finca,
         refCode: user.ref_code
       }
@@ -393,8 +438,14 @@ app.get('/health', (req, res) => {
 // INICIAR SERVIDOR
 // ==========================================
 
-app.listen(PORT, () => {
-  console.log(`🚀 MELANT IA Backend corriendo en puerto ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
-  console.log(`🔗 API base: http://localhost:${PORT}/api`);
-});
+const startServer = async () => {
+  await ensureUsersPhoneColumn();
+
+  app.listen(PORT, () => {
+    console.log(`🚀 MELANT IA Backend corriendo en puerto ${PORT}`);
+    console.log(`📊 Health check: http://localhost:${PORT}/health`);
+    console.log(`🔗 API base: http://localhost:${PORT}/api`);
+  });
+};
+
+startServer();

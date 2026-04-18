@@ -95,14 +95,6 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     .auth-field label{display:block;font-size:12px;color:var(--fg-muted);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;}
     .auth-field input{width:100%;padding:12px 14px;background:var(--bg-input);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--fg);font-size:15px;outline:none;transition:border 0.3s var(--ease),box-shadow 0.3s var(--ease);}
     .auth-field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
-    .auth-geo-toggle{display:flex;align-items:center;gap:10px;margin:20px 0;padding:12px 14px;background:var(--bg-input);border-radius:var(--radius-sm);border:1px solid var(--border);cursor:pointer;}
-    .auth-geo-toggle input[type="checkbox"]{display:none;}
-    .toggle-track{width:40px;height:22px;background:var(--border-light);border-radius:11px;position:relative;transition:background 0.3s;flex-shrink:0;}
-    .toggle-track::after{content:'';position:absolute;width:18px;height:18px;background:var(--fg);border-radius:50%;top:2px;left:2px;transition:transform 0.3s var(--ease);}
-    .auth-geo-toggle input:checked+.toggle-track{background:var(--green);}
-    .auth-geo-toggle input:checked+.toggle-track::after{transform:translateX(18px);background:#fff;}
-    .toggle-label{font-size:13px;color:var(--fg-dim);line-height:1.4;}
-    .toggle-label strong{color:var(--fg);display:block;font-size:14px;}
     .auth-error{color:var(--danger);font-size:13px;margin-bottom:12px;display:none;}
     .auth-error.show{display:block;}
 
@@ -118,14 +110,6 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     .btn-sm{padding:9px 18px;font-size:12px;width:auto;}
 
     /* ═══ GEO-LOCK ═══ */
-    #geoLockScreen{position:fixed;inset:0;z-index:850;background:rgba(12,26,14,0.97);display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px;}
-    #geoLockScreen.show{display:flex;}
-    .geo-pin{width:80px;height:80px;border-radius:50%;background:rgba(239,68,68,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:24px;position:relative;}
-    .geo-pin i{font-size:32px;color:var(--danger);}
-    .geo-pin::after{content:'';position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(239,68,68,0.3);animation:geoPulse 2s ease infinite;}
-    @keyframes geoPulse{0%,100%{transform:scale(1);opacity:1;}50%{transform:scale(1.3);opacity:0;}}
-    .geo-coords{font-family:'Space Grotesk',monospace;font-size:13px;color:var(--fg-muted);margin:12px 0 8px;}
-    .geo-distance{font-size:14px;color:var(--danger);font-weight:600;margin-bottom:28px;}
 
     /* ═══ APP SHELL ═══ */
     #appShell{display:none;position:relative;z-index:1;}
@@ -191,6 +175,8 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
 
     /* ═══ HOME — QUICK ACCESS ═══ */
     .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+    .main-menu-title{font-size:13px;color:var(--fg-muted);letter-spacing:0.5px;text-transform:uppercase;font-weight:700;margin:2px 0 10px;}
+    .main-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
     .quick-card{
       background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
       padding:20px 16px;cursor:pointer;transition:all 0.3s var(--ease);
@@ -285,6 +271,33 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     .sync-tag.synced{background:var(--green-soft);color:var(--green);}
     .btn-del-photo{background:none;border:none;color:var(--fg-muted);cursor:pointer;font-size:14px;padding:4px 8px;border-radius:var(--radius-xs);transition:all 0.25s;}
     .btn-del-photo:hover{color:var(--danger);background:rgba(239,68,68,0.1);}
+
+    /* ═══ TAG MELANT — CERTIFICACION IA ═══ */
+    .tag-melant{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 12px;
+      border-radius:8px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.4px;
+      background:linear-gradient(135deg,rgba(212,160,23,0.15) 0%,rgba(212,160,23,0.08) 100%);
+      border:1px solid rgba(212,160,23,0.3);
+      color:var(--accent);
+      text-transform:uppercase;
+      box-shadow:0 2px 8px rgba(212,160,23,0.12),inset 0 1px 0 rgba(255,255,255,0.1);
+      transition:all 0.3s var(--ease);
+    }
+    .tag-melant:hover{
+      border-color:rgba(212,160,23,0.5);
+      box-shadow:0 4px 12px rgba(212,160,23,0.2),inset 0 1px 0 rgba(255,255,255,0.15);
+      transform:translateY(-1px);
+    }
+    .tag-melant i{
+      font-size:11px;
+      opacity:0.85;
+    }
 
     /* Camera modal */
     .cam-modal{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px);}
@@ -387,16 +400,16 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
         <div class="auth-tabs"><button class="auth-tab active" data-tab="login">Ingresar</button><button class="auth-tab" data-tab="register">Registrarse</button></div>
         <div id="authError" class="auth-error"></div>
         <div id="loginForm">
-          <div class="auth-field"><label>Correo electronico</label><input type="email" id="loginEmail" placeholder="tu@correo.com" autocomplete="email"></div>
+          <div class="auth-field"><label>Correo o celular</label><input type="text" id="loginIdentifier" placeholder="tu@correo.com o 3001234567" autocomplete="username"></div>
           <div class="auth-field"><label>Contrasena</label><input type="password" id="loginPass" placeholder="Tu contrasena" autocomplete="current-password"></div>
           <button class="btn btn-primary" onclick="Auth.login()" style="margin-top:8px;"><i class="fa-solid fa-right-to-bracket"></i> Ingresar</button>
         </div>
         <div id="registerForm" style="display:none;">
           <div class="auth-field"><label>Nombre completo</label><input type="text" id="regName" placeholder="Tu nombre"></div>
-          <div class="auth-field"><label>Correo electronico</label><input type="email" id="regEmail" placeholder="tu@correo.com"></div>
+          <div class="auth-field"><label>Correo electronico (opcional)</label><input type="email" id="regEmail" placeholder="tu@correo.com"></div>
+          <div class="auth-field"><label>Numero de celular (opcional)</label><input type="tel" id="regPhone" placeholder="3001234567" autocomplete="tel"></div>
           <div class="auth-field"><label>Nombre de la finca</label><input type="text" id="regFinca" placeholder="Finca El Paraiso"></div>
           <div class="auth-field"><label>Contrasena (min. 6)</label><input type="password" id="regPass" placeholder="Crea una contrasena"></div>
-          <label class="auth-geo-toggle"><input type="checkbox" id="regGeoLock" checked><div class="toggle-track"></div><div class="toggle-label"><strong>Bloqueo geografico</strong>Restringir acceso a la zona de tu finca</div></label>
           <button class="btn btn-primary" onclick="Auth.register()" style="margin-top:8px;"><i class="fa-solid fa-user-plus"></i> Crear cuenta</button>
         </div>
       </div>
@@ -489,6 +502,105 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
           </div>
         </div>
 
+        <h3 class="main-menu-title">Menu Principal MELANT IA</h3>
+        <div class="main-menu-grid">
+          <button class="quick-card" type="button" onclick="AppMenu.open('asistencia_tecnica_rural')">
+            <div class="qc-icon" style="background:var(--green-soft);color:var(--green);"><i class="fa-solid fa-stethoscope"></i></div>
+            <div class="qc-body">
+              <h3>Asistencia Tecnica Rural</h3>
+              <p>Agricola, ganadera, forestal y pronostico del tiempo.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('escuela_campo_regenera')">
+            <div class="qc-icon" style="background:var(--cyan-soft);color:var(--cyan);"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="qc-body">
+              <h3>Escuela de Campo</h3>
+              <p>Regenera MELANTIA para aprendizaje en finca.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('practicas_regenerativas')">
+            <div class="qc-icon" style="background:var(--accent-soft);color:var(--accent);"><i class="fa-solid fa-seedling"></i></div>
+            <div class="qc-body">
+              <h3>Practicas Regenerativas</h3>
+              <p>Rutinas y seguimiento de practicas de campo.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('calculadora_agricola')">
+            <div class="qc-icon" style="background:rgba(245,158,11,0.12);color:var(--orange);"><i class="fa-solid fa-calculator"></i></div>
+            <div class="qc-body">
+              <h3>Calculadora</h3>
+              <p>Agricola, pecuaria y forestal.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('calendario_lunar')">
+            <div class="qc-icon" style="background:var(--violet-soft);color:var(--violet);"><i class="fa-solid fa-moon"></i></div>
+            <div class="qc-body">
+              <h3>Calendario Lunar</h3>
+              <p>Ciclos y recomendaciones para actividades productivas.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('ciudadano_rural')">
+            <div class="qc-icon" style="background:rgba(74,222,128,0.12);color:var(--green);"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="qc-body">
+              <h3>Ciudadano Rural</h3>
+              <p>Precios, noticias, AgroCalidad y creditos MAG/BNF.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('gps_registro')">
+            <div class="qc-icon" style="background:var(--rose-soft);color:var(--rose);"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="qc-body">
+              <h3>GPS</h3>
+              <p>Levantamiento topografico y descarga de planos.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('walkie_talkie')">
+            <div class="qc-icon" style="background:rgba(6,182,212,0.12);color:var(--cyan);"><i class="fa-solid fa-walkie-talkie"></i></div>
+            <div class="qc-body">
+              <h3>Walkie Talkie</h3>
+              <p>Comunicacion local para equipos de trabajo.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('tienda_melantia')">
+            <div class="qc-icon" style="background:rgba(245,158,11,0.12);color:var(--orange);"><i class="fa-solid fa-store"></i></div>
+            <div class="qc-body">
+              <h3>Tienda Melantia</h3>
+              <p>Productos, servicios y ofertas del sector rural.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('oficina_productor')">
+            <div class="qc-icon" style="background:var(--accent-soft);color:var(--accent);"><i class="fa-solid fa-folder-open"></i></div>
+            <div class="qc-body">
+              <h3>Oficina del Productor</h3>
+              <p>Gestion de documentos y planos.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('referidos')">
+            <div class="qc-icon" style="background:var(--rose-soft);color:var(--rose);"><i class="fa-solid fa-user-plus"></i></div>
+            <div class="qc-body">
+              <h3>Referidos</h3>
+              <p>Invita productores y gana beneficios en la red.</p>
+            </div>
+          </button>
+
+          <button class="quick-card" type="button" onclick="AppMenu.open('asesor_legal')">
+            <div class="qc-icon" style="background:var(--violet-soft);color:var(--violet);"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="qc-body">
+              <h3>Su Asesor Legal</h3>
+              <p>Consultas legales y documentos para el sector rural.</p>
+            </div>
+          </button>
+        </div>
+
         <!-- Impacto -->
         <div class="impact-card">
           <div class="impact-title"><i class="fa-solid fa-chart-line"></i> Tu Impacto Financiero</div>
@@ -564,8 +676,54 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
       </section>
       <section class="view" id="view-store">
         <h1 style="font-size:22px;margin-bottom:10px;">Tienda Melant</h1>
-        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">5% de descuento activo para usuarios MELANT.</p>
-        <div class="empty-state"><i class="fa-solid fa-store"></i><p>La tienda se carga como modulo independiente (store.js)</p></div>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Publica tus productos y consulta la comisión que cobra MELANT IA.</p>
+        <div class="store-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;">
+          <!-- Producto: Moto -->
+          <div class="card">
+            <h3 style="margin-bottom:8px;">Moto Yamaha XTZ 125</h3>
+            <p style="color:var(--fg-muted);font-size:13px;">Año 2022, 5.000 km, excelente estado.</p>
+            <div style="margin:10px 0 6px 0;font-size:13px;">
+              <span class="tag-melant"><i class="fa-solid fa-certificate"></i> Comisión: 3%</span>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-top:8px;">$2.500</div>
+          </div>
+          <!-- Producto: Vehículo -->
+          <div class="card">
+            <h3 style="margin-bottom:8px;">Camioneta Toyota Hilux</h3>
+            <p style="color:var(--fg-muted);font-size:13px;">4x4, Diesel, 2019, 40.000 km.</p>
+            <div style="margin:10px 0 6px 0;font-size:13px;">
+              <span class="tag-melant"><i class="fa-solid fa-certificate"></i> Comisión: 3%</span>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-top:8px;">$28.000</div>
+          </div>
+          <!-- Producto: Finca -->
+          <div class="card">
+            <h3 style="margin-bottom:8px;">Finca El Paraíso</h3>
+            <p style="color:var(--fg-muted);font-size:13px;">10 hectáreas, agua propia, casa y galpón.</p>
+            <div style="margin:10px 0 6px 0;font-size:13px;">
+              <span class="tag-melant"><i class="fa-solid fa-certificate"></i> Comisión: 5%</span>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-top:8px;">$120.000</div>
+          </div>
+          <!-- Producto: Casa -->
+          <div class="card">
+            <h3 style="margin-bottom:8px;">Casa en el pueblo</h3>
+            <p style="color:var(--fg-muted);font-size:13px;">3 habitaciones, 2 baños, patio grande.</p>
+            <div style="margin:10px 0 6px 0;font-size:13px;">
+              <span class="tag-melant"><i class="fa-solid fa-certificate"></i> Comisión: 5%</span>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-top:8px;">$45.000</div>
+          </div>
+          <!-- Producto: Lote de terreno -->
+          <div class="card">
+            <h3 style="margin-bottom:8px;">Lote de terreno rural</h3>
+            <p style="color:var(--fg-muted);font-size:13px;">2.000 m², listo para construir.</p>
+            <div style="margin:10px 0 6px 0;font-size:13px;">
+              <span class="tag-melant"><i class="fa-solid fa-certificate"></i> Comisión: 5%</span>
+            </div>
+            <div style="font-size:15px;font-weight:700;margin-top:8px;">$18.000</div>
+          </div>
+        </div>
       </section>
       <section class="view" id="view-school">
         <h1 style="font-size:22px;margin-bottom:10px;">Escuela de Campo</h1>
@@ -576,6 +734,78 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
         <h1 style="font-size:22px;margin-bottom:10px;">Referidos</h1>
         <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Invita y gana puntos.</p>
         <div class="empty-state"><i class="fa-solid fa-users"></i><p>Referidos se carga como modulo independiente (referrals.js)</p></div>
+      </section>
+
+      <section class="view" id="view-asistencia_tecnica_rural">
+        <h1 style="font-size:22px;margin-bottom:10px;">Asistencia Tecnica Rural</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Agricola, ganadera, forestal y pronostico del tiempo.</p>
+        <div class="empty-state"><i class="fa-solid fa-stethoscope"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-escuela_campo_regenera">
+        <h1 style="font-size:22px;margin-bottom:10px;">Escuela de Campo Regenera MELANTIA</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Contenidos de formacion y rutas de aprendizaje.</p>
+        <div class="empty-state"><i class="fa-solid fa-graduation-cap"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-practicas_regenerativas">
+        <h1 style="font-size:22px;margin-bottom:10px;">Practicas Regenerativas</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Registro y seguimiento de practicas en campo.</p>
+        <div class="empty-state"><i class="fa-solid fa-seedling"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-calculadora_agricola">
+        <h1 style="font-size:22px;margin-bottom:10px;">Calculadora Agricola, Pecuaria y Forestal</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Herramientas de calculo para decisiones productivas.</p>
+        <div class="empty-state"><i class="fa-solid fa-calculator"></i><p>Usa la logica base en calculadora_agricola.js.</p></div>
+      </section>
+
+      <section class="view" id="view-calendario_lunar">
+        <h1 style="font-size:22px;margin-bottom:10px;">Calendario Lunar</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Fases lunares y recomendaciones de labores.</p>
+        <div class="empty-state"><i class="fa-solid fa-moon"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-ciudadano_rural">
+        <h1 style="font-size:22px;margin-bottom:10px;">Ciudadano Rural</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Precios, noticias y programas AgroCalidad, MAG y BNF.</p>
+        <div class="empty-state"><i class="fa-solid fa-newspaper"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-gps_registro">
+        <h1 style="font-size:22px;margin-bottom:10px;">GPS y Levantamiento Topografico</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Registro GPS y descarga de planos de campo.</p>
+        <div class="empty-state"><i class="fa-solid fa-map-location-dot"></i><p>Usa la logica base en gps_registro.js.</p></div>
+      </section>
+
+      <section class="view" id="view-walkie_talkie">
+        <h1 style="font-size:22px;margin-bottom:10px;">Walkie Talkie</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Comunicacion rapida entre equipos de trabajo.</p>
+        <div class="empty-state"><i class="fa-solid fa-walkie-talkie"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-tienda_melantia">
+        <h1 style="font-size:22px;margin-bottom:10px;">Tienda Melantia</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Catalogo de productos y servicios rurales.</p>
+        <div class="empty-state"><i class="fa-solid fa-store"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-oficina_productor">
+        <h1 style="font-size:22px;margin-bottom:10px;">Oficina del Productor</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Gestion de documentos y planos del productor.</p>
+        <div class="empty-state"><i class="fa-solid fa-folder-open"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-referidos">
+        <h1 style="font-size:22px;margin-bottom:10px;">Referidos</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Invita a otros productores y obtene beneficios exclusivos.</p>
+        <div class="empty-state"><i class="fa-solid fa-user-plus" style="color:var(--rose);"></i><p>Modulo preparado para integracion.</p></div>
+      </section>
+
+      <section class="view" id="view-asesor_legal">
+        <h1 style="font-size:22px;margin-bottom:10px;">Su Asesor Legal</h1>
+        <p style="color:var(--fg-muted);font-size:14px;margin-bottom:24px;">Consultas legales y documentos para el sector rural.</p>
+        <div class="empty-state"><i class="fa-solid fa-scale-balanced" style="color:var(--violet);"></i><p>Modulo preparado para integracion.</p></div>
       </section>
 
     </div>
@@ -657,7 +887,7 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
       bottom: 0; width: 100%;
       background: rgba(18, 36, 22, 0.95);
       backdrop-filter: blur(10px);
-      display: flex;s
+      display: flex;
       justify-content: space-around;
       padding: 15px;
       border-top: 1px solid var(--accent-soft);
@@ -734,10 +964,11 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     ══════════════════════════════════════════════════════════════ */
     const CONFIG = {
       DB_NAME: 'melant_ia_db',
-      DB_VERSION: 1,
+      DB_VERSION: 2,
       GEO_MAX_KM: 50,
       SYNC_INTERVAL: 30000,
       SESSION_KEY: 'melant_session',
+      LAST_LOGIN_KEY: 'melant_last_login',
       _PEPPER: 'M3L4NT_RUR4L_2024_K3Y',
       CARBON_GOAL: 24,
       // Compresion de imagen
@@ -788,6 +1019,33 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
     };
 
     /* ══════════════════════════════════════════════════════════════
+       CRYPTO LOCAL
+    ══════════════════════════════════════════════════════════════ */
+    const Crypto={
+      async hash(text){
+        const input = `${text || ''}|${CONFIG._PEPPER}`;
+
+        if(window.crypto && window.crypto.subtle && typeof TextEncoder !== 'undefined'){
+          const data = new TextEncoder().encode(input);
+          const digest = await window.crypto.subtle.digest('SHA-256', data);
+          return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
+        }
+
+        // Fallback determinista para entornos sin subtle crypto.
+        let h = 2166136261;
+        for(let i=0;i<input.length;i++){
+          h ^= input.charCodeAt(i);
+          h += (h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24);
+        }
+        return (h >>> 0).toString(16).padStart(8,'0');
+      },
+      async makeSessionToken(userId){
+        const base = `${userId || ''}|${navigator.userAgent}|${CONFIG._PEPPER}`;
+        return this.hash(base);
+      }
+    };
+
+    /* ══════════════════════════════════════════════════════════════
        BASE DE DATOS — IndexedDB nativo
     ══════════════════════════════════════════════════════════════ */
     const DB={
@@ -797,7 +1055,8 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
         fincas:{keyPath:'id',indexes:[['userId','userId']]},
         carbon_fotos:{keyPath:'id',indexes:[['userId','userId'],['synced','synced'],['fecha','fecha']]},
         sync_queue:{keyPath:'id',autoIncrement:true,indexes:[['entity','entity'],['timestamp','timestamp']]},
-        actividad:{keyPath:'id',autoIncrement:true,indexes:[['userId','userId']]}
+        actividad:{keyPath:'id',autoIncrement:true,indexes:[['userId','userId']]},
+        practicas_aceptacion:{keyPath:'id'}
       },
       init(){
         return new Promise((resolve,reject)=>{
@@ -828,6 +1087,12 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
           r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);
         });
       },
+      get(name,key){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readonly').get(key);
+          r.onsuccess=()=>res(r.result||null);r.onerror=()=>rej(r.error);
+        });
+      },
       getByIndex(name,indexName,key){
         return new Promise((res,rej)=>{
           const r=this._store(name,'readonly').index(indexName).getAll(key);
@@ -844,6 +1109,12 @@ font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);min-height
         return new Promise((res,rej)=>{
           const r=this._store(name,'readonly').getAll();
           r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error);
+        });
+      },
+      count(name){
+        return new Promise((res,rej)=>{
+          const r=this._store(name,'readonly').count();
+          r.onsuccess=()=>res(r.result||0);r.onerror=()=>rej(r.error);
         });
       }
     };
@@ -887,6 +1158,8 @@ const Sync={
 ══════════════════════════════════════════════════════════════ */
 const Auth={
   currentUser:null,
+  normalizePhone(v){return (v||'').replace(/\D/g,'');},
+  isValidPhone(v){return /^\d{10,15}$/.test(v||'');},
   init(){
     $$('.auth-tab').forEach(tab=>{
       tab.onclick=()=>{
@@ -898,57 +1171,94 @@ const Auth={
         $('#authError').classList.remove('show');
       };
     });
+    const lastLogin=localStorage.getItem(CONFIG.LAST_LOGIN_KEY)||'';
+    if(lastLogin&&$('#loginIdentifier'))$('#loginIdentifier').value=lastLogin;
   },
   showAuthError(msg){$('#authError').textContent=msg;$('#authError').classList.add('show');},
   async login(){
-    const email=$('#loginEmail').value.trim().toLowerCase();
-    const pass=$('#loginPass').value;
-    if(!email||!pass)return this.showAuthError('Completa todos los campos');
-    if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
-    const users=await DB.getAll('users');
-    const user=users.find(u=>u.email===email);
-    if(!user)return this.showAuthError('No existe una cuenta con ese correo');
-    const hash=await Crypto.hash(pass);
-    if(hash!==user.passHash)return this.showAuthError('Contrasena incorrecta');
-    const geoOk=await Geo.checkLock(user);
-    if(!geoOk){const pos=Geo.getCurrent();const dist=Geo.haversine(user.geoLat,user.geoLon,pos.lat,pos.lon);Geo.showLock(pos,dist-CONFIG.GEO_MAX_KM);return;}
-    await this._startSession(user);
+    try{
+      const identifierRaw=$('#loginIdentifier').value.trim();
+      const pass=$('#loginPass').value;
+      if(!identifierRaw||!pass)return this.showAuthError('Completa todos los campos');
+      if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
+      const identifier=identifierRaw.toLowerCase();
+      const phone=this.normalizePhone(identifierRaw);
+      const users=await DB.getAll('users');
+      const user=users.find(u=>{
+        const byEmail=identifier.includes('@')&&u.email===identifier;
+        const byPhone=phone&&u.phone===phone;
+        return byEmail||byPhone;
+      });
+      if(!user)return this.showAuthError('No existe una cuenta con ese correo o celular');
+      const hash=await Crypto.hash(pass);
+      if(hash!==user.passHash)return this.showAuthError('Contrasena incorrecta');
+      localStorage.setItem(CONFIG.LAST_LOGIN_KEY,identifierRaw);
+      await this._startSession(user);
+    }catch(err){
+      console.error('Error en login:',err);
+      this.showAuthError('No fue posible iniciar sesion. Intenta de nuevo.');
+    }
   },
   async register(){
-    const name=$('#regName').value.trim();
-    const email=$('#regEmail').value.trim().toLowerCase();
-    const finca=$('#regFinca').value.trim();
-    const pass=$('#regPass').value;
-    const geoLock=$('#regGeoLock').checked;
-    if(!name||!email||!finca||!pass)return this.showAuthError('Completa todos los campos');
-    if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
-    if(!email.includes('@'))return this.showAuthError('Correo no valido');
-    const users=await DB.getAll('users');
-    if(users.find(u=>u.email===email))return this.showAuthError('Ya existe una cuenta con ese correo');
-    let geoLat=null,geoLon=null;
-    if(geoLock){try{const pos=await Geo.getPosition();geoLat=pos.lat;geoLon=pos.lon;}catch{return this.showAuthError('Necesitamos acceso a tu ubicacion');}}
-    const passHash=await Crypto.hash(pass);
-    const userId=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
-    const user={id:userId,name,email,finca,passHash,geoLock,geoLat,geoLon,createdAt:new Date().toISOString(),refCode:'ML-'+name.slice(0,3).toUpperCase()+userId.slice(-4).toUpperCase()};
-    await DB.add('users',user);
-    await DB.add('fincas',{id:'finca_'+userId,userId,nombre:finca,createdAt:new Date().toISOString()});
-    await this._startSession(user);
-    toast('Cuenta creada exitosamente','success');
+    try{
+      const name=$('#regName').value.trim();
+      const emailRaw=$('#regEmail').value.trim().toLowerCase();
+      const phone=this.normalizePhone($('#regPhone').value.trim());
+      const finca=$('#regFinca').value.trim();
+      const pass=$('#regPass').value;
+      if(!name||!finca||!pass)return this.showAuthError('Completa todos los campos');
+      if(!emailRaw&&!phone)return this.showAuthError('Ingresa correo o numero de celular');
+      if(pass.length<6)return this.showAuthError('Contrasena minimo 6 caracteres');
+      if(emailRaw&&!emailRaw.includes('@'))return this.showAuthError('Correo no valido');
+      if(phone&&!this.isValidPhone(phone))return this.showAuthError('Celular no valido. Usa 10 a 15 digitos');
+      const users=await DB.getAll('users');
+      if(emailRaw&&users.find(u=>u.email===emailRaw))return this.showAuthError('Ya existe una cuenta con ese correo');
+      if(phone&&users.find(u=>u.phone===phone))return this.showAuthError('Ya existe una cuenta con ese celular');
+      const passHash=await Crypto.hash(pass);
+      const userId=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+      const user={
+        id:userId,
+        name,
+        email:emailRaw||null,
+        phone:phone||null,
+        finca,
+        passHash,
+        createdAt:new Date().toISOString(),
+        refCode:'ML-'+name.slice(0,3).toUpperCase()+userId.slice(-4).toUpperCase()
+      };
+      await DB.add('users',user);
+      await DB.add('fincas',{id:'finca_'+userId,userId,nombre:finca,createdAt:new Date().toISOString()});
+      localStorage.setItem(CONFIG.LAST_LOGIN_KEY,emailRaw||phone);
+      await this._startSession(user);
+      toast('Cuenta creada exitosamente','success');
+    }catch(err){
+      console.error('Error en registro:',err);
+      if(err && err.name === 'ConstraintError'){
+        this.showAuthError('Ese usuario ya existe. Verifica correo o celular.');
+        return;
+      }
+      this.showAuthError('No fue posible guardar el registro. Reintenta.');
+    }
   },
   async _startSession(user){
-    this.currentUser=user;
-    const token=await Crypto.makeSessionToken(user.id);
-    sessionStorage.setItem(CONFIG.SESSION_KEY,JSON.stringify({userId:user.id,token}));
-    $('#authScreen').classList.remove('show');
-    $('#geoLockScreen').classList.remove('show');
-    $('#appShell').classList.add('show');
-    $('#sidebarName').textContent=user.name;
-    $('#sidebarFinca').textContent=user.finca;
-    Home.render();
-    Router.go('home');
+    try{
+      this.currentUser=user;
+      const token=await Crypto.makeSessionToken(user.id);
+      localStorage.setItem(CONFIG.SESSION_KEY,JSON.stringify({userId:user.id,token}));
+      $('#authScreen').classList.remove('show');
+      $('#geoLockScreen').classList.remove('show');
+      $('#appShell').classList.add('show');
+      $('#sidebarName').textContent=user.name;
+      $('#sidebarFinca').textContent=user.finca;
+      Home.render();
+      Router.go('home');
+    }catch(err){
+      console.error('Error iniciando sesion local:',err);
+      this.showAuthError('No fue posible continuar con la sesion.');
+    }
   },
   async restoreSession(){
-    const raw=sessionStorage.getItem(CONFIG.SESSION_KEY);
+    const raw=localStorage.getItem(CONFIG.SESSION_KEY);
     if(!raw)return false;
     try{
       const session=JSON.parse(raw);
@@ -956,8 +1266,6 @@ const Auth={
       if(!user)return false;
       const token=await Crypto.makeSessionToken(user.id);
       if(token!==session.token)return false;
-      const geoOk=await Geo.checkLock(user);
-      if(!geoOk){const pos=Geo.getCurrent();if(pos){const dist=Geo.haversine(user.geoLat,user.geoLon,pos.lat,pos.lon);Geo.showLock(pos,dist-CONFIG.GEO_MAX_KM);}return false;}
       await this._startSession(user);
       return true;
     }catch{return false;}
@@ -965,7 +1273,7 @@ const Auth={
   logout(){
     showModal('Cerrar sesion','Se cerrara tu sesion en este dispositivo.',()=>{
       this.currentUser=null;
-      sessionStorage.removeItem(CONFIG.SESSION_KEY);
+      localStorage.removeItem(CONFIG.SESSION_KEY);
       $('#appShell').classList.remove('show');
       $('#authScreen').classList.add('show');
     });
@@ -989,6 +1297,56 @@ const Router={
     if(view==='carbon')Carbon.render();
   }
 };
+
+const AppMenu={
+  _loaded:new Set(),
+  modules:{
+    asistencia_tecnica_rural:'asistencia_tecnica_rural.js',
+    escuela_campo_regenera:'escuela_campo_regenera.js',
+    practicas_regenerativas:'practicas_regenerativas.js',
+    calculadora_agricola:'calculadora_agricola.js',
+    calendario_lunar:'calendario_lunar.js',
+    ciudadano_rural:'ciudadano_rural.js',
+    gps_registro:'gps_registro.js',
+    walkie_talkie:'walkie_talkie.js',
+    tienda_melantia:'tienda_melantia.js',
+    oficina_productor:'oficina_productor.js',
+    referidos:'referidos.js',
+    asesor_legal:'asesor_legal.js'
+  },
+  async open(moduleId){
+    const src=this.modules[moduleId];
+    if(!src){
+      toast('Modulo no disponible','error');
+      return;
+    }
+    try{
+      if(!this._loaded.has(src)){
+        await this._loadScript(src);
+        this._loaded.add(src);
+      }
+      const targetView=$(`#view-${moduleId}`);
+      if(targetView){
+        Router.go(moduleId);
+      }
+      toast('Modulo listo: '+moduleId.replaceAll('_',' '),'info');
+    }catch(err){
+      console.error('Error cargando modulo:',moduleId,err);
+      toast('No se pudo abrir el modulo','error');
+    }
+  },
+  _loadScript(src){
+    return new Promise((resolve,reject)=>{
+      const script=document.createElement('script');
+      script.src=src;
+      script.defer=true;
+      script.onload=()=>resolve();
+      script.onerror=()=>reject(new Error('Fallo cargando '+src));
+      document.body.appendChild(script);
+    });
+  }
+};
+
  $$('.nav-item[data-view]').forEach(item=>item.addEventListener('click',()=>Router.go(item.dataset.view)));
  $('#mobileToggle').onclick=()=>{$('#sidebar').classList.add('open');$('#sidebarOverlay').classList.add('show');};
  $('#sidebarOverlay').onclick=()=>{$('#sidebar').classList.remove('open');$('#sidebarOverlay').classList.remove('show');};
@@ -1052,6 +1410,37 @@ const Carbon={
   _gpsData: null,     // {lat, lon, acc}
   _capturing: false,
 
+  async checkAcceptance(){
+    if(!Auth.currentUser) return false;
+    const userId = Auth.currentUser.id;
+    let acceptance = await DB.get('practicas_aceptacion', userId);
+    if (!acceptance) {
+      // Mostrar modal de aceptación
+      return new Promise(resolve => {
+        showModal(
+          'Aceptación de Prácticas Regenerativas',
+          'Para participar y certificarte, debes aceptar realizar al menos una práctica regenerativa al mes durante 6 meses. ¿Aceptas este compromiso?',
+          async () => {
+            // Confirmar
+            await DB.put('practicas_aceptacion', {
+              id: userId,
+              aceptado: true,
+              fecha: new Date().toISOString()
+            });
+            toast('¡Compromiso aceptado!','success');
+            resolve(true);
+          },
+          () => {
+            // Cancelar
+            Router.go('home');
+            resolve(false);
+          }
+        );
+      });
+    }
+    return true;
+  },
+
   openCamera(){
     // Disparar el input de archivo (camara en movil, dialogo en desktop)
     const input=$('#camInput');
@@ -1061,6 +1450,9 @@ const Carbon={
 
   async render(){
     if(!Auth.currentUser)return;
+    // Validar aceptación antes de mostrar el módulo
+    const accepted = await this.checkAcceptance();
+    if(!accepted) return;
     const uid=Auth.currentUser.id;
     const fotos=await DB.getByIndex('carbon_fotos','userId',uid);
     const pending=fotos.filter(f=>!f.synced).length;
@@ -1108,27 +1500,44 @@ const Carbon={
     $('#btnCapture').classList.add('capturing');
     $('#btnCapture').innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
     try{
-      // 1. Comprimir imagen a Base64
+      // 1. Solicitar ubicación satelital antes de procesar la imagen
+      let gpsData;
+      try {
+        gpsData = await Geo.getPosition();
+      } catch (err) {
+        toast('Debes activar la ubicación satelital para tomar la foto en tu entorno productivo.','error');
+        this.closeCamera();
+        return;
+      }
+      // 2. Comprimir imagen a Base64
       this._photoData=await this._compressImage(file);
-      // 2. Obtener GPS automaticamente
+      this._gpsData=gpsData;
+      // 3. Validar entorno productivo
+      const user = Auth.currentUser;
+      let finca = await DB.getByIndex('fincas','userId',user.id);
+      if(!finca || !finca.lat || !finca.lon){
+        // Si no hay coordenadas de finca, permitir pero advertir
+        toast('No se ha registrado la ubicación de tu entorno productivo. Contacta a soporte para registrar tu finca.','warning');
+      } else {
+        // Validar distancia (ejemplo: 1km)
+        const dist = Carbon._calcDistance(gpsData.lat, gpsData.lon, finca.lat, finca.lon);
+        if(dist > 1){
+          toast('La foto debe ser tomada dentro de tu entorno productivo registrado. Intenta nuevamente cerca de tu finca.','error');
+          this.closeCamera();
+          return;
+        }
+      }
+      // 4. Mostrar modal y preview
       $('#camCoords').classList.add('show');
-      $('#camCoordsText').textContent='Obteniendo GPS...';
+      $('#camCoordsText').textContent = `${gpsData.lat.toFixed(6)}, ${gpsData.lon.toFixed(6)} (${Math.round(gpsData.acc)}m precision)`;
+      $('#camCoords').style.color='var(--green)';
       $('#camModal').classList.add('show');
       $('#camPlaceholder').style.display='none';
-      // Mostrar preview
       const previewImg=document.createElement('img');
       previewImg.src='data:image/jpeg;base64,'+this._photoData;
       previewImg.alt='Preview';
       $('#camPreview').appendChild(previewImg);
-      try{
-        this._gpsData=await Geo.getPosition();
-        $('#camCoordsText').textContent = `${this._gpsData.lat.toFixed(6)}, ${this._gpsData.lon.toFixed(6)} (${Math.round(this._gpsData.acc)}m precision)`;
-        $('#camCoords').style.color='var(--green)';
-        $('#btnSavePhoto').style.display='block';
-      }catch(err){
-        $('#camCoordsText').textContent = 'No se pudo obtener GPS';
-        $('#camCoords').style.color='var(--danger)';
-      }
+      $('#btnSavePhoto').style.display='block';
     }catch(err){
       console.error('Error procesando imagen:',err);
       toast('Error al procesar la imagen','error');
@@ -1138,6 +1547,17 @@ const Carbon={
       $('#btnCapture').classList.remove('capturing');
       $('#btnCapture').innerHTML='<i class="fa-solid fa-camera"></i> Tomar foto';
     }
+  },
+  // Calcula distancia en km entre dos puntos GPS
+  _calcDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Radio de la tierra en km
+    const dLat = (lat2-lat1) * Math.PI/180;
+    const dLon = (lon2-lon1) * Math.PI/180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
   },
 
   async deletePhoto(id){
