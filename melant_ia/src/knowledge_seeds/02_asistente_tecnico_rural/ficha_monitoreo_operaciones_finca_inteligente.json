@@ -1,0 +1,49 @@
+{
+  "ficha_monitoreo_operaciones_finca_inteligente": {
+    "id_lote": "[Ej. Sector La Raíz]",
+    "responsable": "[Nombre del Productor]",
+    "fecha": "[DD/MM/AAAA]",
+    "seccion_1_monitoreo_ambiental": {
+      "humedad_suelo": "Seco / Óptimo / Saturado",
+      "clima_predominante": "Sol / Nublado / Lluvia Ligera / Lluvia Fuerte",
+      "observacion_fauna": "¿Viste abejas, mariquitas o garzas? Sí / No (Indicador de salud biológica)"
+    },
+    "seccion_2_sanidad_vegetal_e_intervencion": [
+      {
+        "cultivo": "Plátano",
+        "novedad_detectada": "Ej. 3 plantas con Sigatoka en bloque B",
+        "practica_realizada": "Cirugía de hoja y desinfección de herramienta",
+        "herramienta_usada": "Medialuna + Alcohol al 70%",
+        "insumo_aplicado": "Cero (Solo control físico)"
+      },
+      {
+        "cultivo": "Yuca",
+        "novedad_detectada": "Presencia de gusano de cuerno en brotes tiernos",
+        "practica_realizada": "Recolección manual y aspersión foliar",
+        "herramienta_usada": "Bomba de espalda 20L",
+        "insumo_aplicado": "Extracto de Ajo-Ají + Bacillus thuringiensis"
+      }
+    ],
+    "seccion_3_logica_circular_y_nutricion": {
+      "biomasa_reincorporada": "¿Se picó raquis o pseudotallo hoy? [Kg estimados]",
+      "bioinsumos_preparados": "Ej. 1 tanque de Biol de 200L iniciado hoy",
+      "bioinsumos_aplicados": "Ej. MM Líquido al suelo en el lote 2",
+      "dosis_usada": "2L por bomba de 20L"
+    },
+    "seccion_4_notas_del_productor": "Ej. Se observa mejor llenado de racimo en las plantas que recibieron Bocashi hace 2 meses.",
+    "argumentacion_tecnica": {
+      "toma_decisiones": "Si el productor registra que vio mariquitas (controladores naturales), el sistema le indica que no debe aplicar nada, ahorrando dinero y protegiendo la vida.",
+      "trazabilidad_economica": "Al final del mes, el productor puede ver cuántos kilos de raquis devolvió al suelo. MELANT IA traduce eso a 'Sacos de fertilizante químico ahorrados'.",
+      "memoria_finca": "Permite comparar qué pasó el año anterior en la misma fecha, preparándose mejor para las plagas estacionales de Santo Domingo."
+    },
+    "sugerencia_implementacion_visual": {
+      "tablero_campo": "Tener una versión de esta ficha plastificada en la bodega de herramientas para anotar con marcador borrable.",
+      "digitalizacion": "Al final del día, pasar los datos a la App MELANT IA para generar las gráficas de rendimiento y ahorro.",
+      "semaforo_salud": {
+        "verde": "Suelo húmedo, presencia de benéficos, sin plagas. (Sigue así)",
+        "amarillo": "Aparecen estrías de Sigatoka. (Realiza cirugía de hoja hoy)",
+        "rojo": "Plaga extendida o suelo compactado. (Intervención urgente con caldos minerales)"
+      }
+    }
+  }
+}

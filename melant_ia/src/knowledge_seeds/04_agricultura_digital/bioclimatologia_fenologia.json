@@ -1,0 +1,107 @@
+{
+  "titulo": "Bioclimatología y Fenología Aplicada a la Agricultura Digital",
+  "introduccion": "La bioclimatología y la fenología son disciplinas clave para entender cómo el clima y los ciclos biológicos de las plantas interactúan en los sistemas agrícolas. En la era digital, el monitoreo y análisis de estos factores permite optimizar la producción, anticipar riesgos y tomar decisiones basadas en datos.",
+  "estructura": [
+    "Módulo 1: Fundamentos de Bioclimatología y Fenología",
+    "Módulo 2: Variables Climáticas y su Impacto en la Fenología",
+    "Módulo 3: Herramientas Digitales para el Monitoreo y Análisis",
+    "Módulo 4: Aplicaciones Prácticas y Casos de Éxito"
+  ],
+  "modulos": [
+    {
+      "nombre": "Fundamentos de Bioclimatología y Fenología",
+      "items": [
+        {
+          "titulo": "¿Qué es la bioclimatología y la fenología?",
+          "objetivo": "Comprender los conceptos básicos y su importancia en la agricultura moderna.",
+          "concepto": [
+            "La bioclimatología estudia la relación entre el clima y los seres vivos.",
+            "La fenología analiza los ciclos de desarrollo de las plantas (brotación, floración, maduración, etc.) y cómo estos responden a las condiciones ambientales."
+          ],
+          "ejemplo": "El registro de fechas de floración permite ajustar el manejo del riego y la fertilización para maximizar el rendimiento.",
+          "ejercicio_descargable": "Introduccion_Bioclimatologia_Fenologia.pdf",
+          "puntos_clave": [
+            "El conocimiento fenológico permite anticipar labores agrícolas críticas.",
+            "El clima es un factor determinante en el éxito de los cultivos."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Qué estudia la bioclimatología y la fenología?",
+        "¿Por qué es importante registrar los eventos fenológicos?"
+      ]
+    },
+    {
+      "nombre": "Variables Climáticas y su Impacto en la Fenología",
+      "items": [
+        {
+          "titulo": "Temperatura, fotoperíodo, precipitación y su efecto en los cultivos",
+          "objetivo": "Identificar cómo las variables climáticas influyen en los ciclos fenológicos.",
+          "concepto": [
+            "La temperatura regula la velocidad de desarrollo de las plantas (grados día).",
+            "El fotoperíodo determina la floración en muchas especies.",
+            "La precipitación y humedad afectan la germinación y el crecimiento."
+          ],
+          "ejemplo": "Un año con temperaturas más altas adelanta la maduración de la fruta, afectando la planificación de la cosecha.",
+          "ejercicio_descargable": "Variables_Climaticas_Fenologia.pdf",
+          "puntos_clave": [
+            "El monitoreo climático permite anticipar cambios en los ciclos de los cultivos.",
+            "Ajustar manejos según el clima mejora la eficiencia y reduce riesgos."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Cómo afecta la temperatura a la fenología de los cultivos?",
+        "¿Qué importancia tiene el fotoperíodo en la agricultura?"
+      ]
+    },
+    {
+      "nombre": "Herramientas Digitales para el Monitoreo y Análisis",
+      "items": [
+        {
+          "titulo": "Sensores, apps y plataformas de agricultura digital",
+          "objetivo": "Conocer y utilizar herramientas tecnológicas para el seguimiento fenológico y climático.",
+          "concepto": [
+            "Los sensores de campo, estaciones meteorológicas y apps permiten registrar datos en tiempo real.",
+            "Las plataformas digitales integran información y generan alertas o recomendaciones."
+          ],
+          "ejemplo": "Una app de agricultura digital envía alertas cuando se alcanzan los grados día necesarios para la floración, ayudando a programar labores.",
+          "ejercicio_descargable": "Herramientas_Digitales_Fenologia.pdf",
+          "puntos_clave": [
+            "La digitalización facilita la toma de decisiones basada en datos.",
+            "El uso de tecnología mejora la precisión y la eficiencia agrícola."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Qué ventajas ofrecen los sensores y apps en la agricultura?",
+        "¿Cómo ayudan las plataformas digitales a anticipar eventos fenológicos?"
+      ]
+    },
+    {
+      "nombre": "Aplicaciones Prácticas y Casos de Éxito",
+      "items": [
+        {
+          "titulo": "Integración de bioclimatología y fenología en la gestión agrícola",
+          "objetivo": "Aplicar el conocimiento y las herramientas para resolver problemas reales en el campo.",
+          "concepto": [
+            "La integración de datos fenológicos y climáticos permite optimizar la siembra, riego, fertilización y cosecha.",
+            "El análisis histórico ayuda a identificar patrones y mejorar la planificación."
+          ],
+          "ejemplo": "Un productor que utiliza registros digitales logra reducir pérdidas por heladas y mejorar la calidad de la cosecha.",
+          "ejercicio_descargable": "Caso_Exito_Bioclimatologia_Fenologia.pdf",
+          "puntos_clave": [
+            "La gestión basada en datos incrementa la resiliencia y rentabilidad.",
+            "Compartir experiencias acelera la innovación en el sector agrícola."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Cómo puede la bioclimatología digital reducir riesgos en la agricultura?",
+        "¿Por qué es útil analizar datos históricos de fenología y clima?"
+      ]
+    }
+  ],
+  "conclusion": "La integración de la bioclimatología y la fenología con herramientas digitales permite anticipar riesgos, optimizar recursos y mejorar la productividad agrícola. La agricultura digital es el camino hacia sistemas más eficientes, resilientes y sostenibles.",
+  "creditos": "Este curso es parte de MELANT IA. Material libre para productores y técnicos."
+}

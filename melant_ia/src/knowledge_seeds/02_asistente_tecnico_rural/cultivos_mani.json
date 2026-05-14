@@ -1,0 +1,80 @@
+{
+  "mani": {
+    "riego_optimo": "Riego moderado, evitar exceso de humedad. Necesita 400-600 mm durante el ciclo.",
+    "npk_recomendado": { "N": 30, "P": 50, "K": 70 },
+    "tipo_suelo_recomendado": "Franco arenoso, bien drenado, pH 5.5-7.0. Evitar suelos pesados o encharcados.",
+    "ciclo_cultivo_dias": 120,
+    "plagas_comunes": [
+      {
+        "nombre": "Trips",
+        "control_organico": "Aceite de Neem",
+        "control_quimico": "Spinosad",
+        "sintoma": "Manchas plateadas en hojas, deformación de brotes."
+      },
+      {
+        "nombre": "Gusano cogollero (Spodoptera frugiperda)",
+        "control_organico": "Bacillus thuringiensis, trampas de feromonas",
+        "control_quimico": "Lambda cihalotrina",
+        "sintoma": "Perforaciones en hojas y brotes, defoliación."
+      },
+      {
+        "nombre": "Ácaros (Tetranychus spp.)",
+        "control_organico": "Azufre mojable, extracto de ajo",
+        "control_quimico": "Abamectina",
+        "sintoma": "Hojas amarillas, telarañas finas, reducción de vigor."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya (Puccinia arachidis)",
+        "control": "Fungicidas cúpricos, manejo de humedad",
+        "sintoma": "Manchas anaranjadas en el envés de las hojas."
+      },
+      {
+        "nombre": "Mancha foliar (Cercospora arachidicola)",
+        "control": "Rotación de cultivos, fungicidas preventivos",
+        "sintoma": "Manchas marrones circulares en hojas, caída prematura."
+      },
+      {
+        "nombre": "Podredumbre de raíz (Rhizoctonia solani)",
+        "control": "Drenaje adecuado, Trichoderma en suelo",
+        "sintoma": "Plantas marchitas, raíces y vainas podridas."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, crecimiento lento."
+      },
+      {
+        "elemento": "Fósforo",
+        "sintoma": "Tallos delgados, raíces poco desarrolladas."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, menor llenado de vainas."
+      }
+    ],
+    "manejo_convencional": "Uso de semillas certificadas, fertilización química balanceada, control químico de plagas y enfermedades, rotación de cultivos.",
+    "manejo_organico": "Uso de compost, biofertilizantes, control biológico de plagas, cobertura vegetal, rotación con gramíneas.",
+    "agricultura_regenerativa": "Siembra directa, cobertura permanente del suelo, uso de abonos verdes, mínima labranza, integración con cultivos de rotación.",
+    "epoca_siembra_recomendada": "Mayo - Julio",
+    "calendario_lunar": "Siembra en luna nueva.",
+    "hectareas_sembradas_manabi": 1200,
+    "hectareas_sembradas_ecuador": 6500,
+    "captura_carbono_ton_ha_anio": 2.8,
+    "precio_carbono_usd_ton": 38,
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fungicidas y fertilizantes químicos. Aplicación de NPK según análisis de suelo.",
+        "rendimiento_estimado": "2 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico, abonos verdes.",
+        "rendimiento_estimado": "1.6 t/ha"
+      }
+    },
+    "labores_cosecha": "Arranque manual de plantas y secado.",
+    "labores_postcosecha": "Desgranado y almacenamiento en seco."
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "tipo": "dicho",
+    "texto": "Donde hay humo, hay fuego.",
+    "fuente": "Manabí, creencias y costumbres",
+    "tema": "sabiduría popular"
+  },
+  {
+    "tipo": "historia",
+    "texto": "El Colibrí y la flor: Un cuento sobre la perseverancia y la belleza de la naturaleza manabita.",
+    "fuente": "Cuentos de Chone",
+    "tema": "valores"
+  },
+  {
+    "tipo": "receta",
+    "texto": "Viche manabita: sopa tradicional de pescado, maní y plátano verde.",
+    "fuente": "Manabi200recetas.com",
+    "tema": "cocina tradicional"
+  }
+]

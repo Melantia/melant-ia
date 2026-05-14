@@ -1,0 +1,48 @@
+[
+  {
+    "curso": "Fisiología y Fenología de la Palma",
+    "preguntas": [
+      {
+        "pregunta": "¿Qué es la fenología y por qué es importante en el manejo de la palma africana?",
+        "opciones": [
+          "Estudio de las fases de desarrollo; permite programar labores agrícolas",
+          "Técnica de riego; mejora la calidad del fruto",
+          "Método de fertilización; reduce plagas"
+        ],
+        "respuesta_correcta": 0
+      },
+      {
+        "pregunta": "¿Cuál es la función principal de la escala BBCH en palma africana?",
+        "opciones": [
+          "Identificar estadios de desarrollo y programar labores",
+          "Determinar el tipo de suelo",
+          "Medir la cantidad de agua aplicada"
+        ],
+        "respuesta_correcta": 0
+      },
+      {
+        "pregunta": "¿Qué órgano de la palma africana indica el inicio de la floración?",
+        "opciones": [
+          "La hoja bandera",
+          "El racimo maduro",
+          "La raíz principal"
+        ],
+        "respuesta_correcta": 0
+      },
+      {
+        "pregunta": "¿Cuántas hojas verdes se recomienda dejar bajo el racimo maduro para asegurar buena fotosíntesis?",
+        "opciones": ["Ninguna", "Máximo 2", "Todas las posibles"],
+        "respuesta_correcta": 1
+      },
+      {
+        "pregunta": "¿Qué práctica ayuda a sincronizar la cosecha y mejorar el rendimiento en palma africana?",
+        "opciones": [
+          "Registrar las fases fenológicas",
+          "Aplicar fertilizante foliar semanalmente",
+          "Regar diariamente"
+        ],
+        "respuesta_correcta": 0
+      }
+    ]
+  }
+]

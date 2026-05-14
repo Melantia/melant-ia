@@ -1,0 +1,57 @@
+{
+  "nombre_cultivo": "Frejol de palo",
+  "nombre_cientifico": "Cajanus cajan",
+  "descripcion": "Leguminosa arbustiva perenne, utilizada para grano seco y verde, forraje y abono verde. Muy resistente a sequía, importante en sistemas agroecológicos y de pequeña agricultura.",
+  "riego_optimo": "Riego ocasional en sequía prolongada; muy tolerante a estrés hídrico.",
+  "npk_recomendado": { "N": 30, "P": 40, "K": 60 },
+  "plagas_comunes": [
+    {
+      "nombre": "Pulgón",
+      "control_organico": "Jabón potásico, control biológico.",
+      "sintoma": "Hojas enrolladas y pegajosas."
+    },
+    {
+      "nombre": "Trips",
+      "control_organico": "Extracto de ajo, trampas cromáticas.",
+      "sintoma": "Manchas plateadas en hojas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Mildiu",
+      "control": "Fungicidas preventivos, manejo de humedad.",
+      "sintoma": "Manchas amarillas en hojas."
+    }
+  ],
+  "epoca_siembra_recomendada": "Octubre - Diciembre (Costa); Mayo - Julio (Sierra)",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "1.5 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost, control biológico.",
+      "rendimiento_estimado": "1 t/ha"
+    }
+  },
+  "labores_cosecha": "Cosecha manual de vainas maduras.",
+  "labores_postcosecha": "Desgranado y almacenamiento en seco.",
+  "captura_carbono_ton_ha_anio": 1.5,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 8000,
+  "densidad_siembra": "40,000-60,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU."]
+  },
+  "zonas_produccion_ecuador": ["Manabí", "Guayas", "Los Ríos", "Chimborazo"],
+  "importancia_economica": "Fuente de proteína y forraje, clave en seguridad alimentaria rural.",
+  "bibliografia": ["MAGAP: Guía técnica de frejol de palo"],
+  "cursos_recomendados": ["Producción agroecológica de leguminosas"]
+}

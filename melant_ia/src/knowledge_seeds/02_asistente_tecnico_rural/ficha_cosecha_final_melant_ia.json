@@ -1,0 +1,18 @@
+{
+  "ficha_cosecha_final_melant_ia": {
+    "cultivo": "[Ej. Plátano, Cacao, Yuca]",
+    "variedad": "[Nombre de la variedad]",
+    "lote": "[Identificación del lote o sector]",
+    "fecha_cosecha": "[DD/MM/AAAA]",
+    "kilos_cosechados": "[Cantidad total en kg]",
+    "practicas_regenerativas_aplicadas": [
+      "[Ej. Bocashi, MM, cobertura viva, reincorporación de residuos]"
+    ],
+    "estimacion_co2_secuestrado": {
+      "valor_kg": "[Cálculo automático: kg CO₂]",
+      "factor_conversion": "0.42 kg CO₂/kg biomasa fresca (referencia FAO, plátano)",
+      "explicacion": "El sistema multiplica los kilos cosechados por el factor de conversión para estimar el CO₂ secuestrado en biomasa y suelo."
+    },
+    "observaciones_productor": "[Espacio para comentarios sobre calidad, clima, aprendizajes, etc.]"
+  }
+}

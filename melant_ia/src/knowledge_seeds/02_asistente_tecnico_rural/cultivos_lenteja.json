@@ -1,0 +1,61 @@
+{
+  "lenteja": {
+    "nombre_cientifico": "Lens culinaris",
+    "descripcion": "Leguminosa anual, fuente de proteína vegetal y hierro. Cultivo adaptado a climas templados y secos.",
+    "riego_optimo": "Riego moderado, evitar encharcamiento. 350-500 mm/ciclo.",
+    "npk_recomendado": { "N": 25, "P": 50, "K": 60 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Gorgojo",
+        "control_organico": "Trampas, control biológico",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Daño en semillas almacenadas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Fusariosis",
+        "control": "Rotación, solarización",
+        "sintoma": "Marchitez y pudrición de raíces"
+      }
+    ],
+    "epoca_siembra_recomendada": "Mayo - Julio (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "1.5-2 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "1-1.4 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de vainas maduras.",
+    "labores_postcosecha": "Desgranado, secado, empaque.",
+    "zonas_produccion_ecuador": ["Chimborazo", "Cotopaxi", "Imbabura"],
+    "importancia_economica": "Fuente de proteína vegetal y exportación a mercados andinos.",
+    "captura_carbono_ton_ha_anio": 1.6,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 400,
+    "densidad_siembra": "200,000-300,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": ["Manual de Lenteja INIAP", "FAO Lenteja Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Leguminosas",
+      "Postcosecha de Granos"
+    ],
+    "variedades": ["INIAP 101", "INIAP 102"]
+  }
+}

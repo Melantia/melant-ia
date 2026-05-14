@@ -1,0 +1,20 @@
+[
+  {
+    "tarea": "Clasificación de madurez",
+    "prompt": "Clasifica la imagen del racimo de palma aceitera en una de las siguientes categorías: Inmaduro (fruto negro o púrpura, sin desprendimiento), Maduro (fruto rojo-naranja, 1-2 frutos desprendidos por racimo), Sobremaduro (más de 3 frutos desprendidos, signos de fermentación).",
+    "labels": ["Inmaduro", "Maduro", "Sobremaduro"],
+    "referencia": "Fedepalma"
+  },
+  {
+    "tarea": "Detección de plagas",
+    "prompt": "Detecta la presencia de Rhynchophorus palmarum (Picudo/Gualpa) en la imagen. Busca galerías, orificios en el estípite, secreción marrón y presencia de larvas o adultos.",
+    "labels": ["Sin daño", "Daño leve", "Daño severo"],
+    "referencia": "Guía Fedepalma"
+  },
+  {
+    "tarea": "Detección de Pudrición del Cogollo (PC)",
+    "prompt": "Identifica síntomas de Pudrición del Cogollo: amarillamiento de la flecha, lesiones necróticas en la base de la hoja joven, colapso del cogollo central.",
+    "labels": ["Sano", "Sospechoso", "Confirmado"],
+    "referencia": "Fedepalma"
+  }
+]

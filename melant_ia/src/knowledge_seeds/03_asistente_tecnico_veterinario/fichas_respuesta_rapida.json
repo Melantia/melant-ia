@@ -1,0 +1,166 @@
+{
+  "fichas_respuesta_rapida": {
+    "version": "1.0",
+    "diagnostico_voz_guiado": {
+      "porcinos": {
+        "disparadores": ["cerdo", "chancho", "porcino"],
+        "preguntas": [
+          "¿Tiene fiebre? Toca las orejas y el abdomen, ¿se sienten más calientes de lo normal?",
+          "¿Ves manchas rojas, moradas o en forma de diamante en el vientre o detrás de las orejas?",
+          "¿El animal dejó de comer o está apartado del grupo?"
+        ],
+        "acciones_inmediatas": [
+          "Separar al animal del lote.",
+          "Desinfectar el corral y los bebederos.",
+          "Registrar foto y temperatura para seguimiento."
+        ]
+      },
+      "bovinos": {
+        "disparadores": ["vaca", "toro", "bovino", "ganado"],
+        "preguntas": [
+          "¿Presenta babeo excesivo, llagas en la boca o dificultad para caminar?",
+          "¿La ubre está hinchada, caliente o con dolor al tacto?",
+          "¿Hay fiebre o decaimiento marcado?"
+        ],
+        "acciones_inmediatas": [
+          "Aislar al animal afectado.",
+          "Revisar agua limpia, sombra y ventilación.",
+          "No mover al animal si sospecha enfermedad de control oficial."
+        ]
+      },
+      "aves": {
+        "disparadores": ["pollo", "gallina", "aves", "gallos", "pollos"],
+        "preguntas": [
+          "¿Ves el cuello torcido o movimientos nerviosos?",
+          "¿La cresta está morada o hay mortalidad súbita?",
+          "¿Comen menos o están amontonadas?"
+        ],
+        "acciones_inmediatas": [
+          "Separar las aves enfermas.",
+          "Desinfectar bandejas, pisos y bebederos.",
+          "Reducir visitas al galpón."
+        ]
+      },
+      "equinos": {
+        "disparadores": ["caballo", "yegua", "equino"],
+        "preguntas": [
+          "¿Se mira los costados, se revuelca o patea el abdomen?",
+          "¿Suda sin haber trabajado?",
+          "¿Ha dejado de defecar o de comer?"
+        ],
+        "acciones_inmediatas": [
+          "Retirar el alimento.",
+          "Caminar al animal suavemente.",
+          "Llamar al veterinario si el dolor no cede rápido."
+        ]
+      }
+    },
+    "biblioteca_trazabilidad_manejo": {
+      "porcinos": {
+        "inicio": {
+          "objetivo": "Recepción segura y arranque del lote.",
+          "pasos": [
+            "Desinfectar corral, comederos y bebederos antes del ingreso.",
+            "Registrar foto inicial, peso de llegada y lote.",
+            "Verificar temperatura ambiental, ventilación y acceso a agua limpia."
+          ]
+        },
+        "crecimiento": {
+          "objetivo": "Mantener conversión alimenticia y control sanitario.",
+          "pasos": [
+            "Registrar peso y foto semanal de crecimiento.",
+            "Revisar apetito, piel, cojera y uniformidad del lote.",
+            "Cumplir calendario de vacunación y desparasitación local."
+          ]
+        },
+        "finalizacion": {
+          "objetivo": "Preparar venta y movilización segura.",
+          "pasos": [
+            "Tomar foto final con fecha y GPS.",
+            "Consolidar peso estimado y condición corporal.",
+            "Emitir ficha de trazabilidad y borrador de movilización."
+          ]
+        }
+      },
+      "bovinos": {
+        "inicio": {
+          "objetivo": "Ingreso controlado del animal al sistema.",
+          "pasos": [
+            "Asignar arete o identificación interna.",
+            "Registrar foto perfil, sexo, raza y fecha de ingreso.",
+            "Acondicionar corral limpio con sombra y agua."
+          ]
+        },
+        "crecimiento": {
+          "objetivo": "Control de sanidad, peso y bienestar.",
+          "pasos": [
+            "Registrar peso periódico y evidencia fotográfica.",
+            "Aplicar calendario sanitario y revisar pezuñas/ubre.",
+            "Monitorear pastura, minerales y disponibilidad de agua."
+          ]
+        },
+        "finalizacion": {
+          "objetivo": "Preparar trazabilidad comercial del bovino.",
+          "pasos": [
+            "Actualizar el estado del animal como listo para comercializar.",
+            "Generar ficha de venta con fotos, peso y prueba GPS.",
+            "Preparar solicitud de movilización con finca, lote y destino."
+          ]
+        }
+      },
+      "aves": {
+        "inicio": {
+          "objetivo": "Arranque limpio del galpón.",
+          "pasos": [
+            "Desinfectar cama, equipos y cortinas.",
+            "Registrar lote, fecha de ingreso y foto inicial.",
+            "Verificar temperatura, densidad y ventilación."
+          ]
+        },
+        "crecimiento": {
+          "objetivo": "Reducir mortalidad y mejorar ganancia de peso.",
+          "pasos": [
+            "Registrar mortalidad y comportamiento diario.",
+            "Tomar foto de evolución por semana.",
+            "Mantener cronograma vacunal y agua limpia."
+          ]
+        },
+        "finalizacion": {
+          "objetivo": "Cerrar lote y preparar venta segura.",
+          "pasos": [
+            "Tomar foto final del lote.",
+            "Registrar peso promedio y condición del plumaje.",
+            "Emitir resumen sanitario y trazabilidad del lote."
+          ]
+        }
+      }
+    },
+    "documentos_generables": {
+      "guia_movilizacion": {
+        "titulo": "Solicitud de movilización animal",
+        "campos": [
+          "productor",
+          "finca",
+          "origen",
+          "destino",
+          "especie",
+          "cantidad",
+          "identificador_lote"
+        ],
+        "plantilla": "Yo, {productor}, solicito la movilización de {cantidad} animal(es) de especie {especie}, identificados como {identificador_lote}, desde {origen} en la finca {finca} hacia {destino}. Se adjunta trazabilidad visual, ubicación de origen y estado sanitario registrado en MELANTIA IA."
+      },
+      "reporte_sanitario": {
+        "titulo": "Reporte sanitario de campo",
+        "campos": [
+          "productor",
+          "finca",
+          "especie",
+          "hallazgo",
+          "accion",
+          "fecha"
+        ],
+        "plantilla": "Reporte sanitario MELANTIA IA. Productor: {productor}. Finca: {finca}. Especie: {especie}. Hallazgo principal: {hallazgo}. Acción inmediata recomendada: {accion}. Fecha del registro: {fecha}."
+      }
+    }
+  }
+}

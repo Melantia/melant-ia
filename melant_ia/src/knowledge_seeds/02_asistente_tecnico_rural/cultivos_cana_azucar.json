@@ -1,0 +1,70 @@
+{
+  "cana_azucar": {
+    "nombre_cientifico": "Saccharum officinarum",
+    "descripcion": "Gramínea tropical de alto rendimiento, base de la industria azucarera y de biocombustibles. Cultivo perenne, cosecha cada 12-18 meses.",
+    "riego_optimo": "Riego por surcos o aspersión, 1200-1800 mm/año.",
+    "npk_recomendado": { "N": 120, "P": 60, "K": 180 },
+    "plagas_comunes": [
+      {
+        "nombre": "Barrenador del tallo (Diatraea saccharalis)",
+        "control_organico": "Trampas de feromonas, control biológico",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Tallos perforados, reducción de rendimiento"
+      },
+      {
+        "nombre": "Mosca de la caña",
+        "control_organico": "Trampas cromáticas",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Daño en hojas y tallos"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya parda",
+        "control": "Fungicidas cúpricos, variedades resistentes",
+        "sintoma": "Manchas marrones en hojas"
+      },
+      {
+        "nombre": "Escaldadura",
+        "control": "Semilla sana, manejo sanitario",
+        "sintoma": "Hojas cloróticas, marchitez"
+      }
+    ],
+    "epoca_siembra_recomendada": "Inicio de lluvias (noviembre-enero)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, herbicidas, fungicidas",
+        "rendimiento_estimado": "120-150 t/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
+        "rendimiento_estimado": "90-120 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Corte manual o mecanizado de cañas maduras.",
+    "labores_postcosecha": "Transporte inmediato a ingenio, extracción de jugo, cristalización, obtención de azúcar, melaza, bagazo y etanol.",
+    "zonas_produccion_ecuador": ["Guayas", "Los Ríos", "Cañar", "Chimborazo"],
+    "importancia_economica": "Principal fuente de azúcar y biocombustibles en Ecuador. Genera empleo y subproductos industriales.",
+    "captura_carbono_ton_ha_anio": 3.5,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 120000,
+    "densidad_siembra": "15,000-20,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": [
+      "Manual de Caña de Azúcar INIAP",
+      "FAO Caña de Azúcar Ecuador"
+    ],
+    "cursos_recomendados": [
+      "Procesamiento de Caña y Subproductos",
+      "Manejo Integrado de Plagas en Gramíneas"
+    ],
+    "subproductos": [
+      "Azúcar cruda",
+      "Azúcar refinada",
+      "Melaza",
+      "Bagazo",
+      "Etanol"
+    ]
+  }
+}

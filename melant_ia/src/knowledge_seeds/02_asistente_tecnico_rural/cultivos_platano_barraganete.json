@@ -1,0 +1,91 @@
+{
+  "platano_barraganete": {
+    "nombre_cientifico": "Musa paradisiaca (var. Barraganete)",
+    "descripcion": "Plátano Barraganete, variedad tradicional de la Costa ecuatoriana, base de la alimentación y exportación. Cultivado principalmente en Manabí, Los Ríos, Guayas y Esmeraldas.",
+    "tipo_suelo_recomendado": "Franco arcilloso, profundo, bien drenado, pH 5.5-7.0. Evitar suelos encharcados.",
+    "ciclo_cultivo_meses": 12,
+    "plagas_comunes": [
+      {
+        "nombre": "Picudo negro (Cosmopolites sordidus)",
+        "control_organico": "Trampas de pseudotallo, control biológico con Beauveria bassiana",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Galerías en rizoma, debilitamiento y volcamiento de plantas."
+      },
+      {
+        "nombre": "Nematodos (Radopholus similis, Pratylenchus spp.)",
+        "control_organico": "Aplicación de extractos vegetales, rotación de cultivos",
+        "control_quimico": "Oxamilo",
+        "sintoma": "Raíces negras, plantas enanas, bajo rendimiento."
+      },
+      {
+        "nombre": "Trips (Thrips palmi)",
+        "control_organico": "Aceite de Neem, trampas azules",
+        "control_quimico": "Abamectina",
+        "sintoma": "Manchas plateadas en frutos, daño estético."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Sigatoka negra (Mycosphaerella fijiensis)",
+        "control": "Fungicidas sistémicos, manejo de deshoje y ventilación",
+        "sintoma": "Manchas negras en hojas, defoliación, reducción de producción."
+      },
+      {
+        "nombre": "Moko (Ralstonia solanacearum)",
+        "control": "Eliminación de plantas enfermas, desinfección de herramientas",
+        "sintoma": "Marchitez, exudado bacteriano, muerte de plantas."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, menor crecimiento."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, menor llenado de frutos."
+      },
+      {
+        "elemento": "Magnesio",
+        "sintoma": "Bandas amarillas en hojas adultas."
+      }
+    ],
+    "manejo_convencional": "Fertilización química, control químico de plagas y enfermedades, deshoje regular, riego suplementario en sequía.",
+    "manejo_organico": "Compost, abonos verdes, control biológico, cobertura vegetal, uso de microorganismos benéficos.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, integración con leguminosas, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 15000,
+    "hectareas_sembradas_ecuador": 60000,
+    "captura_carbono_ton_ha_anio": 8.2,
+    "precio_carbono_usd_ton": 38,
+    "labores_cosecha": "Corte manual de racimos maduros, transporte cuidadoso para evitar daños.",
+    "labores_postcosecha": "Desmane, lavado, selección, empaque en cajas, almacenamiento en ambiente fresco.",
+    "trazabilidad_digital_ecuador": {
+      "descripcion": "La trazabilidad digital del plátano Barraganete en Ecuador integra tecnologías de registro, monitoreo y certificación en toda la cadena productiva, desde la finca hasta el exportador, cumpliendo estándares internacionales y facilitando el acceso a mercados premium.",
+      "proceso_paso_a_paso": [
+        "Registro digital del productor y finca en plataformas nacionales (MAG, Agrocalidad) y privadas.",
+        "Asignación de código único de finca y lotes de producción (QR, RFID o código de barras).",
+        "Registro digital de prácticas agrícolas, insumos y fechas de aplicación (app móvil, web o dispositivos IoT).",
+        "Bitácora digital de cosecha: fechas, lotes, volúmenes, responsables.",
+        "Registro digital de empaque y transporte: tiempos, condiciones, responsable.",
+        "Etiquetado digital de lotes para exportación (trazabilidad física y digital).",
+        "Certificación digital de calidad, sostenibilidad y análisis de laboratorio (blockchain, plataformas de certificación).",
+        "Integración de datos en sistemas interoperables para exportación (MAG, Agrocalidad, exportadores, compradores internacionales).",
+        "Generación de reportes y certificados digitales para exportación, accesibles por importadores y consumidores finales."
+      ],
+      "tecnologias_utilizadas": [
+        "Plataformas web y móviles de trazabilidad (MAG, Agrocalidad, Rainforest, Fairtrade, etc.)",
+        "Etiquetas QR, RFID, códigos de barras",
+        "Bases de datos interoperables y blockchain",
+        "Certificación digital y firma electrónica",
+        "Integración con sistemas de exportación y aduanas"
+      ],
+      "beneficios": [
+        "Transparencia total para el consumidor y el importador",
+        "Reducción de fraude y mezcla de lotes",
+        "Acceso a mercados premium y diferenciados",
+        "Cumplimiento de normativas internacionales",
+        "Mejor gestión y monitoreo para el productor"
+      ]
+    }
+  }
+}

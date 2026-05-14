@@ -1,0 +1,62 @@
+{
+  "modulo": "Agricultura de Precisión",
+  "descripcion": "Optimización de recursos mediante análisis de datos satelitales, sensores IoT y visión artificial para la toma de decisiones en campo.",
+  "experto": "Fabrizzio",
+  "submodulos": {
+    "monitoreo_satelital": {
+      "descripcion": "Análisis de índices de vegetación (NDVI) para detectar estrés hídrico o nutricional en tiempo real.",
+      "herramientas": "Imágenes Sentinel-2 y drones.",
+      "umbral_alerta": "NDVI menor a 0.3 indica estrés severo. Actuar dentro de 72 horas.",
+      "accion": "Revisar riego y aplicar fertilización foliar de emergencia si el NDVI baja de 0.2."
+    },
+    "mapeo_suelos": {
+      "descripcion": "Creación de mapas de variabilidad de nutrientes (N, P, K) para aplicación variable por zonas.",
+      "fuente": "Datos de sensores de conductividad eléctrica y análisis de laboratorio.",
+      "zonas": {
+        "alta": "CE > 2.5 dS/m — alta fertilidad, reducir insumos.",
+        "media": "CE 1.0–2.5 dS/m — fertilidad normal, dosis estándar.",
+        "baja": "CE < 1.0 dS/m — zona deficiente, aumentar materia orgánica."
+      }
+    },
+    "gestion_riego": {
+      "descripcion": "Optimización del uso de agua mediante sensores de humedad de suelo en tiempo real.",
+      "objetivo": "Reducción del consumo hídrico en un 30% sin afectar rendimiento.",
+      "umbrales": {
+        "riego_urgente": "Humedad < 30% capacidad de campo.",
+        "riego_normal": "Humedad 30–60% capacidad de campo.",
+        "suspender_riego": "Humedad > 80% — riesgo de encharcamiento."
+      }
+    },
+    "vuelos_drone": {
+      "descripcion": "Detección temprana de plagas, conteo de plantas y estimación de cobertura vegetal mediante visión artificial.",
+      "integracion": "Usa el modelo melant_ia.tflite para identificación aérea de focos de enfermedad.",
+      "frecuencia_recomendada": "Cada 15 días en período crítico de cultivo.",
+      "resolución": "Mínimo 5 cm/pixel para identificar manchas foliares."
+    }
+  },
+  "guias_interactivas": {
+    "ndvi_basico": [
+      "Descarga la imagen Sentinel-2 más reciente de tu zona desde Copernicus Hub.",
+      "Calcula el NDVI usando la banda roja (B04) e infrarroja cercana (B08).",
+      "Identifica las zonas con NDVI menor a 0.3 en el mapa — esas áreas necesitan atención.",
+      "Visita físicamente las zonas marcadas y registra el estado del cultivo.",
+      "Aplica fertilización foliar o ajusta el riego según lo observado."
+    ],
+    "mapeo_suelos": [
+      "Traza una cuadrícula de muestreo de 50x50 metros en tu predio.",
+      "Toma muestras de suelo en cada punto de la cuadrícula a 20 cm de profundidad.",
+      "Mide la conductividad eléctrica con el sensor de campo.",
+      "Registra las coordenadas GPS de cada punto de muestra.",
+      "Genera el mapa de variabilidad con los datos recolectados.",
+      "Aplica la dosis correcta de fertilizante según la zona del mapa."
+    ],
+    "vuelo_drone": [
+      "Verifica que la batería del dron esté al 100% y el cielo esté despejado.",
+      "Configura la ruta de vuelo en modo automático a 40 metros de altura.",
+      "Activa la cámara multiespectral para capturar bandas NIR y RGB.",
+      "Al terminar el vuelo, descarga las imágenes en el dispositivo.",
+      "Procesa las imágenes con el modelo melant_ia.tflite para detectar focos.",
+      "Registra las coordenadas de cada foco detectado en el mapa de campo."
+    ]
+  }
+}

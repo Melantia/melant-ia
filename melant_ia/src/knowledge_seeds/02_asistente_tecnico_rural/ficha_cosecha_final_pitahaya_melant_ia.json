@@ -1,0 +1,27 @@
+{
+  "ficha_cosecha_final_pitahaya_melant_ia": {
+    "cultivo": "Pitahaya",
+    "variedad": "[Nombre de la variedad]",
+    "lote": "[Identificación del lote o sector]",
+    "fecha_cosecha": "[DD/MM/AAAA]",
+    "kilos_cosechados": "[Cantidad total en kg]",
+    "practicas_regenerativas_aplicadas": [
+      "[Ej. MM, cobertura viva, poda sanitaria, manejo de tutores, reincorporación de residuos]"
+    ],
+    "biomasa_reincorporada": {
+      "ramas_kg": "[Kg de ramas podadas reincorporadas o compostadas]",
+      "hojas_kg": "[Kg de hojas o residuos reincorporados]",
+      "compost_kg": "[Kg de compost aplicado al suelo]"
+    },
+    "estimacion_co2_secuestrado": {
+      "valor_kg": "[Cálculo automático: kg CO₂]",
+      "factor_conversion": "0.36 kg CO₂/kg biomasa fresca (referencia FAO, pitahaya/cactáceas)",
+      "explicacion": "El sistema multiplica la biomasa reincorporada por el factor de conversión para estimar el CO₂ secuestrado."
+    },
+    "dinero_ahorrado": {
+      "valor_usd": "[Cálculo automático o editable]",
+      "explicacion": "Se estima el ahorro por sustitución de insumos sintéticos y reducción de fungicidas, según precios locales."
+    },
+    "observaciones_productor": "[Espacio para comentarios sobre calidad, clima, aprendizajes, etc.]"
+  }
+}

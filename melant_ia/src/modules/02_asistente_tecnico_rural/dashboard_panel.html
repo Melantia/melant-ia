@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Control MELANT IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-green-800 text-white p-4 shadow-lg flex justify-between items-center">
+        <h1 class="text-xl font-bold tracking-widest">MELANT IA | PANEL ADMINISTRATIVO</h1>
+        <div class="flex items-center space-x-4">
+            <span class="text-sm bg-green-700 px-3 py-1 rounded-full">Admin: Central</span>
+        </div>
+    </nav>
+    <div class="p-6">
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="p-4 border-b bg-gray-50 flex justify-between items-center">
+                <h2 class="font-bold text-gray-700">Historial de Informes Generados</h2>
+                <div class="flex space-x-2">
+                    <input id="filtroProductor" type="text" placeholder="Buscar productor..." class="border rounded px-3 py-1 text-sm">
+                    <select id="filtroModulo" class="border rounded px-3 py-1 text-sm">
+                        <option value="">Todos los Orígenes</option>
+                        <option value="ATR">ATR (Asistencia Técnica)</option>
+                        <option value="DRON">Drones / Satélites</option>
+                        <option value="SUELO">Análisis de Suelo</option>
+                        <option value="MAQUINARIA">Maquinaria VRT</option>
+                        <option value="COSTOS">Gestión Económica</option>
+                    </select>
+                </div>
+            </div>
+            <table class="w-full text-left">
+                <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
+                    <tr>
+                        <th class="p-4">Fecha</th>
+                        <th class="p-4">Productor</th>
+                        <th class="p-4">Origen / Módulo</th>
+                        <th class="p-4">Técnico Responsable</th>
+                        <th class="p-4">Coordenadas</th>
+                        <th class="p-4 text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaInformes" class="text-sm divide-y">
+                    <!-- Filas dinámicas -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+    // --- CONFIGURACIÓN ---
+    // Cambia la URL por la de tu backend Python (Flask/FastAPI) o tu endpoint Firebase REST
+    const API_URL = 'http://localhost:5000/api/informes'; // Ejemplo para backend local
+
+    async function cargarInformes() {
+        let res = await fetch(API_URL);
+        let datos = await res.json();
+        renderTabla(datos);
+    }
+
+    function renderTabla(informes) {
+        const filtroProductor = document.getElementById('filtroProductor').value.toLowerCase();
+        const filtroModulo = document.getElementById('filtroModulo').value;
+        const tbody = document.getElementById('tablaInformes');
+        tbody.innerHTML = '';
+        informes.filter(inf =>
+            (!filtroProductor || inf.productor.toLowerCase().includes(filtroProductor)) &&
+            (!filtroModulo || inf.origen === filtroModulo)
+        ).forEach(inf => {
+            tbody.innerHTML += `
+                <tr class="hover:bg-green-50">
+                    <td class="p-4 italic">${inf.fecha.split('T')[0]}</td>
+                    <td class="p-4 font-bold text-green-800">${inf.productor}</td>
+                    <td class="p-4"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">${inf.origen}</span></td>
+                    <td class="p-4">${inf.tecnico}</td>
+                    <td class="p-4 text-gray-500">${inf.gps}</td>
+                    <td class="p-4 text-center">
+                        <a href="${inf.url_almacenamiento}" target="_blank" class="text-blue-600 hover:text-blue-800 mr-2"><i class="fas fa-eye"></i> Ver</a>
+                        <a href="${inf.url_almacenamiento}" download class="text-red-600 hover:text-red-800"><i class="fas fa-file-pdf"></i></a>
+                    </td>
+                </tr>`;
+        });
+    }
+
+    document.getElementById('filtroProductor').addEventListener('input', cargarInformes);
+    document.getElementById('filtroModulo').addEventListener('change', cargarInformes);
+    window.onload = cargarInformes;
+    </script>
+</body>
+</html>

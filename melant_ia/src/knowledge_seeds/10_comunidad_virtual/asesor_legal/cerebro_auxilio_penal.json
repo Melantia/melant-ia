@@ -1,0 +1,67 @@
+{
+  "delitos_graves": [
+    {
+      "categoria": "Violencia contra la Mujer/Familia",
+      "art_coip": "Art. 155 a 158",
+      "guia_accion": "No se requiere abogado para la denuncia inicial. La víctima puede pedir medidas de protección inmediatamente.",
+      "preguntas_clave": [
+        "¿Hay peligro inminente?",
+        "¿Existen hematomas o lesiones?",
+        "¿El agresor está en el lugar? (Flagrancia)"
+      ]
+    },
+    {
+      "categoria": "Delitos Sexuales / Menores",
+      "art_coip": "Art. 170 a 171",
+      "instruccion_critica": "ACCIÓN MÉDICA PRIORITARIA. No lavar prendas. Acudir a Fiscalía - Unidad de Atención Integral.",
+      "pasos_llenado": "La App omitirá detalles revictimizantes y se enfocará en datos de tiempo, lugar y sospechoso."
+    }
+  ],
+  "protocolos_de_accion": {
+    "RUTA_A_INMEDIATA": {
+      "descripcion": "Delitos que atentan contra la vida e integridad física inmediata. Requieren acción en flagrancia (primeras 24 horas).",
+      "casos": [
+        "Violación",
+        "Abuso sexual",
+        "Violencia física grave",
+        "Secuestro"
+      ],
+      "pasos_asesor": [
+        "1. Prioridad Médica: Acudir al hospital o centro de salud más cercano.",
+        "2. Acción Policial: Llamar al 911 o ir a la Unidad de Flagrancia más cercana.",
+        "3. No requiere abogado para la denuncia inmediata."
+      ],
+      "institucion": "Fiscalía - Unidad de Atención Integral / DINAPEN (si es menor)"
+    },
+    "RUTA_B_INVESTIGACION": {
+      "descripcion": "Delitos contra la propiedad o el patrimonio que requieren recolección de pruebas técnicas.",
+      "casos": [
+        "Robo de tierras (Invasión)",
+        "Abigeato (Robo de ganado)",
+        "Robo de maquinaria",
+        "Estafas"
+      ],
+      "pasos_asesor": [
+        "1. Recolección de evidencias: Usar el GPS de Melant IA para marcar el sitio del robo.",
+        "2. Documentación: Preparar el formato de denuncia con el Título de Propiedad.",
+        "3. Presentar la denuncia en la Fiscalía General del Estado para iniciar investigación."
+      ],
+      "institucion": "Fiscalía General / Policía Judicial (PJ)"
+    },
+    "RUTA_C_PREVENTIVA": {
+      "descripcion": "Situaciones de riesgo donde aún no hay un daño físico pero existe una amenaza real.",
+      "casos": [
+        "Intimidación",
+        "Amenazas de muerte",
+        "Extorsión (Vacunas)",
+        "Acoso"
+      ],
+      "pasos_asesor": [
+        "1. Preservación de pruebas: No borrar chats, grabar llamadas o tomar fotos de panfletos.",
+        "2. Denuncia formal: Llenar el formato de Intimidación del Asesor Legal.",
+        "3. Protección: Solicitar Boleta de Auxilio y Medidas de Protección inmediatamente."
+      ],
+      "institucion": "UNASE (si es extorsión) o Unidades Judiciales de Paz"
+    }
+  }
+}

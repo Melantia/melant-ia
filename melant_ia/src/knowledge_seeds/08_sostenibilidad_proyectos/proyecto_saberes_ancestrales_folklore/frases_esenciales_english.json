@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Wash the wound with clean water.",
+    "context": "Health",
+    "translation": "Lave la herida con agua limpia."
+  },
+  {
+    "title": "The payment of the bonus is tomorrow.",
+    "context": "Social Assistance",
+    "translation": "El pago del bono es mañana."
+  },
+  {
+    "title": "Rotate crops to maintain soil fertility.",
+    "context": "Agriculture",
+    "translation": "Rote los cultivos para mantener la fertilidad del suelo."
+  },
+  {
+    "title": "Boil water before drinking.",
+    "context": "Health",
+    "translation": "Hierva el agua antes de beberla."
+  }
+]

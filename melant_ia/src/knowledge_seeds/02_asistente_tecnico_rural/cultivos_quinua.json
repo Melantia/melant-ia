@@ -1,0 +1,66 @@
+{
+  "quinua": {
+    "nombre_cientifico": "Chenopodium quinoa",
+    "descripcion": "Pseudocereal andino de alto valor nutricional, fuente de proteínas, minerales y aminoácidos esenciales. Adaptado a climas fríos y secos de altura.",
+    "riego_optimo": "Riego moderado, tolera sequía. 300-500 mm/ciclo.",
+    "npk_recomendado": { "N": 60, "P": 40, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Gusano cortador",
+        "control_organico": "Control biológico",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Corte de plántulas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable",
+        "sintoma": "Polvo blanco en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Agosto - Octubre (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "2.5-3.5 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "1.8-2.5 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual o mecanizada de panojas maduras.",
+    "labores_postcosecha": "Trilla, lavado, secado, empaque.",
+    "zonas_produccion_ecuador": [
+      "Chimborazo",
+      "Cotopaxi",
+      "Imbabura",
+      "Bolívar"
+    ],
+    "importancia_economica": "Superalimento exportable, base de la dieta andina.",
+    "captura_carbono_ton_ha_anio": 2.0,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 1200,
+    "densidad_siembra": "300,000-400,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": ["Manual de Quinua INIAP", "FAO Quinua Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Pseudocereales",
+      "Postcosecha de Granos"
+    ],
+    "variedades": ["INIAP Tunkahuan", "INIAP Pata de Venado"]
+  }
+}

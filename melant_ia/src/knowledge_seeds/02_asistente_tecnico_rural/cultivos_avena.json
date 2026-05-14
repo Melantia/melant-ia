@@ -1,0 +1,51 @@
+{
+  "nombre_cientifico": "Avena sativa",
+  "descripcion": "Cereal de ciclo anual, utilizado para grano, forraje y cobertura de suelos. Aporta fibra, minerales y proteínas. Cultivo importante en zonas templadas y de altura.",
+  "riego_optimo": "Riego moderado, evitar encharcamiento",
+  "npk_recomendado": { "N": 70, "P": 30, "K": 60 },
+  "plagas_comunes": [
+    {
+      "nombre": "Pulgón",
+      "control_organico": "Jabón potásico",
+      "sintoma": "Hojas enrolladas y pegajosas"
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Roya de la avena (Puccinia coronata)",
+      "control": "Variedades resistentes, fungicidas biológicos",
+      "sintoma": "Pústulas anaranjadas en hojas, reducción de rendimiento"
+    },
+    {
+      "nombre": "Mancha foliar",
+      "control": "Rotación de cultivos, manejo de residuos",
+      "sintoma": "Manchas marrones en hojas y tallos"
+    }
+  ],
+  "epoca_siembra_recomendada": "Mayo - Julio",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "4 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "2.5 t/ha"
+    }
+  },
+  "labores_cosecha": "Cosecha manual o mecanizada.",
+  "labores_postcosecha": "Secado y almacenamiento en silos.",
+  "captura_carbono_ton_ha_anio": 2.6,
+  "precio_carbono_usd_ton": 38,
+  "superficie_sembrada_ha_anio": "Variable según región y escala de producción",
+  "densidad_siembra": "80-120 kg/ha (siembra directa)",
+  "trazabilidad_digital_exportacion": "Posible mediante registro de lotes, fechas de siembra y cosecha, uso de QR para trazabilidad en exportación.",
+  "zonas_produccion_ecuador": [
+    "Sierra centro-norte",
+    "Tungurahua",
+    "Chimborazo",
+    "Cotopaxi"
+  ],
+  "importancia_economica": "La avena es un cereal de importancia para alimentación humana, animal y como cultivo de cobertura en rotaciones agrícolas."
+}

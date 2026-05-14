@@ -1,0 +1,26 @@
+[
+  {
+    "tarea": "Reconocimiento de Pudrición del Cogollo (PC)",
+    "prompt": "Detecta en la imagen síntomas de PC: amarillamiento de flechas, pudrición de tejidos jóvenes, coloración blanquecina o rosada del hongo en el cogollo.",
+    "labels": ["Sano", "Sospechoso", "Confirmado"],
+    "referencia": "Fedepalma"
+  },
+  {
+    "tarea": "Identificación de Anillo Rojo",
+    "prompt": "Busca banda roja en el tronco, hojas cortas y síntomas de picudo (galerías, orificios).",
+    "labels": ["Sin síntomas", "Sospechoso", "Confirmado"],
+    "referencia": "Fedepalma"
+  },
+  {
+    "tarea": "Detección de Gusano de Canasta",
+    "prompt": "Identifica defoliación severa, presencia de larvas y daño en el parénquima de la hoja.",
+    "labels": ["Sin daño", "Daño leve", "Daño severo"],
+    "referencia": "Fedepalma"
+  },
+  {
+    "tarea": "Detección de Chinche de Encaje",
+    "prompt": "Busca secamiento de foliolos, manchas y presencia de adultos en el envés de la hoja.",
+    "labels": ["Sin daño", "Daño leve", "Daño severo"],
+    "referencia": "Fedepalma"
+  }
+]

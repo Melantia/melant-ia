@@ -1,0 +1,84 @@
+{
+  "titulo": "El Ordeño y Sanidad de la Leche",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Anatomía y fisiología de la ubre",
+      "objetivo": "Comprender la estructura y funcionamiento de la ubre para un ordeño eficiente y saludable.",
+      "contenido": [
+        "Partes de la ubre y canal galactóforo",
+        "Fisiología de la secreción láctea",
+        "Factores que afectan la producción de leche"
+      ]
+    },
+    {
+      "nombre": "Buenas prácticas de ordeño manual y mecánico",
+      "objetivo": "Aplicar técnicas correctas para el ordeño, minimizando riesgos de contaminación y lesiones.",
+      "contenido": [
+        "Preparación del animal y del ordeñador",
+        "Técnicas de ordeño manual y mecánico",
+        "Limpieza y mantenimiento de equipos"
+      ]
+    },
+    {
+      "nombre": "Manejo higiénico antes, durante y después del ordeño",
+      "objetivo": "Garantizar la inocuidad de la leche mediante prácticas higiénicas en todo el proceso.",
+      "contenido": [
+        "Lavado y desinfección de ubres y pezones",
+        "Uso de guantes y materiales limpios",
+        "Manejo de residuos y limpieza del área"
+      ]
+    },
+    {
+      "nombre": "Control y prevención de mastitis",
+      "objetivo": "Prevenir y controlar la mastitis para mantener la salud animal y la calidad de la leche.",
+      "contenido": [
+        "Identificación de signos de mastitis",
+        "Pruebas de detección (California Mastitis Test, etc.)",
+        "Tratamiento y prevención"
+      ]
+    },
+    {
+      "nombre": "Calidad, conservación y transporte de la leche",
+      "objetivo": "Mantener la calidad de la leche desde el ordeño hasta su destino final.",
+      "contenido": [
+        "Parámetros de calidad (grasa, proteína, células somáticas)",
+        "Métodos de conservación y enfriamiento",
+        "Buenas prácticas de transporte"
+      ]
+    },
+    {
+      "nombre": "Normativa sanitaria y registros",
+      "objetivo": "Cumplir con la normativa vigente y llevar registros para trazabilidad y control sanitario.",
+      "contenido": [
+        "Normas nacionales e internacionales",
+        "Registro de tratamientos, controles y producción",
+        "Auditorías y certificaciones"
+      ]
+    },
+    {
+      "nombre": "Práctica: Ordeño higiénico y control de calidad",
+      "descripcion": "Guía paso a paso para realizar un ordeño higiénico y evaluar la calidad de la leche.",
+      "pasos": [
+        "Preparación del animal y del ordeñador",
+        "Lavado y desinfección de la ubre",
+        "Ordeño manual o mecánico siguiendo buenas prácticas",
+        "Recolección y filtrado de la leche",
+        "Pruebas rápidas de calidad (alcohol, mastitis, etc.)",
+        "Registro de resultados y limpieza final"
+      ],
+      "recomendaciones": [
+        "Mantener la higiene en todo momento",
+        "Registrar cualquier anomalía o problema detectado"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Por qué es importante la higiene en el ordeño?",
+    "¿Cuáles son los signos de mastitis y cómo se detectan?",
+    "¿Qué parámetros determinan la calidad de la leche?",
+    "¿Qué normativas sanitarias aplican al proceso de ordeño?",
+    "¿Cómo se debe conservar y transportar la leche para mantener su calidad?"
+  ]
+}

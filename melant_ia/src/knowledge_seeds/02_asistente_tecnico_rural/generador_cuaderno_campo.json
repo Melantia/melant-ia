@@ -1,0 +1,34 @@
+{
+  "generador_cuaderno_campo": {
+    "encabezado_oficial": {
+      "institucion_referencia": "AGROCALIDAD / GLOBAL GAP",
+      "version_documento": "2024.1",
+      "campos_finca": ["Nombre_Predio", "Codigo_Registro_MAG", "Georeferenciacion"]
+    },
+    "secciones_automaticas": [
+      {
+        "id": "SEC-01",
+        "titulo": "Registro de Fertilizacion y Enmiendas",
+        "datos_fuente": "Calculadora de Fertilidad + Sensores NPK",
+        "columnas": ["Fecha", "Lote", "Producto (Biol/Quimico)", "Dosis", "Metodo_Aplicacion"]
+      },
+      {
+        "id": "SEC-02",
+        "titulo": "Manejo Fitosanitario",
+        "datos_fuente": "MELANT IA Diagnostico",
+        "columnas": ["Plaga_Detectada", "Incidencia_%", "Tratamiento_Realizado", "Operador"]
+      },
+      {
+        "id": "SEC-03",
+        "titulo": "Variables Climaticas del Ciclo",
+        "datos_fuente": "Sensores Ambientales (Historial)",
+        "columnas": ["Mes", "Precipitacion_Acumulada", "Temp_Promedio", "Humedad_Max"]
+      }
+    ],
+    "bibliografia_normativa": [
+      "Guia de Buenas Practicas Agricolas - Agrocalidad Ecuador",
+      "Standard Control Points and Compliance Criteria - Global GAP V6",
+      "Normativa Nacional para la Produccion Organica - MAG"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "pastos_forrajes_ecofisiologia": {
+    "tema": "Bases ecofisiológicas para el manejo de los pastos tropicales",
+    "descripcion": "Aspectos ecofisiológicos básicos del crecimiento y calidad de pastizales tropicales. Diferencias entre plantas C3 y C4, factores ambientales determinantes y manejo sostenible para Ecuador y Latinoamérica.",
+    "referencias": [
+      {
+        "archivo": "DelPozo_2002_bases_ecofisiologicas_pastos_tropicales_UPM",
+        "fuente": "Del Pozo Rodríguez, P. P. (2002). Bases ecofisiológicas para el manejo de los pastos tropicales. Pastos, 32(2), 109–137. Universidad Agraria de La Habana / Universidad Politécnica de Madrid. Mencionado por 121.",
+        "url": "https://polired.upm.es/index.php/pastos/article/view/1314",
+        "resumen": "Artículo científico que examina la dinámica de los ecosistemas de pastos tropicales, poco estudiada en regiones tropicales. Análisis de factores ecofisiológicos que determinan el crecimiento y calidad de pastizales, con enfoque en América Latina."
+      },
+      {
+        "archivo": "DelPozo_2002_bases_ecofisiologicas_pastos_tropicales_Dialnet",
+        "fuente": "Del Pozo Rodríguez, P. P. (2002). Bases ecofisiológicas para el manejo de los pastos tropicales. Dialnet. Mencionado por 122.",
+        "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=1219614",
+        "resumen": "El estudio de la dinámica de los ecosistemas de pastos ha sido una temática aún poco estudiada en las regiones tropicales. Revisión bibliográfica disponible en Dialnet con acceso abierto."
+      },
+      {
+        "archivo": "BasesEcofisiologicas_pastos_tropicales_ProduccionAnimal_PDF",
+        "fuente": "Anónimo / FYB. Bases ecofisiológicas para el manejo de los pastos tropicales. Produccion-animal.com.ar. PDF, 9 páginas.",
+        "url": "https://www.produccion-animal.com.ar/produccion_bovina_de_carne/produccion_bovina_pasturas/30-bases.pdf",
+        "resumen": "[PDF 9 págs.] Discute aspectos ecofisiológicos básicos relacionados con el crecimiento y la calidad de los pastizales en las regiones tropicales. Descarga libre."
+      },
+      {
+        "archivo": "DelPozo_2002_bases_ecofisiologicas_pastos_ResearchGate",
+        "fuente": "Del Pozo Rodríguez, P. P. (2002). Bases ecofisiológicas para el manejo de los pastos tropicales. ResearchGate. Incluye: Fertilización racional y renovación de pasturas mejoradas en suelos ácidos tropicales.",
+        "url": "https://www.researchgate.net/publication/277234100",
+        "resumen": "Versión disponible en ResearchGate. En los últimos años en la mayoría de los países de América tropical se han presentado problemas de baja productividad en el ganado, con las causas analizadas ecofisiológicamente."
+      },
+      {
+        "archivo": "UNACH_ecofisiologia_adaptacion_produccion_pasturas_PDF",
+        "fuente": "Universidad Autónoma de Chiapas (UNACH). Ecofisiología, adaptación y producción de pasturas. Editorial UNACH. PDF, 434 páginas.",
+        "url": "https://editorial.unach.mx/index.php/UNACH/catalog/book/LibroEcofisiolog%C3%ADa1",
+        "resumen": "[PDF 434 págs.] Obra académica sobre siembra y manejo de pastos para diversas zonas ecológicas. Incluye: siembra y manejo de pastos para la zona de la Chontalpa, Tabasco. Manual para productores CIRGOC-INIFAP."
+      },
+      {
+        "archivo": "NutricionBovinos_2023_bases_ecofisiologicas_descarga",
+        "fuente": "NutricionDeBovinos.ar (15 jul 2023). Bases ecofisiológicas para el manejo de los pastos tropicales (Cuba).",
+        "url": "https://nutriciondebovinos.ar/index.php/2023/07/15/bases-ecofisiologicas-para-el-manejo-de-los-pastos-tropicales/",
+        "resumen": "Entrada de blog con enlace directo de descarga del documento técnico sobre bases ecofisiológicas para manejo de pastos tropicales. Contenido de origen cubano."
+      },
+      {
+        "archivo": "INIAP_manual_manejo_pastos_tropicales_Ecuador_PDF",
+        "fuente": "INIAP Ecuador. Manual para el manejo de pastos tropicales en el Ecuador. Por Fausto Cevallos B. Repositorio INIAP. PDF.",
+        "url": "https://repositorio.iniap.gob.ec/bitstreams/download",
+        "resumen": "[PDF] Manual técnico del INIAP sobre manejo de pastos tropicales en Ecuador. Incluye tipos de pasto de corte con alto rendimiento y guías por tipo de pasto según zona agroecológica ecuatoriana."
+      },
+      {
+        "archivo": "EditorialGrupoAEA_2023_pastos_tropicales_amazonia_ecuatoriana",
+        "fuente": "González-Marcillo et al. (2023). Pastos Tropicales de la Amazonia Ecuatoriana Tomo I. Editorial Grupo AEA. 6 oct 2023.",
+        "url": "https://www.editorialgrupo-aea.com/catalog/book/pastos-tropicales-amazonia-ecuatoriana",
+        "resumen": "Publicación académica sobre pastos tropicales de la Amazonia ecuatoriana. Incluye referencias a Bases Ecofisiológicas para el Manejo de los Pastos Tropicales como bibliografía base. Obra de acceso abierto de Editorial AEA Ecuador."
+      }
+    ]
+  },
+  "pastos": {
+    "riego_optimo": "Riego regular en época seca",
+    "npk_recomendado": { "N": 80, "P": 30, "K": 60 },
+    "plagas_comunes": [
+      {
+        "nombre": "Gusano ejército",
+        "control_organico": "Control biológico",
+        "sintoma": "Áreas de pasto comidas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos y herbicidas.",
+        "rendimiento_estimado": "40 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost y manejo holístico.",
+        "rendimiento_estimado": "32 t/ha"
+      }
+    },
+    "labores_cosecha": "Pastoreo o corte según sistema.",
+    "labores_postcosecha": "Secado y almacenamiento si es heno.",
+    "captura_carbono_ton_ha_anio": 6.5,
+    "precio_carbono_usd_ton": 38
+  }
+}

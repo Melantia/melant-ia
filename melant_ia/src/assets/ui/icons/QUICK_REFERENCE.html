@@ -1,0 +1,225 @@
+<!-- 
+  REFERENCIA RÁPIDA: Icono Melantio
+  Copiar y pegar directamente en el código
+-->
+
+<!-- ===== OPCIÓN 1: Usar archivo SVG (RECOMENDADO) ===== -->
+<img
+  src="/src/assets/ui/icons/melantio_gold.svg"
+  alt="Melantio"
+  style="width: 24px; height: 18px; vertical-align: middle"
+/>
+
+<!-- ===== OPCIÓN 2: SVG inline (sin archivo externo) ===== -->
+<svg
+  width="40"
+  height="30"
+  viewBox="0 0 40 30"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  style="display: inline; vertical-align: middle"
+>
+  <rect
+    width="40"
+    height="30"
+    rx="4"
+    fill="url(#gold_gradient)"
+    stroke="#B45309"
+    stroke-width="1"
+  />
+  <rect
+    x="1"
+    y="1"
+    width="38"
+    height="28"
+    rx="3"
+    fill="url(#highlight_gradient)"
+    opacity="0.6"
+  />
+  <text
+    x="20"
+    y="17"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    fill="#78350F"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+    font-size="18"
+    filter="url(#drop_shadow)"
+  >
+    M
+  </text>
+  <defs>
+    <linearGradient
+      id="gold_gradient"
+      x1="0"
+      y1="0"
+      x2="40"
+      y2="30"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient
+      id="highlight_gradient"
+      x1="0"
+      y1="0"
+      x2="0"
+      y2="30"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+    <filter id="drop_shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow
+        dx="1"
+        dy="1"
+        stdDeviation="1"
+        flood-opacity="0.5"
+        flood-color="#000000"
+      />
+    </filter>
+  </defs>
+</svg>
+
+<!-- ===== OPCIÓN 3: Usando en JavaScript (HTML) ===== -->
+<script>
+  // Mostrar icono + cantidad en elemento
+  function mostrarMelantiosBadge(elementId, cantidad) {
+    document.getElementById(elementId).innerHTML = `
+      <img src="/src/assets/ui/icons/melantio_gold.svg" alt="M" style="width: 20px; height: 15px; margin-right: 4px; vertical-align: middle;" />
+      <strong>${cantidad}</strong>
+    `;
+  }
+
+  mostrarMelantiosBadge('saldo-melantios', 250); // Muestra: [Icono] 250
+</script>
+
+<!-- ===== OPCIÓN 4: Como botón con icono ===== -->
+<button
+  style="
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  "
+>
+  <img
+    src="/src/assets/ui/icons/melantio_gold.svg"
+    alt="M"
+    style="width: 18px; height: 13px"
+  />
+  Usar Melantios
+</button>
+
+<!-- ===== PROPIEDADES CSS REUTILIZABLES ===== -->
+<style>
+  .melantio-icon {
+    width: 24px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  .melantio-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 4px;
+    color: #78350f;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .melantio-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+    color: white;
+    border: 1px solid #92400e;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  .melantio-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  }
+</style>
+
+<!-- ===== CONSTANTES GLOBALES (JavaScript) ===== -->
+<script>
+  const MELANTIO_CONFIG = {
+    ICON_PATH: '/src/assets/ui/icons/melantio_gold.svg',
+    EXCHANGE_RATE: 0.01, // 1 Melantio = $0.01 USD
+    CONVERSION: 100, // 100 Melantios = $1 USD
+    MAX_PAYMENT_PCT: 0.5, // Máximo 50% de pago en Melantios
+    EXPIRATION_DAYS: 90, // Vencimiento en 90 días
+    COLORS: {
+      GRADIENT_START: '#FDE68A',
+      GRADIENT_MID: '#F59E0B',
+      GRADIENT_END: '#B45309',
+      BORDER: '#B45309',
+      LETTER: '#78350F',
+    },
+  };
+
+  // Convertir Melantios a USD
+  function melantiosToUSD(melantios) {
+    return (melantios * MELANTIO_CONFIG.EXCHANGE_RATE).toFixed(2);
+  }
+
+  // Convertir USD a Melantios
+  function usdToMelantios(usd) {
+    return Math.round(usd * MELANTIO_CONFIG.CONVERSION);
+  }
+</script>
+
+<!-- ===== VALIDACIÓN DE CANJE (50%) ===== -->
+<script>
+  function validarCanjemelantios(melantiosUsados, precioProducto) {
+    const usdEquivalente = parseFloat(melantiosToUSD(melantiosUsados));
+    const montoMaximo = precioProducto * MELANTIO_CONFIG.MAX_PAYMENT_PCT;
+
+    if (usdEquivalente > montoMaximo) {
+      return {
+        valido: false,
+        mensaje: `❌ Solo puedes usar hasta el 50% en Melantios. Máximo: ${usdToMelantios(montoMaximo)}M`,
+      };
+    }
+
+    return {
+      valido: true,
+      melantios: melantiosUsados,
+      efectivo: (precioProducto - usdEquivalente).toFixed(2),
+      porcentajeMelantios: ((usdEquivalente / precioProducto) * 100).toFixed(1),
+    };
+  }
+</script>
+
+--- ## 📖 Referencia de Uso Rápido ``` Tamaño Badge: 24px × 18px (pequeño, en
+header) Tamaño Botón: 20px × 15px (mediano, en botones) Tamaño Grande: 40px ×
+30px (grande, en paneles) Color Oro: #F59E0B (principal) Borde: #B45309 (oscuro)
+Letra M: #78350F (marrón) Cambio Fijo: 100 M = $1 USD = 1 dólar Máximo Canje:
+50% de cualquier compra/suscripción Vencimiento: 90 días inactividad ``` ---
+**Ubicación de archivos:** - SVG: `/src/assets/ui/icons/melantio_gold.svg` -
+Documentación: `/src/assets/ui/icons/IMPLEMENTACION_MELANTIO.md` - Config JSON:
+`/src/database/melantios_economy_v1.json`

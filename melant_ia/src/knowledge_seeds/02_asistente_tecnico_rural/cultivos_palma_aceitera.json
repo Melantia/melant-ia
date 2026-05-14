@@ -1,0 +1,89 @@
+{
+  "palma_aceitera": {
+    "nombre_cientifico": "Elaeis guineensis",
+    "descripcion": "Cultivo oleaginoso de mayor rendimiento por hectárea en el mundo. En Ecuador se concentra en Santo Domingo, Esmeraldas y Pichincha. Base de la industria de aceite vegetal nacional.",
+    "tipo_suelo_recomendado": "Franco arcilloso, profundo, bien drenado, pH 5.0-6.5. Evitar suelos encharcados o salinos.",
+    "ciclo_cultivo_anos": { "inicio_produccion": 3, "vida_util": 25 },
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas pequeñas, amarillas, menor crecimiento."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Necrosis en puntas de hojas, menor peso de racimos."
+      },
+      {
+        "elemento": "Magnesio",
+        "sintoma": "Bandas amarillas en hojas intermedias."
+      }
+    ],
+    "manejo_convencional": "Fertilización química fraccionada, control químico de plagas y enfermedades, uso de semillas híbridas, herbicidas en plato y calle, riego suplementario en sequía.",
+    "manejo_organico": "Compost de raquis, efluentes tratados, control biológico, cobertura vegetal, uso de microorganismos benéficos.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, integración con leguminosas, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 3500,
+    "hectareas_sembradas_ecuador": 350000,
+    "captura_carbono_ton_ha_anio": 10.5,
+    "precio_carbono_usd_ton": 38,
+    "riego_optimo": "Riego suplementario en sequía (3-4 litros/palma/día); tolera periodos secos cortos",
+    "npk_recomendado": { "N": 160, "P": 60, "K": 220 },
+    "plagas_comunes": [
+      {
+        "nombre": "Rhynchophorus palmarum (Picudo negro)",
+        "control_organico": "Trampas con feromona de agregación + trozo de caña fermentada",
+        "control_quimico": "Clorpirifos en focos, eliminación de palmas afectadas",
+        "sintoma": "Palmeras con pudrición de cogollo, presencia de larvas en tronco; vector del nematodo Bursaphelenchus cocophilus (anillo rojo)"
+      },
+      {
+        "nombre": "Leptopharsa gibbicarina (Chinche de encaje)",
+        "control_organico": "Beauveria bassiana, Metarhizium anisopliae",
+        "control_quimico": "Imidacloprid, Dimetoato",
+        "sintoma": "Manchas cloróticas en envés de hojas (aspecto cenizo), reducción fotosíntesis y producción"
+      },
+      {
+        "nombre": "Strategus aloeus (Cucarrón del suelo)",
+        "control_organico": "Control biológico, trampas de luz",
+        "control_quimico": "Clorpirifos en suelo",
+        "sintoma": "Daño en base de plantas jóvenes, perforaciones en estípite"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Pudrición del cogollo (PC) - Phytophthora palmivora",
+        "control": "Eliminación de tejido afectado, cobre + metalaxil, fomento del drenaje; variedades tolerantes",
+        "sintoma": "Necrosis y pudrición del cogollo, olor fétido, colapso de la palma; enfermedad más devastadora en Ecuador"
+      },
+      {
+        "nombre": "Marchitez sorpresiva (Phytomonas staheli)",
+        "control": "Sin tratamiento eficaz; control de Lincus spp. (vector), eliminación de palmas enfermas",
+        "sintoma": "Marchitez súbita de hojas inferiores, pudrición de raíces, muerte rápida de la palma"
+      },
+      {
+        "nombre": "Anillo rojo (Bursaphelenchus cocophilus)",
+        "control": "No tiene cura; erradicación de palmas enfermas y control del picudo negro (vector)",
+        "sintoma": "Anillo naranja-rojizo en corte transversal del tronco, marchitez y muerte de la palma"
+      }
+    ],
+    "epoca_siembra_recomendada": "Inicio de temporada lluviosa (Oct - Dic o Abr - Jun según zona)",
+    "calendario_lunar": "Siembra en luna creciente para mejor establecimiento de raíces.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilización fraccionada, herbicidas en plato y calle, fungicidas e insecticidas según monitoreo.",
+        "rendimiento_estimado": "25-30 t racimos frescos/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost de raquis, efluentes tratados como fertilizante, control biológico.",
+        "rendimiento_estimado": "18-22 t racimos frescos/ha/año"
+      }
+    },
+    "labores_cosecha": "Corte de racimos con alzador cuando frutos sueltan (2-3 frutos caídos/racimo). Ciclo cada 10-15 días.",
+    "labores_postcosecha": "Transporte urgente a extractora (máx 24h), extracción de aceite crudo de palma (CPO) y aceite de palmiste.",
+    "zonas_produccion_ecuador": [
+      "Santo Domingo de los Tsáchilas",
+      "Esmeraldas",
+      "Pichincha",
+      "Los Ríos"
+    ],
+    "importancia_economica": "Ecuador es el mayor productor de palma aceitera en Sudamérica. Genera más de 200,000 empleos directos e indirectos. Principal fuente de aceite vegetal nacional."
+  }
+}

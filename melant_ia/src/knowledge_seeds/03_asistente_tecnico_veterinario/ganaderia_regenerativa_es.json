@@ -1,0 +1,39 @@
+{
+  "titulo": "Prácticas de Ganadería Regenerativa",
+  "idioma": "es",
+  "practicas": [
+    {
+      "nombre": "Implementación de PRV",
+      "descripcion": "Cálculo de carga animal, diseño de potreros, uso de energizador y cinta eléctrica.",
+      "materiales": [
+        "Energizador solar/elétrico (mínimo 3 julios)",
+        "Cinta/hilo electroplástico",
+        "Aisladores",
+        "Postes plásticos/madera",
+        "Tubería de polietileno",
+        "Bebederos móviles"
+      ]
+    },
+    {
+      "nombre": "Diseño Keyline",
+      "descripcion": "Uso de nivel láser o en 'A', arado de subsuelo y mapeo de curvas.",
+      "materiales": [
+        "Nivel láser o nivel en 'A'",
+        "Arado de subsuelo tipo Yeomans",
+        "GPS o cinta métrica"
+      ]
+    },
+    {
+      "nombre": "Preparación de Bocashi/Biofermentos",
+      "descripcion": "Recetas y pasos para fabricar abonos orgánicos.",
+      "materiales": [
+        "Tanques plásticos (200L)",
+        "Válvulas de escape",
+        "Melaza",
+        "Levadura o suero",
+        "Harina de rocas",
+        "Estiércol fresco"
+      ]
+    }
+  ]
+}

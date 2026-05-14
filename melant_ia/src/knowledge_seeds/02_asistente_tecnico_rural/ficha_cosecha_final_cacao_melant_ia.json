@@ -1,0 +1,27 @@
+{
+  "ficha_cosecha_final_cacao_melant_ia": {
+    "cultivo": "Cacao",
+    "variedad": "[Nombre de la variedad]",
+    "lote": "[Identificación del lote o sector]",
+    "fecha_cosecha": "[DD/MM/AAAA]",
+    "kilos_cosechados": "[Cantidad total en kg]",
+    "calidad_grano": "[Ej. fermentado, seco, humedad %, tamaño]",
+    "practicas_regenerativas_aplicadas": [
+      "[Ej. MM, Caldo Sulfocálcico, reincorporación de cáscara, cobertura viva]"
+    ],
+    "biomasa_reincorporada": {
+      "cascara_kg": "[Kg de cáscara reincorporada]",
+      "hojas_kg": "[Kg de hojas o residuos reincorporados]"
+    },
+    "estimacion_co2_secuestrado": {
+      "valor_kg": "[Cálculo automático: kg CO₂]",
+      "factor_conversion": "0.38 kg CO₂/kg biomasa fresca (referencia FAO, cacao)",
+      "explicacion": "El sistema multiplica la biomasa reincorporada por el factor de conversión para estimar el CO₂ secuestrado."
+    },
+    "dinero_ahorrado": {
+      "valor_usd": "[Cálculo automático o editable]",
+      "explicacion": "Se estima el ahorro por sustitución de insumos sintéticos y reducción de fungicidas, según precios locales."
+    },
+    "observaciones_productor": "[Espacio para comentarios sobre calidad, clima, aprendizajes, etc.]"
+  }
+}

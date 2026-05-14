@@ -1,0 +1,74 @@
+{
+  "titulo": "Cómo Mejorar la Alimentación y Nutrición de mi Hato Bovino",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de nutrición bovina",
+      "objetivo": "Comprender los requerimientos nutricionales básicos de los bovinos y su importancia en la producción.",
+      "contenido": [
+        "Nutrientes esenciales: energía, proteína, minerales y vitaminas",
+        "Digestión y aprovechamiento de nutrientes",
+        "Factores que afectan el consumo y la eficiencia alimenticia"
+      ]
+    },
+    {
+      "nombre": "Identificación y clasificación de alimentos",
+      "objetivo": "Reconocer y clasificar los diferentes tipos de alimentos disponibles para el hato.",
+      "contenido": [
+        "Forrajes, concentrados y subproductos",
+        "Valor nutritivo y uso adecuado",
+        "Conservación y almacenamiento de alimentos"
+      ]
+    },
+    {
+      "nombre": "Formulación de dietas balanceadas",
+      "objetivo": "Elaborar dietas que cubran los requerimientos según etapa productiva y recursos disponibles.",
+      "contenido": [
+        "Cálculo de raciones",
+        "Uso de tablas y software de formulación",
+        "Ajuste de dietas según resultados"
+      ]
+    },
+    {
+      "nombre": "Estrategias de suplementación y manejo de forrajes",
+      "objetivo": "Mejorar la eficiencia alimenticia mediante suplementación y manejo adecuado de los forrajes.",
+      "contenido": [
+        "Tipos de suplementos y su función",
+        "Manejo de pasturas y rotación",
+        "Uso de bloques multinutricionales y sales minerales"
+      ]
+    },
+    {
+      "nombre": "Evaluación del estado nutricional y productivo",
+      "objetivo": "Monitorear el estado corporal y la respuesta productiva del hato.",
+      "contenido": [
+        "Evaluación de condición corporal",
+        "Indicadores productivos: ganancia de peso, producción de leche, reproducción",
+        "Ajuste de manejo según resultados"
+      ]
+    },
+    {
+      "nombre": "Práctica: Elaboración y ajuste de raciones",
+      "descripcion": "Guía paso a paso para elaborar y ajustar raciones en campo.",
+      "pasos": [
+        "Identificación de recursos alimenticios disponibles",
+        "Cálculo de requerimientos según etapa y objetivo",
+        "Formulación y mezcla de la ración",
+        "Monitoreo de consumo y respuesta animal",
+        "Ajuste de la dieta según resultados"
+      ],
+      "recomendaciones": [
+        "Consultar con un nutricionista animal para ajustes específicos",
+        "Registrar datos para análisis y mejora continua"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Cuáles son los nutrientes esenciales para los bovinos?",
+    "¿Cómo se clasifican los alimentos para el hato?",
+    "¿Qué factores considerar al formular una dieta balanceada?",
+    "¿Por qué es importante la suplementación y el manejo de forrajes?",
+    "¿Cómo se evalúa el estado nutricional y productivo del hato?"
+  ]
+}

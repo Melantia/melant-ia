@@ -1,0 +1,65 @@
+{
+  "cilantro": {
+    "nombre_cientifico": "Coriandrum sativum",
+    "descripcion": "Hierba aromática anual, ampliamente utilizada en gastronomía y medicina tradicional. Adaptada a climas templados y cálidos.",
+    "riego_optimo": "Riego frecuente, evitando encharcamiento. 400-600 mm/ciclo.",
+    "npk_recomendado": { "N": 40, "P": 30, "K": 60 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Minador de hoja",
+        "control_organico": "Trampas cromáticas",
+        "control_quimico": "Abamectina",
+        "sintoma": "Galerías en hojas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable",
+        "sintoma": "Polvo blanco en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año en zonas templadas.",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "10-15 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "7-10 t/ha"
+      }
+    },
+    "labores_cosecha": "Corte manual de hojas a los 30-40 días de siembra.",
+    "labores_postcosecha": "Limpieza, enfriado, empaque en bolsas o atados.",
+    "zonas_produccion_ecuador": [
+      "Tungurahua",
+      "Chimborazo",
+      "Imbabura",
+      "Pichincha"
+    ],
+    "importancia_economica": "Hierba de alto consumo nacional y exportación a mercados étnicos.",
+    "captura_carbono_ton_ha_anio": 1.2,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 400,
+    "densidad_siembra": "800,000-1,000,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en atados para trazabilidad.",
+    "bibliografia": ["Manual de Cilantro INIAP", "FAO Cilantro Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Hierbas",
+      "Postcosecha de Hierbas Aromáticas"
+    ]
+  }
+}

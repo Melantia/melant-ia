@@ -1,0 +1,65 @@
+{
+  "titulo": "Integración del Sistema Silvopastoril",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos del sistema silvopastoril",
+      "objetivo": "Comprender los principios y componentes básicos del sistema silvopastoril.",
+      "contenido": [
+        "Definición y tipos de sistemas silvopastoriles",
+        "Componentes: árboles, pastos y animales",
+        "Principios ecológicos y productivos"
+      ]
+    },
+    {
+      "nombre": "Diseño y establecimiento del sistema",
+      "objetivo": "Aprender a planificar y establecer un sistema silvopastoril adaptado a las condiciones locales.",
+      "contenido": [
+        "Selección de especies arbóreas y forrajeras",
+        "Distribución espacial y densidad",
+        "Preparación del terreno y siembra"
+      ]
+    },
+    {
+      "nombre": "Manejo de árboles, pastos y animales",
+      "objetivo": "Integrar el manejo adecuado de los tres componentes para maximizar los beneficios del sistema.",
+      "contenido": [
+        "Podas, fertilización y manejo de árboles",
+        "Manejo de pasturas y rotación de potreros",
+        "Manejo animal y bienestar"
+      ]
+    },
+    {
+      "nombre": "Beneficios ambientales, económicos y sociales",
+      "objetivo": "Identificar los principales beneficios y servicios ecosistémicos del sistema silvopastoril.",
+      "contenido": [
+        "Conservación de suelos y agua",
+        "Captura de carbono y biodiversidad",
+        "Rentabilidad y diversificación de ingresos"
+      ]
+    },
+    {
+      "nombre": "Práctica: Implementación de un módulo silvopastoril en campo",
+      "descripcion": "Guía paso a paso para la implementación de un módulo silvopastoril.",
+      "pasos": [
+        "Diagnóstico y selección del sitio",
+        "Diseño y distribución de componentes",
+        "Siembra y establecimiento",
+        "Manejo inicial y monitoreo",
+        "Evaluación de resultados y ajustes"
+      ],
+      "recomendaciones": [
+        "Involucrar a la familia y comunidad en el proceso",
+        "Registrar datos de crecimiento y producción"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Qué es un sistema silvopastoril y cuáles son sus componentes?",
+    "¿Cuáles son los pasos clave para el diseño y establecimiento?",
+    "¿Cómo se manejan los árboles, pastos y animales en el sistema?",
+    "¿Qué beneficios ambientales aporta el sistema silvopastoril?",
+    "¿Por qué es importante el monitoreo y ajuste del sistema?"
+  ]
+}

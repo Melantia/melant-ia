@@ -1,0 +1,121 @@
+{
+  "agricultura_regenerativa": {
+    "captura_carbono": {
+      "valor_estimado_tCO2_ha_anio": 15,
+      "explicacion": "Los sistemas de agricultura regenerativa pueden capturar entre 12 y 18 toneladas de CO₂ por hectárea al año, gracias a la cobertura permanente del suelo, rotación de cultivos, uso de abonos verdes y manejo holístico del ganado. Estas prácticas aumentan la materia orgánica y el carbono almacenado en el suelo, contribuyendo a la mitigación del cambio climático."
+    },
+    "fuente": "Múltiples fuentes académicas y técnicas 2022–2026",
+    "detalle": "Conjunto de prácticas orgánicas agrícolas y de pastoreo que revierten el cambio climático mediante la regeneración de suelos, aumento de biodiversidad y ciclos hídricos. Incluye principios, técnicas, beneficios y desafíos.",
+    "url": "https://www.researchgate.net/publication/comportamie",
+    "referencias": [
+      {
+        "archivo": "EOSDataAnalytics_2024_agricultura_regenerativa_principios_practicas",
+        "fuente": "EOS Data Analytics (21 may 2024). Agricultura Regenerativa: Principios y Prácticas Habituales.",
+        "url": "https://eos.com/es/blog/agricultura-regenerativa/",
+        "resumen": "La agricultura regenerativa se centra en mejorar el suelo para que crezcan cultivos sanos y abundantes. Incluye reducción de labranza, cobertura permanente del suelo, diversificación de cultivos y manejo holístico del ganado. Analiza también principales barreras: lagunas de conocimiento, costes iniciales elevados y falta de certificación."
+      },
+      {
+        "archivo": "NobleResearchInstitute_que_es_agricultura_regenerativa",
+        "fuente": "Noble Research Institute. ¿Qué es la agricultura regenerativa?",
+        "url": "https://www.noble.org/regenerative-agriculture/",
+        "resumen": "La salud del suelo es la base de la agricultura sostenible. La mejora de los suelos ayuda a los productores a ser más resistentes, proporcionando producción más constante incluso ante patrones climáticos adversos. Enfoque desde ganadería y cultivos integrados."
+      },
+      {
+        "archivo": "BASF_Agriculture_2026_agricultura_regenerativa_futuro",
+        "fuente": "BASF Agriculture (30 ene 2026). Agricultura regenerativa: transformando el futuro del campo.",
+        "url": "https://agricultura.basf.com/es/contenidos-de-agricultura/agricultura-regenerativa.html",
+        "resumen": "Mejora de la salud del suelo: las prácticas regenerativas aumentan la materia orgánica, mejoran la estructura y fomentan la actividad biológica. Beneficios incluyen resiliencia climática, reducción de insumos externos y mayor rentabilidad a largo plazo."
+      },
+      {
+        "archivo": "CREAF_Regenera_agricultura_regenerativa_definicion",
+        "fuente": "CREAF / Regenera.cat. La agricultura regenerativa.",
+        "url": "https://regenera.creaf.cat/la-agricultura-regenerativa/",
+        "resumen": "La agricultura regenerativa es un innovador modelo agrícola que busca regenerar, estimular y mantener la fertilidad y biodiversidad de la tierra. Revisión académica del CREAF (Centro de Investigación Ecológica y Aplicaciones Forestales, España)."
+      },
+      {
+        "archivo": "Repsol_2025_agricultura_regenerativa_beneficios",
+        "fuente": "Repsol (12 ago 2025). Qué es la agricultura regenerativa y qué beneficios tiene.",
+        "url": "https://www.repsol.com/es/energia-del-futuro/medio-ambiente/agricultura-regenerativa/index.cshtml",
+        "resumen": "El cultivo regenerativo tiene como objetivo principal restaurar la salud de los suelos al tiempo que aumenta la biodiversidad y se reducen las emisiones de GEI. Análisis de beneficios económicos, ambientales y sociales."
+      },
+      {
+        "archivo": "EnelGroup_agricultura_regenerativa_definicion_ejemplos",
+        "fuente": "Enel Group. Agricultura regenerativa: definición y ejemplos.",
+        "url": "https://www.enel.com/es/learning-hub/medio-ambiente/que-es-la-agricultura-regenerativa",
+        "resumen": "Según la agricultura regenerativa el suelo nunca debe quedarse sin plantas: la cobertura vegetal es fundamental. Regenerar el suelo adoptando prácticas que aumenten su fertilidad y limiten su erosión, especialmente en colinas y montañas."
+      },
+      {
+        "archivo": "RegenerationInternational_2023_agricultura_regenerativa",
+        "fuente": "Regeneration International (15 ene 2023). La agricultura regenerativa: Regeneración del suelo.",
+        "url": "https://regenerationinternational.org/2023/01/15/la-agricultura-regenerativa/",
+        "resumen": "La agricultura regenerativa es un enfoque innovador para la producción de alimentos saludables que se basa en la regeneración de la salud del suelo como principio central. Organización global de referencia en el tema."
+      },
+      {
+        "archivo": "AgriculturaRegenerativaIberica_suelo_agua",
+        "fuente": "Agricultura Regenerativa Ibérica. El suelo y el agua en Agricultura Regenerativa.",
+        "url": "https://www.agriculturaregenerativa.es/suelo-y-agua/",
+        "resumen": "Cuando el agua subterránea se agota por prácticas inadecuadas, el suelo se deshidrata y las plantas se vuelven más vulnerables. La agricultura regenerativa propone técnicas de manejo hídrico del suelo para romper este ciclo."
+      },
+      {
+        "archivo": "RECIAMUC_2024_Vega_beneficios_agricultura_regenerativa",
+        "fuente": "Vega, F. V. A. et al. (2024). Beneficios de la agricultura regenerativa en la salud del suelo. RECIAMUC. Mencionado por 4.",
+        "url": "https://reciamuc.com/index.php/RECIAMUC/article/view/beneficios-agricultura-regenerativa",
+        "resumen": "La agricultura regenerativa es un enfoque de producción de alimentos que busca restaurar y mejorar la salud de los suelos, la biodiversidad y los ciclos hídricos. Investigación académica con énfasis en contexto latinoamericano."
+      },
+      {
+        "archivo": "GobMX_agricultura_regenerativa_futuro",
+        "fuente": "Gobierno de México (Gob.mx). Agricultura regenerativa, ¡el futuro es hoy!",
+        "url": "https://www.gob.mx/agricultura/articulos/agricultura-regenerativa",
+        "resumen": "Se basa en técnicas que reconstruyen la materia orgánica y la biodiversidad del suelo, contrarrestando los impactos del cambio climático. Publicación oficial del gobierno mexicano con guía de implementación."
+      },
+      {
+        "archivo": "Kimzza_tecnicas_agricultura_regenerativa_salud_suelo",
+        "fuente": "Kimzza. Técnicas de agricultura regenerativa para mejorar la salud del suelo.",
+        "url": "https://kimzza.com/tecnicas-agricultura-regenerativa/",
+        "resumen": "Técnicas clave: reducción o eliminación de la labranza, cobertura permanente del suelo, diversificación de cultivos, integración animal y compostaje. Guía práctica de implementación por etapas."
+      },
+      {
+        "archivo": "Wikipedia_agricultura_regenerativa",
+        "fuente": "Wikipedia. Agricultura regenerativa.",
+        "url": "https://es.wikipedia.org/wiki/Agricultura_regenerativa",
+        "resumen": "La agricultura regenerativa consiste en un conjunto de prácticas orgánicas agrícolas y de pastoreo que revierten el cambio climático. Entrada enciclopédica con definición, historia, principios y referencias académicas."
+      },
+      {
+        "archivo": "SigmaAgro_agricultura_regenerativa_sostenibilidad",
+        "fuente": "Sigma Agro. Agricultura Regenerativa: Una Nueva Era para la Sostenibilidad Agrícola.",
+        "url": "https://sigmaagro.com/agricultura-regenerativa-sostenibilidad/",
+        "resumen": "Uso de coberturas vegetales: mantener los suelos cubiertos con cultivos vivos o residuos vegetales reduce la erosión y mejora la retención de humedad. Análisis de adopción en América Latina."
+      },
+      {
+        "archivo": "AMTEC_2022_ventajas_inconvenientes_agricultura_regenerativa",
+        "fuente": "AMTEC Machinery (22 mar 2022). Ventajas e inconvenientes de la agricultura regenerativa.",
+        "url": "https://amtec-group.com/blog/the-pros-and-cons-of-regenerative-agriculture/",
+        "resumen": "Desventajas: pérdida de tiempo en la transición, difícil de realizar a gran escala, requiere planificación y organización detallada. Balance objetivo de beneficios y limitaciones para la adopción a escala comercial."
+      },
+      {
+        "archivo": "MDPI_2025_Moises_agricultura_regenerativa_perspectivas_desafios",
+        "fuente": "Moisés, C. et al. (2025). Agricultura regenerativa: Perspectivas y desafíos en la producción sostenible. MDPI. Mencionado por 6.",
+        "url": "https://www.mdpi.com/journal/sustainability/agricultura-regenerativa-moises-2025",
+        "resumen": "Los efectos de la agricultura intensiva en acuíferos, cursos de agua y océanos son preocupantes. La contaminación del agua es el problema más notable. Revisión científica de desafíos y oportunidades de la agricultura regenerativa a escala global."
+      },
+      {
+        "archivo": "Fertri_2024_huerto_regenerativo_principios_ventajas",
+        "fuente": "Fertri Invernaderos (30 abr 2024). Huerto regenerativo: qué es, principios, ventajas y desventajas.",
+        "url": "https://fertri.com/noticias/huerto-regenerativo/",
+        "resumen": "Desventajas de un huerto regenerativo: al comenzar la implementación se deben aprender nuevas formas y habilidades para trabajar el suelo. Guía práctica para pequeños productores y huertos familiares."
+      },
+      {
+        "archivo": "AgroTechCampus_agricultura_regenerativa_impacto_suelo",
+        "fuente": "AgroTech Campus. Agricultura regenerativa y su impacto en el suelo agrícola.",
+        "url": "https://agrotechcampus.com/blog/agricultura-regenerativa/",
+        "resumen": "Otro obstáculo es el coste inicial: invertir en maquinaria adaptada, semillas de cobertura, infraestructura de manejo animal o sistemas de control hídrico exige planificación. Artículo técnico sobre impacto en suelo agrícola."
+      },
+      {
+        "archivo": "AgriPlanting_2025_ventajas_desventajas_agricultura_regenerativa",
+        "fuente": "Agri Planting (13 jun 2025). Ventajas y desventajas de la agricultura regenerativa.",
+        "url": "https://agriplanting.com/advantages-and-disadvantages-of-regenerative-agriculture/",
+        "resumen": "Análisis de ventajas y desventajas: 1. Altos costos iniciales, 2. Requisitos de conocimientos y habilidades. Balance completo para productores que consideran la transición hacia sistemas regenerativos."
+      }
+    ]
+  }
+}

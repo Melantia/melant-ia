@@ -1,0 +1,40 @@
+{
+  "calculadora_dosis": {
+    "version": "1.0",
+    "descripcion": "Calculadora de dosis para medicamentos veterinarios comunes basada en peso vivo.",
+    "medicamentos": [
+      {
+        "nombre": "Ivermectina",
+        "tipo": "antiparasitario",
+        "dosis_mg_kg": 0.2,
+        "presentacion": "1% inyectable",
+        "especies": ["bovino", "ovino", "caprino", "porcino"],
+        "intervalo_repeticion": "cada 30 días"
+      },
+      {
+        "nombre": "Oxitetraciclina",
+        "tipo": "antibiótico",
+        "dosis_mg_kg": 10,
+        "presentacion": "20% inyectable",
+        "especies": ["bovino", "ovino", "caprino", "porcino", "equino"],
+        "intervalo_repeticion": "cada 24 horas, 3 días"
+      },
+      {
+        "nombre": "Albendazol",
+        "tipo": "antiparasitario",
+        "dosis_mg_kg": 7.5,
+        "presentacion": "oral",
+        "especies": ["bovino", "ovino", "caprino", "porcino", "canino"],
+        "intervalo_repeticion": "cada 3 meses"
+      },
+      {
+        "nombre": "Enrofloxacina",
+        "tipo": "antibiótico",
+        "dosis_mg_kg": 5,
+        "presentacion": "5% inyectable",
+        "especies": ["bovino", "porcino", "canino", "felino"],
+        "intervalo_repeticion": "cada 24 horas, 5 días"
+      }
+    ]
+  }
+}

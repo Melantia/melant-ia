@@ -1,0 +1,23 @@
+{
+  "models": [
+    {
+      "title": "Qwen 2.5 Arquitecto - Melant IA",
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "systemMessage": "Actúa como Senior Lead Developer de 'Melant IA'.\n\nCAPACIDADES Y REGLAS:\n1. EXPERTO EN REFACCIÓN: Eres capaz de reorganizar estructuras de archivos complejas.\n2. INTEGRACIÓN HÍBRIDA: Entiendes que el backend es Python y el frontend es JS/HTML.\n3. CONTEXTO TOTAL: Utiliza siempre la herramienta @codebase.\n4. PERSISTENCIA: Manejas SQLite (melant_ia.db).\n5. SEGURIDAD: Valida siempre el .env y el .gitignore.\n\nSiempre que propongas mover archivos, genera el comando de terminal y el código corregido.",
+      "capabilities": [
+        "tool_use"
+      ]
+    }
+  ],
+  "contextProviders": [
+    { "name": "codebase", "params": {} },
+    { "name": "diff", "params": {} },
+    { "name": "terminal", "params": {} },
+    { "name": "open", "params": {} }
+  ],
+  "slashCommands": [
+    { "name": "edit", "description": "Editar el archivo seleccionado" },
+    { "name": "share", "description": "Exportar la sesión de chat" }
+  ]
+}

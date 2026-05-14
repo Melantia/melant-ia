@@ -1,0 +1,65 @@
+{
+  "titulo": "Reproducción y Mejoramiento Genético del Ganado Bovino",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de la reproducción bovina",
+      "objetivo": "Comprender la fisiología reproductiva y los factores que afectan la fertilidad en bovinos.",
+      "contenido": [
+        "Anatomía y fisiología del aparato reproductor",
+        "Ciclo estral y detección de celo",
+        "Factores que afectan la fertilidad"
+      ]
+    },
+    {
+      "nombre": "Técnicas de manejo reproductivo",
+      "objetivo": "Aplicar técnicas para optimizar la eficiencia reproductiva del hato.",
+      "contenido": [
+        "Monta natural y controlada",
+        "Inseminación artificial",
+        "Sincronización de celos y transferencia embrionaria"
+      ]
+    },
+    {
+      "nombre": "Principios y métodos de mejoramiento genético",
+      "objetivo": "Conocer los métodos para seleccionar y mejorar genéticamente el hato bovino.",
+      "contenido": [
+        "Selección fenotípica y genotípica",
+        "Cruzamientos y líneas puras",
+        "Uso de registros genealógicos y productivos"
+      ]
+    },
+    {
+      "nombre": "Selección y evaluación de reproductores",
+      "objetivo": "Identificar y seleccionar los mejores animales para la reproducción y el mejoramiento genético.",
+      "contenido": [
+        "Criterios de selección de toros y vacas",
+        "Evaluación de características productivas y reproductivas",
+        "Pruebas de progenie y evaluación genética"
+      ]
+    },
+    {
+      "nombre": "Práctica: Registro y control reproductivo en campo",
+      "descripcion": "Guía paso a paso para el registro y control reproductivo.",
+      "pasos": [
+        "Identificación individual de animales",
+        "Registro de celos, servicios y partos",
+        "Evaluación de intervalos reproductivos",
+        "Análisis de resultados y toma de decisiones",
+        "Ajuste de manejo según resultados"
+      ],
+      "recomendaciones": [
+        "Utilizar formatos o aplicaciones para el registro",
+        "Realizar evaluaciones periódicas de fertilidad y genética"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Cuáles son los factores clave que afectan la fertilidad en bovinos?",
+    "¿Qué técnicas reproductivas modernas existen y cómo se aplican?",
+    "¿Cómo se seleccionan los mejores animales para el mejoramiento genético?",
+    "¿Por qué es importante el registro y control reproductivo?",
+    "¿Qué ventajas aporta la inseminación artificial y la transferencia embrionaria?"
+  ]
+}

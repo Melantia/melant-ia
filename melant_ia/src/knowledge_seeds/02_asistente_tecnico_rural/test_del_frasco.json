@@ -1,0 +1,30 @@
+{
+  "test_del_frasco": {
+    "instrucciones_paso_a_paso": [
+      "Llene el frasco al 50% con agua de la finca.",
+      "Agregue los insumos en orden (Polvos, Suspensiones, Emulsiones, Biologicos).",
+      "Agite y espere 15 minutos.",
+      "Observe si hay cambios de color extremo, calor o sedimentos."
+    ],
+    "orden_mezcla_estandar": [
+      "1. Correctores de pH y ablandadores de agua",
+      "2. Polvos mojables (WP)",
+      "3. Granulos dispersables (WG/SG)",
+      "4. Concentrados emulsionables (EC)",
+      "5. Fertilizantes liquidos / Bioles",
+      "6. Microorganismos vivos (Trichoderma/Bacillus)"
+    ],
+    "bibliografia": [
+      {
+        "fuente": "FAO",
+        "titulo": "Buenas Practicas en el manejo de mezclas de campo",
+        "año": "2020"
+      },
+      {
+        "fuente": "INIAP",
+        "titulo": "Manual de Calibracion y Aplicacion de Agroquimicos",
+        "año": "2018"
+      }
+    ]
+  }
+}

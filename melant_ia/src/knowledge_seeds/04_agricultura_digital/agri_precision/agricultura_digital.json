@@ -1,0 +1,45 @@
+{
+  "sensores": {
+    "catalogo": ["Humedad Capacitivo", "Temperatura DHT22", "NPK Suelos"],
+    "guia_instalacion": [
+      "Paso 1: Localice un punto central del cultivo alejado de drenajes.",
+      "Paso 2: Inserte el sensor verticalmente hasta que los electrodos estén cubiertos.",
+      "Paso 3: Conecte el terminal al nodo Melant_ia y verifique la luz azul de enlace."
+    ]
+  },
+  "gps_medicion": {
+    "herramienta": "Módulo GPS L1/L2",
+    "guia_proceso": [
+      "Paso 1: Párese en el primer lindero y presione 'Iniciar Recorrido'.",
+      "Paso 2: Camine por todo el borde del lote manteniendo una velocidad constante.",
+      "Paso 3: Al volver al punto de inicio, presione 'Cerrar Polígono'. Calcularé el área ahora."
+    ]
+  },
+  "comunicaciones": {
+    "equipo": "Walkie Talkie / LoRa",
+    "guia_radio": [
+      "Paso 1: Sintonice el canal de su cuadrilla (Canal 1 para Ganadería, Canal 2 para Cultivos).",
+      "Paso 2: Realice una prueba de audio diciendo 'Melant_ia reportando'.",
+      "Paso 3: En caso de emergencia, mantenga presionado el botón naranja por 3 segundos."
+    ]
+  },
+  "guias_interactivas": {
+    "medicion_gps": [
+      "Paso 1: Diríjase al primer lindero o esquina de su terreno.",
+      "Paso 2: Presione el botón 'Marcar Punto A' y espere a que el GPS estabilice la señal.",
+      "Paso 3: Camine por el borde del lote hasta la siguiente esquina y marque el Punto B.",
+      "Paso 4: Repita hasta cerrar el polígono. Yo calcularé el área total automáticamente."
+    ],
+    "instalacion_sensor": [
+      "Paso 1: Elija una zona representativa del cultivo, lejos de inundaciones directas.",
+      "Paso 2: Limpie la superficie de piedras y raíces.",
+      "Paso 3: Inserte el sensor de humedad verticalmente hasta la marca indicada.",
+      "Paso 4: Verifique en la pantalla de Melant_ia si la señal es estable."
+    ],
+    "configuracion_radio": [
+      "Paso 1: Sintonice el canal 5 en su Walkie Talkie.",
+      "Paso 2: Presione el botón lateral para hablar y diga su nombre para probar conexión.",
+      "Paso 3: Si escucha interferencia, cambiaremos al canal de respaldo LoRa."
+    ]
+  }
+}

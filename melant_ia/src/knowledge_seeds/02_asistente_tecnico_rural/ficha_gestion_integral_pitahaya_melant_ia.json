@@ -1,0 +1,114 @@
+{
+  "ficha_gestion_integral_pitahaya_melant_ia": {
+    "identificacion": {
+      "cultivo": "Pitahaya",
+      "variedad": "[Nombre de la variedad]",
+      "lote": "[Identificación del lote o sector]",
+      "responsable": "[Nombre del productor]",
+      "fecha_inicio_ciclo": "[DD/MM/AAAA]"
+    },
+    "registro_fases_cultivo": [
+      {
+        "fase": "Establecimiento y Siembra",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {
+            "tarea": "Preparación de tutores y suelo",
+            "guia_tecnica": "Instalar tutores resistentes y preparar el suelo con compost y MM sólidos.",
+            "alerta_app": "🪴 ¡Prepara tutores y activa el suelo! Un buen inicio asegura plantas fuertes.",
+            "observaciones": ""
+          },
+          {
+            "tarea": "Siembra de esquejes",
+            "guia_tecnica": "Seleccionar esquejes sanos, desinfectar cortes y plantar a 10-15cm de profundidad.",
+            "alerta_app": "🌱 Es momento de sembrar tus esquejes. Recuerda desinfectar para evitar hongos.",
+            "observaciones": ""
+          }
+        ]
+      },
+      {
+        "fase": "Manejo Vegetativo",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {
+            "tarea": "Riego y control de malezas",
+            "guia_tecnica": "Riego moderado, evitar encharcamientos. Control manual de malezas, cobertura viva recomendada.",
+            "alerta_app": "💧 Revisa humedad y controla malezas. La cobertura viva protege tu suelo.",
+            "observaciones": ""
+          },
+          {
+            "tarea": "Poda sanitaria y formación",
+            "guia_tecnica": "Eliminar ramas enfermas, brotes débiles y guiar el crecimiento en el tutor.",
+            "alerta_app": "✂️ Poda sanitaria: Mantén tus plantas ventiladas y sanas.",
+            "observaciones": ""
+          }
+        ]
+      },
+      {
+        "fase": "Floración y Fructificación",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {
+            "tarea": "Polinización asistida (si aplica)",
+            "guia_tecnica": "Realizar polinización manual en la mañana para mejorar el cuajado de frutos.",
+            "alerta_app": "🌸 ¡Floración activa! Considera polinización manual para mayor producción.",
+            "observaciones": ""
+          },
+          {
+            "tarea": "Nutrición foliar y control biológico",
+            "guia_tecnica": "Aplicar biol, extractos vegetales y monitorear plagas (cochinilla, ácaros).",
+            "alerta_app": "🦟 Monitorea plagas y nutre tus plantas con biol y extractos naturales.",
+            "observaciones": ""
+          }
+        ]
+      },
+      {
+        "fase": "Cosecha y Postcosecha",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {
+            "tarea": "Cosecha selectiva",
+            "guia_tecnica": "Cortar frutos maduros con tijera limpia, evitar daños en la planta.",
+            "alerta_app": "🍈 ¡Cosecha lista! Usa tijera limpia y registra tus kilos.",
+            "observaciones": ""
+          },
+          {
+            "tarea": "Reincorporación de residuos y compostaje",
+            "guia_tecnica": "Picar y reincorporar ramas y frutos no comerciales al compost o al suelo.",
+            "alerta_app": "♻️ Reincorpora residuos: cada rama es carbono para tu suelo.",
+            "observaciones": ""
+          }
+        ]
+      }
+    ],
+    "registro_insumos_herramientas": [
+      {
+        "insumo": "Compost",
+        "dosis": "[kg/planta]",
+        "frecuencia": "[mensual/trimestral]"
+      },
+      {
+        "insumo": "MM sólidos/liquidos",
+        "dosis": "[g o ml/planta]",
+        "frecuencia": "[mensual]"
+      },
+      {
+        "insumo": "Biol",
+        "dosis": "[ml/litro de agua]",
+        "frecuencia": "[quincenal]"
+      }
+    ],
+    "indicadores_sostenibilidad": {
+      "biomasa_reincorporada_kg": "[Total ciclo]",
+      "co2_secuestrado_kg": "[Cálculo automático: biomasa x 0.36]",
+      "dinero_ahorrado_usd": "[Estimado por sustitución de insumos sintéticos]"
+    },
+    "historial_intervenciones": [
+      {
+        "fecha": "[DD/MM/AAAA]",
+        "actividad": "[Ej. Poda sanitaria, aplicación de biol, cosecha]",
+        "resultado": "[Observaciones de efecto o mejora]"
+      }
+    ]
+  }
+}

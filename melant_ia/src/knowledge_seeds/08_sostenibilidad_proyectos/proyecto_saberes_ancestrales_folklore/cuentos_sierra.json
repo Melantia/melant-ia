@@ -1,0 +1,26 @@
+[
+  {
+    "tipo": "leyenda",
+    "texto": "Cantuña y el Atrio de San Francisco: El indígena Cantuña engañó al Diablo para salvar su alma, escondiendo la última piedra del atrio.",
+    "fuente": "Cuentos, leyendas, mitos y casos del Ecuador - Abdón Ubidia",
+    "tema": "Quito, pactos, ingenio"
+  },
+  {
+    "tipo": "leyenda",
+    "texto": "El Padre Almeida: El sacerdote quiteño que escapaba del convento y fue advertido por Cristo en la famosa frase: '¿Hasta cuándo, Padre Almeida?'.",
+    "fuente": "Cuentos folklóricos del Ecuador - Paulo de Carvalho Neto",
+    "tema": "Quito, fe, arrepentimiento"
+  },
+  {
+    "tipo": "cuento",
+    "texto": "La Caja Ronca: En las noches de Ibarra se oyen procesiones de almas en pena y tambores, una advertencia para los curiosos.",
+    "fuente": "Cuentos y tradiciones orales del Ecuador - Ángela Arboleda",
+    "tema": "Ibarra, misterio, tradición"
+  },
+  {
+    "tipo": "cuento",
+    "texto": "Taruka, la venada: Relato kichwa sobre la astucia y el respeto a la naturaleza en los Andes.",
+    "fuente": "Taruka, La Venada - Ministerio de Educación",
+    "tema": "Kichwa, valores, naturaleza"
+  }
+]

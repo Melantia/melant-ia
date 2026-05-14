@@ -1,0 +1,43 @@
+{
+  "lote_id": "Lote_Norte_05",
+  "estratos": [
+    {
+      "estrato_id": "E1",
+      "descripcion": "Zona plana, suelo franco",
+      "color": "#FFCC00",
+      "submuestras": [
+        {
+          "punto_id": 1,
+          "coordenada": [-75.123, 4.567],
+          "estado": "pendiente",
+          "foto": null,
+          "timestamp": null
+        },
+        {
+          "punto_id": 2,
+          "coordenada": [-75.124, 4.568],
+          "estado": "pendiente",
+          "foto": null,
+          "timestamp": null
+        }
+        // ...más puntos sugeridos
+      ]
+    },
+    {
+      "estrato_id": "E2",
+      "descripcion": "Zona loma, suelo arcilloso",
+      "color": "#66CCFF",
+      "submuestras": [
+        {
+          "punto_id": 1,
+          "coordenada": [-75.125, 4.569],
+          "estado": "pendiente",
+          "foto": null,
+          "timestamp": null
+        }
+        // ...más puntos sugeridos
+      ]
+    }
+  ],
+  "instrucciones": "Toma una sub-muestra en cada punto marcado. Camina en zigzag. Sube la foto y la app registrará la ubicación automáticamente."
+}

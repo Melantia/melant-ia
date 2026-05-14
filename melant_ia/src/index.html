@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#276749" />
+    <title>MELANTIA</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://unpkg.com"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Banner de estado offline -->
+    <div
+      id="status-banner"
+      style="
+        background: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        font-weight: bold;
+        font-size: 0.95em;
+        letter-spacing: 1px;
+      "
+    >
+      🟢 Sistema Local Activo | FUNCIONA SIN INTERNET
+    </div>
+
+    <!-- BudgetGuard — Barra de Energía de Consulta -->
+    <div id="budget-wrap">
+      <span id="budget-label"
+        >✅ Zona Segura — $0.00/$15.00 • 0/50 consultas</span
+      >
+      <div class="budget-barra-cont">
+        <div id="budget-barra"></div>
+      </div>
+    </div>
+
+    <!-- Panel de Novedades del Equipo MELANTIA -->
+    <div id="panel-novedades"></div>
+
+    <!-- ==========================================
+         RADAR DE COBERTURA — Brújula de Señal
+         ========================================== -->
+    <div id="panel-radar">
+      <h2>📶 BUSCADOR DE COBERTURA</h2>
+      <p class="radar-sub">
+        Camina lentamente — MELANTIA te guiará con voz y vibración
+      </p>
+      <div id="radar-circulo">🐇</div>
+      <div id="radar-etiqueta">🔴 SIN SEÑAL</div>
+      <div class="radar-barra-cont">
+        <div id="radar-barra"></div>
+      </div>
+      <button
+        id="radar-btn-actualizar"
+        onclick="
+          RadarCobertura.cerrar();
+          actualizarConocimientos(false);
+        "
+      >
+        ⚡ Señal OK — Actualizar ahora
+      </button>
+      <div id="radar-historial"></div>
+      <button
+        onclick="RadarCobertura.cerrar()"
+        style="
+          margin-top: 20px;
+          background: transparent;
+          color: #76c7c0;
+          border: 1px solid #76c7c0;
+          border-radius: 8px;
+          padding: 8px 20px;
+          cursor: pointer;
+          font-size: 0.85em;
+        "
+      >
+        Cerrar brujula
+      </button>
+    </div>
+
+    <!-- Botón flotante: Brújula de señal -->
+    <button
+      id="btn-radar-acceso"
+      title="Buscar cobertura"
+      onclick="
+        RadarCobertura.abrir();
+        RadarCobertura._mostrarHistorial();
+      "
+    >
+      📶
+    </button>
+
+    <!-- Botón flotante: Emergencia de plaga -->
+    <button
+      id="btn-emergencia"
+      title="Actualizar en emergencia (plaga urgente)"
+      onclick="actualizacionEmergencia()"
+    >
+      ⚠️
+    </button>
+
+    <!-- Botón flotante: Medidor GPS de áreas -->
+    <button
+      id="btn-gps-medidor"
+      title="Medir hectáreas con GPS"
+      onclick="GpsMedidor.abrir()"
+    >
+      📐
+    </button>
+
+    <!-- Panel: GPS Medidor de Áreas -->
+    <div id="panel-gps">
+      <p id="gps-titulo">📐 MEDIDOR DE HECTÁREAS</p>
+      <p id="gps-subtitulo">Toca el mapa para marcar vértices del polígono</p>
+      <canvas id="gps-canvas" width="420" height="260"></canvas>
+      <div id="gps-resultado">
+        <p>
+          🌍 <strong id="gps-area-ha">— ha</strong> &nbsp;|&nbsp;
+          <strong id="gps-area-m2">— m²</strong>
+        </p>
+        <p>� Perímetro: <strong id="gps-perimetro">—</strong></p>
+        <p>📍 UTM: <strong id="gps-utm">esperando GPS…</strong></p>
+        <p>🔵 Vértices: <strong id="gps-nPuntos">0</strong></p>
+      </div>
+      <div id="gps-puntos-lista"></div>
+      <div class="gps-acciones">
+        <button onclick="GpsMedidor.agregarPuntoGPS()">📍 Punto GPS</button>
+        <button onclick="GpsMedidor.deshacer()">↩ Deshacer</button>
+        <button onclick="GpsMedidor.cerrarPoligono()">⬡ Cerrar</button>
+        <button onclick="GpsMedidor.limpiar()" class="peligro">
+          🗑 Limpiar
+        </button>
+        <button onclick="GpsMedidor.exportarPDF()" class="exportar">
+          📄 PDF A4
+        </button>
+        <button onclick="GpsMedidor.compartirReporte()" class="exportar">
+          📤 Compartir
+        </button>
+        <button onclick="GpsMedidor.cerrar()">✖ Salir</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>MELANTIA</h1>
+      <p id="app-slogan" class="slogan">
+        PRODUCTIVIDAD AGRÍCOLA INTELIGENTE OFFLINE
+      </p>
+      <div class="offline-badge">FUNCIONA SIN INTERNET 🛜</div>
+
+      <!-- Botón de Asistencia de Voz -->
+      <div id="contenedor-voz" style="text-align: center; margin-top: 10px">
+        <button
+          id="btn-voz-general"
+          style="
+            background: var(--color-asistente, #27ae60);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          "
+        >
+          <span style="font-size: 30px">🔊</span>
+        </button>
+        <button
+          id="btn-privacidad-gps"
+          title="Configurar privacidad de ubicación"
+          style="
+            margin-left: 10px;
+            background: #1f3d2c;
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            min-width: 60px;
+            height: 44px;
+            padding: 0 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+            font-weight: 700;
+          "
+        >
+          🛡️ GPS
+        </button>
+        <p
+          style="
+            font-size: 12px;
+            color: #2c3e50;
+            font-weight: bold;
+            margin-top: 5px;
+          "
+        >
+          Toca para escuchar
+        </p>
+      </div>
+    </header>
+
+    <div id="app-menu" class="dashboard"></div>
+
+    <!-- Contenedor de acciones de checkout para Melantios -->
+    <div id="checkout-actions" style="text-align: center; margin: 24px 0"></div>
+
+    <!-- MELANTIA — Robot Guardián Amistoso (global, todos los módulos) -->
+    <div id="ai-status-container">
+      <img
+        id="robot-asistente"
+        class="robot-icon"
+        src="src/storage/assets/melantia_idle.png"
+        alt="MELANTIA"
+        onerror="
+          this.style.display = 'none';
+          this.nextElementSibling.style.display = 'block';
+        "
+      />
+      <span
+        class="robot-icon"
+        style="
+          font-size: 52px;
+          line-height: 60px;
+          text-align: center;
+          display: none;
+        "
+        >🤖</span
+      >
+      <span class="status-text">MELANTIA ESTÁ TRABAJANDO LOCALMENTE...</span>
+    </div>
+
+    <script src="supabase_config.js"></script>
+    <script src="staff_controller.js"></script>
+    <script src="knowledge_seeds/10_salud_bienestar_rural/salud.js"></script>
+    <script src="modules/formacion_comunidad/escuela_campo_certificados.js"></script>
+    <script src="modules/sistema_afiliados/afiliados_controller.js"></script>
+    <script src="modules/sistema_afiliados/verificador_pago.js"></script>
+    <script src="modules/asistente_tecnico_rural/gestor_rural_melantia.js"></script>
+    <script type="module" src="main_controller_BANK.js"></script>
+</script>
+    <script src="modules/melantio_ui.js"></script>
+    <script src="./src/modules/economia_melantia.js"></script>
+    <script src="./src/main_controller.js"></script>
+  </body>
+</html>

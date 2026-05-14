@@ -1,0 +1,52 @@
+{
+  "nombre_cultivo": "Cebolla colorada",
+  "nombre_cientifico": "Allium cepa (var. roja)",
+  "descripcion": "Bulbo de color rojo-morado, de uso culinario y medicinal. Cultivo tradicional en la Sierra y Costa ecuatoriana.",
+  "riego_optimo": "Riego frecuente, evitar encharcamiento, importante en formación de bulbos.",
+  "npk_recomendado": { "N": 80, "P": 40, "K": 100 },
+  "plagas_comunes": [
+    {
+      "nombre": "Trips",
+      "control_organico": "Aceite de Neem, trampas cromáticas.",
+      "sintoma": "Manchas plateadas en hojas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Moho blanco",
+      "control": "Fungicidas preventivos, manejo de humedad.",
+      "sintoma": "Manchas blancas en hojas y bulbos."
+    }
+  ],
+  "epoca_siembra_recomendada": "Julio - Septiembre (Sierra)",
+  "calendario_lunar": "Siembra en luna menguante.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "20 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "16 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de bulbos maduros.",
+  "labores_postcosecha": "Secado y almacenamiento en lugar fresco y seco.",
+  "captura_carbono_ton_ha_anio": 1.2,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 6000,
+  "densidad_siembra": "400,000-500,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU."]
+  },
+  "zonas_produccion_ecuador": ["Carchi", "Imbabura", "Tungurahua", "Manabí"],
+  "importancia_economica": "Clave en la gastronomía y en la economía campesina.",
+  "bibliografia": ["MAGAP: Guía técnica de cebolla colorada"],
+  "cursos_recomendados": ["Producción sostenible de cebolla"]
+}

@@ -1,0 +1,112 @@
+{
+  "coco": {
+    "nombre_cientifico": "Cocos nucifera",
+    "descripcion": "Palmera de gran importancia económica y alimentaria en la Costa ecuatoriana. Produce agua, aceite, copra, fibra y madera. Se cultiva principalmente en Esmeraldas, Manabí y Los Ríos. Produce frutos a partir del 4to-5to año y puede durar más de 60 años.",
+    "tipo_suelo_recomendado": "Franco arenoso, profundo, bien drenado, pH 5.5-7.5. Evitar suelos salinos o encharcados.",
+    "ciclo_cultivo_anos": { "inicio_produccion": 4, "vida_util": 60 },
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas pálidas, crecimiento lento."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Puntas de hojas secas, menor producción de frutos."
+      },
+      {
+        "elemento": "Magnesio",
+        "sintoma": "Bandas amarillas en hojas adultas."
+      }
+    ],
+    "manejo_convencional": "Fertilización química fraccionada, control químico de plagas y enfermedades, riego suplementario en sequía, uso de semillas certificadas.",
+    "manejo_organico": "Compost, ceniza de madera, control biológico, trampas para picudo, cobertura vegetal, uso de microorganismos benéficos.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, integración con leguminosas, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 6500,
+    "hectareas_sembradas_ecuador": 18000,
+    "captura_carbono_ton_ha_anio": 8.5,
+    "precio_carbono_usd_ton": 38,
+    "riego_optimo": "Tolerante a sequía moderada; riego suplementario cada 10-15 días en sequía prolongada. Requiere 1,300-2,300 mm/año. Muy sensible al encharcamiento.",
+    "npk_recomendado": { "N": 120, "P": 50, "K": 160 },
+    "plagas_comunes": [
+      {
+        "nombre": "Rhynchophorus palmarum (Picudo rojo del cocotero)",
+        "control_organico": "Trampas con feromona de agregación + trozo de caña fermentada, Beauveria bassiana",
+        "control_quimico": "Clorpirifos en heridas y cortes; eliminación de palmas severamente afectadas",
+        "sintoma": "Perforaciones en el tronco, presencia de aserrín y olor fétido; larvas en interior del estípite; vector del nematodo Bursaphelenchus cocophilus (anillo rojo)",
+        "nivel_peligrosidad": "Muy alto"
+      },
+      {
+        "nombre": "Ácaro del cocotero (Aceria guerreronis)",
+        "control_organico": "Aceite mineral, azufre mojable, depredadores naturales (Neoseiulus spp.)",
+        "control_quimico": "Abamectina, Propargita",
+        "sintoma": "Manchas triangulares blanquecinas en la base del fruto, deformación y caída prematura de frutos pequeños; pérdidas de hasta 70% en ataques severos",
+        "nivel_peligrosidad": "Muy alto"
+      },
+      {
+        "nombre": "Estrategus aloeus (Cucarrón del suelo)",
+        "control_organico": "Trampas de luz, Metarhizium anisopliae",
+        "control_quimico": "Clorpirifos en suelo alrededor de la base",
+        "sintoma": "Daño en base de plantas jóvenes, perforaciones en la zona del cuello; plantas con marchitez y volcamiento",
+        "nivel_peligrosidad": "Medio-Alto en plantas jóvenes"
+      },
+      {
+        "nombre": "Áfidos (Cerataphis lataniae)",
+        "control_organico": "Jabón potásico, Neem, liberación de depredadores",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Colonias en inflorescencias y frutos jóvenes, fumagina, debilitamiento de la palma",
+        "nivel_peligrosidad": "Medio"
+      },
+      {
+        "nombre": "Chinche de la raíz (Ambrysus spp.)",
+        "control_organico": "Manejo del suelo, Beauveria bassiana",
+        "control_quimico": "Clorpirifos en suelo",
+        "sintoma": "Daño en raíces, plantas con síntomas de deficiencia nutricional y marchitez",
+        "nivel_peligrosidad": "Medio"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Anillo rojo (Bursaphelenchus cocophilus)",
+        "control": "No tiene cura; erradicación inmediata de palmas enfermas, control estricto del picudo (vector), aplicación de insecticidas sistémicos preventivos",
+        "sintoma": "Anillo naranja-rojizo en corte transversal de tronco o pecíolo; hojas inferiores se marchitan y caen, muerte de la palma en 3-6 meses"
+      },
+      {
+        "nombre": "Pudrición del cogollo (Phytophthora palmivora)",
+        "control": "Eliminación del tejido necrótico, aplicación de metalaxil + cobre en cavidad, fomento del drenaje; variedades tolerantes",
+        "sintoma": "Necrosis del cogollo con olor fétido, hojas jóvenes se marchitan y pudren, puede matar la palma si no se trata a tiempo"
+      },
+      {
+        "nombre": "Marchitez letal (Phytoplasma)",
+        "control": "No tiene cura; uso de variedades resistentes (Enano Malayo), erradicación de palmas enfermas, control de insectos vectores",
+        "sintoma": "Caída prematura de frutos, necrosis de inflorescencias, amarillamiento y caída de hojas de abajo hacia arriba, muerte de la palma"
+      },
+      {
+        "nombre": "Pestalotiopsis (Pestalotiopsis palmarum)",
+        "control": "Fungicidas cúpricos, poda de hojas afectadas, mejorar ventilación del cultivo",
+        "sintoma": "Manchas necróticas en hojas con halo amarillo, secamiento de foliolos desde el ápice"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año en zonas húmedas; inicio de lluvias en zonas secas (Dic - Feb o May - Jun).",
+    "calendario_lunar": "Siembra en luna creciente para mejor desarrollo radicular y brotación.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilización fraccionada con énfasis en K y Cl, insecticidas sistémicos, fungicidas preventivos.",
+        "rendimiento_estimado": "12,000 - 14,000 nueces/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, ceniza de madera (fuente de K), control biológico, trampas para picudo.",
+        "rendimiento_estimado": "8,000 - 10,000 nueces/ha/año"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de cocos maduros cada 45-60 días según destino (agua verde: 7 meses; copra: 11-12 meses). Uso de escaladores o equipo mecánico.",
+    "labores_postcosecha": "Para agua de coco: enfriamiento y empaque inmediato. Para copra: apertura, extracción de carne, secado hasta 6% humedad. Para aceite virgen: rallado, prensado en frío.",
+    "zonas_produccion_ecuador": [
+      "Esmeraldas",
+      "Manabí",
+      "Los Ríos",
+      "Guayas",
+      "El Oro"
+    ],
+    "importancia_economica": "Cultivo multipropósito: agua de coco (bebida saludable en auge), aceite virgen de coco (cosmética y alimentos), copra (aceite industrial), fibra de coco (sustratos), madera. Alta demanda en mercados de salud y bienestar."
+  }
+}

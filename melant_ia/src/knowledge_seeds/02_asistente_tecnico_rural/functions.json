@@ -1,0 +1,124 @@
+{
+  "modulo_id": 3,
+  "nombre_modulo": "Asistente Técnico Rural",
+  "prompt_maestro": "Actúa como un Ingeniero Agrónomo experto en cultivos tropicales y andinos, con enfoque en agricultura convencional y regenerativa. Pilares: 1. Precisión Técnica (química vs orgánica con énfasis en ahorro). 2. Contexto Local (lunar/estacional). 3. Tono motivador y sencillo. Estructura: Diagnóstico, Acción inmediata, Prevención y Beneficio Regenerativo.",
+  "arbol_decisiones": {
+    "ciclo_corto": {
+      "prioridad": "Seguridad Alimentaria",
+      "especies": ["Maíz", "Fríjol", "Maní", "Pimiento", "Tomate", "Yuca", "Cilantro", "Hortalizas"],
+      "logica_costos": "Comparativa de ahorro inmediato al usar bioinsumos locales vs fertilizantes NPK."
+    },
+    "perennes_exportacion": {
+      "prioridad": "Calidad Internacional",
+      "especies": ["Plátano Barraganete", "Dominico", "Café", "Cacao", "Banano", "Pitahaya", "Yuca", "Malanga"],
+      "logica_mercado": "Cumplimiento de estándares para exportación y trazabilidad orgánica."
+    },
+    "fertilización": "Requiere altos niveles de Potasio (K) para el llenado y Nitrógeno (N) para crecimiento. Recomendación: Aplicar según análisis de suelo, priorizando fraccionamiento cada 4-6 semanas.",
+    "proceso_exportacion": {
+      "cosecha": "Corte por grado y edad (semanas). Calibración de dedos y longitud mínima.",
+      "post_cosecha": "Desmane, lavado (desleche), tratamiento fungicida en corona, etiquetado y empacado en cajas de 50lb.",
+      "embarque": "Transporte en contenedores refrigerados a 13.5°C (56°F) para detener la maduración hasta puerto."
+    }
+  },
+  "GUIAS_BIOINSUMOS": {
+    "trichoderma_platano": {
+      "cultivo": "Plátano Barraganete",
+      "problema": "Fusarium (marchitez por hongo)",
+      "guia": [
+        "Preparación: Usa guantes y herramientas limpias. Si el producto es polvo, disuélvelo en agua según la dosis del fabricante (usualmente 10-20 g/L). Si es líquido, agita bien antes de usar.",
+        "Aplicación en campo: Riega la base de la planta (zona de raíces) con la solución de Trichoderma, asegurando que penetre al suelo. Dosis común: 200-500 ml de solución por planta, dependiendo del tamaño. Aplica preferiblemente en horas frescas (mañana o tarde).",
+        "En trasplante: Sumerge las raíces o rizomas en la solución de Trichoderma antes de sembrar.",
+        "Frecuencia: Repite la aplicación cada 30-45 días, especialmente en época lluviosa o si hay alta presión de enfermedades.",
+        "Recomendaciones: No mezcles con fungicidas químicos en la misma aplicación. Mantén el suelo húmedo para favorecer el establecimiento del hongo benéfico."
+      ],
+      "notificacion_obligatoria": "Si detectas Fusarium en tu cultivo de plátano barraganete, informa a la agencia nacional de sanidad agropecuaria de tu país (por ejemplo, Agrocalidad en Ecuador, SENASA en Perú, ICA en Colombia, SAG en Chile, SENASICA en México), a tu asociación o cooperativa agrícola, y a un técnico agrícola o ingeniero agrónomo de confianza. La notificación temprana ayuda a evitar la propagación y a recibir apoyo técnico y legal."
+    }
+  },
+  "PLATANO": {
+    "fisiología_y_ciclo": "Planta herbácea de clima tropical. Ciclo aproximado de 11 a 13 meses desde siembra a cosecha. Etapas: Vegetativa (0-6 meses), Floral (7-9 meses) y Frutificación (10-13 meses).",
+    "clima_y_rango": "Temperatura ideal: 22°C - 30°C. Altitud: 0 - 800 msnm. Requiere alta humedad y suelos con excelente drenaje.",
+    "etapas_fenologicas": "1. Arraigue, 2. Desarrollo de hojas (F3/F4), 3. Parición (Belloteo), 4. Llenado de fruto, 5. Madurez fisiológica.",
+    "manejo_y_plagas": {
+      "plagas": "Picudo Negro (Cosmopolites sordidus) - Control: Trampas de colino y limpieza de cormos. Trip del reborde - Control: Enfundado temprano.",
+      "enfermedades": "Sigatoka Negra (Mycosphaerella fijiensis) - Control: Deshoje fitosanitario, cirugía y control químico/orgánico preventivo."
+    }
+  },
+  "ANALISIS_VISUAL_SINTOMAS": {
+    "PLATANO": {
+      "manchas_negras_alargadas": "Diagnóstico: Sigatoka Negra. Acción: Deshoje fitosanitario y cirugía.",
+      "puntos_amarillos_borde": "Diagnóstico: Deficiencia de Potasio. Acción: Reforzar fertilización con K.",
+      "marchitez_y_amarilleo_total": "¡ALERTA MOKO! Acción: Cuarentena inmediata y desinfección de herramientas."
+    },
+    "MAIZ": {
+      "huecos_en_el_cogollo": "Diagnóstico: Gusano Cogollero. Acción: Aplicar trampas de melaza o tierra de diatomeas.",
+      "polvillo_naranja": "Diagnóstico: Roya. Acción: Mejorar drenaje y ventilación."
+    }
+  },
+  "GUIA_FOTO_DIAGNOSTICO": {
+    "instrucciones": [
+      "Toma una foto clara y enfocada de la parte afectada de la planta (hoja, tallo, fruto, raíz, etc.).",
+      "Asegúrate de que la zona dañada ocupe la mayor parte de la imagen y que haya buena iluminación.",
+      "Evita sombras fuertes o reflejos que dificulten ver los síntomas.",
+      "Si es posible, toma varias fotos desde diferentes ángulos y distancias.",
+      "Envía o sube la imagen al sistema MELANT IA para recibir un diagnóstico visual y recomendaciones técnicas."
+    ],
+    "nota": "El diagnóstico visual es una ayuda inicial. Para confirmación, consulta con un técnico agrícola o laboratorio especializado."
+  },
+  "PALMA_AFRICANA": {
+    "fisiologia_y_ciclo": "Palma perenne, vida productiva de 25-30 años. Primer cosecha a los 2.5-3 años. Ciclo: establecimiento, crecimiento vegetativo, entrada en producción, madurez.",
+    "clima_y_rango": "Temperatura óptima: 24°C-28°C. Precipitación: 2,000-3,000 mm/año, bien distribuida. Altitud: 0-500 msnm. Suelos profundos, bien drenados, pH 4.5-6.5.",
+    "etapas_fenologicas": "1. Siembra y establecimiento, 2. Crecimiento vegetativo, 3. Floración, 4. Fructificación, 5. Madurez y cosecha.",
+    "fertilizacion": "Alta demanda de Potasio (K), Nitrógeno (N) y Magnesio (Mg). Aplicar según análisis de suelo y tejido, fraccionando las dosis durante el año.",
+    "plagas_principales": "Picudo del fruto (Elaeidobius kamerunicus), ácaros, orugas defoliadoras.",
+    "enfermedades_principales": "Pudrición del cogollo (Phytophthora palmivora), anillo rojo (Bursaphelenchus cocophilus), marchitez por Fusarium.",
+    "manejo_integrado": "Uso de semillas certificadas, monitoreo constante, manejo de malezas, podas sanitarias, control biológico y químico según umbrales.",
+    "cosecha": "Recolección manual o mecánica de racimos maduros cada 10-15 días. Evitar daños en el racimo.",
+    "postcosecha": "Transporte inmediato a planta extractora para evitar fermentación y pérdida de calidad.",
+    "exportacion": "Cumplir con normativas de sostenibilidad (RSPO), trazabilidad y calidad de aceite.",
+    "recomendaciones_locales": "Consultar con INIAP, asociaciones palmicultoras y técnicos locales para manejo adaptado a la región.",
+    "manejo_zonas": {
+      "Quininde_Esmeraldas": {
+        "descripcion": "Zona húmeda tropical, alta presión de enfermedades.",
+        "seleccion_sitio": "Suelos profundos, buen drenaje, evitar zonas inundables. pH ideal: 5-6.",
+        "material_siembra": "Semillas certificadas, preferiblemente híbridos tolerantes a enfermedades.",
+        "densidad_siembra": "143 plantas/ha (espaciamiento 9 x 9 m en triángulo).",
+        "fertilizacion": "Basada en análisis de suelo y hoja. Aplicar N, P, K y Mg en fracciones durante el año. En suelos ácidos, aplicar cal agrícola.",
+        "control_malezas": "Manual, mecánico y químico selectivo. Mantener círculo limpio alrededor de la palma.",
+        "riego": "Generalmente no necesario, pero en sequías extremas se recomienda riego suplementario.",
+        "manejo_plagas": "Monitoreo constante. Control biológico (liberación de parasitoides) y químico solo si es necesario.",
+        "manejo_enfermedades": "Pudrición del cogollo: Eliminación de palmas afectadas, uso de variedades tolerantes, aplicación preventiva de fosfito de potasio. Anillo rojo: Erradicación inmediata de plantas enfermas y control de insectos vectores.",
+        "poda": "Eliminar hojas secas y enfermas, facilitar aireación y acceso.",
+        "cosecha": "Recolectar racimos maduros cada 10-15 días, evitar daños.",
+        "postcosecha": "Transporte rápido a planta extractora.",
+        "sostenibilidad": "Cumplir normativas ambientales, manejo responsable de agroquímicos, protección de fuentes de agua."
+      },
+      "Quevedo": {
+        "descripcion": "Zona húmeda tropical, suelos fértiles y alta presión de enfermedades.",
+        "seleccion_sitio": "Suelos profundos, buen drenaje, evitar zonas bajas propensas a inundación.",
+        "material_siembra": "Semillas certificadas, preferible híbridos tolerantes a pudrición del cogollo.",
+        "densidad_siembra": "143 plantas/ha (9 x 9 m en triángulo).",
+        "fertilizacion": "Basada en análisis de suelo y hoja. Aplicar N, P, K y Mg en fracciones. En suelos ácidos, aplicar cal agrícola.",
+        "control_malezas": "Manual y químico selectivo, mantener círculo limpio.",
+        "riego": "Generalmente no necesario, pero en sequías extremas se recomienda riego suplementario.",
+        "manejo_plagas": "Monitoreo constante, control biológico y químico solo si es necesario.",
+        "manejo_enfermedades": "Pudrición del cogollo: Eliminación de palmas afectadas, uso de variedades tolerantes, aplicación preventiva de fosfito de potasio. Anillo rojo: Erradicación inmediata de plantas enfermas y control de insectos vectores.",
+        "poda": "Eliminar hojas secas/enfermas, facilitar aireación.",
+        "cosecha": "Recolectar racimos maduros cada 10-15 días, evitar daños.",
+        "postcosecha": "Transporte rápido a planta extractora.",
+        "sostenibilidad": "Cumplir normativas ambientales, manejo responsable de agroquímicos, protección de fuentes de agua."
+      }
+    }
+  }
+  ,
+  "ANALISIS_VISUAL_IA": {
+    "deteccion_platanos": {
+      "manchas_negras_alargadas": "Diagnóstico: Sigatoka Negra. Acción: Cirugía de hoja inmediata.",
+      "borde_amarillo_quemado": "Diagnóstico: Deficiencia de Potasio o estrés hídrico.",
+      "polvillo_blanco": "Diagnóstico: Oídio / Hongos por humedad."
+    },
+    "deteccion_maiz": {
+      "perforaciones_circulares": "Diagnóstico: Gusano Cogollero. Acción: Revisar el centro de la planta.",
+      "puntos_naranjas": "Diagnóstico: Roya. Acción: Mejorar ventilación del lote."
+    }
+  }
+}

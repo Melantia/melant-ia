@@ -1,0 +1,222 @@
+{
+  "cultivos_ecuador": [
+    {
+      "nombre": "Maracuya",
+      "especie": "Passiflora edulis",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Mosca del ovario (Dasiops sp.)",
+            "control_biologico": "Trampas McPhail, liberación de parasitoides, recolección y destrucción de frutos caídos.",
+            "imagen": "assets/maracuya_mosca_ovario.jpg"
+          },
+          {
+            "nombre": "Arañita roja",
+            "control_biologico": "Liberación de ácaros benéficos, aplicación de extractos de ajo y jabón potásico.",
+            "imagen": "assets/maracuya_aranita_roja.jpg"
+          },
+          {
+            "nombre": "Trips",
+            "control_biologico": "Trampas adhesivas azules, extractos botánicos, control biológico con Orius sp.",
+            "imagen": "assets/maracuya_trips.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Antracnosis",
+            "control_biologico": "Poda sanitaria, aplicación de caldo bordelés, uso de biofungicidas.",
+            "imagen": "assets/maracuya_antracnosis.jpg"
+          },
+          {
+            "nombre": "Roña",
+            "control_biologico": "Eliminación de frutos afectados, manejo de humedad, aplicación de extractos vegetales.",
+            "imagen": "assets/maracuya_rona.jpg"
+          },
+          {
+            "nombre": "Fusarium (Marchitez vascular)",
+            "control_biologico": "Rotación de cultivos, uso de plantas sanas, aplicación de Trichoderma spp.",
+            "imagen": "assets/maracuya_fusarium.jpg"
+          }
+        ]
+      },
+      "fuente": "Agrosavia / Agrocalidad"
+    },
+    {
+      "nombre": "Badea",
+      "especie": "Passiflora quadrangularis",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Chinche de la fruta",
+            "control_biologico": "Control manual, trampas, conservación de enemigos naturales.",
+            "imagen": "assets/badea_chinche_fruta.jpg"
+          },
+          {
+            "nombre": "Gusano cosechero",
+            "control_biologico": "Aplicación de Bacillus thuringiensis, recolección manual de larvas.",
+            "imagen": "assets/badea_gusano_cosechero.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Virosis",
+            "control_biologico": "Eliminación de plantas infectadas, manejo de vectores, uso de semillas certificadas.",
+            "imagen": "assets/badea_virosis.jpg"
+          },
+          {
+            "nombre": "Pudricion de raiz (Phytophthora)",
+            "control_biologico": "Mejorar drenaje, aplicación de Trichoderma spp., evitar encharcamientos.",
+            "imagen": "assets/badea_phytophthora.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "nombre": "Limon Sutil",
+      "especie": "Citrus aurantifolia",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Minador de la hoja",
+            "control_biologico": "Liberación de parasitoides (Ageniaspis citricola), trampas adhesivas amarillas.",
+            "imagen": "assets/limon_minador.jpg"
+          },
+          {
+            "nombre": "Pulgon negro",
+            "control_biologico": "Control biológico con coccinélidos, aplicación de jabón potásico.",
+            "imagen": "assets/limon_pulgon_negro.jpg"
+          },
+          {
+            "nombre": "Acaro tostador",
+            "control_biologico": "Aplicación de extractos vegetales, manejo de sombra, control biológico con ácaros benéficos.",
+            "imagen": "assets/limon_acaro_tostador.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "HLB (Candidatus Liberibacter)",
+            "control_biologico": "Eliminación de plantas infectadas, manejo de vectores, monitoreo constante.",
+            "imagen": "assets/limon_hlb.jpg"
+          },
+          {
+            "nombre": "Gomosis",
+            "control_biologico": "Poda sanitaria, aplicación de pasta bordelesa, mejora de drenaje.",
+            "imagen": "assets/limon_gomosis.jpg"
+          },
+          {
+            "nombre": "Tristeza de los citricos",
+            "control_biologico": "Uso de patrones tolerantes, manejo de vectores, eliminación de plantas enfermas.",
+            "imagen": "assets/limon_tristeza.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "nombre": "Arroz",
+      "especie": "Oryza sativa",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Sogata (Tagosodes orizicolus)",
+            "control_biologico": "Liberación de parasitoides, manejo de malezas, siembra escalonada.",
+            "imagen": "assets/arroz_sogata.jpg"
+          },
+          {
+            "nombre": "Cochinilla de la raiz",
+            "control_biologico": "Rotación de cultivos, control biológico con hongos entomopatógenos.",
+            "imagen": "assets/arroz_cochinilla_raiz.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Tizon de la vaina",
+            "control_biologico": "Uso de variedades resistentes, manejo de humedad, aplicación de biofungicidas.",
+            "imagen": "assets/arroz_tizon_vaina.jpg"
+          },
+          {
+            "nombre": "Manchado de grano",
+            "control_biologico": "Manejo de humedad, rotación de cultivos, uso de semillas certificadas.",
+            "imagen": "assets/arroz_manchado_grano.jpg"
+          },
+          {
+            "nombre": "Brusone (Pyricularia)",
+            "control_biologico": "Aplicación de Trichoderma spp., manejo de humedad, uso de variedades tolerantes.",
+            "imagen": "assets/arroz_brusone.jpg"
+          }
+        ]
+      },
+      "info_extra": "Consulte planes en [ADAMA Ecuador](https://www.adama.com/ecuador/es/soluciones-integrales-por-cultivo/arroz)"
+    },
+    {
+      "nombre": "Arandanos",
+      "especie": "Vaccinium corymbosum",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Drosophila suzukii (Mosca de alas manchadas)",
+            "control_biologico": "Trampas, cosecha oportuna, uso de mallas, control biológico con parasitoides.",
+            "imagen": "assets/arandano_drosophila.jpg"
+          },
+          {
+            "nombre": "Pulgones",
+            "control_biologico": "Control biológico con coccinélidos, aplicación de jabón potásico.",
+            "imagen": "assets/arandano_pulgon.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Botrytis (Moho gris)",
+            "control_biologico": "Ventilación, reducción de humedad, aplicación de biofungicidas, remoción de partes afectadas.",
+            "imagen": "assets/arandano_botrytis.jpg"
+          },
+          {
+            "nombre": "Oidio",
+            "control_biologico": "Aplicación de azufre, manejo de ventilación, uso de variedades resistentes.",
+            "imagen": "assets/arandano_oidio.jpg"
+          },
+          {
+            "nombre": "Roya del arandano",
+            "control_biologico": "Poda sanitaria, aplicación de caldo bordelés, manejo de residuos.",
+            "imagen": "assets/arandano_roya.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "nombre": "Pitahaya",
+      "especie": "Selenicereus megalanthus / Hylocereus spp.",
+      "amenazas": {
+        "plagas": [
+          {
+            "nombre": "Chinche pata de hoja",
+            "control_biologico": "Control manual, trampas, conservación de enemigos naturales.",
+            "imagen": "assets/pitahaya_chinche_hoja.jpg"
+          },
+          {
+            "nombre": "Mosca del boton floral (Dasiops saltans)",
+            "control_biologico": "Trampas McPhail, manejo de flores, recolección de botones afectados.",
+            "imagen": "assets/pitahaya_mosca_boton.jpg"
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Ojo de pescado (Dothiorella sp.)",
+            "control_biologico": "Poda sanitaria, aplicación de caldo bordelés, manejo de humedad.",
+            "imagen": "assets/pitahaya_ojo_pescado.jpg"
+          },
+          {
+            "nombre": "Pudricion basal (Fusarium)",
+            "control_biologico": "Mejorar drenaje, aplicación de Trichoderma spp., evitar heridas en la base.",
+            "imagen": "assets/pitahaya_fusarium.jpg"
+          },
+          {
+            "nombre": "Erwinia",
+            "control_biologico": "Eliminación de tejidos afectados, desinfección de herramientas, manejo de humedad.",
+            "imagen": "assets/pitahaya_erwinia.jpg"
+          }
+        ]
+      },
+      "guia_tecnica": "[Manual Pitahaya Amazonia](https://www.secretariadelamazonia.gob.ec/wp-content/uploads/downloads/2020/07/Manual-de-cultivo-de-Pitahaya-para-la-Amazoni%CC%81a-Instituto-Nacional-de-Investigaciones-Agropecuarias.pdf)"
+    }
+  ]
+}

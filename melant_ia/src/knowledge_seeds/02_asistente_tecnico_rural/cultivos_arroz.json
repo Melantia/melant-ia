@@ -1,0 +1,85 @@
+{
+  "arroz": {
+    "nombre_cientifico": "Oryza sativa",
+    "descripcion": "Cereal básico de la dieta ecuatoriana, cultivado principalmente en Guayas, Manabí y Los Ríos. Ciclo anual, alta demanda de agua.",
+    "riego_optimo": "Riego abundante, mantener suelo inundado",
+    "npk_recomendado": { "N": 100, "P": 40, "K": 80 },
+    "tipo_suelo_recomendado": "Franco arcilloso, con buena retención de agua, pH 5.5-6.5. Evitar suelos salinos.",
+    "ciclo_cultivo_dias": 120,
+    "plagas_comunes": [
+      {
+        "nombre": "Barrenador del tallo (Scirpophaga incertulas)",
+        "control_organico": "Trampas de luz, control biológico con Trichogramma",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Tallos perforados, espigas blancas, pérdida de grano."
+      },
+      {
+        "nombre": "Chinche del arroz (Oebalus poecilus)",
+        "control_organico": "Control biológico, manejo de residuos",
+        "control_quimico": "Lambda cihalotrina",
+        "sintoma": "Granos manchados, reducción de calidad."
+      },
+      {
+        "nombre": "Gusano cogollero (Spodoptera frugiperda)",
+        "control_organico": "Bacillus thuringiensis",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Daño en hojas y brotes jóvenes."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Pyricularia (Pyricularia oryzae)",
+        "control": "Fungicidas preventivos, manejo de humedad",
+        "sintoma": "Manchas elípticas grises en hojas y panículas, secamiento de espigas."
+      },
+      {
+        "nombre": "Helminthosporium (Bipolaris oryzae)",
+        "control": "Rotación de cultivos, fungicidas",
+        "sintoma": "Manchas marrones en hojas, reducción de área fotosintética."
+      },
+      {
+        "nombre": "Bacteriosis (Xanthomonas oryzae)",
+        "control": "Semilla certificada, manejo de riego",
+        "sintoma": "Rayas amarillas en hojas, marchitez."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas pálidas, bajo macollamiento."
+      },
+      {
+        "elemento": "Fósforo",
+        "sintoma": "Plantas pequeñas, raíces poco desarrolladas."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, tallos débiles."
+      }
+    ],
+    "manejo_convencional": "Fertilización química, control químico de plagas y enfermedades, siembra mecanizada, riego por inundación.",
+    "manejo_organico": "Compost, biofertilizantes, control biológico, siembra directa, manejo de agua eficiente.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, rotación con leguminosas, uso de abonos verdes y biofertilizantes.",
+    "epoca_siembra_recomendada": "Diciembre - Febrero",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+        "rendimiento_estimado": "8 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost y control biológico.",
+        "rendimiento_estimado": "6 t/ha"
+      }
+    },
+    "labores_cosecha": "Corte manual o mecanizado de panículas maduras, secado inmediato para evitar brotado.",
+    "labores_postcosecha": "Trilla, limpieza, secado a 13% humedad, almacenamiento en silos o costales ventilados.",
+    "captura_carbono_ton_ha_anio": 4.5,
+    "precio_carbono_usd_ton": 38,
+    "superficie_sembrada_ha_anio": "250000 (Ecuador, estimado)",
+    "densidad_siembra": "80-120 kg/ha (siembra directa)",
+    "trazabilidad_digital_exportacion": "Posible mediante registro de lotes, fechas de siembra y cosecha, uso de QR para trazabilidad en exportación.",
+    "zonas_produccion_ecuador": ["Guayas", "Los Ríos", "Manabí", "El Oro"],
+    "importancia_economica": "El arroz es el principal alimento básico en Ecuador y fuente de ingresos para miles de familias agricultoras."
+  }
+}

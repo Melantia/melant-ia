@@ -1,0 +1,29 @@
+{
+  "interface": {
+    "greeting": "Good morning",
+    "thanks": "Thank you",
+    "user_male": "Man",
+    "user_female": "Woman",
+    "community": "Community",
+    "welcome": "Welcome, Community!",
+    "goodbye": "Goodbye!"
+  },
+  "rural_services": {
+    "corn_cultivation": "Corn",
+    "rain_weather": "Rain",
+    "main_food": "Cassava",
+    "pest": "Pest",
+    "sowing": "Sowing",
+    "harvest": "Harvest",
+    "natural_medicine": "Natural medicine",
+    "water": "Water",
+    "land": "Land",
+    "sun": "Sun",
+    "moon": "Moon",
+    "fire": "Fire",
+    "tree": "Tree",
+    "community_work": "Community work",
+    "register": "Register",
+    "form": "Form"
+  }
+}

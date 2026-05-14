@@ -1,0 +1,64 @@
+{
+  "cultivo": "Limon Sutil",
+  "region": "Sudamerica (Enfoque Ecuador)",
+  "categorias": [
+    {
+      "tipo": "Plaga",
+      "items": [
+        {
+          "nombre_comun": "Minador de la hoja",
+          "nombre_cientifico": "Phyllocnistis citrella",
+          "sintomas": "Galerías plateadas en hojas tiernas, enrollamiento de follaje.",
+          "control": "Podas de limpieza y aplicación de aceites hortícolas. Fuente: UMSA, Certis Belchim."
+        },
+        {
+          "nombre_comun": "Mosca Blanca",
+          "nombre_cientifico": "Aleurothrixus floccosus",
+          "sintomas": "Presencia de suciedad blanca en el envés y melaza pegajosa.",
+          "control": "Lavado de hojas y uso de insecticidas sistémicos. Fuente: UMSA, SENASA Perú."
+        },
+        {
+          "nombre_comun": "Pulgones y Áfidos",
+          "nombre_cientifico": "Toxoptera aurantii y otros",
+          "sintomas": "Enrollamiento de hojas, presencia de melaza y hormigas, transmisión de virus.",
+          "control": "Control biológico con crisopas y mariquitas, trampas cromáticas. Fuente: UMSA."
+        },
+        {
+          "nombre_comun": "Ácaros",
+          "nombre_cientifico": "Brevipalpus, Tetranychus",
+          "sintomas": "Bronceado y deformación de frutos, manchas en hojas.",
+          "control": "Aplicación de azufre mojable y extractos vegetales. Fuente: Certis Belchim."
+        }
+      ]
+    },
+    {
+      "tipo": "Enfermedad",
+      "items": [
+        {
+          "nombre_comun": "HLB (Citrus Greening)",
+          "nombre_cientifico": "Candidatus Liberibacter",
+          "sintomas": "Hojas amarillas con moteado asimétrico, frutos deformes y amargos.",
+          "control": "Control estricto del insecto vector (Diaphorina citri) y eliminación de árboles infectados. Fuente: FAO, SENASA Perú."
+        },
+        {
+          "nombre_comun": "Gomosis",
+          "nombre_cientifico": "Phytophthora spp.",
+          "sintomas": "Exudación de goma de color naranja en el tronco y necrosis cortical.",
+          "control": "Cirugía de tejidos afectados y aplicación de fungicidas como fosetil. Fuente: Certis Belchim, Facebook."
+        },
+        {
+          "nombre_comun": "Antracnosis",
+          "nombre_cientifico": "Colletotrichum gloeosporioides",
+          "sintomas": "Manchas oscuras en hojas, caída prematura de flores y frutos pequeños.",
+          "control": "Podas sanitarias y aplicaciones de cobre. Fuente: FAO, INTA."
+        },
+        {
+          "nombre_comun": "Fumagina",
+          "nombre_cientifico": "Capnodium spp.",
+          "sintomas": "Capa negra sobre hojas y frutos, bloqueo de luz solar.",
+          "control": "Control de plagas chupadoras y lavado de hojas. Fuente: UMSA."
+        }
+      ]
+    }
+  ]
+}

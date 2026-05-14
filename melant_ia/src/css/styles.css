@@ -1,0 +1,49 @@
+.melantio-icon {
+  width: 24px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Transición suave para ocultar elementos */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* === DISEÑO MODERNO MELANT IA === */
+/* Colores sólidos y optimizados para móviles */
+:root {
+  /* Colores Sólidos para Mejor Rendimiento */
+  --bg: #0c1a0e;
+  --bg-surface: #122416;
+  --bg-card: #182e1c;
+  --bg-hover: #1f3a24;
+  --bg-input: #0f1f13;
+  /* ... (todo el CSS extraído de index.html, ya migrado) ... */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 4px;
+  }
+  /* ... (todo el CSS extraído de index.html, ya migrado) ... */
+}

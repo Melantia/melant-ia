@@ -1,0 +1,19 @@
+{
+  "aprobado": false,
+  "fecha_envio": null,
+  "productor": null,
+  "practicas": [
+    {
+      "nombre": "Implementación de PRV",
+      "evidencia": null
+    },
+    {
+      "nombre": "Diseño Keyline",
+      "evidencia": null
+    },
+    {
+      "nombre": "Preparación de Bocashi/Biofermentos",
+      "evidencia": null
+    }
+  ]
+}

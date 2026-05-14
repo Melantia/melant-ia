@@ -1,0 +1,25 @@
+{
+  "tema": "bovinos",
+  "archivos": [
+    "Enfermedades comunes del ganado vacuno.docx.txt",
+    "LA GANADERIA LECHERA EN EL ECUADOR.docx.txt",
+    "Claves para Maximizar la Producción de Leche en el Ganado Vacuno.docx.txt",
+    "El control biológico de ectoparásitos (garrapatas, moscas) en ganado.txt",
+    "El manejo integral de pulgas, moscas y garrapatas.docx.txt",
+    "El uso de hogos en el ecuador para el control de moscas, garrapatas en el ganado bovino.docx.txt"
+  ],
+  "contenido": {
+    "enfermedades": "El ganado vacuno está expuesto a enfermedades como mastitis, encefalopatía espongiforme bovina, fiebre aftosa, neumonía bovina, anaplasmosis y diarrea viral bovina. La prevención y el diagnóstico temprano son fundamentales para el control.",
+    "produccion_leche": "La producción lechera en Ecuador y Colombia es clave para el desarrollo rural. En Ecuador, la producción se concentra en la Sierra, con retos de tecnificación y modernización. Se destacan razas como Holstein y Brown Swiss. La eficiencia y la sostenibilidad son desafíos principales.",
+    "maximizacion_leche": "Para maximizar la producción de leche se recomienda: selección de raza, manejo sanitario, instalaciones adecuadas, nutrición balanceada, uso de tecnologías como ordeño automatizado y monitoreo de salud.",
+    "control_parasitos": "El control de ectoparásitos (garrapatas, moscas, pulgas) combina métodos químicos (baños, pour-on, aretes insecticidas, ivermectinas), preventivos (sal mineralizada con azufre, rotación de potreros) y biológicos (hongos entomopatógenos como Beauveria bassiana). El manejo integrado y la limpieza de instalaciones son clave para evitar pérdidas económicas y sanitarias.",
+    "referencias": [
+      "Enfermedades comunes del ganado vacuno.docx.txt",
+      "LA GANADERIA LECHERA EN EL ECUADOR.docx.txt",
+      "Claves para Maximizar la Producción de Leche en el Ganado Vacuno.docx.txt",
+      "El control biológico de ectoparásitos (garrapatas, moscas) en ganado.txt",
+      "El manejo integral de pulgas, moscas y garrapatas.docx.txt",
+      "El uso de hogos en el ecuador para el control de moscas, garrapatas en el ganado bovino.docx.txt"
+    ]
+  }
+}

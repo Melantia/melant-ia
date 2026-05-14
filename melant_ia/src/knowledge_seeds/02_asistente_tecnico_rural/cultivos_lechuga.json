@@ -1,0 +1,66 @@
+{
+  "lechuga": {
+    "nombre_cientifico": "Lactuca sativa",
+    "descripcion": "Hortaliza de hoja, ciclo corto, alto valor en mercados frescos. Adaptada a climas templados y fríos.",
+    "riego_optimo": "Riego frecuente, evitar encharcamiento. 300-500 mm/ciclo.",
+    "npk_recomendado": { "N": 60, "P": 30, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Babosa",
+        "control_organico": "Ceniza, trampas",
+        "control_quimico": "Metaldehído",
+        "sintoma": "Daño en hojas"
+      },
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Botrytis",
+        "control": "Ventilación, fungicidas biológicos",
+        "sintoma": "Podredumbre gris en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año en zonas templadas.",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "25-35 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "18-25 t/ha"
+      }
+    },
+    "labores_cosecha": "Corte manual de hojas o cabezas.",
+    "labores_postcosecha": "Limpieza, enfriado, empaque en bolsas.",
+    "zonas_produccion_ecuador": [
+      "Tungurahua",
+      "Chimborazo",
+      "Cotopaxi",
+      "Imbabura"
+    ],
+    "importancia_economica": "Hortaliza de alto consumo nacional y exportación a mercados gourmet.",
+    "captura_carbono_ton_ha_anio": 1.5,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 1200,
+    "densidad_siembra": "100,000-150,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en bolsas para trazabilidad.",
+    "bibliografia": ["Manual de Lechuga INIAP", "FAO Lechuga Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Hortalizas",
+      "Postcosecha de Hortalizas"
+    ],
+    "variedades": ["Romana", "Crespa", "Iceberg"]
+  }
+}

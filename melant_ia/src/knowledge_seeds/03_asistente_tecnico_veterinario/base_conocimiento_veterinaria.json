@@ -1,0 +1,124 @@
+{
+  "manual_veterinario_ingesta": {
+    "version": "1.0",
+    "descripcion": "Base de conocimiento para detección temprana y triaje preventivo en granja y compañía.",
+    "categorias_animales": [
+      {
+        "especie": "Bovinos (Ganado Vacuno)",
+        "tipo": "Producción",
+        "enfermedades_comunes": [
+          {
+            "nombre": "Mastitis",
+            "agente": "Bacteria (Staphylococcus aureus)",
+            "sintomas_alerta": ["Ubre hinchada", "Leche con grumos", "Dolor al tacto"],
+            "accion_preventiva": "Prueba de California (CMT) semanal",
+            "gravedad": "Media",
+            "urgencia_veterinaria": false,
+            "dosis_estandar": {
+              "descripcion": "Dosis informativa de antibiótico intramamario (consultar veterinario antes de aplicar)",
+              "valor": "10 mg/kg",
+              "via": "intramamaria",
+              "nota": "Solo para referencia educativa. No sustituye prescripción profesional."
+            }
+          },
+          {
+            "nombre": "Fiebre Aftosa",
+            "agente": "Virus",
+            "sintomas_alerta": ["Aftas/Llagas en boca y pezuñas", "Salivación excesiva", "Cojera"],
+            "accion_preventiva": "Aislamiento inmediato y reporte oficial",
+            "gravedad": "Critica",
+            "urgencia_veterinaria": true,
+            "dosis_estandar": {
+              "descripcion": "Vacunación preventiva (informativo)",
+              "valor": "2 ml/animal",
+              "via": "subcutánea",
+              "nota": "Solo para referencia educativa. No sustituye prescripción profesional."
+            }
+          }
+        ]
+      },
+      {
+        "especie": "Equinos (Caballos de Trabajo y Paso)",
+        "tipo": "Trabajo/Deporte",
+        "enfermedades_comunes": [
+          {
+            "nombre": "Cólico Equino",
+            "agente": "Fisiológico/Alimenticio",
+            "sintomas_alerta": ["Mirarse los flancos", "Revolcarse", "Sudoración sin ejercicio"],
+            "accion_preventiva": "Retirar alimento, caminar al animal, medir frecuencia cardiaca",
+            "gravedad": "Alta",
+            "urgencia_veterinaria": true
+          },
+          {
+            "nombre": "Infozura (Laminitis)",
+            "agente": "Metabólico",
+            "sintomas_alerta": ["Postura de apoyo hacia atrás", "Calor en cascos", "Resistencia a caminar"],
+            "accion_preventiva": "Evitar exceso de granos, revisar herraje",
+            "gravedad": "Alta",
+            "urgencia_veterinaria": true
+          }
+        ]
+      },
+      {
+        "especie": "Porcinos (Cerdos)",
+        "tipo": "Producción",
+        "enfermedades_comunes": [
+          {
+            "nombre": "Peste Porcina (Clásica/Africana)",
+            "agente": "Virus",
+            "sintomas_alerta": ["Manchas moradas en orejas y vientre", "Fiebre alta", "Amontonamiento"],
+            "accion_preventiva": "Control estricto de visitas y bioseguridad en transporte",
+            "gravedad": "Extrema",
+            "urgencia_veterinaria": true
+          }
+        ]
+      },
+      {
+        "especie": "Aves de Corral",
+        "tipo": "Producción",
+        "enfermedades_comunes": [
+          {
+            "nombre": "Newcastle / Influenza Aviar",
+            "agente": "Virus",
+            "sintomas_alerta": ["Cuello torcido", "Cresta morada", "Muerte súbita"],
+            "accion_preventiva": "Vacunación programada, mallas antipájaros",
+            "gravedad": "Extrema",
+            "urgencia_veterinaria": true
+          }
+        ]
+      },
+      {
+        "especie": "Caninos y Felinos",
+        "tipo": "Compañía",
+        "enfermedades_comunes": [
+          {
+            "nombre": "Parvovirus (Caninos)",
+            "agente": "Virus",
+            "sintomas_alerta": ["Vómito", "Diarrea con sangre", "Deshidratación rápida"],
+            "accion_preventiva": "Esquema de vacunación completo",
+            "gravedad": "Alta",
+            "urgencia_veterinaria": true
+          }
+        ]
+      }
+    ],
+    "protocolo_triaje_productor": {
+      "paso_1": "Verificar constantes vitales (Temperatura, Frecuencia Respiratoria).",
+      "paso_2": "Evaluar condición del entorno (Agua limpia, alimento, ventilación).",
+      "paso_3": "Si gravedad es 'Media' y no hay riesgo sistémico, aplicar tratamiento preventivo sugerido.",
+      "paso_4": "Si gravedad es 'Alta/Extrema', llamar al veterinario para evitar pérdida del activo."
+    },
+    "recursos_capacitacion": [
+      {
+        "plataforma": "FAO",
+        "url": "https://fao.org",
+        "tema": "Bioseguridad y Sanidad Animal"
+      },
+      {
+        "plataforma": "Edutin Academy",
+        "url": "https://edutin.com",
+        "tema": "Auxiliar Veterinario"
+      }
+    ]
+  }
+}

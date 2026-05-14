@@ -1,0 +1,66 @@
+{
+  "mora": {
+    "nombre_cientifico": "Rubus glaucus",
+    "descripcion": "Frutal andino de alto valor nutricional y exportador, fruto pequeño y negro. Cultivo perenne, adaptado a la Sierra y zonas húmedas.",
+    "riego_optimo": "Riego por goteo, 800-1000 mm/año. Frecuencia cada 7-10 días.",
+    "npk_recomendado": { "N": 60, "P": 40, "K": 90 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca de la fruta",
+        "control_organico": "Trampas",
+        "control_quimico": "Spinosad",
+        "sintoma": "Daño en frutos maduros"
+      },
+      {
+        "nombre": "Ácaro rojo",
+        "control_organico": "Aceite mineral",
+        "control_quimico": "Abamectina",
+        "sintoma": "Manchas rojas en hojas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Antracnosis",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas oscuras en frutos y hojas"
+      },
+      {
+        "nombre": "Phytophthora",
+        "control": "Drenaje, metalaxil",
+        "sintoma": "Pudrición de raíces y cuello"
+      }
+    ],
+    "epoca_siembra_recomendada": "Marzo - Mayo (Sierra y zonas húmedas)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas, insecticidas",
+        "rendimiento_estimado": "18-25 t/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
+        "rendimiento_estimado": "12-18 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de frutos maduros.",
+    "labores_postcosecha": "Clasificación, enfriado, empaque en cajas.",
+    "zonas_produccion_ecuador": [
+      "Tungurahua",
+      "Chimborazo",
+      "Cotopaxi",
+      "Pichincha"
+    ],
+    "importancia_economica": "Fruto de alto valor en mercados locales y exportación a Europa.",
+    "captura_carbono_ton_ha_anio": 2.1,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 120,
+    "densidad_siembra": "4000-6000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad.",
+    "bibliografia": ["Manual de Mora INIAP", "FAO Mora Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Frutales",
+      "Postcosecha de Frutas Frescas"
+    ],
+    "variedades": ["Mora de Castilla", "Mora gigante"]
+  }
+}

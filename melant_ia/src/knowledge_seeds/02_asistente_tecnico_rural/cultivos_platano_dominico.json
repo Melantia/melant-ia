@@ -1,0 +1,46 @@
+{
+  "nombre_cientifico": "Musa paradisiaca (Dominico)",
+  "descripcion": "Plátano tipo Dominico, variedad tradicional de alto consumo en Ecuador. Cultivo perenne, importante en la dieta y economía rural. Se adapta a zonas tropicales y húmedas.",
+  "riego_optimo": "Cada 5-7 días en época seca",
+  "npk_recomendado": { "N": 200, "P": 60, "K": 300 },
+  "plagas_comunes": [
+    {
+      "nombre": "Picudo del plátano",
+      "control_organico": "Trampas y control biológico",
+      "sintoma": "Tallos perforados"
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Sigatoka Negra (Mycosphaerella fijiensis)",
+      "control": "Aceite mineral, deshoje sanitario, fungicidas sistémicos",
+      "sintoma": "Manchas negras en hojas, defoliación, reducción de producción"
+    },
+    {
+      "nombre": "Mal de Panamá (Fusarium oxysporum)",
+      "control": "Variedades resistentes, manejo preventivo, cuarentena",
+      "sintoma": "Marchitez, amarillamiento y muerte de la planta"
+    }
+  ],
+  "epoca_siembra_recomendada": "Enero - Marzo",
+  "calendario_lunar": "Siembra en luna creciente para mejor brotación.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fungicidas y fertilizantes químicos.",
+      "rendimiento_estimado": "40 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "32 t/ha"
+    }
+  },
+  "labores_cosecha": "Corte de racimos maduros con machete.",
+  "labores_postcosecha": "Desmanche, lavado y empaque.",
+  "captura_carbono_ton_ha_anio": 5.2,
+  "precio_carbono_usd_ton": 38,
+  "superficie_sembrada_ha_anio": "Variable según región y escala de producción",
+  "densidad_siembra": "1,200-1,600 plantas/ha (siembra en doble hilera)",
+  "trazabilidad_digital_exportacion": "Posible mediante registro de lotes, fechas de siembra y cosecha, uso de QR para trazabilidad en exportación.",
+  "zonas_produccion_ecuador": ["Los Ríos", "Guayas", "El Oro", "Manabí"],
+  "importancia_economica": "El plátano Dominico es fundamental en la alimentación y economía rural, con potencial para exportación en mercados étnicos y gourmet."
+}

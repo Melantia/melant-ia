@@ -1,0 +1,30 @@
+{
+  "plagas": [
+    {
+      "nombre": "Drosophila suzukii (mosca de alas manchadas)",
+      "descripcion": "Larvas que dañan frutos maduros, provocando ablandamiento y pudrición.",
+      "imagen": "assets/arandano_drosophila.jpg",
+      "manejo": "Monitoreo con trampas, cosecha oportuna, uso de mallas, control biológico con parasitoides."
+    },
+    {
+      "nombre": "Trips (Frankliniella spp.)",
+      "descripcion": "Pequeños insectos que dañan flores y frutos, causando cicatrices y deformaciones.",
+      "imagen": "assets/arandano_trips.jpg",
+      "manejo": "Extracción manual, trampas adhesivas azules, extractos botánicos, control biológico."
+    }
+  ],
+  "enfermedades": [
+    {
+      "nombre": "Botrytis cinerea (moho gris)",
+      "descripcion": "Hongo que causa pudrición blanda en frutos y flores, especialmente en alta humedad.",
+      "imagen": "assets/arandano_botrytis.jpg",
+      "manejo": "Ventilación, reducción de humedad, aplicación de biofungicidas, remoción de partes afectadas."
+    },
+    {
+      "nombre": "Antracnosis (Colletotrichum spp.)",
+      "descripcion": "Manchas oscuras en frutos y tallos, caída prematura de frutos.",
+      "imagen": "assets/arandano_antracnosis.jpg",
+      "manejo": "Poda sanitaria, aplicación de caldo bordelés, manejo de residuos, selección de plantas sanas."
+    }
+  ]
+}

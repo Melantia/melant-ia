@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca de Cultivos MELANT IA</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    header { background: #1a7f37; color: #fff; padding: 1em; text-align: center; }
+    main { max-width: 900px; margin: 2em auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 2em; }
+    select, input { padding: 0.5em; margin: 0.5em 0; }
+    .ficha { border: 1px solid #ddd; border-radius: 6px; margin: 1em 0; padding: 1em; background: #fafafa; }
+    .ficha img { max-width: 120px; max-height: 90px; margin: 0.5em 1em 0.5em 0; float: left; border-radius: 4px; }
+    .ficha h3 { margin-top: 0; }
+    .tipo { font-weight: bold; color: #1a7f37; }
+    .clear { clear: both; }
+    .fuente { font-size: 0.9em; color: #888; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Biblioteca de Cultivos MELANT IA</h1>
+  <p>Consulta amenazas, control biológico e imágenes de identificación</p>
+</header>
+<main>
+  <label for="cultivo">Selecciona un cultivo:</label>
+  <select id="cultivo"></select>
+  <input type="text" id="busqueda" placeholder="Buscar plaga, enfermedad o especie..." style="width:60%">
+  <div id="fichas"></div>
+</main>
+<script>
+let data = {};
+fetch('cultivos_ecuador_extendido.json')
+  .then(r => r.json())
+  .then(j => {
+    data = j.cultivos_ecuador;
+    const sel = document.getElementById('cultivo');
+    data.forEach((c, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = c.nombre + ' (' + c.especie + ')';
+      sel.appendChild(opt);
+    });
+    sel.onchange = mostrarFichas;
+    document.getElementById('busqueda').oninput = buscar;
+    mostrarFichas();
+  });
+function mostrarFichas() {
+  const idx = document.getElementById('cultivo').value;
+  const cultivo = data[idx];
+  let html = `<h2>${cultivo.nombre} <span style='font-size:0.8em;color:#888'>(${cultivo.especie})</span></h2>`;
+  ['plagas','enfermedades'].forEach(tipo => {
+    if (cultivo.amenazas && cultivo.amenazas[tipo]) {
+      html += `<h3>${tipo.charAt(0).toUpperCase()+tipo.slice(1)}</h3>`;
+      cultivo.amenazas[tipo].forEach(a => {
+        html += `<div class='ficha'><img src='${a.imagen}' alt='${a.nombre}' onerror="this.style.display='none'">
+        <span class='tipo'>${tipo.slice(0,-1)}</span>: <b>${a.nombre}</b><br>
+        <span>Control biológico: ${a.control_biologico}</span><div class='clear'></div></div>`;
+      });
+    }
+  });
+  if (cultivo.fuente) html += `<div class='fuente'>Fuente: ${cultivo.fuente}</div>`;
+  if (cultivo.guia_tecnica) html += `<div class='fuente'>Guía técnica: <a href='${cultivo.guia_tecnica}' target='_blank'>Ver PDF</a></div>`;
+  if (cultivo.info_extra) html += `<div class='fuente'>${cultivo.info_extra}</div>`;
+  document.getElementById('fichas').innerHTML = html;
+}
+function buscar() {
+  const q = document.getElementById('busqueda').value.toLowerCase();
+  let html = '';
+  data.forEach(cultivo => {
+    let coincide = cultivo.nombre.toLowerCase().includes(q) || cultivo.especie.toLowerCase().includes(q);
+    let fichas = '';
+    ['plagas','enfermedades'].forEach(tipo => {
+      if (cultivo.amenazas && cultivo.amenazas[tipo]) {
+        cultivo.amenazas[tipo].forEach(a => {
+          if (a.nombre.toLowerCase().includes(q)) {
+            coincide = true;
+            fichas += `<div class='ficha'><img src='${a.imagen}' alt='${a.nombre}' onerror="this.style.display='none'">
+            <span class='tipo'>${tipo.slice(0,-1)}</span>: <b>${a.nombre}</b><br>
+            <span>Control biológico: ${a.control_biologico}</span><div class='clear'></div></div>`;
+          }
+        });
+      }
+    });
+    if (coincide) {
+      html += `<h2>${cultivo.nombre} <span style='font-size:0.8em;color:#888'>(${cultivo.especie})</span></h2>` + fichas;
+      if (cultivo.fuente) html += `<div class='fuente'>Fuente: ${cultivo.fuente}</div>`;
+      if (cultivo.guia_tecnica) html += `<div class='fuente'>Guía técnica: <a href='${cultivo.guia_tecnica}' target='_blank'>Ver PDF</a></div>`;
+      if (cultivo.info_extra) html += `<div class='fuente'>${cultivo.info_extra}</div>`;
+    }
+  });
+  document.getElementById('fichas').innerHTML = html || '<p>No se encontraron coincidencias.</p>';
+}
+</script>
+</body>
+</html>

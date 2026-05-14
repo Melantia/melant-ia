@@ -1,0 +1,20 @@
+{
+  "modulo": "Sostenibilidad y Proyectos",
+  "ai_logic": {
+    "priority": "Valorización del Ecosistema y Cultura",
+    "search_context": [
+      "Metodologías de medición de captura de carbono (Tier 1, 2, 3)",
+      "Especies nativas para reforestación y sistemas silvopastoriles",
+      "Documentación de técnicas agrícolas tradicionales",
+      "Requisitos para certificaciones orgánicas y de comercio justo"
+    ],
+    "proyectos_especificos": {
+      "carbono": "Cálculo de biomasa y créditos",
+      "saberes": "Registro audiovisual de técnicas ancestrales"
+    }
+  },
+  "funciones_boton": {
+    "on_click_carbono": "Abrir calculadora de huella",
+    "on_click_saberes": "Iniciar bitácora de tradición oral"
+  }
+}

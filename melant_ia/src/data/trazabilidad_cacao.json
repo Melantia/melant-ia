@@ -1,0 +1,43 @@
+{
+  "modulo_id": 2,
+  "titulo": "Trazabilidad Digital del Cacao",
+  "fases": [
+    {
+      "paso": 1,
+      "titulo": "Registro en la Finca (Origen)",
+      "detalles": [
+        "Identificación de parcela (GPS/EUDR)",
+        "Bitácora de cultivo (CCN51/Aroma)",
+        "Registro de cosecha por lote"
+      ],
+      "estado": "completado"
+    },
+    {
+      "paso": 2,
+      "titulo": "Control en Postcosecha",
+      "detalles": [
+        "Días de fermentación y secado",
+        "Asignación de Código de Lote Único"
+      ],
+      "estado": "pendiente"
+    },
+    {
+      "paso": 3,
+      "titulo": "Recepción y Acopio",
+      "detalles": [
+        "Verificación y pesaje exacto",
+        "Segregación de producto certificado"
+      ],
+      "estado": "pendiente"
+    },
+    {
+      "paso": 4,
+      "titulo": "Transformación y Comercialización",
+      "detalles": [
+        "Guías de remisión de transporte",
+        "Generación de Etiquetado QR Final"
+      ],
+      "estado": "bloqueado"
+    }
+  ]
+}

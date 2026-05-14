@@ -1,0 +1,26 @@
+{
+  "titulo": "Prácticas de Biotecnología Ganadera",
+  "idioma": "es",
+  "practicas": [
+    {
+      "nombre": "Inseminación Artificial",
+      "descripcion": "Procedimiento paso a paso para realizar IA en bovinos.",
+      "pasos": []
+    },
+    {
+      "nombre": "Transferencia de Embriones",
+      "descripcion": "Guía para la transferencia y manejo de embriones.",
+      "pasos": []
+    },
+    {
+      "nombre": "Diagnóstico Molecular de Enfermedades",
+      "descripcion": "Uso de kits y técnicas PCR para detección de patógenos.",
+      "pasos": []
+    },
+    {
+      "nombre": "Mejoras en la Nutrición Animal",
+      "descripcion": "Aplicación de aditivos y enzimas para optimizar la alimentación.",
+      "pasos": []
+    }
+  ]
+}

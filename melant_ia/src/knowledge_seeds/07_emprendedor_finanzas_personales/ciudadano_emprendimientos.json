@@ -1,0 +1,53 @@
+{
+  "version_data": "2024.01",
+  "pais": "Ecuador",
+  "tramites": [
+    {
+      "categoria": "Registro Sanitario (ARCSA)",
+      "id": "arcsa_001",
+      "descripcion": "Certificación para comercializar productos de consumo humano.",
+      "offline_compatible": true,
+      "pasos": [
+        "Obtener firma electrónica",
+        "Tramitar Permiso de Funcionamiento",
+        "Ingreso a Ventanilla Única Ecuatoriana (VUE)",
+        "Pago de tasa según tamaño de empresa"
+      ],
+      "costos_base": {
+        "microempresa": "Sujeto a exención/descuento",
+        "pyme": "Variable según categoría",
+        "grande": "Tarifa completa"
+      },
+      "enlaces_actualizacion": "https://controlsanitario.gob.ec"
+    },
+    {
+      "categoria": "Propiedad Intelectual (SENADI)",
+      "id": "senadi_mark_01",
+      "tipo": "Registro de Marca y Nombre",
+      "descripcion": "Protección de signos distintivos y nombres comerciales.",
+      "duracion_años": 10,
+      "requisitos": [
+        "Búsqueda fonética previa",
+        "Copia de cédula / RUC",
+        "Logotipo en formato digital",
+        "Comprobante de pago"
+      ],
+      "costos": {
+        "tasa_normal": 208.00,
+        "descuento_mipyme": 104.00
+      },
+      "flujo_offline": "1. Búsqueda -> 2. Solicitud -> 3. Examen -> 4. Título"
+    },
+    {
+      "categoria": "Derechos de Autor",
+      "id": "senadi_copyright_02",
+      "tipo": "Protección de Obras",
+      "descripcion": "Registro de software, libros, música y arte.",
+      "requisitos": [
+        "Formulario de registro",
+        "Depósito de la obra (archivo o físico)",
+        "Pago de tasa administrativa"
+      ]
+    }
+  ]
+}

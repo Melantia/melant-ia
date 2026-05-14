@@ -1,0 +1,593 @@
+{
+  "cultivos": [
+    {
+      "id": "cacao_nacional",
+      "nombre": "Cacao Fino de Aroma",
+      "archivo_fuente": "cultivos_cacao.json"
+    },
+    {
+      "id": "cafe_arabigo",
+      "nombre": "Café de Altura",
+      "archivo_fuente": "cultivos_cafe.json"
+    },
+    {
+      "id": "quinua",
+      "nombre": "Quinua",
+      "archivo_fuente": "cultivos_quinua.json"
+    },
+    {
+      "id": "amaranto",
+      "nombre": "Amaranto",
+      "archivo_fuente": "cultivos_amaranto.json"
+    },
+    { "id": "pera", "nombre": "Pera", "archivo_fuente": "cultivos_pera.json" },
+    {
+      "id": "durazno",
+      "nombre": "Durazno",
+      "archivo_fuente": "cultivos_durazno.json"
+    },
+    {
+      "id": "claudia",
+      "nombre": "Claudia",
+      "archivo_fuente": "cultivos_claudia.json"
+    },
+    {
+      "id": "ciruela",
+      "nombre": "Ciruela",
+      "archivo_fuente": "cultivos_ciruela.json"
+    },
+    {
+      "id": "capuli",
+      "nombre": "Capulí",
+      "archivo_fuente": "cultivos_capuli.json"
+    },
+    {
+      "id": "babaco",
+      "nombre": "Babaco",
+      "archivo_fuente": "cultivos_babaco.json"
+    },
+    {
+      "id": "uvilla",
+      "nombre": "Uvilla",
+      "archivo_fuente": "cultivos_uvilla.json"
+    },
+    { "id": "mora", "nombre": "Mora", "archivo_fuente": "cultivos_mora.json" },
+    {
+      "id": "rosas",
+      "nombre": "Rosas",
+      "archivo_fuente": "cultivos_rosas.json"
+    },
+    {
+      "id": "guayaba",
+      "nombre": "Guayaba",
+      "archivo_fuente": "cultivos_guayaba.json"
+    },
+    { "id": "taxo", "nombre": "Taxo", "archivo_fuente": "cultivos_taxo.json" },
+    {
+      "id": "pitahaya_amarilla",
+      "nombre": "Pitahaya Amarilla",
+      "archivo_fuente": "cultivos_pitahaya_amarilla.json"
+    },
+    { "id": "te", "nombre": "Té", "archivo_fuente": "cultivos_te.json" },
+    {
+      "id": "sacha_inchi",
+      "nombre": "Sacha Inchi",
+      "archivo_fuente": "cultivos_sacha_inchi.json"
+    },
+    {
+      "id": "granadilla",
+      "nombre": "Granadilla",
+      "archivo_fuente": "cultivos_granadilla.json"
+    },
+    {
+      "id": "alerta_climatica_papa",
+      "nombre": "Alerta Climática Papa",
+      "archivo_fuente": "alerta_climatica_papa.json"
+    },
+    {
+      "id": "alertas_climaticas_multicultivo",
+      "nombre": "Alertas Climáticas Multicultivo",
+      "archivo_fuente": "alertas_climaticas_multicultivo.json"
+    },
+    {
+      "id": "calendario_inteligente",
+      "nombre": "Calendario Inteligente",
+      "archivo_fuente": "calendario_inteligente.json"
+    },
+    {
+      "id": "calendario_siembras",
+      "nombre": "Calendario de Siembras",
+      "archivo_fuente": "calendario_siembras.json"
+    },
+    {
+      "id": "calculadora_fertilidad_ec",
+      "nombre": "Calculadora Fertilidad EC",
+      "archivo_fuente": "calculadora_fertilidad_ec.json"
+    },
+    {
+      "id": "calculadora_proporciones",
+      "nombre": "Calculadora de Proporciones",
+      "archivo_fuente": "calculadora_proporciones.json"
+    },
+    {
+      "id": "cultivos_arandano",
+      "nombre": "Arándano",
+      "archivo_fuente": "cultivos_arandano.json"
+    },
+    {
+      "id": "cultivos_arroz",
+      "nombre": "Arroz",
+      "archivo_fuente": "cultivos_arroz.json"
+    },
+    {
+      "id": "cultivos_arveja",
+      "nombre": "Arveja",
+      "archivo_fuente": "cultivos_arveja.json"
+    },
+    {
+      "id": "cultivos_avena",
+      "nombre": "Avena",
+      "archivo_fuente": "cultivos_avena.json"
+    },
+    {
+      "id": "cultivos_badea",
+      "nombre": "Badea",
+      "archivo_fuente": "cultivos_badea.json"
+    },
+    {
+      "id": "cultivos_banano",
+      "nombre": "Banano",
+      "archivo_fuente": "cultivos_banano.json"
+    },
+    {
+      "id": "cultivos_berenjenas",
+      "nombre": "Berenjenas",
+      "archivo_fuente": "cultivos_berenjenas.json"
+    },
+    {
+      "id": "config_clima",
+      "nombre": "Configuración de Clima",
+      "archivo_fuente": "config_clima.json"
+    },
+    {
+      "id": "costos_arroz",
+      "nombre": "Costos Arroz",
+      "archivo_fuente": "costos_arroz.json"
+    },
+    {
+      "id": "cultivos_achocha",
+      "nombre": "Achocha",
+      "archivo_fuente": "cultivos_achocha.json"
+    },
+    {
+      "id": "cultivos_agricultura_regenerativa",
+      "nombre": "Agricultura Regenerativa",
+      "archivo_fuente": "cultivos_agricultura_regenerativa.json"
+    },
+    {
+      "id": "cultivos_aguacates",
+      "nombre": "Aguacates",
+      "archivo_fuente": "cultivos_aguacates.json"
+    },
+    {
+      "id": "cultivos_ajo",
+      "nombre": "Ajo",
+      "archivo_fuente": "cultivos_ajo.json"
+    },
+    {
+      "id": "cultivos_uvas",
+      "nombre": "Uvas",
+      "archivo_fuente": "cultivos_uvas.json"
+    },
+    {
+      "id": "cultivos_yuca_malanga",
+      "nombre": "Yuca/Malanga",
+      "archivo_fuente": "cultivos_yuca_malanga.json"
+    },
+    {
+      "id": "cultivos_zanahoria",
+      "nombre": "Zanahoria",
+      "archivo_fuente": "cultivos_zanahoria.json"
+    },
+    {
+      "id": "cultivos_biologia_meristemos_plantas",
+      "nombre": "Biología Meristemos Plantas",
+      "archivo_fuente": "cultivos_biologia_meristemos_plantas.json"
+    },
+    {
+      "id": "cultivos_biotecnologia_vegetal",
+      "nombre": "Biotecnología Vegetal",
+      "archivo_fuente": "cultivos_biotecnologia_vegetal.json"
+    },
+    {
+      "id": "cultivos_camote",
+      "nombre": "Camote",
+      "archivo_fuente": "cultivos_camote.json"
+    },
+    {
+      "id": "cultivos_cana_azucar",
+      "nombre": "Caña de Azúcar",
+      "archivo_fuente": "cultivos_cana_azucar.json"
+    },
+    {
+      "id": "cultivos_cebada",
+      "nombre": "Cebada",
+      "archivo_fuente": "cultivos_cebada.json"
+    },
+    {
+      "id": "cultivos_cebolla_blanca",
+      "nombre": "Cebolla Blanca",
+      "archivo_fuente": "cultivos_cebolla_blanca.json"
+    },
+    {
+      "id": "cultivos_cebolla_colorada",
+      "nombre": "Cebolla Colorada",
+      "archivo_fuente": "cultivos_cebolla_colorada.json"
+    },
+    {
+      "id": "cultivos_cilantro",
+      "nombre": "Cilantro",
+      "archivo_fuente": "cultivos_cilantro.json"
+    },
+    {
+      "id": "cultivos_citricos",
+      "nombre": "Cítricos",
+      "archivo_fuente": "cultivos_citricos.json"
+    },
+    {
+      "id": "cultivos_coco",
+      "nombre": "Coco",
+      "archivo_fuente": "cultivos_coco.json"
+    },
+    {
+      "id": "cultivos_col_brocoli",
+      "nombre": "Col Brócoli",
+      "archivo_fuente": "cultivos_col_brocoli.json"
+    },
+    {
+      "id": "cultivos_coliflor",
+      "nombre": "Coliflor",
+      "archivo_fuente": "cultivos_coliflor.json"
+    },
+    {
+      "id": "cultivos_curcuma",
+      "nombre": "Cúrcuma",
+      "archivo_fuente": "cultivos_curcuma.json"
+    },
+    {
+      "id": "cultivos_db",
+      "nombre": "Base de Datos de Cultivos",
+      "archivo_fuente": "cultivos_db.json"
+    },
+    {
+      "id": "cultivos_ecuador_extendido",
+      "nombre": "Cultivos Ecuador Extendido",
+      "archivo_fuente": "cultivos_ecuador_extendido.json"
+    },
+    {
+      "id": "cultivos_forraje",
+      "nombre": "Forraje",
+      "archivo_fuente": "cultivos_forraje.json"
+    },
+    {
+      "id": "cultivos_frejol_de_palo",
+      "nombre": "Frejol de Palo",
+      "archivo_fuente": "cultivos_frejol_de_palo.json"
+    },
+    {
+      "id": "cultivos_frejoles",
+      "nombre": "Frejoles",
+      "archivo_fuente": "cultivos_frejoles.json"
+    },
+    {
+      "id": "cultivos_fresas",
+      "nombre": "Fresas",
+      "archivo_fuente": "cultivos_fresas.json"
+    },
+    {
+      "id": "cultivos_guanabana",
+      "nombre": "Guanábana",
+      "archivo_fuente": "cultivos_guanabana.json"
+    },
+    {
+      "id": "cultivos_habas",
+      "nombre": "Habas",
+      "archivo_fuente": "cultivos_habas.json"
+    },
+    {
+      "id": "cultivos_habichuelas",
+      "nombre": "Habichuelas",
+      "archivo_fuente": "cultivos_habichuelas.json"
+    },
+    {
+      "id": "cultivos_higos",
+      "nombre": "Higos",
+      "archivo_fuente": "cultivos_higos.json"
+    },
+    {
+      "id": "cultivos_jengibre",
+      "nombre": "Jengibre",
+      "archivo_fuente": "cultivos_jengibre.json"
+    },
+    {
+      "id": "cultivos_lechuga",
+      "nombre": "Lechuga",
+      "archivo_fuente": "cultivos_lechuga.json"
+    },
+    {
+      "id": "cultivos_lenteja",
+      "nombre": "Lenteja",
+      "archivo_fuente": "cultivos_lenteja.json"
+    },
+    {
+      "id": "cultivos_limon_sutil",
+      "nombre": "Limón Sutil",
+      "archivo_fuente": "cultivos_limon_sutil.json"
+    },
+    {
+      "id": "cultivos_maiz_amarillo_blanco",
+      "nombre": "Maíz Amarillo/Blanco",
+      "archivo_fuente": "cultivos_maiz_amarillo_blanco.json"
+    },
+    {
+      "id": "cultivos_maiz_duro",
+      "nombre": "Maíz Duro",
+      "archivo_fuente": "cultivos_maiz_duro.json"
+    },
+    {
+      "id": "cultivos_mango",
+      "nombre": "Mango",
+      "archivo_fuente": "cultivos_mango.json"
+    },
+    {
+      "id": "cultivos_mani",
+      "nombre": "Maní",
+      "archivo_fuente": "cultivos_mani.json"
+    },
+    {
+      "id": "cultivos_manzanas",
+      "nombre": "Manzanas",
+      "archivo_fuente": "cultivos_manzanas.json"
+    },
+    {
+      "id": "cultivos_maracuya",
+      "nombre": "Maracuyá",
+      "archivo_fuente": "cultivos_maracuya.json"
+    },
+    {
+      "id": "cultivos_melon",
+      "nombre": "Melón",
+      "archivo_fuente": "cultivos_melon.json"
+    },
+    {
+      "id": "cultivos_moringa",
+      "nombre": "Moringa",
+      "archivo_fuente": "cultivos_moringa.json"
+    },
+    {
+      "id": "cultivos_naranja",
+      "nombre": "Naranja",
+      "archivo_fuente": "cultivos_naranja.json"
+    },
+    {
+      "id": "cultivos_naranjilla",
+      "nombre": "Naranjilla",
+      "archivo_fuente": "cultivos_naranjilla.json"
+    },
+    {
+      "id": "cultivos_palma_aceitera",
+      "nombre": "Palma Aceitera",
+      "archivo_fuente": "cultivos_palma_aceitera.json"
+    },
+    {
+      "id": "cultivos_papa",
+      "nombre": "Papa",
+      "archivo_fuente": "cultivos_papa.json"
+    },
+    {
+      "id": "cultivos_papaya",
+      "nombre": "Papaya",
+      "archivo_fuente": "cultivos_papaya.json"
+    },
+    {
+      "id": "cultivos_pastos_forrajes_ecofisiologia",
+      "nombre": "Pastos y Forrajes Ecofisiología",
+      "archivo_fuente": "cultivos_pastos_forrajes_ecofisiologia.json"
+    },
+    {
+      "id": "cultivos_pepino",
+      "nombre": "Pepino",
+      "archivo_fuente": "cultivos_pepino.json"
+    },
+    {
+      "id": "cultivos_pimiento",
+      "nombre": "Pimiento",
+      "archivo_fuente": "cultivos_pimiento.json"
+    },
+    {
+      "id": "cultivos_pina",
+      "nombre": "Piña",
+      "archivo_fuente": "cultivos_pina.json"
+    },
+    {
+      "id": "cultivos_pitahaya",
+      "nombre": "Pitahaya",
+      "archivo_fuente": "cultivos_pitahaya.json"
+    },
+    {
+      "id": "cultivos_platano",
+      "nombre": "Plátano",
+      "archivo_fuente": "cultivos_platano.json"
+    },
+    {
+      "id": "cultivos_platano_barraganete",
+      "nombre": "Plátano Barraganete",
+      "archivo_fuente": "cultivos_platano_barraganete.json"
+    },
+    {
+      "id": "cultivos_platano_dominico",
+      "nombre": "Plátano Dominico",
+      "archivo_fuente": "cultivos_platano_dominico.json"
+    },
+    {
+      "id": "cultivos_rabano",
+      "nombre": "Rábano",
+      "archivo_fuente": "cultivos_rabano.json"
+    },
+    {
+      "id": "cultivos_remolacha",
+      "nombre": "Remolacha",
+      "archivo_fuente": "cultivos_remolacha.json"
+    },
+    {
+      "id": "cultivos_sandia",
+      "nombre": "Sandía",
+      "archivo_fuente": "cultivos_sandia.json"
+    },
+    {
+      "id": "cultivos_soya",
+      "nombre": "Soya",
+      "archivo_fuente": "cultivos_soya.json"
+    },
+    {
+      "id": "cultivos_tomate",
+      "nombre": "Tomate",
+      "archivo_fuente": "cultivos_tomate.json"
+    },
+    {
+      "id": "cultivos_tomate_arbol",
+      "nombre": "Tomate de Árbol",
+      "archivo_fuente": "cultivos_tomate_arbol.json"
+    },
+    {
+      "id": "cultivos_trigo",
+      "nombre": "Trigo",
+      "archivo_fuente": "cultivos_trigo.json"
+    },
+    {
+      "id": "imagenes_plagas_enfermedades_arandano",
+      "nombre": "Imágenes Plagas y Enfermedades Arándano",
+      "archivo_fuente": "imagenes_plagas_enfermedades_arandano.json"
+    },
+    {
+      "id": "imagenes_plagas_enfermedades_badea",
+      "nombre": "Imágenes Plagas y Enfermedades Badea",
+      "archivo_fuente": "imagenes_plagas_enfermedades_badea.json"
+    },
+    {
+      "id": "imagenes_plagas_enfermedades_maracuya",
+      "nombre": "Imágenes Plagas y Enfermedades Maracuyá",
+      "archivo_fuente": "imagenes_plagas_enfermedades_maracuya.json"
+    },
+    {
+      "id": "logica_difusa_agro",
+      "nombre": "Lógica Difusa Agro",
+      "archivo_fuente": "logica_difusa_agro.py"
+    },
+    {
+      "id": "data_apicultura",
+      "nombre": "Datos Apicultura",
+      "archivo_fuente": "data_apicultura.json"
+    },
+    {
+      "id": "data_fertilizantes_cultivos",
+      "nombre": "Datos Fertilizantes Cultivos",
+      "archivo_fuente": "data_fertilizantes_cultivos.json"
+    },
+    {
+      "id": "diagnostico_visual",
+      "nombre": "Diagnóstico Visual",
+      "archivo_fuente": "diagnostico_visual.py"
+    },
+    {
+      "id": "DiagnosticoCacao",
+      "nombre": "Diagnóstico Cacao",
+      "archivo_fuente": "DiagnosticoCacao.json"
+    },
+    {
+      "id": "guia_usuario_vision_artificial",
+      "nombre": "Guía Usuario Visión Artificial",
+      "archivo_fuente": "guia_usuario_vision_artificial.md"
+    },
+    {
+      "id": "memoria_productor",
+      "nombre": "Memoria Productor",
+      "archivo_fuente": "memoria_productor.md"
+    },
+    {
+      "id": "notificaciones_lunares",
+      "nombre": "Notificaciones Lunares",
+      "archivo_fuente": "notificaciones_lunares.json"
+    },
+    {
+      "id": "procesador_imagenes",
+      "nombre": "Procesador de Imágenes",
+      "archivo_fuente": "procesador_imagenes.py"
+    },
+    {
+      "id": "prompts_vision_fitosanitario",
+      "nombre": "Prompts Visión Fitosanitario",
+      "archivo_fuente": "prompts_vision_fitosanitario.json"
+    },
+    {
+      "id": "prompts_vision_palmas",
+      "nombre": "Prompts Visión Palmas",
+      "archivo_fuente": "prompts_vision_palmas.json"
+    },
+    {
+      "id": "protocolo_toma_muestras",
+      "nombre": "Protocolo Toma de Muestras",
+      "archivo_fuente": "protocolo_toma_muestras.txt"
+    },
+    {
+      "id": "reglas_decision",
+      "nombre": "Reglas de Decisión",
+      "archivo_fuente": "reglas_decision.md"
+    },
+    {
+      "id": "sensores_agricultura_precision",
+      "nombre": "Sensores Agricultura de Precisión",
+      "archivo_fuente": "sensores_agricultura_precision.json"
+    },
+    {
+      "id": "SistemaBarraganete",
+      "nombre": "Sistema Barraganete",
+      "archivo_fuente": "SistemaBarraganete.py"
+    },
+    {
+      "id": "test_del_frasco",
+      "nombre": "Test del Frasco",
+      "archivo_fuente": "test_del_frasco.json"
+    },
+    {
+      "id": "umbrales_alerta_arroz",
+      "nombre": "Umbrales Alerta Arroz",
+      "archivo_fuente": "umbrales_alerta_arroz.json"
+    },
+    {
+      "id": "umbrales_criticos_cultivos",
+      "nombre": "Umbrales Críticos Cultivos",
+      "archivo_fuente": "umbrales_criticos_cultivos.json"
+    },
+    {
+      "id": "validador_mezclas",
+      "nombre": "Validador de Mezclas",
+      "archivo_fuente": "validador_mezclas.json"
+    },
+    {
+      "id": "visor_cultivos_ecuador_html",
+      "nombre": "Visor Cultivos Ecuador (HTML)",
+      "archivo_fuente": "visor_cultivos_ecuador.html"
+    },
+    {
+      "id": "visor_cultivos_ecuador_py",
+      "nombre": "Visor Cultivos Ecuador (Python)",
+      "archivo_fuente": "visor_cultivos_ecuador.py"
+    },
+    {
+      "id": "visualizacion_laboratorio",
+      "nombre": "Visualización Laboratorio",
+      "archivo_fuente": "visualizacion_laboratorio.py"
+    }
+  ]
+}

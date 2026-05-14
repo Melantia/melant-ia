@@ -1,0 +1,93 @@
+{
+  "app_name": "MELANTIA",
+  "logo": "PRODUCTIVIDAD AGRÍCOLA INTELIGENTE OFFLINE",
+  "funcionalidad_clave": "FUNCIONA SIN INTERNET",
+  "menu_principal": {
+    "inicio": ["Registro", "Notificaciones"],
+    "modulos": [
+      {
+        "id": 1,
+        "titulo": "Sistema de Suscripciones",
+        "items": ["Melantio (Sistema de Recompensas)", "Billetera Virtual"]
+      },
+      {
+        "id": 2,
+        "titulo": "Asistente Técnico Rural",
+        "items": []
+      },
+      {
+        "id": 3,
+        "titulo": "Asistente Técnico Veterinario",
+        "items": ["Salud y Medicina Veterinaria"]
+      },
+      {
+        "id": 4,
+        "titulo": "Agricultura Digital",
+        "items": [
+          "Agricultura de precisión (Uso de Sensores)",
+          "GPS (Medición de Terrenos)"
+        ]
+      },
+      {
+        "id": 5,
+        "titulo": "Gestión Productiva",
+        "items": [
+          "Gestión de Granjas",
+          "Gestión de Fincas",
+          "Gestión Empresarial"
+        ]
+      },
+      {
+        "id": 6,
+        "titulo": "Negocios Rurales",
+        "items": [
+          "Tienda MELANTIA",
+          "Ventas de Gestión Productiva",
+          "Bienes Raíces Rurales"
+        ]
+      },
+      {
+        "id": 7,
+        "titulo": "Emprendedor y Finanzas Personales",
+        "items": ["Emprendimientos", "Finanzas Personales"]
+      },
+      {
+        "id": 8,
+        "titulo": "Sostenibilidad y Proyectos",
+        "items": [
+          "Proyecto Captura de Carbono",
+          "Proyecto Saberes Ancestrales y Folklore",
+          "El Tesoro de los Abuelos (Memoria Viva)",
+          "Herbario Memoria Cultural"
+        ]
+      },
+      {
+        "id": 9,
+        "titulo": "Escuela de Campo",
+        "items": ["Cursos", "Prácticas Regenerativas"]
+      },
+      {
+        "id": 10,
+        "titulo": "Mi Comunidad Virtual",
+        "items": ["Ciudadano Rural", "Asesoría Legal", "Walkie Talkie"]
+      },
+      {
+        "id": 11,
+        "titulo": "Asistente Preventivo de Salud",
+        "items": [
+          "Asistente Preventivo de Salud",
+          "Guia de Primeros Auxilios y Respuesta Rapida"
+        ]
+      },
+      {
+        "id": 12,
+        "titulo": "Registro Evidencias y Documentos",
+        "items": [
+          "Registro de Evidencia Fotografica",
+          "Carpeta Documentos",
+          "Descargar, Compartir e Imprimir"
+        ]
+      }
+    ]
+  }
+}

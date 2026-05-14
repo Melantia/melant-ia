@@ -1,0 +1,42 @@
+{
+  "nombre_cultivo": "Sacha Inchi",
+  "nombre_cientifico": "Plukenetia volubilis",
+  "descripcion": "Planta amazónica oleaginosa, fuente de omega 3, 6 y 9. Cultivo de alto valor nutricional y potencial exportador.",
+  "origen": "Amazonía sudamericana",
+  "variedades": ["Sacha Inchi nativa", "Sacha Inchi mejorada"],
+  "riego_optimo": "Riego moderado, 1 vez por semana en época seca.",
+  "npk_recomendado": "NPK 12-24-12 en establecimiento, NPK 15-15-15 en producción.",
+  "plagas_comunes": ["Orugas", "Ácaros", "Trips"],
+  "enfermedades_comunes": ["Mildiu", "Antracnosis"],
+  "epoca_siembra_recomendada": "Inicio de lluvias.",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "densidad_siembra": "2,500-3,000 plantas/ha",
+    "superficie_sembrada_ha_anio": "Variable según zona"
+  },
+  "labores_cosecha": "Cosecha manual de cápsulas maduras.",
+  "labores_postcosecha": "Secado, extracción de semillas, almacenamiento en seco.",
+  "captura_carbono_ton_ha_anio": 4.5,
+  "precio_carbono_usd_ton": 7.9,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, cosecha, procesamiento y exportación.",
+  "zonas_produccion_ecuador": ["Napo", "Sucumbíos", "Orellana", "Pastaza"],
+  "importancia_economica": "Cultivo amazónico con alto valor nutricional y potencial exportador.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación",
+    "Fertilización",
+    "Riego",
+    "Control fitosanitario",
+    "Cosecha",
+    "Procesamiento",
+    "Empaque y exportación"
+  ],
+  "bibliografia": [
+    "Manual de Sacha Inchi, INIAP",
+    "Guía Técnica de Sacha Inchi, MAG"
+  ],
+  "cursos_recomendados": [
+    "Producción de Oleaginosas Amazónicas",
+    "Trazabilidad y Exportación de Sacha Inchi"
+  ]
+}

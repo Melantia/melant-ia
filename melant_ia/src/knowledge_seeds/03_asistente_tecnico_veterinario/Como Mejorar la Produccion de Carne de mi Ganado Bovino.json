@@ -1,0 +1,74 @@
+{
+  "titulo": "Cómo Mejorar la Producción de Carne de mi Ganado Bovino",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de la producción de carne bovina",
+      "objetivo": "Comprender los factores que influyen en la producción de carne y su importancia económica.",
+      "contenido": [
+        "Características del ganado de carne",
+        "Ciclo productivo y fisiología del crecimiento",
+        "Factores que afectan la ganancia de peso y el rendimiento"
+      ]
+    },
+    {
+      "nombre": "Nutrición y alimentación para bovinos de carne",
+      "objetivo": "Proporcionar una dieta balanceada para maximizar la ganancia de peso y la calidad de la carne.",
+      "contenido": [
+        "Requerimientos nutricionales en crecimiento y engorde",
+        "Alimentos recomendados y estrategias de suplementación",
+        "Manejo de forrajes y agua"
+      ]
+    },
+    {
+      "nombre": "Manejo sanitario y bienestar animal",
+      "objetivo": "Prevenir enfermedades y garantizar el bienestar de los bovinos de carne.",
+      "contenido": [
+        "Principales enfermedades que afectan la producción de carne",
+        "Prácticas de higiene y prevención",
+        "Manejo del estrés y bienestar animal"
+      ]
+    },
+    {
+      "nombre": "Manejo de pasturas y suplementación estratégica",
+      "objetivo": "Mejorar la eficiencia alimenticia mediante el manejo adecuado de pasturas y la suplementación.",
+      "contenido": [
+        "Manejo de pasturas y rotación",
+        "Tipos de suplementos y su función",
+        "Uso de bloques multinutricionales y sales minerales"
+      ]
+    },
+    {
+      "nombre": "Mejoramiento genético y selección de animales",
+      "objetivo": "Seleccionar y mejorar genéticamente el hato para incrementar la producción de carne.",
+      "contenido": [
+        "Criterios de selección de bovinos de carne",
+        "Métodos de mejoramiento genético",
+        "Registro y evaluación de la descendencia"
+      ]
+    },
+    {
+      "nombre": "Práctica: Registro y monitoreo del engorde y rendimiento",
+      "descripcion": "Guía paso a paso para registrar y monitorear el engorde y rendimiento.",
+      "pasos": [
+        "Identificación individual de animales",
+        "Registro periódico de peso y ganancia diaria",
+        "Evaluación de conversión alimenticia",
+        "Análisis de resultados y toma de decisiones",
+        "Ajuste de manejo según resultados"
+      ],
+      "recomendaciones": [
+        "Utilizar formatos o aplicaciones para el registro",
+        "Realizar análisis periódicos de rendimiento"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Cuáles son los factores clave para una alta producción de carne en bovinos?",
+    "¿Qué nutrientes son esenciales durante el engorde?",
+    "¿Cómo prevenir enfermedades que afectan la producción de carne?",
+    "¿Qué prácticas mejoran la eficiencia alimenticia?",
+    "¿Por qué es importante el mejoramiento genético en bovinos de carne?"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "modulo": "Bienestar y Salud",
+  "ai_logic": {
+    "priority": "Preservación de la Vida y Salud Preventiva",
+    "conocimiento_experto": [
+      "Protocolos de primeros auxilios para accidentes de campo",
+      "Identificación de síntomas por intoxicación con agroquímicos",
+      "Guías de ergonomía para labores físicas pesadas",
+      "Remedios naturales complementarios (Botica del campo)"
+    ],
+    "regla_de_oro": "Siempre incluir un descargo de responsabilidad: 'Esta guía no reemplaza la atención médica profesional'."
+  },
+  "botones_rapidos": {
+    "emergencia": "Protocolo de Emergencia (Botón Rojo)",
+    "prevencion": "Consejo de salud del día"
+  }
+}

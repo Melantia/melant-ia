@@ -1,0 +1,52 @@
+{
+  "nombre_cultivo": "Jengibre",
+  "nombre_cientifico": "Zingiber officinale",
+  "descripcion": "Rizoma tropical de uso culinario, medicinal y cosmético. Cultivo emergente en la Costa y Amazonía ecuatoriana.",
+  "riego_optimo": "Riego frecuente, suelos húmedos pero bien drenados.",
+  "npk_recomendado": { "N": 90, "P": 40, "K": 120 },
+  "plagas_comunes": [
+    {
+      "nombre": "Gusano del rizoma",
+      "control_organico": "Rotación de cultivos, control biológico.",
+      "sintoma": "Galerías en rizomas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Podredumbre bacteriana",
+      "control": "Selección de semilla sana, manejo de humedad.",
+      "sintoma": "Rizomas blandos y malolientes."
+    }
+  ],
+  "epoca_siembra_recomendada": "Enero - Abril (Costa y Amazonía)",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "15 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "11 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de rizomas maduros.",
+  "labores_postcosecha": "Lavado, secado y almacenamiento en lugar fresco.",
+  "captura_carbono_ton_ha_anio": 1.7,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 1500,
+  "densidad_siembra": "40,000-60,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU."]
+  },
+  "zonas_produccion_ecuador": ["Manabí", "Sucumbíos", "Esmeraldas"],
+  "importancia_economica": "Emergente en mercados de exportación y agroindustria nacional.",
+  "bibliografia": ["MAGAP: Guía técnica de jengibre"],
+  "cursos_recomendados": ["Producción sostenible de jengibre"]
+}

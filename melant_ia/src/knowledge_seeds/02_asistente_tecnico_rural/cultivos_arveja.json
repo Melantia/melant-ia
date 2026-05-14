@@ -1,0 +1,61 @@
+{
+  "arveja": {
+    "nombre_cientifico": "Pisum sativum",
+    "descripcion": "Leguminosa anual de alto valor nutricional, fuente de proteína vegetal. Cultivo adaptado a climas templados y fríos.",
+    "riego_optimo": "Riego moderado, evitar encharcamiento. 400-600 mm/ciclo.",
+    "npk_recomendado": { "N": 30, "P": 60, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Trips",
+        "control_organico": "Aceite de Neem",
+        "control_quimico": "Spinosad",
+        "sintoma": "Manchas plateadas en hojas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Fusariosis",
+        "control": "Rotación, solarización",
+        "sintoma": "Marchitez y pudrición de raíces"
+      }
+    ],
+    "epoca_siembra_recomendada": "Mayo - Julio (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "2.5-3 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "1.8-2.2 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de vainas maduras.",
+    "labores_postcosecha": "Desgranado, secado, empaque.",
+    "zonas_produccion_ecuador": ["Tungurahua", "Chimborazo", "Cotopaxi"],
+    "importancia_economica": "Fuente de proteína vegetal y exportación a mercados andinos.",
+    "captura_carbono_ton_ha_anio": 1.8,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 700,
+    "densidad_siembra": "250,000-350,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": ["Manual de Arveja INIAP", "FAO Arveja Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Leguminosas",
+      "Postcosecha de Granos"
+    ],
+    "variedades": ["INIAP 414", "INIAP 415", "INIAP 416"]
+  }
+}

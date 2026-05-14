@@ -1,0 +1,74 @@
+{
+  "titulo": "Cómo Mejorar la Producción de Leche de mi Ganado Caprino",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de la producción lechera caprina",
+      "objetivo": "Comprender los factores que influyen en la producción de leche y su importancia económica y nutricional.",
+      "contenido": [
+        "Características de la cabra lechera",
+        "Ciclo productivo y fisiología de la lactancia",
+        "Factores que afectan la producción de leche"
+      ]
+    },
+    {
+      "nombre": "Nutrición y alimentación para cabras lecheras",
+      "objetivo": "Proporcionar una dieta balanceada para maximizar la producción y calidad de la leche.",
+      "contenido": [
+        "Requerimientos nutricionales en lactancia",
+        "Alimentos recomendados y estrategias de suplementación",
+        "Manejo de forrajes y agua"
+      ]
+    },
+    {
+      "nombre": "Manejo sanitario y bienestar animal",
+      "objetivo": "Prevenir enfermedades y garantizar el bienestar de las cabras lecheras.",
+      "contenido": [
+        "Principales enfermedades que afectan la producción lechera",
+        "Prácticas de higiene y prevención",
+        "Manejo del estrés y bienestar animal"
+      ]
+    },
+    {
+      "nombre": "Prácticas de ordeño higiénico y manejo de la leche",
+      "objetivo": "Mejorar la calidad de la leche mediante buenas prácticas de ordeño y manejo post-ordeño.",
+      "contenido": [
+        "Técnicas de ordeño higiénico",
+        "Manejo y almacenamiento de la leche",
+        "Control de mastitis y calidad bacteriológica"
+      ]
+    },
+    {
+      "nombre": "Mejoramiento genético y selección de animales",
+      "objetivo": "Seleccionar y mejorar genéticamente el hato para incrementar la producción lechera.",
+      "contenido": [
+        "Criterios de selección de cabras lecheras",
+        "Métodos de mejoramiento genético",
+        "Registro y evaluación de la descendencia"
+      ]
+    },
+    {
+      "nombre": "Práctica: Registro y monitoreo de la producción lechera",
+      "descripcion": "Guía paso a paso para registrar y monitorear la producción de leche.",
+      "pasos": [
+        "Identificación individual de cabras",
+        "Registro diario de producción de leche",
+        "Evaluación de calidad (grasa, proteína, limpieza)",
+        "Análisis de resultados y toma de decisiones",
+        "Ajuste de manejo según resultados"
+      ],
+      "recomendaciones": [
+        "Utilizar formatos o aplicaciones para el registro",
+        "Realizar análisis periódicos de calidad"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Cuáles son los factores clave para una alta producción de leche en cabras?",
+    "¿Qué nutrientes son esenciales durante la lactancia?",
+    "¿Cómo prevenir enfermedades que afectan la producción lechera?",
+    "¿Qué prácticas garantizan la calidad higiénica de la leche?",
+    "¿Por qué es importante el mejoramiento genético en cabras lecheras?"
+  ]
+}

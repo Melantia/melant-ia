@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "titulo": "Guía Sensores Humedad",
+    "categoria": "Sensor",
+    "subcategoria": "Humedad",
+    "cultivo": "General",
+    "idioma": "es",
+    "region": "LatAm",
+    "nivel_tecnico": "B",
+    "url_descarga": "https://ejemplo.com/manual_humedad.pdf",
+    "descripcion": "Manual para sensores capacitivos.",
+    "palabras_clave": ["sensor", "humedad", "suelo"],
+    "autor": "INIA",
+    "año": 2024
+  },
+  {
+    "id": 2,
+    "titulo": "Roya Cafeto",
+    "categoria": "Plaga",
+    "subcategoria": "Hongo",
+    "cultivo": "Café",
+    "idioma": "es",
+    "region": "Andes",
+    "nivel_tecnico": "I",
+    "url_descarga": "https://ejemplo.com/roya_cafe.pdf",
+    "descripcion": "Manejo integrado de la roya.",
+    "palabras_clave": ["roya", "hongo", "café"],
+    "autor": "FAO",
+    "año": 2022
+  },
+  {
+    "id": 3,
+    "titulo": "Protocolo MM Montaña",
+    "categoria": "Protocolo",
+    "subcategoria": "Bio",
+    "cultivo": "Multi",
+    "idioma": "es",
+    "region": "LatAm",
+    "nivel_tecnico": "A",
+    "url_descarga": "https://ejemplo.com/mm_montana.pdf",
+    "descripcion": "Aplicación de MM en suelos.",
+    "palabras_clave": ["microorganismos", "suelo"],
+    "autor": "Low-Tech Lab",
+    "año": 2023
+  }
+]

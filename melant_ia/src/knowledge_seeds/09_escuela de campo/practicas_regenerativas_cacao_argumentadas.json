@@ -1,0 +1,34 @@
+{
+  "practicas_regenerativas_cacao": [
+    {
+      "nombre": "Poda Sanitaria y de Formación",
+      "procedimiento": "Realizar poda de formación en plantas jóvenes para definir la estructura del árbol. Cada 15 días, eliminar ramas y frutos enfermos, desinfectando herramientas entre cada árbol.",
+      "fundamento": "La poda mejora la aireación, reduce la humedad y la presión de enfermedades como Moniliasis y Escoba de Bruja, y favorece la entrada de luz para una mejor floración y fructificación.",
+      "contraste": "El manejo sin poda incrementa la incidencia de enfermedades y la dependencia de fungicidas químicos."
+    },
+    {
+      "nombre": "Cobertura Viva y Mulch Orgánico",
+      "procedimiento": "Establecer coberturas vivas de leguminosas (maní forrajero, centrosema) y aplicar mulch de hojas secas y restos de cacao en la base de los árboles.",
+      "fundamento": "La cobertura protege el suelo, reduce la erosión, mejora la retención de humedad y aporta nitrógeno, favoreciendo la vida microbiana y la fertilidad.",
+      "contraste": "El suelo desnudo se erosiona, pierde nutrientes y requiere más fertilizantes y riego."
+    },
+    {
+      "nombre": "Control Biológico de Plagas",
+      "procedimiento": "Liberar hormigas predadoras (Azteca, Crematogaster) y aplicar Beauveria bassiana en focos de plagas. Instalar trampas de feromonas para monitoreo de insectos clave.",
+      "fundamento": "El control biológico mantiene el equilibrio natural, reduce la presión de plagas y evita la resistencia que generan los insecticidas sintéticos.",
+      "contraste": "El uso de insecticidas de amplio espectro elimina enemigos naturales y puede provocar brotes de plagas secundarias."
+    },
+    {
+      "nombre": "Fertilización Orgánica con Compost y Bioles",
+      "procedimiento": "Aplicar compost maduro y biol diluido (2-5 L por 100 L de agua) alrededor de la base del árbol al inicio de la temporada de lluvias y cada 2 meses.",
+      "fundamento": "El compost y el biol aportan nutrientes de liberación lenta, mejoran la estructura del suelo y estimulan la vida microbiana, fortaleciendo la resistencia del cacao.",
+      "contraste": "Los fertilizantes químicos pueden salinizar el suelo y reducir la biodiversidad microbiana."
+    },
+    {
+      "nombre": "Monitoreo y Registro de Prácticas",
+      "procedimiento": "Llevar una bitácora de prácticas, observando cambios en el suelo, plantas y plagas. Ajustar el manejo según los resultados y registrar evidencias fotográficas.",
+      "fundamento": "El monitoreo permite la mejora continua, la trazabilidad y la adaptación a condiciones cambiantes, asegurando la sostenibilidad del sistema.",
+      "contraste": "El manejo convencional rara vez evalúa el impacto ecológico, limitándose a la producción inmediata."
+    }
+  ]
+}

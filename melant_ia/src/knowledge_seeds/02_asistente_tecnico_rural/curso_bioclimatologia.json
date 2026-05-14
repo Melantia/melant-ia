@@ -1,0 +1,116 @@
+{
+  "titulo": "Bioclimatología Agrícola y su Aplicación en la Toma de Decisiones",
+  "introduccion": "La bioclimatología estudia la interacción entre el clima y los seres vivos, especialmente los cultivos. Comprender las variables climáticas y sus efectos permite anticipar riesgos, optimizar labores agrícolas y mejorar la productividad. Un manejo adecuado del clima es clave para lograr sistemas agrícolas resilientes y eficientes.",
+  "estructura": [
+    "Módulo 1: Fundamentos de la Bioclimatología",
+    "Módulo 2: Variables Climáticas Clave y su Medición",
+    "Módulo 3: Indicadores Bioclimáticos y su Interpretación",
+    "Módulo 4: Estrategias de Adaptación y Herramientas de Apoyo"
+  ],
+  "modulos": [
+    {
+      "nombre": "Fundamentos de la Bioclimatología",
+      "items": [
+        {
+          "titulo": "¿Qué es la bioclimatología y por qué es importante?",
+          "objetivo": "Comprender el concepto de bioclimatología y su relevancia para la agricultura moderna.",
+          "concepto": "La bioclimatología analiza cómo el clima influye en los procesos biológicos de los cultivos y animales. Permite anticipar eventos críticos y adaptar las prácticas agrícolas para reducir riesgos y aprovechar oportunidades.",
+          "pasos_practicos": [
+            "Identificar los principales factores climáticos que afectan tu zona agrícola.",
+            "Registrar eventos climáticos extremos recientes (heladas, sequías, olas de calor).",
+            "Relacionar estos eventos con el rendimiento de tus cultivos."
+          ],
+          "ejemplo": "Un productor que monitorea el clima ajusta la fecha de siembra para evitar heladas, logrando mejores cosechas y menos pérdidas.",
+          "ejercicio_descargable": "Introduccion_Bioclimatologia.pdf",
+          "puntos_clave": [
+            "La bioclimatología es esencial para la gestión de riesgos y la planificación agrícola.",
+            "Anticipar eventos climáticos permite tomar decisiones informadas y reducir pérdidas."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Qué estudia la bioclimatología y cómo beneficia a la agricultura?",
+        "¿Por qué es importante anticipar eventos climáticos extremos?"
+      ]
+    },
+    {
+      "nombre": "Variables Climáticas Clave y su Medición",
+      "items": [
+        {
+          "titulo": "Temperatura, humedad, precipitación, radiación solar y viento",
+          "objetivo": "Identificar y medir las principales variables climáticas y comprender su impacto en el desarrollo de los cultivos.",
+          "concepto": "Cada variable climática afecta procesos como la germinación, floración, maduración y sanidad vegetal. El monitoreo sistemático permite prevenir daños, optimizar recursos y planificar labores agrícolas.",
+          "pasos_practicos": [
+            "Instalar termómetros, pluviómetros y sensores de humedad en el campo.",
+            "Registrar diariamente los datos climáticos en una hoja de control.",
+            "Analizar tendencias y relacionarlas con el estado de los cultivos."
+          ],
+          "ejemplo": "Un aumento inusual de temperatura acelera la maduración del cultivo, pero también incrementa el riesgo de estrés hídrico y plagas.",
+          "ejercicio_descargable": "Variables_Climaticas_Cultivo.pdf",
+          "puntos_clave": [
+            "El monitoreo climático es la base de la agricultura de precisión.",
+            "Medir variables permite anticipar problemas y ajustar manejos."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Cómo afecta la temperatura al crecimiento y sanidad de los cultivos?",
+        "¿Por qué es importante medir la humedad y la precipitación de manera regular?"
+      ]
+    },
+    {
+      "nombre": "Indicadores Bioclimáticos y su Interpretación",
+      "items": [
+        {
+          "titulo": "Grados Día Calor (GDC), punto de rocío y déficit de presión de vapor (VPD)",
+          "objetivo": "Aprender a calcular e interpretar indicadores bioclimáticos clave para la gestión agrícola.",
+          "concepto": "Los GDC permiten estimar el desarrollo fenológico de los cultivos. El punto de rocío indica riesgo de enfermedades fúngicas. El VPD ayuda a identificar estrés hídrico y ajustar el riego.",
+          "pasos_practicos": [
+            "Calcular GDC según temperatura base y umbral del cultivo (ver hoja de cálculo).",
+            "Usar el punto de rocío para programar riegos o aplicaciones fitosanitarias.",
+            "Monitorear el VPD para prevenir estrés en plantas y optimizar el uso del agua."
+          ],
+          "ejemplo": "Un técnico detectó alto VPD y recomendó riego anticipado, evitando pérdidas por marchitez y mejorando la calidad del cultivo.",
+          "ejercicio_descargable": "Calculo_Indicadores_Bioclimaticos.xlsx",
+          "puntos_clave": [
+            "Los indicadores bioclimáticos permiten tomar decisiones basadas en datos y no solo en la intuición.",
+            "Su interpretación adecuada mejora la eficiencia y reduce riesgos."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Para qué sirven los Grados Día Calor y cómo se calculan?",
+        "¿Cómo ayuda el punto de rocío en la prevención de enfermedades?",
+        "¿Qué indica un VPD alto y cómo actuar ante ello?"
+      ]
+    },
+    {
+      "nombre": "Estrategias de Adaptación y Herramientas de Apoyo",
+      "items": [
+        {
+          "titulo": "Uso de la bioclimatología y tecnología en la gestión agrícola",
+          "objetivo": "Aplicar el conocimiento bioclimático y las herramientas tecnológicas para optimizar labores y reducir riesgos.",
+          "concepto": "La integración de datos climáticos con inteligencia artificial y sistemas de alerta permite generar recomendaciones, ventanas óptimas de trabajo y respuestas rápidas ante eventos extremos.",
+          "pasos_practicos": [
+            "Configurar alertas automáticas en la app MELANT IA para eventos críticos (heladas, olas de calor, lluvias intensas).",
+            "Consultar reportes climáticos y recomendaciones personalizadas.",
+            "Evaluar el impacto de las acciones tomadas usando registros y fotos de campo."
+          ],
+          "ejemplo": "La app MELANT IA envía alertas automáticas ante riesgo de heladas, permitiendo proteger cultivos sensibles y reducir pérdidas.",
+          "ejercicio_descargable": "Herramientas_Bioclimatologia_MELANTIA.pdf",
+          "puntos_clave": [
+            "La tecnología potencia la toma de decisiones en tiempo real y mejora la resiliencia del agroecosistema.",
+            "Registrar y analizar resultados permite mejorar continuamente la gestión agrícola."
+          ]
+        }
+      ],
+      "banco_preguntas": [
+        "¿Qué ventajas ofrece la integración de IA y bioclimatología?",
+        "¿Cómo pueden las alertas automáticas reducir pérdidas y mejorar la eficiencia?",
+        "¿Por qué es importante registrar y analizar los resultados de las acciones tomadas?"
+      ]
+    }
+  ],
+  "conclusion": "La bioclimatología aplicada permite anticipar riesgos, optimizar recursos y mejorar la resiliencia de los sistemas agrícolas. El uso de herramientas tecnológicas, el monitoreo constante y la toma de decisiones informadas son claves para una agricultura moderna, eficiente y sostenible.",
+  "creditos": "Este curso es parte de MELANT IA. Material libre para productores y técnicos."
+}

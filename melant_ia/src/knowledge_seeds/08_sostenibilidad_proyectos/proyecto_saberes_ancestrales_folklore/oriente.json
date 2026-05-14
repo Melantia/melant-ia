@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Etsa y la Cerbatana",
+    "region": "Oriente - Shuar",
+    "categoria": "Mito",
+    "descripcion": "El mito Shuar sobre el equilibrio entre la caza y la repoblación de la selva."
+  },
+  {
+    "titulo": "La Kuillur (La Estrella)",
+    "region": "Oriente - Kichwa",
+    "categoria": "Relato",
+    "descripcion": "Relatos Kichwa sobre cómo los astros bajaron a la tierra."
+  },
+  {
+    "titulo": "El Arutam",
+    "region": "Oriente - Shuar",
+    "categoria": "Mito",
+    "descripcion": "La búsqueda de la fuerza espiritual en las cascadas sagradas."
+  },
+  {
+    "titulo": "Puni, el tigre de la noche",
+    "region": "Oriente",
+    "categoria": "Leyenda",
+    "descripcion": "Historias sobre hombres que se transforman en jaguares (chamanismo)."
+  }
+]

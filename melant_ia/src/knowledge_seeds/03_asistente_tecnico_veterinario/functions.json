@@ -1,0 +1,20 @@
+{
+  "modulo": "Salud Veterinaria",
+  "ai_logic": {
+    "priority": "Prevención y Diagnóstico Temprano",
+    "search_context": [
+      "Vademécum veterinario (dosis por especie/peso)",
+      "Signos clínicos de enfermedades comunes en el trópico",
+      "Calendarios de vacunación oficiales por país",
+      "Protocolos de bioseguridad en granjas"
+    ],
+    "emergency_mode": {
+      "trigger": "Síntomas agudos detectados",
+      "action": "Alertar contacto veterinario y aislar ejemplar"
+    }
+  },
+  "funciones_boton": {
+    "on_check_symptoms": "Iniciar escaneo visual con IA",
+    "on_vaccine_due": "Notificación push de recordatorio"
+  }
+}

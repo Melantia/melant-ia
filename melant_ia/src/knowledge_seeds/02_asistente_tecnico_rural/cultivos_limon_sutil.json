@@ -1,0 +1,125 @@
+{
+  "limon_sutil": {
+    "nombre_cientifico": "Citrus aurantifolia",
+    "descripcion": "Cítrico de gran importancia económica en Ecuador, especialmente en Manabí. Se siembra y cosecha en cualquier época del año, iniciando productividad a los 4 años. Requiere buen manejo fitosanitario para mantener rendimientos.",
+    "riego_optimo": "Cada 4-5 días en floración; 2-3 veces por semana en sequía. Sensible al estrés hídrico en etapa de cuajado de fruto.",
+    "npk_recomendado": { "N": 110, "P": 50, "K": 140 },
+    "plagas_comunes": [
+      {
+        "nombre": "Psílido Asiático de los Cítricos (Diaphorina citri)",
+        "control_organico": "Aceite de Neem, control biológico con Tamarixia radiata",
+        "control_quimico": "Imidacloprid, Tiametoxam",
+        "sintoma": "Brotes encrespados, presencia de cera blanca filamentosa; vector del HLB (Huanglongbing), la enfermedad más destructiva de los cítricos",
+        "nivel_peligrosidad": "Muy alto - cuarentena fitosanitaria"
+      },
+      {
+        "nombre": "Pulgón (Aphis spiraecola / Toxoptera aurantii)",
+        "control_organico": "Jabón potásico, extracto de ají, liberación de crisopas",
+        "control_quimico": "Pirimicarb, Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas, presencia de fumagina negra; mayor incidencia reportada en Manabí (60% de ataques)",
+        "nivel_peligrosidad": "Alto"
+      },
+      {
+        "nombre": "Ácaro de las yemas (Eriophyes sheldoni) / Ácaro rojo (Panonychus citri)",
+        "control_organico": "Aceite mineral, azufre mojable",
+        "control_quimico": "Abamectina, Propargita",
+        "sintoma": "Deformación de brotes y frutos, halo plateado en hojas, russet en cáscara",
+        "nivel_peligrosidad": "Alto"
+      },
+      {
+        "nombre": "Minador de los cítricos (Phyllocnistis citrella)",
+        "control_organico": "Aceite de Neem, poda de brotes afectados",
+        "control_quimico": "Abamectina, Spinosad",
+        "sintoma": "Galerías plateadas serpenteantes en el haz de hojas tiernas; enrollamiento y deformación foliar",
+        "nivel_peligrosidad": "Medio-Alto"
+      },
+      {
+        "nombre": "Mosca de la fruta (Anastrepha spp.)",
+        "control_organico": "Trampas con proteína hidrolizada, cobertura de frutos",
+        "control_quimico": "Spinosad cebo, Malatión",
+        "sintoma": "Frutos con puntos de oviposición, pudrición interna, caída prematura",
+        "nivel_peligrosidad": "Alto"
+      },
+      {
+        "nombre": "Mosca blanca (Dialeurodes citri)",
+        "control_organico": "Aceite de Neem, jabón potásico, Beauveria bassiana",
+        "control_quimico": "Imidacloprid, Buprofezin",
+        "sintoma": "Nubosidad blanquecina en haz, fumagina en envés, debilitamiento general",
+        "nivel_peligrosidad": "Medio"
+      },
+      {
+        "nombre": "Trips (Scirtothrips citri)",
+        "control_organico": "Aceite de Neem, depredadores naturales",
+        "control_quimico": "Spinosad, Abamectina",
+        "sintoma": "Cicatrices plateadas en cáscara del fruto, deformación de frutos jóvenes",
+        "nivel_peligrosidad": "Medio"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Gomosis (Phytophthora parasitica / P. citrophthora)",
+        "control": "Drenaje adecuado, fosetil-aluminio, metalaxil, pasta cúprica en heridas",
+        "sintoma": "Exudación de goma en tallo y ramas, pudrición de cuello y raíz, muerte regresiva"
+      },
+      {
+        "nombre": "Antracnosis (Colletotrichum gloeosporioides)",
+        "control": "Fungicidas cúpricos, mancozeb; eliminación de material muerto",
+        "sintoma": "Manchas oscuras deprimidas en frutos y ramas, muerte de ramillas, caída de frutos"
+      },
+      {
+        "nombre": "Mancha grasienta (Mycosphaerella citri)",
+        "control": "Cobre + aceite mineral, manejo de hojarasca",
+        "sintoma": "Manchas aceitosas amarillo-verdosas en haz de hoja, necrosis en envés"
+      },
+      {
+        "nombre": "Melanosis (Diaporthe citri)",
+        "control": "Fungicidas cúpricos preventivos, eliminación de madera muerta",
+        "sintoma": "Puntos pardos elevados en frutos, hojas y tallos; superficie corchosa y áspera"
+      },
+      {
+        "nombre": "Roña o verrugosis (Elsinoë fawcettii)",
+        "control": "Oxicloruro de cobre, mancozeb en épocas lluviosas",
+        "sintoma": "Protuberancias corchosas y verrugosas en frutos, hojas y ramas jóvenes"
+      },
+      {
+        "nombre": "Fumagina (Capnodium citri y otros)",
+        "control": "Control de insectos chupadores (vectores), aceite mineral",
+        "sintoma": "Capa negra pulverulenta sobre hojas y frutos que reduce fotosíntesis"
+      },
+      {
+        "nombre": "Huanglongbing HLB (Candidatus Liberibacter asiaticus)",
+        "control": "No tiene cura; erradicación de plantas enfermas, control estricto de Diaphorina citri",
+        "sintoma": "Amarillamiento asimétrico de hojas (moteado), frutos deformados y amargos, muerte regresiva; enfermedad devastadora sin tratamiento conocido"
+      }
+    ],
+    "captura_carbono": {
+      "valor_estimado_tCO2_ha_anio": 18,
+      "explicacion": "El cultivo de limón sutil puede capturar entre 15 y 20 toneladas de CO₂ por hectárea al año, dependiendo de la edad de los árboles, densidad de siembra y manejo. Este valor es relevante para proyectos de sostenibilidad y bonos de carbono."
+    },
+    "epoca_siembra_recomendada": "Todo el año (clima cálido húmedo); inicio de lluvias preferente. Inicio de producción a los 3-4 años.",
+    "calendario_lunar": "Siembra en luna creciente para mejor desarrollo vegetativo de raíces y brotes.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Insecticidas sistémicos y de contacto, fungicidas cúpricos y sistémicos, fertilizantes NPK fraccionados.",
+        "rendimiento_estimado": "30 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Biofertilizantes, Neem, cobre agrícola, control biológico con Trichoderma y Beauveria bassiana.",
+        "rendimiento_estimado": "22-24 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de frutos verdes-amarillos según mercado destino. Se cosecha en cualquier época del año.",
+    "labores_postcosecha": "Lavado, selección por calibre, tratamiento fungicida postcosecha, empaque en mallas o cajas.",
+    "zonas_produccion_ecuador": ["Manabí", "Los Ríos", "Guayas", "El Oro"],
+    "importancia_economica": "Primer productor de limón sutil en Ecuador es Manabí. Producción destinada a mercado interno y procesamiento industrial (jugos, aceites esenciales).",
+    "superficie_sembrada_ha_anio": {
+      "manabi": 12500,
+      "nacional": 29500,
+      "fuente": "MAG, INEC, Anuario Estadístico Agropecuario 2025"
+    },
+    "precio_carbono_usd_ton": {
+      "valor_estimado": 38,
+      "explicacion": "El precio internacional promedio de la tonelada de CO₂ capturada en mercados voluntarios de carbono oscila entre 30 y 45 USD/tCO₂ (2026). Para limón sutil se estima 38 USD/tCO₂ como referencia técnica."
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "currency_config": {
+    "name": "Melantio",
+    "symbol_description": "Rectángulo dorado con una M central",
+    "exchange_rate_usd": 0.01,
+    "min_unit": 1,
+    "visual_brand": {
+      "color_primary": "#D4AF37",
+      "color_gradient": ["#FDE68A", "#F59E0B", "#B45309"],
+      "border_color": "#B45309",
+      "letter_color": "#78350F",
+      "icon_svg": "/src/assets/ui/icons/melantio_gold.svg",
+      "icon_size_default": "40x30",
+      "icon_size_badge": "24x18",
+      "icon_size_button": "20x15",
+      "intended_emotion": "Valor acumulado, identidad comunitaria"
+    },
+    "implementation_guide": "/src/assets/ui/icons/IMPLEMENTACION_MELANTIO.md",
+    "ui_components": {
+      "badge": "MelantioBadge - Mostrar saldo pequeño",
+      "button": "BotonCanjemelantios - Botón de uso",
+      "animation": "AnimacionMelantioBrillante - Ganancia visual",
+      "panel": "AlforjaVirtualmelantios - Panel completo"
+    }
+  },
+  "business_rules": {
+    "user_max_payment_percentage": 0.5,
+    "store_subscription_payment_enabled": true,
+    "padrino_transfer_enabled": true,
+    "expiration_days": 90,
+    "melantio_to_usd_rate": 0.01,
+    "conversion_multiplier": 100,
+    "reward_points": {
+      "loyalty_6_months": {
+        "value": 100,
+        "categoria": "Fidelidad",
+        "description": "Suscripción activa por 6 meses",
+        "value_usd": 1.0,
+        "cascada": { "socio": 100, "padrino": 20, "presidente": 10 },
+        "total_cost_usd": 1.3
+      },
+      "folklore_story": {
+        "value": 25,
+        "categoria": "Rescate de Historia",
+        "description": "Cuento del Tesoro de los Abuelos",
+        "value_usd": 0.25,
+        "cascada": { "socio": 25, "padrino": 10, "presidente": 5 },
+        "total_cost_usd": 0.4
+      },
+      "new_word": {
+        "value": 5,
+        "categoria": "Aporte al Diccionario",
+        "description": "Término para el diccionario intercultural",
+        "value_usd": 0.05,
+        "cascada": { "socio": 5, "padrino": 2, "presidente": 1 },
+        "total_cost_usd": 0.08
+      },
+      "health_record": {
+        "value": 10,
+        "categoria": "Salud Comunitaria",
+        "description": "Registro de pacientes en prevención",
+        "value_usd": 0.1,
+        "cascada": { "socio": 10, "padrino": 5, "presidente": 2 },
+        "total_cost_usd": 0.17
+      },
+      "new_affiliate": {
+        "value": 0,
+        "categoria": "Primer Registro de Afiliado",
+        "description": "Bono por incorporar nuevo afiliado",
+        "value_usd": 0.7,
+        "cascada": { "socio": 0, "padrino": 50, "presidente": 20 },
+        "total_cost_usd": 0.7
+      }
+    }
+  },
+  "usage_rules": {
+    "store_payment": {
+      "enabled": true,
+      "max_percentage": 0.5,
+      "description": "El socio paga hasta 50% en Melantios, resto en efectivo"
+    },
+    "app_subscription": {
+      "enabled": true,
+      "max_percentage": 0.5,
+      "monthly_cost_usd": 25,
+      "description": "Cobertura parcial de mensualidad de app"
+    },
+    "padrino_transfer": {
+      "enabled": true,
+      "description": "Padrino transfiere Melantios a nuevos socios para incivar entrada"
+    }
+  },
+  "financial_safety": {
+    "encaje_rules": {
+      "description": "Banco Central de Melantia monitorea circulante vs. reserva real",
+      "reserve_multiplier": 1.2,
+      "inflation_alert_threshold": 0.7
+    },
+    "fee_structure": {
+      "store_processing": 0.0,
+      "p2p_transfer": 0.0,
+      "app_subscription_payment": 0.0,
+      "note": "Sin comisión inmediata; modelo sostenible por volumen + suscripciones"
+    }
+  },
+  "estrategia_alcancia_navideña": {
+    "nombre": "La Gran Cosecha Navideña",
+    "tipo_cuenta": "Alcancía_Virtual_Bloqueada",
+    "proposito": "Transformar Melantios en Fondo de Ahorro para Navidad",
+    "periodo_acumulacion": "Enero - Noviembre",
+    "periodo_liberacion": "Diciembre",
+    "regla_de_oro": "Acumulación obligatoria, retiro solo en diciembre",
+    "beneficios_para_user": [
+      "No puede gastar los Melantios durante el año (elimina tentación)",
+      "Sienten que 'siembran para Navidad' (psicología positiva)",
+      "Reciben 'aguinaldo' en diciembre justo cuando más lo necesitan",
+      "Dinero real para regalos, comida, insumos para la familia"
+    ],
+    "beneficios_para_melantia": [
+      "Retención de capital por 11 meses (mejora cash flow)",
+      "Tiempo para auditar historias antes de que sean 'dinero real'",
+      "Previene estafas programadas: 11 meses para validar integridad",
+      "Picos de venta masivos en diciembre en tiendas afiliadas",
+      "Psicología: usuario no se siente 'engañado' por límite 50%"
+    ],
+    "mecanica": {
+      "paso_1_usuario_gana": "Usuario rescata historia o se mantiene fiel 6 meses",
+      "paso_2_melantios_a_alcancia": "Los Melantios van DIRECTAMENTE a alcancía (no a saldo disponible)",
+      "paso_3_acumulacion_anual": "Durante todo el año acumula sin poder tocar",
+      "paso_4_diciembre_liberacion": "Diciembre: se abre la alcancía automáticamente",
+      "paso_5_canje_en_tiendas": "Usuario usa los Melantios en tiendas afiliadas (max 50% de compra)"
+    },
+    "impacto_de_flujo": {
+      "enero_noviembre": "ONG retiene $X en capital virtual, cobra suscripciones en efectivo",
+      "diciembre": "Pico de gasto en tiendas afiliadas, dinero real entra en circuito",
+      "beneficio_financiero": "Financiamiento de 11 meses GRATIS de usuarios antes de liberar capital"
+    },
+    "narrativa_don_eloy": "¡Vea, socio, se me puso la piel de gallina! Esto sí es pensar en la familia. Imagínese al vecino que todo el año se esmeró cuidando la memoria de los abuelos... llega diciembre y, ¡zas!, abre su alcancía de Melantia y ya tiene para el regalito de los nietos o para el quintal de arroz de la cena. Es como una siembra que se cosecha justo cuando más se necesita. ¡Eso es hacer comunidad de la buena!"
+  },
+  "roadmap_expansion": {
+    "phase_current": "Digital_QR_Only",
+    "phase_timeline": "2026-2027",
+    "physical_card_threshold": {
+      "active_stores": 500,
+      "total_melantios_circulation": 50000,
+      "description": "Cuando alcancemos estas métricas, lanzar tarjeta física"
+    },
+    "card_functionality": {
+      "type": "Rechargeable_Shopping_Card",
+      "compatibility": "NFC_and_Chip",
+      "offline_capability": "Limited (sync on next network)",
+      "benefits": [
+        "Inclusión para socios sin datos móviles",
+        "Experiencia familiar similar a tarjeta bancaria",
+        "Expansión a zonas rurales sin cobertura 4G"
+      ]
+    },
+    "target_expansion": {
+      "stores_phase_1": 100,
+      "stores_phase_2": 500,
+      "stores_phase_3": 1000,
+      "store_types": [
+        "Almacenes Rurales (Don Ángel)",
+        "Tiendas de Herramientas Agrícolas",
+        "Farmacias Comunitarias",
+        "Cooperativas de Productores"
+      ]
+    }
+  },
+  "don_eloy_closing_speech": {
+    "setting": "Cierre del ecosistema Melantio",
+    "tone": "Optimismo campesino, visión de futuro",
+    "quote": "¡Eso es pensar en grande, socio! Mire cómo se arma la cadena: el joven rescata la historia del abuelo, gana sus Melantios, va donde Don Ángel y paga la mitad de sus herramientas con eso. Don Ángel, en lugar de preocuparse, usa esos mismos Melantios para pagar su puesto aquí en Melantia. ¡La plata no se va del pueblo, se queda dando vueltas entre nosotros! Y espérese a que tengamos las tarjetas... ¡ahí sí que nadie nos para! ¡El Melantio va a ser más fuerte que el sol de mediodía!"
+  },
+  "implementation_status": {
+    "created_date": "2026-05-09",
+    "version": "2.0_con_Alcancia_Navideña",
+    "location": "Módulo de Afiliados > Billetera Virtual > Alcancía de Navidad",
+    "validation_rule": "Prueba de Trabajo: Historias bloqueadas en alcancía hasta validación y diciembre",
+    "funciones_implementadas": [
+      "acumularEnAlcanciaNavideña(melantios, tipo)",
+      "liberarAlcanciaNavideña() [Diciembre automático]",
+      "obtenerEstadoAlcancia() [Info de bloqueo]",
+      "auditarAlcancia(filtroMes) [Verificación de integridad]"
+    ],
+    "next_steps": [
+      "Integrar UI de Alcancía en Registro de Evidencia",
+      "Comando de voz: 'Mi alcancía de Navidad' + 'Cuándo se abre'",
+      "Notificación automática el 1 de diciembre (liberación)",
+      "Dashboard administrativo con tasa de acumulación por mes",
+      "Reportes de auditoría: historias flagged para revisión manual"
+    ]
+  },
+  "don_eloy_alcancia_speech": {
+    "setting": "Cuando usuario gana Melantios (enero-noviembre)",
+    "tone": "Calidez, visión de futuro, conexión emocional con Navidad",
+    "quote": "¡Vea, socio, se me puso la piel de gallina! Esto sí es pensar en la familia. Imagínese al vecino que todo el año se esmeró cuidando la memoria de los abuelos... llega diciembre y, ¡zas!, abre su alcancía de Melantia y ya tiene para el regalito de los nietos o para el quintal de arroz de la cena. Es como una siembra que se cosecha justo cuando más se necesita. ¡Eso es hacer comunidad de la buena!"
+  },
+  "don_eloy_tesorero_speech": {
+    "setting": "Explicando la equivalencia monetaria a los socios",
+    "tone": "Educativo, confianza, transparencia",
+    "quote": "¡Vea qué clarito está el panorama, socio! Aquí no hay engaños: 100 Melantios son un dolarito de los que brillan. Si el joven se esmera y rescata cuatro historias de los abuelos, ya tiene un dólar en su alforja para ayudarse con el abono. Y el Padrino, por estar ahí guiándolo, también ve caer sus centavitos. ¡Es una economía donde el conocimiento se vuelve pan para la mesa!"
+  }
+}

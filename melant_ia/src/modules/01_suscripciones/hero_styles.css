@@ -1,0 +1,45 @@
+
+
+/* HERO CONTENEDOR - El área principal de la cabecera */
+.hero {
+    height: 65vh;
+    background: url("img/melant-hero.png") center/cover;
+    position: relative;
+    overflow: hidden;
+}
+/* OVERLAY PROFESIONAL - La capa que oscurece el fondo para que el texto resalte */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(12, 26, 14, 0.7),
+        rgba(12, 26, 14, 0.85)
+    );
+    backdrop-filter: blur(2px);
+}
+/* CONTENIDO - Donde va el nombre y el eslogan */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+/* TÍTULO Y ESLOGAN */
+.brand-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.brand-slogan {
+    font-size: 16px;
+    color: #a0aec0; /* Un gris azulado suave */
+    margin-top: 5px;
+}

@@ -1,0 +1,65 @@
+{
+  "titulo": "Sanidad, Bienestar y Manejo Animal del Ganado Bovino",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de sanidad animal",
+      "objetivo": "Comprender los principios básicos de la sanidad animal y su impacto en la productividad.",
+      "contenido": [
+        "Conceptos de salud y enfermedad",
+        "Importancia de la sanidad en la producción",
+        "Factores que afectan la salud animal"
+      ]
+    },
+    {
+      "nombre": "Bienestar animal y manejo ético",
+      "objetivo": "Identificar los principios del bienestar animal y su aplicación en la ganadería bovina.",
+      "contenido": [
+        "Cinco libertades del bienestar animal",
+        "Comportamiento bovino y manejo ético",
+        "Indicadores de bienestar animal"
+      ]
+    },
+    {
+      "nombre": "Manejo sanitario preventivo y control de enfermedades",
+      "objetivo": "Aplicar medidas preventivas y de control para mantener la salud del hato.",
+      "contenido": [
+        "Vacunación y desparasitación",
+        "Bioseguridad y control de ingreso",
+        "Identificación y manejo de enfermedades comunes"
+      ]
+    },
+    {
+      "nombre": "Prácticas de manejo y reducción del estrés",
+      "objetivo": "Implementar buenas prácticas de manejo para reducir el estrés y mejorar la productividad.",
+      "contenido": [
+        "Manejo en corrales y transporte",
+        "Técnicas de sujeción y manipulación",
+        "Prevención de lesiones y accidentes"
+      ]
+    },
+    {
+      "nombre": "Práctica: Plan sanitario y monitoreo de bienestar en campo",
+      "descripcion": "Guía paso a paso para elaborar y aplicar un plan sanitario y monitorear el bienestar animal.",
+      "pasos": [
+        "Diagnóstico sanitario inicial",
+        "Elaboración del calendario sanitario",
+        "Registro de intervenciones y observaciones",
+        "Evaluación de indicadores de bienestar",
+        "Ajuste de manejo según resultados"
+      ],
+      "recomendaciones": [
+        "Consultar con un veterinario para el diseño del plan sanitario",
+        "Registrar datos para análisis y mejora continua"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Por qué es importante la sanidad animal en la producción bovina?",
+    "¿Cuáles son las cinco libertades del bienestar animal?",
+    "¿Qué medidas preventivas ayudan a controlar enfermedades?",
+    "¿Cómo se puede reducir el estrés en el manejo del ganado?",
+    "¿Qué indicadores se utilizan para evaluar el bienestar animal?"
+  ]
+}

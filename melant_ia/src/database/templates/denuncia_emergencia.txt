@@ -1,0 +1,15 @@
+
+> *ASUNTO: DENUNCIA POR [TIPO_DELITO]*
+> *A LA FISCALÍA GENERAL DEL ESTADO / UNIDAD JUDICIAL*
+> Yo, *[NOMBRE_COMPLETO], con cédula *[CEDULA]*, domiciliado en *[UBICACION_FINCA]*, comparezco ante usted para denunciar los hechos ocurritos el *[FECHA]* a las *[HORA]* en el sector de *[COORDENADAS_GPS]**.
+> *RELATO DE LOS HECHOS:*
+> [DESCRIPCION_DETALLADA]
+> *DERECHOS SOLICITADOS:*
+> Al amparo del Art. 422 y 442 del COIP, solicito se recepten las investigaciones correspondientes. Al tratarse de un delito de acción pública, presento esta denuncia *sin patrocinio legal*, conforme lo permite la ley para el inicio de la investigación previa.
+> *PRUEBAS ADJUNTAS:*
+>  * Fotos/Videos registrados en Melant IA con metadatos de ubicación.
+>  * Certificado de linderos generado por el módulo GPS.
+
+> "Amparado en los Artículos 421 y 422 del Código Orgánico Integral Penal (COIP), presento esta denuncia de forma directa. Solicito se asigne un fiscal para iniciar la investigación previa y se dicten medidas de protección para evitar represalias en mi contra o mi familia."
+
+> Firma: __________

@@ -1,0 +1,83 @@
+{
+  "maiz_duro": {
+    "nombre_cientifico": "Zea mays L. (var. Duro)",
+    "descripcion": "Cereal anual de gran importancia económica y alimentaria en Ecuador. Base de la industria avícola y de consumo humano. Cultivado principalmente en la Costa (Guayas, Manabí, Los Ríos).",
+    "tipo_suelo_recomendado": "Franco arenoso a franco arcilloso, profundo, bien drenado, pH 5.5-7.0. Evitar suelos salinos o encharcados.",
+    "ciclo_cultivo_dias": 120,
+    "plagas_comunes": [
+      {
+        "nombre": "Gusano cogollero (Spodoptera frugiperda)",
+        "control_organico": "Bacillus thuringiensis, trampas de feromonas",
+        "control_quimico": "Lambda cihalotrina",
+        "sintoma": "Perforaciones en hojas y brotes, defoliación."
+      },
+      {
+        "nombre": "Barrenador del tallo (Diatraea saccharalis)",
+        "control_organico": "Trichogramma, manejo de residuos",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Tallos perforados, caídas de plantas, espigas blancas."
+      },
+      {
+        "nombre": "Pulgón del maíz (Rhopalosiphum maidis)",
+        "control_organico": "Jabón potásico, extracto de ajo",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas, presencia de melaza y fumagina."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya (Puccinia sorghi)",
+        "control": "Fungicidas cúpricos, manejo de humedad",
+        "sintoma": "Pústulas anaranjadas en hojas, defoliación."
+      },
+      {
+        "nombre": "Tizón foliar (Exserohilum turcicum)",
+        "control": "Rotación de cultivos, fungicidas",
+        "sintoma": "Manchas alargadas marrones en hojas, reducción de área fotosintética."
+      },
+      {
+        "nombre": "Podredumbre de mazorca (Fusarium spp.)",
+        "control": "Manejo de humedad, rotación de cultivos",
+        "sintoma": "Mazorca con granos podridos, micelio rosado o blanco."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, bajo macollamiento."
+      },
+      {
+        "elemento": "Fósforo",
+        "sintoma": "Plantas pequeñas, raíces poco desarrolladas."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, tallos débiles."
+      }
+    ],
+    "manejo_convencional": "Fertilización química, control químico de plagas y enfermedades, siembra mecanizada, riego suplementario en sequía.",
+    "manejo_organico": "Compost, abonos verdes, control biológico, siembra directa, manejo de agua eficiente.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, rotación con leguminosas, uso de abonos verdes y biofertilizantes.",
+    "hectareas_sembradas_manabi": 25000,
+    "hectareas_sembradas_ecuador": 350000,
+    "captura_carbono_ton_ha_anio": 3.5,
+    "precio_carbono_usd_ton": 38,
+    "labores_cosecha": "Corte manual o mecanizado de mazorcas maduras, secado inmediato para evitar brotado.",
+    "labores_postcosecha": "Desgrane, limpieza, secado a 13% humedad, almacenamiento en silos o costales ventilados.",
+    "epocas_siembra": [
+      {
+        "region": "Costa",
+        "meses": ["enero", "febrero", "marzo", "abril", "diciembre"]
+      },
+      {
+        "region": "Sierra",
+        "meses": ["septiembre", "octubre", "noviembre", "diciembre"]
+      }
+    ],
+    "calendario_lunar": {
+      "siembra": "Preferible en cuarto creciente para mejor vigor inicial.",
+      "fertilizacion": "Luna llena favorece absorción de nutrientes.",
+      "cosecha": "Cuarto menguante reduce humedad en grano."
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "configuracion_general": {
+    "app_name": "MELANTIA",
+    "modo": "Offline",
+    "formato_audio": "mp3"
+  },
+  "interfaz_inicio": {
+    "registro": {
+      "voz": "Melantia",
+      "genero": "Femenina"
+    },
+    "notificaciones": {
+      "voz": "Melantia",
+      "genero": "Femenina"
+    }
+  },
+  "modulos": [
+    {
+      "id": 1,
+      "titulo": "Sistema de Suscripciones",
+      "voz_principal": "Melantio",
+      "genero": "Masculina",
+      "sub_items": {
+        "Melantio (Sistema de Recompensas)": "Melantio"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Asistente Técnico Rural",
+      "voz_principal": "Fabrizzio",
+      "genero": "Masculina"
+    },
+    {
+      "id": 3,
+      "titulo": "Asistente Técnico Veterinario",
+      "voz_tecnica": "Jorge",
+      "genero_tecnico": "Masculina",
+      "Medicina y Salud Veterinaria": "Valentina",
+      "genero_salud_veterinaria": "Femenina"
+    },
+    {
+      "id": 4,
+      "titulo": "Agricultura Digital",
+      "voz_principal": "Fabrizzio",
+      "genero": "Masculina",
+      "items": ["Agricultura de precisión", "GPS (Medición de Terrenos)"]
+    },
+    {
+      "id": 5,
+      "titulo": "Gestión Productiva",
+      "voz_principal": "Angel",
+      "genero": "Masculina",
+      "items": [
+        "Gestión de Granjas",
+        "Gestión de Fincas",
+        "Gestión Empresarial"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Negocios Rurales",
+      "asignacion": {
+        "Tienda MELANTIA": "Don Eloy",
+        "Ventas de Gestión Productiva": "Angel",
+        "Bienes Raíces Rurales": "Don Eloy"
+      }
+    },
+    {
+      "id": 7,
+      "titulo": "Emprendedor y Finanzas Personales",
+      "voz_principal": "Angel",
+      "genero": "Masculina",
+      "items": ["Emprendimientos", "Finanzas Personales"]
+    },
+    {
+      "id": 8,
+      "titulo": "Sostenibilidad y Proyectos",
+      "asignacion": {
+        "Proyecto Captura de Carbono": "Paulette",
+        "Proyecto Saberes Ancestrales y Folklore": "Don Eloy",
+        "El Tesoro de los Abuelos (Memoria Viva)": "Don Eloy",
+        "Herbario Memoria Cultural": "Don Eloy"
+      }
+    },
+    {
+      "id": 9,
+      "titulo": "Escuela de Campo",
+      "voz_principal": "Fabrizzio",
+      "genero": "Masculina",
+      "items": ["Cursos", "Prácticas Regenerativas"]
+    },
+    {
+      "id": 10,
+      "titulo": "Mi Comunidad Virtual",
+      "asignacion": {
+        "Ciudadano Rural": "Don Eloy",
+        "Asesoría Legal": "Dr. Pablo"
+      },
+      "herramienta_especial": {
+        "Walkie Talkie": "Don Eloy"
+      }
+    },
+    {
+      "id": 11,
+      "titulo": "Asistente Preventivo de Salud Rural",
+      "voz_principal": "Paulette",
+      "genero": "Femenina"
+    },
+    {
+      "id": 12,
+      "titulo": "Registro Evidencias y Documentos",
+      "voz_principal": "Melantia",
+      "genero": "Femenina"
+    }
+  ]
+}

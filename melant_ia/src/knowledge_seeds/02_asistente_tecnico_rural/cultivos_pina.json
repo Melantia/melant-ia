@@ -1,0 +1,72 @@
+{
+  "pina": {
+    "nombre_cientifico": "Ananas comosus",
+    "descripcion": "Fruta tropical de exportación, especialmente la variedad MD-2 (Golden). Ecuador exporta principalmente a Europa y EE.UU. Cultivo de ciclo perenne con alta demanda.",
+    "riego_optimo": "Riego por goteo o aspersión; requiere 1,000-1,500 mm/año. Sensible a encharcamiento.",
+    "npk_recomendado": { "N": 200, "P": 50, "K": 300 },
+    "plagas_comunes": [
+      {
+        "nombre": "Cochinilla harinosa (Dysmicoccus brevipes)",
+        "control_organico": "Aceite mineral, jabón potásico, Beauveria bassiana",
+        "control_quimico": "Clorpirifos, Dimetoato",
+        "sintoma": "Masas blancas algodonosas en base de hojas y raíces; transmite el virus del marchitamiento (Wilt)"
+      },
+      {
+        "nombre": "Sinfílidos (Scutigerella immaculata)",
+        "control_organico": "Rotación de cultivos, Metarhizium",
+        "control_quimico": "Clorpirifos en suelo",
+        "sintoma": "Daño en raíces, plantas con aspecto clorótico y débil"
+      },
+      {
+        "nombre": "Nematodos (Rotylenchulus reniformis, Meloidogyne spp.)",
+        "control_organico": "Biofumigación, nemátodos benéficos, rotación",
+        "control_quimico": "Nemacur, Carbofurán (restringido)",
+        "sintoma": "Nódulos en raíces, marchitez, reducción de crecimiento y calibre de fruto"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Fusariosis (Fusarium subglutinans)",
+        "control": "Semilla saneada, fungicidas al suelo antes de siembra, drenaje adecuado",
+        "sintoma": "Pudrición interna del fruto (corazón negro), frutos deformados, pérdidas en poscosecha"
+      },
+      {
+        "nombre": "Pudrición del corazón (Phytophthora nicotianae / P. parasitica)",
+        "control": "Drenaje adecuado, metalaxil, evitar exceso de riego",
+        "sintoma": "Pudrición de la corona y hojas centrales, olor fétido, colapso de la planta"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año con riego; preferente inicio de lluvias.",
+    "calendario_lunar": "Siembra en luna creciente para mejor desarrollo vegetativo.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Inducción floral con etileno (ethephon o carburo), fertilización foliar y edáfica, fungicidas.",
+        "rendimiento_estimado": "60-80 t/ha (MD-2 exportación)"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico; inducción con etileno natural.",
+        "rendimiento_estimado": "40-55 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual cuando el fruto alcanza 30-35% de color amarillo en la cáscara (según mercado destino).",
+    "labores_postcosecha": "Clasificación por calibre, tratamiento fungicida, empaque en cajas individuales o a granel.",
+    "zonas_produccion_ecuador": [
+      "Los Ríos",
+      "Cotopaxi (El Corazón)",
+      "Pichincha",
+      "Esmeraldas"
+    ],
+    "importancia_economica": "Ecuador exporta piña MD-2 como producto en crecimiento. Mercado europeo y norteamericano con precios estables.",
+    "captura_carbono_ton_ha_anio": 2.4,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 1500,
+    "densidad_siembra": "50000-60000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad.",
+    "bibliografia": ["Manual de Piña INIAP", "FAO Piña Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Frutales",
+      "Postcosecha de Frutas Frescas"
+    ],
+    "variedades": ["MD-2", "Perolera", "Cayena Lisa"]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "ficha_gestion_integral_platano_melant_ia": {
+    "identificacion": {
+      "cultivo": "Plátano",
+      "variedad": "[Nombre de la variedad]",
+      "lote": "[Identificación del lote o sector]",
+      "responsable": "[Nombre del productor]",
+      "fecha_inicio_ciclo": "[DD/MM/AAAA]"
+    },
+    "registro_fases_cultivo": [
+      {
+        "fase": "Establecimiento y Siembra",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Selección y pelado de colinos","guia_tecnica": "Limpiar colinos, desinfectar y pelar hasta tejido sano.","alerta_app": "🔪 Desinfecta cuchillo y selecciona colinos sanos.","observaciones": ""},
+          {"tarea": "Desinfección mineral","guia_tecnica": "Sumergir colinos en caldo sulfocálcico al 10% por 20 min.","alerta_app": "🧪 Sella heridas y elimina plagas con desinfección mineral.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Manejo Vegetativo",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Aplicación de Bocashi","guia_tecnica": "Aplicar 2kg de Bocashi maduro en corona o fondo del hoyo.","alerta_app": "🌱 Aplica Bocashi y activa la vida del suelo.","observaciones": ""},
+          {"tarea": "Descoline técnico","guia_tecnica": "Mantener secuencia madre-hijo-nieto, eliminar el resto.","alerta_app": "🌬️ Ralea para racimos grandes y sanos.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Floración y Fructificación",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Cirugía de hoja y deshoje","guia_tecnica": "Eliminar manchas de Sigatoka y hojas secas.","alerta_app": "🔍 Revisa hojas 2 y 3 para control de Sigatoka.","observaciones": ""},
+          {"tarea": "Enfundado y protección de fruto","guia_tecnica": "Colocar funda impregnada con extracto de ajo-ají.","alerta_app": "🍌 Protege el racimo con funda y extracto natural.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Cosecha y Postcosecha",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Cosecha y registro","guia_tecnica": "Cortar racimos maduros, registrar peso y calidad.","alerta_app": "📊 Registra tus kilos y calidad de racimo.","observaciones": ""},
+          {"tarea": "Reincorporación de raquis y residuos","guia_tecnica": "Picar y reincorporar raquis y pseudotallo al suelo.","alerta_app": "♻️ Devuelve nutrientes al suelo con residuos picados.","observaciones": ""}
+        ]
+      }
+    ],
+    "registro_insumos_herramientas": [
+      {"insumo": "Bocashi","dosis": "[kg/planta]","frecuencia": "[trimestral]"},
+      {"insumo": "Caldo sulfocálcico","dosis": "[ml/litro]","frecuencia": "[según fase]"}
+    ],
+    "indicadores_sostenibilidad": {"biomasa_reincorporada_kg": "[Total ciclo]","co2_secuestrado_kg": "[Cálculo automático: biomasa x 0.42]","dinero_ahorrado_usd": "[Estimado por sustitución de insumos sintéticos]"},
+    "historial_intervenciones": [{"fecha": "[DD/MM/AAAA]","actividad": "[Ej. Poda, aplicación de Bocashi, cosecha]","resultado": "[Observaciones de efecto o mejora]"}]
+  }
+}

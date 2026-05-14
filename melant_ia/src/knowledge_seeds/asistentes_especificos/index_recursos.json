@@ -1,0 +1,229 @@
+{
+  "es": [
+    {
+      "titulo": "Prevención Básica en Salud Comunitaria",
+      "autor": "Equipo MELANT IA",
+      "idioma": "es",
+      "nivel": "basico",
+      "tipo": "curso",
+      "descripcion": "Curso introductorio sobre los principios y prácticas esenciales de la medicina preventiva en comunidades rurales. Incluye higiene, vacunación, alimentación saludable y prevención de enfermedades infecciosas.",
+      "url_archivo": "medicina_preventiva/es/curso_prevencion_basica.pdf",
+      "qr": "medicina_preventiva/es/curso_prevencion_basica_qr.png",
+      "pin": "123456",
+      "fecha": "2026-04-21",
+      "tags": [
+        "higiene",
+        "vacunación",
+        "alimentación",
+        "prevención"
+      ]
+    },
+    {
+      "id": "SC_001",
+      "titulo": "Guía Rápida: Enfermedades Comunes y Señales de Alarma",
+      "autor": "Equipo MELANT IA",
+      "idioma": "es",
+      "nivel": "basico",
+      "tipo": "manual",
+      "descripcion": "Manual para identificar síntomas frecuentes y señales de alarma en salud. Incluye enfermedades comunes, síntomas graves y consideraciones especiales en niños.",
+      "temas": [
+        "resfriado",
+        "gripe",
+        "gastroenteritis",
+        "alergias",
+        "infección urinaria",
+        "infarto",
+        "ACV",
+        "dificultad respiratoria",
+        "sepsis",
+        "shock",
+        "niños"
+      ],
+      "contenido": {
+        "enfermedades_comunes": [
+          {
+            "nombre": "Resfriado Común / Gripe",
+            "sintomas": [
+              "Fiebre moderada",
+              "escalofríos",
+              "fatiga",
+              "congestión nasal",
+              "dolor de garganta",
+              "tos"
+            ]
+          },
+          {
+            "nombre": "Gastroenteritis",
+            "sintomas": [
+              "Dolor abdominal intenso",
+              "diarrea prolongada",
+              "náuseas",
+              "vómitos"
+            ]
+          },
+          {
+            "nombre": "Alergias",
+            "sintomas": [
+              "Estornudos",
+              "picazón en ojos o piel",
+              "erupciones cutáneas",
+              "hinchazón leve"
+            ]
+          },
+          {
+            "nombre": "Infecciones Urinarias",
+            "sintomas": [
+              "Ardor al orinar",
+              "dolor persistente",
+              "necesidad frecuente de orinar"
+            ]
+          }
+        ],
+        "sintomas_graves": [
+          {
+            "nombre": "Infarto",
+            "sintomas": [
+              "Dolor de pecho opresivo",
+              "dolor en mandíbula o brazo izquierdo",
+              "sudor frío",
+              "náuseas"
+            ]
+          },
+          {
+            "nombre": "ACV",
+            "sintomas": [
+              "Debilidad súbita en un lado",
+              "dificultad para hablar o entender"
+            ]
+          },
+          {
+            "nombre": "Dificultad Respiratoria",
+            "sintomas": [
+              "Falta de aire súbita",
+              "uso de músculos del cuello",
+              "incapacidad para terminar frases"
+            ]
+          },
+          {
+            "nombre": "Trombosis Venosa Profunda",
+            "sintomas": [
+              "Hinchazón y dolor en una pierna",
+              "calor localizado"
+            ]
+          },
+          {
+            "nombre": "Sepsis/Meningitis",
+            "sintomas": [
+              "Fiebre muy alta",
+              "rigidez de cuello",
+              "confusión",
+              "manchas en la piel"
+            ]
+          },
+          {
+            "nombre": "Shock",
+            "sintomas": [
+              "Piel pálida y fría",
+              "taquicardia",
+              "pérdida de conocimiento"
+            ]
+          }
+        ],
+        "ninos": [
+          {
+            "nombre": "Señales clave en niños",
+            "sintomas": [
+              "Hundimiento de costillas al respirar",
+              "irritabilidad extrema",
+              "incapacidad para beber líquidos"
+            ]
+          }
+        ],
+        "banderas_rojas": [
+          "Pérdida de peso inexplicable",
+          "fiebre persistente con sudoración nocturna"
+        ]
+      },
+      "url_archivo": "medicina_preventiva/es/manual_sintomas_comunes_y_alarma.pdf",
+      "qr": "medicina_preventiva/es/manual_sintomas_comunes_y_alarma_qr.png",
+      "pin": "SC2026",
+      "fecha": "2026-04-21",
+      "tags": [
+        "sintomas",
+        "alarma",
+        "manual",
+        "descargable"
+      ]
+    },
+    {
+      "id": "PA_001",
+      "titulo": "Soporte Vital Básico y RCP",
+      "autor": "Cruz Roja / Guías Internacionales",
+      "idioma": "es",
+      "nivel_prevencion": "Primaria / Emergencia",
+      "tipo_recurso": "Curso Práctico",
+      "temas": [
+        "RCP",
+        "atragantamiento",
+        "hemorragias",
+        "desmayos"
+      ],
+      "descripcion": "Manual esencial para actuar en los primeros minutos de una emergencia médica antes de que llegue la ayuda profesional.",
+      "nivel": "basico",
+      "tipo": "manual",
+      "url_archivo": "",
+      "qr": "",
+      "pin": "",
+      "fecha": "2026-04-21",
+      "tags": []
+    },
+    {
+      "id": "PA_003",
+      "titulo": "Primeros Auxilios en Áreas Remotas",
+      "autor": "Manual de Medicina de Montaña",
+      "idioma": "es",
+      "nivel_prevencion": "Secundaria / Supervivencia",
+      "tipo_recurso": "Manual Técnico",
+      "temas": [
+        "picaduras de animales",
+        "fracturas",
+        "hipotermia",
+        "transporte de heridos"
+      ],
+      "descripcion": "Estrategias de auxilio médico cuando los servicios de emergencia están a más de 2 horas de distancia.",
+      "nivel": "basico",
+      "tipo": "manual",
+      "url_archivo": "",
+      "qr": "",
+      "pin": "",
+      "fecha": "2026-04-21",
+      "tags": []
+    },
+    {
+      "id": "PA_002",
+      "titulo": "Primeros Auxilios en Bebés y Niños",
+      "autor": "Asociación Española de Pediatría",
+      "idioma": "es",
+      "nivel_prevencion": "Primaria",
+      "tipo_recurso": "Guía de Cuidados",
+      "temas": [
+        "fiebre",
+        "quemaduras",
+        "caídas",
+        "intoxicaciones"
+      ],
+      "descripcion": "Instrucciones paso a paso para el manejo de accidentes domésticos comunes en la infancia.",
+      "nivel": "basico",
+      "tipo": "manual",
+      "url_archivo": "",
+      "qr": "",
+      "pin": "",
+      "fecha": "2026-04-21",
+      "tags": []
+    }
+  ],
+  "en": [],
+  "qu": [],
+  "sh": [],
+  "ts": []
+}

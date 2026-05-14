@@ -1,0 +1,50 @@
+{
+  "ficha_gestion_integral_pina_melant_ia": {
+    "identificacion": {
+      "cultivo": "Piña",
+      "variedad": "[Nombre de la variedad]",
+      "lote": "[Identificación del lote o sector]",
+      "responsable": "[Nombre del productor]",
+      "fecha_inicio_ciclo": "[DD/MM/AAAA]"
+    },
+    "registro_fases_cultivo": [
+      {
+        "fase": "Establecimiento y Siembra",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Preparación de suelo y coronas","guia_tecnica": "Preparar suelo con compost y seleccionar coronas sanas.","alerta_app": "🍍 Prepara el suelo y selecciona coronas sanas.","observaciones": ""},
+          {"tarea": "Siembra de coronas","guia_tecnica": "Plantar coronas a 5-7cm de profundidad, orientación vertical.","alerta_app": "🪴 Siembra tus coronas y asegura buen contacto con el suelo.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Manejo Vegetativo",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Cobertura viva y control de malezas","guia_tecnica": "Establecer cobertura viva y controlar malezas manualmente.","alerta_app": "🌿 Cobertura viva protege y nutre tu suelo.","observaciones": ""},
+          {"tarea": "Aplicación de biofertilizantes","guia_tecnica": "Aplicar biol o té de compost cada 30 días.","alerta_app": "💧 Aplica biofertilizantes para vigor y sanidad.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Floración y Fructificación",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Inducción floral y nutrición","guia_tecnica": "Aplicar etefón natural o extractos para inducir floración.","alerta_app": "🌸 Induce floración y nutre para frutos grandes.","observaciones": ""},
+          {"tarea": "Control biológico de plagas","guia_tecnica": "Liberar enemigos naturales y usar extractos vegetales.","alerta_app": "🦋 Controla plagas con métodos biológicos y extractos.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Cosecha y Postcosecha",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Cosecha y manejo de residuos","guia_tecnica": "Cosechar frutos maduros, reincorporar hojas y residuos al suelo.","alerta_app": "🍍 Cosecha y reincorpora residuos para fertilidad futura.","observaciones": ""}
+        ]
+      }
+    ],
+    "registro_insumos_herramientas": [
+      {"insumo": "Compost","dosis": "[kg/planta]","frecuencia": "[al inicio]"},
+      {"insumo": "Biol","dosis": "[ml/litro de agua]","frecuencia": "[mensual]"}
+    ],
+    "indicadores_sostenibilidad": {"biomasa_reincorporada_kg": "[Total ciclo]","co2_secuestrado_kg": "[Cálculo automático: biomasa x 0.35]","dinero_ahorrado_usd": "[Estimado por sustitución de insumos sintéticos]"},
+    "historial_intervenciones": [{"fecha": "[DD/MM/AAAA]","actividad": "[Ej. Siembra, aplicación de biol, cosecha]","resultado": "[Observaciones de efecto o mejora]"}]
+  }
+}

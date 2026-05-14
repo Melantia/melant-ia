@@ -1,0 +1,73 @@
+{
+  "moringa": {
+    "nombre_cientifico": "Moringa oleifera",
+    "descripcion": "Árbol perenne de rápido crecimiento, conocido como 'árbol de la vida' por sus múltiples beneficios nutricionales, medicinales y ambientales. Adaptado a zonas cálidas y secas.",
+    "riego_optimo": "Riego moderado, tolera sequía. 400-600 mm/año.",
+    "npk_recomendado": { "N": 40, "P": 30, "K": 60 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Mosca blanca",
+        "control_organico": "Aceite de Neem",
+        "control_quimico": "Buprofezin",
+        "sintoma": "Hojas amarillas, transmisión de virus"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Mildiu",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable",
+        "sintoma": "Polvo blanco en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Todo el año en zonas cálidas.",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "20-30 t/ha/año (hoja fresca)"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "15-22 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Corte manual de hojas, vainas y semillas según uso.",
+    "labores_postcosecha": "Secado, molienda, empaque en polvo, cápsulas o aceites.",
+    "zonas_produccion_ecuador": ["Manabí", "Guayas", "El Oro"],
+    "importancia_economica": "Superalimento exportable, insumo para industria nutracéutica y farmacéutica.",
+    "captura_carbono_ton_ha_anio": 3.0,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 150,
+    "densidad_siembra": "10,000-20,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en empaques para trazabilidad.",
+    "bibliografia": ["Manual de Moringa INIAP", "FAO Moringa Ecuador"],
+    "cursos_recomendados": [
+      "Procesamiento de Moringa y Subproductos",
+      "Manejo Integrado de Plagas en Árboles Multipropósito"
+    ],
+    "beneficios": [
+      "Alto contenido de proteínas, vitaminas y minerales",
+      "Propiedades antioxidantes y antiinflamatorias",
+      "Purificación de agua",
+      "Mejora la fertilidad del suelo",
+      "Captura de carbono"
+    ],
+    "subproductos": [
+      "Polvo de hoja",
+      "Aceite de semilla",
+      "Cápsulas",
+      "Té de moringa"
+    ]
+  }
+}

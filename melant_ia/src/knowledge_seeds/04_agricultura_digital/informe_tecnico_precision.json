@@ -1,0 +1,85 @@
+{
+  "metadatos_informe": {
+    "ID_reporte": "MELANT-2026-001",
+    "generado_por": "Ing. Juan Pérez",
+    "rol_usuario": "Técnico Agrónomo",
+    "ubicacion_lote": {
+      "latitud": -0.2186,
+      "longitud": -78.5097,
+      "altitud": "2850 msnm",
+      "enlace_maps": "https://google.com"
+    }
+  },
+  "informe_tecnico": {
+    "encabezado": {
+      "tipo_documento": "Reporte de Diagnóstico y Prescripción de Agricultura de Precisión",
+      "version": "1.0",
+      "estandar": "ISO 11783 (ISOBUS) / SIG"
+    },
+    "secciones_tecnicas": [
+      {
+        "seccion": "1. Justificación y Argumentación Técnica",
+        "contenido": "Análisis de la variabilidad intra-lote para la optimización del margen bruto. Se fundamenta en la reducción de externalidades negativas mediante la aplicación de dosis diferenciadas (VRT) y la eficiencia en el uso de recursos (N-P-K y Agua)."
+      },
+      {
+        "seccion": "2. Diagnóstico de Vigor Vegetal (Remote Sensing)",
+        "objetivo": "Cuantificar el estado fisiológico del cultivo mediante firmas espectrales.",
+        "metodologia_medicion": "Captura de datos mediante sensor multiespectral (bandas NIR y Red Edge). Procesamiento de imágenes con corrección atmosférica y cálculo de índices.",
+        "implementos_utilizados": [
+          "UAV con sensor Micasense o similar",
+          "Constelación Planet Scope (resolución 3m)",
+          "Software de fotogrametría (Pix4D Fields / Agisoft)"
+        ],
+        "informacion_generada": "Mapas de Índice de Vegetación de Diferencia Normalizada (NDVI) e Índice de Clorofila (NDRE)."
+      },
+      {
+        "seccion": "3. Caracterización Edafológica y Georreferenciación",
+        "objetivo": "Mapeo de la capacidad de intercambio catiónico y texturas del suelo.",
+        "metodologia_medicion": "Escaneo por inducción electromagnética para determinar Conductividad Eléctrica Aparente (CEa) a dos profundidades (0-30cm y 0-90cm).",
+        "implementos_utilizados": [
+          "Sensor de suelo Veris o EM38-MK2",
+          "Antena GNSS con corrección RTK (precisión centimétrica)",
+          "Sonda de penetrometría digital"
+        ],
+        "informacion_generada": "Mapas de zonas de manejo según textura, salinidad y compactación."
+      },
+      {
+        "seccion": "4. Prescripción y Aplicación Variable (VRT)",
+        "objetivo": "Ejecución de la estrategia de fertilización o siembra basada en zonas de potencial productivo.",
+        "metodologia_medicion": "Integración de mapas de diagnóstico en archivos vectoriales (.shp) o protocolos ISOXML cargados en la unidad de control (ECU) del tractor.",
+        "implementos_utilizados": [
+          "Controladores de dosis variable",
+          "Actuadores electrohidráulicos en sembradora/pulverizadora",
+          "Terminal virtual (Monitor de cabina) compatible con ISOBUS"
+        ],
+        "informacion_generada": "Mapas de 'As-Applied' (Lo aplicado) vs. 'Prescription' (Lo planificado) para análisis de desvío."
+      },
+      {
+        "seccion": "5. Análisis de Costos y Beneficios",
+        "objetivo": "Evaluar el impacto económico de la Agricultura de Precisión sobre el margen bruto y el retorno de inversión (ROI).",
+        "campos_analisis": {
+          "inversion_total": "Monto invertido en tecnología y servicios (USD)",
+          "ahorro_estimado": "Reducción de insumos y labores (%)",
+          "incremento_rendimiento": "Aumento de producción (kg/ha o %)",
+          "costo_unitario_produccion": "Costo por tonelada/ha antes y después (USD)",
+          "roi": "Retorno de inversión estimado (%)",
+          "periodo_analisis": "Año agrícola o campaña considerada"
+        },
+        "metodologia": "Comparación de resultados antes y después de la implementación de AP, considerando registros contables y mapas de rendimiento.",
+        "informacion_generada": "Tabla de costos, beneficios y ROI para auditoría y toma de decisiones."
+      }
+    ],
+    "bibliografia_y_consultas": {
+      "fuentes_profesionales": [
+        "ASABE Standards (American Society of Agricultural and Biological Engineers)",
+        "Manual de Procedimientos de Muestreo de Suelos (USDA-NRCS)",
+        "Publicaciones técnicas de la International Society of Precision Agriculture (ISPA)"
+      ],
+      "terminologia_para_consulta_ia": [
+        "Calibración de sensores multiespectrales para agricultura",
+        "Algoritmos de zonificación de manejo (Management Zones)",
+        "Arquitectura de datos ISOBUS y protocolos de comunicación en maquinaria"
+      ]
+    }
+  }
+}

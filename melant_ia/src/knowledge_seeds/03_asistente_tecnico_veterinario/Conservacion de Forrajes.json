@@ -1,0 +1,65 @@
+{
+  "titulo": "Conservación de Forrajes",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de la conservación de forrajes",
+      "objetivo": "Comprender la importancia y los principios básicos de la conservación de forrajes.",
+      "contenido": [
+        "Importancia de conservar forrajes",
+        "Factores que afectan la conservación",
+        "Tipos de forrajes aptos para conservación"
+      ]
+    },
+    {
+      "nombre": "Métodos de conservación: henificación y ensilaje",
+      "objetivo": "Conocer los principales métodos de conservación y sus aplicaciones.",
+      "contenido": [
+        "Proceso de henificación (producción de heno)",
+        "Proceso de ensilaje (producción de silo)",
+        "Ventajas y desventajas de cada método"
+      ]
+    },
+    {
+      "nombre": "Manejo y almacenamiento de forrajes conservados",
+      "objetivo": "Aprender a manejar y almacenar correctamente los forrajes para evitar pérdidas.",
+      "contenido": [
+        "Requerimientos de almacenamiento",
+        "Control de humedad y fermentación",
+        "Prevención de hongos y deterioro"
+      ]
+    },
+    {
+      "nombre": "Calidad y valor nutritivo de los forrajes conservados",
+      "objetivo": "Evaluar la calidad y el valor nutritivo de los forrajes conservados.",
+      "contenido": [
+        "Indicadores de calidad en heno y silo",
+        "Análisis de laboratorio y pruebas rápidas",
+        "Uso eficiente en la alimentación animal"
+      ]
+    },
+    {
+      "nombre": "Práctica: Elaboración de heno y ensilaje en campo",
+      "descripcion": "Guía paso a paso para la elaboración de heno y ensilaje.",
+      "pasos": [
+        "Selección y corte del forraje",
+        "Secado y volteo para heno",
+        "Picado y compactación para ensilaje",
+        "Almacenamiento y sellado",
+        "Evaluación del producto final"
+      ],
+      "recomendaciones": [
+        "Utilizar materiales limpios y adecuados",
+        "Registrar datos de producción y calidad"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Por qué es importante conservar forrajes?",
+    "¿Cuáles son los métodos principales de conservación?",
+    "¿Qué factores afectan la calidad del heno y el silo?",
+    "¿Cómo se previenen pérdidas durante el almacenamiento?",
+    "¿Qué indicadores se usan para evaluar la calidad del forraje conservado?"
+  ]
+}

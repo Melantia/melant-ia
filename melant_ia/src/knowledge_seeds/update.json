@@ -1,0 +1,8 @@
+{
+  "version_cerebro": "1.0.0",
+  "cambios": {},
+  "prioridad": "Normal",
+  "enciclopedia_colectiva": [],
+  "consultas_resueltas": false,
+  "_nota": "Este archivo es el manifiesto de delta updates. El servidor lo actualiza con nuevos cambios. El celular lo compara contra su versión local y solo descarga lo nuevo."
+}

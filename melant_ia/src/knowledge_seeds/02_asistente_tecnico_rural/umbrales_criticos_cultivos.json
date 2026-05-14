@@ -1,0 +1,53 @@
+{
+  "umbrales": [
+    {
+      "cultivo": "arroz",
+      "variables": [
+        {"variable": "humedad_suelo", "bajo": 30, "alto": 80, "unidad": "%", "alerta_bajo": "Estrés hídrico severo", "alerta_alto": "Riesgo de asfixia radicular"},
+        {"variable": "lamina_agua", "bajo": 5, "alto": 20, "unidad": "cm", "alerta_bajo": "Urgente: poca agua", "alerta_alto": "Riesgo de acame"}
+      ]
+    },
+    {
+      "cultivo": "banano",
+      "variables": [
+        {"variable": "humedad_relativa", "alto": 85, "unidad": "%", "alerta_alto": "Riesgo Sigatoka"},
+        {"variable": "temperatura", "bajo": 24, "alto": 28, "unidad": "°C", "alerta_alto": "Alerta fúngica si humedad alta"}
+      ]
+    },
+    {
+      "cultivo": "maiz",
+      "variables": [
+        {"variable": "ndvi_v6", "bajo": 0.6, "unidad": "", "alerta_bajo": "Deficiencia nitrogenada"},
+        {"variable": "humedad_suelo", "bajo": 35, "unidad": "%", "alerta_bajo": "Estrés hídrico"}
+      ]
+    },
+    {
+      "cultivo": "cafe",
+      "variables": [
+        {"variable": "humedad_suelo", "bajo": 40, "alto": 80, "unidad": "%", "alerta_bajo": "Estrés hídrico", "alerta_alto": "Riesgo Phytophthora"},
+        {"variable": "temperatura", "alto": 30, "unidad": "°C", "alerta_alto": "Estrés térmico"}
+      ]
+    },
+    {
+      "cultivo": "platano_barraganete",
+      "variables": [
+        {"variable": "humedad_relativa", "alto": 85, "unidad": "%", "alerta_alto": "Riesgo Sigatoka"},
+        {"variable": "lluvia_24h", "alto": 20, "unidad": "mm", "alerta_alto": "Riesgo de asfixia y enfermedades"}
+      ]
+    },
+    {
+      "cultivo": "cacao",
+      "variables": [
+        {"variable": "humedad_relativa", "alto": 85, "unidad": "%", "alerta_alto": "Alerta Monilia/Escoba de Bruja si lluvia reciente"},
+        {"variable": "ndvi", "bajo": 0.5, "unidad": "", "alerta_bajo": "Estrés hídrico/nutricional"}
+      ]
+    },
+    {
+      "cultivo": "palma_africana",
+      "variables": [
+        {"variable": "humedad_suelo", "bajo": 35, "alto": 80, "unidad": "%", "alerta_bajo": "Estrés hídrico", "alerta_alto": "Riesgo Pudrición del cogollo"},
+        {"variable": "temperatura", "alto": 32, "unidad": "°C", "alerta_alto": "Estrés térmico"}
+      ]
+    }
+  ]
+}

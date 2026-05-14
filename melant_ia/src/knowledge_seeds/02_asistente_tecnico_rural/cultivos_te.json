@@ -1,0 +1,39 @@
+{
+  "nombre_cultivo": "Té",
+  "nombre_cientifico": "Camellia sinensis",
+  "descripcion": "Planta perenne utilizada para la producción de té verde, negro y otros tipos. Requiere clima húmedo y suelos ácidos.",
+  "origen": "Asia oriental",
+  "variedades": ["Té verde", "Té negro", "Té oolong", "Té blanco"],
+  "riego_optimo": "Riego frecuente en época seca, suelos bien drenados.",
+  "npk_recomendado": "NPK 12-24-12 en establecimiento, NPK 15-15-15 en producción.",
+  "plagas_comunes": ["Ácaros", "Orugas", "Escamas"],
+  "enfermedades_comunes": ["Antracnosis", "Mildiu", "Fusarium"],
+  "epoca_siembra_recomendada": "Época de lluvias.",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "densidad_siembra": "10,000-12,000 plantas/ha",
+    "superficie_sembrada_ha_anio": "Variable según zona"
+  },
+  "labores_cosecha": "Cosecha manual de brotes tiernos.",
+  "labores_postcosecha": "Marchitado, enrollado, fermentación (según tipo), secado y empaque.",
+  "captura_carbono_ton_ha_anio": 6.0,
+  "precio_carbono_usd_ton": 8.2,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, cosecha, procesamiento y exportación.",
+  "zonas_produccion_ecuador": ["Napo", "Pichincha", "Loja"],
+  "importancia_economica": "Cultivo emergente con potencial de exportación y valor agregado.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación",
+    "Fertilización",
+    "Riego",
+    "Control fitosanitario",
+    "Cosecha",
+    "Procesamiento",
+    "Empaque y exportación"
+  ],
+  "bibliografia": ["Manual de Cultivo de Té, INIAP", "Guía Técnica de Té, MAG"],
+  "cursos_recomendados": [
+    "Producción y Procesamiento de Té",
+    "Trazabilidad y Exportación de Té"
+  ]
+}

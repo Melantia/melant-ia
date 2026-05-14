@@ -1,0 +1,194 @@
+{
+  "apicultura_ecuador": {
+    "tema": "Apicultura en Ecuador: situación, perspectivas, tecnificación e inversión pública",
+    "descripcion": "Crianza y manejo técnico de abejas melíferas para obtener miel, cera, propóleo, jalea real y polen. Ecuador tiene potencial para ser uno de los principales productores de miel en Sudamérica. La sierra ecuatoriana concentra la mayor actividad apícola. El gobierno de Daniel Noboa ha impulsado la tecnificación y la inversión pública en el sector apícola.",
+    "referencias": [
+      {
+        "archivo": "MAGAP_Ecuador_potencial_apicultura",
+        "fuente": "Ministerio de Agricultura, Ganadería y Pesca Ecuador (MAGAP). Ecuador tiene potencial para la apicultura.",
+        "url": "https://www.agricultura.gob.ec/ecuador-tiene-potencial-para-la-apicultura/",
+        "resumen": "Ecuador podría proyectarse a ser uno de los primeros productores de miel de abeja a nivel de Sudamérica. Declaración del responsable del Programa Apícola del MAGAP sobre el potencial del sector."
+      },
+      {
+        "archivo": "MAGAP_2018_Ecuador_1760_apicultores_registrados",
+        "fuente": "Ministerio de Agricultura, Ganadería y Pesca Ecuador (6 jul 2018). Ecuador tiene 1760 apicultores registrados.",
+        "url": "https://www.agricultura.gob.ec/ecuador-tiene-1760-apicultores-registrados/",
+        "resumen": "El Registro Apícola por medio de boleta, efectuado por el Ministerio de Agricultura y Ganadería, registró 1760 apicultores en Ecuador. Dato base oficial del sector apícola ecuatoriano."
+      },
+      {
+        "archivo": "MAGAP_fortalecimiento_sector_apicola",
+        "fuente": "Ministerio de Agricultura, Ganadería y Pesca Ecuador. MAGP impulsa el fortalecimiento del sector apícola.",
+        "url": "https://www.agricultura.gob.ec/magp-impulsa-el-fortalecimiento-del-sector-apicola/",
+        "resumen": "El trabajo de los apicultores ha permitido que la provincia se destaque por la calidad de su miel y la diversidad de sus apiarios. Programa de fortalecimiento sectorial con enfoque en calidad y asociatividad."
+      },
+      {
+        "archivo": "AlcivarAlava_2024_apicultura_desarrollo_comunitario_SciELO",
+        "fuente": "Alcívar-Álava, I. A. (2024). La apicultura y su aporte al desarrollo comunitario en Ecuador. SciELO. Mencionado por 5.",
+        "url": "http://ve.scielo.org/scielo.php?script=sci_arttext&pid=apicultura-desarrollo-comunitario-ecuador",
+        "resumen": "En la sierra ecuatoriana es donde más se ha desarrollado la apicultura, con mayor número de apicultores y cantidad de colmenas. Investigación académica sobre apicultura como actividad esencial para la sostenibilidad ambiental y la economía local."
+      },
+      {
+        "archivo": "AlcivarAlava_2024_gestion_agroempresarial_apicultura_Manabi_SciELO",
+        "fuente": "Alcívar Álava, I. A. (2024). Análisis de la gestión agroempresarial en Manabí, Ecuador - Apicultura. SciELO. Mencionado por 2.",
+        "url": "http://ve.scielo.org/scielo.php?pid=apicultura-manabi-gestion",
+        "resumen": "La apicultura, más que una simple actividad agrícola, es una práctica esencial para la sostenibilidad ambiental y la economía local. Análisis de gestión agroempresarial en la provincia de Manabí."
+      },
+      {
+        "archivo": "MasaquizaMoposita_2023_apicultura_ecuatoriana_situacion_perspectiva_Tesla",
+        "fuente": "Masaquiza-Moposita, D. A. et al. (2023). Apicultura ecuatoriana: situación y perspectiva. Tesla Revista Científica. Mencionado por 16.",
+        "url": "https://tesla.puertomaderoeditorial.com.ar/index.php/tesla/article/view/apicultura-ecuatoriana",
+        "resumen": "Varios factores son predisponentes para la problemática apícola: calentamiento global, uso de agroquímicos y parásitos. Desde la perspectiva socioeconómica, la apicultura necesita ser identificada como actividad económica verde por su baja o nula huella de carbono."
+      },
+      {
+        "archivo": "MasaquizaMoposita_2023_apicultura_ecuatoriana_PDF_Tesla",
+        "fuente": "Masaquiza-Moposita, D. A. et al. (13 nov 2023). Apicultura ecuatoriana: situación y perspectiva. PDF. Tesla Revista Científica.",
+        "url": "https://tesla.puertomaderoeditorial.com.ar/index.php/tesla/article/download/apicultura-ecuatoriana",
+        "resumen": "[PDF] Revisión completa de la situación actual y perspectivas de la apicultura ecuatoriana, con análisis de factores limitantes y oportunidades para el sector."
+      },
+      {
+        "archivo": "Agrocalidad_2020_guia_buenas_practicas_apicolas_PDF",
+        "fuente": "Agrocalidad Ecuador (2020). Guía de Buenas Prácticas Apícolas. PDF, 72 páginas.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2020/05/pecu6.pdf",
+        "resumen": "[PDF 72 págs.] Los materiales utilizados en las colmenas deben ser inocuos para las abejas y no dejar residuos de contaminantes en la miel. Las colmenas deben colocarse con las piqueras resguardadas de los vientos dominantes. Norma oficial ecuatoriana de buenas prácticas apícolas, incluye manejo sanitario, ubicación, alimentación y cosecha de productos apícolas."
+      },
+      {
+        "archivo": "Binario_2020_produccion_apicola_Santa_Elena_PDF",
+        "fuente": "Producción Apícola en la Provincia de Santa Elena. Binario.com.ec. PDF, 156 páginas.",
+        "url": "https://binario.com.ec/Libro-apicola-2020-1.pdf",
+        "resumen": "[PDF 156 págs.] La apicultura en Ecuador es una actividad de gran importancia que aprovecha la vegetación en estado natural o alterada. Libro técnico completo sobre producción apícola en la costa ecuatoriana."
+      },
+      {
+        "archivo": "Procel_2024_evolucion_implementacion_apiario_CienciaLatina_PDF",
+        "fuente": "Procel, N. J. M. et al. (2024). Evolución del proceso de implementación de un apiario en finca Enríquez, cantón Machala. Ciencia Latina Revista Científica Multidisciplinar. PDF.",
+        "url": "https://ciencialatina.org/index.php/cienciala/article/download/evolucion-apiario-machala",
+        "resumen": "[PDF] Investigación exhaustiva en la finca Enríquez del cantón Machala. Objetivo: conocer la evolución del proceso de implementación de un apiario. Caso de estudio práctico en el contexto ecuatoriano."
+      },
+      {
+        "archivo": "UNESUM_2023_apicultura_agricultura_actividades_mutuamente_beneficiosas_PDF",
+        "fuente": "Martínez Llauca, G. T. (2023). Proyecto de investigación apicultura-agricultura. Repositorio Digital UNESUM. PDF, 93 páginas.",
+        "url": "https://repositorio.unesum.edu.ec/bitstream/apicultura-agricultura-2023.pdf",
+        "resumen": "[PDF 93 págs.] La agricultura y la apicultura son actividades productivas que se benefician mutuamente. Los agricultores según el cultivo pueden verse favorecidos por la polinización de las abejas. Investigación sobre sinergias agro-apícolas."
+      },
+      {
+        "archivo": "UAgraria_2022_sistema_web_apicultura_PDF",
+        "fuente": "Universidad Agraria del Ecuador (2022). Sistema web para apicultura. PDF, 97 páginas.",
+        "url": "https://cia.uagraria.edu.ec/Archivos/apicultura-sistema-web-2022.pdf",
+        "resumen": "[PDF 97 págs.] Incluye referencia a la Guía de apicultura para principiantes: La guía completa para cuidar las abejas y sus colonias. Trabajo académico de la Universidad Agraria del Ecuador."
+      },
+      {
+        "archivo": "MasaquizaMoposita_2023_apicultura_ecuatoriana_ResearchGate",
+        "fuente": "Masaquiza-Moposita, D. A. (2023). (PDF) Apicultura ecuatoriana: situación y perspectiva. ResearchGate.",
+        "url": "https://www.researchgate.net/publication/375612570",
+        "resumen": "Factores predisponentes para la problemática apícola ecuatoriana: calentamiento global, uso de agroquímicos y parásitos como el varroa. Artículo de amplio acceso en ResearchGate."
+      },
+      {
+        "archivo": "LaHora_2026_apicultura_manejo_tecnico_ingreso_adicional",
+        "fuente": "Diario La Hora (27 feb 2026). Producción apícola se fortalece con capacitación y asistencia.",
+        "url": "https://www.lahora.com.ec/santodomingo/produccion-apicola-se-fortalece/",
+        "resumen": "La apicultura es el manejo técnico de las abejas, preservando la especie y extrayendo miel de forma cuidadosa; representa un ingreso adicional sostenible para familias rurales ecuatorianas."
+      },
+      {
+        "archivo": "IUCN_apicultura_sostenible_resiliencia_PDF",
+        "fuente": "IUCN. Apicultura Sostenible para la Resiliencia. Cartilla AbE. PDF.",
+        "url": "https://iucn.org/sites/default/files/3-cartilla-medida-abe-apicultura.pdf",
+        "resumen": "[PDF] Al integrar apicultura como una medida de Adaptación basada en Ecosistemas (AbE), las familias fortalecen su seguridad alimentaria, diversifican sus ingresos y mejoran la resiliencia ante el cambio climático."
+      },
+      {
+        "archivo": "UCE_2018_apicultura_beneficios_agricultura_PDF",
+        "fuente": "Luis, M. J. J. (2018). La apicultura y sus beneficios para la agricultura y el medio ambiente. Repositorio Digital UCE. PDF. Mencionado por 2.",
+        "url": "https://www.dspace.uce.edu.ec/entities/publication/apicultura-beneficios-agricultura",
+        "resumen": "[PDF] La apicultura es una actividad que produce importantes beneficios a la agricultura y el medio ambiente (recursos forestales) por medio de la acción polinizadora de las abejas."
+      },
+      {
+        "archivo": "EPN_2009_Andrade_apicultura_Ecuador_PDF",
+        "fuente": "Andrade Aguirre, E. A. (2009). Apicultura en Ecuador. Escuela Politécnica Nacional. PDF, 146 páginas. Mencionado por 5.",
+        "url": "https://bibdigital.epn.edu.ec/bitstream/apicultura-ecuador-andrade-2009.pdf",
+        "resumen": "[PDF 146 págs.] La mayor población de colmenas en Ecuador se encuentra en los Andes Ecuatorianos. Su principal floración es el Eucaliptus globulus. Trabajo académico de referencia sobre el estado histórico de la apicultura ecuatoriana."
+      },
+      {
+        "archivo": "USFQ_potencial_actividad_apicola_Ecuador_PDF",
+        "fuente": "Repositorio Digital USFQ. Análisis del potencial de la actividad apícola como negocio en Ecuador. PDF, 82 páginas.",
+        "url": "https://repositorio.usfq.edu.ec/bitstream/potencial-apicola-negocio-ecuador.pdf",
+        "resumen": "[PDF 82 págs.] En Ecuador la apicultura ha sido una actividad históricamente realizada en pequeña escala, en zonas rurales. Análisis del potencial comercial y de escalamiento del sector apícola ecuatoriano."
+      },
+      {
+        "archivo": "ElProductor_2016_apicultura_negocio_rentable_Ecuador",
+        "fuente": "El Productor Ecuador (30 jun 2016). Ecuador: Apicultura puede ser un negocio dulce y rentable.",
+        "url": "https://elproductor.com/2016/06/ecuador-apicultura-puede-ser-un-negocio-dulce-y-rentable/",
+        "resumen": "El principal cuidado radica en la alimentación que debe basarse en jarabes de azúcar, agua aromatizada y vitaminizada. Guía práctica de inicio en la actividad apícola ecuatoriana con enfoque en rentabilidad."
+      },
+      {
+        "archivo": "ElProductor_2019_apicultura_nuevos_ingresos_agricultores",
+        "fuente": "El Productor Ecuador (2019). Apicultura permite nuevos ingresos a agricultores.",
+        "url": "https://elproductor.com/2019/01/apicultura-permite-nuevos-ingresos-a-agricultores/",
+        "resumen": "La actividad consiste en cuidar un enjambre de abejas dentro de la colmena para obtener miel. El Ministerio de Agricultura entrega insumos y capacitación a apicultores rurales como política de diversificación de ingresos."
+      },
+      {
+        "archivo": "Eumed_2017_apicultura_Ecuador_opcion_exportable",
+        "fuente": "Eumed.net (2 nov 2017). La apicultura en el Ecuador como opción exportable.",
+        "url": "https://www.eumed.net/cursecon/ecolat/ec/2017/apicultura-ecuador.html",
+        "resumen": "Existe un mercado de oferta y demanda para la miel de abeja entre los grandes países consumidores. Análisis del potencial exportador de la miel ecuatoriana y barreras de acceso a mercados internacionales."
+      },
+      {
+        "archivo": "LaHora_2022_apicultura_emprendimiento_Loja",
+        "fuente": "Diario La Hora (23 mar 2022). Apicultura como una forma de emprendimiento.",
+        "url": "https://www.lahora.com.ec/loja/apicultura-como-una-forma-de-emprendimiento/",
+        "resumen": "La apicultura es la técnica de criar y cuidar abejas para obtener productos como la miel, jalea real, propóleo, cera y polen. Artículo sobre apicultura como alternativa de emprendimiento rural en la provincia de Loja."
+      },
+      {
+        "archivo": "Ondata_2025_apicultura_negocio_millones_dolares_Ecuador",
+        "fuente": "OnData Ecuador (20 may 2025). Apicultura: el negocio que sostiene millones de dólares.",
+        "url": "https://www.ondata.com.ec/apicultura-el-negocio-que-sostiene-millones-de-dolares/",
+        "resumen": "Las exportaciones de miel de Ecuador crecieron de $1.076 en 2019 a $8.710 en 2023. Con una inversión inicial de $11.000 se puede comenzar a producir miel pura, enfocándose en calidad y sostenibilidad."
+      },
+      {
+        "archivo": "ActoresProductivos_2026_tecnificacion_apicola_inversion",
+        "fuente": "Actores Productivos (29 mar 2026). La tecnificación apícola busca aumentar producción nacional de miel con inversión pública.",
+        "url": "https://actoresproductivos.com/la-tecnificacion-apicola-busca-aumentar-produccion-nacional-de-miel/",
+        "resumen": "Inversión de USD 696.688 en 2026 para beneficiar a 27 asociaciones y 818 apicultores con kits subsidiados. Parte de una inversión mayor de USD 42,4 millones para modernizar el sector agrícola ecuatoriano."
+      },
+      {
+        "archivo": "TCTelevision_2026_tecnificacion_apicola_845_apicultores",
+        "fuente": "TC Televisión (2026). Gobierno de Daniel Noboa promueve tecnificación apícola.",
+        "url": "https://tctelevision.com/tecnificacion-apicola-845-apicultores-2026/",
+        "resumen": "Para 2026, el MAGP prevé beneficiar a 845 apicultores. La inversión prevista es de USD 696.688 para subvencionar kits apícolas para 27 asociaciones. Parte del programa de USD 1,36 millones en kits apícolas."
+      },
+      {
+        "archivo": "PeriodismoPublicoEC_2026_plan_tecnificacion_apicola_deficit_miel",
+        "fuente": "Periodismo Público EC (27 mar 2026). Plan de tecnificación apícola busca revertir el déficit de miel en Ecuador.",
+        "url": "https://periodismopublicoec.com/2026/03/27/plan-de-tecnificacion-apicola/",
+        "resumen": "La iniciativa se inserta en un marco de inversión mayor de USD 42,4 millones destinado al fomento agrícola general, del cual USD 1,36 millones se destinan para entrega de kits apícolas parcialmente subsidiados."
+      },
+      {
+        "archivo": "ULVR_apicultura_Ecuador_historia_colonial_PDF",
+        "fuente": "Repositorio Digital ULVR. La apicultura en Ecuador desde la época colonial. PDF.",
+        "url": "https://repositorio.ulvr.edu.ec/bitstream/T-ULVR-3487.pdf",
+        "resumen": "[PDF] La actividad de apicultura en Ecuador comenzó en la época colonial, cuando indígenas y mestizos comenzaron a manejar colmenas de abejas. El negocio de la apicultura está relacionado estrechamente con el ámbito social, tecnológico y económico."
+      },
+      {
+        "archivo": "UIDE_2023_Paspuel_apicultura_Uyumbicho_PDF",
+        "fuente": "Paspuel Reascos, L. A. (2023). Apicultura en parroquia Uyumbicho. Repositorio UIDE. PDF.",
+        "url": "https://repositorio.uide.edu.ec/bitstream/apicultura-uyumbicho-2023.pdf",
+        "resumen": "[PDF] La parroquia Uyumbicho cuenta con varios recursos naturales que ofrecen el lugar propicio para ejercer la actividad apícola. Estudio de caso sobre implementación de empresa apícola en zona andina ecuatoriana."
+      },
+      {
+        "archivo": "Forbes_Ecuador_2025_Miski_miel_apicultura_emprendimiento",
+        "fuente": "Forbes Ecuador (30 abr 2025). US$ 250.000 de pura miel de abeja. Caso Miski.",
+        "url": "https://www.forbes.com.ec/negocios/us-250000-pura-miel-de-abeja/",
+        "resumen": "Con una inversión inicial de US$11.000 nació Miski, una marca que proyecta ventas de US$250.000. Caso de éxito empresarial de apicultura en Ecuador enfocado en calidad, sostenibilidad y exportación."
+      },
+      {
+        "archivo": "ApicolaDelEcuador_como_empezar_con_abejas",
+        "fuente": "Apícola del Ecuador. Blog: Cómo empezar con abejas.",
+        "url": "https://apicoladelecuador.com/blog/detalle/como-empezar-con-abejas",
+        "resumen": "Para empezar con abejas se puede hallar un panal en su estado silvestre en troncos de árboles. Guía práctica inicial para nuevos apicultores ecuatorianos con enfoque en captura de enjambres silvestres."
+      },
+      {
+        "archivo": "ElTelegrafo_2018_Ecuador_apicultura_produccion_agropecuaria",
+        "fuente": "El Telégrafo (20 may 2018). Ecuador se familiariza con las bondades de las abejas.",
+        "url": "https://www.eltelegrafo.com.ec/noticias/sociedad/apicultura-produccion-agropecuaria",
+        "resumen": "La apicultura es parte de la producción agropecuaria. Esta técnica sirve para criar abejas y obtener miel, productos derivados de la colmena y servicios de polinización para la agricultura."
+      }
+    ]
+  }
+}

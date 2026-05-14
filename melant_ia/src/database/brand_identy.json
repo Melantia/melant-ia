@@ -1,0 +1,484 @@
+{
+  "project": {
+    "name": "MELANT IA",
+    "type": "Productividad Agricola Inteligente Offline",
+    "category": "ASISTENTE TECNICO RURAL",
+    "design_version": "Premium Neon Rural v3"
+  },
+
+  "brand_identity": {
+    "main_message": "PRODUCTIVIDAD AGRICOLA INTELIGENTE OFFLINE",
+    "secondary_message": "FUNCIONA SIN INTERNET",
+
+    "brand_values": [
+      "productividad",
+      "precisión",
+      "tecnología",
+      "confianza",
+      "campo",
+      "offline_total"
+    ],
+
+    "target_users": [
+      "Agricultores",
+      "Ganaderos",
+      "Ingenieros Agrónomos",
+      "Técnicos rurales"
+    ]
+  },
+
+  "canvas": {
+    "shape": "rounded_square",
+    "border_radius": "extreme_soft",
+    "resolution": "2048x2048",
+
+    "composition": {
+      "layout": "vertical_centered",
+      "focus_priority": [
+        "logo_symbol",
+        "brand_name",
+        "primary_slogan",
+        "offline_badge",
+        "category"
+      ]
+    }
+  },
+
+  "background": {
+    "type": "cinematic_dark_gradient",
+
+    "colors": {
+      "primary": "#020402",
+      "secondary": "#0C1A0E",
+      "accent": "#123E2A"
+    },
+
+    "effects": {
+      "vignette": true,
+      "soft_fog": true,
+      "neon_edge_glow": {
+        "enabled": true,
+        "color": "#9EFF00",
+        "opacity": 0.35,
+        "blur": 25
+      }
+    },
+
+    "environment": {
+      "scene": "rural_field_night",
+      "visibility": "subtle",
+      "purpose": "give_agricultural_context_without_distraction"
+    }
+  },
+
+  "main_symbol": {
+    "type": "leaf_circuit_hybrid",
+
+    "meaning": {
+      "leaf": "Agricultura y sostenibilidad",
+      "circuits": "IA y precisión digital",
+      "outer_arc": "protección y autonomía offline",
+      "nodes": "conectividad inteligente rural"
+    },
+
+    "structure": {
+      "center_alignment": true,
+      "scale": "0.42_canvas",
+
+      "elements": [
+        {
+          "type": "organic_leaf",
+          "style": "semi_realistic",
+          "color_gradient": [
+            "#7CFC00",
+            "#4CAF50",
+            "#2E7D32"
+          ],
+
+          "details": {
+            "main_vein": true,
+            "side_veins": "minimal",
+            "gloss": "soft"
+          }
+        },
+
+        {
+          "type": "digital_circuit",
+
+          "style": {
+            "line_type": "clean_curved",
+            "thickness": "medium",
+            "caps": "rounded"
+          },
+
+          "colors": {
+            "main": "#FFFFFF",
+            "glow": "#9EFF00"
+          },
+
+          "nodes": {
+            "count": 4,
+            "shape": "circular",
+            "lighting": "neon_soft"
+          }
+        },
+
+        {
+          "type": "protective_arc",
+
+          "position": "left_and_right_wrap",
+
+          "style": {
+            "stroke_width": "medium",
+            "opacity": 0.95
+          },
+
+          "color": "#B7FF00"
+        }
+      ]
+    }
+  },
+
+  "typography": {
+    "brand_name": {
+      "text": "MELANT IA",
+
+      "font_style": {
+        "family": "Montserrat ExtraBold",
+        "case": "uppercase",
+        "spacing": "wide"
+      },
+
+      "colors": {
+        "MELANT": "#F5F5F5",
+        "IA": "#B7FF00"
+      },
+
+      "effects": {
+        "soft_glow": true,
+        "shadow_depth": "low"
+      }
+    },
+
+    "primary_slogan": {
+      "text": "PRODUCTIVIDAD AGRICOLA INTELIGENTE OFFLINE",
+
+      "style": {
+        "family": "Poppins SemiBold",
+        "size": "small",
+        "tracking": "medium"
+      },
+
+      "color_logic": {
+        "normal_text": "#FFFFFF",
+        "highlight_text": "#B7FF00"
+      }
+    },
+
+    "secondary_slogan": {
+      "text": "FUNCIONA SIN INTERNET",
+
+      "container": {
+        "type": "capsule_badge",
+        "background": "#071109",
+        "border": "#9EFF00",
+        "radius": "pill"
+      },
+
+      "icon": {
+        "type": "offline_signal",
+        "color": "#FFFFFF"
+      }
+    },
+
+    "category_block": {
+      "title": "CATEGORIA:",
+      "value": "ASISTENTE TECNICO RURAL",
+
+      "layout": {
+        "icon_left": true,
+        "alignment": "horizontal"
+      },
+
+      "icon": {
+        "type": "farmer_outline",
+        "accent_leaf": true,
+        "color": "#9EFF00"
+      }
+    }
+  },
+
+  "lighting_system": {
+    "mode": "premium_neon",
+
+    "light_sources": [
+      {
+        "position": "top_edges",
+        "color": "#9EFF00",
+        "intensity": "medium"
+      },
+      {
+        "position": "logo_nodes",
+        "color": "#FFFFFF",
+        "intensity": "high"
+      }
+    ],
+
+    "shadow_system": {
+      "soft_depth": true,
+      "background_separation": true
+    }
+  },
+
+  "mobile_visibility": {
+    "optimized_for": [
+      "Android",
+      "PWA",
+      "APK",
+      "Launcher Icon",
+      "Splash Screen"
+    ],
+
+    "visibility_rules": [
+      "high_contrast",
+      "large_shapes",
+      "minimum_micro_details",
+      "strong_center_focus"
+    ]
+  },
+
+  "ui_feeling": {
+    "experience": [
+      "premium",
+      "tecnología avanzada",
+      "potencia offline",
+      "precisión agrícola",
+      "fácil de usar"
+    ],
+
+    "visual_reference": [
+      "Tesla UI",
+      "NVIDIA neon aesthetics",
+      "AgroTech modern systems"
+    ]
+  }
+}
+
+
+
+g
+
+
+
+
+
+
+{    
+  "app_name": "MELANT IA",
+  "type": "adaptive_icon",
+  "style": "minimalist_tech_rural",
+
+  "canvas": {
+    "shape": "square",
+    "safe_area": "centered",
+    "padding": "12%"
+  },
+
+  "background": {
+    "type": "gradient",
+    "colors": [
+      "#0C1A0E",
+      "#123E2A"
+    ],
+    "direction": "diagonal",
+    "texture": "subtle_glow"
+  },
+
+  "foreground": {
+    "composition": "leaf_circuit_fusion",
+
+    "elements": [
+      {
+        "type": "leaf",
+        "style": "geometric_simplified",
+        "color": "#7CFC00",
+        "stroke": "none",
+        "position": "center",
+        "scale": "0.75"
+      },
+      {
+        "type": "circuit_lines",
+        "style": "curved_clean",
+        "color": "#A8FF60",
+        "thickness": "medium",
+        "connection_nodes": 3,
+        "node_style": "rounded",
+        "integration": "inside_leaf"
+      },
+      {
+        "type": "outer_ring",
+        "style": "partial_arc",
+        "color": "#1F5F3A",
+        "thickness": "thin",
+        "opacity": "0.6",
+        "position": "wrap_left"
+      }
+    ]
+  },
+
+  "lighting": {
+    "type": "neon_accent",
+    "intensity": "low",
+    "color": "#9EFF00",
+    "effect": "edge_glow"
+  },
+
+  "contrast": {
+    "mode": "high_visibility",
+    "foreground_vs_background": "strong"
+  },
+
+  "icon_rules": {
+    "no_text": true,
+    "no_small_details": true,
+    "legibility_sizes": [
+      "48px",
+      "72px",
+      "192px",
+      "512px"
+    ]
+  },
+
+  "brand_feeling": [
+    "tecnología",
+    "precisión",
+    "campo",
+    "confianza",
+    "offline_ready"
+  ],
+
+  "platform_export": {
+    "android": {
+      "foreground": "transparent_png",
+      "background": "solid_or_gradient",
+      "adaptive": true
+    },
+    "ios": {
+      "flattened": true,
+      "no_transparency": true
+    }
+  }
+}
+
+
+
+
+{
+    "brand": {
+        "name": "MELANT IA",
+        "tagline": "Productividad Agrícola Inteligente Offline",
+        "concept": "Sintaxis de Naturaleza Digital"
+    },
+    "logo_specs": {
+        "icon": {
+            "symbol": "🍃",
+            "composition": "Leaf merged with PCB traces",
+            "format": "Vectorial JSON Object"
+        },
+        "color_palette": {
+            "primary": {
+                "hex": "#A4C639",
+                "label": "Verde Bio-Tech"
+            },
+            "secondary": {
+                "hex": "#FFFFFF",
+                "label": "Blanco Datos"
+            },
+            "background": {
+                "hex": "#121212",
+                "label": "VS Code Dark"
+            }
+        },
+        "typography": {
+            "family": "Fira Code / Roboto",
+            "style": "Monospaced / Bold"
+        }
+    },
+    "technical_features": {
+        "environment": "Offline-First",
+        "integration": "IDE Sidebar Compatible",
+        "status": "vuela_sin_internet"
+    },
+    "ascii_representation": [
+        "    {       }    ",
+        "  {   /\\   }   ",
+        " {   //\\\\   }  ",
+        "  {  \\\\//  }   ",
+        "    {  ||  }     ",
+        "     MELANT IA   "
+    ]
+}
+
+
+
+
+{
+    "asset": {
+        "type": "AppIcon",
+        "name": "MELANT_IA_Core",
+        "version": "2.1.0"
+    },
+    "geometry": {
+        "shape": "Squircle (iOS/Android Adaptive)",
+        "layers": [
+            {
+                "id": "background",
+                "color": "#121212",
+                "opacity": 1.0,
+                "texture": "matte"
+            },
+            {
+                "id": "border_glow",
+                "color": "#A4C639",
+                "width": "2px",
+                "blur": "4px"
+            },
+            {
+                "id": "main_symbol",
+                "elements": [
+                    {
+                        "type": "organic_leaf",
+                        "position": "center_left",
+                        "color": "#A4C639"
+                    },
+                    {
+                        "type": "digital_nodes",
+                        "position": "center_right",
+                        "nodes": 4,
+                        "color": "#FFFFFF"
+                    }
+                ]
+            }
+        ]
+    },
+    "theme_integration": {
+        "dark_mode": {
+            "primary": "#A4C639",
+            "contrast": "#FFFFFF"
+        },
+        "light_mode": {
+            "primary": "#2D5A27",
+            "contrast": "#121212"
+        }
+    },
+    "offline_signature": {
+        "status": "locally_rendered",
+        "no_connection_required": true,
+        "motto": "VUELA SIN INTERNET"
+    },
+    "metadata": {
+        "developer": "Melant Team",
+        "industry": "AgriTech / AI",
+        "deployment": "Rural Offline Environments"
+    }
+}

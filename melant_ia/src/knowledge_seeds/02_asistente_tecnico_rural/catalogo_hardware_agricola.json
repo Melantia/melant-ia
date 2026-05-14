@@ -1,0 +1,112 @@
+{
+  "catalogo_hardware_agricola": {
+    "descripcion": "Catálogo actualizado de sensores y herramientas para agricultura de precisión, con enlaces a precios y proveedores.",
+    "consulta_precios_proveedores": "https://docs.google.com/spreadsheets/d/1MELANT-IA-HARDWARE-PRECIOS-PROVEEDORES",
+    "hardware_offline": [
+      {
+        "sensor": "Humedad Suelo Capacitivo (v1.2)",
+        "servicio": "Gestión de riego y prevención de asfixia radicular",
+        "conexion": "USB-OTG (vía Arduino)",
+        "proveedor": "TECmikro"
+      },
+      {
+        "sensor": "Sonda NPK Industrial (RS485)",
+        "servicio": "Plan de fertilización exacta (NPK)",
+        "conexion": "USB / RS485 a Serial",
+        "proveedor": "Hidroponía Ecuador"
+      },
+      {
+        "sensor": "Sensor pH Suelo (Digital)",
+        "servicio": "Control de acidez para evitar bloqueo de nutrientes",
+        "conexion": "Bluetooth HC-05",
+        "proveedor": "Importadora Atenea"
+      },
+      {
+        "sensor": "DHT22 (Temperatura/Humedad)",
+        "servicio": "Alerta temprana de hongos (Sigatoka/Lancha/Monilla)",
+        "conexion": "Bluetooth / Serial",
+        "proveedor": "Robotics Ecuador"
+      },
+      {
+        "sensor": "Anemómetro (Velocidad Viento)",
+        "servicio": "Determinar horas seguras para fumigación con bioles",
+        "conexion": "Pulsos Digitales",
+        "proveedor": "Tecnoindustry"
+      },
+      {
+        "sensor": "ESP32-CAM (Visión IA)",
+        "servicio": "Escaneo offline de hojas para detectar plagas",
+        "conexion": "WiFi Local (AP)",
+        "proveedor": "PlexyLab"
+      },
+      {
+        "sensor": "Medidor pH/EC Portátil",
+        "servicio": "Análisis de calidad de agua y caldos minerales",
+        "conexion": "Lectura Visual/OCR",
+        "proveedor": "Mercado Libre Ec"
+      },
+      {
+        "sensor": "Ultrasónico (Nivel Agua)",
+        "servicio": "Monitoreo de tanques de reserva y fertilizantes",
+        "conexion": "USB / Serial",
+        "proveedor": "TECmikro"
+      },
+      {
+        "sensor": "Módulo SD para Arduino",
+        "servicio": "Respaldo masivo de datos (Log de meses de clima)",
+        "conexion": "SPI / Físico",
+        "proveedor": "Robotics Ecuador"
+      },
+      {
+        "sensor": "Cable USB-OTG + Adaptador",
+        "servicio": "Enlace físico entre sensores y el Smartphone",
+        "conexion": "Físico Directo",
+        "proveedor": "Locales de Tecnología"
+      }
+    ],
+    "hardware_datos": [
+      {
+        "sensor": "Estación Meteorológica WiFi (Atenea)",
+        "servicio": "Registro histórico de clima y alertas de heladas/lluvias",
+        "conexion": "WiFi (2.4GHz) / App Cloud",
+        "proveedor": "Importadora Atenea"
+      },
+      {
+        "sensor": "Sensor de Suelo 7 en 1 (LoRaWAN/4G)",
+        "servicio": "Medición NPK, pH, EC, Temp y Humedad constante",
+        "conexion": "Gateway LoRaWAN/4G",
+        "proveedor": "Tecnoindustry"
+      },
+      {
+        "sensor": "Cámara Solar 4G LTE",
+        "servicio": "Vigilancia de seguridad y monitoreo de crecimiento",
+        "conexion": "Tarjeta SIM (Claro/Movistar/CNT)",
+        "proveedor": "Mercado Libre Ecuador"
+      },
+      {
+        "sensor": "Controlador de Riego Inteligente",
+        "servicio": "Activación remota de bombas según humedad del suelo",
+        "conexion": "WiFi / API HTTP",
+        "proveedor": "Hidroponía Ecuador"
+      },
+      {
+        "sensor": "Módulo SIM7600 (4G para Arduino/ESP32)",
+        "servicio": "Envía datos de sensores simples vía SMS o Internet móvil",
+        "conexion": "LTE-TDD / LTE-FDD (Celular)",
+        "proveedor": "TECmikro"
+      },
+      {
+        "sensor": "Dron de Monitoreo (DJI Mavic Mini)",
+        "servicio": "Mapas de salud vegetal (Índice NDVI) vía App",
+        "conexion": "Radiofrecuencia + App Móvil",
+        "proveedor": "Drones Ecuador"
+      },
+      {
+        "sensor": "GPS Tracker para Ganado/Maquinaria",
+        "servicio": "Ubicación en tiempo real y geovallas",
+        "conexion": "GPRS / GSM (SIM Card)",
+        "proveedor": "Locales de Seguridad Vehicular"
+      }
+    ]
+  }
+}

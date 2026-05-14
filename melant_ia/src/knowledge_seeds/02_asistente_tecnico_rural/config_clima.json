@@ -1,0 +1,13 @@
+{
+  "apis": {
+    "open_meteo": "https://api.open-meteo.com/v1/forecast",
+    "nasa_power": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "agromonitoring": "https://api.agromonitoring.com/agro/1.0/weather"
+  },
+  "librerias": ["PyEto", "PCSE", "MetPy", "Pandas"],
+  "visualizacion": ["Leaflet", "MapBox", "Chart.js"],
+  "cache_local": true,
+  "nido_silencioso": true,
+  "ancla_geografica": true,
+  "ultima_actualizacion": "2026-04-20"
+}

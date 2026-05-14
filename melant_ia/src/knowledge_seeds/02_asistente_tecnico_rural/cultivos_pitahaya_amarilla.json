@@ -1,0 +1,45 @@
+{
+  "nombre_cultivo": "Pitahaya amarilla",
+  "nombre_cientifico": "Selenicereus megalanthus",
+  "descripcion": "Fruta exótica de alto valor comercial, apreciada por su sabor dulce y propiedades nutricionales. Exportación en crecimiento.",
+  "origen": "América tropical",
+  "variedades": [
+    "Pitahaya amarilla ecuatoriana",
+    "Pitahaya amarilla colombiana"
+  ],
+  "riego_optimo": "Riego moderado, evitando encharcamientos. 1 vez por semana.",
+  "npk_recomendado": "NPK 10-30-10 en establecimiento, NPK 15-15-15 en producción.",
+  "plagas_comunes": ["Cochinilla", "Ácaros", "Trips"],
+  "enfermedades_comunes": ["Antracnosis", "Podredumbre de tallo"],
+  "epoca_siembra_recomendada": "Inicio de lluvias.",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "densidad_siembra": "1,100-1,300 plantas/ha",
+    "superficie_sembrada_ha_anio": "Variable según zona"
+  },
+  "labores_cosecha": "Cosecha manual, corte de frutos maduros.",
+  "labores_postcosecha": "Lavado, clasificación, empaque y refrigeración.",
+  "captura_carbono_ton_ha_anio": 3.8,
+  "precio_carbono_usd_ton": 7.8,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, cosecha, tratamientos, empaque y exportación. Certificaciones fitosanitarias.",
+  "zonas_produccion_ecuador": ["Palora", "Morona Santiago", "Guayas", "Manabí"],
+  "importancia_economica": "Fruta de exportación con alto valor agregado.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación",
+    "Fertilización",
+    "Riego",
+    "Control fitosanitario",
+    "Cosecha",
+    "Postcosecha",
+    "Empaque y exportación"
+  ],
+  "bibliografia": [
+    "Manual de Pitahaya, INIAP",
+    "Guía Técnica de Pitahaya, MAG"
+  ],
+  "cursos_recomendados": [
+    "Producción de Frutales Exóticos",
+    "Trazabilidad y Exportación de Pitahaya"
+  ]
+}

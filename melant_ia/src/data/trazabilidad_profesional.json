@@ -1,0 +1,20 @@
+{
+  "unit_id": "FINCA-001",
+  "sync_status": "pending",
+  "hash_seguridad": "sha256-a1b2c3d4...",
+  "geometria": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-79.46, -0.27],
+        [-79.45, -0.27],
+        [-79.45, -0.28],
+        [-79.46, -0.27]
+      ]
+    ]
+  },
+  "cadena_custodia": {
+    "harvest_id": "COS-2024-05",
+    "batch_id": "LOT-2024-001"
+  }
+}

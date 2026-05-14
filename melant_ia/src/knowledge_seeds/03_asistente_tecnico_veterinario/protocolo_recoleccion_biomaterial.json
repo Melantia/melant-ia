@@ -1,0 +1,29 @@
+{
+  "protocolo_recoleccion_biomaterial": {
+    "version": "1.0",
+    "objetivo": "Obtención de membrana amniótica y sangre de cordón umbilical para biotecnología regenerativa.",
+    "especies_prioritarias": ["Equinos (Paso Fino/Carreras)", "Bovinos (Genética Élite)", "Caninos (Cría Selecta)"],
+    "kit_de_recoleccion_necesario": [
+      "Guantes de látex o nitrilo estériles",
+      "Bolsas herméticas tipo 'Ziploc' (nuevas y estériles)",
+      "Frasco de vidrio o plástico estéril con solución salina (Suero fisiológico)",
+      "Nevera de poliestireno (Icopor) con geles refrigerantes (no hielo directo)",
+      "Pinzas de clampeo o hilo de seda estéril"
+    ],
+    "pasos_operativos": [
+      {"paso": 1, "accion": "Monitoreo del Parto", "descripcion": "Asegurar que el lugar del parto esté lo más limpio posible (paja nueva o tapetes de caucho desinfectados)."},
+      {"paso": 2, "accion": "Recolección de Sangre de Cordón", "descripcion": "Inmediatamente tras el nacimiento, si el cordón se rompe, recolectar la sangre en el frasco estéril. Si sigue unido, clampear y extraer con jeringa estéril."},
+      {"paso": 3, "accion": "Recuperación de la Placenta", "descripcion": "Una vez expulsada (alumbramiento), evitar que toque el suelo sucio. Tomar la membrana más interna (Amnios), que es transparente y delgada."},
+      {"paso": 4, "accion": "Lavado y Almacenamiento", "descripcion": "Lavar suavemente con suero fisiológico para quitar exceso de sangre/suciedad. Colocar en la bolsa hermética con un poco de suero."},
+      {"paso": 5, "accion": "Transporte y Refrigeración", "descripcion": "Etiquetar con Nombre del Animal, Fecha y Hora. Mantener entre 2°C y 8°C. Enviar al laboratorio antes de las 12-24 horas."}
+    ],
+    "alertas_bioseguridad": {
+      "no_congelar": "El hielo directo destruye las células vivas.",
+      "higiene": "Si la placenta cae en heces o zona muy contaminada, el material pierde viabilidad para laboratorio.",
+      "retencion_placentaria": "Si el animal no expulsa la placenta en >6h (yeguas) o >12h (vacas), NO TRACCIONAR. Llamar al veterinario."
+    },
+    "potencial_ahorro_inversion": {
+      "mensaje": "Recolectar este material en el parto es GRATIS. Comprar células madre procesadas después cuesta miles de dólares. Es el 'seguro médico' biológico del recién nacido."
+    }
+  }
+}

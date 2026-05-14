@@ -1,0 +1,18 @@
+
+
+{
+  "modulo": "Inicio",
+  "ai_logic": {
+    "priority": "Alertas y Seguimiento",
+    "search_context": [
+      "Clima local para agricultura",
+      "Calendario sanitario pendiente (Salud Veterinaria)",
+      "Novedades de la Escuela de Campo"
+    ],
+    "display_type": "Tarjetas dinámicas"
+  },
+  "funciones_boton": {
+    "on_click": "Cargar Dashboard",
+    "on_long_press": "Abrir Asistente de Voz"
+  }
+}

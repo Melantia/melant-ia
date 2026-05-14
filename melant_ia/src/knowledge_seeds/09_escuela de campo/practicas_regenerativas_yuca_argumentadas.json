@@ -1,0 +1,32 @@
+[
+  {
+    "practica": "Cobertura viva con leguminosas",
+    "procedimiento": "Establecer cultivos de cobertura con leguminosas de rápido crecimiento (ej. Canavalia, Mucuna) entre las hileras de yuca. Sembrar después de la plantación de yuca y mantener podas periódicas para evitar competencia excesiva.",
+    "fundamento": "Las leguminosas fijan nitrógeno atmosférico, mejoran la estructura del suelo y reducen la erosión, aportando materia orgánica y nutrientes esenciales para la yuca.",
+    "contraste": "A diferencia del barbecho limpio, la cobertura viva reduce la erosión y mejora la fertilidad sin uso de fertilizantes sintéticos, aunque requiere manejo para evitar competencia."
+  },
+  {
+    "practica": "Asociación con maíz y frijol",
+    "procedimiento": "Intercalar yuca con maíz y frijol en el mismo surco o en surcos alternos. Sembrar maíz y frijol primero, yuca después de 15-20 días. Cosechar maíz y frijol antes de que la yuca requiera mayor espacio.",
+    "fundamento": "La asociación diversifica la producción, mejora el uso de recursos y reduce la incidencia de plagas y enfermedades por efecto de diversidad biológica.",
+    "contraste": "Frente al monocultivo, la asociación reduce riesgos y mejora la resiliencia del sistema, aunque puede requerir mayor planificación en la siembra y cosecha."
+  },
+  {
+    "practica": "Aplicación de biofertilizantes líquidos",
+    "procedimiento": "Preparar biofertilizantes líquidos (ej. biol, té de compost) y aplicar al pie de la planta de yuca cada 30 días, especialmente en etapas de mayor crecimiento vegetativo.",
+    "fundamento": "Los biofertilizantes aportan microorganismos benéficos y nutrientes fácilmente asimilables, mejorando la salud del suelo y el desarrollo de la yuca.",
+    "contraste": "A diferencia de los fertilizantes químicos, los biofertilizantes mejoran la vida microbiana y la sostenibilidad del sistema, aunque su efecto puede ser más gradual."
+  },
+  {
+    "practica": "Manejo de residuos de cosecha",
+    "procedimiento": "Dejar los residuos de cosecha (tallos, hojas) sobre el terreno como cobertura o incorporarlos mediante labranza superficial para aportar materia orgánica.",
+    "fundamento": "El manejo adecuado de residuos incrementa la materia orgánica, protege el suelo y favorece la retención de humedad, beneficiando el siguiente ciclo de yuca.",
+    "contraste": "En vez de quemar o retirar los residuos, su reincorporación mejora la fertilidad y reduce la erosión, aunque puede requerir control de plagas inicial."
+  },
+  {
+    "practica": "Control biológico de plagas",
+    "procedimiento": "Liberar o favorecer enemigos naturales (avispas parasitoides, hongos entomopatógenos) y utilizar extractos vegetales (neem, ajo) para el control de plagas en yuca.",
+    "fundamento": "El control biológico reduce la dependencia de plaguicidas químicos, protege la biodiversidad y mantiene el equilibrio ecológico en el cultivo de yuca.",
+    "contraste": "A diferencia del control químico, el biológico es más selectivo y sostenible, aunque puede requerir monitoreo y aplicación oportuna."
+  }
+]

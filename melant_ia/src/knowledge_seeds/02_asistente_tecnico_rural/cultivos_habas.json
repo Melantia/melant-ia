@@ -1,0 +1,57 @@
+{
+  "nombre_cultivo": "Haba",
+  "nombre_cientifico": "Vicia faba",
+  "descripcion": "Leguminosa de clima templado, importante en la Sierra ecuatoriana. Fuente de proteína vegetal, utilizada en fresco y seco. Mejora la fertilidad del suelo por fijación de nitrógeno.",
+  "riego_optimo": "Riego moderado, evitar encharcamiento, fundamental en floración y llenado de grano.",
+  "npk_recomendado": { "N": 40, "P": 60, "K": 80 },
+  "plagas_comunes": [
+    {
+      "nombre": "Pulgón",
+      "control_organico": "Jabón potásico, control biológico.",
+      "sintoma": "Hojas enrolladas y pegajosas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Mildiu",
+      "control": "Fungicidas preventivos, manejo de humedad.",
+      "sintoma": "Manchas amarillas en hojas."
+    }
+  ],
+  "epoca_siembra_recomendada": "Mayo - Julio (Sierra)",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "2 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "1.5 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de vainas maduras.",
+  "labores_postcosecha": "Desgranado y almacenamiento en seco.",
+  "captura_carbono_ton_ha_anio": 1.3,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 12000,
+  "densidad_siembra": "100,000-120,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU."]
+  },
+  "zonas_produccion_ecuador": [
+    "Chimborazo",
+    "Tungurahua",
+    "Carchi",
+    "Imbabura"
+  ],
+  "importancia_economica": "Clave en la dieta andina y en la rotación de cultivos.",
+  "bibliografia": ["MAGAP: Guía técnica de habas"],
+  "cursos_recomendados": ["Producción sostenible de habas"]
+}

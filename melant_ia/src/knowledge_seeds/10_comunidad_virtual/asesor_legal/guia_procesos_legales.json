@@ -1,0 +1,52 @@
+{
+  "procesos_legales": [
+    {
+      "id": "PROC_001",
+      "titulo": "Denuncia por Invasión de Tierras",
+      "pasos": [
+        "1. Obtener certificado de gravámenes actualizado.",
+        "2. Realizar inspección ocular con técnico (usar fotos de la App).",
+        "3. Presentar formulario ante la Fiscalía o Unidad Judicial."
+      ],
+      "documentos_requeridos": [
+        "Escrituras",
+        "Cédula",
+        "Coordenadas GPS de la App"
+      ]
+    },
+    {
+      "id": "PROC_002",
+      "titulo": "Denuncia por Robo de Cosecha / Semovientes",
+      "pasos": [
+        "1. Reporte inmediato al ECU 911 (si hay señal) o registro en App.",
+        "2. Identificación de evidencias (huellas, cercas cortadas).",
+        "3. Llenado del formato de denuncia para la Policía Judicial."
+      ]
+    }
+  ],
+  "asesor_legal": [
+    {
+      "rubro": "General - Tierras",
+      "tema": "Tenencia de Tierra Rural",
+      "ley_referencia": "Ley de Tierras Rurales y Territorios Ancestrales",
+      "resumen_offline": "Regula la propiedad, posesión y adjudicación de tierras. Prohíbe la concentración excesiva de tierra productiva."
+    },
+    {
+      "rubro": "Banano y Plátano",
+      "tema": "Contratos de Compraventa",
+      "normativa": "Ley de Banano (Precio Mínimo de Sustentación)",
+      "alerta_legal": "Es obligatorio que cada caja exportada tenga un contrato registrado ante el Ministerio para garantizar el pago del precio oficial."
+    },
+    {
+      "rubro": "Palma Aceitera",
+      "tema": "Sostenibilidad y Deforestación",
+      "normativa": "Ley para el Fortalecimiento y Desarrollo de la Palma Aceitera",
+      "punto_clave": "Obligatoriedad de certificaciones de buenas prácticas agrícolas para evitar sanciones ambientales por deforestación."
+    },
+    {
+      "rubro": "Cacao",
+      "tema": "Exportación Directa",
+      "procedimiento": "Registro como exportador en la Ventanilla Única (VUE). Certificado de origen necesario para arancel 0% en la UE."
+    }
+  ]
+}

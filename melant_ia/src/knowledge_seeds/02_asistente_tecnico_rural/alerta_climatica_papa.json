@@ -1,0 +1,17 @@
+{
+  "alerta_lancha_papa": {
+    "condiciones": {
+      "humedad_relativa_min": 80,
+      "duracion_horas_min": 10,
+      "temp_min_c": 10,
+      "temp_max_c": 18,
+      "lluvia_o_rocio": true
+    },
+    "frecuencia_chequeo_horas": 3,
+    "mensaje_push": "¡Alerta de Lancha! Se han registrado más de 10 horas de alta humedad (>80%) y temperaturas frescas. Revisa tus lotes de papa y aplica monitoreo preventivo para Tizón Tardío.",
+    "accion_recomendada": [
+      "Revisar el envés de las hojas para detectar manchas iniciales.",
+      "Aplicar fungicidas preventivos (Mancozeb) solo si se observan síntomas."
+    ]
+  }
+}

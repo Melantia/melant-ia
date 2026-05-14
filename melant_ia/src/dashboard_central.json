@@ -1,0 +1,16 @@
+{
+  "descripcion": "Mando central privado para administración, control y feedback de MELANT IA.",
+  "modulos": [
+    "Control de proyectos de carbono y cumplimiento normativo",
+    "Recepción y gestión de quejas y sugerencias",
+    "Valoración y opiniones de usuarios",
+    "Panel de métricas y auditoría técnica",
+    "Gestión de prácticas regenerativas y evidencias"
+  ],
+  "feedback": [],
+  "valoraciones": [],
+  "quejas": [],
+  "sugerencias": [],
+  "proyectos_carbono": [],
+  "ultima_actualizacion": "2026-04-20"
+}

@@ -1,0 +1,35 @@
+{
+  "interfaz": {
+    "inicio": "Juarkitiai",
+    "menu": "Nakitiai",
+    "ayuda": "Yaimiat",
+    "servicios": "Yaimiat",
+    "guardar_datos": "Enentaimpratniun amuktin",
+    "enviar_reporte": "Etserma akuptin",
+    "ubicacion": "Nunka nujatiri",
+    "comunidad": "Irutkamu",
+    "sin_conexion": "Ii llikatichu",
+    "usuario_hombre": "Shuar",
+    "usuario_mujer": "Nankin",
+    "bienvenida": "Juarkitiai, Irutkamu!",
+    "despedida": "Tura, juarkitiai!"
+  },
+  "servicios_rurales": {
+    "cultivo_maiz": "Shinki",
+    "clima_lluvia": "Yumi",
+    "alimento_base": "Yuca",
+    "plaga": "Nampin",
+    "siembra": "Nunkat",
+    "cosecha": "Nunkatmi",
+    "medicina_natural": "Nantip",
+    "agua": "Entsa",
+    "tierra": "Nunka",
+    "sol": "Etsa",
+    "luna": "Nantu",
+    "fuego": "Jí",
+    "árbol": "Numi",
+    "trabajo_comunitario": "Irutkamu yaitmiat",
+    "registro": "Yaitmiat etserma",
+    "formulario": "Yaitmiat shimi"
+  }
+}

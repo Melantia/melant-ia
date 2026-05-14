@@ -1,0 +1,74 @@
+[
+  {
+    "cultivo": "Zanahoria",
+    "categoria": "Raíz",
+    "configuracion_calendario": {
+      "siembra_directa": true,
+      "ciclo_total_dias": 110,
+      "fase_lunar_ideal_siembra": "Cuarto Menguante",
+      "hitos": [
+        { "tarea": "Raleo (Aclareo)", "dia_inicio": 15, "dia_fin": 20, "instruccion": "Deja 10cm entre cada planta para que la raíz crezca." },
+        { "tarea": "Fertilización Potasio", "dia_inicio": 45, "dia_fin": 50, "instruccion": "Aplica abono rico en potasio para engrosar la raíz." },
+        { "tarea": "Cosecha Estimada", "dia_inicio": 90, "dia_fin": 110, "instruccion": "Cosechar preferiblemente en Luna Llena para mejor sabor." }
+      ]
+    }
+  },
+  {
+    "cultivo": "Lechuga",
+    "categoria": "Hoja",
+    "configuracion_calendario": {
+      "siembra_directa": true,
+      "ciclo_total_dias": 45,
+      "fase_lunar_ideal_siembra": "Cuarto Creciente",
+      "hitos": [
+        { "tarea": "Raleo", "dia_inicio": 10, "dia_fin": 15, "instruccion": "Aclareo para evitar competencia y lograr hojas grandes." },
+        { "tarea": "Fertilización Nitrógeno", "dia_inicio": 20, "dia_fin": 25, "instruccion": "Aplica abono rico en nitrógeno para hojas tiernas." },
+        { "tarea": "Cosecha Estimada", "dia_inicio": 35, "dia_fin": 45, "instruccion": "Cosechar en Luna Llena para hojas más jugosas." }
+      ]
+    }
+  },
+  {
+    "cultivo": "Tomate",
+    "categoria": "Fruto",
+    "configuracion_calendario": {
+      "siembra_directa": false,
+      "ciclo_total_dias": 120,
+      "fase_lunar_ideal_siembra": "Cuarto Creciente",
+      "hitos": [
+        { "tarea": "Trasplante", "dia_inicio": 25, "dia_fin": 30, "instruccion": "Trasplanta cuando la planta tenga 4-5 hojas verdaderas." },
+        { "tarea": "Tutorado", "dia_inicio": 35, "dia_fin": 40, "instruccion": "Coloca tutores para evitar que el fruto toque el suelo." },
+        { "tarea": "Fertilización Fósforo", "dia_inicio": 50, "dia_fin": 60, "instruccion": "Aplica abono rico en fósforo para floración y cuajado." },
+        { "tarea": "Cosecha Estimada", "dia_inicio": 100, "dia_fin": 120, "instruccion": "Cosechar en Luna Llena para frutos más pesados y sabrosos." }
+      ]
+    }
+  },
+  {
+    "cultivo": "Maíz",
+    "categoria": "Grano",
+    "configuracion_calendario": {
+      "siembra_directa": true,
+      "ciclo_total_dias": 120,
+      "fase_lunar_ideal_siembra": "Cuarto Creciente",
+      "hitos": [
+        { "tarea": "Aclareo", "dia_inicio": 15, "dia_fin": 20, "instruccion": "Deja una planta cada 30cm para buen desarrollo." },
+        { "tarea": "Fertilización Nitrógeno", "dia_inicio": 30, "dia_fin": 35, "instruccion": "Aplica abono nitrogenado para crecimiento vegetativo." },
+        { "tarea": "Fertilización Potasio", "dia_inicio": 60, "dia_fin": 65, "instruccion": "Aplica potasio para llenado de grano." },
+        { "tarea": "Cosecha Estimada", "dia_inicio": 110, "dia_fin": 120, "instruccion": "Cosechar en Luna Llena para mayor peso de grano." }
+      ]
+    }
+  },
+  {
+    "cultivo": "Papa",
+    "categoria": "Raíz",
+    "configuracion_calendario": {
+      "siembra_directa": true,
+      "ciclo_total_dias": 120,
+      "fase_lunar_ideal_siembra": "Cuarto Menguante",
+      "hitos": [
+        { "tarea": "Aporcado", "dia_inicio": 30, "dia_fin": 40, "instruccion": "Amontona tierra en la base para proteger los tubérculos." },
+        { "tarea": "Fertilización Potasio", "dia_inicio": 60, "dia_fin": 70, "instruccion": "Aplica potasio para engrosar los tubérculos." },
+        { "tarea": "Cosecha Estimada", "dia_inicio": 100, "dia_fin": 120, "instruccion": "Cosechar en Luna Llena para tubérculos más firmes." }
+      ]
+    }
+  }
+]

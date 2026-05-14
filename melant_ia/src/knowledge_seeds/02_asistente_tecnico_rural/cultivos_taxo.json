@@ -1,0 +1,46 @@
+{
+  "nombre_cultivo": "Taxo",
+  "nombre_cientifico": "Passiflora tripartita var. mollissima",
+  "descripcion": "Fruta andina de sabor ácido, utilizada en jugos y postres. Cultivo de altura, resistente a bajas temperaturas.",
+  "origen": "Andes de Sudamérica",
+  "variedades": ["Taxo común", "Taxo gigante"],
+  "riego_optimo": "Riego moderado, 1 vez por semana en época seca.",
+  "npk_recomendado": "NPK 12-24-12 en establecimiento, NPK 15-15-15 en producción.",
+  "plagas_comunes": ["Ácaros", "Trips", "Mosca blanca"],
+  "enfermedades_comunes": ["Fusarium", "Antracnosis"],
+  "epoca_siembra_recomendada": "Final de lluvias o inicio de época seca.",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "densidad_siembra": "1,600-2,000 plantas/ha",
+    "superficie_sembrada_ha_anio": "Variable según zona"
+  },
+  "labores_cosecha": "Cosecha manual, corte de frutos maduros.",
+  "labores_postcosecha": "Clasificación, lavado, empaque y refrigeración.",
+  "captura_carbono_ton_ha_anio": 4.1,
+  "precio_carbono_usd_ton": 7.0,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, cosecha y exportación.",
+  "zonas_produccion_ecuador": [
+    "Tungurahua",
+    "Chimborazo",
+    "Cotopaxi",
+    "Imbabura"
+  ],
+  "importancia_economica": "Fruta tradicional andina con potencial de exportación.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación",
+    "Fertilización",
+    "Riego",
+    "Control fitosanitario",
+    "Cosecha",
+    "Postcosecha"
+  ],
+  "bibliografia": [
+    "Manual de Fruticultura Andina, INIAP",
+    "Guía Técnica de Taxo, MAG"
+  ],
+  "cursos_recomendados": [
+    "Producción de Frutales Andinos",
+    "Manejo Integrado de Plagas en Taxo"
+  ]
+}

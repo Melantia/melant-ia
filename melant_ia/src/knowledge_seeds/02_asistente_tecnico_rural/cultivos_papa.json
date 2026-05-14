@@ -1,0 +1,50 @@
+{
+  "papa": {
+    "nombre_cientifico": "Solanum tuberosum L.",
+    "descripcion": "Planta herbácea anual, de gran importancia alimentaria en la Sierra ecuatoriana. Fuente principal de carbohidratos y micronutrientes.",
+    "riego_optimo": "Riego frecuente en tuberización",
+    "npk_recomendado": { "N": 120, "P": 60, "K": 180 },
+    "plagas_comunes": [
+      {
+        "nombre": "Polilla de la papa (Phthorimaea operculella)",
+        "control_organico": "Trampas de feromonas, manejo de residuos, cobertura de suelo",
+        "control_quimico": "Clorpirifos, Cipermetrina",
+        "sintoma": "Galerías en tubérculos, daño en hojas y tallos"
+      },
+      {
+        "nombre": "Pulgón de la papa (Myzus persicae)",
+        "control_organico": "Aceite de Neem, jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas, transmisión de virus"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Tizón tardío (Phytophthora infestans)",
+        "control": "Fungicidas cúpricos, manejo de humedad, variedades resistentes",
+        "sintoma": "Manchas marrones en hojas y tallos, pudrición de tubérculos"
+      },
+      {
+        "nombre": "Rizoctonia (Rhizoctonia solani)",
+        "control": "Rotación de cultivos, fungicidas al suelo",
+        "sintoma": "Costra negra en tubérculos, tallos con lesiones marrones"
+      }
+    ],
+    "epoca_siembra_recomendada": "Agosto - Octubre",
+    "calendario_lunar": "Siembra en luna menguante.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fungicidas y fertilizantes químicos.",
+        "rendimiento_estimado": "25 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost y control biológico.",
+        "rendimiento_estimado": "18 t/ha"
+      }
+    },
+    "labores_cosecha": "Arranque manual de tubérculos.",
+    "labores_postcosecha": "Limpieza y almacenamiento en lugar fresco.",
+    "captura_carbono_ton_ha_anio": 2.8,
+    "precio_carbono_usd_ton": 38
+  }
+}

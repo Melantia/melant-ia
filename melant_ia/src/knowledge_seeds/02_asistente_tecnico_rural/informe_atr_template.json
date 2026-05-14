@@ -1,0 +1,27 @@
+{
+  "metadatos_informe_atr": {
+    "ID_reporte": "ATR-2026-001",
+    "generado_por": "Ing. Juan Pérez",
+    "rol_usuario": "Técnico Agrónomo",
+    "productor": "Nombre Productor",
+    "ubicacion_lote": {
+      "latitud": -0.2186,
+      "longitud": -78.5097,
+      "altitud": "2850 msnm",
+      "enlace_maps": "https://google.com"
+    },
+    "fecha_visita": "2026-04-27",
+    "firma_digital_tecnico": "",
+    "firma_digital_productor": ""
+  },
+  "informe_atr": {
+    "tipo_visita": "Visita de campo",
+    "intervencion_realizada": "Aplicación de fertilizante foliar en zona norte",
+    "evidencia_fotos": [
+      "foto1.jpg",
+      "foto2.jpg"
+    ],
+    "recomendaciones": "Repetir aplicación en 15 días si persiste el estrés foliar.",
+    "observaciones": "Productor reporta mejora en vigor tras intervención."
+  }
+}

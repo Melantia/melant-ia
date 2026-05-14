@@ -1,0 +1,61 @@
+{
+  "claudia": {
+    "nombre_cientifico": "Prunus domestica var. Claudia",
+    "descripcion": "Variedad de ciruela europea, fruto dulce y jugoso, alto valor en mercados frescos y procesados. Cultivo perenne, adaptado a la Sierra ecuatoriana.",
+    "riego_optimo": "Riego por goteo, 700-900 mm/año. Frecuencia cada 7-10 días.",
+    "npk_recomendado": { "N": 60, "P": 40, "K": 90 },
+    "plagas_comunes": [
+      {
+        "nombre": "Polilla de la ciruela",
+        "control_organico": "Trampas de feromonas",
+        "control_quimico": "Spinosad",
+        "sintoma": "Galerías en frutos"
+      },
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Moteado",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas oscuras en hojas y frutos"
+      },
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable",
+        "sintoma": "Polvo blanco en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Julio - Septiembre (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas, insecticidas",
+        "rendimiento_estimado": "18-25 t/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
+        "rendimiento_estimado": "12-18 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de frutos maduros.",
+    "labores_postcosecha": "Clasificación, enfriado, empaque en cajas.",
+    "zonas_produccion_ecuador": ["Tungurahua", "Chimborazo", "Cotopaxi"],
+    "importancia_economica": "Fruto de alto valor en mercados locales y potencial exportador.",
+    "captura_carbono_ton_ha_anio": 2.6,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 100,
+    "densidad_siembra": "2000-3000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad.",
+    "bibliografia": ["Manual de Ciruela INIAP", "FAO Ciruela Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Frutales",
+      "Postcosecha de Frutas Frescas"
+    ],
+    "variedades": ["Claudia Verde", "Claudia Roja"]
+  }
+}

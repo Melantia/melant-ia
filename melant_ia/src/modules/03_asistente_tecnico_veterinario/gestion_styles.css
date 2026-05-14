@@ -1,0 +1,30 @@
+/* Contenedor de la Tarjeta de Animal/Lote */
+.card-operativa {
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 6px solid #123E2A; /* El verde oscuro de tu logo */
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Indicador de estado (Salud/Producción) */
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #48bb78; /* Verde = Todo bien */
+}
+
+.texto-primario {
+    font-weight: 700;
+    color: #0c1a3e; /* Azul profundo */
+    font-size: 1.1rem;
+}
+
+.subtexto-operativo {
+    color: #718096;
+    font-size: 0.9rem;
+}

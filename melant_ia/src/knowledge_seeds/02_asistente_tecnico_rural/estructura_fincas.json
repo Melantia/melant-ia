@@ -1,0 +1,29 @@
+{
+  "gestion_granjas": {
+    "campos_obligatorios": [
+      {
+        "campo": "nombre_finca",
+        "tipo": "texto",
+        "descripcion": "Ej: La Esperanza"
+      },
+      {
+        "campo": "poligono_gps",
+        "tipo": "coordenadas",
+        "nota": "Se obtiene caminando el perímetro (Offline)"
+      },
+      {
+        "campo": "tipo_suelo",
+        "opciones": ["Arcilloso", "Arenoso", "Franco", "Volcánico"]
+      },
+      {
+        "campo": "fuente_agua",
+        "opciones": ["Río", "Pozo", "Lluvia", "Canal de riego"]
+      }
+    ],
+    "monitoreo_diario": {
+      "humedad_suelo": "porcentaje",
+      "presencia_plagas": "booleano",
+      "observaciones_tecnicas": "texto_libre"
+    }
+  }
+}

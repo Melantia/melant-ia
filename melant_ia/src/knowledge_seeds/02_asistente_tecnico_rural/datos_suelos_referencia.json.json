@@ -1,0 +1,124 @@
+{
+  "cultivos": {
+    "platano_barraganete": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 6.0,
+      "zona": "Costa"
+    },
+    "arandanos": {
+      "ph_ideal": [4.0, 5.0],
+      "riego_mm": 4.5,
+      "zona": "Sierra/Valles"
+    },
+    "limon_sutil": {
+      "ph_ideal": [5.5, 7.0],
+      "riego_mm": 5.0,
+      "zona": "Costa/Valles"
+    },
+    "yuca": { "ph_ideal": [5.0, 7.0], "riego_mm": 3.5, "zona": "Tropical" },
+    "malanga": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 7.0,
+      "zona": "Amazonía/Costa"
+    },
+    "mani": { "ph_ideal": [5.8, 6.2], "riego_mm": 3.0, "zona": "Costa/Manabí" },
+    "badea": { "ph_ideal": [5.5, 6.8], "riego_mm": 5.5, "zona": "Tropical" },
+    "maracuya": { "ph_ideal": [6.0, 7.0], "riego_mm": 5.0, "zona": "Costa" },
+    "papa": { "ph_ideal": [5.0, 6.0], "riego_mm": 4.0, "zona": "Sierra" },
+    "naranjilla": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 6.0,
+      "zona": "Subtrópico"
+    },
+    "tomate_de_arbol": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 5.0,
+      "zona": "Sierra"
+    },
+    "zanahoria": { "ph_ideal": [6.0, 7.0], "riego_mm": 3.5, "zona": "Sierra" },
+    "rabano": {
+      "ph_ideal": [6.0, 7.0],
+      "riego_mm": 3.0,
+      "zona": "Sierra/Valles"
+    },
+    "remolacha": { "ph_ideal": [6.0, 7.5], "riego_mm": 4.0, "zona": "Sierra" },
+    "frutilla": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 5.0,
+      "zona": "Sierra/Valles"
+    },
+    "trigo": { "ph_ideal": [6.0, 7.5], "riego_mm": 3.5, "zona": "Sierra" },
+    "cebada": { "ph_ideal": [6.5, 8.0], "riego_mm": 3.0, "zona": "Sierra" },
+    "avena": { "ph_ideal": [5.0, 7.0], "riego_mm": 3.5, "zona": "Sierra" },
+    "coco": {
+      "ph_ideal": [5.0, 8.0],
+      "riego_mm": 6.5,
+      "zona": "Costa/Tropical"
+    },
+    "cacao": {
+      "ph_ideal": [5.0, 7.5],
+      "riego_mm": 5.2,
+      "zona": "Costa/Amazonía"
+    },
+    "maiz": {
+      "ph_ideal": [5.5, 7.0],
+      "riego_mm": 3.8,
+      "zona": "Costa/Sierra"
+    },
+    "naranja": {
+      "ph_ideal": [6.0, 7.5],
+      "riego_mm": 4.5,
+      "zona": "Costa/Tropical"
+    },
+    "pastos": {
+      "ph_ideal": [5.0, 7.0],
+      "riego_mm": 3.0,
+      "zona": "Costa/Sierra"
+    },
+    "maiz_amarillo": {
+      "ph_ideal": [5.5, 7.0],
+      "riego_mm": 3.8,
+      "zona": "Costa/Sierra"
+    },
+    "arroz": {
+      "ph_ideal": [5.0, 6.5],
+      "riego_mm": 7.0,
+      "zona": "Costa/Tropical"
+    },
+    "platano_dominico": {
+      "ph_ideal": [5.5, 6.5],
+      "riego_mm": 6.0,
+      "zona": "Costa"
+    },
+    "frejoles": {
+      "ph_ideal": [6.0, 7.0],
+      "riego_mm": 3.5,
+      "zona": "Sierra/Costa"
+    },
+    "tomate": {
+      "ph_ideal": [5.5, 7.0],
+      "riego_mm": 4.5,
+      "zona": "Costa/Sierra"
+    },
+    "cebolla_colorada": {
+      "ph_ideal": [6.0, 7.0],
+      "riego_mm": 3.5,
+      "zona": "Sierra"
+    },
+    "cebolla_perla": {
+      "ph_ideal": [6.0, 7.0],
+      "riego_mm": 3.5,
+      "zona": "Costa"
+    },
+    "habas": {
+      "ph_ideal": [6.0, 7.5],
+      "riego_mm": 3.0,
+      "zona": "Sierra"
+    },
+    "habichuelas": {
+      "ph_ideal": [6.0, 7.0],
+      "riego_mm": 3.5,
+      "zona": "Costa/Sierra"
+    }
+  }
+}

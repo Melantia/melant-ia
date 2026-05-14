@@ -1,0 +1,68 @@
+{
+  "arandano": {
+    "nombre_cientifico": "Vaccinium corymbosum / V. angustifolium",
+    "descripcion": "Arbusto perenne de porte bajo, frutos en bayas azules ricas en antioxidantes. Cultivado en zonas templadas y andinas de Ecuador.",
+    "tipo_suelo_recomendado": "Franco arenoso a franco arcilloso, profundo, bien drenado, pH 4.5-5.5. Evitar suelos calcáreos o compactados.",
+    "ciclo_cultivo_dias": 365,
+    "plagas_comunes": [
+      {
+        "nombre": "Drosophila suzukii (mosca de alas manchadas)",
+        "control_organico": "Trampas de vinagre, exclusión con mallas",
+        "control_quimico": "Spinosad",
+        "sintoma": "Frutos blandos, con larvas y pudrición rápida."
+      },
+      {
+        "nombre": "Pulgón (Aphis spp.)",
+        "control_organico": "Jabón potásico, extracto de ajo",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas, presencia de melaza y fumagina."
+      },
+      {
+        "nombre": "Trips (Frankliniella occidentalis)",
+        "control_organico": "Trampas azules, aceite de Neem",
+        "control_quimico": "Abamectina",
+        "sintoma": "Manchas plateadas en hojas y frutos, daño estético."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Botrytis cinerea (moho gris)",
+        "control": "Ventilación, fungicidas biológicos, manejo de humedad",
+        "sintoma": "Frutos blandos, moho gris en superficie."
+      },
+      {
+        "nombre": "Antracnosis (Colletotrichum spp.)",
+        "control": "Poda sanitaria, fungicidas cúpricos",
+        "sintoma": "Manchas hundidas en frutos, caída prematura."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, bajo crecimiento."
+      },
+      {
+        "elemento": "Hierro",
+        "sintoma": "Clorosis internerval en hojas jóvenes."
+      },
+      { "elemento": "Magnesio", "sintoma": "Manchas rojizas en hojas adultas." }
+    ],
+    "manejo_convencional": "Fertilización química, control químico de plagas y enfermedades, riego tecnificado, acolchado plástico.",
+    "manejo_organico": "Compost, abonos verdes, control biológico, acolchado orgánico, uso de microorganismos benéficos.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, asociación con leguminosas, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 25,
+    "hectareas_sembradas_ecuador": 120,
+    "captura_carbono_ton_ha_anio": 3.8,
+    "precio_carbono_usd_ton": 38
+  },
+  "manual_regenerativo": {
+    "titulo": "Manual de Cultivo Regenerativo de Arándanos",
+    "contenido": "MANUAL PRÁCTICO DEL CULTIVO DE ARÁNDANOS (ENFOQUE REGENERATIVO)\nEscuela de Campo MELANT IA\n\nPARTE 1: BASES Y DESCRIPCIÓN GENERAL\n1. Descripción vegetal: El arándano (Vaccinium corymbosum) es un arbusto perenne de porte bajo, hojas caducas y frutos en bayas azules ricas en antioxidantes.\n2. Nombre científico: Vaccinium corymbosum (arándano alto), Vaccinium angustifolium (arándano bajo).\n3. Etapas fenológicas: Latencia, brotación, floración, cuajado, desarrollo de fruto, maduración, cosecha y postcosecha.\n4. Construcción del sistema de siembra: Camellones elevados, acolchado orgánico, asociación con leguminosas, uso de micorrizas y abonos orgánicos, riego por goteo.\n\nPARTE 2: MANEJO INTEGRAL Y SANIDAD\n5. Manejo de la sanidad vegetal (control regenerativo):\n- Prevención: Diversidad vegetal, monitoreo visual, control biológico.\n- Control de plagas: Extractos botánicos (neem, ajo, ají), liberación de insectos benéficos, trampas cromáticas.\n- Control de enfermedades: Biofermentos, caldo bordelés, manejo de humedad y ventilación.\n- Imágenes de ataque de plagas y enfermedades: (Ver recursos multimedia MELANT IA para identificación visual precisa).\n6. Fertilización regenerativa: Compost, bocashi, biol, té de estiércol, aplicación foliar de microorganismos eficientes.\n7. Información climática: Prefiere clima templado-frío, temperaturas 13-25°C, suelos ácidos (pH 4.5-5.5), buena humedad y drenaje.\n\nPARTE 3: COSECHA, POSTCOSECHA Y MERCADO\n8. Técnicas de cosecha: Recolección manual selectiva, evitar daños en frutos, uso de canastillas limpias.\n9. Postcosecha: Enfriado rápido, clasificación, empaque en bandejas ventiladas, almacenamiento en frío.\n10. Información de mercado (2026):\n- Manabí y Ecuador: Demanda creciente en mercados locales y exportación.\n- Suramérica: Exportaciones a Colombia, Perú, Chile, Brasil; precios variables según calidad y certificación.\n- Consultar app MELANT IA para precios actualizados y contactos comerciales.\n\n---\n\n© 2026 MELANT IA. Uso libre con atribución. Manual offline con recursos multimedia y QR de validación.",
+    "qr_link": "https://melant.app/validar/manual_arandano_regenerativo"
+  },
+  "manual_quimico": {
+    "titulo": "Manual de Manejo Químico de Arándanos",
+    "contenido": "MANUAL PRÁCTICO DEL CULTIVO DE ARÁNDANOS (ENFOQUE QUÍMICO Y CONSECUENCIAS)\nEscuela de Campo MELANT IA\n\nPARTE 1: BASES Y DESCRIPCIÓN GENERAL\n1. Descripción vegetal: El arándano (Vaccinium corymbosum) es un arbusto perenne de porte bajo, hojas caducas y frutos en bayas azules ricas en antioxidantes.\n2. Nombre científico: Vaccinium corymbosum (arándano alto), Vaccinium angustifolium (arándano bajo).\n3. Etapas fenológicas: Latencia, brotación, floración, cuajado, desarrollo de fruto, maduración, cosecha y postcosecha.\n4. Construcción del sistema de siembra: Camellones, acolchado plástico, monocultivo, control químico de malezas, riego tecnificado.\n\nPARTE 2: MANEJO QUÍMICO Y SANIDAD\n5. Manejo de la sanidad vegetal (control químico):\n- Plagas: Aplicación de insecticidas sintéticos (imidacloprid, lambda-cihalotrina), monitoreo visual.\n- Enfermedades: Fungicidas sistémicos (carbendazim, mancozeb), manejo de humedad.\n- Imágenes de ataque de plagas y enfermedades: (Ver recursos multimedia MELANT IA para identificación visual precisa).\n6. Fertilización química: NPK (12-24-12), urea, sulfato de amonio, aplicaciones mensuales según análisis de suelo.\n7. Comparación de gastos: El manejo químico implica mayor gasto en insumos, menor resiliencia del sistema y riesgos para la salud (residuos en fruto, intoxicaciones, daño ambiental).\n\nPARTE 3: COSECHA, POSTCOSECHA Y MERCADO\n8. Técnicas de cosecha: Recolección manual, selección de frutos, lavado con agua clorada.\n9. Postcosecha: Clasificación, empaque en bandejas plásticas, almacenamiento en frío.\n10. Información de mercado (2026):\n- Manabí y Ecuador: Demanda estable, precios sujetos a calidad y certificación.\n- Suramérica: Exportaciones crecientes, exigencias de inocuidad.\n- Consultar app MELANT IA para precios actualizados y contactos comerciales.\n\n---\n\nConsecuencias para la salud: Exposición a agroquímicos puede causar intoxicaciones agudas y crónicas, residuos en frutos, daño ambiental y pérdida de biodiversidad.\n\n© 2026 MELANT IA. Uso libre con atribución. Manual offline con recursos multimedia y QR de validación.",
+    "qr_link": "https://melant.app/validar/manual_arandano_quimico"
+  }
+}

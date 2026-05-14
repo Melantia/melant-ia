@@ -1,0 +1,48 @@
+{
+  "agenda_agricola_platano_melant_ia": {
+    "fase_1_establecimiento_y_siembra": [
+      {
+        "tarea": "Selección y Pelado de Colinos",
+        "alerta_app": "🔪 Recuerda: Un cuchillo limpio es tu mejor defensa. Desinfecta antes de pelar y protege tu plantación de bacterias. ¡Hoy siembras salud!"
+      },
+      {
+        "tarea": "Desinfección Mineral (Inmersión)",
+        "alerta_app": "🧪 Sella el futuro de tu cultivo: sumerge los colinos en Caldo Sulfocálcico y elimina amenazas invisibles. ¡Tu cosecha te lo agradecerá!"
+      }
+    ],
+    "fase_2_mantenimiento_vegetativo": [
+      {
+        "tarea": "Nutrición de Base (Bocashi)",
+        "alerta_app": "🌱 ¡Activa la vida del suelo hoy! Aplica Bocashi y multiplica la energía de tus plantas. Recuerda: suelo vivo, racimos grandes."
+      },
+      {
+        "tarea": "Descoline Técnico (Raleo)",
+        "alerta_app": "🌬️ Elige el mejor hijo y fortalece tu plantación. Menos colinos, más fuerza en cada racimo. ¡Rinde más con menos!"
+      },
+      {
+        "tarea": "Cirugía de Hoja y Deshoje",
+        "alerta_app": "🔍 ¡Alerta Sigatoka! Revisa el envés de las hojas 2 y 3. Elimina solo lo necesario y mantén tu plantación sana y productiva."
+      }
+    ],
+    "fase_3_gestion_sanitaria_y_circular": [
+      {
+        "tarea": "Instalación de Trampas para Picudo",
+        "alerta_app": "🪲 Hoy toca revisar trampas. Cada picudo atrapado es un racimo protegido. Registra tu avance y suma puntos de salud para tu finca."
+      },
+      {
+        "tarea": "Pica de Raquis y Pseudotallo",
+        "alerta_app": "🔄 ¡No desperdicies nutrientes! Pica y reincorpora el raquis: cada trozo es potasio que vuelve a tu suelo. Tu finca es un ciclo vivo."
+      }
+    ],
+    "fase_4_proteccion_de_fruto_y_cosecha": [
+      {
+        "tarea": "Desflores y Desmane",
+        "alerta_app": "✂️ Quita la flor y la última mano falsa. Así evitas pudriciones y logras dedos más grandes y sanos. ¡Cuida tu cosecha desde hoy!"
+      },
+      {
+        "tarea": "Cosecha y Registro",
+        "alerta_app": "📊 ¡Felicidades! Es día de cosecha. Registra los kilos y observa tu progreso. Cada dato suma a tu ahorro y salud del suelo."
+      }
+    ]
+  }
+}

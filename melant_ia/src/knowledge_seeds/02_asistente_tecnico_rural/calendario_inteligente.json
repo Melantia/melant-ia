@@ -1,0 +1,24 @@
+{
+  "calendario_inteligente": {
+    "reglas_de_notificacion": [
+      {
+        "evento": "Riesgo de Hongo (Sigatoka/Lancha)",
+        "condicion_sensor": "Humedad > 85% por 6 horas",
+        "accion_calendario": "Adelantar aplicacion de Caldo Sulfocalcico",
+        "mensaje_push": "⚠️ ALERTA: Condiciones de alta humedad detectadas. Aplica tu mezcla preventiva hoy mismo."
+      },
+      {
+        "evento": "Fertilizacion de Llenado",
+        "condicion_fenologica": "Inicio de fructificacion",
+        "insumo_sugerido": "Biol enriquecido con Potasio y Ceniza",
+        "mensaje_push": "🍓 TU CULTIVO TIENE HAMBRE: Iniciando etapa de llenado. Aplica el refuerzo de Potasio."
+      }
+    ],
+    "plan_estandar_maiz_duro": [
+      {"dia": 1, "fase": "Siembra", "actividad": "Inoculacion con Trichoderma y Micorrizas"},
+      {"dia": 15, "fase": "V3", "actividad": "Primera aplicacion de Biol (Nitrogeno)"},
+      {"dia": 45, "fase": "Vn", "actividad": "Control de Cogollero con extracto de Nim"},
+      {"dia": 75, "fase": "R1", "actividad": "Refuerzo nutricional para llenado de grano"}
+    ]
+  }
+}

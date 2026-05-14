@@ -1,0 +1,57 @@
+{
+  "nombre_cultivo": "Rosas",
+  "nombre_cientifico": "Rosa spp.",
+  "descripcion": "Las rosas son plantas ornamentales ampliamente cultivadas por sus flores vistosas y fragantes. Son de gran importancia económica en la floricultura y la exportación.",
+  "origen": "Asia, Europa y América del Norte",
+  "variedades": [
+    "Rosa híbrida de té",
+    "Rosa floribunda",
+    "Rosa grandiflora",
+    "Rosa miniatura",
+    "Rosa trepadora",
+    "Rosa arbustiva"
+  ],
+  "riego_optimo": "Riego regular, evitando encharcamientos. 2-3 veces por semana dependiendo del clima.",
+  "npk_recomendado": "NPK 12-24-12 en etapa de crecimiento, NPK 15-15-15 en floración.",
+  "plagas_comunes": ["Pulgones", "Araña roja", "Trips", "Mosca blanca"],
+  "enfermedades_comunes": ["Oídio", "Mancha negra", "Roya", "Mildiu"],
+  "epoca_siembra_recomendada": "Época seca o inicio de lluvias, evitando heladas.",
+  "calendario_lunar": "Siembra y poda preferentemente en luna menguante.",
+  "calculos_agricultura": {
+    "densidad_siembra": "6-8 plantas/m² en invernadero",
+    "superficie_sembrada_ha_anio": "Variable según demanda y rotación"
+  },
+  "labores_cosecha": "Corte de flores en botón, preferentemente en la mañana. Uso de tijeras limpias.",
+  "labores_postcosecha": "Hidratación, clasificación, empaque en frío, transporte refrigerado.",
+  "captura_carbono_ton_ha_anio": 2.5,
+  "precio_carbono_usd_ton": 8.0,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, fechas de corte, tratamientos, empaque y exportación. Certificaciones fitosanitarias y de sostenibilidad.",
+  "zonas_produccion_ecuador": [
+    "Cayambe",
+    "Tabacundo",
+    "Latacunga",
+    "Machachi",
+    "Ambato"
+  ],
+  "importancia_economica": "Las rosas representan uno de los principales rubros de exportación no petrolera del Ecuador, generando empleo y divisas.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación de esquejes o plántulas",
+    "Fertilización y manejo nutricional",
+    "Riego y control de humedad",
+    "Control fitosanitario",
+    "Poda y formación",
+    "Cosecha y postcosecha",
+    "Empaque y exportación"
+  ],
+  "bibliografia": [
+    "Manual de Floricultura, INIAP",
+    "Guía Técnica de Rosas, MAG",
+    "FAO: Producción y manejo de rosas"
+  ],
+  "cursos_recomendados": [
+    "Curso de Floricultura Sostenible",
+    "Manejo Integrado de Plagas en Rosas",
+    "Exportación de Flores: Normas y Certificaciones"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "fertilizacion_organica_vs_quimica": {
+    "tema": "Beneficios de la fertilización orgánica vs. fertilización química",
+    "descripcion": "Comparativa entre fertilizantes orgánicos e inorgánicos: impacto en la salud del suelo, retención de agua, actividad microbiológica, disponibilidad de nutrientes y sostenibilidad agrícola. Contexto Ecuador y Latinoamérica.",
+    "referencias": [
+      {
+        "archivo": "Fitochem_beneficios_fertilizacion_organica_vs_quimica",
+        "fuente": "Fitochem. Por qué es preferible la fertilización orgánica.",
+        "url": "https://fitochem.com/por-que-debe-es-preferible-la-fertilizacion-organica/",
+        "resumen": "Al emplear fertilizantes orgánicos, los agricultores pueden mejorar la fertilidad del suelo, fortalecer la salud de las plantas y respaldar prácticas agrícolas sostenibles a largo plazo."
+      },
+      {
+        "archivo": "ModoAgro_2024_diferencias_fertilizantes_quimicos_organicos",
+        "fuente": "ModoAgro (19 jul 2024). Diferencias entre fertilizantes químicos y orgánicos.",
+        "url": "https://modoagro.com/noticias/diferencias-fertilizantes-quimicos-organicos",
+        "resumen": "Los fertilizantes orgánicos enriquecen y mejoran la estructura del suelo, incrementan la actividad microbiológica y ofrecen nutrición gradual versus la acción inmediata de los químicos."
+      },
+      {
+        "archivo": "Godoy_2001_fertilizacion_quimica_organica_frijol_Zamorano_PDF",
+        "fuente": "Godoy, J. P. F. (2001). Efecto de la fertilización química y orgánica sobre el rendimiento del frijol. Biblioteca Digital Zamorano. PDF. Mencionado por 3.",
+        "url": "https://bdigital.zamorano.edu/server/api/core/bitstreams/content",
+        "resumen": "[PDF] Se determinó que la combinación del fertilizante químico con bokashi mejoran el rendimiento de frijol y la calidad de suelo en sus propiedades físicas. Estudio experimental de referencia en manejo integrado de fertilización."
+      },
+      {
+        "archivo": "EOSDataAnalytics_2024_fertilizantes_organicos_tipos_beneficios",
+        "fuente": "EOS Data Analytics (12 abr 2024). Fertilizantes Orgánicos: Tipos y Beneficios para los Cultivos.",
+        "url": "https://eos.com/es/blog/fertilizantes-organicos/",
+        "resumen": "La adición de compuestos orgánicos al suelo mejora su capacidad de retención del agua y aligera su estructura. Análisis de tipos de fertilizantes orgánicos y sus beneficios diferenciados."
+      },
+      {
+        "archivo": "Ingeagro_2024_beneficios_fertilizantes_organicos_quimicos",
+        "fuente": "Ingeagro S.A. (4 sept 2024). Beneficios de los fertilizantes orgánicos o químicos.",
+        "url": "https://ingeagrosa.com/beneficios-de-los-fertilizantes-organicos-o-quimicos/",
+        "resumen": "Si se busca mejorar la calidad del suelo y reducir el impacto ambiental, los fertilizantes orgánicos son la opción ideal. Comparativa técnica con guía de selección según tipo de cultivo."
+      },
+      {
+        "archivo": "SuministrosLuque_abonos_organicos_vs_quimicos",
+        "fuente": "Suministros Agrícolas Luque (30 oct 2018). Abonos orgánicos vs Abonos químicos.",
+        "url": "https://www.suministrosagricolasluque.com/blog/abonos-organicos-vs-abonos-quimicos",
+        "resumen": "Los abonos orgánicos mejoran la estructura y propiedades del suelo, tienen efecto regulador en temperatura del suelo y evitan la evaporación excesiva, colaborando en la retención de humedad."
+      },
+      {
+        "archivo": "AgriTecno_2025_fertilidad_suelo_agricultura_sostenible",
+        "fuente": "Agri-Tecno (24 ene 2025). Fertilidad del Suelo: El Fundamento de la Agricultura Sostenible.",
+        "url": "https://www.agri-tecno.com/blog/fertilidad-del-suelo-el-fundamento-de-la-agricultura-sostenible",
+        "resumen": "La agricultura regenerativa tiene como objetivo restaurar y mejorar los ecosistemas agrícolas a través de prácticas sostenibles. Sus pilares incluyen manejo de fertilidad orgánica, cobertura vegetal y rotación."
+      },
+      {
+        "archivo": "FAO_openknowledge_fertilizantes_y_su_uso_PDF",
+        "fuente": "FAO. Los fertilizantes y su uso. OpenKnowledge FAO. PDF.",
+        "url": "https://openknowledge.fao.org/server/api/core/bitstreams/content/fertilizantes",
+        "resumen": "[PDF] Los principales factores determinantes de la fertilidad del suelo son la materia orgánica (incluyendo la biomasa microbiana), la textura y la estructura. Guía técnica oficial FAO sobre uso correcto de fertilizantes."
+      },
+      {
+        "archivo": "GeniaBioenergy_fertilizantes_organicos_vs_inorganicos",
+        "fuente": "Genia Bioenergy. Fertilizantes orgánicos vs fertilizantes inorgánicos en el cultivo.",
+        "url": "https://geniabioenergy.com/fertilizantes-organicos-e-inorganicos/",
+        "resumen": "La alta concentración de nutrientes y solubilidad hace que los fertilizantes inorgánicos sean fáciles de aplicar y proporcionen resultados inmediatos, mientras que los orgánicos aportan sostenibilidad a largo plazo."
+      },
+      {
+        "archivo": "Agroenlace_2024_ejemplos_abonos_inorganicos",
+        "fuente": "Agroenlace (27 nov 2024). 5 Ejemplos de Abonos Inorgánicos.",
+        "url": "https://agroenlace.co/insumos-agricolas/ejemplos-abonos-inorganicos",
+        "resumen": "Principales fertilizantes inorgánicos: Sulfato de Amonio, Superfosfato Triple, Nitrato de Potasio, Cloruro de Potasio y Urea. Descripción de características y usos agrícolas de cada uno."
+      },
+      {
+        "archivo": "IAUSA_fertilizantes_inorganicos_tipos_variedades",
+        "fuente": "IAUSA. Fertilizantes inorgánicos: tipos y variedades.",
+        "url": "https://iausa.com.mx/fertilizantes-inorganicos-tipos-y-variedades/",
+        "resumen": "Los fertilizantes inorgánicos incluyen cianamida cálcica, urea y sus productos de condensación y asociación. Clasificación técnica detallada por composición química y función nutricional."
+      },
+      {
+        "archivo": "EOSDataAnalytics_2024_tipos_fertilizantes_elegir",
+        "fuente": "EOS Data Analytics (14 feb 2024). Tipos de Fertilizantes y Cómo Elegir el Adecuado.",
+        "url": "https://eos.com/es/blog/tipos-de-fertilizantes/",
+        "resumen": "Entre los tipos de fertilizantes con base potásica se encuentran el cloruro potásico (KCl) y el sulfato potásico. Guía comparativa completa por macro y micronutrientes."
+      },
+      {
+        "archivo": "Agrocalidad_2022_hoja_ruta_fertilizantes_Ecuador_PDF",
+        "fuente": "Agrocalidad Ecuador (14 jun 2022). Hoja de Ruta de Fertilizantes. PDF, 88 páginas.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2022/06/Manual-fertilizantes.pdf",
+        "resumen": "[PDF 88 págs.] Documento oficial ecuatoriano. Clasifica productos como fertilizante inorgánico, fertilizante de origen orgánico, enmienda mineral y enmienda de origen orgánico. Referencia normativa para Ecuador."
+      },
+      {
+        "archivo": "MunozRendifo_2024_abonos_organicos_fertilizantes_quimicos_Redalyc",
+        "fuente": "Muñoz-Rengifo, J. C. (2024). Efecto de abonos orgánicos complementados con fertilizantes químicos. Redalyc. Mencionado por 1.",
+        "url": "https://www.redalyc.org/journal/html/abonos-organicos-fertilizantes",
+        "resumen": "El uso de abonos orgánicos complementados con fertilizantes químicos puede ser una estrategia para mejorar la fertilidad del suelo y aumentar la productividad. Investigación experimental en cultivos ecuatorianos."
+      },
+      {
+        "archivo": "NTE_INEN_211_norma_fertilizantes_Ecuador_PDF",
+        "fuente": "NTE INEN 211:98. Norma Técnica Ecuatoriana sobre fertilizantes y abonos. Gob.ec. PDF, 6 páginas.",
+        "url": "https://www.gob.ec/sites/default/files/regulations/nte-inen-211-fertilizantes.pdf",
+        "resumen": "[PDF 6 págs.] Norma ecuatoriana que establece las tolerancias mínimas y máximas permitidas en el grado garantizado de los fertilizantes o abonos para inspección y comercialización en Ecuador."
+      },
+      {
+        "archivo": "RevistaIndustrias_2023_mercado_ecuatoriano_abonos",
+        "fuente": "Revista Industrias (4 oct 2023). El mercado ecuatoriano de los abonos procesados.",
+        "url": "https://revistaindustrias.com/el-mercado-ecuatoriano-de-los-abonos-procesados/",
+        "resumen": "El negocio de abonos en Ecuador mueve aproximadamente 400.000 toneladas al año, de las cuales el 10% se expende bajo marca comercial. Análisis del mercado nacional de fertilizantes."
+      },
+      {
+        "archivo": "ICLGrowingSolutions_fertilizantes_organicos_vs_inorganicos",
+        "fuente": "ICL Growing Solutions LATAM. Fertilizantes orgánicos frente a inorgánicos: entienda la diferencia.",
+        "url": "https://icl-growingsolutions.com/latam/knowledge-hub/fertilizantes-organicos-vs-inorganicos/",
+        "resumen": "Los inorgánicos pueden utilizarse durante la fase de crecimiento activo para resultados rápidos, mientras que los orgánicos actúan de forma más lenta pero mejoran la estructura y biología del suelo sosteniblemente."
+      },
+      {
+        "archivo": "UCE_2024_MunozRengifo_compost_gallinaza_fertilizante_quimico",
+        "fuente": "Muñoz-Rengifo, J. C. (2024). Evaluación del impacto de compost y gallinaza combinado con fertilizantes químicos. Universidad Central del Ecuador. Mencionado por 1.",
+        "url": "https://revistadigital.uce.edu.ec/index.php/article/view/abonos-organicos-fertilizantes",
+        "resumen": "Investigación experimental que evaluó el impacto de la aplicación de compost y gallinaza combinado con fertilizantes químicos sobre la productividad de cultivos ecuatorianos y propiedades del suelo."
+      },
+      {
+        "archivo": "Agripac_Ecuador_fertilizantes_edaficos_foliares",
+        "fuente": "Agripac Ecuador. División Fertilizantes: edáficos y foliares.",
+        "url": "https://agripac.com.ec/division/fertilizantes-2/",
+        "resumen": "Servicio especializado en fertilizantes edáficos y foliares. La línea incluye urea, abonos compuestos NPK y fertilizantes foliares de micronutrientes para cultivos de exportación y consumo interno en Ecuador."
+      },
+      {
+        "archivo": "UAgraria_2023_abonos_organicos_solidos_gallinaza_humus_PDF",
+        "fuente": "Universidad Agraria del Ecuador (2023). Efecto de abonos orgánicos sólidos: gallinaza, humus, tierra de diatomeas. PDF, 115 páginas. Mencionado por 1.",
+        "url": "https://cia.uagraria.edu.ec/Archivos/abonos-organicos-solidos-2023.pdf",
+        "resumen": "[PDF 115 págs.] Estudio experimental basado en 16 tratamientos con abonos orgánicos sólidos (gallinaza, humus, tierra de diatomeas) para determinar el mejor esquema de fertilización orgánica en cultivos ecuatorianos."
+      },
+      {
+        "archivo": "CIP_papa_Ecuador_manejo_fertilizantes",
+        "fuente": "CIP - International Potato Center. Manejo de fertilizantes. Papa en Ecuador.",
+        "url": "https://cipotato.org/papaenecuador/manejo-de-fertilizantes/",
+        "resumen": "Fertilizantes inorgánicos: compuestos químico-sintéticos y/o minerales. Abonos orgánicos: provienen de la transformación de residuos animales y vegetales. Guía técnica aplicada al cultivo de papa en Ecuador."
+      }
+    ]
+  }
+}

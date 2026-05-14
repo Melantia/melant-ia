@@ -1,0 +1,183 @@
+{
+  "modulo": "Gestión Productiva y Empresarial",
+  "ai_logic": {
+    "priority": "Bienestar Animal, Eficiencia Operativa y Trazabilidad",
+    "search_context": [
+      "Ciclos de reproducción por especie (Porcina, Avícola, Cabras, Equina, Bovinos)",
+      "Tablas de conversión alimenticia y costo por etapa",
+      "Protocolos de sanidad: Vacunación, desparasitación y vitaminas",
+      "Mantenimiento preventivo de maquinaria y gestión de personal",
+      "Registro de trazabilidad por lote y animal individual"
+    ],
+    "especies_clave": {
+      "porcinos": {
+        "foco": "Control de peso, destete y ciclos de parto",
+        "trazabilidad": "Foto de camada al nacer y peso final"
+      },
+      "aves": {
+        "foco": "Curvas de postura, control térmico y mortalidad",
+        "trazabilidad": "Registro de lote y fechas de entrada/salida"
+      },
+      "cabras": {
+        "foco": "Control de peso, destete y ciclos de parto",
+        "trazabilidad": "Registro de parto y producción de leche"
+      },
+      "equinos_paso_fino": {
+        "foco": "Genealogía, entrenamiento y salud deportiva",
+        "trazabilidad": "Historial clínico, fotos de herraje y ADN"
+      },
+      "bovinos": {
+        "foco": "Registro de ordeño, preñez y sanidad",
+        "trazabilidad": "Marcas de arete y trazabilidad de carne/leche"
+      }
+    }
+  },
+  "funciones_boton": {
+    "on_animal_click": {
+      "accion": "Abrir ficha de historial individual",
+      "secciones": [
+        "Fotos de crecimiento",
+        "Calendario de vacunas",
+        "Costos de alimentación"
+      ]
+    },
+    "on_field_op": {
+      "accion": "Registrar actividad de campo",
+      "tipos": [
+        "Siembra",
+        "Aplicación de fertilizante",
+        "Cosecha"
+      ]
+    },
+    "on_employee_check": {
+      "accion": "Ficha de seguimiento de empleados",
+      "registro": [
+        "Actividad asignada",
+        "Horas trabajadas",
+        "Cumplimiento de protocolo"
+      ]
+    }
+  },
+  "trazabilidad_config": {
+    "almacenamiento_fotos": "src/storage/trazabilidad/",
+    "formato_archivo": "ID_Animal_Fecha_Etapa.jpg",
+    "backup_offline": true
+  },
+  "Salud_Veterinaria": {
+    "protocolos": {
+      "vacunacion": "Calendario automático por especie y edad",
+      "desparasitacion": "Recordatorios basados en clima y zona (Ecuador)",
+      "emergencias": "Guía de primeros auxilios por síntomas visuales"
+    },
+    "diagnostico_ia": {
+      "entrada": [
+        "Foto de la herida/síntoma",
+        "Nota de voz del productor"
+      ],
+      "salida": [
+        "Posible patología",
+        "Nivel de urgencia (Semaforo)",
+        "Recomendación técnica"
+      ]
+    },
+    "identificacion_patologias": {
+      "porcinos": {
+        "plagas": [
+          "Piojos",
+          "Sarna",
+          "Gusano barrenador"
+        ],
+        "enfermedades_alerta_roja": [
+          "Peste Porcina Africana",
+          "Fiebre Aftosa",
+          "Erisipela"
+        ],
+        "sintomas_clave": [
+          "Manchas rojas",
+          "Falta de apetito",
+          "Tos persistente"
+        ]
+      },
+      "aves_criollas_y_granja": {
+        "plagas": [
+          "Ácaros (Gorgojillo)",
+          "Piojillo de la pluma"
+        ],
+        "enfermedades_alerta_roja": [
+          "Newcastle",
+          "Gumboro",
+          "Influenza Aviar"
+        ],
+        "sintomas_clave": [
+          "Cresta morada",
+          "Dificultad respiratoria",
+          "Heces blancas"
+        ]
+      },
+      "equinos_paso_fino": {
+        "enfermedades_criticas": [
+          "Cólico equino",
+          "Encefalitis",
+          "Anemia Infecciosa"
+        ],
+        "alertas_salud": [
+          "Cojera",
+          "Hinchazón en menudillos",
+          "Cambio en el pelaje"
+        ]
+      },
+      "cuyes": {
+        "plagas": [
+          "Ácaros",
+          "Pulgas",
+          "Piojos"
+        ],
+        "enfermedades_alerta_roja": [
+          "Salmonelosis",
+          "Tifus",
+          "Pulicosis"
+        ],
+        "sintomas_clave": [
+          "Pérdida de peso",
+          "Caída de pelo",
+          "Heridas en la piel",
+          "Diarrea"
+        ]
+      },
+      "bovinos": {
+        "plagas": [
+          "Garrapatas",
+          "Mosca del cuerno"
+        ],
+        "enfermedades_alerta_roja": [
+          "Fiebre Aftosa",
+          "Brucelosis",
+          "Carbunco"
+        ],
+        "sintomas_clave": [
+          "Babeo excesivo",
+          "Fiebre alta",
+          "Abortos",
+          "Úlceras en boca y patas"
+        ]
+      },
+      "cabras": {
+        "plagas": [
+          "Ácaros",
+          "Mosca de la paleta"
+        ],
+        "enfermedades_alerta_roja": [
+          "Fiebre Q",
+          "Artritis encefalitis caprina",
+          "Brucelosis"
+        ],
+        "sintomas_clave": [
+          "Cojea",
+          "Inflamación de articulaciones",
+          "Abortos",
+          "Pérdida de peso"
+        ]
+      }
+    }
+  }
+}

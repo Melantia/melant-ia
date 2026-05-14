@@ -1,0 +1,14 @@
+{
+  "nutricion_estrategica": {
+    "version": "1.0",
+    "descripcion": "Cruce de especie, nutrientes regenerativos y beneficio productivo.",
+    "tabla": [
+      {"especie": "Bovinos", "nutrientes": "Cobre, Zinc y Selenio", "beneficio": "Pezuñas fuertes, menos cojeras y mejor respuesta a vacunas."},
+      {"especie": "Equinos", "nutrientes": "Aminoácidos (Lisina, Metionina)", "beneficio": "Regeneración muscular rápida tras trabajo intenso."},
+      {"especie": "Porcinos", "nutrientes": "Ácidos Orgánicos en agua", "beneficio": "Salud intestinal que evita gasto en antibióticos caros."},
+      {"especie": "Aves", "nutrientes": "Calcio Granular + Vit D3", "beneficio": "Menos rotura de huevos y huesos fuertes en ponedoras."},
+      {"especie": "Perros/Gatos", "nutrientes": "Colágeno Hidrolizado + Omega 3", "beneficio": "Retrasa la necesidad de tratamientos articulares en la vejez."},
+      {"especie": "Cabras", "nutrientes": "Bloques nutricionales con Cobalto", "beneficio": "Prevención de anemias y mejora de la calidad de la leche."}
+    ]
+  }
+}

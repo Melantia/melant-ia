@@ -1,0 +1,109 @@
+{
+  "investigaciones": [
+    {
+      "pais": "Ecuador",
+      "titulo": "Evaluación de la concentración de cadmio (Cd) y plomo (Pb) en cultivo de palma africana (Elaeis guineensis), Guayas - Ecuador",
+      "descripcion": "Esta investigación de la Universidad Agraria del Ecuador se enfoca en la presencia de metales pesados en las plantaciones de palma africana en la provincia de Guayas.",
+      "referencia_bibliografica": {
+        "autores": "Delgado Jiménez, L. A.",
+        "año": "2024",
+        "publicacion": "Universidad Agraria del Ecuador",
+        "url": "https://cia.uagraria.edu.ec/Archivos/DELGADO%20JIM%C3%89NEZ%20LUIGY%20ARIEL.pdf"
+      }
+    },
+    {
+      "pais": "Ecuador",
+      "titulo": "Impactos de la Palma Africana en Ecuador",
+      "descripcion": "Este informe de PODER (Proyecto sobre Organización, Desarrollo, Educación e Investigación) analiza los impactos socioambientales del cultivo de palma africana en Ecuador, examinando el marco jurídico, la cadena de valor y el rol de las corporaciones.",
+      "referencia_bibliografica": {
+        "autores": "Camacho, S., Castrejón, D., Pineda, O., & Silva, D.",
+        "año": "2022",
+        "publicacion": "PODER",
+        "url": "https://poderlatam.org/wp-content/uploads/2022/07/Informe_TOA.pdf"
+      }
+    },
+    {
+      "pais": "Ecuador",
+      "titulo": "Situation of Workers in the African Palm Sector in Ecuador",
+      "descripcion": "Este estudio de la Friedrich-Ebert-Stiftung (FES) analiza las condiciones laborales de los trabajadores en el sector de la palma africana en Ecuador entre 2018 y 2023.",
+      "referencia_bibliografica": {
+        "autores": "Carrión, D., Maya, N., & Sánchez, P.",
+        "año": "2025",
+        "publicacion": "Friedrich-Ebert-Stiftung Ecuador FES-ILDIS",
+        "url": "https://collections.fes.de/download/pdf/1885923.pdf"
+      }
+    },
+    {
+      "pais": "Ecuador",
+      "titulo": "Manual del cultivo de palma africana (Elaeis guineensis Jacq) para la zona noroccidental del Ecuador",
+      "descripcion": "Manual para fortalecer e impulsar la investigación y transferencia de tecnología en el cultivo de palma africana en la zona noroccidental de Ecuador.",
+      "referencia_bibliografica": {
+        "autores": "Chávez, Francisco",
+        "publicacion": "Instituto Nacional Autónomo de Investigaciones Agropecuarias Estación Experimental 'Santo Domingo'",
+        "url": "https://repositorio.fedepalma.org/handle/123456789/108964"
+      }
+    },
+    {
+      "pais": "Colombia",
+      "titulo": "Análisis financiero integral de la empresa cultivadora de palma africana en Colombia",
+      "descripcion": "Este artículo de la Revista GEON realiza un diagnóstico financiero de empresas colombianas cultivadoras de palma africana, evaluando su desempeño en el periodo 2017-2021.",
+      "referencia_bibliografica": {
+        "autores": "Rivera-Godoy, J. A., & Vidal-Sánchez, T. A.",
+        "año": "2023",
+        "publicacion": "Revista GEON (Gestión, Organizaciones y Negocios)",
+        "volumen_numero": "10(2)",
+        "pagina": "e-954",
+        "url": "https://revistageon.unillanos.edu.co/index.php/geon/article/view/954"
+      }
+    },
+    {
+      "pais": "Colombia",
+      "titulo": "Evidence of sustainable intensification in the production of palm oil from crops planted with Elaeis oleifera x Elaeis guineensis in Colombia",
+      "descripcion": "Esta investigación de Frontiers aborda la intensificación sostenible en la producción de aceite de palma en Colombia, específicamente con cultivos de híbridos Elaeis oleifera x Elaeis guineensis.",
+      "referencia_bibliografica": {
+        "autores": "Mosquera-Montoya, M., Campero, J. E., Ruiz, E., Hernández, D., García, A., Vargas, L. E., Mesa, E., Munévar, D., & Sinisterra, K.",
+        "año": "2023",
+        "publicacion": "Frontiers in Sustainable Food Systems",
+        "volumen_numero": "7",
+        "url": "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2023.1217653/full"
+      }
+    },
+    {
+      "pais": "Colombia",
+      "titulo": "Assessing labor productivity in the harvest of crops planted with Elaeis oleifera x Elaeis guineensis crossings in an oil palm plantation from Colombia",
+      "descripcion": "Este artículo evalúa la productividad laboral en la cosecha de cultivos de híbridos Elaeis oleifera x Elaeis guineensis en una plantación de palma de aceite en Colombia.",
+      "referencia_bibliografica": {
+        "autores": "Camperos-Reyes, J. E., Sánchez-Rodriguez, S., Pulido-Álvarez, N. F., Ruiz-Alvarez, E., & Mosquera-Montoya, M.",
+        "año": "2024",
+        "publicacion": "OCL - Oilseeds and fats, Crops and Lipids",
+        "volumen_numero": "31",
+        "pagina": "16",
+        "url": "https://www.edp-open.org/articles/ocl/ref/2024/01/ocl230045/ocl230045.html"
+      }
+    },
+    {
+      "pais": "Ecuador, Colombia y Perú (Comparativa)",
+      "titulo": "Análisis de datos en el cuidado de Elaeis guineensis (palma africana) en Colombia, Ecuador y Perú",
+      "descripcion": "Este artículo compara cómo la disponibilidad de datos en las plantaciones de palma africana afecta la producción de aceite de palma en estos tres países.",
+      "referencia_bibliografica": {
+        "autores": "Jaimes Becerra, J. R., Tinoco Diaz, E. K., Bravo Bravo, I. F., Caicedo Aldaz, J. C., Campaña Chaglla, J. A., & Pérez Rivas, N. Y.",
+        "año": "2023",
+        "publicacion": "Ciencia y Tecnología",
+        "volumen_numero": "16(1)",
+        "pagina": "470",
+        "url": "https://revistas.uteq.edu.ec/index.php/cyt/article/view/470"
+      }
+    },
+    {
+      "pais": "Ecuador",
+      "titulo": "Palma avanza sin control en la Amazonía ecuatoriana",
+      "descripcion": "Este artículo reporta sobre el crecimiento descontrolado de los cultivos de palma en la Amazonía ecuatoriana y sus impactos socioambientales.",
+      "referencia_bibliografica": {
+        "autores": "Alarcón, Isabel",
+        "año": "2024",
+        "publicacion": "Servindi - Servicios de Comunicación Intercultural",
+        "url": "https://www.servindi.org/actualidad-noticias/08/07/2024/palma-se-extiende-sin-control-en-la-amazonia-ecuatoriana"
+      }
+    }
+  ]
+}

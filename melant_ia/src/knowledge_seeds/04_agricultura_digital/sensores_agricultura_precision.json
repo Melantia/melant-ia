@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sensor_ndvi_001",
+    "nombre": "Sensor NDVI portátil",
+    "descripcion": "Sensor óptico para medir el Índice de Vegetación de Diferencia Normalizada (NDVI) en campo.",
+    "parametros": [
+      "NDVI",
+      "Reflectancia roja",
+      "Reflectancia infrarroja cercana"
+    ],
+    "aplicaciones": [
+      "Monitoreo de salud vegetal",
+      "Detección de estrés hídrico",
+      "Mapeo de vigor de cultivos"
+    ],
+    "tecnologia": "Óptica multiespectral",
+    "fabricante": "AgroTech",
+    "url_manual": "https://www.agrotech.com/manuales/ndvi.pdf"
+  },
+  {
+    "id": "sensor_suelo_002",
+    "nombre": "Sensor de humedad de suelo",
+    "descripcion": "Sensor para medición precisa de humedad volumétrica en suelos agrícolas.",
+    "parametros": [
+      "Humedad volumétrica (%)",
+      "Temperatura del suelo (°C)"
+    ],
+    "aplicaciones": [
+      "Riego inteligente",
+      "Prevención de estrés hídrico",
+      "Optimización de fertirrigación"
+    ],
+    "tecnologia": "Capacitiva",
+    "fabricante": "SoilSense",
+    "url_manual": "https://www.soilsense.com/manuales/humedad.pdf"
+  }
+]

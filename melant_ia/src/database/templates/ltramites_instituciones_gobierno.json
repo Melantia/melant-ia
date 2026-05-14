@@ -1,0 +1,23 @@
+{
+  "tramites_ecuador": {
+    "LICENCIA_CONDUCIR": {
+      "institucion": "ANT",
+      "requisitos": [
+        "Turno impreso",
+        "Comprobante de pago (Banco Pacífico/Produbanco)",
+        "Examen psicosomático",
+        "Cédula y certificado de votación"
+      ],
+      "pasos": "1. Pagar especie -> 2. Sacar turno web -> 3. Rendir examen"
+    },
+    "REGISTRO_MARCA_AGRO": {
+      "institucion": "SENADI / MAG",
+      "requisitos": [
+        "Logotipo en formato digital",
+        "Búsqueda fonética previa",
+        "Pago de tasas"
+      ],
+      "nota": "Vital para vender tu cacao con marca propia"
+    }
+  }
+}

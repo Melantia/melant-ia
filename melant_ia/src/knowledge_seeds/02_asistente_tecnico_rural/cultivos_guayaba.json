@@ -1,0 +1,46 @@
+{
+  "nombre_cultivo": "Guayaba",
+  "nombre_cientifico": "Psidium guajava",
+  "descripcion": "Fruta tropical de alto valor nutricional, utilizada en fresco, jugos y procesados. Resistente y adaptable a diferentes climas.",
+  "origen": "América tropical",
+  "variedades": [
+    "Guayaba blanca",
+    "Guayaba rosada",
+    "Guayaba pera",
+    "Guayaba manzana"
+  ],
+  "riego_optimo": "Riego moderado, evitando encharcamientos. 1-2 veces por semana.",
+  "npk_recomendado": "NPK 10-30-10 en establecimiento, NPK 15-15-15 en producción.",
+  "plagas_comunes": ["Mosca de la fruta", "Picudo", "Trips"],
+  "enfermedades_comunes": ["Antracnosis", "Mildiu", "Mancha foliar"],
+  "epoca_siembra_recomendada": "Inicio de lluvias o época húmeda.",
+  "calendario_lunar": "Siembra y poda en luna creciente.",
+  "calculos_agricultura": {
+    "densidad_siembra": "400-600 plantas/ha",
+    "superficie_sembrada_ha_anio": "Variable según zona"
+  },
+  "labores_cosecha": "Cosecha manual selectiva, evitando golpes.",
+  "labores_postcosecha": "Lavado, clasificación, empaque y refrigeración.",
+  "captura_carbono_ton_ha_anio": 5.2,
+  "precio_carbono_usd_ton": 7.5,
+  "trazabilidad_digital_exportacion": "Registro digital de lotes, cosecha, tratamientos y exportación.",
+  "zonas_produccion_ecuador": ["Guayas", "Manabí", "Los Ríos", "Esmeraldas"],
+  "importancia_economica": "Fruta de consumo masivo y potencial de exportación.",
+  "procesos_clave": [
+    "Preparación del terreno",
+    "Plantación",
+    "Fertilización",
+    "Riego",
+    "Control fitosanitario",
+    "Cosecha",
+    "Postcosecha"
+  ],
+  "bibliografia": [
+    "Manual de Fruticultura, INIAP",
+    "Guía Técnica de Guayaba, MAG"
+  ],
+  "cursos_recomendados": [
+    "Producción de Frutales Tropicales",
+    "Manejo Integrado de Plagas en Guayaba"
+  ]
+}

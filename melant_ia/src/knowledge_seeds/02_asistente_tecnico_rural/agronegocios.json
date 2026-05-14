@@ -1,0 +1,38 @@
+{
+  "modulo_agronegocios": {
+    "calculadora_rentabilidad": {
+      "variables_egreso": ["Mano de Obra", "Insumos (Bio/Quim)", "Logistica", "Certificaciones"],
+      "variables_ingreso": ["Precio por Unidad", "Volumen de Cosecha", "Calidad (Grado A/B/C)"],
+      "indicador_clave": "Margen de contribucion por hectarea"
+    },
+    "guia_certificaciones": [
+      {
+        "nombre": "Global GAP",
+        "requisitos_clave": ["Trazabilidad de semillas", "Uso de EPP", "Analisis de agua", "Higiene en cosecha"],
+        "beneficio": "Acceso a supermercados europeos."
+      },
+      {
+        "nombre": "Certificacion Organica",
+        "requisitos_clave": ["3 años sin quimicos", "Barreras vivas", "No uso de transgenicos"],
+        "beneficio": "Sobreprecio de hasta el 30% en el mercado."
+      }
+    ],
+    "bibliografia_especializada": [
+      {
+        "autor": "IICA",
+        "titulo": "Guia de Agronegocios para pequeños productores rurales",
+        "año": "2022"
+      },
+      {
+        "autor": "Agrocalidad",
+        "titulo": "Manual de Buenas Practicas Agricolas (BPA) Ecuador",
+        "url": "agrocalidad.gob.ec"
+      },
+      {
+        "autor": "Kotler, P.",
+        "titulo": "Marketing para productos agricolas",
+        "tema": "Diferenciacion y Valor Agregado"
+      }
+    ]
+  }
+}

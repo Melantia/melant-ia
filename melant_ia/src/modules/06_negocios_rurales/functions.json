@@ -1,0 +1,20 @@
+{
+  "modulo": "Tienda y Negocios",
+  "ai_logic": {
+    "priority": "Comercialización y Rentabilidad",
+    "search_context": [
+      "Tendencias de precios agropecuarios",
+      "Redacción de anuncios para venta de productos",
+      "Logística de entrega de insumos",
+      "Análisis de competidores locales"
+    ],
+    "marketplace_tools": {
+      "vendedor": "Optimización de fotos y descripción",
+      "comprador": "Comparativa de calidad/precio"
+    }
+  },
+  "funciones_boton": {
+    "on_publish": "Generar ficha técnica de venta",
+    "on_view_finanzas": "Abrir reporte de ingresos"
+  }
+}

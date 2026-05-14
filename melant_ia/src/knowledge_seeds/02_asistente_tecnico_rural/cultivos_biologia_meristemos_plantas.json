@@ -1,0 +1,68 @@
+{
+  "meristemos_plantas": {
+    "tema": "Meristemos y plantas meristemáticas: definición, función y cultivo in vitro",
+    "descripcion": "Tejidos vegetales de crecimiento con células no especializadas capaces de dividirse y diferenciarse. Esenciales para el desarrollo, regeneración y propagación de plantas. El cultivo de meristemos es técnica clave en biotecnología vegetal para producción libre de virus.",
+    "referencias": [
+      {
+        "archivo": "AtlasHistologia_mmegias_tejidos_meristemos",
+        "fuente": "Atlas de Histología Vegetal y Animal / Megías et al. (30 nov 2025). Tejidos vegetales: Meristemos.",
+        "url": "https://mmegias.webs.uvigo.es/guiada_v_meristemos.html",
+        "resumen": "Los meristemos pueden ser permanentes y funcionales a lo largo de la vida de la planta, como ocurre con los apicales en tallos y raíces. Atlas visual académico de la Universidad de Vigo de acceso libre."
+      },
+      {
+        "archivo": "Britannica_meristemo_definicion_tipos_ejemplos",
+        "fuente": "Britannica. Meristemo: Definición, función, tipos, ejemplos y datos.",
+        "url": "https://www.britannica.com/science/meristem",
+        "resumen": "Los meristemos se forman a partir de otras células en los tejidos lesionados y son responsables de la cicatrización de las heridas. A diferencia de la mayoría de células animales, las vegetales conservan capacidad de división. Referencia enciclopédica internacional."
+      },
+      {
+        "archivo": "Interempresas_2024_actividad_meristemos_productividad_agricola",
+        "fuente": "Yuste-Lisbona, F. J. Interempresas Media. La actividad de los meristemos, una gran alternativa para la mejora de cultivos.",
+        "url": "https://www.interempresas.net/Horticola/Articulos/493081-actividad-meristemos.html",
+        "resumen": "Una característica fascinante del crecimiento de las plantas es que son capaces de desarrollar órganos continuamente a lo largo de su vida gracias a los meristemos. Aplicaciones en mejora de productividad agrícola."
+      },
+      {
+        "archivo": "InnovaBiologia_meristemos_tejidos_crecimiento",
+        "fuente": "InnovaBiologia.com. Los meristemos.",
+        "url": "https://innovabiologia.com/diversidad-vegetal/meristemos/",
+        "resumen": "Los meristemos son tejidos de crecimiento en plantas, esenciales para su desarrollo y regeneración. Descubre su papel en la formación de nuevas células, tipos de meristemos y su función en el ciclo de vida vegetal."
+      },
+      {
+        "archivo": "AEnVerde_2024_meristemos_productividad_agricola",
+        "fuente": "A en Verde (8 ene 2024). Meristemos en acción: Impulsando la productividad agrícola.",
+        "url": "https://www.aenverde.es/meristemos-en-accion-impulsando-la-productividad-agricola/",
+        "resumen": "Los cultivos meristemáticos portan combinaciones genéticas adecuadas que dan forma a nuevas variedades más productivas y mejor adaptadas. Aplicaciones directas del cultivo de meristemos para mejora de cultivos comerciales."
+      },
+      {
+        "archivo": "PMC_NIH_PMC4915229_estrategias_cultivo_celulas_vegetales",
+        "fuente": "PMC / NIH (.gov). Estrategias de cultivo de células vegetales para la producción de metabolitos secundarios.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4915229/",
+        "resumen": "Las plantas han desarrollado una vasta cornucopia química impulsada principalmente por la necesidad de protegerse de patógenos microbianos y plagas. Revisión científica de estrategias biotecnológicas para producción de compuestos de alto valor."
+      },
+      {
+        "archivo": "CK12_tejidos_meristematicos_definicion_funcion",
+        "fuente": "CK-12 Foundation. ¿Qué son los tejidos meristemáticos?",
+        "url": "https://www.ck12.org/biology/plant-tissues/meristematic-tissues/",
+        "resumen": "Los tejidos meristemáticos juegan un papel crucial en el crecimiento y desarrollo de las plantas, contribuyendo a su altura, grosor y al desarrollo de nuevos órganos. Recurso educativo abierto."
+      },
+      {
+        "archivo": "PlantCellTechnology_2023_cultivo_meristemos_procedimiento",
+        "fuente": "Plant Cell Technology (21 feb 2023). Cultivo de meristemos: definición, procedimiento y aplicaciones.",
+        "url": "https://plantcelltechnology.com/blogs/blog/meristem-culture/",
+        "resumen": "Conservación de plantas: el cultivo de meristemos tiene aplicaciones en mejora de cultivos, propagación clonal y conservación de germoplasma libre de virus. Guía técnica completa del procedimiento in vitro."
+      },
+      {
+        "archivo": "BiologiaEduAr_tejidos_vegetales_meristemas",
+        "fuente": "Hipertextos del Área de la Biología (biologia.edu.ar). Tejidos vegetales: Meristemas y sistema fundamental.",
+        "url": "https://www.biologia.edu.ar/plantas/tejidos.htm",
+        "resumen": "Tejido simple de poca especialización, formado por células vivas en la madurez que conservan su capacidad de dividirse. Cumplen diversas funciones de crecimiento y regeneración en la planta."
+      },
+      {
+        "archivo": "BioLibreTexts_2024_desarrollo_plantas_meristemos",
+        "fuente": "Biology LibreTexts (22 nov 2024). 30.11: Desarrollo de las plantas - Meristemos.",
+        "url": "https://bio.libretexts.org/Bookshelves/Introductory_and_General_Biology/General_Biology_(Boundless)/30:_Plant_Form_and_Physiology/30.11:_Plant_Development_-_Meristems",
+        "resumen": "La función principal de los meristemos es estimular el crecimiento de nuevas células en plántulas jóvenes, en las puntas de raíces y tallos, y en el cámbium. Recurso académico abierto de referencia universitaria."
+      }
+    ]
+  }
+}

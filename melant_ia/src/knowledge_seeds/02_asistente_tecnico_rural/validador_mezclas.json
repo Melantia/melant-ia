@@ -1,0 +1,43 @@
+{
+  "validador_mezclas": {
+    "reglas_incompatibilidad": [
+      {
+        "insumo_1": "Caldo Sulfocalcico",
+        "insumo_2": "Biol / Microorganismos",
+        "riesgo": "ALTO",
+        "mensaje": "¡Alerta! El azufre del Caldo eliminara la vida microbiana de tu Biol. Aplicalos con 3 dias de diferencia."
+      },
+      {
+        "insumo_1": "Caldo Bordeles (Cobre)",
+        "insumo_2": "Jabot Potasico",
+        "riesgo": "MEDIO",
+        "mensaje": "El cobre puede reaccionar con el jabon. Realiza una prueba en un frasco pequeño antes de bombear."
+      }
+    ],
+    "mezclas_sinergicas": [
+      {
+        "combinacion": ["Biol", "Acidos Humicos", "Aminoacidos"],
+        "resultado": "Super-estimulante",
+        "uso": "Recuperacion post-cosecha o despues de estres hidrico."
+      }
+    ],
+    "bibliografia": [
+      {
+        "autor": "Restrepo Rivera, J.",
+        "titulo": "Manual de Biofertilizantes. Sección: Mezclas y Caldos Minerales."
+      },
+      {
+        "autor": "Zamorano (Honduras)",
+        "titulo": "Guía de Control Biológico y Sinergias en el Campo."
+      },
+      {
+        "autor": "INIAP (Ecuador)",
+        "titulo": "Manual de Buenas Prácticas Agrícolas: Manejo de Mezclas de Insumos."
+      },
+      {
+        "autor": "Universidad de Chapingo (México)",
+        "titulo": "Química de los caldos minerales y su interacción con la materia orgánica."
+      }
+    ]
+  }
+}

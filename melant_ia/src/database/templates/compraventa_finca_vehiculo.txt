@@ -1,0 +1,19 @@
+CONTRATO DE COMPRAVENTA PRIVADO
+
+En la localidad de [CIUDAD_PARROQUIA], a los [FECHA] días del mes de [MES] de [AÑO], comparecen:
+
+VENDEDOR: [NOMBRE_VENDEDOR], con C.I. [CEDULA_VENDEDOR].
+COMPRADOR: [NOMBRE_COMPRADOR], con C.I. [CEDULA_COMPRADOR].
+
+Las partes, de forma libre y voluntaria, acuerdan la compraventa de:
+OBJETO: [DESCRIPCION_DEL_BIEN]
+UBICACIÓN/IDENTIFICACIÓN: [GPS_COORDENADAS_O_PLACA]
+
+PRECIO: El precio acordado es de $[VALOR_VENTA] dólares americanos, los cuales se cancelan de la siguiente forma: [FORMA_PAGO].
+
+ESTADO: El comprador declara recibir el bien en el estado en que se encuentra. El vendedor garantiza que el bien no tiene gravámenes ni prohibiciones de enajenar.
+
+Para constancia de lo acordado, las partes firman:
+
+f._________          f._________
+      VENDEDOR                              COMPRADOR

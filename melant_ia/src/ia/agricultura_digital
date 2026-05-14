@@ -1,0 +1,34 @@
+{
+  "agricultura_digital": {
+    "sensores": {
+      "catalogo": [
+        {
+          "tipo": "Humedad de Suelo",
+          "modelo": "Capacitivo v1.2",
+          "uso": "Monitoreo hídrico real"
+        },
+        {
+          "tipo": "Temperatura/Humedad Aire",
+          "modelo": "DHT22",
+          "uso": "Control microclima"
+        },
+        {
+          "tipo": "NPK",
+          "modelo": "Sensor Óptico/Conductivo",
+          "uso": "Medición de nutrientes"
+        }
+      ],
+      "detalle": "Integración de hardware para recolección de datos en tiempo real mediante microcontroladores."
+    },
+    "gps_medicion": {
+      "herramienta": "Módulo GPS L1/L2",
+      "funcionalidad": "Cálculo de área de lotes, delimitación de linderos y mapeo de puntos críticos.",
+      "detalle": "Permite al agricultor caminar el terreno y generar un polígono digital exacto de su tierra."
+    },
+    "comunicacion_radio": {
+      "herramienta": "Walkie Talkie / LoRa",
+      "uso": "Comunicación en zonas sin cobertura celular (Puntos ciegos del campo).",
+      "detalle": "Garantiza la conectividad entre el equipo de trabajo en fincas extensas o con orografía difícil."
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "biotecnologia_vegetal": {
+    "tema": "Biotecnología vegetal: definición, aplicaciones y contexto Ecuador",
+    "descripcion": "Conjunto de técnicas que utilizan organismos vivos o partes de ellos para mejorar plantas, obtener productos y modificar características de interés agrícola. Incluye cultivo de tejidos, transgénicos, mejoramiento genético y aplicaciones en Ecuador.",
+    "referencias": [
+      {
+        "archivo": "UniversidadEuropea_2023_biotecnologia_vegetal_definicion",
+        "fuente": "Universidad Europea (7 sept 2023). ¿Qué es la biotecnología vegetal? Blog UE.",
+        "url": "https://universidadeuropea.com/blog/biotecnologia-vegetal/",
+        "resumen": "La biotecnología vegetal es un conjunto de técnicas utilizadas para la mejora de las características de las plantas en distintas áreas: agrícola, farmacéutica, alimentaria y ambiental."
+      },
+      {
+        "archivo": "Biovegen_biotecnologia_vegetal_definicion",
+        "fuente": "Biovegen. Qué es la biotecnología vegetal y su importancia.",
+        "url": "https://biovegen.org/biovegen/que-es-la-biotecnologia-vegetal/",
+        "resumen": "La biotecnología vegetal se define como: 'Aplicación de la ciencia y la tecnología a las plantas, sus partes, productos y modelos, con el fin de alterar plantas vivas o muertas para uso humano'."
+      },
+      {
+        "archivo": "Wikipedia_biotecnologia_vegetal",
+        "fuente": "Wikipedia. Biotecnología vegetal.",
+        "url": "https://es.wikipedia.org/wiki/Biotecnolog%C3%ADa_vegetal",
+        "resumen": "La Biotecnología es el conjunto de técnicas que utilizan organismos vivos o partes de ellos para obtener productos o modificarlos, para mejorar plantas o animales. Entrada enciclopédica con historia, aplicaciones y debate sobre transgénicos."
+      },
+      {
+        "archivo": "CIATEJ_biotecnologia_vegetal_mejoramiento",
+        "fuente": "CIATEJ (Centro de Investigación y Asistencia en Tecnología y Diseño del Estado de Jalisco). Biotecnología Vegetal.",
+        "url": "https://ciatej.mx/investigacion/biotecnologia-vegetal/",
+        "resumen": "La Biotecnología Vegetal es el conjunto de técnicas utilizadas para mejorar las variedades de plantas en función de características de interés agrícola y socioeconómico. Descripción de líneas de investigación activas."
+      },
+      {
+        "archivo": "Bionostra_biotecnologia_vegetal_aplicaciones",
+        "fuente": "Bionostra. Biotecnología Vegetal.",
+        "url": "https://bionostra.com/biotecnologia-vegetal/",
+        "resumen": "La biotecnología vegetal es fundamental para aplicar soluciones en el ámbito agrícola, forestal y natural, donde los cultivos y las plantas requieren mejoras de resistencia, productividad y adaptación ambiental."
+      },
+      {
+        "archivo": "InfoAgroMexico_biotecnologia_vegetal_aplicaciones",
+        "fuente": "Revista InfoAgro México. La biotecnología vegetal y aplicaciones de la biotecnología.",
+        "url": "https://mexico.infoagro.com/la-biotecnologia-vegetal-y-aplicaciones/",
+        "resumen": "La biotecnología vegetal es una extensión de la tradición de modificar las plantas, con una diferencia muy importante: permite la introducción de genes de cualquier organismo. Aplicaciones en resistencia a plagas, tolerancia a sequía y mejora nutricional."
+      },
+      {
+        "archivo": "IBP_revista_biotecnologia_vegetal_Cuba",
+        "fuente": "Instituto de Biotecnología de las Plantas (IBP). Revista Biotecnología Vegetal. Acceso abierto.",
+        "url": "https://revista.ibp.co.cu",
+        "resumen": "Biotecnología Vegetal es una revista científica arbitrada de acceso abierto que publica artículos originales en español e inglés. Publicación de referencia latinoamericana en el área."
+      },
+      {
+        "archivo": "UNNE_biotecnologia_vegetal_conceptos_generales_PDF",
+        "fuente": "UNNE (Facultad de Ciencias Exactas y Naturales y Agrimensura). Biotecnología Vegetal: Conceptos generales. PDF.",
+        "url": "https://exa.unne.edu.ar/biologia/biotecnologia-vegetal/",
+        "resumen": "[PDF] Tema 1: Biotecnología Vegetal, Conceptos generales. Morfogénesis y diferenciación: conjunto de fenómenos que regulan el desarrollo de un organismo. Material académico universitario de acceso libre."
+      },
+      {
+        "archivo": "PMC_NIH_extractos_plantas_metabolitos_secundarios",
+        "fuente": "PMC / NIH (.gov). Células meristemáticas vegetales como fuente sostenible de metabolitos secundarios.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5485729/",
+        "resumen": "Los extractos de plantas enriquecidos con metabolitos secundarios se han utilizado en medicina popular para tratar diversas enfermedades. Revisión científica sobre biotecnología de células vegetales para producción de compuestos de alto valor."
+      },
+      {
+        "archivo": "PlantCellTechnology_2023_cultivo_meristemos_conservacion",
+        "fuente": "Plant Cell Technology (21 feb 2023). Cultivo de meristemos: definición, procedimiento y aplicaciones.",
+        "url": "https://plantcelltechnology.com/blogs/blog/meristem-culture/",
+        "resumen": "Conservación de plantas: el cultivo de meristemos tiene aplicaciones en mejora de cultivos, propagación clonal y conservación de germoplasma libre de virus. Guía técnica completa del procedimiento in vitro."
+      },
+      {
+        "archivo": "Agroptima_biotecnologia_agricultura_beneficios",
+        "fuente": "Agroptima Blog. Todo sobre la biotecnología en el sector agrícola.",
+        "url": "https://blog.agroptima.com/es/biotecnologia-agricultura/",
+        "resumen": "Beneficios de la biotecnología en la agricultura: mayor resistencia a la sequía, resistencia ante enfermedades, tolerancia a herbicidas, control de plagas y mejora de rendimiento y contenido nutricional."
+      },
+      {
+        "archivo": "CatalisisEC_2021_biotecnologia_Ecuador_contexto_regional",
+        "fuente": "CatalisisEC (22 jun 2021). Ecuador y la biotecnología en un contexto regional: Allbiotech.",
+        "url": "https://www.catalisisec.com/post/ecuador-allbiotech",
+        "resumen": "La biotecnología en Ecuador es un campo relativamente nuevo que ha ido creciendo pero con cierta dificultad. Análisis del contexto regional y perspectivas de desarrollo del sector biotecnológico ecuatoriano."
+      },
+      {
+        "archivo": "Dialnet_2020_OrtegaAnte_biotecnologia_industrial_Ecuador_Esmeraldas",
+        "fuente": "Ortega-Ante, D. A. et al. (2020). Enfoque de la Biotecnología Industrial en Ecuador y la Provincia de Esmeraldas. Dialnet. Mencionado por 15.",
+        "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=biotecnologia-industrial-ecuador",
+        "resumen": "El objetivo de la biotecnología industrial es el desplazamiento de materias primas fósiles por otras basadas en materiales biológicos o renovables. En la agricultura aporta resistencia a sequía y enfermedades. Investigación en contexto ecuatoriano."
+      },
+      {
+        "archivo": "UCE_Bejarano_2014_biotecnologia_biodiversidad_legislacion_Ecuador",
+        "fuente": "Bejarano Morocho, M. A. (2014). La biotecnología y la biodiversidad en la Legislación ecuatoriana. Repositorio Digital UCE.",
+        "url": "https://www.dspace.uce.edu.ec/entities/publication/biotecnologia-biodiversidad",
+        "resumen": "En Ecuador se declara libre de cultivos y semillas transgénicos (organismos genéticamente modificados). Análisis del marco legal ecuatoriano sobre biotecnología, biodiversidad y soberanía alimentaria."
+      },
+      {
+        "archivo": "ECOTEC_2019_Almeida_biotecnologia_vegetal_arroz_Ecuador",
+        "fuente": "Almeida, I. B. P. et al. (2019). Aportes de la biotecnología al mejoramiento del arroz en Ecuador. Universidad Tecnológica ECOTEC. Mencionado por 12.",
+        "url": "https://revistas.ecotec.edu.ec/index.php/ecociencia/article/view/biotecnologia-arroz",
+        "resumen": "Balance de la aplicación de la biotecnología vegetal en la agricultura ecuatoriana, con énfasis en el cultivo de arroz. Revisión de variedades mejoradas mediante biotecnología y su impacto productivo en Ecuador."
+      },
+      {
+        "archivo": "PoloConocimiento_2020_OrtegaAnte_biotecnologia_industrial",
+        "fuente": "Ortega-Ante, D. A. (2020). Enfoque de la Biotecnología Industrial en Ecuador. Polo del Conocimiento. Mencionado por 15.",
+        "url": "https://polodelconocimiento.com/ojs/index.php/es/article/view/biotecnologia-industrial",
+        "resumen": "La biotecnología industrial en Ecuador aporta en agricultura: mayor resistencia a la sequía y enfermedades. Propuesta de desarrollo del sector biotecnológico para diversificación de la matriz productiva."
+      },
+      {
+        "archivo": "INIAP_2022_informe_anual_biotecnologia",
+        "fuente": "INIAP Ecuador. Informe Anual de Biotecnología 2022. Repositorio INIAP.",
+        "url": "https://repositorio.iniap.gob.ec/items/informe-biotecnologia-2022",
+        "resumen": "Durante 2022 el laboratorio de biotecnología del INIAP logró cuatro proyectos aprobados (tres como co-ejecutores, uno como ejecutor). Informe oficial del instituto nacional de investigaciones agropecuarias de Ecuador."
+      },
+      {
+        "archivo": "GVN_2025_biotecnologia_genomica_Ecuador",
+        "fuente": "GVN Abogados (21 ene 2025). Biotecnología y Genómica en el Entorno Ecuatoriano.",
+        "url": "https://gvn.com.ec/derecho-digital/biotecnologia-genomica-ecuador/",
+        "resumen": "La biotecnología y la genómica han revolucionado la agricultura, la medicina y la industria en Ecuador. Análisis jurídico y de propiedad intelectual aplicado al contexto ecuatoriano."
+      },
+      {
+        "archivo": "UTPL_2021_biotecnologia_campo_vital_agropecuario",
+        "fuente": "UTPL Noticias (28 oct 2021). Biotecnología, un campo vital para el desarrollo agropecuario.",
+        "url": "https://noticias.utpl.edu.ec/biotecnologia-un-campo-vital-para-el-desarrollo-agropecuario",
+        "resumen": "La biotecnología vegetal permite modificar las plantas para convertirlas en variedades autoprotegidas contra insectos, enfermedades y malas hierbas. Perspectiva de la UTPL sobre el rol de la biotecnología en el agro ecuatoriano."
+      },
+      {
+        "archivo": "Syngenta_Ecuador_2015_biotecnologia_revolucion_agricola",
+        "fuente": "Syngenta Ecuador (13 ago 2015). La biotecnología es la revolución agrícola.",
+        "url": "https://www.syngenta.com.ec/news/noticias/la-biotecnologia-es-la-revolucion-agricola",
+        "resumen": "Lo que buscan las investigaciones en biotecnología es crear nuevos productos para el agro tolerantes a la sequía y con mayor protección contra plagas. Posicionamiento de Syngenta sobre biotecnología agrícola en Ecuador."
+      },
+      {
+        "archivo": "ESPOL_CIBE_biotecnologia_agro_Ecuador",
+        "fuente": "ESPOL / CIBE (Centro de Investigaciones Biotecnológicas del Ecuador). Biotecnología para el Agro.",
+        "url": "https://www.cibe.espol.edu.ec/biotecnologia_para_el_agro/",
+        "resumen": "CIBE reúne y coordina competencias para ofrecer soluciones de bioseguridad, sanidad (fitopatología con biocontrol) y cultivo. Principal centro de biotecnología agrícola aplicada del Ecuador."
+      }
+    ]
+  }
+}

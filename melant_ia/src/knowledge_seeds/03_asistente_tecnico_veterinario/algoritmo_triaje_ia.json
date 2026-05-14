@@ -1,0 +1,19 @@
+{
+  "algoritmo_triaje_ia": {
+    "version": "3.1",
+    "descripcion": "Logica de flujo para diagnostico presuntivo y toma de decisiones en campo.",
+    "arbol_de_preguntas": [
+      {"id": "Q1","pregunta": "¿El animal presenta dificultad extrema para respirar o hemorragia abundante?","opciones": {"si": { "accion": "ALERTA_CRITICA", "mensaje": "LLAMAR AL VETERINARIO DE INMEDIATO. Riesgo de muerte inminente." },"no": { "siguiente": "Q2" }}},
+      {"id": "Q2","pregunta": "¿Cuál es la especie afectada?","opciones": {"bovino_caprino": { "siguiente": "Q_RUM_1" },"equino": { "siguiente": "Q_EQU_1" },"perro_gato": { "siguiente": "Q_MAS_1" },"aves_cerdos": { "siguiente": "Q_PROD_1" }}},
+      {"id": "Q_RUM_1","pregunta": "¿Tiene el flanco izquierdo muy inflado (hinchazón de gases)?","opciones": {"si": { "diagnostico": "Meteorismo/Timpanismo","accion": "TRATAMIENTO_CAMPO","instrucciones": "Hacer caminar al animal, dar antiespumante oral. Si no cede en 30 min, llamar al médico." },"no": { "siguiente": "Q_GRAL_FEBRIL" }}},
+      {"id": "Q_EQU_1","pregunta": "¿Se mira los costados, se revuelca o suda sin motivo?","opciones": {"si": { "diagnostico": "Posible Cólico","accion": "ALERTA_ALTA","instrucciones": "Retirar comida, caminar suavemente. Monitorear frecuencia cardiaca. Es una emergencia." },"no": { "siguiente": "Q_GRAL_FEBRIL" }}},
+      {"id": "Q_MAS_1","pregunta": "¿Presenta vómitos, diarrea con sangre o letargia severa?","opciones": {"si": { "diagnostico": "Infección Viral (Posible Parvo/Moquillo)","accion": "ALERTA_ALTA","instrucciones": "Aislar de otros animales. Hidratar con suero oral mientras contacta al veterinario." },"no": { "siguiente": "Q_PARASITOS" }}},
+      {"id": "Q_PARASITOS","pregunta": "¿Observa pulgas, garrapatas o moscas y rascado excesivo?","opciones": {"si": { "diagnostico": "Infestación por Ectoparásitos","accion": "MANEJO_RUTINA","instrucciones": "Aplicar baño de aspersión o pipeta. Tratar el entorno (camas/corrales)." },"no": { "siguiente": "Q_GRAL_FEBRIL" }}},
+      {"id": "Q_GRAL_FEBRIL","pregunta": "¿Cuál es la temperatura rectal del animal?","opciones": {"alta": { "diagnostico": "Infección/Virus en proceso","accion": "ALERTA_MEDIA","instrucciones": "Proporcionar sombra y agua limpia. Registrar evolución cada 4 horas." },"normal": { "mensaje": "Monitorear comportamiento. Podría ser fatiga o estrés leve." }}}
+    ],
+    "flujos_especiales": {
+      "parto": {"verificar": ["¿Hay salida de líquidos?","¿Se ve el feto?","¿Han pasado >2 horas de puja?"],"instruccion": "Si hay puja sin progreso por 2h, llamar al veterinario. Si nace bien, desinfectar ombligo con Yodo."},
+      "vacunacion": {"verificar": ["¿Animal sano?","¿Cadena de frio ok?","¿Aguja nueva?"],"instruccion": "No vacunar animales febriles o débiles."}
+    }
+  }
+}

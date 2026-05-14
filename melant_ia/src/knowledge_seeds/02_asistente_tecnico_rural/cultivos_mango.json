@@ -1,0 +1,73 @@
+{
+  "mango": {
+    "nombre_cientifico": "Mangifera indica",
+    "descripcion": "Frutal tropical de importancia económica y alimentaria. Ecuador produce variedades como Tommy Atkins, Haden, Kent, Ataulfo y mango de azúcar. Manabí y Guayas son las principales zonas.",
+    "riego_optimo": "Riego en floración y desarrollo de fruto (Dic - Mar); requiere estrés hídrico previo para inducir floración.",
+    "npk_recomendado": { "N": 100, "P": 50, "K": 130 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca de la fruta (Anastrepha obliqua / A. fraterculus)",
+        "control_organico": "Trampas con proteína hidrolizada + Spinosad, cobertura de frutos",
+        "control_quimico": "Cebo Spinosad, Malatión cebo",
+        "sintoma": "Punturas de oviposición en frutos, pudrición interna, caída prematura; plaga cuarentenaria para exportación",
+        "nivel_peligrosidad": "Muy alto para exportación"
+      },
+      {
+        "nombre": "Trips del mango (Scirtothrips mangiferae)",
+        "control_organico": "Aceite de Neem, depredadores naturales",
+        "control_quimico": "Spinosad, Abamectina",
+        "sintoma": "Cicatrices plateadas en cáscara, deformación de frutos jóvenes, aborto floral"
+      },
+      {
+        "nombre": "Escama blanca (Aulacaspis tubercularis)",
+        "control_organico": "Aceite mineral, parasitoides",
+        "control_quimico": "Clorpirifos, aceite mineral",
+        "sintoma": "Escamas blancas en frutos y hojas, manchas en cáscara que reducen valor comercial"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Antracnosis (Colletotrichum gloeosporioides)",
+        "control": "Fungicidas cúpricos + Carbendazim; tratamiento hidrotérmico postcosecha (52°C/5 min)",
+        "sintoma": "Manchas negras en flores, frutos y hojas; pudrición poscosecha; principal limitante en exportación"
+      },
+      {
+        "nombre": "Oídio (Oidium mangiferae)",
+        "control": "Azufre mojable, myclobutanil, aplicaciones preventivas en floración",
+        "sintoma": "Polvo blanco en flores y frutos jóvenes, aborto floral, deformación de frutos"
+      },
+      {
+        "nombre": "Escoba de bruja (Fusarium mangiferae)",
+        "control": "Poda y quema de ramas afectadas, fungicidas sistémicos",
+        "sintoma": "Proliferación de brotes deformes tipo escoba, inflorescencias estériles"
+      }
+    ],
+    "epoca_siembra_recomendada": "Inicio de época seca (Jun - Ago) para plantar; floración natural en época seca (Jun - Sep).",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilización fraccionada, fungicidas en floración, inducción con nitrato de potasio o ethephon.",
+        "rendimiento_estimado": "15-25 t/ha/año (árboles adultos)"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, azufre agrícola; control biológico de plagas.",
+        "rendimiento_estimado": "10-18 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Cosecha manual cuando el fruto alcanza madurez fisiológica (cambio de color, consistencia). Evitar golpes.",
+    "labores_postcosecha": "Lavado, tratamiento hidrotérmico (exportación), clasificación, empaque en cajas.",
+    "zonas_produccion_ecuador": ["Manabí", "Guayas", "Los Ríos", "El Oro"],
+    "importancia_economica": "Ecuador tiene potencial exportador en mango. El mango de azúcar (Manila) tiene alta demanda en mercados locales y externos.",
+    "captura_carbono_ton_ha_anio": 2.5,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 1200,
+    "densidad_siembra": "100-200 árboles/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad.",
+    "bibliografia": ["Manual de Mango INIAP", "FAO Mango Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Frutales",
+      "Postcosecha de Frutas Frescas"
+    ],
+    "variedades": ["Tommy Atkins", "Haden", "Kent", "Ataulfo", "Manila"]
+  }
+}

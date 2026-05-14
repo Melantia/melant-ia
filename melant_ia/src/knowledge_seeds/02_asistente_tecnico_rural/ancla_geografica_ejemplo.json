@@ -1,0 +1,25 @@
+{
+  "sede_id": "UUID",
+  "tipo_sede": "Principal",
+  "nombre_predio": "Finca El Progreso",
+  "foto_registro": {
+    "url_storage": "https://ruta-almacenamiento/foto1.jpg",
+    "metadata_exif": {
+      "lat": -1.234,
+      "lng": -80.123,
+      "altitud": 120.5,
+      "timestamp": "2026-04-20T10:00:00Z"
+    },
+    "timestamp_sincro": "2026-04-20T10:05:00Z"
+  },
+  "punto_gps_maestro": {
+    "lat": -1.234,
+    "lng": -80.123,
+    "altitud": 120.5,
+    "precision_metrica": 3.2
+  },
+  "config_validacion": {
+    "radio_tolerancia_metros": 100,
+    "requiere_estampado": true
+  }
+}

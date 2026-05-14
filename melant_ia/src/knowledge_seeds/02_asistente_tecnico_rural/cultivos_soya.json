@@ -1,0 +1,73 @@
+{
+  "soya": {
+    "nombre_cientifico": "Glycine max",
+    "descripcion": "Leguminosa oleaginosa de ciclo anual. En Ecuador se cultiva principalmente en Los Ríos y Manabí. Base de la industria de aceites y alimentos balanceados.",
+    "riego_optimo": "Riego moderado en floración y llenado de grano; sensible al estrés hídrico en R3-R5.",
+    "npk_recomendado": { "N": 30, "P": 60, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca blanca (Bemisia tabaci)",
+        "control_organico": "Aceite de Neem, jabón potásico, Beauveria bassiana",
+        "control_quimico": "Imidacloprid, Buprofezin",
+        "sintoma": "Hojas amarillas, fumagina, transmisión de virus; vector del virus del mosaico dorado"
+      },
+      {
+        "nombre": "Trips (Caliothrips phaseoli)",
+        "control_organico": "Aceite de Neem, depredadores naturales",
+        "control_quimico": "Spinosad, Abamectina",
+        "sintoma": "Manchas plateadas en hojas, deformación en ataques severos"
+      },
+      {
+        "nombre": "Gusano medidor (Chrysodeixis includens)",
+        "control_organico": "Bacillus thuringiensis, virus de poliedrosis nuclear",
+        "control_quimico": "Metomil, Clorpirifos",
+        "sintoma": "Defoliación severa, consumo de limbos foliares dejando nervaduras"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya asiática (Phakopsora pachyrhizi)",
+        "control": "Fungicidas triazoles + estrobilurinas, monitoreo temprano, variedades tolerantes",
+        "sintoma": "Pústulas beige-marrones en envés de hojas, defoliación prematura, pérdida severa de rendimiento"
+      },
+      {
+        "nombre": "Mancha ojo de rana (Cercospora sojina)",
+        "control": "Fungicidas cúpricos, rotación de cultivos, semilla certificada",
+        "sintoma": "Manchas circulares grises con halo oscuro en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Diciembre - Febrero (primera época); Junio - Agosto (segunda época).",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Herbicidas pre y post emergentes, fungicidas sistémicos, inoculante con Bradyrhizobium.",
+        "rendimiento_estimado": "3-4 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Inoculante biológico, compost, control biológico de plagas.",
+        "rendimiento_estimado": "2-2.5 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha mecanizada cuando el 95% de vainas están maduras y grano con 13-14% humedad.",
+    "labores_postcosecha": "Secado a 12% humedad, limpieza, almacenamiento en silos o sacos.",
+    "zonas_produccion_ecuador": ["Los Ríos", "Manabí", "Guayas"],
+    "importancia_economica": "Materia prima para aceite vegetal e industria de balanceados. Ecuador importa gran volumen para complementar producción nacional.",
+    "captura_carbono_ton_ha_anio": 2.0,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 2000,
+    "densidad_siembra": "300,000-400,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": ["Manual de Soya INIAP", "FAO Soya Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Leguminosas",
+      "Procesamiento de Soya y Subproductos"
+    ],
+    "subproductos": [
+      "Aceite de soya",
+      "Torta de soya",
+      "Harina de soya",
+      "Leche de soya",
+      "Tofu"
+    ]
+  }
+}

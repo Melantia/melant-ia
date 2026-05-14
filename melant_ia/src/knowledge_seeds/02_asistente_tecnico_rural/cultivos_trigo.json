@@ -1,0 +1,61 @@
+{
+  "trigo": {
+    "nombre_cientifico": "Triticum aestivum",
+    "descripcion": "Cereal de ciclo anual, base de la alimentación mundial. Adaptado a climas templados y secos.",
+    "riego_optimo": "Riego moderado, evitar encharcamiento. 400-600 mm/ciclo.",
+    "npk_recomendado": { "N": 90, "P": 40, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Pulgón",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas y pegajosas"
+      },
+      {
+        "nombre": "Gusano cortador",
+        "control_organico": "Control biológico",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Corte de plántulas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya amarilla",
+        "control": "Fungicidas cúpricos, variedades resistentes",
+        "sintoma": "Manchas amarillas en hojas"
+      },
+      {
+        "nombre": "Carbón del trigo",
+        "control": "Semilla tratada, rotación",
+        "sintoma": "Espigas deformes y ennegrecidas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Mayo - Julio (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "6-8 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes",
+        "rendimiento_estimado": "4-6 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual o mecanizada de espigas maduras.",
+    "labores_postcosecha": "Trilla, secado, almacenamiento en silos.",
+    "zonas_produccion_ecuador": ["Chimborazo", "Cotopaxi", "Imbabura"],
+    "importancia_economica": "Cereal básico para panificación y pastas. Importancia nacional y exportación limitada.",
+    "captura_carbono_ton_ha_anio": 2.2,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 1200,
+    "densidad_siembra": "300,000-400,000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en sacos para trazabilidad.",
+    "bibliografia": ["Manual de Trigo INIAP", "FAO Trigo Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Cereales",
+      "Postcosecha de Granos"
+    ],
+    "variedades": ["INIAP Pichincha", "INIAP Chimborazo"]
+  }
+}

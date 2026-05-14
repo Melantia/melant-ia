@@ -1,0 +1,7 @@
+{
+  "rate": 1.0,
+  "pitch": 1.0,
+  "fuente_voces": "src/knowledge_seeds/voces_melantia.json",
+  "voz_default": "Melantia",
+  "voz_activa": "Melantia"
+}

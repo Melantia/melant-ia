@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Nunká nintin, nunká jí.",
+    "region": "Manabí/Shuar",
+    "categoria": "Sabiduría popular",
+    "descripcion": "Donde hay humo, hay fuego. (Proverbio shuar)"
+  },
+  {
+    "titulo": "Achiote iwia (Mu)",
+    "region": "Costa - Shuar",
+    "categoria": "Mito",
+    "descripcion": "Nunká iwia, uwishin nintin muwan, iwia nunká. (En la selva, los sabios usan achiote para proteger la vida)"
+  },
+  {
+    "titulo": "Wawa Entsa",
+    "region": "Sierra/Shuar",
+    "categoria": "Leyenda",
+    "descripcion": "Entsa wawa, nunká nintin, nunká iwia. (El espíritu de un niño en el camino, buscando compañía)"
+  },
+  {
+    "titulo": "Uwishin",
+    "region": "Sierra/Shuar",
+    "categoria": "Personaje",
+    "descripcion": "Uwishin, nunká nintin, iwia nunká. (El sabio recorre la comunidad pidiendo oraciones por los espíritus)"
+  },
+  {
+    "titulo": "Shuar shimi",
+    "region": "Sierra/Shuar",
+    "categoria": "Poesía Oral",
+    "descripcion": "Shuar shimi, iwia nunká, nunká nintin. (Palabra de amor y sabiduría en la selva)"
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "cerebro_tecnico": [
+    {
+      "id": "C001",
+      "cultivo": "Cacao",
+      "tipo": "Perenne",
+      "requerimientos": {
+        "clima": "Cálido y húmedo",
+        "precipitacion_anual": "1500 - 2500 mm",
+        "sombra_ideal": "40% - 50% en etapas iniciales"
+      },
+      "plagas_clave": ["Monilla", "Escoba de bruja", "Mazorca negra"]
+    },
+    {
+      "id": "C002",
+      "cultivo": "Plátano Barraganete",
+      "tipo": "Musácea",
+      "especificaciones": {
+        "distancia_siembra": "3m x 3m",
+        "suelos": "Francos a franco-arcillosos",
+        "drenaje": "Exigente (evitar encharcamientos)"
+      }
+    },
+    {
+      "id": "C003",
+      "cultivo": "Banano",
+      "tipo": "Musácea de exportación",
+      "manejo_precision": {
+        "fertilizacion": "Alta demanda de Potasio (K)",
+        "monitoreo_sigatoka": "Semanal obligatorio"
+      }
+    },
+    {
+      "id": "C004",
+      "cultivo": "Palma Aceitera",
+      "tipo": "Oleaginosa",
+      "ciclo": "Largo plazo",
+      "alerta_sanitaria": "PC (Pudrición del Cogollo)"
+    },
+    {
+      "id": "C005",
+      "cultivo": "Limón Sutil",
+      "tipo": "Cítrico",
+      "suelo_ideal": {
+        "ph": "5.5 - 7.5",
+        "textura": "Arenosa o franco-arenosa"
+      }
+    },
+    {
+      "id": "C006",
+      "cultivo": "Yuca",
+      "tipo": "Tubérculo",
+      "cosecha": "8 - 12 meses según variedad"
+    },
+    {
+      "id": "C007",
+      "cultivo": "Malanga",
+      "tipo": "Tubérculo / Cormo",
+      "humedad": "Muy alta (soporta suelos saturados)"
+    },
+    {
+      "id": "C008",
+      "cultivo": "Flores",
+      "subtipos": ["Rosas", "Tropicales"],
+      "control_ambiente": "Invernadero o campo abierto según especie"
+    }
+  ],
+  "cultivos_base": [
+    {
+      "nombre": "Café",
+      "variedades": ["Arábica", "Robusta"],
+      "parametros_ideales": {
+        "temperatura": "18°C - 24°C",
+        "altitud_msnm": "600 - 1800",
+        "ph_suelo": "5.0 - 5.5"
+      },
+      "etapas_fenologicas": [
+        { "fase": "Germinación", "duracion_dias": 60 },
+        { "fase": "Floración", "detonante": "Primeras lluvias" }
+      ],
+      "alertas_plagas": [
+        {
+          "nombre": "Roya del café",
+          "sintoma": "Manchas amarillas polvorientas en el envés de la hoja",
+          "tratamiento_urgente": "Aplicación de fungicidas cúpricos"
+        }
+      ]
+    },
+    {
+      "nombre": "Maíz",
+      "variedades": ["Amarillo duro", "Blanco"],
+      "parametros_ideales": {
+        "temperatura": "20°C - 30°C",
+        "ph_suelo": "6.0 - 7.0"
+      },
+      "alertas_plagas": [
+        {
+          "nombre": "Gusano Cogollero",
+          "sintoma": "Agujeros en las hojas centrales",
+          "tratamiento_urgente": "Control biológico o químico focalizado"
+        }
+      ]
+    }
+  ]
+}

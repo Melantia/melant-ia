@@ -1,0 +1,158 @@
+{
+  "cacao": {
+    "nombre_cientifico": "Theobroma cacao",
+    "descripcion": "Árbol tropical perenne, base de la chocolatería mundial. Ecuador es uno de los principales exportadores de cacao fino de aroma. Cultivado en la Costa, Amazonía y estribaciones andinas.",
+    "tipo_suelo_recomendado": "Franco arcilloso, profundo, bien drenado, pH 5.5-7.0. Evitar suelos encharcados.",
+    "ciclo_cultivo_anos": { "inicio_produccion": 3, "vida_util": 40 },
+    "plagas_comunes": [
+      {
+        "nombre": "Monilia (Moniliophthora roreri)",
+        "control_organico": "Poda sanitaria, recolección de frutos enfermos",
+        "control_quimico": "Cobre agrícola",
+        "sintoma": "Manchas blancas en frutos, pudrición interna."
+      },
+      {
+        "nombre": "Escoba de bruja (Moniliophthora perniciosa)",
+        "control_organico": "Poda de brotes enfermos, manejo de sombra",
+        "control_quimico": "Fungicidas sistémicos",
+        "sintoma": "Brotes deformados, frutos pequeños y secos."
+      },
+      {
+        "nombre": "Mazorca negra (Phytophthora spp.)",
+        "control_organico": "Drenaje, recolección de frutos enfermos",
+        "control_quimico": "Cobre agrícola",
+        "sintoma": "Manchas negras en frutos, pudrición y caída prematura."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Antracnosis (Colletotrichum spp.)",
+        "control": "Fungicidas cúpricos, poda sanitaria",
+        "sintoma": "Manchas negras en hojas y frutos, caída de hojas."
+      },
+      {
+        "nombre": "Mal de machete (Ceratocystis spp.)",
+        "control": "Eliminación de plantas enfermas, desinfección de herramientas",
+        "sintoma": "Marchitez súbita, necrosis vascular."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, menor crecimiento."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, menor llenado de frutos."
+      },
+      {
+        "elemento": "Magnesio",
+        "sintoma": "Bandas amarillas en hojas adultas."
+      }
+    ],
+    "manejo_convencional": "Fertilización química, control químico de plagas y enfermedades, manejo de sombra, uso de clones certificados.",
+    "manejo_organico": "Compost, abonos verdes, control biológico, manejo de sombra natural, uso de microorganismos benéficos.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, integración con árboles nativos, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 12000,
+    "hectareas_sembradas_ecuador": 650000,
+    "captura_carbono_ton_ha_anio": 7.5,
+    "precio_carbono_usd_ton": 38,
+    "labores_cosecha": "Corte manual de mazorcas maduras, recolección frecuente para evitar plagas.",
+    "labores_postcosecha": "Fermentación en cajas de madera (5-7 días), secado al sol (7-10 días), limpieza y selección de granos.",
+    "trazabilidad_exportacion": {
+      "trazabilidad_digital_ecuador": {
+        "descripcion": "La trazabilidad digital del cacao en Ecuador integra tecnologías de registro, monitoreo y certificación en toda la cadena productiva, desde la finca hasta el exportador, cumpliendo estándares internacionales y facilitando el acceso a mercados premium.",
+        "proceso_paso_a_paso": [
+          "Registro digital del productor y finca en plataformas nacionales (MAG, Agrocalidad) y privadas.",
+          "Asignación de código único de finca y lotes de producción (QR, RFID o código de barras).",
+          "Registro digital de prácticas agrícolas, insumos y fechas de aplicación (app móvil, web o dispositivos IoT).",
+          "Bitácora digital de cosecha: fechas, lotes, volúmenes, responsables.",
+          "Registro digital de fermentación y secado: tiempos, temperaturas, condiciones, responsable.",
+          "Etiquetado digital de lotes para transporte y almacenamiento (trazabilidad física y digital).",
+          "Certificación digital de calidad, sostenibilidad y análisis de laboratorio (blockchain, plataformas de certificación).",
+          "Integración de datos en sistemas interoperables para exportación (MAG, Agrocalidad, exportadores, compradores internacionales).",
+          "Generación de reportes y certificados digitales para exportación, accesibles por importadores y consumidores finales (transparencia total)."
+        ],
+        "tecnologias_utilizadas": [
+          "Plataformas web y móviles de trazabilidad (MAG, Agrocalidad, Rainforest, Fairtrade, etc.)",
+          "Etiquetas QR, RFID, códigos de barras",
+          "Bases de datos interoperables y blockchain",
+          "Certificación digital y firma electrónica",
+          "Integración con sistemas de exportación y aduanas"
+        ],
+        "beneficios": [
+          "Transparencia total para el consumidor y el importador",
+          "Reducción de fraude y mezcla de lotes",
+          "Acceso a mercados premium y diferenciados",
+          "Cumplimiento de normativas internacionales",
+          "Mejor gestión y monitoreo para el productor"
+        ]
+      },
+      "europa": {
+        "requisitos": [
+          "Certificación de origen y sostenibilidad (Rainforest, Fairtrade, UTZ, orgánico)",
+          "Ausencia de residuos de plaguicidas prohibidos (Reglamento UE 396/2005)",
+          "Trazabilidad documental desde finca hasta puerto (lotes, fechas, procesos)",
+          "Cumplimiento de normas de trabajo infantil y derechos laborales",
+          "Registro de uso de insumos y prácticas agrícolas",
+          "Análisis de metales pesados (cadmio, plomo)"
+        ],
+        "proceso_trazabilidad": [
+          "Registro de finca y productor en sistema nacional",
+          "Identificación y codificación de lotes de cacao",
+          "Bitácora de cosecha y postcosecha (fechas, lotes, prácticas)",
+          "Fermentación y secado con registro de tiempos y condiciones",
+          "Transporte y almacenamiento con identificación de lotes",
+          "Certificación y análisis de laboratorio",
+          "Documentación de exportación y trazabilidad digital"
+        ]
+      },
+      "eeuu": {
+        "requisitos": [
+          "Certificación de origen (USDA Organic, Fairtrade, Rainforest)",
+          "Cumplimiento de la Ley de Modernización de la Inocuidad Alimentaria (FSMA)",
+          "Trazabilidad documental y digital (lotes, fechas, procesos)",
+          "Ausencia de residuos de plaguicidas prohibidos",
+          "Cumplimiento de normas laborales y ambientales"
+        ],
+        "proceso_trazabilidad": [
+          "Registro de finca y productor",
+          "Identificación de lotes y bitácora de cosecha",
+          "Fermentación y secado con registro de prácticas",
+          "Transporte y almacenamiento segregado",
+          "Certificación y documentación de exportación"
+        ]
+      },
+      "rusia": {
+        "requisitos": [
+          "Certificado fitosanitario de exportación",
+          "Trazabilidad documental de origen y prácticas agrícolas",
+          "Ausencia de residuos de plaguicidas prohibidos",
+          "Cumplimiento de normas sanitarias y fitosanitarias"
+        ],
+        "proceso_trazabilidad": [
+          "Registro de finca y productor",
+          "Identificación de lotes",
+          "Bitácora de cosecha y postcosecha",
+          "Certificación fitosanitaria",
+          "Documentación de exportación"
+        ]
+      },
+      "asia": {
+        "requisitos": [
+          "Certificación de origen y calidad",
+          "Trazabilidad documental y digital",
+          "Ausencia de residuos de plaguicidas prohibidos",
+          "Cumplimiento de normas sanitarias y laborales"
+        ],
+        "proceso_trazabilidad": [
+          "Registro de finca y productor",
+          "Identificación de lotes",
+          "Bitácora de cosecha y postcosecha",
+          "Certificación de calidad",
+          "Documentación de exportación"
+        ]
+      }
+    }
+  }
+}

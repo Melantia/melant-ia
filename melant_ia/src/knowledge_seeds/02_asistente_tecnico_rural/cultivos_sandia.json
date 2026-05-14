@@ -1,0 +1,60 @@
+{
+  "sandia": {
+    "nombre_cientifico": "Citrullus lanatus",
+    "descripcion": "Fruto tropical de alto consumo fresco. Cultivo anual, adaptado a climas cálidos y secos. Importante en la Costa ecuatoriana.",
+    "riego_optimo": "Riego por goteo o surcos, 600-800 mm/ciclo. Frecuencia cada 5-7 días en sequía.",
+    "npk_recomendado": { "N": 90, "P": 40, "K": 120 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca blanca",
+        "control_organico": "Aceite de Neem, trampas cromáticas",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas amarillas, transmisión de virus"
+      },
+      {
+        "nombre": "Trips",
+        "control_organico": "Jabón potásico",
+        "control_quimico": "Spinosad",
+        "sintoma": "Manchas plateadas en hojas"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable, ventilación",
+        "sintoma": "Polvo blanco en hojas"
+      },
+      {
+        "nombre": "Fusariosis",
+        "control": "Rotación, solarización",
+        "sintoma": "Marchitez y pudrición de raíces"
+      }
+    ],
+    "epoca_siembra_recomendada": "Agosto - Octubre (Costa); Febrero - Abril (Sierra)",
+    "calendario_lunar": "Siembra en luna creciente para mejor cuajado de frutos.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Herbicidas preemergentes, fertilización química, fungicidas",
+        "rendimiento_estimado": "30-40 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
+        "rendimiento_estimado": "22-28 t/ha"
+      }
+    },
+    "labores_cosecha": "Corte manual de frutos maduros (sonido hueco, secado del zarcillo)",
+    "labores_postcosecha": "Limpieza, clasificación, empaque en cajas o a granel.",
+    "zonas_produccion_ecuador": ["Guayas", "Manabí", "Los Ríos", "Santa Elena"],
+    "importancia_economica": "Fruto de alto consumo nacional, importante en ferias y mercados locales. Exportación incipiente.",
+    "captura_carbono_ton_ha_anio": 2.5,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 3500,
+    "densidad_siembra": "4000-6000 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad de finca y prácticas agrícolas.",
+    "bibliografia": ["Manual de Cultivo de Sandía INIAP", "FAO Sandía Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Cucurbitáceas",
+      "Postcosecha de Frutas Frescas"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+<svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rectángulo dorado con bordes redondeados (cuerpo de la moneda) -->
+  <rect width="40" height="30" rx="4" fill="url(#gold_gradient)" stroke="#B45309" stroke-width="1"/>
+  
+  <!-- Sombra de profundidad (efecto 3D) -->
+  <rect x="1" y="1" width="38" height="28" rx="3" fill="url(#highlight_gradient)" opacity="0.6"/>
+  
+  <!-- Letra M con relieve (Drop Shadow) -->
+  <text x="20" y="17" dominant-baseline="middle" text-anchor="middle" 
+        fill="#78350F" font-family="Arial, sans-serif" font-weight="bold" font-size="18"
+        filter="url(#drop_shadow)">M</text>
+  
+  <defs>
+    <!-- Gradiente principal: Oro degradado -->
+    <linearGradient id="gold_gradient" x1="0" y1="0" x2="40" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    
+    <!-- Gradiente de brillo (iluminación superior) -->
+    <linearGradient id="highlight_gradient" x1="0" y1="0" x2="0" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    
+    <!-- Efecto de sombra para la letra M -->
+    <filter id="drop_shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.5" flood-color="#000000"/>
+    </filter>
+  </defs>
+</svg>

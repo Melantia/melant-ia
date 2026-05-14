@@ -1,0 +1,300 @@
+{
+  "trazabilidad_digital_cafe": {
+    "descripcion": "La trazabilidad digital del café en Ecuador permite registrar y monitorear cada etapa de la producción, procesamiento y exportación, garantizando transparencia, calidad y cumplimiento de estándares internacionales para café de especialidad.",
+    "proceso_paso_a_paso": [
+      "Registro digital del productor y finca en plataformas nacionales (MAG, Agrocalidad) y privadas.",
+      "Asignación de código único de finca y lotes de café (QR, RFID o código de barras).",
+      "Registro digital de prácticas agrícolas, insumos y fechas de aplicación (app móvil, web o dispositivos IoT).",
+      "Bitácora digital de cosecha: fechas, lotes, volúmenes, responsables.",
+      "Registro digital de procesos de beneficio: despulpado, fermentación, lavado, secado (tiempos, temperaturas, condiciones, responsable).",
+      "Etiquetado digital de lotes para transporte y almacenamiento (trazabilidad física y digital).",
+      "Certificación digital de calidad, sostenibilidad y análisis de laboratorio (blockchain, plataformas de certificación).",
+      "Integración de datos en sistemas interoperables para exportación (MAG, Agrocalidad, exportadores, compradores internacionales).",
+      "Generación de reportes y certificados digitales para exportación, accesibles por importadores y consumidores finales."
+    ],
+    "tecnologias_utilizadas": [
+      "Plataformas web y móviles de trazabilidad (MAG, Agrocalidad, Rainforest, Fairtrade, SCA, etc.)",
+      "Etiquetas QR, RFID, códigos de barras",
+      "Bases de datos interoperables y blockchain",
+      "Certificación digital y firma electrónica",
+      "Integración con sistemas de exportación y aduanas"
+    ],
+    "beneficios": [
+      "Transparencia total para el consumidor y el importador",
+      "Reducción de fraude y mezcla de lotes",
+      "Acceso a mercados premium y diferenciados",
+      "Cumplimiento de normativas internacionales",
+      "Mejor gestión y monitoreo para el productor"
+    ]
+  },
+  "cafe_especialidad": {
+    "descripcion": "El café de especialidad es aquel que supera los 80 puntos en la escala SCA, con trazabilidad completa, procesos diferenciados y atributos sensoriales destacados. Su producción exige prácticas agronómicas, postcosecha y comercialización rigurosas.",
+    "proceso_paso_a_paso": [
+      "Selección de variedades de alta calidad genética y adaptadas al microclima.",
+      "Cosecha selectiva de cerezas maduras (recolección manual).",
+      "Despulpado inmediato y fermentación controlada (natural, lavado, honey).",
+      "Lavado y secado en marquesinas o camas africanas, monitoreando humedad y temperatura.",
+      "Clasificación y selección manual de granos defectuosos.",
+      "Almacenamiento en condiciones óptimas (baja humedad, temperatura controlada).",
+      "Catación y análisis sensorial para determinar el perfil de taza.",
+      "Empaque en sacos GrainPro o similares para exportación.",
+      "Registro digital de cada lote y generación de certificados de origen y calidad."
+    ],
+    "requisitos_registro_origen": [
+      "Registro de finca y productor en MAG y Agrocalidad.",
+      "Certificación de prácticas sostenibles (Rainforest, Fairtrade, orgánico, SCA).",
+      "Bitácora digital de cosecha y postcosecha.",
+      "Análisis de laboratorio: humedad, actividad de agua, defectos, perfil sensorial.",
+      "Trazabilidad digital completa desde finca hasta exportador.",
+      "Cumplimiento de normas laborales y ambientales.",
+      "Certificado de origen y calidad emitido por autoridad competente."
+    ]
+  },
+  "cafe": {
+    "nombre_cientifico": "Coffea arabica / Coffea canephora",
+    "descripcion": "Arbusto perenne de zonas tropicales, base de la caficultura ecuatoriana. Produce frutos a partir del 3er año y puede durar más de 30 años en producción. Cultivado en Manabí, Loja, Zamora, Pichincha y otras provincias.",
+    "tipo_suelo_recomendado": "Franco arcilloso, profundo, bien drenado, pH 5.5-6.5. Evitar suelos compactados o encharcados.",
+    "ciclo_cultivo_anos": { "inicio_produccion": 3, "vida_util": 30 },
+    "plagas_comunes": [
+      {
+        "nombre": "Broca del café (Hypothenemus hampei)",
+        "control_organico": "Trampas etológicas, control biológico con Beauveria bassiana",
+        "control_quimico": "Endosulfan (prohibido en muchos países)",
+        "sintoma": "Frutos perforados, caída prematura, granos dañados."
+      },
+      {
+        "nombre": "Minador de la hoja (Leucoptera coffeella)",
+        "control_organico": "Aceite de Neem, control biológico",
+        "control_quimico": "Abamectina",
+        "sintoma": "Galerías en hojas, defoliación, reducción de vigor."
+      },
+      {
+        "nombre": "Ácaros (Oligonychus yothersi)",
+        "control_organico": "Azufre mojable, extracto de ajo",
+        "control_quimico": "Abamectina",
+        "sintoma": "Hojas amarillas, telarañas finas, reducción de vigor."
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Roya (Hemileia vastatrix)",
+        "control": "Fungicidas cúpricos, manejo de sombra, variedades resistentes",
+        "sintoma": "Manchas anaranjadas en el envés de las hojas, defoliación."
+      },
+      {
+        "nombre": "Ojo de gallo (Mycena citricolor)",
+        "control": "Poda sanitaria, fungicidas preventivos",
+        "sintoma": "Manchas circulares marrones con halo amarillo en hojas y frutos."
+      },
+      {
+        "nombre": "Antracnosis (Colletotrichum spp.)",
+        "control": "Fungicidas cúpricos, manejo de humedad",
+        "sintoma": "Manchas negras en ramas y frutos, caída de frutos."
+      }
+    ],
+    "deficiencias_fertilizantes": [
+      {
+        "elemento": "Nitrógeno",
+        "sintoma": "Hojas amarillas, crecimiento lento."
+      },
+      {
+        "elemento": "Potasio",
+        "sintoma": "Bordes de hojas quemados, menor llenado de frutos."
+      },
+      {
+        "elemento": "Magnesio",
+        "sintoma": "Bandas amarillas en hojas adultas."
+      }
+    ],
+    "manejo_convencional": "Fertilización química fraccionada, control químico de plagas y enfermedades, uso de semillas certificadas, manejo de sombra y riego suplementario.",
+    "manejo_organico": "Compost, abonos verdes, control biológico, cobertura vegetal, uso de microorganismos benéficos, manejo de sombra natural.",
+    "agricultura_regenerativa": "Cobertura permanente del suelo, mínima labranza, integración con árboles nativos, uso de abonos verdes y biofertilizantes, conservación de biodiversidad.",
+    "hectareas_sembradas_manabi": 3500,
+    "hectareas_sembradas_ecuador": 65000
+  },
+  "curso_marquesina": {
+    "titulo": "Curso rápido: Construcción de una Marquesina Sencilla para Secado de Cacao",
+    "objetivo": "Que el productor pueda construir una marquesina funcional con materiales accesibles y bajo costo.",
+    "pasos": [
+      "1. Selección del sitio: Busca un lugar elevado, bien ventilado y protegido de inundaciones.",
+      "2. Materiales básicos: Madera local (o caña guadua), clavos, malla plástica o metálica, plástico transparente (Agrofil o polietileno).",
+      "3. Estructura: Construye un marco rectangular de 6x3 metros y una altura de 2.2 m en la parte alta y 1.8 m en la baja para el techo inclinado.",
+      "4. Piso: Instala la malla a 50 cm del suelo para permitir circulación de aire y evitar humedad.",
+      "5. Techo: Cubre la estructura con plástico, asegurando que el agua escurra hacia fuera.",
+      "6. Ventilación: Deja aberturas laterales protegidas con malla para mejorar el flujo de aire.",
+      "7. Uso: Extiende el cacao en capas delgadas (3-4 cm) y remueve cada 2-3 horas para secado uniforme.",
+      "8. Mantenimiento: Limpia la marquesina después de cada uso y revisa el estado del plástico y la malla periódicamente."
+    ],
+    "consejos": [
+      "Usa materiales de la finca para reducir costos.",
+      "Si puedes, instala un termómetro y un higrómetro para monitorear temperatura y humedad.",
+      "Evita que el cacao toque el suelo para prevenir contaminación.",
+      "Si hay lluvias fuertes, asegúrate de que el techo esté bien tensado y sin filtraciones."
+    ]
+  },
+  "plano_marquesina": {
+    "titulo": "Plano técnico: Marquesina para secado de cacao (capacidad 500 libras por lote)",
+    "capacidad": "500 libras de cacao húmedo por lote (aprox. 227 kg)",
+    "dimensiones": {
+      "largo_m": 8,
+      "ancho_m": 4,
+      "altura_max_m": 2.5,
+      "altura_min_m": 2.0
+    },
+    "materiales": [
+      "Estructura: Acero galvanizado ASTM A36 o madera tratada",
+      "Cubierta: Plástico polietileno UV (Agrofil) o policarbonato",
+      "Camas de secado: Malla plástica alimentaria o galvanizada",
+      "Tornillos, clavos, bisagras, pintura anticorrosiva"
+    ],
+    "caracteristicas": [
+      "Techo a dos aguas para escurrimiento de agua",
+      "Ventilación lateral con malla para flujo de aire",
+      "Piso elevado a 50 cm del suelo",
+      "Puerta de acceso amplia para manejo de bandejas"
+    ],
+    "uso": "Permite secar hasta 500 libras de cacao por lote en 5-7 días, removiendo el grano cada 2-3 horas para secado uniforme.",
+    "referencia": "Desarrollo de una secadora de cacao de 500 libras por lote, Universidad Politécnica Salesiana, 2025."
+  },
+  "tecnicas_secado_marquesina_cafe": {
+    "descripcion": "Técnicas y consejos prácticos para secar café en marquesina, aprovechando la energía solar y garantizando calidad de grano para café de especialidad.",
+    "pasos": [
+      "1. Extiende el café en capas delgadas (2-3 cm) sobre la malla o bandeja.",
+      "2. Remueve los granos cada 2-3 horas para evitar fermentación y lograr secado uniforme.",
+      "3. Cierra la marquesina durante lluvias o humedad alta para proteger el café.",
+      "4. Mantén la ventilación lateral abierta para favorecer el flujo de aire.",
+      "5. El secado completo toma entre 8 y 12 días, dependiendo del clima y el tipo de proceso (natural o lavado).",
+      "6. Para café natural, realiza un tueste claro a medio-claro para resaltar notas frutales (8:30–10:30 min)."
+    ],
+    "consejos": [
+      "Aprovecha la energía solar directa, orientando la marquesina de este a oeste.",
+      "Evita amontonar el café para prevenir hongos y fermentación indeseada.",
+      "Limpia la marquesina y las bandejas antes de cada uso.",
+      "Si es posible, utiliza un higrómetro para monitorear la humedad del grano.",
+      "Para café especial, utiliza mallas plásticas alimentarias y evita contacto con el suelo."
+    ],
+    "referencias": [
+      "La Finca de Hoy: paseras de café económicas y funcionales.",
+      "Gobierno de Morona Santiago: implementación de marquesinas para café en Ecuador.",
+      "TikTok @finca_perlanegra: elaboración de marquesina para café especial.",
+      "Innovakit: secador solar para café en Colombia."
+    ]
+  },
+  "cursos": [
+    {
+      "titulo": "Curso rápido: Construcción de Marquesinas para Café (Productor Pequeño)",
+      "objetivo": "Aprender a construir una marquesina sencilla y funcional con materiales de la finca.",
+      "modulos": [
+        "Selección del sitio y orientación solar.",
+        "Materiales básicos: madera, guadúa, plástico de invernadero, malla.",
+        "Montaje de estructura y camas de secado.",
+        "Instalación de cubierta y cortinas laterales.",
+        "Consejos de uso y mantenimiento."
+      ],
+      "duracion": "2 horas (teórico-práctico)",
+      "referencias": [
+        "Cenicafé: Paseras solares de bajo costo.",
+        "Instagram @hectorempremde: teoría y práctica de marquesinas."
+      ]
+    },
+    {
+      "titulo": "Curso para Emprendedores en Café de Especialidad",
+      "objetivo": "Guiar al productor en la creación de un emprendimiento de café de especialidad, desde la finca hasta la taza.",
+      "modulos": [
+        "¿Qué es el café de especialidad? (escala SCA, >80 puntos)",
+        "Cosecha selectiva y postcosecha diferenciada.",
+        "Procesos: lavado, natural, honey.",
+        "Tueste y catación básica.",
+        "Empaque, marca y comercialización.",
+        "Trazabilidad y transparencia para el consumidor."
+      ],
+      "duracion": "4 horas (teórico-práctico)",
+      "referencias": [
+        "Repositorio UIDE: Creación y comercialización de Cafuné, café de especialidad.",
+        "Cafés el Criollo: Trazabilidad y diferenciación."
+      ]
+    },
+    {
+      "titulo": "Curso de Trazabilidad en Café",
+      "objetivo": "Capacitar en el registro y documentación de cada etapa del café, desde la finca hasta la exportación.",
+      "modulos": [
+        "Importancia de la trazabilidad en café de especialidad.",
+        "Registro de lotes, variedades y procesos.",
+        "Bitácora de fermentación, secado y tueste.",
+        "Etiquetado y tecnologías de seguimiento.",
+        "Comunicación de la historia del café al consumidor."
+      ],
+      "duracion": "3 horas (teórico-práctico)",
+      "referencias": [
+        "Syra Coffee: Trazabilidad en el mundo del café de especialidad.",
+        "LabelPrint Ecuador: Certificación y seguimiento documental."
+      ]
+    }
+  ],
+  "captura_carbono": {
+    "valor_estimado_tCO2_ha_anio": 14,
+    "explicacion": "El cultivo de café bajo sombra puede capturar entre 12 y 16 toneladas de CO₂ por hectárea al año, dependiendo de la densidad de siembra, manejo y presencia de árboles asociados. Los sistemas agroforestales de café favorecen una mayor captura de carbono en biomasa y suelo, contribuyendo a la mitigación del cambio climático.",
+    "precio_carbono_usd_ton": {
+      "valor_estimado": 38,
+      "explicacion": "El precio internacional promedio de la tonelada de CO₂ capturada en mercados voluntarios de carbono oscila entre 30 y 45 USD/tCO₂ (2026). Para café se estima 38 USD/tCO₂ como referencia técnica."
+    }
+  },
+  "bibliografia": [
+    {
+      "titulo": "PASERAS SOLARES DE BAJO COSTO PARA SECAR CAFÉ",
+      "autor": "DA ZAMBRANO",
+      "anio": 2013,
+      "fuente": "Cenicafé",
+      "url": "https://biblioteca.cenicafe.org/bitstream/avt0345",
+      "descripcion": "Manual técnico sobre la construcción y uso de paseras solares económicas para secar café, con recomendaciones de materiales y manejo de calidad."
+    },
+    {
+      "titulo": "Como construir una marquesina para secar cafe. (Teoria)",
+      "autor": "hectorempremde",
+      "anio": 2025,
+      "fuente": "Instagram",
+      "url": "https://www.instagram.com/hectorempremde/",
+      "descripcion": "Guía práctica y visual sobre la construcción artesanal de marquesinas para café, con materiales de la finca y consejos de uso."
+    },
+    {
+      "titulo": "Energy and economic characterization of the traditional drying of coffee in solar dryers",
+      "autor": "JS Vásquez",
+      "anio": 2024,
+      "fuente": "Dialnet",
+      "url": "https://dialnet.unirioja.es/servlet/articulo",
+      "descripcion": "Análisis energético y económico del secado tradicional de café en marquesinas solares en Colombia."
+    },
+    {
+      "titulo": "Guía de buenas prácticas de cosecha, fermentación y secado de café",
+      "fuente": "Swisscontact",
+      "url": "https://www.swisscontact.org/Persistent/Guia_Cosecha_Fermentacion_Secado.pdf",
+      "descripcion": "Guía técnica para productores sobre cosecha selectiva, fermentación y secado de café de calidad."
+    },
+    {
+      "titulo": "Creación y comercialización de Cafuné, café de especialidad",
+      "autor": "BP Vásquez Montaño",
+      "anio": 2024,
+      "fuente": "Repositorio UIDE",
+      "url": "https://repositorio.uide.edu.ec/handle/123456789/12345",
+      "descripcion": "Investigación sobre el desarrollo de un emprendimiento de café de especialidad, con énfasis en trazabilidad y diferenciación."
+    },
+    {
+      "titulo": "Trazabilidad del Café de Especialidad",
+      "fuente": "Cafés el Criollo",
+      "url": "https://cafeselcriollo.com/articulos/trazabilidad-del-cafe",
+      "descripcion": "Artículo sobre la importancia de la trazabilidad en el café de especialidad, desde la finca hasta la taza."
+    },
+    {
+      "titulo": "Trazabilidad en el Café: Clave para la Transparencia, la Certificación y la Sostenibilidad",
+      "fuente": "LabelPrint Ecuador",
+      "url": "https://labelprintec.com/Blog",
+      "descripcion": "Explicación de cómo la trazabilidad certifica la integridad y calidad del café en toda la cadena productiva."
+    },
+    {
+      "titulo": "Origen y producción del café de especialidad",
+      "fuente": "comacoffeeroasters.com",
+      "url": "https://comacoffeeroasters.com/blog/origen-y-produccion-cafe-especialidad",
+      "descripcion": "Blog sobre el papel de los productores y la importancia de la trazabilidad en café de especialidad."
+    }
+  ]
+}

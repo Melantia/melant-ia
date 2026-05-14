@@ -1,0 +1,51 @@
+{
+  "nombre_cientifico": "Raphanus sativus",
+  "descripcion": "Hortaliza de raíz de ciclo corto, cultivada por su raíz comestible de alto valor nutricional. Popular en huertos familiares y producción comercial. Se adapta a climas templados y frescos.",
+  "riego_optimo": "Riego frecuente, evitar encharcamiento",
+  "npk_recomendado": { "N": 60, "P": 30, "K": 80 },
+  "plagas_comunes": [
+    {
+      "nombre": "Mosca del rábano",
+      "control_organico": "Rotación de cultivos",
+      "sintoma": "Galerías en raíces"
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Mildiu",
+      "control": "Rotación de cultivos, fungicidas biológicos",
+      "sintoma": "Manchas amarillas en hojas, crecimiento lento"
+    },
+    {
+      "nombre": "Podredumbre de raíz",
+      "control": "Evitar encharcamiento, solarización del suelo",
+      "sintoma": "Raíces blandas y descompuestas"
+    }
+  ],
+  "epoca_siembra_recomendada": "Agosto - Octubre",
+  "calendario_lunar": "Siembra en luna menguante.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "20 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "16 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de raíces.",
+  "labores_postcosecha": "Limpieza y almacenamiento en lugar fresco.",
+  "captura_carbono_ton_ha_anio": 2.2,
+  "precio_carbono_usd_ton": 38,
+  "superficie_sembrada_ha_anio": "Variable según región y escala de producción",
+  "densidad_siembra": "400-600 plantas/m2 (siembra directa en hileras)",
+  "trazabilidad_digital_exportacion": "Posible mediante registro de lotes, fechas de siembra y cosecha, uso de QR para trazabilidad en exportación.",
+  "zonas_produccion_ecuador": [
+    "Sierra centro-norte",
+    "Carchi",
+    "Tungurahua",
+    "Cotopaxi"
+  ],
+  "importancia_economica": "El rábano es una hortaliza de consumo nacional, con potencial para exportación en nichos de mercado fresco y gourmet."
+}

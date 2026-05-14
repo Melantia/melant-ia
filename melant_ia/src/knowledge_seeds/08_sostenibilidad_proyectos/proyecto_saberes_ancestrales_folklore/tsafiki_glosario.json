@@ -1,0 +1,29 @@
+{
+  "interfaz": {
+    "saludo": "Tsara ma joe",
+    "agradecimiento": "Jo - ó",
+    "usuario_hombre": "Tsatsí",
+    "usuario_mujer": "Sona",
+    "comunidad": "Tsachila",
+    "bienvenida": "Tsara ma joe, Tsachila!",
+    "despedida": "Joo joo, tsara!"
+  },
+  "servicios_rurales": {
+    "cultivo_maiz": "Manu",
+    "clima_lluvia": "Chapi",
+    "alimento_base": "Yuca",
+    "plaga": "Tsawa",
+    "siembra": "Tsara",
+    "cosecha": "Shimi",
+    "medicina_natural": "Nina",
+    "agua": "Pi",
+    "tierra": "To",
+    "sol": "Shu",
+    "luna": "Ke",
+    "fuego": "Ni",
+    "árbol": "Ti",
+    "trabajo_comunitario": "Tsachila shimi",
+    "registro": "Shimi pi",
+    "formulario": "Shimi tsawa"
+  }
+}

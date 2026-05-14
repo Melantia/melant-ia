@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Tsa'kema, tsa'kema tsawa.",
+    "region": "Manabí/Tsáchila",
+    "categoria": "Sabiduría popular",
+    "descripcion": "Donde hay humo, hay fuego. (Proverbio tsafiki)"
+  },
+  {
+    "titulo": "Mu tsawa",
+    "region": "Costa - Tsáchila",
+    "categoria": "Mito",
+    "descripcion": "Tras una enfermedad, los sabios Tsáchila se pintaron con achiote (mu) para protegerse de la muerte."
+  },
+  {
+    "titulo": "Tsá’chi guagua",
+    "region": "Sierra/Tsáchila",
+    "categoria": "Leyenda",
+    "descripcion": "Espíritu de niño que llora en los caminos, buscando compañía. (Adaptación del Guagua Auca)"
+  },
+  {
+    "titulo": "Tsá’chi ñambi",
+    "region": "Costa - Tsáchila",
+    "categoria": "Personaje",
+    "descripcion": "Sabio que recorre la comunidad pidiendo oraciones por los espíritus. (Adaptación del Animero)"
+  },
+  {
+    "titulo": "Tsá’chi shimi",
+    "region": "Costa - Tsáchila",
+    "categoria": "Poesía Oral",
+    "descripcion": "Canto de amor o desafío en lengua tsafiki, usado en celebraciones. (Adaptación del amorfino)"
+  }
+]

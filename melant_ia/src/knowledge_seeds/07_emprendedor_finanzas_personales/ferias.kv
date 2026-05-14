@@ -1,0 +1,50 @@
+<FeriaList>:
+    orientation: 'vertical'
+    padding: dp(16)
+    spacing: dp(10)
+    Label:
+        text: 'Ferias Nacionales'
+        font_size: dp(22)
+        size_hint_y: None
+        height: dp(40)
+    BoxLayout:
+        size_hint_y: None
+        height: dp(44)
+        spacing: dp(8)
+        Button:
+            text: '📡 Detectar mi provincia'
+            size_hint_x: None
+            width: dp(170)
+            background_color: .2,.5,1,1
+            color: 1,1,1,1
+            on_release: root.detectar_provincia()
+        Label:
+            text: 'Mostrando oportunidades en: [b]'+root.provincia+'[/b]'
+            markup: True
+            color: .7,1,.7,1
+            font_size: dp(14)
+    ScrollView:
+        size_hint_y: None
+        height: dp(120)
+        GridLayout:
+            id: regiones_grid
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: dp(8)
+            # Aquí se agregan dinámicamente los chips de regiones y provincias
+    ScrollView:
+        GridLayout:
+            id: ferias_grid
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            row_default_height: dp(60)
+            row_force_default: True
+            spacing: dp(6)
+            # Las ferias se agregan dinámicamente
+    Button:
+        text: 'Sincronizar Ferias'
+        size_hint_y: None
+        height: dp(44)
+        on_release: root.sincronizar_ferias()

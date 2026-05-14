@@ -1,0 +1,50 @@
+{
+  "zanahoria": {
+    "nombre_cientifico": "Daucus carota L.",
+    "descripcion": "Planta bienal de raíz comestible, cultivada en la Sierra y zonas templadas de Ecuador. Rica en carotenoides, vitamina A y fibra dietética.",
+    "riego_optimo": "Riego frecuente, evitar encharcamiento",
+    "npk_recomendado": { "N": 80, "P": 40, "K": 100 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca de la zanahoria (Psila rosae)",
+        "control_organico": "Rotación de cultivos, trampas amarillas",
+        "control_quimico": "Imidacloprid, cipermetrina",
+        "sintoma": "Galerías en raíces, raíces deformes"
+      },
+      {
+        "nombre": "Pulgón verde",
+        "control_organico": "Jabón potásico, extracto de ajo",
+        "control_quimico": "Imidacloprid",
+        "sintoma": "Hojas enrolladas, transmisión de virus"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Alternaria (Alternaria dauci)",
+        "control": "Fungicidas cúpricos, rotación de cultivos",
+        "sintoma": "Manchas marrones en hojas y pecíolos"
+      },
+      {
+        "nombre": "Mildiu (Peronospora spp.)",
+        "control": "Manejo de humedad, fungicidas preventivos",
+        "sintoma": "Manchas amarillas en hojas, moho gris en el envés"
+      }
+    ],
+    "epoca_siembra_recomendada": "Julio - Septiembre",
+    "calendario_lunar": "Siembra en luna menguante.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+        "rendimiento_estimado": "30 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost y control biológico.",
+        "rendimiento_estimado": "24 t/ha"
+      }
+    },
+    "labores_cosecha": "Arranque manual de raíces.",
+    "labores_postcosecha": "Limpieza y almacenamiento en lugar fresco.",
+    "captura_carbono_ton_ha_anio": 2.5,
+    "precio_carbono_usd_ton": 38
+  }
+}

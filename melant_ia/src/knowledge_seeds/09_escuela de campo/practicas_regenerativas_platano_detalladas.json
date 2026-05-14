@@ -1,0 +1,40 @@
+{
+  "practicas_regenerativas_platano_detalladas": [
+    {
+      "nombre": "Desinfección de Colinos con Caldo Sulfocálcico",
+      "herramientas_y_equipo": "Cuchillo 'pelador' de acero inoxidable afilado, tanque de 200L, guantes de nitrilo y mascarilla para gases.",
+      "procedimiento_practico": "Realizar el 'pelado' o limpieza del colino eliminando raíces y tejido necrótico. Sumergir en solución de Caldo Sulfocálcico al 10% (10L de caldo en 90L de agua) por 20 minutos.",
+      "tiempo_y_frecuencia": "Única vez, inmediatamente antes de la siembra.",
+      "mejor_forma_ejecucion": "La desinfección debe hacerse en lotes. Usar el cuchillo desinfectado con alcohol al 70% entre cada colino para evitar transmitir bacterias latentes. El tejido debe quedar blanco 'marfil'.",
+      "fundamento": "El azufre del caldo previene el ataque de hongos del suelo en la herida del pelado, actuando como un sello biológico.",
+      "contraste": "El Benomyl o Carbendazim químico esterilizan la base del colino, impidiendo la colonización temprana de microorganismos benéficos."
+    },
+    {
+      "nombre": "Trampas Etológicas para Picudo Negro",
+      "herramientas_y_equipo": "Machete de 18 pulgadas (bien afilado), brocha pequeña de cerdas naturales, recipientes para mezcla de cebo.",
+      "procedimiento_practico": "Cortar secciones de pseudotallo cosechado de 30cm (tipo sándwich). Abrir por la mitad y aplicar una pasta de melaza con Beauveria bassiana. Colocar en la base de la planta.",
+      "tiempo_y_frecuencia": "Instalación cada 20 metros. Revisión cada 3 días y renovación total del material cada 15 días.",
+      "mejor_forma_ejecucion": "Asegurar que el corte del machete sea limpio para que la superficie sea lisa y retenga la humedad del cebo. La cara untada debe quedar en contacto directo con el suelo húmedo.",
+      "fundamento": "La capilaridad del tallo fresco atrae al picudo por olor. El hongo entomopatógeno lo parasita en 48 horas.",
+      "contraste": "El uso de Furadán granulado es un riesgo letal para el operario y elimina a los sapos, depredadores naturales del picudo."
+    },
+    {
+      "nombre": "Nutrición Potásica con Raquis (Pinzote) Fermentado",
+      "herramientas_y_equipo": "Picadora de forraje o machete pesado, bidón con válvula de aire, regadera manual o bomba de espalda (sin boquilla).",
+      "procedimiento_practico": "Picar el raquis en cubos de 2x2 cm para aumentar el área de contacto. Fermentar con microorganismos de montaña por 15 días y aplicar el líquido filtrado al suelo.",
+      "tiempo_y_frecuencia": "Aplicación mensual en el área de goteo (coronamiento de la planta).",
+      "mejor_forma_ejecucion": "El raquis debe picarse inmediatamente después de la cosecha para evitar la pérdida de lixiviados. Usar la regadera para asegurar que el potasio orgánico penetre en el primer horizonte del suelo.",
+      "fundamento": "El raquis es 'oro líquido' en potasio (K), esencial para el transporte de azúcares y el peso del racimo.",
+      "contraste": "El Cloruro de Potasio (KCl) químico aporta cloro, el cual es tóxico para la microbiología y compacta los suelos arcillosos."
+    },
+    {
+      "nombre": "Cirugía de Hoja para Control de Sigatoka",
+      "herramientas_y_equipo": "Cuchilla curva (medialuna) con mango largo, piedra de afilar manual, frasco atomizador con yodo o alcohol.",
+      "procedimiento_practico": "Recorrer el lote identificando estrías de Sigatoka. Cortar quirúrgicamente solo la mancha, dejando el resto de la hoja funcional.",
+      "tiempo_y_frecuencia": "Monitoreo semanal estricto en épocas de lluvia.",
+      "mejor_forma_ejecucion": "Desinfectar la cuchilla con el atomizador después de cada intervención. Mantener el filo de la medialuna al máximo para evitar 'desgarros' que dejen la planta expuesta a más infecciones.",
+      "fundamento": "Mantiene el área fotosintética activa mientras se remueven los focos de inoculación de esporas de Mycosphaerella.",
+      "contraste": "La fumigación con aceites minerales y fungicidas sistémicos asfixia los estomas de la hoja y eleva los costos de producción drásticamente."
+    }
+  ]
+}

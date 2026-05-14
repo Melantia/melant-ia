@@ -1,0 +1,79 @@
+{
+  "fertilizacion_arroz": {
+    "quimica": {
+      "insumos": [
+        {
+          "rubro": "Urea (N)",
+          "cantidad_kg_ha": 180,
+          "precio_unitario_usd": 0.6,
+          "costo_total_usd": 108
+        },
+        {
+          "rubro": "DAP (P)",
+          "cantidad_kg_ha": 80,
+          "precio_unitario_usd": 0.85,
+          "costo_total_usd": 68
+        },
+        {
+          "rubro": "MOP (K)",
+          "cantidad_kg_ha": 60,
+          "precio_unitario_usd": 0.9,
+          "costo_total_usd": 54
+        },
+        {
+          "rubro": "Aplicación de fertilizantes",
+          "cantidad": 3,
+          "precio_unitario_usd": 15,
+          "costo_total_usd": 45
+        }
+      ],
+      "total_fertilizantes_usd": 230,
+      "otros_costos": [
+        { "rubro": "Herbicidas", "costo_usd": 60 },
+        { "rubro": "Insecticidas", "costo_usd": 40 },
+        { "rubro": "Fungicidas", "costo_usd": 30 }
+      ],
+      "total_otros_usd": 130,
+      "total_general_usd": 360
+    },
+    "regenerativa": {
+      "insumos": [
+        {
+          "rubro": "Compost/Bocashi",
+          "cantidad_t_ha": 2,
+          "precio_unitario_usd": 40,
+          "costo_total_usd": 80
+        },
+        {
+          "rubro": "Biochar",
+          "cantidad_kg_ha": 100,
+          "precio_unitario_usd": 0.5,
+          "costo_total_usd": 50
+        },
+        {
+          "rubro": "Microorganismos eficientes (EM)",
+          "cantidad_l_ha": 20,
+          "precio_unitario_usd": 2,
+          "costo_total_usd": 40
+        },
+        {
+          "rubro": "Aplicación de abonos orgánicos",
+          "cantidad": 3,
+          "precio_unitario_usd": 18,
+          "costo_total_usd": 54
+        }
+      ],
+      "total_fertilizantes_usd": 224,
+      "otros_costos": [
+        { "rubro": "Control biológico (trampas, liberación)", "costo_usd": 35 },
+        { "rubro": "Biofungicidas", "costo_usd": 25 },
+        {
+          "rubro": "Mano de obra extra (preparación de insumos)",
+          "costo_usd": 40
+        }
+      ],
+      "total_otros_usd": 100,
+      "total_general_usd": 324
+    }
+  }
+}

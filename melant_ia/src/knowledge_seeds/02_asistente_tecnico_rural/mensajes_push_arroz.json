@@ -1,0 +1,24 @@
+{
+  "mensajes_push": [
+    {
+      "etapa": "Germinación",
+      "mensaje": "¡Recuerda mantener el suelo húmedo y libre de malezas para un buen establecimiento del arroz!"
+    },
+    {
+      "etapa": "Macollamiento",
+      "mensaje": "Monitorea la presencia de Sogata y aplica control biológico si superas 5 insectos por red."
+    },
+    {
+      "etapa": "Floración",
+      "mensaje": "Evita el uso de fungicidas salvo que observes síntomas de Pyricularia en hojas bandera."
+    },
+    {
+      "etapa": "Maduración",
+      "mensaje": "Programa la cosecha cuando el grano tenga 20-22% de humedad para evitar pérdidas."
+    },
+    {
+      "etapa": "General",
+      "mensaje": "Consulta la app MELANT IA para alertas fitosanitarias y precios actualizados del arroz en tu zona."
+    }
+  ]
+}

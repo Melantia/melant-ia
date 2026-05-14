@@ -1,0 +1,23 @@
+{
+  "cacao": {
+    "ph_ideal": [6.0, 7.0],
+    "humedad_critica": 80,
+    "n_max": 40,
+    "enfermedades_clave": ["Monilla", "Escoba de Bruja"],
+    "insectos_clave": ["Chinche del cacao", "Barrenador"]
+  },
+  "platano_barraganete": {
+    "ph_ideal": [5.5, 6.5],
+    "humedad_critica": 85,
+    "n_max": 60,
+    "enfermedades_clave": ["Sigatoka Negra", "Moko"],
+    "insectos_clave": ["Picudo Negro"]
+  },
+  "palma_africana": {
+    "ph_ideal": [4.0, 6.0],
+    "humedad_critica": 75,
+    "n_max": 80,
+    "enfermedades_clave": ["Pudrición del Cogollo (PC)", "Anillo Rojo"],
+    "insectos_clave": ["Gualpa", "Sagalassa"]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "higos": {
+    "nombre_cientifico": "Ficus carica",
+    "descripcion": "Fruto dulce, de alto valor en mercados gourmet y exportación. Cultivo perenne, resistente a sequía.",
+    "riego_optimo": "Riego por goteo, 400-600 mm/año. Frecuencia cada 10-15 días.",
+    "npk_recomendado": { "N": 60, "P": 30, "K": 80 },
+    "plagas_comunes": [
+      {
+        "nombre": "Cochinilla",
+        "control_organico": "Aceite mineral",
+        "control_quimico": "Clorpirifos",
+        "sintoma": "Manchas blancas en ramas y frutos"
+      },
+      {
+        "nombre": "Mosca de la fruta",
+        "control_organico": "Trampas",
+        "control_quimico": "Spinosad",
+        "sintoma": "Daño en frutos maduros"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Antracnosis",
+        "control": "Fungicidas cúpricos",
+        "sintoma": "Manchas oscuras en frutos y hojas"
+      },
+      {
+        "nombre": "Oídio",
+        "control": "Azufre mojable",
+        "sintoma": "Polvo blanco en hojas"
+      }
+    ],
+    "epoca_siembra_recomendada": "Julio - Septiembre (Costa y Sierra)",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos, fungicidas",
+        "rendimiento_estimado": "12-18 t/ha/año"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
+        "rendimiento_estimado": "8-12 t/ha/año"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de frutos maduros.",
+    "labores_postcosecha": "Clasificación, secado, empaque.",
+    "zonas_produccion_ecuador": ["Imbabura", "Azuay", "Guayas"],
+    "importancia_economica": "Fruto de alto valor en mercados gourmet y exportación.",
+    "captura_carbono_ton_ha_anio": 2.0,
+    "precio_carbono_usd_ton": 8,
+    "superficie_sembrada_ha_anio": 200,
+    "densidad_siembra": "800-1200 plantas/ha",
+    "trazabilidad_digital_exportacion": "Código QR en cajas para trazabilidad.",
+    "bibliografia": ["Manual de Higo INIAP", "FAO Higo Ecuador"],
+    "cursos_recomendados": [
+      "Manejo Integrado de Plagas en Frutales",
+      "Postcosecha de Frutas Frescas"
+    ]
+  }
+}

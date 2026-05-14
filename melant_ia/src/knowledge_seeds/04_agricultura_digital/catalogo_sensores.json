@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cat_sensor_001",
+    "nombre": "NDVI portátil AgroTech",
+    "tipo": "NDVI",
+    "descripcion": "Sensor portátil para monitoreo de vigor vegetal en campo.",
+    "fabricante": "AgroTech",
+    "modelo": "NDVI-2026",
+    "especificaciones": {
+      "rango_medicion": "NDVI -1 a +1",
+      "precision": "±0.02",
+      "bateria": "Recargable, 12h uso continuo"
+    },
+    "aplicaciones": [
+      "Monitoreo de cultivos",
+      "Diagnóstico rápido de estrés"
+    ],
+    "url_ficha": "https://www.agrotech.com/catalogo/ndvi2026.pdf"
+  },
+  {
+    "id": "cat_sensor_002",
+    "nombre": "Sensor de humedad SoilSense",
+    "tipo": "Humedad de suelo",
+    "descripcion": "Sensor capacitivo para medición de humedad y temperatura en suelos agrícolas.",
+    "fabricante": "SoilSense",
+    "modelo": "HUM-500",
+    "especificaciones": {
+      "rango_medicion": "0-100% humedad",
+      "precision": "±2%",
+      "bateria": "Pilas AA, 6 meses"
+    },
+    "aplicaciones": [
+      "Gestión de riego",
+      "Monitoreo de humedad en tiempo real"
+    ],
+    "url_ficha": "https://www.soilsense.com/catalogo/hum500.pdf"
+  }
+]

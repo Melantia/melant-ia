@@ -1,0 +1,97 @@
+{
+  "pitahaya": {
+    "fuente": "Manual Técnico de Pitahaya, INIAP 2025",
+    "detalle": "Selección de esquejes sanos, manejo de drenaje y control de pudriciones. Prácticas de poda y tutorado para maximizar la producción y calidad del fruto.",
+    "regenerativo": "Rotación de cultivos, uso de abonos orgánicos y manejo biológico de plagas para mantener la salud del suelo y reducir enfermedades.",
+    "epoca_siembra": "Septiembre a noviembre (preferente en inicio de época seca).",
+    "porcentaje_hectareas_manabi": 8.5,
+    "porcentaje_hectareas_ecuador": 100,
+    "captura_carbono_ton_ha_anio": 6.2,
+    "precio_carbono_usd_ton": 38,
+    "nombre_cientifico": "Hylocereus undatus (blanca) / Selenicereus megalanthus (amarilla)",
+    "descripcion": "Cactácea frutal de alto valor comercial y exportación. Ecuador es el principal exportador de pitahaya amarilla (Selenicereus megalanthus) del mundo. Se cultiva en Palora (Morona Santiago), Guayas y otras zonas. Fruta exótica con alta demanda en Europa, EE.UU. y Asia.",
+    "riego_optimo": "Riego por goteo cada 8-12 días; muy sensible al encharcamiento. Requiere 600-1,200 mm/año bien distribuidos. El exceso de humedad provoca pudriciones.",
+    "npk_recomendado": { "N": 60, "P": 30, "K": 90 },
+    "plagas_comunes": [
+      {
+        "nombre": "Cochinilla harinosa (Planococcus citri / Dysmicoccus spp.)",
+        "control_organico": "Aceite mineral, jabón potásico, liberación de Cryptolaemus montrouzieri",
+        "control_quimico": "Clorpirifos, Imidacloprid",
+        "sintoma": "Masas blancas algodonosas en cladodios, botones florales y frutos; debilitamiento general, fumagina negra sobre excreciones",
+        "nivel_peligrosidad": "Alto"
+      },
+      {
+        "nombre": "Mosca de la fruta (Anastrepha spp.)",
+        "control_organico": "Trampas con proteína hidrolizada + Spinosad, cobertura individual de frutos",
+        "control_quimico": "Spinosad cebo, Malatión",
+        "sintoma": "Punturas de oviposición en frutos maduros, pudrición interna, caída prematura; plaga de importancia cuarentenaria para exportación",
+        "nivel_peligrosidad": "Muy alto para exportación"
+      },
+      {
+        "nombre": "Ácaros (Tetranychus urticae / Brevipalpus spp.)",
+        "control_organico": "Aceite mineral, azufre mojable, Neoseiulus californicus",
+        "control_quimico": "Abamectina, Propargita",
+        "sintoma": "Manchas plateadas o rojizas en cladodios, deformación de brotes y frutos jóvenes en ataques severos",
+        "nivel_peligrosidad": "Medio"
+      },
+      {
+        "nombre": "Trips (Frankliniella occidentalis / Chaetanaphothrips orchidii)",
+        "control_organico": "Aceite de Neem, depredadores (Amblyseius spp.), trampas azules",
+        "control_quimico": "Spinosad, Abamectina",
+        "sintoma": "Cicatrices plateadas y corchosas en cáscara del fruto, daño en flores (aborto floral), manchas que deprecian el valor comercial",
+        "nivel_peligrosidad": "Alto - impacto directo en calidad exportación"
+      },
+      {
+        "nombre": "Babosas y caracoles (Deroceras spp. / Helix spp.)",
+        "control_organico": "Cebos con fosfato de hierro, trampas con cerveza, barreras de ceniza",
+        "control_quimico": "Metaldehído en cebos",
+        "sintoma": "Raspaduras y agujeros irregulares en cladodios y frutos jóvenes; mayor daño en épocas lluviosas y en sistemas con suelo húmedo",
+        "nivel_peligrosidad": "Medio"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Antracnosis (Colletotrichum gloeosporioides)",
+        "control": "Fungicidas cúpricos, Carbendazim; eliminar tejido infectado; manejo de humedad y ventilación; tratamiento postcosecha",
+        "sintoma": "Manchas hundidas oscuras en cladodios y frutos, pudrición blanda en poscosecha; principal causa de pérdidas en exportación"
+      },
+      {
+        "nombre": "Pudrición por Fusarium (Fusarium oxysporum / F. solani)",
+        "control": "Drenaje adecuado, Trichoderma harzianum en suelo, eliminación de tejido infectado, no enterrar el cormo",
+        "sintoma": "Pudrición basal de cladodios y tallos, coloración amarilla-marrón interna, colapso de segmentos"
+      },
+      {
+        "nombre": "Pudrición blanda bacteriana (Erwinia carotovora / Pectobacterium spp.)",
+        "control": "Evitar heridas, reducir humedad, eliminar tejido afectado, aplicar pasta cúprica en cortes",
+        "sintoma": "Pudrición acuosa y maloliente en cladodios con heridas o en zonas de alto riego; avance rápido en climas húmedos"
+      },
+      {
+        "nombre": "Ojo de pollo / Mancha café (Dothiorella spp. / Alternaria spp.)",
+        "control": "Fungicidas cúpricos, Mancozeb, poda sanitaria de cladodios afectados",
+        "sintoma": "Manchas circulares oscuras con centro grisáceo en cladodios y frutos; necrosis que afecta la calidad visual del fruto"
+      }
+    ],
+    "epoca_siembra_recomendada": "Septiembre - Noviembre (inicio de época seca para mejor establecimiento de raíces y evitar pudriciones).",
+    "calendario_lunar": "Siembra en luna creciente para mejor desarrollo de raíces y brotes vegetativos.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilización fraccionada, fungicidas preventivos en época lluviosa, insecticidas selectivos para plagas clave, inducción floral con etileno.",
+        "rendimiento_estimado": "15-22 t/ha/año (amarilla); 20-30 t/ha/año (blanca)"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost, Trichoderma en suelo, cobre agrícola, control biológico; cobertura de frutos para mosca.",
+        "rendimiento_estimado": "10-15 t/ha/año (menor pero con precio premium en mercados orgánicos)"
+      }
+    },
+    "labores_cosecha": "Corte manual con tijeras desinfectadas cuando el fruto cambia de color verde a amarillo (pitahaya amarilla) o rojo (blanca). Dejar 1-2 cm de pedúnculo. Cosecha cada 3-4 días en pico de producción.",
+    "labores_postcosecha": "Clasificación por calibre y ausencia de daños, lavado suave, secado, empaque individual en mallas de espuma, embalaje en cajas de cartón con ventilación. Cadena de frío 8-10°C para exportación.",
+    "zonas_produccion_ecuador": [
+      "Palora (Morona Santiago)",
+      "Guayas",
+      "Pichincha",
+      "Cotopaxi",
+      "Los Ríos"
+    ],
+    "importancia_economica": "Ecuador exporta más del 90% de la pitahaya amarilla que consume el mundo. Principal mercado: EE.UU., Países Bajos, Hong Kong. Precio FOB promedio: $2-4 USD/kg. En crecimiento acelerado desde 2015. Genera importantes ingresos en Palora."
+  }
+}

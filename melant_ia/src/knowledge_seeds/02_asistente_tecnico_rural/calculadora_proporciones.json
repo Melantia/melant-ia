@@ -1,0 +1,42 @@
+{
+  "calculadora_proporciones": {
+    "volumen_referencia_frasco_ml": 500,
+    "unidades_entrada": ["Litros por Hectarea", "Centimetros cubicos por Bomba 20L", "Gramos por Bomba 20L"],
+    "algoritmo_conversion": [
+      {
+        "de": "L_por_Hectarea",
+        "factor_division": 400,
+        "instruccion": "Multiplicar dosis L por 2.5 para obtener ml en frasco de 500ml"
+      },
+      {
+        "de": "ml_por_Bomba_20L",
+        "factor_division": 40,
+        "instruccion": "Dividir la dosis de la bomba para 40"
+      }
+    ],
+    "ejemplos_rapidos": [
+      {
+        "producto": "Biol",
+        "dosis_bomba": "1000 ml",
+        "dosis_frasco": "25 ml"
+      },
+      {
+        "producto": "Caldo Sulfocalcico",
+        "dosis_bomba": "500 ml",
+        "dosis_frasco": "12.5 ml"
+      }
+    ],
+    "manual_equivalencias": [
+      {"medida": "Cucharadita", "ml": 5},
+      {"medida": "Cucharada", "ml": 15},
+      {"medida": "Tapa de botella de soda", "ml": 6},
+      {"medida": "Jeringa estándar", "ml": 10}
+    ],
+    "bibliografia": [
+      {"fuente": "INIAP (2018)", "titulo": "Manual de calibración de equipos de aspersión terrestre."},
+      {"fuente": "FAO", "titulo": "Guía práctica de manejo de plaguicidas: Cálculos y diluciones."},
+      {"fuente": "Restrepo Rivera, J.", "titulo": "Diplomado en Agricultura Orgánica: Dosificación de caldos minerales."},
+      {"fuente": "CIMMYT", "titulo": "Precision Application of Inputs in Smallholder Systems."}
+    ]
+  }
+}

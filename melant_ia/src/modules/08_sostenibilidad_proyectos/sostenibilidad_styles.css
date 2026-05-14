@@ -1,0 +1,24 @@
+/* Tarjeta de Proyecto */
+.card-sostenible {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    border: 1px solid #c6f6d5; /* Verde muy suave */
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, #f0fff4, #ffffff);
+}
+/* Título con énfasis en la naturaleza */
+.titulo-proyecto {
+    color: #276749; /* Verde bosque profundo */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Badge para indicadores de carbono */
+.badge-carbono {
+    background-color: #2d3748; /* Color carbón */
+    color: #4fd1c5; /* Verde agua neón */
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-family: 'monospace';
+}

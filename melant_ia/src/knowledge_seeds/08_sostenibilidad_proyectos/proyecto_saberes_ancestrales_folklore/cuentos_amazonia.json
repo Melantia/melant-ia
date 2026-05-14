@@ -1,0 +1,32 @@
+[
+  {
+    "tipo": "mito",
+    "texto": "Etsa y el Demonio Iwia: El joven Etsa recuperó las aves de la selva engañando al demonio Iwia, devolviendo la vida y el canto a la Amazonía.",
+    "fuente": "Mitos y leyendas de la Amazonía - Juan Carlos Morales",
+    "tema": "Shuar, origen, naturaleza"
+  },
+  {
+    "tipo": "mito",
+    "texto": "Nantu y Kanu: El mito del Sol y la Luna, dos amantes que se persiguen eternamente en el cielo amazónico.",
+    "fuente": "Tradición oral Kichwa amazónica",
+    "tema": "Kichwa, astros, amor"
+  },
+  {
+    "tipo": "leyenda",
+    "texto": "El Chullachaqui: Guardián de la selva, con un pie humano y otro de animal, que engaña a los viajeros para perderlos en el bosque.",
+    "fuente": "Shuar: Tradición Oral",
+    "tema": "espanto, selva, transformación"
+  },
+  {
+    "tipo": "leyenda",
+    "texto": "La Boiuna (Yacu-Mama): Serpiente gigante madre del agua, protectora de los ríos y lagunas amazónicas.",
+    "fuente": "Cuentos de la Selva - Horacio Quiroga",
+    "tema": "agua, misterio, protección"
+  },
+  {
+    "tipo": "leyenda",
+    "texto": "El Delfín Rosado: Delfín que se transforma en hombre para seducir a las mujeres durante las fiestas y llevarlas al fondo del río.",
+    "fuente": "Narrativa oral amazónica",
+    "tema": "transformación, río, amor"
+  }
+]

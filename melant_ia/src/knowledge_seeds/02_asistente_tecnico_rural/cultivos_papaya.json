@@ -1,0 +1,62 @@
+{
+  "nombre_cultivo": "Papaya",
+  "nombre_cientifico": "Carica papaya",
+  "descripcion": "Frutal tropical de alto valor nutricional, fuente de vitaminas, enzimas y fibra. Cultivo importante en la Costa y Amazonía ecuatoriana.",
+  "riego_optimo": "Riego frecuente, evitar encharcamiento, fundamental en floración y llenado de fruto.",
+  "npk_recomendado": { "N": 150, "P": 60, "K": 200 },
+  "plagas_comunes": [
+    {
+      "nombre": "Mosca de la fruta",
+      "control_organico": "Trampas, control biológico.",
+      "sintoma": "Manchas y pudrición en frutos."
+    },
+    {
+      "nombre": "Ácaro rojo",
+      "control_organico": "Aceite mineral, control biológico.",
+      "sintoma": "Manchas rojas en hojas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Virus de la mancha anular",
+      "control": "Semilla certificada, eliminación de plantas enfermas.",
+      "sintoma": "Manchas anulares en hojas y frutos."
+    },
+    {
+      "nombre": "Antracnosis",
+      "control": "Fungicidas preventivos, manejo de humedad.",
+      "sintoma": "Manchas oscuras en frutos."
+    }
+  ],
+  "epoca_siembra_recomendada": "Todo el año en zonas con riego; preferente inicio de lluvias.",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "60 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "45 t/ha"
+    }
+  },
+  "labores_cosecha": "Cosecha manual de frutos maduros.",
+  "labores_postcosecha": "Limpieza y almacenamiento en cajas ventiladas.",
+  "captura_carbono_ton_ha_anio": 2.0,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 9000,
+  "densidad_siembra": "2,500-3,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU.", "Unión Europea"]
+  },
+  "zonas_produccion_ecuador": ["Manabí", "Guayas", "Esmeraldas", "Sucumbíos"],
+  "importancia_economica": "Clave en la dieta nacional y en la agroindustria de jugos y pulpas.",
+  "bibliografia": ["MAGAP: Guía técnica de papaya"],
+  "cursos_recomendados": ["Producción sostenible de papaya"]
+}

@@ -1,0 +1,20 @@
+{
+  "modulo": "Formación y Comunidad",
+  "ai_logic": {
+    "priority": "Capacitación y Respaldo Legal",
+    "search_context": [
+      "Leyes de tierras y derechos del ciudadano rural",
+      "Buenas Prácticas Agrícolas (BPA) y Regenerativas",
+      "Formatos de contratos y documentos legales agrarios",
+      "Novedades en convocatorias de apoyo gubernamental"
+    ],
+    "escuela_virtual": {
+      "seguimiento": "Progreso de cursos y certificaciones",
+      "offline_docs": "Descarga de manuales técnicos"
+    }
+  },
+  "funciones_boton": {
+    "on_course_click": "Continuar última lección",
+    "on_legal_consult": "Abrir chat de asesoría ciudadana"
+  }
+}

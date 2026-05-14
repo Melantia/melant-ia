@@ -1,0 +1,30 @@
+{
+  "plagas": [
+    {
+      "nombre": "Mosca de la fruta (Anastrepha spp.)",
+      "descripcion": "Larvas que dañan frutos, provocando pudrición y caída prematura.",
+      "imagen": "assets/badea_mosca_fruta.jpg",
+      "manejo": "Monitoreo con trampas, recolección y destrucción de frutos caídos, uso de bolsas protectoras, control biológico."
+    },
+    {
+      "nombre": "Ácaros (Tetranychus spp.)",
+      "descripcion": "Pequeños ácaros que causan amarillamiento y caída de hojas.",
+      "imagen": "assets/badea_acaros.jpg",
+      "manejo": "Riego adecuado, aplicación de extractos botánicos, control biológico con ácaros benéficos."
+    }
+  ],
+  "enfermedades": [
+    {
+      "nombre": "Fusariosis (Fusarium spp.)",
+      "descripcion": "Hongo que causa marchitez y pudrición de raíces y tallos.",
+      "imagen": "assets/badea_fusariosis.jpg",
+      "manejo": "Rotación de cultivos, uso de plantas sanas, aplicación de biofungicidas, manejo de humedad."
+    },
+    {
+      "nombre": "Antracnosis (Colletotrichum spp.)",
+      "descripcion": "Manchas oscuras en frutos y tallos, caída prematura de frutos.",
+      "imagen": "assets/badea_antracnosis.jpg",
+      "manejo": "Poda sanitaria, aplicación de caldo bordelés, manejo de residuos, selección de plantas sanas."
+    }
+  ]
+}

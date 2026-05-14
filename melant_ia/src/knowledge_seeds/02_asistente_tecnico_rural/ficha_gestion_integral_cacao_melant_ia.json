@@ -1,0 +1,43 @@
+{
+  "ficha_gestion_integral_cacao_melant_ia": {
+    "identificacion": {
+      "cultivo": "Cacao",
+      "variedad": "[Nombre de la variedad]",
+      "lote": "[Identificación del lote o sector]",
+      "responsable": "[Nombre del productor]",
+      "fecha_inicio_ciclo": "[DD/MM/AAAA]"
+    },
+    "registro_fases_cultivo": [
+      {
+        "fase": "Mantenimiento y Activación Biológica",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Poda fitosanitaria y de formación","guia_tecnica": "Eliminar chupones, ramas enfermas y regular altura.","alerta_app": "✂️ Poda: la base de la sanidad del cacao.","observaciones": ""},
+          {"tarea": "Inoculación de MM sólidos","guia_tecnica": "Aplicar MM sólidos sobre hojarasca y rastrojo de poda.","alerta_app": "🍂 Aplica MM y convierte residuos en abono.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Inducción Floral y Cuaje de Frutos",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Aspersión de caldo sulfocálcico","guia_tecnica": "Aplicar al 2% en floración, cubrir tronco y ramas.","alerta_app": "🌸 Protege el cojín floral con caldo mineral.","observaciones": ""},
+          {"tarea": "Fertilización líquida con biol","guia_tecnica": "Aplicar biol con Mg y Zn a frutos jóvenes.","alerta_app": "🍫 Nutre tus mazorcas jóvenes con biol.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Gestión Sanitaria y Cosecha",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Monitoreo y remoción de frutos enfermos","guia_tecnica": "Retirar mazorcas con síntomas de Monilia o Escoba de Bruja.","alerta_app": "🔍 Monitorea y retira frutos enfermos cada 15 días.","observaciones": ""},
+          {"tarea": "Cosecha y reincorporación de cáscara","guia_tecnica": "Cosechar y picar cáscara para reincorporar al suelo.","alerta_app": "📦 Registra tus kilos y reincorpora cáscara al suelo.","observaciones": ""}
+        ]
+      }
+    ],
+    "registro_insumos_herramientas": [
+      {"insumo": "MM sólidos/liquidos","dosis": "[g o ml/planta]","frecuencia": "[mensual]"},
+      {"insumo": "Caldo sulfocálcico","dosis": "[ml/litro]","frecuencia": "[según fase]"}
+    ],
+    "indicadores_sostenibilidad": {"biomasa_reincorporada_kg": "[Total ciclo]","co2_secuestrado_kg": "[Cálculo automático: biomasa x 0.38]","dinero_ahorrado_usd": "[Estimado por sustitución de insumos sintéticos]"},
+    "historial_intervenciones": [{"fecha": "[DD/MM/AAAA]","actividad": "[Ej. Poda, aplicación de MM, cosecha]","resultado": "[Observaciones de efecto o mejora]"}]
+  }
+}

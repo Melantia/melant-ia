@@ -1,0 +1,76 @@
+{
+  "nombre_cultivo": "Pimiento",
+  "nombre_cientifico": "Capsicum annuum",
+  "descripcion": "Hortaliza de fruto carnoso, consumida fresca o procesada. Incluye variedades dulces (pimiento morrón) y picantes (ají, chile). Importante en la dieta y gastronomía ecuatoriana.",
+  "variedades": [
+    {
+      "nombre": "Pimiento morrón",
+      "descripcion": "Fruto grande, carnoso, de colores rojo, verde, amarillo o naranja."
+    },
+    {
+      "nombre": "Ají",
+      "descripcion": "Variedades picantes, frutos pequeños o medianos, alto contenido de capsaicina."
+    },
+    {
+      "nombre": "Pimiento italiano",
+      "descripcion": "Fruto alargado, sabor dulce, ideal para asar o rellenar."
+    }
+  ],
+  "riego_optimo": "Riego frecuente, evitar encharcamiento, fundamental en floración y llenado de fruto.",
+  "npk_recomendado": { "N": 90, "P": 40, "K": 120 },
+  "plagas_comunes": [
+    {
+      "nombre": "Trips",
+      "control_organico": "Jabón potásico, trampas cromáticas.",
+      "sintoma": "Manchas plateadas en hojas."
+    },
+    {
+      "nombre": "Pulgón",
+      "control_organico": "Jabón potásico, control biológico.",
+      "sintoma": "Hojas enrolladas y pegajosas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Oídio",
+      "control": "Azufre mojable, manejo de humedad.",
+      "sintoma": "Polvo blanco en hojas y tallos."
+    },
+    {
+      "nombre": "Virus del mosaico del pimiento",
+      "control": "Semilla certificada, eliminación de plantas enfermas.",
+      "sintoma": "Moteado y deformación de hojas."
+    }
+  ],
+  "epoca_siembra_recomendada": "Abril - Junio (Costa y Sierra)",
+  "calendario_lunar": "Siembra en luna creciente.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "25 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "18 t/ha"
+    }
+  },
+  "labores_cosecha": "Cosecha manual de frutos maduros.",
+  "labores_postcosecha": "Limpieza y almacenamiento en cajas ventiladas.",
+  "captura_carbono_ton_ha_anio": 1.3,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 8000,
+  "densidad_siembra": "25,000-35,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU.", "Unión Europea"]
+  },
+  "zonas_produccion_ecuador": ["Imbabura", "Tungurahua", "Los Ríos", "Manabí"],
+  "importancia_economica": "Clave en la gastronomía y agroindustria nacional.",
+  "bibliografia": ["MAGAP: Guía técnica de pimiento"],
+  "cursos_recomendados": ["Producción sostenible de pimiento"]
+}

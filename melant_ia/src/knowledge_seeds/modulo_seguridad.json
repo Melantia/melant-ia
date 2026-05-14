@@ -1,0 +1,24 @@
+{
+  "modulo_seguridad": {
+    "ley_referencia": "Ley Organica de Proteccion de Datos Personales (Ecuador) - Registro Oficial 459",
+    "ajustes_privacidad": {
+      "encriptacion_db": "AES-256 (Local)",
+      "compartir_ubicacion_gps": false,
+      "respaldo_nube": false,
+      "anonimizacion_datos_estadisticos": true
+    },
+    "permisos_reporte_pdf": [
+      {
+        "seccion": "Costos y Gastos",
+        "visible_en_pdf": false,
+        "descripcion": "Privacidad financiera ante terceros."
+      },
+      {
+        "seccion": "Uso de Fitofortificantes",
+        "visible_en_pdf": true,
+        "descripcion": "Necesario para certificacion Agrocalidad/Global GAP."
+      }
+    ],
+    "aviso_legal": "En cumplimiento con la Ley Orgánica de Protección de Datos Personales (Ecuador), los datos proporcionados por usted a través de esta App, incluyendo registros de sensores, ubicación de predios, inventarios y cuadernos de campo, serán tratados con absoluta confidencialidad. MELANT IA garantiza que: Propiedad de los Datos: Usted es el único dueño de la información de su finca. Finalidad: Sus datos se utilizarán exclusivamente para generar sus reportes de certificación, cálculos de rentabilidad y diagnósticos de IA. Seguridad Offline: Al ser una App con base de datos local (SQLite3), gran parte de su información reside únicamente en su dispositivo. No Divulgación: No compartiremos datos específicos de su producción con entes gubernamentales o comerciales sin su autorización expresa mediante la generación del reporte PDF."
+  }
+}

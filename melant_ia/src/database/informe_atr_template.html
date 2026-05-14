@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe ATR - Asistencia Técnica Rural</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; margin: 0; padding: 32px; }
+        .header { text-align: center; border-bottom: 2px solid #388e3c; padding-bottom: 8px; margin-bottom: 18px; }
+        .logo-melant { width: 70px; height: 70px; object-fit: contain; margin-bottom: 6px; }
+        .metadata { display: flex; justify-content: space-between; background: #f4f4f4; padding: 8px 16px; border-radius: 5px; margin-bottom: 16px; font-size: 13px; }
+        .section { margin-bottom: 18px; }
+        .section-title { background: #388e3c; color: white; padding: 6px 12px; border-radius: 4px; font-size: 16px; margin-bottom: 8px; }
+        .content-box { border: 1px solid #ddd; padding: 10px; border-left: 4px solid #81c784; background: #fafafa; }
+        .evidencia-fotos { display: flex; gap: 12px; margin-top: 8px; }
+        .evidencia-fotos img { width: 110px; height: 80px; object-fit: cover; border: 1px solid #bbb; border-radius: 4px; }
+        .firmas { display: flex; justify-content: space-between; margin-top: 24px; }
+        .firma-box { text-align: center; width: 45%; }
+        .firma-img { width: 120px; height: 40px; border-bottom: 1px solid #888; margin-bottom: 4px; }
+        .footer { margin-top: 32px; text-align: center; font-size: 11px; color: #777; border-top: 1px solid #ccc; padding-top: 8px; }
+        @media print { .no-print { display: none; } body { padding: 0; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="assets/logo_melant_ia.png" alt="Logo MELANT IA" class="logo-melant">
+        <h1 style="font-size:20px;">Informe de Asistencia Técnica Rural</h1>
+        <p style="font-size:13px;">Visita de Campo y Recomendaciones</p>
+    </div>
+    <div class="metadata">
+        <span><strong>Fecha:</strong> <span id="fechaVisita"></span></span>
+        <span><strong>Técnico:</strong> <span id="nombreTecnico"></span></span>
+        <span><strong>Productor:</strong> <span id="nombreProductor"></span></span>
+    </div>
+    <div class="section">
+        <div class="section-title">Ubicación y Lote</div>
+        <div class="content-box">
+            <span id="ubicacionLote"></span><br>
+            <span id="coordenadasGPS"></span>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-title">Intervención Realizada</div>
+        <div class="content-box" id="intervencionRealizada"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">Evidencia Fotográfica</div>
+        <div class="evidencia-fotos" id="evidenciaFotos"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">Recomendaciones</div>
+        <div class="content-box" id="recomendaciones"></div>
+    </div>
+    <div class="section">
+        <div class="section-title">Observaciones</div>
+        <div class="content-box" id="observaciones"></div>
+    </div>
+    <div class="firmas">
+        <div class="firma-box">
+            <div class="firma-img" id="firmaTecnico"></div>
+            <div style="font-size:12px;">Firma Técnico</div>
+        </div>
+        <div class="firma-box">
+            <div class="firma-img" id="firmaProductor"></div>
+            <div style="font-size:12px;">Firma Productor</div>
+        </div>
+    </div>
+    <div class="footer">
+        Documento generado automáticamente por MELANT IA ATR. <br>
+        <span style="font-size:10px;">Fácil de llenar por voz y listo para impresión o PDF.</span>
+    </div>
+    <script>
+    // Ejemplo de carga dinámica desde JSON (window.datosATR)
+    window.onload = function() {
+        if(!window.datosATR) return;
+        document.getElementById('fechaVisita').textContent = window.datosATR.metadatos_informe_atr.fecha_visita || '';
+        document.getElementById('nombreTecnico').textContent = window.datosATR.metadatos_informe_atr.generado_por || '';
+        document.getElementById('nombreProductor').textContent = window.datosATR.metadatos_informe_atr.productor || '';
+        document.getElementById('ubicacionLote').textContent = window.datosATR.metadatos_informe_atr.ubicacion_lote.enlace_maps || '';
+        document.getElementById('coordenadasGPS').textContent = `${window.datosATR.metadatos_informe_atr.ubicacion_lote.latitud}, ${window.datosATR.metadatos_informe_atr.ubicacion_lote.longitud}`;
+        document.getElementById('intervencionRealizada').textContent = window.datosATR.informe_atr.intervencion_realizada || '';
+        document.getElementById('recomendaciones').textContent = window.datosATR.informe_atr.recomendaciones || '';
+        document.getElementById('observaciones').textContent = window.datosATR.informe_atr.observaciones || '';
+        // Fotos
+        const fotos = window.datosATR.informe_atr.evidencia_fotos || [];
+        const fotosDiv = document.getElementById('evidenciaFotos');
+        fotos.forEach(f => {
+            const img = document.createElement('img');
+            img.src = f;
+            fotosDiv.appendChild(img);
+        });
+        // Firmas (pueden ser imágenes base64 o SVG)
+        if(window.datosATR.metadatos_informe_atr.firma_digital_tecnico)
+            document.getElementById('firmaTecnico').innerHTML = `<img src="${window.datosATR.metadatos_informe_atr.firma_digital_tecnico}" style="width:100%;height:40px;object-fit:contain;">`;
+        if(window.datosATR.metadatos_informe_atr.firma_digital_productor)
+            document.getElementById('firmaProductor').innerHTML = `<img src="${window.datosATR.metadatos_informe_atr.firma_digital_productor}" style="width:100%;height:40px;object-fit:contain;">`;
+    };
+    </script>
+</body>
+</html>

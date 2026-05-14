@@ -1,0 +1,33 @@
+{
+  "protocolos_emergencia": [
+    {
+      "id": "PEN_001",
+      "delito": "Violencia Intrafamiliar / Género",
+      "accion_inmediata": "Poner a buen recaudo a la víctima. No es necesaria una boleta de auxilio para que la policía intervenga en flagrancia.",
+      "donde_ir": ["Unidad Judicial de Violencia contra la Mujer", "Fiscalía", "Tenencia Política"],
+      "formato_denuncia": "DENUNCIA_VIF",
+      "derechos_clave": "Medidas de protección inmediatas (salida del agresor del domicilio)."
+    },
+    {
+      "id": "PEN_002",
+      "delito": "Delitos Sexuales (Violación / Menores)",
+      "prioridad": "CRÍTICA",
+      "instrucciones_vitales": [
+        "1. No bañar a la víctima ni cambiar su ropa (preservar ADN).",
+        "2. Acudir directamente a la Unidad de Flagrancia para examen médico-legal.",
+        "3. La denuncia puede ser verbal o escrita."
+      ],
+      "advertencia_legal": "Estos delitos son de acción pública. El Estado debe investigar de oficio."
+    },
+    {
+      "id": "PEN_003",
+      "delito": "Amenazas e Intimidación",
+      "descripcion_legal": "Art. 154 COIP: Persona que amenace a otra con causar un daño a ella o a su familia.",
+      "pasos": [
+        "1. Guardar capturas de pantalla, audios o grabaciones (Prueba Digital).",
+        "2. Identificar si la amenaza es por extorsión (Vacunas).",
+        "3. Reportar ante la UNASE si es extorsión."
+      ]
+    }
+  ]
+}

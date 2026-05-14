@@ -1,0 +1,43 @@
+{
+  "ficha_gestion_integral_limon_sutil_melant_ia": {
+    "identificacion": {
+      "cultivo": "Limón Sutil",
+      "variedad": "[Nombre de la variedad]",
+      "lote": "[Identificación del lote o sector]",
+      "responsable": "[Nombre del productor]",
+      "fecha_inicio_ciclo": "[DD/MM/AAAA]"
+    },
+    "registro_fases_cultivo": [
+      {
+        "fase": "Sanidad Estructural y Suelo",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Poda de limpieza y ventilación","guia_tecnica": "Eliminar ramas secas, chupones y ramas con hongos.","alerta_app": "✂️ Limpieza de copa: desinfecta tus herramientas.","observaciones": ""},
+          {"tarea": "Nutrición y vida al suelo","guia_tecnica": "Aplicar Bocashi y MM sólidos en la gotera, cubrir con hojarasca.","alerta_app": "🍂 Nutrición viva: aplica Bocashi y MM hoy.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Protección Foliar y Floración",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Aspersión foliar de caldo sulfocálcico y Nim","guia_tecnica": "Aplicar al 1% en brotes tiernos, repetir a los 8 días.","alerta_app": "🦋 Alerta Minador: protege tus brotes nuevos.","observaciones": ""},
+          {"tarea": "Aplicación de Biol en floración","guia_tecnica": "Aplicar Biol rico en Ca y B en la mañana.","alerta_app": "🍋 Amarrado de fruto: aplica Biol para flores firmes.","observaciones": ""}
+        ]
+      },
+      {
+        "fase": "Monitoreo y Cosecha",
+        "fecha": "[DD/MM/AAAA]",
+        "tareas": [
+          {"tarea": "Control de áfidos y fumagina","guia_tecnica": "Monitorear hormigas y hongo negro, usar jabón potásico.","alerta_app": "🐜 Controla hormigas y pulgones para evitar fumagina.","observaciones": ""},
+          {"tarea": "Cosecha continua y manejo de biomasa","guia_tecnica": "Cortar frutos con tijera, reincorporar biomasa al suelo.","alerta_app": "📦 Cosecha y registra tus ventas, reincorpora residuos.","observaciones": ""}
+        ]
+      }
+    ],
+    "registro_insumos_herramientas": [
+      {"insumo": "Bocashi","dosis": "[kg/planta]","frecuencia": "[trimestral]"},
+      {"insumo": "Caldo sulfocálcico","dosis": "[ml/litro]","frecuencia": "[según fase]"}
+    ],
+    "indicadores_sostenibilidad": {"biomasa_reincorporada_kg": "[Total ciclo]","co2_secuestrado_kg": "[Cálculo automático: biomasa x 0.40]","dinero_ahorrado_usd": "[Estimado por sustitución de insumos sintéticos]"},
+    "historial_intervenciones": [{"fecha": "[DD/MM/AAAA]","actividad": "[Ej. Poda, aplicación de Bocashi, cosecha]","resultado": "[Observaciones de efecto o mejora]"}]
+  }
+}

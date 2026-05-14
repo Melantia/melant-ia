@@ -1,0 +1,63 @@
+{
+  "quiz_medicina_regenerativa": {
+    "version": "1.0",
+    "descripcion": "Evaluación básica para distinguir el uso de PRP y células madre en medicina veterinaria regenerativa.",
+    "preguntas": [
+      {
+        "pregunta": "¿Cuál es el principal uso del PRP (Plasma Rico en Plaquetas) en animales de alto valor?",
+        "opciones": [
+          "Curar lesiones de tendones y ligamentos",
+          "Tratar infecciones bacterianas",
+          "Mejorar la digestión",
+          "Prevenir parásitos"
+        ],
+        "respuesta_correcta": 0,
+        "explicacion": "El PRP se utiliza principalmente para reparar lesiones de tendones, ligamentos y cicatrización de heridas."
+      },
+      {
+        "pregunta": "¿En qué casos se recomienda el uso de células madre sobre PRP?",
+        "opciones": [
+          "En heridas superficiales",
+          "En osteoartritis crónica o fracturas que no pegan",
+          "Para bajar fiebre",
+          "En diarreas recurrentes"
+        ],
+        "respuesta_correcta": 1,
+        "explicacion": "Las células madre son ideales para lesiones degenerativas, fracturas difíciles y osteoartritis."
+      },
+      {
+        "pregunta": "¿Qué precaución es fundamental al aplicar terapias regenerativas intra-articulares?",
+        "opciones": [
+          "Asepsia quirúrgica estricta",
+          "No alimentar al animal",
+          "Ejercicio intenso inmediato",
+          "Uso de antibióticos preventivos siempre"
+        ],
+        "respuesta_correcta": 0,
+        "explicacion": "La higiene es crítica para evitar infecciones en aplicaciones intra-articulares o peritendinosas."
+      },
+      {
+        "pregunta": "¿Qué ventaja tiene la recolección de membrana amniótica en partos controlados?",
+        "opciones": [
+          "Bajo rechazo inmunológico y alta disponibilidad",
+          "Aumenta la producción de leche",
+          "Evita la castración",
+          "Mejora el color del pelaje"
+        ],
+        "respuesta_correcta": 0,
+        "explicacion": "Las células madre de membrana amniótica tienen bajo rechazo y son fáciles de obtener en partos limpios."
+      },
+      {
+        "pregunta": "¿Por qué la medicina regenerativa puede ser más rentable a largo plazo?",
+        "opciones": [
+          "Reduce el tiempo de inactividad y evita cirugías costosas",
+          "Es más barata que los antiinflamatorios",
+          "No requiere diagnóstico",
+          "Se puede aplicar sin veterinario"
+        ],
+        "respuesta_correcta": 0,
+        "explicacion": "Al curar la estructura y no solo el síntoma, se evitan gastos repetidos y cirugías caras."
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "tema": "porcinos",
+  "archivos": [
+    "PROCESO DE CRIA DE CERDOS.txt",
+    "La cría de cerdos regenerativa es un sistema de producción sostenible.docx.txt"
+  ],
+  "contenido": {
+    "proceso_cria": "El proceso de cría de cerdos abarca selección genética, reproducción, gestación (~114 días), parto, destete (21-28 días), recría y engorde (hasta ~125 kg). Se basa en nutrición adecuada, control sanitario y manejo ambiental. La porcicultura en Ecuador es un sector en crecimiento, con predominio de pequeñas granjas y razas como Hampshire, Yorkshire, Landrace, Duroc y Pietrain.",
+    "produccion_regenerativa": "La cría regenerativa utiliza pastoreo rotacional, razas criollas, bienestar animal, alimentación complementaria y manejo sanitario preventivo. Favorece la salud del suelo, la biodiversidad y la calidad de la carne, siendo rentable en áreas pequeñas y promoviendo la soberanía alimentaria.",
+    "zonas_principales": [
+      "Santo Domingo de los Tsáchilas",
+      "Guayas",
+      "Pichincha",
+      "Manabí",
+      "El Oro"
+    ],
+    "referencias": [
+      "PROCESO DE CRIA DE CERDOS.txt",
+      "La cría de cerdos regenerativa es un sistema de producción sostenible.docx.txt"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "titulo": "Administración y Comercialización Ganadera y Registro Ganadero",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Fundamentos de administración ganadera",
+      "objetivo": "Comprender los principios básicos de la gestión y organización en la empresa ganadera.",
+      "contenido": [
+        "Organización y funciones en la empresa ganadera",
+        "Planificación y toma de decisiones",
+        "Indicadores de gestión"
+      ]
+    },
+    {
+      "nombre": "Costos, presupuestos y control financiero",
+      "objetivo": "Identificar y gestionar los costos, elaborar presupuestos y controlar las finanzas del sistema ganadero.",
+      "contenido": [
+        "Tipos de costos en ganadería",
+        "Elaboración de presupuestos",
+        "Control de ingresos y egresos"
+      ]
+    },
+    {
+      "nombre": "Comercialización de productos ganaderos",
+      "objetivo": "Conocer estrategias y canales para la venta eficiente de productos ganaderos.",
+      "contenido": [
+        "Principales productos y mercados",
+        "Estrategias de venta y negociación",
+        "Normativa y certificaciones comerciales"
+      ]
+    },
+    {
+      "nombre": "Registro ganadero y trazabilidad",
+      "objetivo": "Implementar sistemas de registro y trazabilidad para el control y la mejora continua.",
+      "contenido": [
+        "Tipos de registros: productivos, sanitarios, reproductivos y comerciales",
+        "Herramientas y formatos de registro",
+        "Importancia de la trazabilidad y requisitos legales"
+      ]
+    },
+    {
+      "nombre": "Práctica: Elaboración de registros y plan de comercialización",
+      "descripcion": "Guía paso a paso para la elaboración de registros y un plan de comercialización.",
+      "pasos": [
+        "Identificación de información clave a registrar",
+        "Diseño de formatos o uso de aplicaciones",
+        "Registro y análisis de datos",
+        "Elaboración de un plan de comercialización",
+        "Evaluación y ajuste según resultados"
+      ],
+      "recomendaciones": [
+        "Mantener registros actualizados y respaldados",
+        "Consultar fuentes de mercado y normativas vigentes"
+      ]
+    }
+  ],
+  "banco_preguntas": [
+    "¿Por qué es importante la administración en la empresa ganadera?",
+    "¿Qué tipos de costos existen y cómo se gestionan?",
+    "¿Cuáles son los principales canales de comercialización ganadera?",
+    "¿Qué información debe contener un registro ganadero?",
+    "¿Por qué es clave la trazabilidad en la ganadería moderna?"
+  ]
+}

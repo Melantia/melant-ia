@@ -1,0 +1,92 @@
+{
+  "nombre_cultivo": "Banano",
+  "nombre_cientifico": "Musa paradisiaca (Cavendish)",
+  "descripcion": "Principal producto de exportación agrícola de Ecuador. País líder mundial en exportación de banano. Cultivo de ciclo semi-perenne con producción continua.",
+  "riego_optimo": "Riego por goteo o gravedad, 1,200-2,000 mm/año. Frecuencia cada 7-10 días en época seca.",
+  "npk_recomendado": { "N": 300, "P": 80, "K": 450 },
+  "plagas_comunes": [
+    {
+      "nombre": "Sigatoka Negra (Mycosphaerella fijiensis)",
+      "control_organico": "Aceite mineral + fungicidas sistémicos en rotación, deshoje sanitario",
+      "control_quimico": "Propiconazol, Mancozeb, Trifloxistrobina (rotación para evitar resistencia)",
+      "sintoma": "Rayas negras en hojas que avanzan a necrosis total; defoliación severa reduce calibre y peso de racimos",
+      "nivel_peligrosidad": "Muy alto - principal limitante del cultivo"
+    },
+    {
+      "nombre": "Moko bacteriano (Ralstonia solanacearum raza 2)",
+      "control_organico": "Desinfección de herramientas, eliminación y quema de plantas enfermas, cuarentena",
+      "control_quimico": "No existe tratamiento químico eficaz; manejo preventivo estricto",
+      "sintoma": "Marchitez súbita, amarillamiento vascular, pudrición del cogollo y frutos; enfermedad de cuarentena",
+      "nivel_peligrosidad": "Muy alto - cuarentena fitosanitaria"
+    },
+    {
+      "nombre": "Picudo negro (Cosmopolites sordidus)",
+      "control_organico": "Trampas con pseudotallo, Beauveria bassiana, nemátodos entomopatógenos",
+      "control_quimico": "Clorpirifos en suelo",
+      "sintoma": "Galerías en cormo, plantas con volcamiento y débil anclaje, reducción de producción"
+    },
+    {
+      "nombre": "Nematodos (Radopholus similis, Pratylenchus spp.)",
+      "control_organico": "Rotación, Paecilomyces lilacinus, biofumigación",
+      "control_quimico": "Nemacur, Terbufos en aplicación controlada",
+      "sintoma": "Necrosis en raíces, volcamiento de plantas, reducción de producción y vida útil de la plantación"
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Mal de Panamá - Fusarium (Fusarium oxysporum cubense - Raza 4 Tropical)",
+      "control": "No tiene cura; uso de variedades resistentes (FHIA), cuarentena estricta, evitar movimiento de suelo contaminado",
+      "sintoma": "Amarillamiento y marchitez de hojas exteriores, decoloración vascular amarilla-marrón en pseudotallo; mata la planta"
+    },
+    {
+      "nombre": "Sigatoka Amarilla (Mycosphaerella musicola)",
+      "control": "Deshoje sanitario, aceite mineral, fungicidas sistémicos",
+      "sintoma": "Manchas amarillas con halo oscuro en hojas; menos agresiva que sigatoka negra"
+    }
+  ],
+  "epoca_siembra_recomendada": "Todo el año en zonas con riego; inicio de lluvias en zonas de secano.",
+  "calendario_lunar": "Siembra en luna creciente para mejor desarrollo del cormo.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Programa intensivo de fungicidas (12-18 ciclos/año), fertilización fraccionada, herbicidas.",
+      "rendimiento_estimado": "50-60 t/ha/año (Cavendish exportación)"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Aceite mineral, biofungicidas, compost, cobertura vegetal entre calles.",
+      "rendimiento_estimado": "30-40 t/ha/año"
+    }
+  },
+  "labores_cosecha": "Corte de racimos entre 9-11 semanas post-floración según calibre requerido por exportador. Manejo cuidadoso para evitar látex.",
+  "labores_postcosecha": "Desmane, lavado en tinas, selección, fumigación (thiabendazol), empaque en cajas de 18.14 kg para exportación.",
+  "captura_carbono_ton_ha_anio": 2.5,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 180000,
+  "densidad_siembra": "1,600-2,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes y origen de semilla",
+      "Control de agroquímicos y fertilizantes",
+      "Certificación BPA/BIO para exportación",
+      "Trazabilidad de cosecha y postcosecha"
+    ],
+    "mercados_destino": ["EE.UU.", "Unión Europea", "Rusia", "Latinoamérica"]
+  },
+  "zonas_produccion_ecuador": [
+    "El Oro",
+    "Los Ríos",
+    "Guayas",
+    "Cotopaxi",
+    "Esmeraldas"
+  ],
+  "importancia_economica": "Ecuador exporta ~6 millones de toneladas anuales de banano, siendo el primer exportador mundial. Representa el 25-30% de las exportaciones agrícolas nacionales.",
+  "bibliografia": [
+    "Manual Técnico de Musáceas Ecuador",
+    "FAO: Producción y exportación de banano",
+    "MAGAP: Guía técnica de banano"
+  ],
+  "cursos_recomendados": [
+    "Manejo integrado de plagas en banano",
+    "Trazabilidad y exportación de banano"
+  ]
+}

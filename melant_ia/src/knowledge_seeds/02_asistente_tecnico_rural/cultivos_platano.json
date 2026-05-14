@@ -1,0 +1,69 @@
+{
+  "platano_barraganete": {
+    "riego_optimo": "Cada 5-7 días en época seca",
+    "npk_recomendado": { "N": 200, "P": 60, "K": 300 },
+    "plagas_comunes": [
+      {
+        "nombre": "Picudo del plátano (Cosmopolites sordidus)",
+        "control_organico": "Trampas con pseudotallo, control biológico con Beauveria bassiana",
+        "control_quimico": "Clorpirifos, Fipronil en suelo",
+        "sintoma": "Tallos perforados, debilitamiento de la planta"
+      },
+      {
+        "nombre": "Nematodos (Radopholus similis, Pratylenchus spp.)",
+        "control_organico": "Aplicación de extractos vegetales, rotación de cultivos",
+        "control_quimico": "Nematicidas autorizados",
+        "sintoma": "Raíces negras, plantas con volcamiento, reducción de rendimiento"
+      },
+      {
+        "nombre": "Trips (Thrips parvispinus)",
+        "control_organico": "Aceite de Neem, trampas adhesivas azules",
+        "control_quimico": "Spinosad, Abamectina",
+        "sintoma": "Manchas plateadas en frutos, daño estético en la cáscara"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Sigatoka negra (Mycosphaerella fijiensis)",
+        "control_organico": "Eliminación de hojas enfermas, aplicación de extractos vegetales",
+        "control_quimico": "Fungicidas sistémicos y de contacto (triazoles, estrobilurinas)",
+        "sintoma": "Manchas negras en hojas, necrosis, reducción de área foliar"
+      },
+      {
+        "nombre": "Mal de Panamá (Fusarium oxysporum f. sp. cubense)",
+        "control_organico": "Uso de plantas tolerantes, desinfección de herramientas",
+        "control_quimico": "No existe control químico efectivo",
+        "sintoma": "Marchitez y muerte de la planta"
+      },
+      {
+        "nombre": "Moko del plátano (Ralstonia solanacearum)",
+        "control_organico": "Eliminación de plantas enfermas, desinfección de herramientas",
+        "control_quimico": "No existe control químico efectivo",
+        "sintoma": "Marchitez, exudado bacteriano, frutos deformes"
+      }
+    ],
+    "labores_fitosanitarias": [
+      "Deshoje: Eliminación de hojas secas o enfermas para reducir inóculo de enfermedades y mejorar aireación.",
+      "Deshije: Eliminación de brotes secundarios (hijos) para regular la densidad de plantas.",
+      "Desflore: Retiro de la flor masculina para evitar plagas y mejorar el llenado del racimo.",
+      "Desbrote: Eliminación de brotes no deseados.",
+      "Deschuponeo: Eliminación de brotes pequeños y débiles.",
+      "Desmane: Corte de hojas viejas y pseudotallos caídos."
+    ],
+    "labores_previas_cosecha": {
+      "enfundado": "Colocación de fundas plásticas protectoras en los racimos 10-12 semanas antes de la cosecha para evitar daño de insectos, roces y mejorar la calidad del fruto.",
+      "dias_al_corte": "El racimo se cosecha entre 11 y 14 semanas después de la floración, dependiendo del clima y variedad."
+    },
+    "labores_cosecha": "Corte manual de racimos maduros con machete o cuchillo especial, cuidando no dañar la planta ni el fruto. El racimo debe manipularse con cuidado para evitar golpes.",
+    "labores_postcosecha": "Desmanche (separación de manos), lavado con agua clorada, selección y clasificación por calibre y calidad, eliminación de frutos dañados.",
+    "preparacion_exportacion": {
+      "cajas": "Empaque de las manos de plátano en cajas de cartón resistentes, con protección interna (espumas, bolsas plásticas).",
+      "peso_reglamentario": "El peso reglamentario de la caja para exportación es de 18.14 kg (40 libras) netos por caja, según normativa internacional.",
+      "etiquetado": "Cada caja debe llevar etiqueta con país de origen, variedad, calibre, fecha de empaque y código de productor/exportador."
+    },
+    "captura_carbono": {
+      "valor_estimado_tCO2_ha_anio": 30,
+      "explicacion": "El cultivo de plátano puede capturar entre 25 y 35 toneladas de CO₂ por hectárea al año, dependiendo de la densidad de siembra, manejo y condiciones climáticas. Este valor es relevante para proyectos de agricultura sostenible y bonos de carbono."
+    }
+  }
+}

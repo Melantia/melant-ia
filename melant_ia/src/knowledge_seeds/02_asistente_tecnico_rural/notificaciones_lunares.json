@@ -1,0 +1,44 @@
+{
+  "lunar_push_notifications": [
+    {
+      "fase": "Luna Nueva",
+      "modulos": {
+        "aves": "Fase de baja luz: Momento ideal para limpieza profunda de galpones y desinfección sin estresar a las aves.",
+        "cerdos": "Inicio de ciclo: Ideal para desparasitación interna. La baja actividad metabólica mejora la absorción.",
+        "ganaderia": "Manejo de pastos: Momento de descanso de potreros. La regeneración radicular es más fuerte ahora.",
+        "caballos": "Cuidado de cascos: Buen momento para herraje y limpieza profunda.",
+        "cabras": "Control de parásitos: Realiza baños de inmersión o aplicaciones cutáneas hoy."
+      }
+    },
+    {
+      "fase": "Cuarto Creciente",
+      "modulos": {
+        "aves": "Pico de crecimiento: Asegura niveles de calcio. Las aves están más activas y demandan más energía.",
+        "cerdos": "Castraciones y cirugías: La cicatrización es más rápida y hay menor riesgo de hemorragias.",
+        "ganaderia": "Inseminación: La mayor luminosidad nocturna influye positivamente en el celo de las vacas.",
+        "caballos": "Entrenamiento: Los equinos muestran mayor vigor. Ideal para sesiones de alta intensidad.",
+        "cabras": "Producción láctea: Monitorea el volumen de leche; suele haber un ligero incremento."
+      }
+    },
+    {
+      "fase": "Luna Llena",
+      "modulos": {
+        "aves": "Huevos con cáscara más resistente: Aprovecha para recolectar y almacenar producción.",
+        "cerdos": "Crecimiento acelerado: Ajusta la dieta para aprovechar el pico de asimilación de nutrientes.",
+        "ganaderia": "Corte de pasto: Realiza cortes para ensilaje o forraje, la savia está en su punto máximo.",
+        "caballos": "Revisión veterinaria: Mayor vitalidad, ideal para chequeos y vacunaciones.",
+        "cabras": "Reproducción: La actividad reproductiva suele incrementarse, observa signos de celo."
+      }
+    },
+    {
+      "fase": "Luna Menguante",
+      "modulos": {
+        "aves": "Muda de plumas: Es común en esta fase, refuerza la dieta con proteínas.",
+        "cerdos": "Destete: Realízalo ahora para reducir estrés y favorecer la recuperación de la cerda.",
+        "ganaderia": "Castración y marcado: Menor sangrado y recuperación más rápida en terneros.",
+        "caballos": "Odontología y herraje: El crecimiento del casco se ralentiza, ideal para mantenimiento.",
+        "cabras": "Esquila: El pelo crecerá más fuerte y fino si esquilas en esta fase."
+      }
+    }
+  ]
+}

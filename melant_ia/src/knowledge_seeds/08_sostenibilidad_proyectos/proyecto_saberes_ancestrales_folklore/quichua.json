@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Chaypi aska, chaypi nina.",
+    "region": "Manabí/Quichua",
+    "categoria": "Sabiduría popular",
+    "descripcion": "Donde hay humo, hay fuego. (Proverbio quichua)"
+  },
+  {
+    "titulo": "Achiote kawsay (Mu)",
+    "region": "Costa - Quichua",
+    "categoria": "Mito",
+    "descripcion": "Unay p'unchaykuna, runakuna muwan achiotepi ñawpakuna, chaymi kawsaypak. (En tiempos antiguos, la gente se pintaba con achiote para proteger la vida)"
+  },
+  {
+    "titulo": "Wawa Auka",
+    "region": "Sierra/Quichua",
+    "categoria": "Leyenda",
+    "descripcion": "Bautizpashka wawa, ñanpi waqashka, chaymi runakunata chinkachin. (El espíritu de un niño no bautizado que llora en los caminos para perder a los viajeros)"
+  },
+  {
+    "titulo": "Animeru",
+    "region": "Sierra/Quichua",
+    "categoria": "Personaje",
+    "descripcion": "Killa killapi, runa campanawan purin, almaspa yuyaykuna maskan. (En noviembre, una persona recorre con campana pidiendo oraciones por las almas)"
+  },
+  {
+    "titulo": "Sumak rimay",
+    "region": "Sierra/Quichua",
+    "categoria": "Poesía Oral",
+    "descripcion": "Munaylla rimay, sumak kawsayta rikuchin. (Palabra de amor y belleza que muestra el buen vivir)"
+  }
+]

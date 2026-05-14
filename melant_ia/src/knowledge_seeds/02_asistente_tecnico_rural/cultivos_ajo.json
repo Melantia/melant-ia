@@ -1,0 +1,62 @@
+{
+  "nombre_cultivo": "Ajo",
+  "nombre_cientifico": "Allium sativum",
+  "descripcion": "Bulbo aromático de uso culinario y medicinal, cultivado en la Sierra y zonas altas de la Costa. Requiere clima templado y suelos bien drenados.",
+  "riego_optimo": "Riego moderado, evitar encharcamiento, importante en formación de bulbos.",
+  "npk_recomendado": { "N": 60, "P": 40, "K": 80 },
+  "plagas_comunes": [
+    {
+      "nombre": "Trips",
+      "control_organico": "Jabón potásico, trampas cromáticas.",
+      "sintoma": "Manchas plateadas en hojas."
+    },
+    {
+      "nombre": "Nematodos",
+      "control_organico": "Rotación de cultivos, solarización.",
+      "sintoma": "Bulbos deformes, raíces dañadas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Moho blanco",
+      "control": "Fungicidas preventivos, manejo de humedad.",
+      "sintoma": "Manchas blancas en hojas y bulbos."
+    },
+    {
+      "nombre": "Podredumbre basal",
+      "control": "Selección de semilla sana, manejo de humedad.",
+      "sintoma": "Bulbos blandos y malolientes."
+    }
+  ],
+  "epoca_siembra_recomendada": "Julio - Septiembre (Sierra)",
+  "calendario_lunar": "Siembra en luna menguante.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "10 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost y control biológico.",
+      "rendimiento_estimado": "7 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de bulbos maduros.",
+  "labores_postcosecha": "Secado y almacenamiento en lugar fresco y seco.",
+  "captura_carbono_ton_ha_anio": 1.0,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 3000,
+  "densidad_siembra": "400,000-500,000 plantas/ha",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes",
+      "Control de agroquímicos",
+      "Certificación BPA/BIO"
+    ],
+    "mercados_destino": ["Latinoamérica", "EE.UU."]
+  },
+  "zonas_produccion_ecuador": ["Carchi", "Imbabura", "Tungurahua"],
+  "importancia_economica": "Clave en la gastronomía y en la medicina tradicional.",
+  "bibliografia": ["MAGAP: Guía técnica de ajo"],
+  "cursos_recomendados": ["Producción sostenible de ajo"]
+}

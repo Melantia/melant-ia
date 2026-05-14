@@ -1,0 +1,48 @@
+{
+  "instituciones_ecuador": {
+    "ANT": {
+      "tramite": "Obtención de Licencia (Tipo B / Especial)",
+      "requisitos": [
+        "Título de conductor no profesional",
+        "Examen psicosomático aprobado",
+        "Cédula de identidad original",
+        "Certificado de votación"
+      ],
+      "pasos": ["Pago de turno", "Examen teórico", "Examen práctico"]
+    },
+    "MAG": {
+      "tramite": "Registro Nacional Agropecuario",
+      "requisitos": [
+        "Escritura de propiedad o contrato de arrendamiento",
+        "Cédula",
+        "GPS de la finca (generado por Melant IA)"
+      ]
+    }
+  },
+  "formatos_legales": [
+    {
+      "id": "CONTRATO_001",
+      "nombre": "Compraventa de Bien Inmueble Rural",
+      "campos_necesarios": [
+        "Nombres completos vendedor/comprador",
+        "Clave catastral",
+        "Linderos y dimensiones",
+        "Precio acordado y forma de pago"
+      ],
+      "nota_legal": "Este documento es un borrador. Para validez legal debe elevarse a escritura pública ante Notario."
+    },
+    {
+      "id": "CONTRATO_002",
+      "nombre": "Compraventa de Vehículo (Formato tipo ANT)",
+      "campos_necesarios": ["Placa", "Chasis", "Motor", "Año de fabricación"]
+    }
+  ],
+  "jurisprudencia_agro": [
+    {
+      "tema": "Conflictos de Linderos",
+      "caso_ejemplo": "Corte Nacional de Justicia - Sentencia No. XXX",
+      "resumen": "En disputas de linderos rurales, prevalece la posesión material y técnica (GPS) sobre escrituras antiguas que carezcan de coordenadas exactas.",
+      "consejo_asesor": "Asegúrese de que el levantamiento GPS de Melant IA coincida con su planimetría."
+    }
+  ]
+}

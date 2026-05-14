@@ -1,0 +1,80 @@
+{
+  "alertas_climaticas": [
+    {
+      "cultivo": "Papa",
+      "evento": "Lancha (Tizón Tardío)",
+      "condiciones": {
+        "humedad_relativa_min": 80,
+        "duracion_horas_min": 10,
+        "temp_min_c": 10,
+        "temp_max_c": 18,
+        "lluvia_o_rocio": true
+      },
+      "mensaje_push": "¡Alerta de Lancha! Más de 10h de humedad >80% y temperaturas frescas. Monitorea tus lotes de papa para Tizón Tardío.",
+      "accion": [
+        "Revisar el envés de las hojas para manchas.",
+        "Aplicar fungicidas preventivos solo si hay síntomas."
+      ]
+    },
+    {
+      "cultivo": "Arroz",
+      "evento": "Pyricularia (Quemado)",
+      "condiciones": {
+        "humedad_relativa_min": 85,
+        "duracion_horas_min": 8,
+        "temp_min_c": 22,
+        "temp_max_c": 32,
+        "lluvia_o_rocio": true
+      },
+      "mensaje_push": "¡Alerta de Quemado! Condiciones ideales para Pyricularia detectadas. Revisa hojas bandera y aplica monitoreo.",
+      "accion": [
+        "Monitorear hojas bandera para manchas.",
+        "Aplicar fungicida solo si hay síntomas."
+      ]
+    },
+    {
+      "cultivo": "Maíz",
+      "evento": "Gusano Cogollero",
+      "condiciones": {
+        "lluvia_reciente": true,
+        "temp_min_c": 18,
+        "temp_max_c": 32
+      },
+      "mensaje_push": "¡Alerta de Gusano Cogollero! Lluvias recientes y temperaturas cálidas favorecen la plaga. Monitorea cogollos y aplica control biológico.",
+      "accion": [
+        "Colocar trampas de feromonas.",
+        "Aplicar extracto de Neem en V3-V6 si hay presencia de larvas."
+      ]
+    },
+    {
+      "cultivo": "Quinua",
+      "evento": "Mildiu (Peronospora)",
+      "condiciones": {
+        "humedad_relativa_min": 75,
+        "duracion_horas_min": 8,
+        "temp_max_c": 18,
+        "lluvia_o_rocio": true
+      },
+      "mensaje_push": "¡Alerta de Mildiu! Alta humedad y bajas temperaturas detectadas. Monitorea hojas y aplica control biológico si es necesario.",
+      "accion": [
+        "Monitorear hojas para manchas amarillas.",
+        "Aplicar Bacillus subtilis o extractos vegetales si hay síntomas."
+      ]
+    },
+    {
+      "cultivo": "Limon Sutil",
+      "evento": "HLB (Candidatus Liberibacter)",
+      "condiciones": {
+        "temp_min_c": 18,
+        "temp_max_c": 32,
+        "lluvia_o_rocio": false,
+        "presencia_vector": true
+      },
+      "mensaje_push": "¡Alerta de HLB! Se detectó presencia de Diaphorina citri en condiciones favorables. Monitorea brotes y elimina plantas sospechosas.",
+      "accion": [
+        "Monitorear brotes tiernos para presencia de psílido.",
+        "Eliminar plantas con síntomas y aplicar manejo integrado."
+      ]
+    }
+  ]
+}

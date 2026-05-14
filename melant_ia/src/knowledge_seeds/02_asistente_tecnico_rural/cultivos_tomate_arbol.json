@@ -1,0 +1,50 @@
+{
+  "tomate_de_arbol": {
+    "nombre_cientifico": "Solanum betaceum Cav.",
+    "descripcion": "Arbusto perenne de fruto comestible, cultivado en la Sierra y zonas subtropicales de Ecuador. Fruto apreciado para jugos y consumo fresco, fuente de vitaminas y antioxidantes.",
+    "riego_optimo": "Riego frecuente, evitar encharcamiento",
+    "npk_recomendado": { "N": 90, "P": 40, "K": 120 },
+    "plagas_comunes": [
+      {
+        "nombre": "Mosca de la fruta (Anastrepha spp.)",
+        "control_organico": "Trampas, control biológico, recolección de frutos caídos",
+        "control_quimico": "Spinosad, Malatión",
+        "sintoma": "Manchas y pudrición en frutos, caída prematura"
+      },
+      {
+        "nombre": "Ácaros",
+        "control_organico": "Azufre mojable, extracto de ajo",
+        "control_quimico": "Abamectina",
+        "sintoma": "Hojas con manchas y telarañas, reducción de vigor"
+      }
+    ],
+    "enfermedades_comunes": [
+      {
+        "nombre": "Oídio (Erysiphe spp.)",
+        "control": "Azufre mojable, manejo de humedad",
+        "sintoma": "Polvo blanco en hojas, reducción de fotosíntesis"
+      },
+      {
+        "nombre": "Antracnosis (Colletotrichum spp.)",
+        "control": "Fungicidas cúpricos, manejo de humedad",
+        "sintoma": "Manchas oscuras en frutos, pudrición"
+      }
+    ],
+    "epoca_siembra_recomendada": "Abril - Junio",
+    "calendario_lunar": "Siembra en luna creciente.",
+    "calculos_agricultura": {
+      "convencional": {
+        "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+        "rendimiento_estimado": "20 t/ha"
+      },
+      "organica_regenerativa": {
+        "uso_agroquimicos": "Compost y control biológico.",
+        "rendimiento_estimado": "16 t/ha"
+      }
+    },
+    "labores_cosecha": "Cosecha manual de frutos maduros.",
+    "labores_postcosecha": "Limpieza y almacenamiento en cajas ventiladas.",
+    "captura_carbono_ton_ha_anio": 3.4,
+    "precio_carbono_usd_ton": 38
+  }
+}

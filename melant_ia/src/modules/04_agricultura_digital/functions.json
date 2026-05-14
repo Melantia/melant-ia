@@ -1,0 +1,17 @@
+{
+  "modulo": "Agricultura Digital",
+  "ai_logic": {
+    "priority": "Geolocalización y Conectividad",
+    "search_context": [
+      "Interpretación de mapas satelitales (NDVI)",
+      "Cálculo de áreas y perímetros de lotes",
+      "Configuración de canales de radio (Walkie Talkie)",
+      "Optimización de rutas para maquinaria"
+    ],
+    "hardware_access": ["GPS", "Micrófono", "Cámara Multiespectral"]
+  },
+  "funciones_boton": {
+    "on_click_gps": "Iniciar Medición de Terreno",
+    "on_click_radio": "Activar Modo Walkie Talkie"
+  }
+}

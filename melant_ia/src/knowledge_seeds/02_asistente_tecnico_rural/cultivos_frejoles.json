@@ -1,0 +1,84 @@
+{
+  "nombre_cultivo": "Frejol",
+  "nombre_cientifico": "Phaseolus vulgaris",
+  "descripcion": "El frejol es una leguminosa de alto valor nutricional, fuente importante de proteínas, minerales y fibra. Cultivo tradicional en la Sierra y Costa ecuatoriana, adaptado a diversos pisos ecológicos.",
+  "riego_optimo": "Riego moderado, evitar encharcamiento. Fundamental en floración y llenado de vainas.",
+  "npk_recomendado": { "N": 40, "P": 60, "K": 80 },
+  "plagas_comunes": [
+    {
+      "nombre": "Pulgón",
+      "control_organico": "Jabón potásico, extracto de ajo y chile, control biológico con crisopas y mariquitas.",
+      "control_quimico": "Imidacloprid, pero se recomienda evitar su uso por impacto en polinizadores.",
+      "sintoma": "Hojas enrolladas y pegajosas, presencia de colonias en brotes tiernos."
+    },
+    {
+      "nombre": "Mosca blanca",
+      "control_organico": "Aceite de Neem, trampas cromáticas amarillas.",
+      "sintoma": "Hojas amarillas, presencia de melaza y fumagina."
+    },
+    {
+      "nombre": "Trips",
+      "control_organico": "Jabón potásico, extracto de ajo.",
+      "sintoma": "Manchas plateadas en hojas, deformación de vainas."
+    }
+  ],
+  "enfermedades_comunes": [
+    {
+      "nombre": "Antracnosis (Colletotrichum lindemuthianum)",
+      "control": "Semilla certificada, rotación de cultivos, fungicidas cúpricos.",
+      "sintoma": "Manchas oscuras en tallos y vainas, necrosis."
+    },
+    {
+      "nombre": "Mildiu (Peronospora phaseoli)",
+      "control": "Fungicidas preventivos, manejo de humedad, siembra en surcos elevados.",
+      "sintoma": "Manchas amarillas en hojas, moho gris en envés."
+    }
+  ],
+  "epoca_siembra_recomendada": "Mayo - Julio (Sierra); Octubre - Diciembre (Costa)",
+  "calendario_lunar": "Siembra en luna creciente para mejor germinación.",
+  "calculos_agricultura": {
+    "convencional": {
+      "uso_agroquimicos": "Fertilizantes químicos y plaguicidas.",
+      "rendimiento_estimado": "2 t/ha"
+    },
+    "organica_regenerativa": {
+      "uso_agroquimicos": "Compost, biofertilizantes, control biológico de plagas.",
+      "rendimiento_estimado": "1.5 t/ha"
+    }
+  },
+  "labores_cosecha": "Arranque manual de vainas maduras, secado en campo o tendales.",
+  "labores_postcosecha": "Desgranado, limpieza y almacenamiento en costales secos y ventilados.",
+  "captura_carbono_ton_ha_anio": 1.2,
+  "precio_carbono_usd_ton": 35,
+  "superficie_sembrada_ha_anio": 18000,
+  "densidad_siembra": "200,000-250,000 plantas/ha (siembra en surcos dobles o chorrillo)",
+  "trazabilidad_digital_exportacion": {
+    "aplica": true,
+    "requisitos": [
+      "Registro de lotes y origen de semilla",
+      "Control de agroquímicos y fertilizantes",
+      "Certificación BPA/BIO para exportación",
+      "Trazabilidad de cosecha y postcosecha"
+    ],
+    "mercados_destino": ["EE.UU.", "Unión Europea", "Latinoamérica"]
+  },
+  "zonas_produccion_ecuador": [
+    "Chimborazo",
+    "Tungurahua",
+    "Imbabura",
+    "Carchi",
+    "Manabí",
+    "Los Ríos"
+  ],
+  "importancia_economica": "El frejol es fuente de proteína vegetal para consumo nacional y exportación. Genera ingresos a pequeños productores y es clave en la seguridad alimentaria.",
+  "bibliografia": [
+    "Manual de Cultivo de Frejol INIAP",
+    "FAO: Cultivo de leguminosas en América Latina",
+    "MAGAP: Guía técnica de frejol"
+  ],
+  "cursos_recomendados": [
+    "Manejo integrado de plagas en leguminosas",
+    "Producción orgánica de frejol",
+    "Trazabilidad y exportación de granos"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "crop_config": {
+    "name": "Cacao (Theobroma cacao)",
+    "variety": ["Nacional", "CCN-51"],
+    "region": "Ecuador_Tropical"
+  },
+  "sync_logic": {
+    "retry_on_fail": false,
+    "connectivity_threshold": "3G_STABLE",
+    "priority_payload": "alertas_fitosanitarias",
+    "heavy_payload": "mapas_vigor_satelital"
+  },
+  "fuzzy_rules_cacao": [
+    {
+      "case": "Riesgo de Moniliasis / Escoba de Bruja",
+      "conditions": {
+        "humedad_relativa_inamhi": "> 85%",
+        "precipitacion_acumulada_24h": "> 10mm",
+        "temperatura_promedio": "24-28°C"
+      },
+      "diagnostico": "Condiciones climáticas de ALTA ESPORULACIÓN.",
+      "recomendacion": "Realizar podas de mantenimiento para mejorar aireación. Retirar frutos enfermos y enterrarlos. Aplicar fungicida cúprico preventivo.",
+      "fuente": "Manual Técnico de Cacao INIAP"
+    },
+    {
+      "case": "Estrés por Deficiencia de Nitrógeno o Agua",
+      "conditions": {
+        "ndvi_satelital": "< 0.5",
+        "humedad_suelo_sensor": "< 25%",
+        "indice_clorofila": "bajo"
+      },
+      "diagnostico": "Pérdida de vigor foliar detectada.",
+      "recomendacion": "Revisar sistema de riego. Si el suelo está húmedo pero el NDVI es bajo, realizar análisis foliar para ajuste de fertilización (N-K).",
+      "fuente": "Guía de Nutrición Anecacao"
+    },
+    {
+      "case": "Alerta de Llenado de Grano",
+      "conditions": {
+        "etapa_fenologica": "fructificacion",
+        "balance_hidrico": "negativo",
+        "pronostico_lluvia": "nulo_7_dias"
+      },
+      "diagnostico": "Riesgo de aborto de frutos jóvenes (pepinillos).",
+      "recomendacion": "Priorizar riego por goteo para mantener humedad constante. Aplicar potasio para mejorar el peso del grano.",
+      "fuente": "Protocolo de Manejo de Sequía MAG"
+    }
+  ]
+}

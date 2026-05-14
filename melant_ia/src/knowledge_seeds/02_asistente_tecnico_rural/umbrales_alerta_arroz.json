@@ -1,0 +1,16 @@
+{
+  "umbrales_alerta": {
+    "sogata": {
+      "umbral_infestacion": "5-10 insectos por pase de red",
+      "accion": "Si supera 10, aplicar control biológico o químico según etapa."
+    },
+    "gusano_cogollero": {
+      "umbral_infestacion": "1 larva/planta en 10% de plantas muestreadas",
+      "accion": "Si supera el umbral, aplicar control biológico (Bacillus thuringiensis) o químico selectivo."
+    },
+    "pyricularia": {
+      "umbral_infestacion": "Primeras manchas en hojas bandera (menos del 5% de plantas)",
+      "accion": "Aplicar fungicida preventivo solo si hay alta humedad y temperatura."
+    }
+  }
+}

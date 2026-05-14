@@ -1,0 +1,23 @@
+.card-cultivo i {
+    color: #48bb78; /* Verde brillante para resaltar sobre el fondo oscuro */
+    margin-bottom: 10px;
+    display: inline-block;
+}
+/* Para cuando la IA detecte una plaga o riesgo */
+.badge-alerta.critico {
+    background-color: #e53e3e; /* Rojo para alertas graves */
+    animation: parpadeo 2s infinite;
+}
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+/* Contenedor de la comparativa de costos que planeamos */
+.tabla-comparativa {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+}
