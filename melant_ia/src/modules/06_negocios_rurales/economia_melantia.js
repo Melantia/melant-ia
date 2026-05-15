@@ -27,25 +27,28 @@ function calcularPremioPorSuscripcion(precioPlanUSD) {
 }
 // Ejemplo: calcularPremioPorSuscripcion(20); // 200 Melantios
 
-// --- ANEXO: Condiciones para microcrédito y retiro de Melantios ---
+// --- ANEXO: Condiciones para microcrédito y retiro de Melantios (actualizado 2026) ---
 /**
  * Reglas para acceso a microcrédito y retiro:
- * - Microcrédito: mínimo 15,000 Melantios ahorrados y 12 meses de suscripción consecutiva.
- *   Acceso a $130 USD con 2% de interés mensual.
- * - Retiro mínimo: 6,000 Melantios acumulados para retirar $40 USD.
- *   El monto puede ser acumulable y retirado a los 12 meses, o solicitar microcrédito y seguir ahorrando.
+ * - Retiro: mínimo 7,000 Melantios acumulados para retirar $49 USD libres de impuestos, cada 3 meses.
+ * - Si ahorra durante 12 meses, puede solicitar un crédito por el 80% del monto acumulado y seguir aumentando su cupo de crédito.
+ * - Los Melantios se canjean a dólares cada 3 meses, menos 15% de IVA y 15% de retención. El 15% adicional solo se puede retirar a los 12 meses junto al monto acumulado.
+ * - La suscripción solo se paga en dólares.
  */
 const REGLAS_MICROCREDITO_RETIRO = {
   microcredito: {
-    melantios_min: 15000,
+    melantios_min: 7000,
     meses_suscripcion: 12,
-    monto_usd: 130,
+    porcentaje_credito: 0.8, // 80% del monto acumulado
     interes_mensual: 0.02,
   },
   retiro: {
-    melantios_min: 6000,
-    monto_usd: 40,
-    periodo_meses: 12, // acumulable
+    melantios_min: 7000,
+    monto_usd: 49,
+    periodo_meses: 3, // retiro cada 3 meses
+    iva: 0.15,
+    retencion: 0.15,
+    porcentaje_retiro_12m: 0.15, // 15% adicional solo a los 12 meses
   },
 };
 
@@ -60,6 +63,27 @@ function puedeSolicitarMicrocredito(saldoMelantios, mesesSuscripcion) {
 function puedeSolicitarRetiro(saldoMelantios) {
   return saldoMelantios >= REGLAS_MICROCREDITO_RETIRO.retiro.melantios_min;
 }
+
+function calcularRetiroNeto(melantios, mesesAhorro) {
+  // Solo cada 3 meses
+  if (melantios < REGLAS_MICROCREDITO_RETIRO.retiro.melantios_min) return 0;
+  let usd = melantios / TASA_CAMBIO;
+  let neto =
+    usd *
+    (1 -
+      REGLAS_MICROCREDITO_RETIRO.retiro.iva -
+      REGLAS_MICROCREDITO_RETIRO.retiro.retencion);
+  if (mesesAhorro >= 12) {
+    neto += usd * REGLAS_MICROCREDITO_RETIRO.retiro.porcentaje_retiro_12m;
+  }
+  return neto;
+}
+
+function calcularCreditoDisponible(melantios, mesesAhorro) {
+  if (mesesAhorro < 12) return 0;
+  let usd = melantios / TASA_CAMBIO;
+  return usd * REGLAS_MICROCREDITO_RETIRO.microcredito.porcentaje_credito;
+}
 // Ejemplo de uso:
-// puedeSolicitarMicrocredito(16000, 12) // true
-// puedeSolicitarRetiro(7000) // true
+// calcularRetiroNeto(7000, 3) // Retiro neto tras 3 meses
+// calcularCreditoDisponible(14000, 12) // Crédito tras 12 meses

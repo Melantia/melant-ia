@@ -25,7 +25,7 @@
   },
   "business_rules": {
     "user_max_payment_percentage": 0.5,
-    "store_subscription_payment_enabled": true,
+    "store_subscription_payment_enabled": false,
     "padrino_transfer_enabled": true,
     "expiration_days": 90,
     "melantio_to_usd_rate": 0.01,
@@ -77,13 +77,12 @@
     "store_payment": {
       "enabled": true,
       "max_percentage": 0.5,
-      "description": "El socio paga hasta 50% en Melantios, resto en efectivo"
+      "description": "El socio paga hasta 50% en Melantios en tiendas, resto en efectivo. Suscripción solo en dólares."
     },
     "app_subscription": {
-      "enabled": true,
-      "max_percentage": 0.5,
+      "enabled": false,
       "monthly_cost_usd": 25,
-      "description": "Cobertura parcial de mensualidad de app"
+      "description": "La suscripción solo se paga en dólares. Los Melantios se canjean a dólares cada 3 meses, menos 15% de IVA y 15% de retención. El 15% adicional solo se puede retirar a los 12 meses junto al monto acumulado."
     },
     "padrino_transfer": {
       "enabled": true,
@@ -109,7 +108,7 @@
     "proposito": "Transformar Melantios en Fondo de Ahorro para Navidad",
     "periodo_acumulacion": "Enero - Noviembre",
     "periodo_liberacion": "Diciembre",
-    "regla_de_oro": "Acumulación obligatoria, retiro solo en diciembre",
+    "regla_de_oro": "Acumulación obligatoria, retiros cada 3 meses desde 7,000 Melantios para $49 USD libres de imp. Si ahorra 12 meses puede solicitar crédito por el 80% del monto acumulado y seguir aumentando su cupo."
     "beneficios_para_user": [
       "No puede gastar los Melantios durante el año (elimina tentación)",
       "Sienten que 'siembran para Navidad' (psicología positiva)",

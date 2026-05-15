@@ -1,6 +1,6 @@
 {
-  "modulo_id": 2,
-  "titulo": "Trazabilidad Digital del Cacao (Alineada Agrocalidad, UE, EEUU)",
+  "modulo_id": 3,
+  "titulo": "Trazabilidad Digital del Café (Alineada Agrocalidad, UE, EEUU, Rusia, Asia)",
   "fases": [
     {
       "paso": 1,
@@ -24,9 +24,9 @@
     },
     {
       "paso": 3,
-      "titulo": "Postcosecha y Fermentación",
+      "titulo": "Postcosecha y Beneficio",
       "detalles": [
-        "Registro de días de fermentación y secado",
+        "Registro de procesos de beneficio húmedo/seco",
         "Control de calidad y segregación de lotes",
         "Asignación de código único de lote"
       ],

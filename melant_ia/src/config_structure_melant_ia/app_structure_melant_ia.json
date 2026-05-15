@@ -7,8 +7,8 @@
     "modulos": [
       {
         "id": 1,
-        "titulo": "Sistema de Suscripciones",
-        "items": ["Melantio (Sistema de Recompensas)", "Billetera Virtual"]
+        "titulo": "Suscripciones",
+        "items": ["Gestión de Suscripciones", "Planes y Pagos"]
       },
       {
         "id": 2,
@@ -23,6 +23,8 @@
       {
         "id": 4,
         "titulo": "Agricultura Digital",
+        "voz_principal": "Fabrizzio",
+        "genero": "Masculino",
         "items": [
           "Agricultura de precisión (Uso de Sensores)",
           "GPS (Medición de Terrenos)"
@@ -30,10 +32,14 @@
       },
       {
         "id": 5,
-        "titulo": "Gestión Productiva",
+        "titulo": "Gestión de Fincas y Trazabilidad",
+        "voz_principal": "Angel",
+        "genero": "Masculina",
         "items": [
-          "Gestión de Granjas",
           "Gestión de Fincas",
+          "Trazabilidad Digital del Cacao (EUDR, Agrocalidad, EEUU, Rusia, Asia)",
+          "Trazabilidad Digital del Café (EUDR, Agrocalidad, EEUU, Rusia, Asia)",
+          "Gestión de Granjas",
           "Gestión Empresarial"
         ]
       },

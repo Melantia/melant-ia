@@ -1,0 +1,15 @@
+{
+  "id": "finca_001",
+  "nombre": "La Esperanza",
+  "ubicacion": "Ecuador, Los Ríos",
+  "trazabilidad": {
+    "cacao": {
+      "archivo": "trazabilidad_cacao.json",
+      "fases": []
+    },
+    "cafe": {
+      "archivo": "trazabilidad_cafe.json",
+      "fases": []
+    }
+  }
+}

@@ -1,0 +1,175 @@
+<RegistroScreen>:
+    orientation: 'vertical'
+    padding: '20dp'
+    spacing: '15dp'
+    canvas.before:
+        Color:
+            rgba: (0.95, 0.95, 0.9, 1) # Blanco hueso para que no brille tanto el sol
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "REGISTRO MELANTIA"
+        font_size: '30sp'
+        bold: True
+        color: (0, 0, 0, 1) # Negro puro para máximo contraste
+        size_hint_y: None
+        height: '60dp'
+
+    # --- Campos de entrada con borde marcado ---
+    TextInput:
+        id: txt_nombre
+        hint_text: "Nombre del Productor"
+        font_size: '22sp'
+        multiline: False
+        background_color: (1, 1, 1, 1)
+        on_text: root.on_field_change()
+
+    TextInput:
+        id: txt_cedula
+        hint_text: "Número de Cédula"
+        input_filter: 'int'
+        font_size: '22sp'
+        on_text: root.on_field_change()
+
+    # --- El Cuadro de Voces (Privacidad Aleatoria) ---
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: '160dp'
+        padding: '10dp'
+        canvas.before:
+            Color:
+                rgba: (1, 1, 1, 1) # Fondo blanco para el mensaje
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [15,]
+
+        Label:
+            id: label_autor
+            text: "" 
+            color: (0, 0.4, 0, 1) # Verde oscuro para el nombre
+            bold: True
+            font_size: '18sp'
+            halign: 'left'
+
+        Label:
+            id: label_mensaje
+            text: ""
+            color: (0, 0, 0, 1)
+            text_size: self.width - 20, None
+            font_size: '16sp'
+            italic: True
+
+    # --- Aceptación ---
+    BoxLayout:
+        size_hint_y: None
+        height: '60dp'
+        CheckBox:
+            id: check_privacidad
+            size_hint_x: 0.2
+            color: (0, 0, 0, 1)
+            on_active: root.on_field_change()
+        Label:
+            text: "Acepto la Política de Privacidad"
+            color: (0, 0, 0, 1)
+            font_size: '18sp'
+
+    Button:
+        id: btn_ingresar
+        text: "INGRESAR A LA FINCA"
+        font_size: '24sp'
+        bold: True
+        disabled: True
+        background_normal: '' # Necesario para que cambie el color
+        background_color: (0.5, 0.5, 0.5, 1) # Empieza en gris
+        on_release: root.guardar_y_entrar()
+<RegistroScreen>:
+    orientation: 'vertical'
+    padding: '20dp'
+    spacing: '15dp'
+    canvas.before:
+        Color:
+            rgba: (0.98, 0.98, 0.95, 1) # Fondo crema claro para el sol
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "REGISTRO MELANTIA"
+        font_size: '28sp'
+        bold: True
+        color: (0, 0.3, 0, 1) # Verde oscuro
+        size_hint_y: None
+        height: '50dp'
+
+    # --- Campos de entrada con letra grande ---
+    TextInput:
+        id: txt_nombre
+        hint_text: "Nombre Completo"
+        font_size: '20sp'
+        multiline: False
+        on_text: root.on_field_change()
+
+    TextInput:
+        id: txt_cedula
+        hint_text: "Número de Cédula"
+        input_filter: 'int'
+        font_size: '20sp'
+        on_text: root.on_field_change()
+
+    # --- El área de Privacidad "Aleatoria" ---
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: None
+        height: '140dp'
+        padding: '10dp'
+        canvas.before:
+            Color:
+                rgba: (0.9, 0.9, 0.8, 1)
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [10,]
+
+        Label:
+            id: label_autor
+            text: "Don Eloy dice:"
+            color: (0.4, 0.2, 0, 1)
+            bold: True
+            font_size: '16sp'
+            halign: 'left'
+
+        Label:
+            id: label_mensaje
+            text: "Firme aquí, patrón, que sus datos están seguros con nosotros."
+            color: (0, 0, 0, 1)
+            text_size: self.width, None
+            font_size: '15sp'
+            italic: True
+
+    # --- Checkbox y Botón ---
+    BoxLayout:
+        size_hint_y: None
+        height: '50dp'
+        CheckBox:
+            id: check_privacidad
+            size_hint_x: 0.2
+            on_active: root.on_field_change()
+        Label:
+            text: "Acepto la Política de Privacidad"
+            color: (0, 0, 0, 1)
+            text_size: self.width, None
+
+    Button:
+        id: btn_ingresar
+        text: "COMENZAR TRABAJO"
+        font_size: '22sp'
+        bold: True
+        disabled: True
+        background_normal: ''
+        background_color: (0.5, 0.5, 0.5, 1)
+        on_release: root.guardar_y_entrar()
+        
