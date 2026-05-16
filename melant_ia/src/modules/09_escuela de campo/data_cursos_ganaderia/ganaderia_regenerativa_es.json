@@ -1,0 +1,55 @@
+{
+  "titulo": "Curso de Ganadería Regenerativa",
+  "idioma": "es",
+  "precio": 0,
+  "modulos": [
+    {
+      "nombre": "Pastoreo Racional Voisin (PRV)",
+      "descripcion": "Diseño y manejo de potreros, cálculo de carga animal y periodos de descanso.",
+      "lecciones": ["Manual de Implementación PRV: https://www.regenerativa.cl/"],
+      "practica": {
+        "nombre": "Implementación de PRV",
+        "descripcion": "Cálculo de carga animal, diseño de potreros, uso de energizador y cinta eléctrica.",
+        "materiales": [
+          "Energizador solar/elétrico (mínimo 3 julios)",
+          "Cinta/hilo electroplástico",
+          "Aisladores",
+          "Postes plásticos/madera",
+          "Tubería de polietileno",
+          "Bebederos móviles"
+        ]
+      }
+    },
+    {
+      "nombre": "Cosecha de Agua (Keyline)",
+      "descripcion": "Trazado de curvas de nivel y retención de humedad en el suelo.",
+      "lecciones": ["Guía Paso a Paso de Cosecha de Agua: http://www.plataformacelac.org/"],
+      "practica": {
+        "nombre": "Diseño Keyline",
+        "descripcion": "Uso de nivel láser o en 'A', arado de subsuelo y mapeo de curvas.",
+        "materiales": [
+          "Nivel láser o nivel en 'A'",
+          "Arado de subsuelo tipo Yeomans",
+          "GPS o cinta métrica"
+        ]
+      }
+    },
+    {
+      "nombre": "Fabricación de Bioinsumos",
+      "descripcion": "Elaboración de biofermentos y abonos orgánicos.",
+      "lecciones": ["Manual de Elaboración de Biofermentos (WWF): https://wwflac.awsassets.panda.org/downloads/manual-de-buenas-practicas-ganaderas_1.pdf"],
+      "practica": {
+        "nombre": "Preparación de Bocashi/Biofermentos",
+        "descripcion": "Recetas y pasos para fabricar abonos orgánicos.",
+        "materiales": [
+          "Tanques plásticos (200L)",
+          "Válvulas de escape",
+          "Melaza",
+          "Levadura o suero",
+          "Harina de rocas",
+          "Estiércol fresco"
+        ]
+      }
+    }
+  ]
+}

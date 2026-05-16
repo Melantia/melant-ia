@@ -1,0 +1,65 @@
+# main.kv
+
+<PreviewCard@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: dp(110)
+    canvas.before:
+        Color:
+            rgba: 1,1,1,1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [10]
+    RelativeLayout:
+        AsyncImage:
+            id: img
+            source: root.source
+            size_hint: None, None
+            size: dp(90), dp(90)
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+        Button:
+            text: '✖'
+            size_hint: None, None
+            size: dp(28), dp(28)
+            pos: dp(62), dp(62)
+            background_color: 1,0,0,1
+            color: 1,1,1,1
+            font_size: dp(18)
+            on_release: root.on_remove()
+
+BoxLayout:
+    orientation: 'vertical'
+    padding: dp(16)
+    spacing: dp(12)
+
+    Button:
+        text: '📷 Añadir Foto del Producto'
+        size_hint_y: None
+        height: dp(48)
+        font_size: dp(18)
+        on_release: app.open_filechooser()
+
+    GridLayout:
+        id: grid
+        cols: 3
+        spacing: dp(8)
+        size_hint_y: None
+        height: dp(110)
+        # Las tarjetas se agregan dinámicamente
+
+    Label:
+        id: empty_label
+        text: 'Añade fotos para que tu catálogo sea más atractivo'
+        color: .5,.5,.5,1
+        font_size: dp(14)
+        size_hint_y: None
+        height: dp(30)
+        opacity: 1 if not app.fotos else 0
+
+    Button:
+        text: 'Generar QR de Negocio'
+        size_hint_y: None
+        height: dp(48)
+        font_size: dp(18)
+        on_release: app.generar_qr()

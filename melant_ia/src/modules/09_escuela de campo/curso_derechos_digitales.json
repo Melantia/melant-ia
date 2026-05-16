@@ -1,0 +1,35 @@
+{
+  "curso_especializado": {
+    "titulo": "Derechos Digitales del Agricultor",
+    "objetivo": "Empoderar al productor sobre el valor de su información y el uso ético de la tecnología.",
+    "clases": [
+      {
+        "clase": 1,
+        "titulo": "¿Quién es dueño del dato?",
+        "teoria": "Soberanía tecnológica y almacenamiento local. El productor es dueño de sus datos.",
+        "practica": "Visualización y exportación de datos personales desde la App.",
+        "manual": "manual_soberania_datos.pdf"
+      },
+      {
+        "clase": 2,
+        "titulo": "Seguridad de la información en el campo",
+        "teoria": "Buenas prácticas para proteger el teléfono y las copias de seguridad de la base de datos de la finca.",
+        "practica": "Guía paso a paso para hacer backup y restaurar la base de datos.",
+        "manual": "manual_seguridad_informacion.pdf"
+      },
+      {
+        "clase": 3,
+        "titulo": "Ética y Transparencia",
+        "teoria": "Uso de reportes digitales para combatir el fraude alimentario y mejorar el precio de venta.",
+        "practica": "Simulación de generación de reporte digital y validación de trazabilidad.",
+        "manual": "manual_etica_transparencia.pdf"
+      }
+    ],
+    "bibliografia": [
+      {"autor": "Asamblea Nacional del Ecuador (2021)", "titulo": "Ley Orgánica de Protección de Datos Personales. Registro Oficial Suplemento 459."},
+      {"autor": "IICA (2023)", "titulo": "Principios para el uso ético de datos en la agricultura digital en las Américas."},
+      {"autor": "FAO", "titulo": "Digital agriculture and the protection of farmers' data rights."},
+      {"autor": "GDPR", "titulo": "General Data Protection Regulation (UE)."}
+    ]
+  }
+}

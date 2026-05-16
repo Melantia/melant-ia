@@ -10,6 +10,17 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw-melantia.js').then(function(reg) {
+          console.log('Service Worker MELANTIA registrado:', reg.scope);
+        }, function(err) {
+          console.log('Error al registrar Service Worker:', err);
+        });
+      });
+    }
+  </script>
   <body>
     <!-- Banner de estado offline -->
     <div
@@ -142,6 +153,18 @@
       </div>
     </div>
 
+    <!-- Botón para buscar mejor cobertura en la tienda -->
+    <div id="btn-cobertura-tienda-wrap" style="text-align:center;margin:18px 0;">
+      <button
+        id="btn-cobertura-tienda"
+        onclick="window.guiarAZonaCobertura()"
+        style="background:#276749;color:#fff;padding:12px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;"
+      >
+        📶 Buscar mejor cobertura para comprar
+      </button>
+      <div style="font-size:12px;color:#2c3e50;margin-top:4px;">¿Sin señal? Pulsa aquí antes de comprar</div>
+    </div>
+
     <header>
       <h1>MELANTIA</h1>
       <p id="app-slogan" class="slogan">
@@ -239,5 +262,9 @@
     <script src="modules/melantio_ui.js"></script>
     <script src="./src/modules/economia_melantia.js"></script>
     <script src="./src/main_controller.js"></script>
+    <!-- Footer institucional MELANTIA -->
+    <footer style="background:#f4f4f4;color:#276749;text-align:center;padding:16px 0;font-size:0.98em;margin-top:32px;border-top:1px solid #e0e0e0;">
+      Contacto institucional: <a href="mailto:melantiapro@gmail.com" style="color:#276749;text-decoration:underline;">melantiapro@gmail.com</a> &nbsp;|&nbsp; © 2026 MELANTIA
+    </footer>
   </body>
 </html>

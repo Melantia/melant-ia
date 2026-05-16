@@ -1,0 +1,56 @@
+{
+  "modulo_recetario_maestro": {
+    "descripcion": "Protocolos de elaboración de bio-insumos para el fortalecimiento del sistema inmunológico vegetal.",
+    "formulas": [
+      {
+        "nombre": "Caldo Sulfocálcico",
+        "objetivo": "Control de hongos, ácaros y aporte de minerales críticos.",
+        "argumentacion_teorica": "El azufre actúa como un elicitador que activa las defensas naturales de la planta (fitoalexinas). Al combinarse con la cal bajo calor, se forman polisulfuros que alteran el pH de la superficie foliar, impidiendo que las esporas de hongos se anclen.",
+        "beneficios": [
+          "Efecto fungicida y acaricida de amplio espectro.",
+          "Aporte de Azufre y Calcio, esenciales para la síntesis de proteínas.",
+          "No genera resistencia en patógenos a diferencia de los fungicidas sintéticos."
+        ],
+        "preparacion_estandar": "Hervir 20L de agua con 2kg de azufre y 1kg de cal viva hasta que la mezcla sea color vino tinto (aprox. 45-60 min).",
+        "aplicacion": {
+          "dosis_general": "1 parte de caldo por 20 partes de agua.",
+          "metodo": "Aspersión foliar en horas de baja radiación solar.",
+          "frecuencia": "Preventivo: cada 15 días. Curativo: cada 8 días."
+        }
+      },
+      {
+        "nombre": "Biol de Microorganismos (Biofertilizante Líquido)",
+        "objetivo": "Inoculación de vida microbiana y nutrición quelatada.",
+        "argumentacion_teorica": "La fermentación anaeróbica rompe moléculas complejas y las convierte en nutrientes quelatados por ácidos orgánicos. Esto permite que la planta absorba minerales sin gasto energético extra, algo que los químicos (sales) no pueden lograr.",
+        "beneficios": [
+          "Restaura la microbiología del suelo y el follaje.",
+          "Contiene fitohormonas naturales que estimulan el crecimiento.",
+          "Evita la lixiviación de nitratos hacia las aguas subterráneas."
+        ],
+        "preparacion_estandar": "Fermentar en bidón sellado: Estiércol fresco, melaza, leche/suero, ceniza y agua durante 30 a 45 días.",
+        "aplicacion": {
+          "dosis_general": "2 a 5 litros de Biol por cada 100 litros de agua.",
+          "metodo": "Foliar o vía riego (Drench).",
+          "frecuencia": "Cada 20 días durante el crecimiento vegetativo."
+        }
+      },
+      {
+        "nombre": "Extracto Etológico de Ajo y Ají",
+        "objetivo": "Repelencia sistémica y control de insectos de cuerpo blando.",
+        "argumentacion_teorica": "Los compuestos azufrados (alicina) y la capsaicina saturan los receptores sensoriales de los insectos. No es un veneno que mata la vida, sino un repelente que rompe el ciclo de colonización sin afectar a las abejas.",
+        "beneficios": [
+          "Confusión olfativa y gustativa para insectos fitófagos.",
+          "Inocuidad total para el operario y el consumidor final.",
+          "Compatible con la presencia de polinizadores."
+        ],
+        "preparacion_estandar": "Licuar 500g de ajo y 500g de ají picante en 5L de alcohol o agua. Reposar 7 días.",
+        "aplicacion": {
+          "dosis_general": "250 ml del extracto por bomba de 20 litros.",
+          "metodo": "Aspersión total, cubriendo el envés de las hojas.",
+          "frecuencia": "Semanal en épocas de alta presión de plagas."
+        }
+      }
+    ],
+    "advertencia_tecnica": "A diferencia de los agrotóxicos que son 'recetas muertas', los bio-insumos son procesos vivos. Su eficacia aumenta con la constancia y la salud general del suelo."
+  }
+}

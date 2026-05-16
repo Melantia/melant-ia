@@ -1,0 +1,32 @@
+[
+  {
+    "title": "The Amorfino",
+    "region": "Coast - Manabí",
+    "category": "Oral Poetry",
+    "description": "A love or challenge song that reflects the wit of the montuvio people."
+  },
+  {
+    "title": "The Guagua Auca",
+    "region": "Highlands",
+    "category": "Legend",
+    "description": "The spirit of an unbaptized child who cries on the roads to lure travelers and make them lose their way."
+  },
+  {
+    "title": "The Animero",
+    "region": "Highlands",
+    "category": "Character",
+    "description": "A real character from towns like Penipe who, during November, goes out to ask for prayers for the souls in purgatory with a bell."
+  },
+  {
+    "title": "The Tapada Lady",
+    "region": "Coast - Guayaquil",
+    "category": "Legend",
+    "description": "An elegant woman who appears in Guayaquil, attracts men with her perfume and then shows a skull face."
+  },
+  {
+    "title": "The Umiña Goddess",
+    "region": "Coast - Manta",
+    "category": "Legend",
+    "description": "The origin of the sacred emerald in Manta."
+  }
+]

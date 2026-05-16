@@ -1,0 +1,308 @@
+[
+  {
+    "id": "curso1",
+    "titulo": "Diagnóstico Integral de Enfermedades en Cultivos Tropicales con IA y Visión Computarizada",
+    "temario": [
+      "Fundamentos de fitopatología tropical",
+      "Introducción a la visión computarizada en agricultura",
+      "Uso de modelos ONNX y PlantVillage",
+      "Interpretación de imágenes y severidad de síntomas",
+      "Integración de datos de laboratorio y campo",
+      "Casos prácticos con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso1"
+  },
+  {
+    "id": "curso2",
+    "titulo": "Uso de Lógica Difusa y Big Data para la Toma de Decisiones Agrícolas",
+    "temario": [
+      "Conceptos de lógica difusa en sistemas biológicos",
+      "Implementación con scikit-fuzzy en Python",
+      "Análisis de datos climáticos y de suelo",
+      "Construcción de reglas de decisión",
+      "Visualización de resultados y generación de reportes"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso2"
+  },
+  {
+    "id": "curso3",
+    "titulo": "Interpretación de Análisis de Suelo y su Impacto en la Sanidad Vegetal",
+    "temario": [
+      "Parámetros críticos del suelo para cultivos tropicales",
+      "Lectura de reportes de laboratorio",
+      "Umbrales y validación según especie",
+      "Alertas fitosanitarias y recomendaciones",
+      "Casos prácticos con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso3"
+  },
+  {
+    "id": "curso4",
+    "titulo": "Aplicación de Biopesticidas y Control Biológico Basado en Datos Científicos",
+    "temario": [
+      "Tipos de biopesticidas y su modo de acción",
+      "Registros oficiales y normativas",
+      "Integración de tratamientos en MELANT IA",
+      "Manejo integrado de plagas (MIP)",
+      "Evaluación de eficacia y seguimiento"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso4"
+  },
+  {
+    "id": "curso5",
+    "titulo": "Georreferenciación y Manejo de Datos Climáticos para la Agricultura de Precisión",
+    "temario": [
+      "Fundamentos de georreferenciación en campo",
+      "Obtención y uso de datos climáticos en tiempo real",
+      "Integración con GPS y sensores",
+      "Análisis espacial y mapas de riesgo",
+      "Aplicaciones prácticas con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso5"
+  },
+  {
+    "id": "curso6",
+    "titulo": "Integración de Bases de Datos Globales (GBIF, FAOSTAT, Genesys) en la Gestión Agrícola",
+    "temario": [
+      "Panorama de bases de datos internacionales",
+      "Acceso y consulta desde Python",
+      "Aplicaciones en biodiversidad y genética",
+      "Comparación de rendimientos y resiliencia",
+      "Casos de uso con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso6"
+  },
+  {
+    "id": "curso7",
+    "titulo": "Programación de Flujos de Diagnóstico y Recomendación en Python para Agricultura",
+    "temario": [
+      "Estructura de un motor de inferencia agrícola",
+      "Automatización de flujos de datos",
+      "Integración de módulos científicos",
+      "Generación de reportes y trazabilidad",
+      "Despliegue multiplataforma"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso7"
+  },
+  {
+    "id": "curso8",
+    "titulo": "Generación de Reportes Técnicos y Trazabilidad Digital en el Agro",
+    "temario": [
+      "Buenas prácticas de documentación agrícola",
+      "Uso de ReportLab y QR en informes",
+      "Trazabilidad y respaldo de datos",
+      "Integración con MELANT IA",
+      "Ejercicios prácticos"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso8"
+  },
+  {
+    "id": "curso9",
+    "titulo": "Estrategias de Manejo Integrado de Plagas con Apoyo de Inteligencia Artificial",
+    "temario": [
+      "Principios del MIP y biocontrol",
+      "Detección temprana con IA",
+      "Alertas y monitoreo automatizado",
+      "Evaluación de impacto y seguimiento",
+      "Casos de éxito"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso9"
+  },
+  {
+    "id": "curso10",
+    "titulo": "Análisis Comparativo de Variedades y Resiliencia Genética usando Recursos Internacionales",
+    "temario": [
+      "Diversidad genética y bancos de germoplasma",
+      "Comparación de variedades y resistencia",
+      "Uso de Genesys y GBIF",
+      "Aplicaciones en selección de cultivos",
+      "Casos prácticos"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso10"
+  },
+  {
+    "id": "curso11",
+    "titulo": "Automatización de Calendarios de Aplicación y Buenas Prácticas Agrícolas",
+    "temario": [
+      "Diseño de calendarios de aplicación",
+      "Automatización con Python",
+      "Alertas y seguimiento de tareas",
+      "Integración con MELANT IA",
+      "Ejercicios prácticos"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso11"
+  },
+  {
+    "id": "curso12",
+    "titulo": "Seguridad, Respaldo y Protección de Datos en Sistemas Agrícolas Digitales",
+    "temario": [
+      "Principios de ciberseguridad en el agro",
+      "Respaldo y recuperación de datos",
+      "Protección de la privacidad del productor",
+      "Normativas y cumplimiento",
+      "Herramientas prácticas"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso12"
+  },
+  {
+    "id": "curso13",
+    "titulo": "Agricultura Regenerativa: Principios y Práctica en el Trópico",
+    "temario": [
+      "Fundamentos de agricultura regenerativa",
+      "Manejo de suelos vivos y microbioma",
+      "Coberturas vegetales y rotación de cultivos",
+      "Bioinsumos y compostaje avanzado",
+      "Restauración de paisajes y biodiversidad",
+      "Indicadores de salud regenerativa",
+      "Casos prácticos y monitoreo con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso13"
+  },
+  {
+    "id": "curso14",
+    "titulo": "Elaboración de Productos Orgánicos para la Agricultura Sostenible",
+    "temario": [
+      "Normativa y certificación de productos orgánicos",
+      "Elaboración de biofertilizantes líquidos y sólidos",
+      "Producción de biopesticidas y extractos vegetales",
+      "Fermentaciones y microorganismos eficientes",
+      "Formulación y aplicación en campo",
+      "Control de calidad y trazabilidad",
+      "Casos prácticos y validación con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso14"
+  },
+  {
+    "id": "curso15",
+    "titulo": "Biotecnología Vegetal Aplicada a la Agricultura Sostenible",
+    "temario": [
+      "Introducción a la biotecnología vegetal",
+      "Cultivo de tejidos y micropropagación",
+      "Marcadores moleculares y selección asistida",
+      "Edición genética y CRISPR en plantas",
+      "Producción de bioinsumos y biofertilizantes",
+      "Biorremediación y fitomejoramiento",
+      "Aplicaciones prácticas y casos de éxito",
+      "Validación y monitoreo con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso15"
+  },
+  {
+    "id": "curso16",
+    "titulo": "Dasonomía y Captura de Carbono en Bosques Tropicales",
+    "temario": [
+      "Introducción a la dasonomía y monitoreo forestal",
+      "Uso de datos satelitales (GFW, FRA, GBIF)",
+      "Identificación de especies nativas y exóticas",
+      "Cálculo de biomasa y carbono capturado",
+      "Alertas de deforestación y manejo sostenible",
+      "Bonos de carbono y mercados ambientales",
+      "Casos prácticos con MELANT IA"
+    ],
+    "precio": 10,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/curso16"
+  },
+  {
+    "id": "cursoP1",
+    "titulo": "Práctica: Elaboración de Compost Orgánico",
+    "temario": [
+      "Materiales y herramientas necesarias",
+      "Pasos para el armado de la pila de compost",
+      "Control de humedad y temperatura",
+      "Criterios de madurez del compost",
+      "Registro fotográfico del proceso"
+    ],
+    "precio": 0,
+    "formato": "Práctica presencial + envío de fotos",
+    "link": "https://escuela.melant-ia.com/practica-compost"
+  },
+  {
+    "id": "cursoP2",
+    "titulo": "Práctica: Siembra de Cultivos de Cobertura",
+    "temario": [
+      "Selección de especies de cobertura",
+      "Preparación del terreno",
+      "Métodos de siembra y densidad",
+      "Monitoreo de crecimiento",
+      "Registro fotográfico de la siembra y cobertura"
+    ],
+    "precio": 0,
+    "formato": "Práctica presencial + envío de fotos",
+    "link": "https://escuela.melant-ia.com/practica-cobertura"
+  },
+  {
+    "id": "cursoP3",
+    "titulo": "Práctica: Elaboración de Biol Líquido",
+    "temario": [
+      "Materiales y proporciones",
+      "Fermentación y control de gases",
+      "Aplicación en campo",
+      "Criterios de calidad del biol",
+      "Registro fotográfico del proceso"
+    ],
+    "precio": 0,
+    "formato": "Práctica presencial + envío de fotos",
+    "link": "https://escuela.melant-ia.com/practica-biol"
+  },
+  {
+    "id": "cursoP4",
+    "titulo": "Práctica: Manejo de Pastoreo Holístico",
+    "temario": [
+      "Planificación de potreros",
+      "Rotación y tiempos de descanso",
+      "Monitoreo de cobertura vegetal",
+      "Evaluación de impacto en el suelo",
+      "Registro fotográfico antes y después"
+    ],
+    "precio": 0,
+    "formato": "Práctica presencial + envío de fotos",
+    "link": "https://escuela.melant-ia.com/practica-pastoreo"
+  },
+  {
+    "id": "curso_agricultura_regenerativa",
+    "titulo": "La Agricultura Regenerativa y la Ciencia del Suelo",
+    "temario": [
+      "Los 5 Principios del Suelo Sano",
+      "Prácticas de campo MELANTIA: cero labranza, bioinsumos, cercas vivas",
+      "Calculadora de materia orgánica y captura de carbono",
+      "Manual práctico: Cómo hacer Microrganismos de Montaña (MM)",
+      "Evidencia y monitoreo: fotos de mantillo y micelio",
+      "Integración animal y efecto manada",
+      "Casos prácticos y testimonios"
+    ],
+    "precio": 15,
+    "formato": "PDF descargable + acceso online",
+    "link": "https://escuela.melant-ia.com/agricultura-regenerativa"
+  }
+]

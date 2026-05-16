@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "El Amorfino",
+    "region": "Costa - Manabí",
+    "categoria": "Poesía Oral",
+    "descripcion": "Canto de amor o desafío que refleja la picardía montuvia."
+  },
+  {
+    "titulo": "La Décima Esmeraldeña",
+    "region": "Costa - Esmeraldas",
+    "categoria": "Poesía Oral",
+    "descripcion": "Estructura poética compleja usada por los sabios afroecuatorianos para contar la historia de su pueblo o criticar la política."
+  },
+  {
+    "titulo": "El Tintín",
+    "region": "Costa",
+    "categoria": "Leyenda",
+    "descripcion": "Ser mitológico de la costa que busca a mujeres de cabello largo para enamorarlas."
+  },
+  {
+    "titulo": "La Dama Tapada",
+    "region": "Costa - Guayaquil",
+    "categoria": "Leyenda",
+    "descripcion": "Elegante mujer que aparece en Guayaquil, atrae a los hombres con su perfume y luego muestra un rostro de calavera."
+  },
+  {
+    "titulo": "La Diosa Umiña",
+    "region": "Costa - Manta",
+    "categoria": "Leyenda",
+    "descripcion": "El origen de la esmeralda sagrada en Manta."
+  }
+]

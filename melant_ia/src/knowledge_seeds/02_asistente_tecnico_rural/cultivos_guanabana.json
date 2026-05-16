@@ -2,8 +2,28 @@
   "guanabana": {
     "nombre_cientifico": "Annona muricata",
     "descripcion": "Fruto tropical de alto valor nutricional y medicinal. Cultivo perenne, adaptado a zonas cálidas y húmedas.",
+    "variedades": [
+      {
+        "nombre": "Guanábana Criolla",
+        "caracteristicas": "Fruto mediano, pulpa aromática, resistente a plagas locales."
+      },
+      {
+        "nombre": "Guanábana Gigante",
+        "caracteristicas": "Fruto grande, alto rendimiento, pulpa blanca y jugosa."
+      }
+    ],
     "riego_optimo": "Riego por goteo, 1000-1200 mm/año. Frecuencia cada 7-10 días.",
     "npk_recomendado": { "N": 70, "P": 40, "K": 90 },
+    "polinizacion_artificial": {
+      "descripcion": "La guanábana tiene baja polinización natural. Para mejorar el cuajado de frutos, se recomienda la polinización manual.",
+      "pasos": [
+        "Recolectar polen fresco de flores abiertas en la mañana.",
+        "Usar un pincel suave o hisopo para transferir el polen al estigma de otras flores.",
+        "Repetir el proceso en varias flores para asegurar buena fructificación.",
+        "Realizar la polinización manual durante 2-3 días seguidos en la época de floración."
+      ],
+      "beneficios": "Aumenta el número y tamaño de frutos, mejora la uniformidad de la cosecha."
+    },
     "plagas_comunes": [
       {
         "nombre": "Anónido",
@@ -41,6 +61,16 @@
         "uso_agroquimicos": "Compost, biofertilizantes, control biológico",
         "rendimiento_estimado": "8-12 t/ha/año"
       }
+    },
+    "cosecha": {
+      "indicadores": "Fruto cambia de verde oscuro a verde claro, cede a la presión de los dedos.",
+      "epoca": "8-10 meses después de la floración.",
+      "recomendaciones": "Cortar con tijera dejando parte del pedúnculo para evitar daños."
+    },
+    "postcosecha": {
+      "limpieza": "Lavar los frutos con agua limpia y secar a la sombra.",
+      "almacenamiento": "Mantener en lugar fresco, consumir o procesar en 3-5 días.",
+      "procesamiento": "Pulpa para jugos, helados, mermeladas y exportación."
     },
     "labores_cosecha": "Cosecha manual de frutos maduros.",
     "labores_postcosecha": "Clasificación, enfriado, empaque en cajas.",

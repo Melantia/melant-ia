@@ -1,0 +1,43 @@
+{
+  "titulo": "Curso de Biotecnología Ganadera",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Biotecnología Reproductiva",
+      "descripcion": "Técnicas como inseminación artificial, transferencia de embriones y clonación.",
+      "lecciones": [],
+      "practica": {
+        "nombre": "Inseminación Artificial",
+        "descripcion": "Procedimiento paso a paso para realizar IA en bovinos."
+      }
+    },
+    {
+      "nombre": "Genética Molecular",
+      "descripcion": "Selección genética, marcadores moleculares y edición génica.",
+      "lecciones": [],
+      "practica": {
+        "nombre": "Transferencia de Embriones",
+        "descripcion": "Guía para la transferencia y manejo de embriones."
+      }
+    },
+    {
+      "nombre": "Sanidad Animal",
+      "descripcion": "Vacunas recombinantes, diagnóstico molecular y control de enfermedades.",
+      "lecciones": [],
+      "practica": {
+        "nombre": "Diagnóstico Molecular de Enfermedades",
+        "descripcion": "Uso de kits y técnicas PCR para detección de patógenos."
+      }
+    },
+    {
+      "nombre": "Nutrición Biotecnológica",
+      "descripcion": "Uso de enzimas, aditivos y mejoras en la alimentación animal.",
+      "lecciones": [],
+      "practica": {
+        "nombre": "Mejoras en la Nutrición Animal",
+        "descripcion": "Aplicación de aditivos y enzimas para optimizar la alimentación."
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "voz_principal": "Angel",
+  "descripcion": "Bienvenido a la Gestión de Granjas. Aquí puedes registrar tu finca, llevar el control de tus animales (cantidad, razas, edades, vacunación), registrar eventos importantes (ventas, nacimientos, tratamientos), subir documentos y reportes, gestionar ventas y recibir soporte técnico. Angel te guiará paso a paso y te explicará los beneficios de tener toda la información organizada y accesible.",
+  "beneficios": [
+    "Registro y gestión de tu finca/granja",
+    "Registro de animales (cantidad, razas, edades, vacunación, etc.)",
+    "Trazabilidad y evidencia (fotos, GPS, eventos sanitarios, ventas, nacimientos, muertes, tratamientos)",
+    "Ventas y negocios (publicar cerdos/productos, gestionar ventas, pagos y entregas)",
+    "Documentos y reportes (certificados, guías, reportes técnicos, documentos legales)",
+    "Soporte técnico (asistencia veterinaria, manuales, cursos, contacto con técnicos o comunidad)",
+    "Alertas y notificaciones (vacunaciones, ventas, pagos, recomendaciones)"
+  ]
+}

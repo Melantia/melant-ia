@@ -1,0 +1,57 @@
+{
+  "titulo": "Curso de Ganadería Biotecnológica",
+  "idioma": "es",
+  "precio": 10,
+  "modulos": [
+    {
+      "nombre": "Inseminación Artificial (IA)",
+      "descripcion": "Protocolo completo de IA, manejo de termo, detección de celo y anatomía reproductiva.",
+      "lecciones": ["Manual de Inseminación Artificial de Agrosavia"],
+      "practica": {
+        "nombre": "IA paso a paso",
+        "descripcion": "Descongelación, uso de pistola, depósito de semen y control de higiene.",
+        "materiales": [
+          "Termo de nitrógeno líquido",
+          "Pajillas de semen",
+          "Pistola de inseminación",
+          "Fundas descartables",
+          "Termo descongelador",
+          "Pinzas y corta-pajillas",
+          "Guantes de palpación",
+          "Lubricante obstétrico"
+        ]
+      }
+    },
+    {
+      "nombre": "Transferencia de Embriones (TE)",
+      "descripcion": "Superovulación, preparación de donantes y receptoras, protocolos de transferencia.",
+      "lecciones": ["Protocolos del INIFAP: https://vun.inifap.gob.mx/"],
+      "practica": {
+        "nombre": "TE paso a paso",
+        "descripcion": "Aplicación de hormonas, recolección y transferencia de embriones.",
+        "materiales": [
+          "Hormonas (FSH/LH)",
+          "Medios de cultivo",
+          "Filtros de recolección",
+          "Estereomicroscopio",
+          "Catéteres de transferencia"
+        ]
+      }
+    },
+    {
+      "nombre": "Sanidad y Vacunación",
+      "descripcion": "Aplicación de vacunas, biológicos y trazabilidad sanitaria.",
+      "lecciones": ["Manual de Buenas Prácticas Ganaderas (FAO)"],
+      "practica": {
+        "nombre": "Vacunación segura",
+        "descripcion": "Cadena de frío, uso de jeringas automáticas y desinfección.",
+        "materiales": [
+          "Neveras portátiles",
+          "Jeringas automáticas",
+          "Agujas descartables (G16, G18)",
+          "Desinfectantes"
+        ]
+      }
+    }
+  ]
+}

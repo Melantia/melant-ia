@@ -1,0 +1,95 @@
+{
+  "cursos_avanzados": [
+    {
+      "nombre": "Edafología y Nutrición Vegetal con Enfoque Regenerativo 4.0",
+      "objetivo": "Capacitar en la interpretación científica del suelo y el diseño de planes de nutrición integrados que optimicen el uso de insumos químicos y maximicen los biológicos.",
+      "modulos": [
+        {
+          "titulo": "Física y Biología: El Hogar de los Nutrientes",
+          "temas": [
+            {
+              "tema": "Textura y Estructura del Suelo",
+              "contenido": "Densidad aparente, porosidad y capacidad de retención de agua. Cómo la materia orgánica modifica la física del suelo.",
+              "practica_app": "Uso del sensor de humedad para calcular la Capacidad de Campo y Punto de Marchitez Permanente."
+            },
+            {
+              "tema": "Microbiología del Suelo (El Cromatograma)",
+              "contenido": "Red trófica del suelo: Hongos micorrízicos, bacterias fijadoras de N y solubilizadoras de P.",
+              "practica_app": "Registro visual de salud de raíces y presencia de nódulos en leguminosas."
+            }
+          ]
+        },
+        {
+          "titulo": "Química del Suelo y Lectura de Análisis",
+          "temas": [
+            {
+              "tema": "Capacidad de Intercambio Catiónico (CIC)",
+              "contenido": "Entender la 'despensa' del suelo. Saturación de bases (Ca, Mg, K) y el papel del Aluminio/Hidrógeno en la acidez.",
+              "practica_app": "Calculadora de enmiendas: Ingreso de datos de laboratorio para calcular dosis de cal dolomita o yeso."
+            },
+            {
+              "tema": "Antagonismos y Sinergismos Nutricionales",
+              "contenido": "La Ley del Mínimo de Liebig y el Diagrama de Mulders. Por qué el exceso de Potasio bloquea el Magnesio.",
+              "practica_app": "Algoritmo de balance de bases para la optimización de la fórmula NPK."
+            }
+          ]
+        },
+        {
+          "titulo": "Nutrición Regenerativa y Fabricación de Insumos",
+          "temas": [
+            {
+              "tema": "Quelatación Orgánica",
+              "contenido": "Uso de ácidos húmicos y fúlvicos para transportar minerales a la planta.",
+              "practica_app": "Recetario interactivo de quelatos caseros (minerales + melaza)."
+            },
+            {
+              "tema": "Cromatografía de Pfeiffer",
+              "contenido": "Análisis cualitativo del suelo para medir la integración de minerales, materia orgánica y microorganismos.",
+              "practica_app": "Repositorio de imágenes de cromatogramas para comparación offline."
+            }
+          ]
+        },
+        {
+          "titulo": "Integración con Sensores e IA",
+          "temas": [
+            {
+              "tema": "Monitoreo en Tiempo Real con Sondas NPK",
+              "contenido": "Correlación entre la conductividad eléctrica (EC) y la disponibilidad de sales nutricionales.",
+              "practica_app": "Graficación de curvas de absorción de nutrientes por etapa fenológica."
+            }
+          ]
+        }
+      ],
+      "bibliografia_maestra": [
+        {
+          "autor": "Jairo Restrepo Rivera",
+          "titulo": "El ABC de la Agricultura Orgánica",
+          "año": "2007",
+          "tema": "Remineralización de suelos y bioles."
+        },
+        {
+          "autor": "Fassaert, C. & Pfeiffer, E.",
+          "titulo": "Biodynamic Farming Practice",
+          "tema": "Cromatografía y salud del suelo."
+        },
+        {
+          "autor": "Havlin, J. L., et al.",
+          "titulo": "Soil Fertility and Fertilizers",
+          "edicion": "8th Edition",
+          "tema": "Base científica académica para nutrición vegetal."
+        },
+        {
+          "autor": "INIAP Ecuador",
+          "titulo": "Guía para la Interpretación de Análisis de Suelos y Aguas",
+          "año": "2019",
+          "tema": "Tablas de niveles críticos para cultivos locales (Arroz, Maíz, Banano)."
+        },
+        {
+          "autor": "Albrecht, W. A.",
+          "titulo": "The Albrecht Papers",
+          "tema": "Teoría del equilibrio de cationes en el suelo."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "curso_especializado": {
+    "titulo": "El Ciudadano Rural – Empresario y Exportador",
+    "objetivo": "Transformar al productor en empresario rural, capaz de certificar, calcular costos y exportar usando la App como oficina móvil.",
+    "clases": [
+      {
+        "clase": 1,
+        "titulo": "Economía del Campo: ¿Cuánto gano realmente?",
+        "teoria": "Diferencia entre flujo de caja y rentabilidad. El concepto de punto de equilibrio.",
+        "practica": "Registro digital de egresos (jornales, insumos, transporte) vs. ingresos por ventas en la App.",
+        "manual": "manual_economia_campo.pdf"
+      },
+      {
+        "clase": 2,
+        "titulo": "Certificaciones y Calidad: El pasaporte al mundo",
+        "teoria": "Estándares Global GAP, Certificación Orgánica y Comercio Justo.",
+        "practica": "Uso del módulo de trazabilidad y cuaderno de campo digital.",
+        "manual": "manual_certificaciones_calidad.pdf"
+      },
+      {
+        "clase": 3,
+        "titulo": "Logística y Mercados Internacionales",
+        "teoria": "Incoterms básicos, cadena de frío y asociatividad para exportar en volumen.",
+        "practica": "Consulta de precios referenciales y diseño de ruta de exportación en la App.",
+        "manual": "manual_logistica_mercados.pdf"
+      },
+      {
+        "clase": 4,
+        "titulo": "Simulador Gasto vs. Inversión",
+        "teoria": "Comparación de escenarios: químico caro vs. bioinsumo certificado.",
+        "practica": "Simulación en la App: Ahorro y acceso a mercados premium.",
+        "manual": "manual_simulador_gasto_inversion.pdf"
+      },
+      {
+        "clase": 5,
+        "titulo": "Asociatividad Digital y Negociación",
+        "teoria": "Cómo consolidar datos y negociar en grupo ante exportadoras.",
+        "practica": "Uso de la App para crear grupos y negociar precios.",
+        "manual": "manual_asociatividad_digital.pdf"
+      },
+      {
+        "clase": 6,
+        "titulo": "Trazabilidad y Exportación Directa",
+        "teoria": "El valor del dato, periodos de carencia y exportación premium.",
+        "practica": "Generación automática del Cuaderno de Campo y PDF de exportación.",
+        "manual": "manual_trazabilidad_exportacion.pdf"
+      }
+    ],
+    "bibliografia": [
+      {"autor": "EdX / BID", "titulo": "Gestión de Agronegocios en América Latina."},
+      {"autor": "FAO", "titulo": "E-learning: Cadenas de valor alimentarias sostenibles."},
+      {"autor": "PROECUADOR", "titulo": "Programas de capacitación para Pymexportadores."},
+      {"autor": "Zamorano University", "titulo": "Diplomado en Administración de Empresas Agrícolas."}
+    ]
+  }
+}

@@ -1,1 +1,63 @@
- 
+{
+  "normativas": [
+    {
+      "nombre": "ISO 14068-1:2023",
+      "descripcion": "Norma internacional para la neutralidad de carbono. Define requisitos para remociones y reducciones válidas globalmente."
+    },
+    {
+      "nombre": "ISO 14067",
+      "descripcion": "Huella de carbono de productos. Específica para análisis de productos agrícolas y forestales."
+    },
+    {
+      "nombre": "Artículo 6 Acuerdo de París",
+      "descripcion": "Reglas para la transferencia internacional de resultados de mitigación."
+    },
+    {
+      "nombre": "Verra (VCS) / Gold Standard",
+      "descripcion": "Estándares de certificación reconocidos internacionalmente para proyectos de carbono."
+    }
+  ],
+  "campos_obligatorios": {
+    "linea_base": [
+      "escenario_referencia",
+      "adicionalidad"
+    ],
+    "cuantificacion_tecnica": [
+      "tipo_proyecto",
+      "ubicacion_geografica",
+      "factor_emision_captura",
+      "formula_estandar"
+    ],
+    "atributos_calidad": [
+      "permanencia",
+      "fugas",
+      "verificacion_terceros"
+    ]
+  },
+  "fuentes_oficiales": [
+    "Inventario Nacional de GEI",
+    "IPCC",
+    "ClimatePartner",
+    "CarbonSpace",
+    "Sylvera"
+  ],
+  "precio_referencia_2026": {
+    "tecnologico": {
+      "min": 170,
+      "max": 500,
+      "moneda": "USD/ton CO2"
+    },
+    "natural": {
+      "min": 7,
+      "max": 24,
+      "moneda": "USD/ton CO2"
+    }
+  },
+  "enlaces": [
+    "https://weya.academy/iso-14068-carbono-neutral/",
+    "https://www.bureauveritas.es/certificacion/medioambiente-y-sostenibilidad/iso-14067-huella-de-carbono",
+    "https://www.carbonneutralplus.com/articulo-6-del-acuerdo-de-paris-3-aspectos-clave-del-mercado-de-carbono/",
+    "https://latcarbon.com/glosario/",
+    "https://www.sylvera.com/es/blog/carbon-offset-price"
+  ]
+}

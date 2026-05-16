@@ -1,0 +1,76 @@
+{
+  "bioinsumos": [
+    {
+      "nombre": "Biol de Raquis de Banano",
+      "cultivos_recomendados": ["Cacao", "Banano", "Plátano"],
+      "ingredientes": [
+        "20 kg de raquis de banano picado",
+        "10 kg de estiércol fresco (vacuno o gallinaza)",
+        "10 L de melaza o panela disuelta",
+        "1 L de microorganismos eficientes (EM)",
+        "100 L de agua"
+      ],
+      "preparacion": [
+        "Colocar todos los ingredientes en un tanque plástico con tapa.",
+        "Mezclar bien y tapar herméticamente.",
+        "Abrir y remover cada 2 días durante 21 días.",
+        "Filtrar y almacenar en envases oscuros."
+      ],
+      "dosis_uso": "Aplicar 20-30 L/ha diluido en agua al 5% vía riego o foliar cada 15 días."
+    },
+    {
+      "nombre": "Bocashi (Abono Fermentado)",
+      "cultivos_recomendados": ["Tomate", "Cebolla", "Hortalizas", "Frutales"],
+      "ingredientes": [
+        "100 kg de estiércol fresco",
+        "100 kg de salvado de arroz o afrecho",
+        "10 kg de carbón vegetal molido",
+        "10 kg de tierra de bosque",
+        "10 kg de ceniza",
+        "5 kg de cal agrícola",
+        "10 L de melaza",
+        "10 L de microorganismos eficientes (EM)",
+        "Agua suficiente para humedecer"
+      ],
+      "preparacion": [
+        "Mezclar todos los ingredientes en capas sobre una lona.",
+        "Humedecer hasta que al apretar la mezcla salga una gota de agua.",
+        "Tapar con lona y remover cada 2 días durante 15 días.",
+        "El bocashi estará listo cuando huela a tierra fresca y no a amoníaco."
+      ],
+      "dosis_uso": "Aplicar 2-4 t/ha al momento de la siembra o trasplante."
+    },
+    {
+      "nombre": "Biofermento de Fréjol de Palo",
+      "cultivos_recomendados": ["Leguminosas", "Maní", "Fréjol", "Habas"],
+      "ingredientes": [
+        "10 kg de hojas verdes de fréjol de palo",
+        "5 kg de estiércol fresco",
+        "5 L de melaza",
+        "1 L de EM",
+        "50 L de agua"
+      ],
+      "preparacion": [
+        "Picar las hojas y mezclar con los demás ingredientes en un tanque.",
+        "Tapar y fermentar 15 días, removiendo cada 3 días.",
+        "Filtrar antes de usar."
+      ],
+      "dosis_uso": "Aplicar 10-20 L/ha diluido al 5% en agua, vía foliar o riego."
+    },
+    {
+      "nombre": "Té de Compost",
+      "cultivos_recomendados": ["Universal"],
+      "ingredientes": [
+        "5 kg de compost maduro",
+        "50 L de agua",
+        "0.5 L de melaza"
+      ],
+      "preparacion": [
+        "Colocar el compost en una malla o costal y sumergir en el agua.",
+        "Agregar la melaza y airear (manual o con bomba de aire) durante 24-48 horas.",
+        "Filtrar antes de aplicar."
+      ],
+      "dosis_uso": "Aplicar 10-20 L/ha vía foliar o riego cada 15 días."
+    }
+  ]
+}

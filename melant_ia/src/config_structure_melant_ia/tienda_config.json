@@ -1,0 +1,50 @@
+{
+  "identidad": {
+    "permite_logo_usuario": true,
+    "generador_nombres_ia": "Fabrizzio",
+    "estilos_etiqueta": [
+      {
+        "nombre": "Origen Orgánico",
+        "diseno": "Silueta minimalista de una hoja o grano de café rodeada por un círculo rústico.",
+        "tipografia": "Hecha a mano, legible.",
+        "ideal_para": "Productores de café especial, miel o frutas orgánicas."
+      },
+      {
+        "nombre": "Sello de Calidad",
+        "diseno": "Escudo o emblema tipo Garantía, líneas rectas y limpias.",
+        "tipografia": "Moderna y fuerte (Sans Serif).",
+        "ideal_para": "Tiendas de insumos, herramientas o asociaciones que quieren transmitir seriedad y confianza."
+      },
+      {
+        "nombre": "Herencia Rural",
+        "diseno": "Icono de montaña o casa de campo simplificada.",
+        "tipografia": "Clásica, elegante y tradicional.",
+        "ideal_para": "Agroturismo o fincas con historia."
+      }
+    ],
+    "estilo_etiqueta_por_defecto": "Origen Orgánico",
+    "sugerencia_etiqueta": "Si el productor no tiene logo, la App genera una etiqueta digital limpia con el nombre elegido y un icono de planta. Fabrizzio ofrece tres estilos visuales para elegir al crear la tienda."
+  },
+  "comercial": {
+    "link_personalizado": true,
+    "notificacion_venta_vendedor": "Don Eloy",
+    "integracion_pagos": ["Efectivo", "Transferencia", "Melantia Pay"],
+    "boton_compartir_vitrina": {
+      "texto": "Compartir mi Vitrina",
+      "mensaje_whatsapp": "¡Hola! Soy [Nombre], te invito a conocer mis productos en mi tienda MELANTIA: [Link]"
+    }
+  },
+  "emprendedor": {
+    "plan_requerido": "BASICO",
+    "max_productos": 10,
+    "puede_usar_tienda": true,
+    "debe_estar_al_dia": true,
+    "descripcion": "Solo puede publicar productos y servicios si tiene activa la suscripción del Plan BASICO. Puede usar la tienda MELANTIA y publicar hasta 10 productos. Debe estar al día para utilizar la app y sus beneficios."
+  },
+  "gestion_empresarial": {
+    "semaforo_gastos": true,
+    "asistente_precios": true,
+    "descripcion_semaforo": "Círculo verde si las ventas superan los gastos, rojo si se gasta más de lo que entra.",
+    "descripcion_precios": "Angel sugiere precio mínimo según gastos para asegurar ganancia."
+  }
+}

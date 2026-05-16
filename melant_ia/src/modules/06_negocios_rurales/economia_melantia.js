@@ -1,3 +1,31 @@
+// --- LÓGICA DE NEGOCIOS RURALES MELANTIA ---
+/**
+ * Tienda MELANTIA:
+ * - Dirigida a almacenes, ferreterías, farmacias y comercios que deseen vender desde la app.
+ * - Permite publicar productos, ofertas, gestionar inventario, mostrar catálogo virtual y vender desde la aplicación.
+ * - Las tiendas tienen 3 meses gratis; luego pagan $25 mensuales.
+ * - NO pagan comisiones por venta (ni 3% ni 5%), solo la mensualidad fija.
+ *
+ * Bienes Raíces Rurales:
+ * - Intermediación de propiedades con depósito en garantía.
+ * - Evidencia fotográfica/GPS y notarial.
+ * - Contratos automáticos y doble conformidad (comprador/vendedor).
+ * - Liberación de fondos solo tras verificación legal.
+ * - Reportes mensuales.
+ * - Comisiones: 3-5% por venta, pagos directos y custodia de dinero hasta entrega confirmada por QR.
+ *
+ * Emprendedores:
+ * - Pueden publicar productos y servicios solo si tienen la suscripción del Plan Standard.
+ *
+ * Profesionales:
+ * - Pueden publicar sus servicios solo si tienen contratado el Plan Standard.
+ *
+ * Integración de personajes (Bienes Raíces):
+ * - Don Eloy: comercio y mediación.
+ * - Angel: finanzas y custodia.
+ * - Dr. Pablo: asesoría legal.
+ */
+
 // --- ANEXO: Configuración y lógica de recompensas Melantios en cascada para sistema de afiliados ---
 const RECOMPENSAS_MELANTIOS = {
   distribucion_cascada: {
@@ -87,3 +115,40 @@ function calcularCreditoDisponible(melantios, mesesAhorro) {
 // Ejemplo de uso:
 // calcularRetiroNeto(7000, 3) // Retiro neto tras 3 meses
 // calcularCreditoDisponible(14000, 12) // Crédito tras 12 meses
+
+// --- TARIFAS Y VALIDACIONES DE TIENDAS MELANTIA ---
+/**
+ * Las tiendas solo pagan una mensualidad fija de $25 USD después de 3 meses gratis.
+ * No se aplica comisión por venta (0%).
+ */
+const TARIFA_MENSUAL_TIENDA = 25; // USD
+const MESES_GRATIS_TIENDA = 3;
+
+function calcularCostoTienda(mesActual) {
+  // Retorna 0 si está en meses gratis, si no retorna la tarifa mensual
+  return mesActual <= MESES_GRATIS_TIENDA ? 0 : TARIFA_MENSUAL_TIENDA;
+}
+
+function calcularComisionTienda(tipoNegocio) {
+  // Si es tienda MELANTIA, la comisión es 0
+  if (tipoNegocio === 'tienda') return 0;
+  // Para bienes raíces, comisión estándar 3% a 5%
+  if (tipoNegocio === 'bienes_raices') return 0.04; // 4% ejemplo
+  // Otros tipos pueden tener lógica adicional
+  return null;
+}
+
+function puedePublicarProducto(usuario) {
+  // Tiendas: siempre pueden publicar si están al día en la mensualidad
+  if (usuario.tipo === 'tienda') {
+    return usuario.mesPagado >= usuario.mesActual;
+  }
+  // Emprendedores y profesionales: solo si tienen Plan Standard activo
+  if (
+    (usuario.tipo === 'emprendedor' || usuario.tipo === 'profesional') &&
+    usuario.planStandardActivo
+  ) {
+    return true;
+  }
+  return false;
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "tipo": "imagen",
+    "tema": "Moniliasis en cacao",
+    "descripcion": "Mazorca con puntos amarillos y polvo blanco (esporas)",
+    "archivo": "imagenes/moniliasis_cacao_1.jpg"
+  },
+  {
+    "tipo": "imagen",
+    "tema": "Mazorca negra (Phytophthora)",
+    "descripcion": "Fruto con mancha café chocolate que avanza rápidamente",
+    "archivo": "imagenes/mazorca_negra_1.jpg"
+  },
+  {
+    "tipo": "imagen",
+    "tema": "Escoba de bruja",
+    "descripcion": "Brotes deformes y escobas en ramas de cacao",
+    "archivo": "imagenes/escoba_bruja_1.jpg"
+  },
+  {
+    "tipo": "video",
+    "tema": "Control de Monalonion en cacao",
+    "descripcion": "Video explicativo sobre el manejo integrado del chinche del cacao",
+    "enlace": "https://www.youtube.com/watch?v=EjemploMonalonion"
+  },
+  {
+    "tipo": "video",
+    "tema": "Pudrición del cogollo en palma",
+    "descripcion": "Síntomas y manejo de PC en campo",
+    "enlace": "https://www.youtube.com/watch?v=EjemploPCPalma"
+  },
+  {
+    "tipo": "video",
+    "tema": "Poda de formación en cacao",
+    "descripcion": "Video práctico sobre cómo realizar la poda de formación en plantas jóvenes de cacao.",
+    "enlace": "https://www.youtube.com/watch?v=EjemploPodaFormacionCacao"
+  },
+  {
+    "tipo": "video",
+    "tema": "Poda de mantenimiento y rehabilitación en cacao",
+    "descripcion": "Técnicas para mantener y rehabilitar plantaciones de cacao adultas.",
+    "enlace": "https://www.youtube.com/watch?v=EjemploPodaMantenimientoCacao"
+  },
+  {
+    "curso": "aprovechamiento_limon_sutil",
+    "videos": [
+      {
+        "titulo": "Extracción de zumo de limón sutil",
+        "url": "videos/extraccion_zumo_limon_sutil.mp4"
+      },
+      {
+        "titulo": "Obtención de aceites esenciales y rayado superficial",
+        "url": "videos/aceites_rayado_limon_sutil.mp4"
+      },
+      {
+        "titulo": "Elaboración de licores artesanales de limón sutil",
+        "url": "videos/licores_limon_sutil.mp4"
+      }
+    ]
+  }
+]

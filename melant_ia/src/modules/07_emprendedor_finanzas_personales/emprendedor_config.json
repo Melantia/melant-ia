@@ -1,0 +1,40 @@
+{
+  "portafolio": {
+    "max_productos": 4,
+    "max_fotos_por_producto": 4,
+    "optimizacion_foto_kb": 150,
+    "formato_salida": "PDF+QR",
+    "campos_producto": [
+      "nombre_producto",
+      "descripcion",
+      "virtudes",
+      "caracteristicas",
+      "precio",
+      "fotos"
+    ],
+    "permite_envio_whatsapp": true,
+    "permite_impresion": true,
+    "permite_qr": true
+  },
+  "agenda_ferias_eventos": {
+    "fuente_datos": "offline+online",
+    "ciudades_destacadas": ["Quito", "Guayaquil", "Cuenca"],
+    "filtrado_por_ubicacion": true,
+    "permite_recordatorios": true,
+    "permite_marcar_interes": true
+  },
+  "simulador_precio_puerta_finca": {
+    "asistente": "Angel",
+    "campos": ["jornales", "insumos", "transporte", "otros_costos"],
+    "sugerencia_venta_feria": 0.15
+  },
+  "asistente_negociacion": {
+    "frases_ganadoras": true,
+    "voz_don_eloy": true,
+    "voz_fabrizzio": true,
+    "personalizacion_por_producto": true
+  },
+  "mensajes_motivacionales": {
+    "don_eloy": "¡Vea patrón, con esta herramienta el emprendedor ya no va a ciegas a la ciudad!..."
+  }
+}

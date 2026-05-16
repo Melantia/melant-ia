@@ -1,0 +1,49 @@
+<ScreenQR@BoxLayout>:
+    orientation: 'vertical'
+    padding: dp(16)
+    spacing: dp(12)
+    Label:
+        text: 'Tu Portafolio de Negocios'
+        font_size: dp(22)
+        bold: True
+        size_hint_y: None
+        height: dp(40)
+    Image:
+        id: qr_img
+        size_hint: None, None
+        size: dp(220), dp(220)
+        allow_stretch: True
+        keep_ratio: True
+        pos_hint: {'center_x':0.5}
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: dp(80)
+        spacing: dp(8)
+        canvas.before:
+            Color:
+                rgba: .97,.97,.97,1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [10]
+        Image:
+            source: app.fotos[0] if len(app.fotos)>0 else ''
+            allow_stretch: True
+            keep_ratio: True
+        Image:
+            source: app.fotos[1] if len(app.fotos)>1 else ''
+            allow_stretch: True
+            keep_ratio: True
+        Image:
+            source: app.fotos[2] if len(app.fotos)>2 else ''
+            allow_stretch: True
+            keep_ratio: True
+    Button:
+        text: 'Presentar al Comerciante'
+        background_color: 0,.7,0,1
+        color: 1,1,1,1
+        font_size: dp(18)
+        size_hint_y: None
+        height: dp(50)
+        on_release: app.compartir_whatsapp()

@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "El Guagua Auca",
+    "region": "Sierra",
+    "categoria": "Leyenda",
+    "descripcion": "El espíritu de un niño no bautizado que llora en los caminos para atraer a los viajeros y perderlos."
+  },
+  {
+    "titulo": "La Capilla de Cantuña",
+    "region": "Sierra",
+    "categoria": "Leyenda",
+    "descripcion": "El pacto más famoso de Quito sobre la construcción del atrio de San Francisco."
+  },
+  {
+    "titulo": "El Animero",
+    "region": "Sierra",
+    "categoria": "Personaje",
+    "descripcion": "Personaje real de pueblos como Penipe que, durante noviembre, sale a pedir oraciones por las almas del purgatorio con una campana."
+  },
+  {
+    "titulo": "La Llorona",
+    "region": "Sierra",
+    "categoria": "Leyenda",
+    "descripcion": "Con variantes locales, es la mujer que busca a sus hijos en las orillas de los ríos serranos."
+  },
+  {
+    "titulo": "El Cuyaya",
+    "region": "Sierra",
+    "categoria": "Caso",
+    "descripcion": "Relato corto de encuentro con lo sobrenatural en el páramo."
+  }
+]

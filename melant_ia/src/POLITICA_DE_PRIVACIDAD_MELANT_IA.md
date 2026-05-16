@@ -8,8 +8,8 @@ MELANTIA (en adelante, "la Plataforma") es responsable del tratamiento de los da
 
 Contacto del responsable:
 
-- Correo: contacto@melantia.com
-- Canal de soporte: definir (WhatsApp o correo oficial)
+- Correo institucional: melantiapro@gmail.com
+- Canal de soporte oficial: melantiapro@gmail.com
 
 ## 2. Alcance
 

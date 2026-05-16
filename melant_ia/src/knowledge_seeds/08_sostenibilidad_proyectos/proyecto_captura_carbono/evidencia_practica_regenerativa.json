@@ -1,0 +1,58 @@
+{
+  "productor_id": "UUID",
+  "practicas": [
+    {
+      "practica_id": "compostaje",
+      "nombre": "Elaboración de Compost Orgánico",
+      "evidencias": [
+        {
+          "tipo": "A",
+          "descripcion": "Materiales (Alistamiento de insumos)",
+          "foto": "IMG_001.jpg",
+          "gps": [-80.123, -1.234],
+          "timestamp": "2026-04-20T10:00:00Z",
+          "validada": true
+        },
+        {
+          "tipo": "B",
+          "descripcion": "Proceso (Ejecución de la práctica)",
+          "foto": "IMG_002.jpg",
+          "gps": [-80.123, -1.234],
+          "timestamp": "2026-04-20T10:10:00Z",
+          "validada": true
+        },
+        {
+          "tipo": "C",
+          "descripcion": "Terminado (Producto o actividad finalizada)",
+          "foto": "IMG_003.jpg",
+          "gps": [-80.123, -1.234],
+          "timestamp": "2026-04-20T10:20:00Z",
+          "validada": true
+        },
+        {
+          "tipo": "D",
+          "descripcion": "Aplicado (Uso real en el cultivo o ganado)",
+          "foto": "IMG_004.jpg",
+          "gps": [-80.123, -1.234],
+          "timestamp": "2026-04-20T10:30:00Z",
+          "validada": true
+        }
+      ],
+      "estrella_dorada": true,
+      "fecha_completado": "2026-04-20"
+    }
+    // ...más prácticas
+  ],
+  "certificado": {
+    "habilitado": true,
+    "fecha_emision": "2026-10-20",
+    "qr_certificado": "https://escuela.melant-ia.com/certificado/UUID",
+    "checklist_evidencia": [
+      "Compostaje: 4 evidencias validadas",
+      "Cobertura: 4 evidencias validadas",
+      "Biol: 4 evidencias validadas",
+      "Pastoreo: 4 evidencias validadas",
+      "..."
+    ]
+  }
+}

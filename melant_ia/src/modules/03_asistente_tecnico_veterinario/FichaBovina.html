@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Identidad Bovina - MELANT IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <style>
+    :root{
+      --bg:#ecf4ef;
+      --ink:#153527;
+      --muted:#5d6f64;
+      --green-1:#173f2b;
+      --green-2:#2f7850;
+      --silver:#aeb8c4;
+      --blue-dark:#224a7a;
+      --earth:#8a6a4b;
+      --danger:#c92a2a;
+      --gold-1:#fff2b8;
+      --gold-2:#dba83f;
+      --gold-3:#8b611a;
+      --shadow:0 20px 44px rgba(20,44,31,.16);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"DM Sans","Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 5%,#d7eadf 0%,transparent 28%),
+        radial-gradient(circle at 84% 95%,#e6d8ca 0%,transparent 33%),
+        var(--bg);
+      padding:16px;
+    }
+    .wrap{max-width:940px;margin:0 auto;}
+    .toolbar{margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;}
+    .toolbar select,.toolbar input{border:1px solid #cfe1d5;border-radius:10px;padding:8px 10px;font-size:.9rem;background:#fff;}
+
+    .card{background:linear-gradient(145deg,var(--green-1),var(--green-2) 54%,#9a7c5f);border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.25);color:#f2ebdf;}
+    .banner{display:none;background:var(--danger);color:#fff;text-align:center;padding:10px 12px;font-weight:700;font-size:.9rem;}
+    .head{padding:18px 16px 10px;display:flex;align-items:center;gap:12px;}
+    .photo-wrap{position:relative;width:92px;height:92px;}
+    .avatar{width:92px;height:92px;border-radius:50%;border:3px solid rgba(255,255,255,.32);object-fit:cover;background:rgba(255,255,255,.2);}
+
+    .seal{
+      position:absolute;right:-6px;bottom:-8px;
+      width:44px;height:44px;border-radius:50%;display:none;
+      align-items:center;justify-content:center;cursor:pointer;
+      background:radial-gradient(circle at 30% 28%,var(--gold-1),var(--gold-2) 55%,var(--gold-3));
+      color:#4d3209;border:1px solid rgba(255,255,255,.5);
+      box-shadow:0 0 0 2px rgba(255,214,119,.35),0 0 20px rgba(255,214,119,.6);
+      animation:sealGlow 1.6s ease-in-out infinite alternate;
+      font-size:20px;font-weight:700;
+    }
+    @keyframes sealGlow{from{transform:scale(1)}to{transform:scale(1.06)}}
+    .seal-tip{
+      position:absolute;
+      bottom:44px;
+      right:-16px;
+      min-width:220px;
+      background:rgba(17,24,20,.94);
+      color:#f6f0e1;
+      padding:8px 10px;
+      border-radius:10px;
+      font-size:.76rem;
+      line-height:1.4;
+      border:1px solid rgba(255,255,255,.2);
+      display:none;
+    }
+    .seal.show-tip .seal-tip{display:block;}
+
+    .title h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:1.25rem;}
+    .title p{margin:4px 0 0;color:#e8ddcf;font-size:.88rem}
+    .badge{display:inline-block;margin-top:8px;padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:700;color:#fff;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.3);}
+    .bio-badge{display:none;margin-top:8px;padding:6px 12px;border-radius:999px;font-size:.74rem;font-weight:700;color:#103b29;background:linear-gradient(135deg,#d8ffb8,#8be28f);border:1px solid rgba(255,255,255,.35);box-shadow:0 0 16px rgba(139,226,143,.35);}
+    .gold-sprout{display:none;margin-top:8px;padding:6px 12px;border-radius:999px;font-size:.74rem;font-weight:700;color:#4b3208;background:linear-gradient(135deg,#fff2b8,#dba83f);border:1px solid rgba(255,255,255,.35);box-shadow:0 0 16px rgba(255,214,119,.35);}
+
+    .body{padding:10px 16px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+    .item{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:9px;font-size:.84rem;}
+    .item .k{display:flex;align-items:center;gap:6px;color:#e8dfd1}
+    .item .v{margin-top:4px;font-weight:700;font-size:.95rem;color:#fff}
+
+    .extra,.gallery{margin:0 16px 14px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:10px;font-size:.84rem;}
+    .chart{margin-top:8px;height:70px;border-radius:10px;background:rgba(255,255,255,.16);padding:8px;display:flex;align-items:flex-end;gap:6px;}
+    .bar{flex:1;border-radius:6px 6px 2px 2px;background:rgba(255,255,255,.55)}
+
+    .carousel{margin-top:8px;position:relative;overflow:hidden;border-radius:10px;height:170px;background:rgba(13,24,19,.28);}
+    .track{display:flex;transition:transform .35s ease;height:100%;}
+    .slide{min-width:100%;height:100%;position:relative;}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block;}
+    .stage{position:absolute;left:10px;bottom:8px;background:rgba(10,14,12,.58);padding:4px 8px;border-radius:8px;color:#f4eee2;font-size:.75rem;}
+    .car-btn{position:absolute;top:50%;transform:translateY(-50%);border:none;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;cursor:pointer;}
+    .car-btn.prev{left:8px}.car-btn.next{right:8px}
+    .dots{margin-top:8px;display:flex;gap:6px;justify-content:center;}
+    .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.34);cursor:pointer;}
+    .dot.active{background:#fff}
+
+    .footer{background:#f8fdf9;color:var(--ink);padding:14px;display:grid;grid-template-columns:1fr;gap:8px;}
+    .btn{border:none;border-radius:12px;padding:12px;font-weight:700;font-size:.92rem;cursor:pointer;}
+    .btn-wa{background:#1f8a4e;color:#f1fff6}
+    .btn-pdf{background:#e9f3ec;color:#1f4c35;border:1px solid #cfe3d5}
+    .btn-edit{display:none;background:#1f4c35;color:#edf8f0}
+
+    @media(min-width:760px){
+      .footer{grid-template-columns:repeat(3,1fr)}
+      .head{padding:20px 20px 10px}
+      .body{padding:10px 20px 14px}
+      .extra,.gallery{margin:0 20px 16px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="toolbar">
+      <select id="razaSelect">
+        <option>Brahman</option>
+        <option>Girolando</option>
+        <option>Brown Swiss</option>
+      </select>
+      <select id="modoScan">
+        <option value="dueno">Escaneo Dueno</option>
+        <option value="publico">Escaneo Publico</option>
+      </select>
+      <label style="display:flex;align-items:center;gap:6px;color:#244634;font-size:.88rem;"><input type="checkbox" id="vacunasDia" checked /> Vacunas al dia</label>
+      <label style="display:flex;align-items:center;gap:6px;color:#244634;font-size:.88rem;"><input type="checkbox" id="retiroLeche" /> Retiro de leche activo</label>
+      <label style="display:flex;align-items:center;gap:6px;color:#244634;font-size:.88rem;"><input type="checkbox" id="manejoBiologico" /> Beauveria aplicada</label>
+      <input id="inputGdp" type="number" step="1" value="790" placeholder="GDP g/dia" title="Brahman: >750" />
+      <input id="inputLeche" type="number" step="0.1" value="13.2" placeholder="Leche L/dia" title="Girolando: >12" />
+      <input id="inputGrasa" type="number" step="0.1" value="3.7" placeholder="Grasa %" title="Brown Swiss: >3.5" />
+    </div>
+
+    <section class="card" id="fichaCard">
+      <div class="banner" id="redBanner">PRODUCTO NO APTO PARA VENTA</div>
+      <header class="head">
+        <div class="photo-wrap">
+          <img class="avatar" id="fotoAnimal" src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?q=80&w=600&auto=format&fit=crop" alt="Foto animal" />
+          <button class="seal" id="seal" type="button" aria-label="Sello de certificacion">
+            ★
+            <span class="seal-tip">Este animal cumple con los estandares tecnicos de Melant IA</span>
+          </button>
+        </div>
+        <div class="title">
+          <h1 id="nombreAnimal">Trueno</h1>
+          <p>ID: BOV-2026-0042</p>
+          <p id="geneticaTxt" style="margin-top:3px;color:#efe3d5;font-size:.82rem;">Genetica: Padre Zeus / Madre Luna</p>
+          <span class="badge" id="badgeRaza">Brahman</span>
+          <span class="bio-badge" id="bioBadge">Manejo Biologico Certificado</span>
+          <span class="gold-sprout" id="goldSprout">Brote de Oro Melantia</span>
+        </div>
+      </header>
+
+      <div class="body" id="bodyFicha">
+        <div class="item"><div class="k">Edad</div><div class="v" id="edadTxt">24 meses</div></div>
+        <div class="item"><div class="k">Peso Actual</div><div class="v" id="pesoTxt">426 kg</div></div>
+        <div class="item"><div class="k">Raza</div><div class="v" id="razaTxt">Brahman</div></div>
+        <div class="item"><div class="k">Ultima Vacuna</div><div class="v" id="vacunaTxt">12/04/2026</div></div>
+      </div>
+
+      <div class="extra" id="extraBlock">
+        <strong style="display:block;margin-bottom:4px;">Indicador tecnico por raza</strong>
+        <div id="extraText">Grafico de ganancia de peso mensual.</div>
+        <div class="chart" id="chart"></div>
+      </div>
+
+      <div class="extra" id="impactBlock">
+        <strong style="display:block;margin-bottom:4px;">Ahorro Regenerativo Acumulado</strong>
+        <div id="impactText">Impacto economico pendiente.</div>
+      </div>
+
+      <div class="gallery">
+        <strong style="display:block;margin-bottom:4px;">Galeria de Evolucion</strong>
+        <div class="carousel">
+          <div class="track" id="galleryTrack"></div>
+          <button class="car-btn prev" id="prevSlide" type="button">‹</button>
+          <button class="car-btn next" id="nextSlide" type="button">›</button>
+        </div>
+        <div class="dots" id="galleryDots"></div>
+      </div>
+
+      <footer class="footer">
+        <button class="btn btn-wa" id="btnWa">Compartir por WhatsApp</button>
+        <button class="btn btn-pdf" id="btnPdf">Descargar Certificado PDF</button>
+        <button class="btn btn-edit" id="btnEdit">Editar Datos</button>
+      </footer>
+    </section>
+  </main>
+
+<script>
+const $=(s)=>document.querySelector(s);
+const gallery=[
+  {stage:'Nacimiento',img:'https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=900&auto=format&fit=crop'},
+  {stage:'Destete',img:'https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=900&auto=format&fit=crop'},
+  {stage:'Desarrollo',img:'https://images.unsplash.com/photo-1500595046743-ddf4d3d753fd?q=80&w=900&auto=format&fit=crop'},
+  {stage:'Adulto',img:'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?q=80&w=900&auto=format&fit=crop'}
+];
+let slideIndex=0;
+
+function getAhorroRegenerativo(){
+  const keys=Object.keys(localStorage).filter((key)=>key.startsWith('melant_ahorro_'));
+  const values=keys.map((key)=>Number(localStorage.getItem(key)||0)).filter((value)=>Number.isFinite(value));
+  if(values.length===0)return 0;
+  return Math.max(...values,0);
+}
+
+function renderAhorro(){
+  const ahorro=getAhorroRegenerativo();
+  $('#impactText').textContent='Ahorro acumulado: $'+ahorro.toFixed(0)+' por practicas regenerativas registradas en MELANT IA.';
+  $('#goldSprout').style.display=ahorro>=500?'inline-block':'none';
+  return ahorro;
+}
+
+const breedStyle={
+  'Brahman':{accent:'var(--silver)',text:'Grafico de ganancia de peso mensual.',bars:[32,48,55,63,74]},
+  'Girolando':{accent:'var(--blue-dark)',text:'Curva de persistencia lactea.',bars:[70,66,62,58,54]},
+  'Brown Swiss':{accent:'var(--earth)',text:'Grafico de grasa/proteina (%).',bars:[45,52,58,50,60]}
+};
+
+function buildGallery(){
+  const track=$('#galleryTrack');
+  const dots=$('#galleryDots');
+  track.innerHTML='';
+  dots.innerHTML='';
+  gallery.forEach((g,i)=>{
+    const s=document.createElement('div');
+    s.className='slide';
+    s.innerHTML='<img src="'+g.img+'" alt="'+g.stage+'"><span class="stage">'+g.stage+'</span>';
+    track.appendChild(s);
+    const d=document.createElement('span');
+    d.className='dot'+(i===0?' active':'');
+    d.onclick=()=>setSlide(i);
+    dots.appendChild(d);
+  });
+}
+function setSlide(i){
+  slideIndex=(i+gallery.length)%gallery.length;
+  $('#galleryTrack').style.transform='translateX(-'+(slideIndex*100)+'%)';
+  [...$('#galleryDots').children].forEach((d,idx)=>d.classList.toggle('active',idx===slideIndex));
+}
+
+function renderChart(values,accent){
+  const c=$('#chart');
+  c.innerHTML='';
+  values.forEach((v)=>{
+    const b=document.createElement('div');
+    b.className='bar';
+    b.style.height=v+'%';
+    b.style.background='linear-gradient(180deg,'+accent+',rgba(255,255,255,.6))';
+    c.appendChild(b);
+  });
+}
+
+function applyBreed(){
+  const raza=$('#razaSelect').value;
+  const cfg=breedStyle[raza];
+  $('#badgeRaza').textContent=raza;
+  $('#badgeRaza').style.background=cfg.accent;
+  $('#razaTxt').textContent=raza;
+  $('#extraText').textContent=cfg.text;
+  renderChart(cfg.bars,cfg.accent);
+  evaluateSeal();
+}
+
+function applyScanMode(){
+  const mode=$('#modoScan').value;
+  $('#btnEdit').style.display = mode==='dueno' ? 'block' : 'none';
+  if(mode==='publico'){
+    $('#extraText').textContent='Vista publica: ficha tecnica, estatus sanitario y evidencia visual de genealogia.';
+  }else{
+    applyBreed();
+  }
+}
+
+function applyRetiro(){
+  $('#redBanner').style.display=$('#retiroLeche').checked?'block':'none';
+}
+
+function evaluateSeal(){
+  const raza=$('#razaSelect').value;
+  const vacunasAlDia=$('#vacunasDia').checked;
+  const gdp=Number($('#inputGdp').value||0);
+  const leche=Number($('#inputLeche').value||0);
+  const grasa=Number($('#inputGrasa').value||0);
+  let pesoOptimo=false;
+  if(raza==='Brahman')pesoOptimo=gdp>750;
+  if(raza==='Girolando')pesoOptimo=leche>12;
+  if(raza==='Brown Swiss')pesoOptimo=grasa>3.5;
+  const ok=vacunasAlDia&&pesoOptimo;
+  $('#seal').style.display=ok?'flex':'none';
+  $('#bioBadge').style.display=$('#manejoBiologico').checked?'inline-block':'none';
+  return ok;
+}
+
+function shareWhatsApp(){
+  const nombre=$('#nombreAnimal').textContent;
+  const raza=$('#razaSelect').value;
+  const peso=$('#pesoTxt').textContent;
+  const genetica=$('#geneticaTxt').textContent.replace('Genetica: ','');
+  const ahorro=renderAhorro();
+  const link='https://melantia.app/vaca/BOV-2026-0042';
+  const msg=[
+    'Te comparto la Ficha Tecnica de '+nombre+'.',
+    'Raza: '+raza,
+    'Peso: '+peso,
+    'Genetica: '+genetica,
+    'Ahorro regenerativo acumulado: $'+ahorro.toFixed(0),
+    'Escanea el QR o haz clic aqui para ver su historial completo: '+link
+  ].join('\n');
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');
+}
+
+async function downloadPdf(){
+  if(!window.jspdf||!window.jspdf.jsPDF)return;
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF();
+  const selloOk=evaluateSeal();
+  const ahorro=renderAhorro();
+  doc.setFontSize(16);
+  doc.text('Ficha de Identidad Bovina - MELANT IA',14,16);
+  doc.setFontSize(11);
+  doc.text('Animal: '+$('#nombreAnimal').textContent,14,28);
+  doc.text('Raza: '+$('#razaSelect').value,14,35);
+  doc.text('Peso: '+$('#pesoTxt').textContent,14,42);
+  doc.text('Genetica: '+$('#geneticaTxt').textContent.replace('Genetica: ',''),14,49);
+  doc.text('Estado: '+($('#retiroLeche').checked?'NO APTO PARA VENTA':'APTO'),14,56);
+  doc.text('URL publica: https://melantia.app/vaca/BOV-2026-0042',14,63);
+  doc.text('Sello Calidad Melantia: '+(selloOk?'ACTIVO':'NO CUMPLE'),14,70);
+  doc.text('Manejo Biologico Certificado: '+($('#manejoBiologico').checked?'ACTIVO':'NO'),14,77);
+  doc.text('Ahorro regenerativo acumulado: $'+ahorro.toFixed(0),14,84);
+  if(selloOk){
+    doc.setTextColor(180,120,30);
+    doc.setFontSize(12);
+    doc.text('Calidad Melantia - Gestion Productiva',14,78);
+    doc.setTextColor(0,0,0);
+  }
+  if($('#manejoBiologico').checked){
+    doc.setTextColor(20,120,60);
+    doc.text('Sello Beauveria: Manejo Biologico Certificado',14,selloOk?92:85);
+    doc.setTextColor(0,0,0);
+  }
+  if(ahorro>=500){
+    doc.setTextColor(180,120,30);
+    doc.text('Brote de Oro Melantia: productor con impacto economico regenerativo destacado',14,$('#manejoBiologico').checked?(selloOk?99:92):(selloOk?92:85));
+    doc.setTextColor(0,0,0);
+  }
+  doc.save('ficha_bovina_BOV-2026-0042.pdf');
+}
+
+$('#razaSelect').addEventListener('change',()=>{applyBreed();applyScanMode();});
+$('#modoScan').addEventListener('change',applyScanMode);
+$('#retiroLeche').addEventListener('change',applyRetiro);
+$('#vacunasDia').addEventListener('change',evaluateSeal);
+$('#inputGdp').addEventListener('input',evaluateSeal);
+$('#inputLeche').addEventListener('input',evaluateSeal);
+$('#inputGrasa').addEventListener('input',evaluateSeal);
+$('#manejoBiologico').addEventListener('change',evaluateSeal);
+$('#btnWa').addEventListener('click',shareWhatsApp);
+$('#btnPdf').addEventListener('click',downloadPdf);
+$('#prevSlide').addEventListener('click',()=>setSlide(slideIndex-1));
+$('#nextSlide').addEventListener('click',()=>setSlide(slideIndex+1));
+$('#seal').addEventListener('click',()=>$('#seal').classList.toggle('show-tip'));
+$('#seal').addEventListener('mouseenter',()=>$('#seal').classList.add('show-tip'));
+$('#seal').addEventListener('mouseleave',()=>$('#seal').classList.remove('show-tip'));
+
+buildGallery();
+setSlide(0);
+applyBreed();
+applyScanMode();
+applyRetiro();
+evaluateSeal();
+renderAhorro();
+</script>
+</body>
+</html>

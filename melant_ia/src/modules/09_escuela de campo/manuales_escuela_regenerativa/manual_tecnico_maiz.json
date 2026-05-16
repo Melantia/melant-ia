@@ -1,0 +1,93 @@
+{
+  "manual_tecnico_organico": {
+    "metadatos": {
+      "titulo": "Manual Técnico: Cultivo de Maíz Orgánico",
+      "version": "1.0",
+      "autor": "Adaptación Técnica",
+      "enfoque": "Agricultura Orgánica y Regenerativa para la Costa ecuatoriana"
+    },
+    "identificacion_cultivo": {
+      "nombre_comun": "Maíz",
+      "nombre_cientifico": "Zea mays",
+      "variedades_recomendadas": [
+        "INIAP 543 (Costa)",
+        "INIAP 111 (Manabí)",
+        "Criollos adaptados a El Carmen, Los Ríos y Guayas"
+      ],
+      "requerimientos_agroecologicos": {
+        "altitud_msnm": "0 - 400",
+        "temperatura_optima_c": "22 - 32",
+        "precipitacion_anual": "1,200 - 2,000 mm (bien distribuidos)",
+        "ph_suelo_ideal": "5.5 - 7.0 (franco-arenoso, buen drenaje)"
+      }
+    },
+    "diseno_agroecosistema": {
+      "asociaciones_simbioticas": [
+        {
+          "planta_companera": "Frijol caupí (Vigna unguiculata)",
+          "beneficio": "Fijación de nitrógeno, cobertura viva"
+        },
+        {
+          "planta_companera": "Zapallo",
+          "beneficio": "Cobertura del suelo, reducción de malezas"
+        }
+      ],
+      "rotacion_cultivos": {
+        "predecesor_ideal": "Leguminosas (frijol, caupí)",
+        "sucesor_sugerido": "Hortalizas de ciclo corto o descanso"
+      },
+      "barreras_vivas": "Cercos vivos de piñón, leucaena o caña guadúa para protección contra vientos"
+    },
+    "gestion_suelo_y_nutricion": {
+      "preparacion_terreno": "Labranza mínima, rastreo y nivelación básica",
+      "enmiendas_organicas": {
+        "base_siembra": "2-3 kg compost maduro + 1 kg ceniza de madera por surco",
+        "mantenimiento": "Aplicación de biol foliar cada 15 días hasta floración"
+      },
+      "coberturas_mulching": "Rastrojo de maíz picado, hojas de leguminosas o paja de arroz"
+    },
+    "manejo_agronomico": {
+      "propagacion": "Semilla (selección de mazorcas sanas y vigorosas)",
+      "densidad_siembra": {
+        "entre_plantas_m": "0.25 - 0.30",
+        "entre_surcos_m": "0.80 - 1.00"
+      },
+      "labores_culturales": [
+        "Deshierbe manual o mecánico",
+        "Aporque a los 25 y 45 días",
+        "Raleo si hay exceso de plantas"
+      ],
+      "sistema_riego": "Riego por surcos o aspersión, cada 7-10 días según lluvias"
+    },
+    "sanidad_vegetal_ecologica": {
+      "monitoreo_etologico": "Revisión visual semanal y trampas de feromonas para gusano cogollero",
+      "principales_plagas_enfermedades": [
+        {
+          "nombre": "Gusano cogollero (Spodoptera frugiperda)",
+          "control_preventivo": "Siembra escalonada, trampas de feromonas, biopreparados de neem",
+          "control_curativo": "Aplicación de Bacillus thuringiensis o extracto de ají-ajo"
+        },
+        {
+          "nombre": "Mancha foliar (Exserohilum turcicum)",
+          "control_preventivo": "Rotación de cultivos, uso de semilla sana",
+          "control_curativo": "Aplicación de caldo bordelés o extracto de cola de caballo"
+        }
+      ]
+    },
+    "cosecha_y_postcosecha": {
+      "punto_madurez": "Mazorcas secas, grano duro y brillante",
+      "tecnica_recoleccion": "Corte manual de mazorcas, secado en campo bajo sombra",
+      "almacenamiento_organico": "Silos metálicos o costales en lugar seco y ventilado"
+    },
+    "registro_trazabilidad": {
+      "columnas_bitacora": [
+        "Fecha",
+        "Lote/Zona (Ej. El Carmen, Manabí, Los Ríos, Guayas)",
+        "Actividad",
+        "Insumo_utilizado",
+        "Dosis",
+        "Responsable"
+      ]
+    }
+  }
+}

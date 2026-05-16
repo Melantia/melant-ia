@@ -1,0 +1,32 @@
+{
+  "modulos": [
+    { "id": 1, "titulo": "Suscripciones", "frecuencia_uso": 0 },
+    { "id": 2, "titulo": "Asistente Técnico Rural", "frecuencia_uso": 0 },
+    { "id": 3, "titulo": "Asistente Técnico Veterinario", "frecuencia_uso": 0 },
+    { "id": 4, "titulo": "Agricultura Digital", "frecuencia_uso": 0 },
+    {
+      "id": 5,
+      "titulo": "Gestión de Fincas y Trazabilidad",
+      "frecuencia_uso": 0
+    },
+    { "id": 6, "titulo": "Negocios Rurales", "frecuencia_uso": 0 },
+    {
+      "id": 7,
+      "titulo": "Emprendedor y Finanzas Personales",
+      "frecuencia_uso": 0
+    },
+    { "id": 8, "titulo": "Sostenibilidad y Proyectos", "frecuencia_uso": 0 },
+    { "id": 9, "titulo": "Escuela de Campo", "frecuencia_uso": 0 },
+    { "id": 10, "titulo": "Mi Comunidad Virtual", "frecuencia_uso": 0 },
+    {
+      "id": 11,
+      "titulo": "Asistente Preventivo de Salud",
+      "frecuencia_uso": 0
+    },
+    {
+      "id": 12,
+      "titulo": "Registro Evidencias y Documentos",
+      "frecuencia_uso": 0
+    }
+  ]
+}

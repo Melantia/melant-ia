@@ -1,0 +1,46 @@
+{
+  "practicas_regenerativas_platano": [
+    {
+      "nombre": "Cobertura de Suelo",
+      "procedimiento": "Mantener el suelo siempre cubierto con rastrojo, hojas picadas o cultivos de cobertura como mucuna o maní forrajero.",
+      "fundamento": "La cobertura protege la microbiología del suelo, reduce la erosión y conserva la humedad, permitiendo que los microorganismos prosperen y mejoren la fertilidad.",
+      "contraste": "El suelo desnudo en manejo químico se erosiona, pierde carbono y requiere más riego y fertilizantes sintéticos."
+    },
+    {
+      "nombre": "Aplicación de Microorganismos de Montaña",
+      "procedimiento": "Capturar y aplicar microorganismos locales del bosque para acelerar la descomposición y competir contra patógenos.",
+      "fundamento": "Los microorganismos nativos restauran la red trófica y suprimen enfermedades como Fusarium, mejorando la resiliencia del sistema.",
+      "contraste": "El uso de fungicidas sintéticos elimina tanto patógenos como microorganismos benéficos, empobreciendo el suelo."
+    },
+    {
+      "nombre": "Biofertilizantes Líquidos (Biol)",
+      "procedimiento": "1. Recolecta 20 kg de estiércol fresco (vacuno, gallina o cuy), 10 L de agua limpia, 2 L de melaza, 1 L de suero de leche y 1 kg de ceniza de madera. 2. Mezcla todos los ingredientes en un bidón plástico con tapa, removiendo bien. 3. Cubre el bidón, pero permite que los gases escapen (puedes usar una manguera a un frasco con agua). 4. Deja fermentar en sombra durante 30-45 días, removiendo cada 3 días. 5. El biol estará listo cuando no huela mal y tenga color marrón oscuro. 6. Filtra el líquido y aplica diluido: 2-5 L de biol por cada 100 L de agua, vía riego o foliar, preferentemente en la tarde. 7. Lava bien los implementos tras su uso.",
+      "fundamento": "El biol aporta nutrientes quelatados, fitohormonas y microorganismos benéficos, estimulando la vida microbiana y mejorando la absorción y la salud vegetal. La fermentación transforma residuos en nutrientes fácilmente asimilables.",
+      "contraste": "Los fertilizantes químicos aportan sales solubles que pueden salinizar el suelo, matar microorganismos y generar dependencia externa. El biol, en cambio, regenera el ciclo natural de nutrientes."
+    },
+    {
+      "nombre": "Cero Labranza",
+      "procedimiento": "Evitar voltear la tierra; sembrar solo donde va la planta.",
+      "fundamento": "La labranza mínima protege la estructura fúngica y la red de raíces, manteniendo la comunicación y el ciclado de nutrientes.",
+      "contraste": "El laboreo intensivo destruye agregados, expone carbono y reduce la vida del suelo."
+    },
+    {
+      "nombre": "Reciclaje de Nutrientes",
+      "procedimiento": "Picar pseudotallos y raquis y devolverlos al pie de la planta.",
+      "fundamento": "El reciclaje de biomasa recupera hasta el 40% del potasio extraído y mejora la fertilidad sin insumos externos.",
+      "contraste": "En sistemas convencionales, los residuos se eliminan y se depende de fertilizantes importados."
+    },
+    {
+      "nombre": "Control con Bioinsumos",
+      "procedimiento": "Sustituir fungicidas por caldos sulfocálcicos y extractos botánicos de ajo, ají o neem.",
+      "fundamento": "Los bioinsumos controlan hongos y plagas sin dañar la vida útil del suelo ni generar resistencia en patógenos.",
+      "contraste": "Los fungicidas sintéticos generan resistencia y contaminan el ambiente."
+    },
+    {
+      "nombre": "Monitoreo y Bitácora",
+      "procedimiento": "Llevar una bitácora de prácticas y observar los cambios en el suelo y las plantas.",
+      "fundamento": "El monitoreo permite ajustar el manejo y comprobar mejoras en salud y resiliencia, fomentando el aprendizaje adaptativo.",
+      "contraste": "El manejo convencional rara vez evalúa el impacto ecológico, limitándose a la producción inmediata."
+    }
+  ]
+}

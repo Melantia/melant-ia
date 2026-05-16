@@ -1,0 +1,27 @@
+# Lista de provincias de Ecuador con ciudades principales
+PROVINCIAS = [
+    {"nombre": "Azuay", "ciudades": ["Cuenca", "Gualaceo", "Paute"]},
+    {"nombre": "Bolívar", "ciudades": ["Guaranda", "San Miguel"]},
+    {"nombre": "Cañar", "ciudades": ["Azogues", "La Troncal"]},
+    {"nombre": "Carchi", "ciudades": ["Tulcán", "Mira"]},
+    {"nombre": "Chimborazo", "ciudades": ["Riobamba", "Guano"]},
+    {"nombre": "Cotopaxi", "ciudades": ["Latacunga", "Salcedo"]},
+    {"nombre": "El Oro", "ciudades": ["Machala", "Santa Rosa"]},
+    {"nombre": "Esmeraldas", "ciudades": ["Esmeraldas", "Atacames"]},
+    {"nombre": "Galápagos", "ciudades": ["Puerto Ayora", "Puerto Baquerizo"]},
+    {"nombre": "Guayas", "ciudades": ["Guayaquil", "Daule", "Samborondón"]},
+    {"nombre": "Imbabura", "ciudades": ["Ibarra", "Otavalo"]},
+    {"nombre": "Loja", "ciudades": ["Loja", "Catamayo"]},
+    {"nombre": "Los Ríos", "ciudades": ["Babahoyo", "Quevedo"]},
+    {"nombre": "Manabí", "ciudades": ["Portoviejo", "Manta", "Chone"]},
+    {"nombre": "Morona Santiago", "ciudades": ["Macas", "Gualaquiza"]},
+    {"nombre": "Napo", "ciudades": ["Tena", "El Chaco"]},
+    {"nombre": "Orellana", "ciudades": ["Francisco de Orellana"]},
+    {"nombre": "Pastaza", "ciudades": ["Puyo"]},
+    {"nombre": "Pichincha", "ciudades": ["Quito", "Cayambe", "Sangolquí"]},
+    {"nombre": "Santa Elena", "ciudades": ["Santa Elena", "La Libertad"]},
+    {"nombre": "Santo Domingo", "ciudades": ["Santo Domingo"]},
+    {"nombre": "Sucumbíos", "ciudades": ["Nueva Loja"]},
+    {"nombre": "Tungurahua", "ciudades": ["Ambato", "Baños"]},
+    {"nombre": "Zamora Chinchipe", "ciudades": ["Zamora", "Yantzaza"]}
+]

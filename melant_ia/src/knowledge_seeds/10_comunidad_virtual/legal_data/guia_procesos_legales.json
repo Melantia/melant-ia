@@ -1,0 +1,146 @@
+[
+  {
+    "nombre": "Mediación y Conciliación (Centros de Mediación)",
+    "descripcion": "Soluciona conflictos sin juicio, obteniendo un acta de mediación con efecto de sentencia.",
+    "temas": [
+      "Pensiones alimenticias",
+      "Régimen de visitas",
+      "Tenencia",
+      "Deudas",
+      "Asuntos societarios y laborales",
+      "Conciliación en materia de tránsito"
+    ],
+    "pasos": [
+      "Acude a un Centro de Mediación autorizado.",
+      "Expón tu caso y solicita mediación.",
+      "Participa en la audiencia de mediación.",
+      "Si hay acuerdo, firma el acta de mediación (tiene valor de sentencia)."
+    ],
+    "referencias": ["https://www.funcionjudicial.gob.ec/mediacion/"]
+  },
+  {
+    "nombre": "Trámites en Notarías y Registro Civil",
+    "descripcion": "Trámites civiles y de familia que pueden realizarse en notarías y registro civil.",
+    "temas": [
+      "Divorcio por mutuo acuerdo",
+      "Unión de hecho",
+      "Posesión efectiva",
+      "Autorización de salida del país para menores",
+      "Actas de notoriedad y declaraciones juramentadas"
+    ],
+    "pasos": [
+      "Acude a la notaría o registro civil correspondiente.",
+      "Presenta los documentos requeridos según el trámite.",
+      "Firma y recibe el acta o documento legal."
+    ],
+    "referencias": [
+      "https://www.registrocivil.gob.ec/",
+      "https://www.funcionjudicial.gob.ec/"
+    ]
+  },
+  {
+    "nombre": "Trámites Administrativos y Judiciales Sencillos",
+    "descripcion": "Constitución de empresas, registro de marcas, consulta de causas, firma electrónica, remates judiciales.",
+    "temas": [
+      "Empresa en un día (Superintendencia de Compañías)",
+      "Registro de marcas (SENADI)",
+      "Consulta de causas (Consejo de la Judicatura)",
+      "Firma electrónica",
+      "Remates judiciales"
+    ],
+    "pasos": [
+      "Ingresa al portal oficial del trámite.",
+      "Sigue los pasos indicados en la web.",
+      "Guarda los comprobantes y documentos generados."
+    ],
+    "referencias": [
+      "https://www.supercias.gob.ec/",
+      "https://www.funcionjudicial.gob.ec/",
+      "https://www.gob.ec/cj/tramites/consulta-causas",
+      "https://www.senadi.gob.ec/"
+    ]
+  },
+  {
+    "nombre": "Asesoría legal gratuita",
+    "descripcion": "Dónde acudir si necesitas asesoría o patrocinio legal gratuito.",
+    "temas": [
+      "Defensoría Pública",
+      "Consultorios Jurídicos Gratuitos en universidades"
+    ],
+    "pasos": [
+      "Acude a la Defensoría Pública o consultorio jurídico universitario más cercano.",
+      "Expón tu caso y solicita asesoría o patrocinio legal gratuito."
+    ],
+    "referencias": [
+      "https://www.defensoria.gob.ec/",
+      "https://www.funcionjudicial.gob.ec/"
+    ]
+  },
+  {
+    "nombre": "Consulta de Leyes y Normativa Vigente",
+    "descripcion": "Portales oficiales para consultar leyes, códigos y normativa vigente en Ecuador.",
+    "temas": [
+      "Asamblea Nacional del Ecuador",
+      "Registro Oficial",
+      "Lexis Ecuador",
+      "Fiel Web"
+    ],
+    "pasos": [
+      "Ingresa al portal oficial.",
+      "Busca la ley, código o normativa de tu interés.",
+      "Descarga o consulta el texto actualizado."
+    ],
+    "referencias": [
+      "https://www.asambleanacional.gob.ec/",
+      "https://www.registroficial.gob.ec/",
+      "https://www.lexis.com.ec/",
+      "https://www.fielweb.com/"
+    ]
+  },
+  {
+    "nombre": "Manuales y Formatos de Denuncias (Sin Abogado)",
+    "descripcion": "Formularios y guías para presentar denuncias y demandas sin necesidad de abogado.",
+    "temas": [
+      "Fiscalía General del Estado (FGE)",
+      "Consejo de la Judicatura",
+      "Formulario de demandas de alimentos"
+    ],
+    "pasos": [
+      "Descarga el formulario desde la web oficial.",
+      "Llena el formulario con tus datos y los del caso.",
+      "Preséntalo en la ventanilla judicial o fiscalía correspondiente."
+    ],
+    "referencias": [
+      "https://www.fiscalia.gob.ec/como-hacer-una-denuncia/",
+      "https://www.funcionjudicial.gob.ec/"
+    ]
+  },
+  {
+    "nombre": "Consulta de Procesos Legales y Causas",
+    "descripcion": "Cómo consultar el estado de juicios y procesos legales en línea.",
+    "temas": ["Sistema SATJE", "Consulta de Noticias del Delito (FGE)"],
+    "pasos": [
+      "Ingresa al portal de consulta de causas.",
+      "Introduce tu número de cédula, nombres o número de causa.",
+      "Haz clic en 'Buscar' y revisa el estado del proceso."
+    ],
+    "referencias": [
+      "https://www.funcionjudicial.gob.ec/",
+      "https://www.fiscalia.gob.ec/consulta-de-noticias-del-delito/"
+    ]
+  },
+  {
+    "nombre": "Jurisprudencia (Sentencias y Fallos Anteriores)",
+    "descripcion": "Portales para consultar sentencias, fallos y jurisprudencia relevante.",
+    "temas": ["Corte Constitucional del Ecuador", "Corte Nacional de Justicia"],
+    "pasos": [
+      "Ingresa al buscador de jurisprudencia.",
+      "Busca por número de sentencia, tema o palabra clave.",
+      "Consulta y descarga el fallo o sentencia."
+    ],
+    "referencias": [
+      "https://www.corteconstitucional.gob.ec/",
+      "https://www.cortenacional.gob.ec/"
+    ]
+  }
+]

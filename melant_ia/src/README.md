@@ -1,3 +1,17 @@
+## Atención y ventas con voces rotativas y jefe (Don Eloy)
+
+Para atención y ventas en la tienda virtual y Negocios Rurales, puedes invocar la función global:
+
+```js
+hablarAtencionVentas('Bienvenido a la tienda virtual, ¿en qué puedo ayudarte?'); // Voz aleatoria: Melantia, Paulette, Valentina o Angel
+hablarAtencionVentas(
+  '¡Atención! Solo el jefe puede aprobar esta operación.',
+  'jefe'
+); // Voz de Don Eloy
+```
+
+Esto permite que la atención sea variada y personalizada, cumpliendo la lógica de voces femeninas y Angel para atención/ventas, y Don Eloy como jefe.
+
 # MELANT IA
 
 ## PRODUCTIVIDAD AGRÍCOLA INTELIGENTE OFFLINE
@@ -8,6 +22,14 @@
 
 **Enfoque:** Aplicación técnica regenerativa de alta disponibilidad.
 **Soberanía:** Todos los modelos de IA y bases de datos residen localmente en el dispositivo.
+
+---
+
+## IMPORTANTE: Requisito de Cobertura para Compras
+
+> **Para poder realizar compras y completar transacciones en la Tienda MELANTIA y Negocios Rurales, el usuario debe contar con cobertura de red (internet o señal disponible).**
+>
+> Si no hay cobertura, la transacción no podrá completarse y el sistema lo notificará claramente. Se recomienda verificar la conectividad antes de intentar cualquier compra o pago.
 
 ---
 

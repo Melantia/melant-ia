@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Introduction to the COIP (Comprehensive Organic Criminal Code)",
+    "description": "Learn the basic concepts of the COIP, crimes, misdemeanors, and citizens' rights.",
+    "content": "The COIP regulates crimes, misdemeanors, and penalties in Ecuador. Examples: theft, threats, domestic violence, etc. Every citizen should know their criminal rights and duties."
+  },
+  {
+    "title": "Rights and Contracts in the Civil Code",
+    "description": "Learn how to protect your property, contracts, and resolve boundary conflicts.",
+    "content": "The Civil Code regulates property, contracts, leases, and boundaries. Example: how to make a lease contract, what to do in a boundary conflict, etc."
+  },
+  {
+    "title": "Labor Standards for the Countryside",
+    "description": "Rights and obligations of agricultural employers and workers according to the Labor Code.",
+    "content": "The Labor Code protects day laborers and employers. Topics: minimum wage, working hours, vacations, social security, etc."
+  },
+  {
+    "title": "Land and Territory Legality",
+    "description": "Learn about the Land Law and how to validate the legality of your property.",
+    "content": "The Organic Land Law regulates the ownership, use, and legality of rural properties. Important to avoid conflicts and access credits or state programs."
+  }
+]

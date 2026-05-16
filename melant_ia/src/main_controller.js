@@ -1,46 +1,179 @@
-// Este archivo ahora solo CARGA la estructura desde el JSON
-const fs = require('fs');
-const path = require('path');
-
-const Melant_ia = {
-  // Cargamos los datos desde el archivo unificado
-  data: JSON.parse(
-    fs.readFileSync(
-      path.join(__dirname, 'app_structure_melant_ia.json'),
-      'utf8'
-    )
-  ),
-
-  init() {
-    console.log(
-      `MELANTIA: Sistema Nervioso Activo - Versión ${this.data.config.version}`
-    );
-    console.log(`Modo Offline: ${this.data.offline_notice}`);
-    // Aquí iría el código para renderizar el menú basado en data.menu_principal
-  },
-
-  // ==============================================
-  // Melantín — Robot Guardián Amistoso
-  // Uso: Melant_ia.pensar('activo') / pensar('listo')
-  // Llámalo desde cualquier sub-módulo al procesar.
-  // ==============================================
-  pensar(estado) {
-    const container = document.getElementById('ai-status-container');
-    const text = document.querySelector('.status-text');
-    if (!container || !text) return;
-
-    if (estado === 'activo') {
-      container.classList.add('thinking-active');
-      text.style.display = 'block';
-      text.innerText = 'MELANTIA ESTÁ TRABAJANDO LOCALMENTE...';
-    } else {
-      container.classList.remove('thinking-active');
-      text.style.display = 'none';
-    }
-  },
+// ==============================================
+// Botón y lógica para guiar al usuario a zona con mejor cobertura
+// ==============================================
+window.guiarAZonaCobertura = function () {
+  const msg =
+    'Para completar la compra, acércate a una zona con mejor cobertura. Usa el mapa o sigue las indicaciones del asistente para encontrar señal.';
+  if (typeof window.hablarAtencionVentas === 'function') {
+    window.hablarAtencionVentas(msg);
+  }
+  // Aquí puedes integrar lógica de mapa, GPS o mostrar instrucciones visuales
+  alert(msg + '\n\nPróximamente: integración con mapa de cobertura y GPS.');
 };
 
-Melant_ia.init();
+// Ejemplo de botón en la interfaz:
+// <button onclick="window.guiarAZonaCobertura()">Buscar mejor cobertura</button>
+// ==============================================
+// Validación de cobertura para compras en tienda
+// Permite navegar offline, pero bloquea la compra si no hay conexión
+// ==============================================
+window.validarCoberturaParaCompra = function () {
+  if (!navigator.onLine) {
+    const msg =
+      'Para realizar compras necesitas conexión a internet o cobertura de red. Puedes explorar la tienda offline, pero la compra solo es posible con cobertura.';
+    if (typeof window.hablarAtencionVentas === 'function') {
+      window.hablarAtencionVentas(msg);
+    }
+    // Mostrar alerta visual
+    alert(msg);
+    return false;
+  }
+  return true;
+};
+
+// Ejemplo de uso en botón de compra:
+// if (!window.validarCoberturaParaCompra()) return;
+// ...continuar con el flujo de compra...
+// ==============================================
+// Utilidad para atención/ventas con voces rotativas
+// Uso: MelantiaAsistente.hablarAtencionVentas('Texto', 'normal'|'jefe')
+// ==============================================
+window.hablarAtencionVentas = function (texto, tipo = 'normal') {
+  if (
+    window.MelantiaAsistente &&
+    typeof window.MelantiaAsistente.hablarAtencionVentas === 'function'
+  ) {
+    window.MelantiaAsistente.hablarAtencionVentas(texto, tipo);
+  } else {
+    // Fallback: voz Melantia
+    cargarVoz('Melantia');
+    _voz(texto);
+  }
+};
+
+// Motor de renderizado dinámico de módulos MELANTIA
+async function conectarEstructuraAIndex() {
+  try {
+    // 1. Cargamos el archivo de estructura
+    const respuesta = await fetch(
+      'config_structure_melant_ia/app_structure_melant_ia.json'
+    );
+    const data = await respuesta.json();
+    const contenedor = document.getElementById('app-menu');
+    if (!contenedor) return;
+
+    // 2. Limpiamos el contenedor por si hay residuos
+    contenedor.innerHTML = '';
+
+    // 3. Ordenar por uso si hay campo frecuencia_uso
+    const modulos = data.menu_principal.modulos.sort((a, b) => {
+      return (b.frecuencia_uso || 0) - (a.frecuencia_uso || 0);
+    });
+
+    // 4. Recorremos los módulos en el orden que dicte el JSON
+    modulos.forEach((modulo) => {
+      // Creamos el elemento visual (Tarjeta del Módulo)
+      const tarjeta = document.createElement('div');
+      tarjeta.className = 'modulo-tarjeta';
+      // Inyectamos el contenido dinámico
+      tarjeta.innerHTML = `
+                <div class="modulo-header">
+                    <span class="modulo-id">#${modulo.id}</span>
+                    <span class="modulo-personaje">${modulo.voz_principal || 'Asistente'}</span>
+                </div>
+                <h3>${modulo.titulo}</h3>
+                <ul class="modulo-items-preview">
+                    ${(modulo.items || [])
+                      .slice(0, 2)
+                      .map((item) => `<li>${item}</li>`)
+                      .join('')}
+                </ul>
+            `;
+      // Acción al tocar: Abrir el módulo específico
+      tarjeta.onclick = () => abrirModulo(modulo.id);
+      // Añadimos la tarjeta al index.html
+      contenedor.appendChild(tarjeta);
+    });
+      // Botón para ver datos OCDS
+      const btnOCDS = document.createElement('button');
+      btnOCDS.textContent = 'Ver Contrataciones Públicas (OCDS)';
+      btnOCDS.className = 'btn-melantia';
+      btnOCDS.onclick = mostrarDatosOCDS;
+      contenedor.appendChild(btnOCDS);
+  }
+
+  // Mostrar datos OCDS desde backend local (requiere endpoint Python)
+  function mostrarDatosOCDS() {
+    fetch('http://localhost:5000/ocds')
+      .then(r => r.json())
+      .then(datos => {
+        const contenedor = document.getElementById('app-menu');
+        contenedor.innerHTML = '<h2>Contrataciones Públicas (OCDS)</h2>';
+        if (!Array.isArray(datos) || datos.length === 0) {
+          contenedor.innerHTML += '<p>No hay datos disponibles.</p>';
+          return;
+        }
+        contenedor.innerHTML += '<table class="tabla-ocds"><thead><tr><th>Año</th><th>Producto</th><th>Proveedor</th><th>Monto</th><th>Fecha</th></tr></thead><tbody>' +
+          datos.map(d => `<tr><td>${d.anio}</td><td>${d.producto}</td><td>${d.proveedor}</td><td>${d.monto}</td><td>${d.fecha}</td></tr>`).join('') + '</tbody></table>';
+      })
+      .catch(() => {
+        document.getElementById('app-menu').innerHTML = '<p>Error al cargar datos OCDS. Asegúrate de que el backend esté activo.</p>';
+      });
+  }
+  } catch (error) {
+    console.error('Error conectando app_structure:', error);
+  }
+}
+
+// Llama a la función al cargar la página principal
+window.addEventListener('DOMContentLoaded', conectarEstructuraAIndex);
+
+// Función de ejemplo para abrir módulo (puedes personalizarla)
+function abrirModulo(idModulo) {
+  // Asistente Técnico Rural
+  if (idModulo === 2) {
+    fetch('knowledge_seeds/02_asistente_tecnico_rural/cultivos_guanabana.json')
+      .then((r) => r.json())
+      .then((json) => {
+        if (
+          window.UIRenderer &&
+          typeof UIRenderer.dibujarFichaCultivoGuanabana === 'function'
+        ) {
+          UIRenderer.dibujarFichaCultivoGuanabana('app-menu', json.guanabana);
+        } else {
+          document.getElementById('app-menu').innerHTML =
+            '<pre>' + JSON.stringify(json.guanabana, null, 2) + '</pre>';
+        }
+      });
+    return;
+  }
+  // Negocios Rurales: Servicios Financieros
+  if (idModulo === 6) {
+    // Cargar lógica de servicios financieros solo si el usuario selecciona ese ítem
+    const contenedor = document.getElementById('app-menu');
+    // Buscar el ítem Servicios Financieros
+    fetch('config_structure_melant_ia/app_structure_melant_ia.json')
+      .then(r => r.json())
+      .then(data => {
+        const mod = data.menu_principal.modulos.find(m => m.id === 6);
+        if (mod && mod.items.includes('Servicios Financieros')) {
+          // Cargar el módulo JS si no está cargado
+          if (!window.mostrarServiciosFinancieros) {
+            const script = document.createElement('script');
+            script.src = 'modules/servicios_financieros.js';
+            script.onload = () => window.mostrarServiciosFinancieros();
+            document.body.appendChild(script);
+          } else {
+            window.mostrarServiciosFinancieros();
+          }
+        } else {
+          contenedor.innerHTML = '<p>No se encontró el ítem Servicios Financieros.</p>';
+        }
+      });
+    return;
+  }
+  alert('Abrir módulo #' + idModulo + ' (implementa la navegación aquí)');
+}
 
 // ==============================================
 // Guardián del Silencio — Soberanía Offline
@@ -788,9 +921,41 @@ const MelantiaAsistente = {
       .trim();
   },
 
-  hablar(texto) {
-    cargarVoz('Melantia');
+  // Voces disponibles para atención y ventas
+  _vocesAtencion: ['Melantia', 'Paulette', 'Valentina', 'Angel'],
+  _vozJefe: 'Don Eloy',
+
+  // Selecciona aleatoriamente una voz femenina o Angel
+  vozAleatoriaAtencion() {
+    const voces = this._vocesAtencion;
+    const idx = Math.floor(Math.random() * voces.length);
+    return voces[idx];
+  },
+
+  // Hablar con voz aleatoria de atención/ventas
+  hablarAtencion(texto) {
+    const voz = this.vozAleatoriaAtencion();
+    cargarVoz(voz);
     _voz(texto);
+  },
+
+  // Hablar como jefe (Don Eloy)
+  hablarJefe(texto) {
+    this.hablarComo(this._vozJefe, texto);
+  },
+
+  // Hablar como atención/ventas, pero si es "jefe" fuerza Don Eloy
+  hablarAtencionVentas(texto, tipo = 'normal') {
+    if (tipo === 'jefe') {
+      this.hablarJefe(texto);
+    } else {
+      this.hablarAtencion(texto);
+    }
+  },
+
+  hablar(texto) {
+    // Por defecto usa voz aleatoria de atención
+    this.hablarAtencion(texto);
   },
 
   hablarComo(nombre, texto) {

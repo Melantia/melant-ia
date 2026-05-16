@@ -39,4 +39,28 @@ const UIRenderer = {
     };
     return colores[estado] || '#fef3c7';
   },
+  },
+
+  dibujarFichaCultivoGuanabana(contenedor, data) {
+    const contenedorApp = document.getElementById(contenedor);
+    let html = `<h2 style="color: #2e7d32; margin-left: 15px;">Cultivo de Guanábana</h2>`;
+    html += `<div class='ficha-cultivo'>
+      <b>Nombre científico:</b> ${data.nombre_cientifico}<br>
+      <b>Descripción:</b> ${data.descripcion}<br>
+      <b>Variedades:</b> ${data.variedades.map(v => v.nombre + ' (' + v.caracteristicas + ')').join(', ')}<br>
+      <b>Riego óptimo:</b> ${data.riego_optimo}<br>
+      <b>Fertilización NPK:</b> N:${data.npk_recomendado.N} P:${data.npk_recomendado.P} K:${data.npk_recomendado.K}<br>
+      <b>Época de siembra:</b> ${data.epoca_siembra_recomendada} (${data.calendario_lunar})<br>
+      <b>Polinización artificial:</b> ${data.polinizacion_artificial.descripcion}<br>
+      <ul>${data.polinizacion_artificial.pasos.map(p=>`<li>${p}</li>`).join('')}</ul>
+      <b>Beneficios:</b> ${data.polinizacion_artificial.beneficios}<br>
+      <b>Cosecha:</b> ${data.cosecha.indicadores}, ${data.cosecha.epoca}, ${data.cosecha.recomendaciones}<br>
+      <b>Postcosecha:</b> Limpieza: ${data.postcosecha.limpieza}, Almacenamiento: ${data.postcosecha.almacenamiento}, Procesamiento: ${data.postcosecha.procesamiento}<br>
+      <b>Plagas comunes:</b> <ul>${data.plagas_comunes.map(p=>`<li>${p.nombre}: ${p.sintoma} (Orgánico: ${p.control_organico}, Químico: ${p.control_quimico})</li>`).join('')}</ul>
+      <b>Enfermedades comunes:</b> <ul>${data.enfermedades_comunes.map(e=>`<li>${e.nombre}: ${e.sintoma} (Control: ${e.control})</li>`).join('')}</ul>
+      <b>Zonas de producción en Ecuador:</b> ${data.zonas_produccion_ecuador.join(', ')}<br>
+      <b>Importancia económica:</b> ${data.importancia_economica}<br>
+    </div>`;
+    contenedorApp.innerHTML = html;
+  }
 };

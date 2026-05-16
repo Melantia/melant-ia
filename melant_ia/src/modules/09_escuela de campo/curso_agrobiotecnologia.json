@@ -1,0 +1,89 @@
+{
+  "curso_especializado": {
+    "titulo": "Agrobiotecnología: Microorganismos Eficientes y Bioestimulación Avanzada",
+    "objetivo": "Capacitar en la reproducción de consorcios microbianos, aislamiento de cepas nativas y formulación de bioestimulantes de alta eficiencia para enfrentar el estrés climático.",
+    "clases": [
+      {
+        "clase": 1,
+        "titulo": "Captura y Reproducción de Microorganismos de Montaña (MM)",
+        "teoria": "Diferenciación de hongos (Trichoderma, Beauveria) y bacterias (Bacillus, Pseudomonas).",
+        "practica": "Uso de MELANT IA para identificar micelios saludables (blancos) vs contaminados (negros/amarillos) en las trampas de arroz.",
+        "manual": "manual_mm_captura.pdf"
+      },
+      {
+        "clase": 2,
+        "titulo": "Bioestimulantes de Alta Eficiencia (Aminoácidos y Algas)",
+        "teoria": "Hidrólisis enzimática de proteínas. El papel de la Prolina y Glicina ante la sequía.",
+        "practica": "Recetario digital: Proceso de fermentación de restos de pescado o algas para extraer aminoácidos.",
+        "manual": "manual_bioestimulantes.pdf"
+      },
+      {
+        "clase": 3,
+        "titulo": "Inoculación de Semillas y Bio-imprimación",
+        "teoria": "Recubrimiento de semillas con bacterias fijadoras de Nitrógeno (Rhizobium) y Micorrizas.",
+        "practica": "Cronómetro de inoculación y cálculo de dosis por kg de semilla (Arroz, Maíz, Frijol).",
+        "manual": "manual_inoculacion_semillas.pdf"
+      },
+      {
+        "clase": 4,
+        "titulo": "Control de Calidad de Bioinsumos",
+        "teoria": "Regla del Olor, Color y pH. Parámetros organolépticos y físico-químicos para validar bioinsumos.",
+        "practica": "Checklist digital: Validar pH, olor y color antes de aplicar el producto.",
+        "manual": "manual_control_calidad.pdf"
+      },
+      {
+        "clase": 5,
+        "titulo": "Microscopía de Campo y Bioseguridad",
+        "teoria": "Evaluación visual y sensorial de bioinsumos. Limpieza de tanques y manejo de residuos.",
+        "practica": "Uso de papel tornasol/pH-metro y educación sensorial para distinguir fermentación de putrefacción.",
+        "manual": "manual_microscopia_bioseguridad.pdf"
+      },
+      {
+        "clase": 6,
+        "titulo": "Compatibilidad y Mezclas de Bioinsumos",
+        "teoria": "Qué bioinsumos se pueden mezclar y cuáles no. Riesgos de incompatibilidad.",
+        "practica": "Tabla digital de compatibilidad y simulador de mezclas en la App.",
+        "manual": "manual_compatibilidad_bioinsumos.pdf"
+      }
+    ],
+    "bibliografia": [
+      {
+        "autor": "Elaine Ingham",
+        "titulo": "The Soil Food Web",
+        "descripcion": "Base científica para la reproducción de microorganismos aeróbicos.",
+        "uso": "Teoría de redes tróficas."
+      },
+      {
+        "autor": "Restrepo Rivera, J. & Pinheiro, S.",
+        "titulo": "Manual de Biofertilizantes: Ingeniería de la Vida",
+        "año": "2021",
+        "uso": "Manual práctico de biotecnología campesina."
+      },
+      {
+        "autor": "FAO",
+        "titulo": "Bioinsumos: Una alternativa para la producción agraria sostenible",
+        "año": "2022",
+        "uso": "Marco regulatorio y estándares de calidad."
+      },
+      {
+        "autor": "Calvo, P., et al.",
+        "titulo": "Agricultural Biostimulants in Horticulture",
+        "año": "2014",
+        "uso": "Referente académico sobre mecanismos fisiológicos."
+      },
+      {
+        "autor": "Agrocalidad (Ecuador)",
+        "titulo": "Guía de registro de bioinsumos de uso agrícola"
+      },
+      {
+        "autor": "Lowenfels, J.",
+        "titulo": "Teaming with Microbes: The Organic Gardener's Guide to the Soil Food Web",
+        "año": "2010"
+      },
+      {
+        "autor": "Zamorano (Honduras)",
+        "titulo": "Manual de producción de microorganismos de montaña (MM)"
+      }
+    ]
+  }
+}

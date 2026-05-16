@@ -1,0 +1,19 @@
+[PORTADA]
+
+[LOGO MELANT IA]
+
+La Transición de la Agricultura Convencional a la Agricultura Regenerativa en el Ecuador
+
+Autores: Equipo MELANT IA, con apoyo de INIAP, Agrocalidad, SIPA, INEC, Prefecturas y productores líderes.
+
+Descarga gratuita: https://melant-ia.org/descargas/Libro_MELANT_IA_Agricultura_Regenerativa_Ecuador.pdf
+
+---
+
+(El contenido completo del libro se encuentra en el archivo .txt generado. Para la versión PDF, se debe maquetar el texto, insertar el logo gráfico en la portada y encabezados, y dejar espacio para el QR de descarga en la última página.)
+
+[Espacio para QR de descarga]
+
+---
+
+Nota: Para la versión final, utiliza herramientas como fpdf, reportlab o similar en Python para convertir el .txt a PDF, insertando el logo y el QR en los lugares indicados.

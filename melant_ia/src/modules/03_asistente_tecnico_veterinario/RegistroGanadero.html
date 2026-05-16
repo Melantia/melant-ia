@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro Ganadero Premium - MELANT IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="RegistroGanadero.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Registro Ganadero Premium</h1>
+      <p>Mobile first. Guarda el animal, genera pasaporte QR y programa alertas sanitarias.</p>
+      <div class="progress"><span id="stepProgress"></span></div>
+      <div class="step-label" id="stepLabel">Paso 1: Datos basicos</div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Formulario de Registro</h2>
+        <p>Selecciona raza, proposito y carga la foto para generar su ficha digital.</p>
+
+        <div class="field">
+          <label for="animalNombre">Nombre o ID</label>
+          <input id="animalNombre" type="text" placeholder="Ej: Trueno-042" />
+        </div>
+
+        <div class="field">
+          <label>Raza</label>
+          <div class="breed-grid" id="breedGrid">
+            <button class="breed-card active" type="button" data-breed="Brahman">
+              <span class="emoji">🐂</span><span class="name">Brahman</span>
+            </button>
+            <button class="breed-card" type="button" data-breed="Girolando">
+              <span class="emoji">🐄</span><span class="name">Girolando</span>
+            </button>
+            <button class="breed-card" type="button" data-breed="Brown Swiss">
+              <span class="emoji">🐮</span><span class="name">Brown Swiss</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="animalProposito">Proposito</label>
+          <select id="animalProposito">
+            <option value="carne">Carne</option>
+            <option value="leche">Leche</option>
+            <option value="doble">Doble Proposito</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="animalEdad">Edad (meses)</label>
+          <input id="animalEdad" type="number" min="1" step="1" value="12" />
+        </div>
+
+        <div class="field">
+          <label for="animalPeso">Peso inicial (kg)</label>
+          <input id="animalPeso" type="number" min="1" step="0.1" placeholder="Ej: 385" />
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-soft" id="btnCinta" type="button">Calculadora por cinta</button>
+          <button class="btn btn-soft" id="btnCamara" type="button">Abrir camara</button>
+        </div>
+
+        <div class="field photo-zone">
+          <label for="animalFoto">Foto del animal</label>
+          <input id="animalFoto" type="file" accept="image/*" capture="environment" />
+          <img class="photo-preview" id="photoPreview" alt="Foto del animal" />
+        </div>
+
+        <div class="monitor-list" id="monitorList">Monitores activos: GDP (ganancia diaria de peso).</div>
+
+        <div class="buttons">
+          <button class="btn btn-primary" id="btnRegistrar" type="button">Registrar</button>
+          <button class="btn btn-earth" id="btnWhatsApp" type="button">Compartir resumen por WhatsApp</button>
+        </div>
+
+        <div class="result" id="resultMsg"></div>
+      </article>
+
+      <article class="card">
+        <h2>Previsualizacion de Ficha de Identidad</h2>
+        <p>Se actualiza automaticamente al registrar.</p>
+        <div class="ficha-preview" id="fichaPreview" hidden>
+          <div class="ficha-top">
+            <img id="fichaAvatar" class="ficha-avatar" alt="Foto del animal" />
+            <div>
+              <h3 class="ficha-name" id="fichaNombre">Animal</h3>
+              <p class="ficha-meta" id="fichaRaza">Raza</p>
+              <p class="ficha-meta" id="fichaProposito">Proposito</p>
+            </div>
+          </div>
+          <div class="ficha-grid">
+            <div class="ficha-cell">Edad<strong id="fichaEdad">-</strong></div>
+            <div class="ficha-cell">Peso<strong id="fichaPeso">-</strong></div>
+            <div class="ficha-cell">Ultima vacuna<strong id="fichaVacuna">Revision general</strong></div>
+            <div class="ficha-cell">Monitores<strong id="fichaMonitores">-</strong></div>
+          </div>
+          <div class="qr-wrap">
+            <img id="fichaQr" alt="QR del pasaporte" />
+            <div class="ficha-meta" id="fichaLink"></div>
+          </div>
+        </div>
+
+        <div class="buttons" style="margin-top:12px;">
+          <button class="btn btn-soft" id="btnPdf" type="button">Descargar Certificado PDF</button>
+          <a class="btn btn-soft" href="FichaBovina.html" target="_blank" rel="noopener" style="text-decoration:none;text-align:center;">Abrir Ficha Bovina Premium</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+<script>
+const CONFIG={DB_NAME:'melant_ia_db',DB_VERSION:3};
+const $=(s)=>document.querySelector(s);
+const esc=(t)=>String(t||'').replace(/[&<>"']/g,(m)=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+
+const state={
+  breed:'Brahman',
+  photoBase64:'',
+  lastRecord:null
+};
+
+const DB={
+  db:null,
+  STORES:{
+    ganado_animales:{keyPath:'id'},
+    ganado_alertas:{keyPath:'id'}
+  },
+  init(){
+    return new Promise((resolve,reject)=>{
+      const req=indexedDB.open(CONFIG.DB_NAME,CONFIG.DB_VERSION);
+      req.onupgradeneeded=(e)=>{
+        const db=e.target.result;
+        for(const [name,def] of Object.entries(this.STORES)){
+          if(!db.objectStoreNames.contains(name)) db.createObjectStore(name,{keyPath:def.keyPath});
+        }
+      };
+      req.onsuccess=(e)=>{this.db=e.target.result;resolve();};
+      req.onerror=(e)=>reject(e.target.error);
+    });
+  },
+  add(name,data){
+    return new Promise((resolve,reject)=>{
+      const tx=this.db.transaction(name,'readwrite');
+      const r=tx.objectStore(name).add(data);
+      r.onsuccess=()=>resolve(r.result);
+      r.onerror=()=>reject(r.error);
+    });
+  }
+};
+
+function toBase64(file){
+  return new Promise((resolve,reject)=>{
+    const rd=new FileReader();
+    rd.onload=()=>{
+      const raw=String(rd.result||'');
+      resolve(raw.includes(',')?raw.split(',')[1]:raw);
+    };
+    rd.onerror=()=>reject(rd.error);
+    rd.readAsDataURL(file);
+  });
+}
+
+function getMonitores(raza,proposito){
+  const set=new Set();
+  if(raza==='Brahman') set.add('GDP');
+  if(raza==='Brown Swiss') set.add('Solidos (grasa/proteina)');
+  if(raza==='Girolando') set.add('Persistencia lactea');
+  if(proposito==='doble'){ set.add('GDP'); set.add('Solidos (grasa/proteina)'); }
+  return [...set];
+}
+
+function updateStep(step){
+  const pct={1:'34%',2:'68%',3:'100%'}[step]||'34%';
+  const txt={1:'Paso 1: Datos basicos',2:'Paso 2: Foto',3:'Paso 3: Listo'}[step]||'Paso 1: Datos basicos';
+  $('#stepProgress').style.width=pct;
+  $('#stepLabel').textContent=txt;
+}
+
+function selectBreed(value){
+  state.breed=value;
+  document.querySelectorAll('.breed-card').forEach((el)=>{
+    el.classList.toggle('active',el.dataset.breed===value);
+  });
+  refreshMonitores();
+}
+
+function refreshMonitores(){
+  const proposito=$('#animalProposito').value;
+  const monitores=getMonitores(state.breed,proposito);
+  $('#monitorList').textContent='Monitores activos: '+(monitores.join(', ')||'Ninguno');
+}
+
+function generarPasaporteQR(idUnico){
+  const link='https://melantia.app/vaca/'+encodeURIComponent(idUnico);
+  const qr='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(link);
+  return {link,qr};
+}
+
+async function generarCarpetaDigitalPDF(reg){
+  if(!window.jspdf || !window.jspdf.jsPDF) return;
+  const {jsPDF}=window.jspdf;
+  const doc=new jsPDF();
+  doc.setFontSize(16);
+  doc.text('Carpeta Digital del Productor - MELANT IA', 14, 16);
+  doc.setFontSize(11);
+  doc.text('Animal: '+reg.nombre,14,30);
+  doc.text('ID: '+reg.id,14,37);
+  doc.text('Raza: '+reg.raza,14,44);
+  doc.text('Proposito: '+reg.proposito,14,51);
+  doc.text('Peso inicial (kg): '+reg.pesoKg,14,58);
+  doc.text('Monitores: '+reg.monitores.join(', '),14,65);
+  doc.text('Pasaporte QR: '+reg.pasaporteLink,14,72);
+  if(reg.photoBase64){
+    try{ doc.addImage('data:image/jpeg;base64,'+reg.photoBase64,'JPEG',140,24,50,50); }catch(e){}
+  }
+  doc.save('carpeta_'+reg.id+'.pdf');
+}
+
+function sendWhatsAppSummary(reg){
+  const msg=[
+    'Bienvenido '+reg.nombre+' al hato Melant IA',
+    'ID: '+reg.id,
+    'Raza: '+reg.raza,
+    'Proposito: '+reg.proposito,
+    'Peso inicial: '+reg.pesoKg+' kg',
+    'Pasaporte: '+reg.pasaporteLink,
+    'Alerta 1: Revision general en 7 dias',
+    'Alerta 2: Desparasitacion en 15 dias'
+  ].join('\n');
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank','noopener');
+}
+
+function renderFicha(reg){
+  $('#fichaPreview').hidden=false;
+  $('#fichaAvatar').src=reg.photoBase64?'data:image/jpeg;base64,'+reg.photoBase64:'';
+  $('#fichaNombre').textContent=reg.nombre;
+  $('#fichaRaza').textContent='Raza: '+reg.raza;
+  $('#fichaProposito').textContent='Proposito: '+(reg.proposito==='doble'?'Doble Proposito':reg.proposito);
+  $('#fichaEdad').textContent=reg.edadMeses+' meses';
+  $('#fichaPeso').textContent=reg.pesoKg+' kg';
+  $('#fichaMonitores').textContent=reg.monitores.join(', ');
+  $('#fichaQr').src=reg.qr;
+  $('#fichaLink').textContent=reg.pasaporteLink;
+}
+
+function calcPesoCinta(){
+  const pt=Number(prompt('Perimetro toracico (cm):','170')||0);
+  const lc=Number(prompt('Longitud corporal (cm):','145')||0);
+  if(pt<=0 || lc<=0){
+    $('#resultMsg').textContent='Datos de cinta invalidos.';
+    return;
+  }
+  const peso=((pt*pt*lc)/10840);
+  $('#animalPeso').value=peso.toFixed(1);
+  $('#resultMsg').textContent='Peso estimado por cinta: '+peso.toFixed(1)+' kg';
+}
+
+async function registrarAnimal(){
+  const nombre=$('#animalNombre').value.trim();
+  const proposito=$('#animalProposito').value;
+  const edadMeses=Number($('#animalEdad').value||0);
+  const pesoKg=Number($('#animalPeso').value||0);
+
+  if(!nombre){$('#resultMsg').textContent='Ingresa Nombre/ID.';return;}
+  if(pesoKg<=0){$('#resultMsg').textContent='Ingresa un peso inicial valido.';return;}
+
+  const id='bov_'+Date.now().toString(36);
+  const monitores=getMonitores(state.breed,proposito);
+  const {link,qr}=generarPasaporteQR(id);
+  const now=new Date();
+  const alert7=new Date(now); alert7.setDate(now.getDate()+7);
+  const alert15=new Date(now); alert15.setDate(now.getDate()+15);
+
+  const record={
+    id,
+    nombre,
+    especie:'bovino',
+    raza:state.breed,
+    proposito,
+    edadMeses,
+    pesoKg,
+    photoBase64:state.photoBase64,
+    monitores,
+    pasaporteLink:link,
+    qr,
+    fechaRegistro:now.toISOString(),
+    userId:'local'
+  };
+
+  await DB.add('ganado_animales',record);
+  await DB.add('ganado_alertas',{
+    id:id+'_rev7',animalId:id,userId:'local',tipo:'revision_general',fechaProgramada:alert7.toISOString(),estado:'pendiente'
+  });
+  await DB.add('ganado_alertas',{
+    id:id+'_des15',animalId:id,userId:'local',tipo:'desparasitacion',fechaProgramada:alert15.toISOString(),estado:'pendiente'
+  });
+
+  state.lastRecord=record;
+  renderFicha(record);
+  updateStep(3);
+  await generarCarpetaDigitalPDF(record);
+  sendWhatsAppSummary(record);
+
+  $('#resultMsg').textContent='Registro completo: guardado + QR + PDF + alertas programadas.';
+}
+
+function initEvents(){
+  document.querySelectorAll('.breed-card').forEach((el)=>el.addEventListener('click',()=>selectBreed(el.dataset.breed)));
+  $('#animalProposito').addEventListener('change',refreshMonitores);
+  $('#animalFoto').addEventListener('change',async(e)=>{
+    const file=e.target.files && e.target.files[0];
+    if(!file) return;
+    state.photoBase64=await toBase64(file);
+    $('#photoPreview').src='data:image/jpeg;base64,'+state.photoBase64;
+    $('#photoPreview').style.display='block';
+    updateStep(2);
+  });
+  $('#btnCamara').addEventListener('click',()=>$('#animalFoto').click());
+  $('#btnCinta').addEventListener('click',calcPesoCinta);
+  $('#btnRegistrar').addEventListener('click',()=>registrarAnimal().catch((e)=>{
+    console.error(e);
+    $('#resultMsg').textContent='No se pudo registrar. Revisa si la base local esta disponible.';
+  }));
+  $('#btnWhatsApp').addEventListener('click',()=>{
+    if(!state.lastRecord){ $('#resultMsg').textContent='Primero registra un animal para enviar resumen.'; return; }
+    sendWhatsAppSummary(state.lastRecord);
+  });
+  $('#btnPdf').addEventListener('click',async()=>{
+    if(!state.lastRecord){ $('#resultMsg').textContent='Primero registra un animal.'; return; }
+    await generarCarpetaDigitalPDF(state.lastRecord);
+  });
+}
+
+(async function start(){
+  try{ await DB.init(); }catch(e){ console.error(e); }
+  initEvents();
+  refreshMonitores();
+  updateStep(1);
+})();
+</script>
+</body>
+</html>
