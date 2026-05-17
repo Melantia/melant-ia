@@ -1,0 +1,19 @@
+{
+  "registro_inicial": {
+    "nombre_completo": "Pendiente",
+    "cedula": "0000000000",
+    "celular": "0000000000",
+    "email": "ejemplo@correo.com",
+    "tipo_produccion": {
+      "cacao": false,
+      "ganado": false,
+      "mixto": false
+    },
+    "ubicacion_finca": {
+      "lat": null,
+      "lng": null,
+      "direccion_opcional": ""
+    },
+    "perfil_completado": false
+  }
+}

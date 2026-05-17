@@ -51,7 +51,9 @@
           "Ventas de Gestión Productiva",
           "Bienes Raíces Rurales",
           "Monte su TIENDA VIRTUAL",
-          "Servicios Financieros"
+          "Servicios Financieros",
+          "Oportunidades Públicas",
+          "Mercado de Plátano"
         ]
       },
       {
@@ -89,6 +91,20 @@
       },
       {
         "id": 12,
+        "titulo": "Servicios Financieros Melantia",
+        "items": [
+          "Apertura de Cuenta Digital",
+          "Onboarding y Validación KYC",
+          "Gestión de Pagos y Beneficios",
+          "Simulación de Perfil Financiero",
+          "Solicitar Microcrédito",
+          "Transferencias y Movimientos",
+          "Integración con Bancos y Cooperativas",
+          "Historial y Estado de Cuenta"
+        ]
+      },
+      {
+        "id": 13,
         "titulo": "Registro Evidencias y Documentos",
         "items": [
           "Registro de Evidencia Fotografica",

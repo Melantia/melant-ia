@@ -1,0 +1,25 @@
+{
+  "bancos": [
+    {
+      "nombre": "Banco Pichincha",
+      "ciudades": ["Quito", "Guayaquil"],
+      "api_url": "https://api.pichincha.com"
+    },
+    {
+      "nombre": "Banco Guayaquil",
+      "ciudades": ["Guayaquil", "Manta"],
+      "api_url": "https://api.guayaquil.com"
+    }
+  ],
+  "cooperativas": [
+    {
+      "nombre": "Coop. El Progreso",
+      "ciudades": ["Loja"],
+      "api_url": "https://api.elprogreso.fin"
+    }
+  ],
+  "proveedor_kyc": {
+    "api_url": "https://api.kyc-externo.com",
+    "api_key": "AQUI_TU_API_KEY"
+  }
+}

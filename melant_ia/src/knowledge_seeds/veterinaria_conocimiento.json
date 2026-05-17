@@ -1,0 +1,33 @@
+{
+  "fuente": "MELANTIA - Integración de conocimiento veterinario y salud",
+  "descripcion": "Base de conocimiento unificada para asistencia técnica veterinaria y salud, consultable offline.",
+  "manuales": [
+    {
+      "id": 1,
+      "titulo": "Sanidad, Bienestar y Manejo Animal del Ganado Bovino",
+      "categoria": "Curso",
+      "subcategoria": "Sanidad Animal",
+      "descripcion": "Curso completo sobre sanidad, bienestar y manejo animal en zonas ganaderas.",
+      "archivo": "knowledge_seeds/09_escuela de campo/Sanidad, Bienestar y Manejo Animal del Ganado Bovino.md",
+      "palabras_clave": [
+        "sanidad",
+        "bienestar",
+        "ganado",
+        "bovino",
+        "manejo",
+        "veterinaria"
+      ],
+      "formato": "markdown"
+    }
+    // Puedes agregar más manuales aquí siguiendo este formato
+  ],
+  "protocolos": [
+    // Aquí se pueden agregar protocolos de emergencia, salud, etc.
+  ],
+  "bibliografia": [
+    // Aquí se integrarán los registros de bibliografía descargados o validados por descarga_masiva_bibliografia.py
+  ],
+  "recursos": [
+    // Otros recursos relevantes (videos, imágenes, enlaces, etc.)
+  ]
+}

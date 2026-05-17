@@ -1,0 +1,34 @@
+# Datos privados de usuarios de MELANTIA
+src/data/perfil_usuario.json
+# --- MELANTIA Git Ignore ---
+
+# Entornos Virtuales (¡EL MÁS IMPORTANTE! Evita los GBs innecesarios)
+.venv/
+venv/
+env/
+bin/
+lib/
+share/
+
+# Caché de Python (Maleza que crece sola)
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Base de Datos Local (Solo si quiere que cada socio empiece de cero)
+# Si quiere subir la estructura pero no los datos, ignore el .db
+*.db
+*.sqlite3
+
+# Archivos de Sistema y Temporales
+.DS_Store
+Thumbs.db
+*.log
+.tmp/
+
+# Archivos de Diseño y Edición Pesados
+*.psd
+*.ai
+.idea/
+.vscode/
