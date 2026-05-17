@@ -1,4 +1,33 @@
-// ==============================================
+// main_controller.js — Solo inicialización de controladores principales
+import { inicializarAlarmaAguila } from './modules/alarma_aguila.js';
+import { inicializarWebSocketAlertas } from './modules/websocket_alertas.js';
+
+// Función global para recibir mensajes del backend (puede ser usada por otros módulos)
+window.onMensajeBackend = function (mensaje) {
+  if (mensaje.tipo === 'actualizacion' && mensaje.actualizacion) {
+    if (
+      window.AguilaAudioCtrl &&
+      typeof AguilaAudioCtrl.lanzarEcoSuave === 'function'
+    ) {
+      AguilaAudioCtrl.lanzarEcoSuave();
+    }
+    alert('¡Nueva actualización disponible!');
+  }
+  if (mensaje.tipo === 'alarma_diaria' && mensaje.alarma) {
+    if (
+      window.AguilaAudioCtrl &&
+      typeof AguilaAudioCtrl.lanzarAlertaFuerte === 'function'
+    ) {
+      AguilaAudioCtrl.lanzarAlertaFuerte();
+    }
+  }
+};
+
+// Inicializar controladores al cargar la app
+document.addEventListener('DOMContentLoaded', () => {
+  inicializarAlarmaAguila();
+  inicializarWebSocketAlertas();
+});
 // Botón y lógica para guiar al usuario a zona con mejor cobertura
 // ==============================================
 window.guiarAZonaCobertura = function () {
@@ -77,52 +106,120 @@ async function conectarEstructuraAIndex() {
       tarjeta.className = 'modulo-tarjeta';
       // Inyectamos el contenido dinámico
       tarjeta.innerHTML = `
-                <div class="modulo-header">
-                    <span class="modulo-id">#${modulo.id}</span>
-                    <span class="modulo-personaje">${modulo.voz_principal || 'Asistente'}</span>
-                </div>
-                <h3>${modulo.titulo}</h3>
-                <ul class="modulo-items-preview">
-                    ${(modulo.items || [])
-                      .slice(0, 2)
-                      .map((item) => `<li>${item}</li>`)
-                      .join('')}
-                </ul>
-            `;
+        <div class="modulo-header">
+          <span class="modulo-id">#${modulo.id}</span>
+          <span class="modulo-personaje">${modulo.voz_principal || 'Asistente'}</span>
+        </div>
+        <h3>${modulo.titulo}</h3>
+        <ul class="modulo-items-preview">
+          ${(modulo.items || [])
+            .slice(0, 2)
+            .map((item) => `<li>${item}</li>`)
+            .join('')}
+        </ul>
+      `;
       // Acción al tocar: Abrir el módulo específico
       tarjeta.onclick = () => abrirModulo(modulo.id);
       // Añadimos la tarjeta al index.html
       contenedor.appendChild(tarjeta);
     });
-      // Botón para ver datos OCDS
-      const btnOCDS = document.createElement('button');
-      btnOCDS.textContent = 'Ver Contrataciones Públicas (OCDS)';
-      btnOCDS.className = 'btn-melantia';
-      btnOCDS.onclick = mostrarDatosOCDS;
-      contenedor.appendChild(btnOCDS);
-  }
 
-  // Mostrar datos OCDS desde backend local (requiere endpoint Python)
-  function mostrarDatosOCDS() {
-    fetch('http://localhost:5000/ocds')
-      .then(r => r.json())
-      .then(datos => {
-        const contenedor = document.getElementById('app-menu');
-        contenedor.innerHTML = '<h2>Contrataciones Públicas (OCDS)</h2>';
-        if (!Array.isArray(datos) || datos.length === 0) {
-          contenedor.innerHTML += '<p>No hay datos disponibles.</p>';
-          return;
+    // Botón para ver datos OCDS
+    const btnOCDS = document.createElement('button');
+    btnOCDS.textContent = 'Ver Contrataciones Públicas (OCDS)';
+    btnOCDS.className = 'btn-melantia';
+    btnOCDS.onclick = mostrarDatosOCDS;
+    contenedor.appendChild(btnOCDS);
+
+    // --- BLOQUE DE PAGOS MELANTIA (Checkout principal) ---
+    // Cargar configuración de pagos
+    import('./config_pagos_melantia.js').then(({ PAGOS_MELANTIA }) => {
+      // Simulación de un producto/servicio para el ejemplo
+      const subtotal = 100; // Cambia por el valor real del carrito
+      const iva = subtotal * PAGOS_MELANTIA.IVA;
+      const comisionMelantia = subtotal * PAGOS_MELANTIA.COMISION_MELANTIA;
+
+      // PayPhone
+      let comisionPayPhone = 0;
+      if (PAGOS_MELANTIA.PAYPHONE.ACTIVO) {
+        comisionPayPhone = subtotal * PAGOS_MELANTIA.PAYPHONE.COMISION;
+        if (PAGOS_MELANTIA.PAYPHONE.IVA_COMISION) {
+          comisionPayPhone += comisionPayPhone * PAGOS_MELANTIA.IVA;
         }
-        contenedor.innerHTML += '<table class="tabla-ocds"><thead><tr><th>Año</th><th>Producto</th><th>Proveedor</th><th>Monto</th><th>Fecha</th></tr></thead><tbody>' +
-          datos.map(d => `<tr><td>${d.anio}</td><td>${d.producto}</td><td>${d.proveedor}</td><td>${d.monto}</td><td>${d.fecha}</td></tr>`).join('') + '</tbody></table>';
-      })
-      .catch(() => {
-        document.getElementById('app-menu').innerHTML = '<p>Error al cargar datos OCDS. Asegúrate de que el backend esté activo.</p>';
-      });
-  }
+      }
+
+      // Deuna
+      let comisionDeuna = 0;
+      if (PAGOS_MELANTIA.DEUNA.ACTIVO) {
+        comisionDeuna = subtotal * PAGOS_MELANTIA.COMISION_MELANTIA;
+      }
+
+      // peiGo
+      let comisionPeiGo = 0;
+      if (PAGOS_MELANTIA.PEIGO.ACTIVO) {
+        comisionPeiGo = subtotal * PAGOS_MELANTIA.COMISION_MELANTIA;
+      }
+
+      // Renderizar bloque de pago
+      const bloquePagos = document.createElement('div');
+      bloquePagos.className = 'bloque-pagos-melantia';
+      bloquePagos.innerHTML = `
+        <h3>Pago seguro MELANTIA</h3>
+        <p>Selecciona tu método de pago. El total incluye IVA y comisiones:</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <button class="btn-melantia" onclick="window.pagarConPayPhone()">PayPhone<br><span style='font-size:0.9em;'>Banco Pichincha</span></button>
+          <button class="btn-melantia" onclick="window.pagarConDeuna()">Deuna<br><span style='font-size:0.9em;'>Banco Pichincha</span></button>
+          <button class="btn-melantia" onclick="window.pagarConPeiGo()">peiGo<br><span style='font-size:0.9em;'>Banco Guayaquil</span></button>
+        </div>
+        <div style="margin-top:18px;text-align:left;max-width:420px;margin-left:auto;margin-right:auto;">
+          <b>Desglose de cargos:</b>
+          <ul style="font-size:0.98em;">
+            <li>Subtotal: $${subtotal.toFixed(2)}</li>
+            <li>IVA (15%): $${iva.toFixed(2)}</li>
+            <li>Comisión MELANTIA (5%): $${comisionMelantia.toFixed(2)}</li>
+            <li>Comisión PayPhone (5% + IVA): $${comisionPayPhone.toFixed(2)}</li>
+            <li>Comisión Deuna (solo MELANTIA): $${comisionDeuna.toFixed(2)}</li>
+            <li>Comisión peiGo (solo MELANTIA): $${comisionPeiGo.toFixed(2)}</li>
+          </ul>
+          <b>Total con PayPhone:</b> $${(subtotal + iva + comisionMelantia + comisionPayPhone).toFixed(2)}<br>
+          <b>Total con Deuna:</b> $${(subtotal + iva + comisionDeuna).toFixed(2)}<br>
+          <b>Total con peiGo:</b> $${(subtotal + iva + comisionPeiGo).toFixed(2)}
+        </div>
+        <div style="font-size:0.95em;color:#b91c1c;margin-top:8px;">El usuario asume los cargos de la plataforma de pago elegida.</div>
+      `;
+      contenedor.appendChild(bloquePagos);
+    });
+    // --- FIN BLOQUE DE PAGOS ---
   } catch (error) {
     console.error('Error conectando app_structure:', error);
   }
+}
+
+// Mostrar datos OCDS desde backend local (requiere endpoint Python)
+function mostrarDatosOCDS() {
+  fetch('http://localhost:5000/ocds')
+    .then((r) => r.json())
+    .then((datos) => {
+      const contenedor = document.getElementById('app-menu');
+      contenedor.innerHTML = '<h2>Contrataciones Públicas (OCDS)</h2>';
+      if (!Array.isArray(datos) || datos.length === 0) {
+        contenedor.innerHTML += '<p>No hay datos disponibles.</p>';
+        return;
+      }
+      contenedor.innerHTML +=
+        '<table class="tabla-ocds"><thead><tr><th>Año</th><th>Producto</th><th>Proveedor</th><th>Monto</th><th>Fecha</th></tr></thead><tbody>' +
+        datos
+          .map(
+            (d) =>
+              `<tr><td>${d.anio}</td><td>${d.producto}</td><td>${d.proveedor}</td><td>${d.monto}</td><td>${d.fecha}</td></tr>`
+          )
+          .join('') +
+        '</tbody></table>';
+    })
+    .catch(() => {
+      document.getElementById('app-menu').innerHTML =
+        '<p>Error al cargar datos OCDS. Asegúrate de que el backend esté activo.</p>';
+    });
 }
 
 // Llama a la función al cargar la página principal
@@ -147,28 +244,119 @@ function abrirModulo(idModulo) {
       });
     return;
   }
-  // Negocios Rurales: Servicios Financieros
+  // Negocios Rurales: Servicios Financieros y Oportunidades Públicas
   if (idModulo === 6) {
-    // Cargar lógica de servicios financieros solo si el usuario selecciona ese ítem
     const contenedor = document.getElementById('app-menu');
-    // Buscar el ítem Servicios Financieros
     fetch('config_structure_melant_ia/app_structure_melant_ia.json')
-      .then(r => r.json())
-      .then(data => {
-        const mod = data.menu_principal.modulos.find(m => m.id === 6);
-        if (mod && mod.items.includes('Servicios Financieros')) {
-          // Cargar el módulo JS si no está cargado
-          if (!window.mostrarServiciosFinancieros) {
-            const script = document.createElement('script');
-            script.src = 'modules/servicios_financieros.js';
-            script.onload = () => window.mostrarServiciosFinancieros();
-            document.body.appendChild(script);
-          } else {
-            window.mostrarServiciosFinancieros();
-          }
-        } else {
-          contenedor.innerHTML = '<p>No se encontró el ítem Servicios Financieros.</p>';
+      .then((r) => r.json())
+      .then((data) => {
+        const mod = data.menu_principal.modulos.find((m) => m.id === 6);
+        if (!mod) {
+          contenedor.innerHTML =
+            '<p>No se encontró el módulo Negocios Rurales.</p>';
+          return;
         }
+        // Renderizar los ítems de Negocios Rurales como botones
+        contenedor.innerHTML = `<h2>Negocios Rurales</h2><div id="negocios-rurales-items"></div>`;
+        const itemsDiv = document.getElementById('negocios-rurales-items');
+        mod.items.forEach((item) => {
+          const btn = document.createElement('button');
+          btn.className = 'btn-melantia';
+          btn.textContent = item;
+          if (item === 'Servicios Financieros') {
+            btn.onclick = () => {
+              if (!window.mostrarServiciosFinancieros) {
+                const script = document.createElement('script');
+                script.src = 'modules/servicios_financieros.js';
+                script.onload = () => window.mostrarServiciosFinancieros();
+                document.body.appendChild(script);
+              } else {
+                window.mostrarServiciosFinancieros();
+              }
+            };
+          } else if (item === 'Oportunidades Públicas') {
+            btn.onclick = () => {
+              if (typeof cargarVoz === 'function') cargarVoz('Angel');
+              if (typeof _voz === 'function')
+                _voz(
+                  'Aquí puedes consultar oportunidades públicas, licitaciones y compras estatales relevantes para productores rurales. Analiza el mercado institucional y accede a nuevas oportunidades de negocio.'
+                );
+              mostrarDatosOCDS();
+            };
+          } else if (item === 'Mercado de Plátano') {
+            btn.onclick = () => {
+              // Cargar y mostrar el módulo Mercado de Plátano
+              import('../mercado_platano_controller.js').then((mod) => {
+                const contenedor = document.getElementById('app-menu');
+                contenedor.innerHTML = `<h2>Mercado de Plátano</h2>`;
+                // Mostrar publicación semanal
+                const pub = mod.publicacionSemanal;
+                contenedor.innerHTML += `
+                  <div class="mp-publicacion">
+                    <b>Semana:</b> ${pub.semana}<br>
+                    <b>Precio de compra por caja:</b> $${pub.precio_compra_caja.toFixed(2)}<br>
+                    <b>Puntos de acopio:</b>
+                    <ul>
+                      ${pub.puntos_acopio.map((p) => `<li><b>${p.nombre}</b> - ${p.direccion} (${p.fecha_recepcion}, ${p.horario})</li>`).join('')}
+                    </ul>
+                    <b>Condiciones:</b> ${pub.condiciones}
+                  </div>
+                  <hr>
+                  <div id="mp-oferta-form"></div>
+                `;
+                // Formulario para que el productor registre su oferta
+                const formDiv = document.getElementById('mp-oferta-form');
+                formDiv.innerHTML = `
+                  <h3>Registrar oferta de cajas</h3>
+                  <label>Nombre productor: <input id="mp-nombre" type="text"></label><br>
+                  <label>Cantidad de cajas: <input id="mp-cajas" type="number" min="1"></label><br>
+                  <label>Fecha estimada de entrega: <input id="mp-fecha" type="date"></label><br>
+                  <label>Punto de acopio:
+                    <select id="mp-punto">
+                      ${pub.puntos_acopio.map((p) => `<option value="${p.id}">${p.nombre}</option>`).join('')}
+                    </select>
+                  </label><br>
+                  <label>Fotos (opcional): <input id="mp-fotos" type="file" multiple accept="image/*"></label><br>
+                  <button id="mp-enviar">Enviar oferta</button>
+                  <div id="mp-resultado"></div>
+                `;
+                document.getElementById('mp-enviar').onclick = () => {
+                  const nombre = document.getElementById('mp-nombre').value;
+                  const cajas = parseInt(
+                    document.getElementById('mp-cajas').value,
+                    10
+                  );
+                  const fecha_entrega =
+                    document.getElementById('mp-fecha').value;
+                  const punto_acopio_id = parseInt(
+                    document.getElementById('mp-punto').value,
+                    10
+                  );
+                  const fotosInput = document.getElementById('mp-fotos');
+                  const fotos = Array.from(fotosInput.files || []);
+                  // Simular productor_id (en producción usar el real)
+                  const productor_id =
+                    'prod-' + Math.floor(Math.random() * 100000);
+                  const oferta = mod.crearOfertaProductor({
+                    productor_id,
+                    nombre,
+                    cajas,
+                    fotos,
+                    punto_acopio_id,
+                    fecha_entrega,
+                  });
+                  const res = mod.registrarOferta(oferta);
+                  document.getElementById('mp-resultado').innerHTML = res.ok
+                    ? '<span style="color:green">Oferta registrada correctamente.</span>'
+                    : '<span style="color:red">Error al registrar oferta.</span>';
+                };
+              });
+            };
+          } else {
+            btn.onclick = () => alert('Funcionalidad en desarrollo: ' + item);
+          }
+          itemsDiv.appendChild(btn);
+        });
       });
     return;
   }
