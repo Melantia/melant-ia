@@ -1,0 +1,25 @@
+{
+  "protocolo_recoleccion_placenta": {
+    "version": "1.0",
+    "descripcion": "Guía paso a paso para la recolección y conservación de placenta y cordón umbilical en partos controlados, para uso en medicina regenerativa veterinaria.",
+    "indicaciones_generales": [
+      "Solo recolectar en partos limpios, sin infecciones ni complicaciones.",
+      "Usar guantes estériles y material limpio en todo momento.",
+      "Etiquetar claramente la bolsa con fecha, especie y nombre del animal."
+    ],
+    "pasos": [
+      "Preparar una bolsa estéril o recipiente limpio antes del parto.",
+      "Tras el nacimiento, esperar a que la placenta sea expulsada de forma natural (no forzar).",
+      "Colocar la placenta y el cordón umbilical en la bolsa estéril, evitando contacto con el suelo o estiércol.",
+      "Cerrar la bolsa y mantenerla refrigerada (4°C) hasta su envío al laboratorio (máximo 24 horas).",
+      "Llenar el formulario de identificación del animal y adjuntarlo a la muestra.",
+      "Transportar la muestra lo antes posible, evitando exposición al sol o calor excesivo."
+    ],
+    "advertencias": [
+      "No recolectar si hay signos de infección, mal olor o color anormal en la placenta.",
+      "No congelar la muestra, ya que destruye las células madre viables.",
+      "No usar material reutilizado sin esterilizar."
+    ],
+    "beneficio_productor": "Permite aprovechar un recurso biológico valioso para terapias regenerativas, con bajo costo y alto impacto en la salud animal."
+  }
+}

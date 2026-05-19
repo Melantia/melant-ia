@@ -1,0 +1,702 @@
+{
+  "aves": {
+    "referencias": [
+      {
+        "archivo": "Andrade-Yucailla_2017_pollos_camperos_Ecuador",
+        "fuente": "Andrade-Yucailla et al. (2017). Comportamiento productivo de dos fenotipos de pollos camperos en la region Amazonica de Ecuador.",
+        "url": "https://doi.org/10.59410/RACYT-v06n01ep01-0075",
+        "titulo_web": "Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador\n\t\t\t\t\t\t\t| Revista Amazónica. Ciencia y Tecnología",
+        "resumen": "Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador\nVerónica Andrade–Yucailla Universidad Estatal Amazónica image/svg+xml\nJulio César Vargas Burgos Universidad Estatal Amazónica image/svg+xml\nOrozco Lima Centro de Investigaciones Agropecuarias https://orcid.org/0000-0001-7909-2128\nEl estudio se realizó en el Centro de Investigación Posgrado y Conservación Amazónica (CIPCA), en el Programa Avícola de la Universidad Estatal Amazónica, el objetivo de la i…",
+        "ok": true
+      },
+      {
+        "archivo": "Angarita_Castrillon_2020_gallinas_criollas",
+        "fuente": "Angarita, L., y Castrillon, Z. (2020). Produccion agroecologica de gallinas criollas. Corporacion Universitaria Minuto de Dios.",
+        "url": "https://semillas.org.co/apc-aa-files/5d99b14191c59782eab3da99d8f95126/sin-prueba_compressed-1.pdf",
+        "titulo_web": "sin-prueba_compressed-1.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://semillas.org.co/apc-aa-files/5d99b14191c59782eab3da99d8f95126/sin-prueba_compressed-1.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "Estevez_2007_density_broilers",
+        "fuente": "Estevez, I. (2007). Density Allowances for Broilers: Where to Set the Limits? Poultry Science, 86(6).",
+        "url": "https://doi.org/10.1093/ps/86.6.1265",
+        "titulo_web": "Redirecting",
+        "resumen": "",
+        "ok": false
+      },
+      {
+        "archivo": "FAO_2015_integrated_backyard_systems",
+        "fuente": "FAO. (2015). Integrated backyard systems.",
+        "url": "https://www.fao.org/agriculture/animal-production-and-health/en/",
+        "titulo_web": "Animal Production and Health Division (NSA)",
+        "resumen": "The NSA Division supports member countries to strengthen the contribution of the livestock sector towards the achievement of the Sustainable Development Goals (SDGs) – as animal rearing on farms can be particularly effective at reducing hunger and poverty.\nThe Division endeavours to facilitate the participation of all livestock producers – large and small – to grow the sector, especially in developing countries.\nA world where the livestock sector sustainably contributes to the welfare of people …",
+        "ok": true
+      },
+      {
+        "archivo": "Gallard_2022_densidad_alojamiento_bienestar_parrilleros",
+        "fuente": "Gallard et al. (2022). Efecto de la densidad de alojamiento sobre bienestar en pollos parrilleros.",
+        "url": "https://doi.org/10.30972/vet.3326188",
+        "titulo_web": "Efecto de la densidad de alojamiento y la zona del galpón sobre indicadores de bienestar en pollos parrilleros\n\t\t\t\t\t\t\t| Revista Veterinaria",
+        "resumen": "Efecto de la densidad de alojamiento y la zona del galpón sobre indicadores de bienestar en pollos parrilleros\nE. A. Gallard Instituto Nacional de Tecnología Agropecuaria.\nEstación Experimental Agropecuaria Reconquista\nM. L. Menichelli Instituto Nacional de Tecnología Agropecuaria.\nEstación Experimental Agropecuaria Reconquista\nUniversidad Católica de Santa Fe. Facultad de Ciencias Agropecuarias\nR. J. Di Masso Universidad Nacional del Rosario. Facultad de Ciencias Veterinarias\nF. A. Revidatti Un…",
+        "ok": true
+      },
+      {
+        "archivo": "Hernandez-Cabrera_2015_pastoreo_gallinas_malezas",
+        "fuente": "Hernandez-Cabrera, C. (2015). Efecto del pastoreo de gallinas en el control de malezas. Zamorano.",
+        "url": "https://bdigital.zamorano.edu/server/api/core/bitstreams/3a84a03d-8725-4ccf-acfa-cdcab82a3a8e/content",
+        "titulo_web": "content",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://bdigital.zamorano.edu/server/api/core/bitstreams/3a84a03d-8725-4ccf-acfa-cdcab82a3a8e/content\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "Jaramillo_2018_parametros_productivos_huevo",
+        "fuente": "Jaramillo et al. (2018). Evaluacion de parametros productivos y calidad del huevo en dos sistemas de alojamiento.",
+        "url": "https://hdl.handle.net/11404/5291",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 500. URL: https://hdl.handle.net/11404/5291",
+        "ok": false
+      },
+      {
+        "archivo": "Phillips_Engel_2002_agroforestry_chicken",
+        "fuente": "Phillips, I., y Engel, C. (2002). Development of an agroforestry system for chicken production.",
+        "url": "https://orgprints.org/id/eprint/8417/",
+        "titulo_web": "Organic Eprints -  Development of an agroforestry system for chicken production",
+        "resumen": "Philipps, Lois ; Engel, Cindy and Wolfe, Martin (2002)\nDevelopment of an agroforestry system for chicken production.\nIn: Powell, Jane and et al. (Eds.) Proceedings of the UK Organic Research 2002 Conference , Organic Centre Wales, Institute of Rural Studies, University of Wales Aberystwyth, pp. 257-258.\nThis report was presented at the UK Organic Research 2002 Conference. Because conventional production of chickens has gone further than any other animal production system towards complete control…",
+        "ok": true
+      },
+      {
+        "archivo": "FENAVI_2019_sanidad_industria_avicola",
+        "fuente": "FENAVI (2019). Sanidad en la industria avicola. Enfermedades por zona geografica y nivel de bioseguridad.",
+        "url": "https://fenavi.org/uploads/2019/02/SANIDAD-EN-LA-INDUSTRIA-AVICOLA.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://fenavi.org/uploads/2019/02/SANIDAD-EN-LA-INDUSTRIA-AVICOLA.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Avinews_2025_protocolos_bioseguridad_pollos_engorde",
+        "fuente": "Avinews (2025). Protocolos de bioseguridad en el manejo de pollos de engorde.",
+        "url": "https://avinews.com/protocolos-de-bioseguridad-en-el-manejo-de-pollos-de-engorde/",
+        "titulo_web": "Protocolos de Bioseguridad en el Manejo de Pollos de Engorde",
+        "resumen": "Protocolos de Bioseguridad en el Manejo Diario de una Granja de Pollos de Engorde\nImplementar protocolos de bioseguridad bien definidos, monitorearlos constantemente y capacitar al personal son acciones esenciales para asegurar la salud del plantel, proteger la inversión y contribuir con la inocuidad alimentaria en toda la cadena productiva.\nLa producción avícola representa uno de los sectores agropecuarios más importantes a nivel mundial, y la bioseguridad se ha convertido en una herramienta in…",
+        "ok": true
+      },
+      {
+        "archivo": "Agrocalidad_2023_manual_buenas_practicas_pollos_engorde",
+        "fuente": "Agrocalidad (2023). Manual de Buenas Practicas de Produccion Avicola – Pollos de engorde.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2023/02/Manual-de-Aplicabilidad-de-Buenas-Practicas-Pollos-de-Engorde.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.agrocalidad.gob.ec/wp-content/uploads/2023/02/Manual-de-Aplicabilidad-de-Buenas-Practicas-Pollos-de-Engorde.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Aviagen_manual_manejo_pollos_engorde",
+        "fuente": "Aviagen. Manual de Manejo de Pollos de Engorde. Temperatura, ventilacion y bienestar animal.",
+        "url": "https://aviagen.com/assets/Tech_Center/Broiler_Management/2022-BB-BroilerPOGuide-Spanish.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://aviagen.com/assets/Tech_Center/Broiler_Management/2022-BB-BroilerPOGuide-Spanish.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "CertifiedHumane_2025_enfermedades_pollos_engorde",
+        "fuente": "Certified Humane Latino (2025). Como prevenir las enfermedades que afectan a los pollos de engorde.",
+        "url": "https://certifiedhumanelatino.com/como-prevenir-las-enfermedades-que-afectan-a-los-pollos-de-engorde/",
+        "titulo_web": "",
+        "resumen": "[ERROR] No se pudo conectar. URL: https://certifiedhumanelatino.com/como-prevenir-las-enfermedades-que-afectan-a-los-pollos-de-engorde/",
+        "ok": false
+      },
+      {
+        "archivo": "MerckVetManual_2024_programas_vacunacion_aves_produccion",
+        "fuente": "Merck Veterinary Manual (2024). Programas de vacunacion para aves de produccion.",
+        "url": "https://www.msdvetmanual.com/es/aves-de-corral/vacunacion-de-aves-de-corral/programas-de-vacunacion-para-aves-de-produccion",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.msdvetmanual.com/es/aves-de-corral/vacunacion-de-aves-de-corral/programas-de-vacunacion-para-aves-de-produccion",
+        "ok": false
+      },
+      {
+        "archivo": "Zoomalia_2024_limpieza_gallinero_9_consejos",
+        "fuente": "Zoomalia (2024). Limpieza del gallinero: 9 consejos para un buen mantenimiento.",
+        "url": "https://www.zoomalia.es/blog/limpieza-gallinero/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 403. URL: https://www.zoomalia.es/blog/limpieza-gallinero/",
+        "ok": false
+      },
+      {
+        "archivo": "Agrocalidad_2020_guia_buenas_practicas_avicolas",
+        "fuente": "Agrocalidad (2020). Guia de buenas practicas avicolas. Temperatura, luz, ventilacion, limpieza y sanitizacion.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2020/05/pecu-guia-buenas-practicas-avicolas.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.agrocalidad.gob.ec/wp-content/uploads/2020/05/pecu-guia-buenas-practicas-avicolas.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Terranimal_2023_bienestar_gallinas_ponedoras_libre_pastoreo",
+        "fuente": "Terranimal Ecuador (2023). Bienestar Animal de Gallinas Ponedoras en Libre Pastoreo.",
+        "url": "https://gallinasfelices.terranimal.ec/wp-content/uploads/2023/07/Terranimal-Bienestar-Animal-Gallinas-Ponedoras-Libre-Pastoreo.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://gallinasfelices.terranimal.ec/wp-content/uploads/2023/07/Terranimal-Bienestar-Animal-Gallinas-Ponedoras-Libre-Pastoreo.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "AmericanHumane_2025_normas_bienestar_gallinas_ponedoras",
+        "fuente": "American Humane Society (2025). Normas de bienestar animal para gallinas ponedoras.",
+        "url": "https://www.americanhumane.org/wp-content/uploads/2025/03/American-Humane-Laying-Hen-Standards.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.americanhumane.org/wp-content/uploads/2025/03/American-Humane-Laying-Hen-Standards.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "PazyDesarrollo_2020_manual_produccion_manejo_aves",
+        "fuente": "Paz y Desarrollo (2020). Manual Practico para la Produccion y Manejo de Aves.",
+        "url": "https://www.pazydesarrollo.org/wp-content/uploads/2020/09/Manual-practico-produccion-manejo-aves.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.pazydesarrollo.org/wp-content/uploads/2020/09/Manual-practico-produccion-manejo-aves.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "UAE_2025_enfermedades_respiratorias_aves_traspatio",
+        "fuente": "Universidad Agraria del Ecuador (2025). Enfermedades respiratorias en aves de traspatio.",
+        "url": "https://cia.uagraria.edu.ec/Archivos/ENFERMEDADES-RESPIRATORIAS-AVES-TRASPATIO.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://cia.uagraria.edu.ec/Archivos/ENFERMEDADES-RESPIRATORIAS-AVES-TRASPATIO.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Avinews_2026_sanidad_procesamiento_avicola_inocuidad",
+        "fuente": "Avinews (2026). Sanidad en el procesamiento avicola: clave para la inocuidad alimentaria.",
+        "url": "https://avinews.com/sanidad-en-el-procesamiento-avicola-clave-para-la-inocuidad-alimentaria/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://avinews.com/sanidad-en-el-procesamiento-avicola-clave-para-la-inocuidad-alimentaria/",
+        "ok": false
+      },
+      {
+        "archivo": "AgroProductividad_libre_pecoreo_gallinas_Gallus",
+        "fuente": "Revista Agro Productividad. El sistema de libre pecoreo en gallinas Gallus domesticus.",
+        "url": "https://revista-agroproductividad.org/index.php/agrop/article/download/1978/1763",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://revista-agroproductividad.org/index.php/agrop/article/download/1978/1763",
+        "ok": false
+      },
+      {
+        "archivo": "WATTPoultry_2016_gallinas_libres_riesgos_sanidad_aviar",
+        "fuente": "WATT Poultry (2016). Gallinas libres y los riesgos para la sanidad aviar.",
+        "url": "https://www.wattagnet.com/egg-production/article/15527946/gallinas-libres-y-los-riesgos-para-la-sanidad-aviar",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 403. URL: https://www.wattagnet.com/egg-production/article/15527946/gallinas-libres-y-los-riesgos-para-la-sanidad-aviar",
+        "ok": false
+      },
+      {
+        "archivo": "Terranimal_alternativas_crianza_libre_pastoreo_sistemas",
+        "fuente": "Terranimal Ecuador. Alternativas de Crianza en Libre Pastoreo.",
+        "url": "https://gallinasfelices.terranimal.ec/gallina/alternativas-crianza-libre-pastoreo/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://gallinasfelices.terranimal.ec/gallina/alternativas-crianza-libre-pastoreo/",
+        "ok": false
+      },
+      {
+        "archivo": "PAE_gallinas_libres_Ecuador_inanicion_prohibida",
+        "fuente": "Proteccion Animal Ecuador (PAE). Gallinas Libres Ecuador.",
+        "url": "https://pae.ec/campanas/gallinas-libres-ecuador/",
+        "titulo_web": "Gallinas libres Ecuador | PAE",
+        "resumen": "Gallinas Libres Ecuador nace en 2018 como parte de una coalición internacional conformada por más de 90 organizaciones, conocida como Open Wing Alliance , cuyo objetivo es poner fin a la crueldad a la que son sometidas las gallinas en la industria avícola.\nVisita el canal de Youtube y mira esta charla para conocer de las necesidades de las gallinas.\nCada año, cerca de 158.000 millones de gallinas y pollos son matados en todo el mundo. Debido a esta explotación masiva, se trata de la especie de a…",
+        "ok": true
+      },
+      {
+        "archivo": "VeterinarioDigital_2020_produccion_huevo_libre_jaula_tipos",
+        "fuente": "Veterinaria Digital (2020). Produccion de huevo libre de jaula.",
+        "url": "https://www.veterinariadigital.com/articulos/produccion-huevo-libre-de-jaula/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.veterinariadigital.com/articulos/produccion-huevo-libre-de-jaula/",
+        "ok": false
+      },
+      {
+        "archivo": "GranjaElMotilon_2024_gallinas_libres_crianza_bienestar",
+        "fuente": "Granja El Motilon (2024). Gallinas Libres: crianza eficiente al libre pastoreo.",
+        "url": "https://granjaelmotilon.com/blog/gallinas-libres-crianza-eficiente-al-libre-pastoreo/",
+        "titulo_web": "",
+        "resumen": "[ERROR] Tiempo de espera agotado. URL: https://granjaelmotilon.com/blog/gallinas-libres-crianza-eficiente-al-libre-pastoreo/",
+        "ok": false
+      },
+      {
+        "archivo": "ElProductor_2021_factibilidad_huevos_gallinas_pastoreo_Ecuador",
+        "fuente": "El Productor Ecuador (2021). Factibilidad de la produccion de huevos de gallinas con acceso a pastoreo.",
+        "url": "https://elproductor.com/2021/07/factibilidad-de-la-produccion-de-huevos-de-gallinas-con-acceso-a-pastoreo/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 403. URL: https://elproductor.com/2021/07/factibilidad-de-la-produccion-de-huevos-de-gallinas-con-acceso-a-pastoreo/",
+        "ok": false
+      }
+    ]
+  },
+  "cerdos": {
+    "referencias": [
+      {
+        "archivo": "CIAP_manual_produccion_porcicola",
+        "fuente": "Centro de Informacion de Actividades Porcinas. Manual de produccion porcicola. 114 paginas.",
+        "url": "https://www.ciap.org.ar/Sitio/Archivos/Manual%20de%20produccion%20porcicola.pdf",
+        "titulo_web": "Manual de produccion porcicola.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://www.ciap.org.ar/Sitio/Archivos/Manual%20de%20produccion%20porcicola.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "Corpmontana_2023_reproduccion_cerdos",
+        "fuente": "Corpmontana (2023). Reproduccion de cerdos: guia completa.",
+        "url": "https://www.corpmontana.com/m-conecta/porcicultura/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.corpmontana.com/m-conecta/porcicultura/",
+        "ok": false
+      },
+      {
+        "archivo": "3tres3_sistema_produccion_sitio_multiple_cerdos",
+        "fuente": "3tres3.com. Sistema de produccion en un sitio y en multiples sitios.",
+        "url": "https://www.3tres3.com/latam/articulos/sistema-de-produccion-en-un-sitio-y-en-multiples-sitios_36533/",
+        "titulo_web": "Artículos - 3tres3 LATAM, la página del Cerdo",
+        "resumen": "Artículos sobre porcicultura y todo lo relacionado con la cría, engorde, levante, comercialización de cerdos",
+        "ok": true
+      },
+      {
+        "archivo": "Agrotendencia_cria_cerdos_potreros",
+        "fuente": "Agrotendencia.tv. Cria de cerdos: manejo en potreros, instalaciones y ventajas.",
+        "url": "https://agrotendencia.tv/agropedia/la-cria-de-cerdos/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://agrotendencia.tv/agropedia/la-cria-de-cerdos/",
+        "ok": false
+      },
+      {
+        "archivo": "Digesa_guia_crianza_sanitaria_cerdos",
+        "fuente": "Digesa - MINSA Peru. Guia Para La Crianza Sanitaria de Cerdos. 24 paginas.",
+        "url": "https://www.digesa.minsa.gob.pe/publicaciones/descargas/crianza_cerdos.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.digesa.minsa.gob.pe/publicaciones/descargas/crianza_cerdos.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Asobanca_2022_guia_granja_cerdos_Ecuador",
+        "fuente": "Asociacion de Bancos Privados del Ecuador (2022). Guia de Granja de Cerdos. 62 paginas.",
+        "url": "https://asobanca.org.ec/uploads/2022/12/1.-Gu%C3%ADa-de-Granja-de-Cerdos.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://asobanca.org.ec/uploads/2022/12/1.-Gu%C3%ADa-de-Granja-de-Cerdos.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "GranjasSanAntonio_2023_proceso_productivo_cerdos",
+        "fuente": "Granjas San Antonio (2023). El proceso productivo en una granja de cerdos ecologicos.",
+        "url": "https://granjassanantonio.com/el-proceso-productivo-en-una-granja-de-cerdos-ecologicos/",
+        "titulo_web": "El proceso productivo en una granja de cerdos I Blog",
+        "resumen": "El proceso productivo en Granjas San Antonio es un proceso complejo que requiere especialización y disciplina. La producción de carne de cerdo 100% ecológico exige la puesta en marcha de unos procesos y sistemas específicos que aseguren el bienestar de los animales durante toda su vida y que además nos permitan garantizar a nuestros clientes una carne de una calidad excepcional.\nLa genética: un factor esencial en una granja de cerdos ecológicos\nEn Granjas San Antonio diseñamos nuestra propia gen…",
+        "ok": true
+      },
+      {
+        "archivo": "DehesaBaronDeLey_2021_fases_crianza_cerdo_iberico",
+        "fuente": "Dehesa Baron De Ley (2021). El cerdo iberico: fases de su crianza.",
+        "url": "https://www.dehesabarondeley.com/el-cerdo-iberico-conoces-las-fases-de-su-crianza/",
+        "titulo_web": "Fases de crianza del cerdo ibérico - Dehesa Barón de Ley",
+        "resumen": "La clave de un buen ibérico es la forma de crianza de un buen cerdo . ¿Sabías que cada cerdo ibérico con el que se elaboran los productos de Dehesa Barón de Ley dispone de tres hectáreas para su crianza sólo con bellota y hierba? Esto es solo una pincelada de cómo se crían los cerdos ibéricos en nuestro entorno, en la dehesa extremeña. Un enclave privilegiado en el Valle de Ambroz , en la provincia de Cáceres.\nVamos a ver las diferentes fases de crianza del cerdo ibérico y la importancia de cada…",
+        "ok": true
+      },
+      {
+        "archivo": "ProduccionAnimal_manejo_produccion_porcino",
+        "fuente": "Produccion-animal.com.ar. Manejo y produccion de porcino.",
+        "url": "http://www.produccion-animal.com.ar/produccion_porcina/00-produccion_porcina_indice.htm",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: http://www.produccion-animal.com.ar/produccion_porcina/00-produccion_porcina_indice.htm",
+        "ok": false
+      },
+      {
+        "archivo": "EscuelaCortadores_ciclo_vida_cerdo",
+        "fuente": "Escuela Nacional de Cortadores de Jamon de Espana. El ciclo de vida natural del cerdo.",
+        "url": "https://www.escuelanacionalcortadores.es/el-ciclo-de-vida-natural-del-cerdo/",
+        "titulo_web": "",
+        "resumen": "[ERROR] No se pudo conectar. URL: https://www.escuelanacionalcortadores.es/el-ciclo-de-vida-natural-del-cerdo/",
+        "ok": false
+      },
+      {
+        "archivo": "INIAP_produccion_porcina_Ecuador_distribucion",
+        "fuente": "INIAP. La produccion porcina en el Ecuador: distribucion regional.",
+        "url": "https://repositorio.iniap.gob.ec/bitstream/41000/6183/1/iniapsc377.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://repositorio.iniap.gob.ec/bitstream/41000/6183/1/iniapsc377.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Cayambe-Padilla_2022_sistemas_manejo_porcino_SciELO",
+        "fuente": "Cayambe-Padilla, M.A. et al. (2022). Sistemas de manejo de la produccion porcina. SciELO Venezuela.",
+        "url": "http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S1315-01402022000100001",
+        "titulo_web": "",
+        "resumen": "[ERROR] TooManyRedirects: Exceeded 30 redirects.. URL: http://ve.scielo.org/scielo.php?script=sci_arttext&pid=S1315-01402022000100001",
+        "ok": false
+      },
+      {
+        "archivo": "MAGAP_2024_Ecuador_exporta_carne_cerdo",
+        "fuente": "MAGAP (2024). Ecuador exporta por segunda vez carne de cerdo.",
+        "url": "https://www.agricultura.gob.ec/ecuador-exporta-por-segunda-vez-carne-de-cerdo/",
+        "titulo_web": "Ecuador exporta por segunda vez carne de cerdo – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "Quito, 10 de septiembre de 2024.- Mediante un trabajo conjunto entre el sector privado y el sector público, Ecuador exporta 27 toneladas de carne de cerdo a Vietnam. Esta exportación se concreta tras la búsqueda de nuevos mercados para los productos ecuatorianos realizada desde las autoridades y los representantes de las empresas privadas.\nDanilo Palacios, ministro de Agricultura y Ganadería, felicitó a la empresa privada por la exportación y resaltó que tienen el apoyo del Estado para llegar a …",
+        "ok": true
+      },
+      {
+        "archivo": "Agrocalidad_2022_guia_buenas_practicas_porcicolas",
+        "fuente": "Agrocalidad (2022). Guia de Buenas Practicas Porcicolas. 72 paginas.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2022/02/pecu2-guia-buenas-practicas-porcicolas.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.agrocalidad.gob.ec/wp-content/uploads/2022/02/pecu2-guia-buenas-practicas-porcicolas.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "ESPOCH_2023_porcicultura_manejo_sanitario_genetico",
+        "fuente": "ESPOCH (2023). Porcicultura: crianza, produccion y reproduccion de cerdos.",
+        "url": "https://dspace.espoch.edu.ec/bitstream/123456789/19374/1/23T0785.pdf",
+        "titulo_web": "23T0785.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://dspace.espoch.edu.ec/bitstream/123456789/19374/1/23T0785.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "MSDVetManual_interaccion_salud_manejo_cerdos",
+        "fuente": "MSD Veterinary Manual. Interaccion entre la salud y el manejo en cerdos.",
+        "url": "https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-los-cerdos/interaccion-entre-la-salud-y-el-manejo-cerdos",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-los-cerdos/interaccion-entre-la-salud-y-el-manejo-cerdos",
+        "ok": false
+      },
+      {
+        "archivo": "MundoAgropecuario_2025_agricultura_regenerativa_porcicultura",
+        "fuente": "Mundo Agropecuario (2025). Agricultura regenerativa y porcicultura: juntas funcionan.",
+        "url": "https://mundoagropecuario.com/agricultura-regenerativa-y-porcicultura-juntas-funcionan/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://mundoagropecuario.com/agricultura-regenerativa-y-porcicultura-juntas-funcionan/",
+        "ok": false
+      },
+      {
+        "archivo": "Garimori_2025_cerdo_iberico_agricultura_regenerativa",
+        "fuente": "Garimori Guijuelo (2025). La adaptacion del cerdo iberico a la agricultura regenerativa.",
+        "url": "https://www.garimori.es/la-adaptacion-del-cerdo-iberico-a-la-agricultura-regenerativa/",
+        "titulo_web": "La adaptación del cerdo ibérico a la agricultura regenerativa - Garimori Guijuelo",
+        "resumen": "La adaptación del cerdo ibérico a la agricultura regenerativa\nEl modelo de agricultura regenerativa busca recuperar la salud del suelo, aumentar la biodiversidad y mejorar los ecosistemas. El cerdo ibérico , por sus características y su estrecha relación con la dehesa , se ha convertido en un gran aliado de este sistema sostenible.\nEl cerdo ibérico vive tradicionalmente en libertad, moviéndose por grandes extensiones arboladas, lo que reduce el impacto ambiental de su crianza. Su capacidad para …",
+        "ok": true
+      },
+      {
+        "archivo": "VeterinarioDigital_2022_reproductoras_porcinas_Ecuador",
+        "fuente": "Veterinaria Digital (2022). Reproductoras porcinas en Ecuador. Razas principales.",
+        "url": "https://www.veterinariadigital.com/noticias/reproductoras-porcinas-en-ecuador/",
+        "titulo_web": "Reproductoras porcinas en Ecuador",
+        "resumen": "Toda la información sobre medicina veterinaria y producción animal\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nEn Ecuador la porcicultura tiene un aporte en el PIB agropecuario de 8%, generando aproximadamente 80 mil empleos directos.\nLa porcicultura en Latinoam…",
+        "ok": true
+      },
+      {
+        "archivo": "ASPE_razas_cerdo_Ecuador_Yorkshire_Landrace_Hampshire",
+        "fuente": "Asociacion de Porcicultores del Ecuador (ASPE). Razas de cerdo en Ecuador.",
+        "url": "https://aspe.org.ec/razas-de-cerdo-en-ecuador/",
+        "titulo_web": "Razas de cerdo en Ecuador - ASPE",
+        "resumen": "Aquí encontrarás información detallada sobre las diferentes razas de cerdos criados en el país, sus características, hábitat, alimentación y cuidados.",
+        "ok": true
+      }
+    ]
+  },
+  "cabras": {
+    "referencias": [
+      {
+        "archivo": "IGA_caprinocultura_Ecuador",
+        "fuente": "International Goat Association. La caprinocultura en Ecuador.",
+        "url": "https://www.iga-goatworld.com/uploads/tierras_altas_nov_2014.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.iga-goatworld.com/uploads/tierras_altas_nov_2014.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "MSD_reproduccion_parto_cabras",
+        "fuente": "MSD Veterinary Manual. Reproduccion y parto de las cabras.",
+        "url": "https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/reproduccion-y-parto-de-las-cabras",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/reproduccion-y-parto-de-las-cabras",
+        "ok": false
+      },
+      {
+        "archivo": "Aguirre-Riofrio_2025_rendimiento_canal_cabra_Ecuador",
+        "fuente": "Aguirre-Riofrio, E.L. (2025). Rendimiento a la canal en la cabra manejada a campo abierto en el sur de Ecuador.",
+        "url": "https://revistadigital.uce.edu.ec/index.php/SIEMBRA/article/view/4966",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://revistadigital.uce.edu.ec/index.php/SIEMBRA/article/view/4966",
+        "ok": false
+      },
+      {
+        "archivo": "Sagal_Sosoranga_2025_cabras_criollas_UNESUM",
+        "fuente": "Sagal Sosoranga, M.N. (2025). Cria de cabras criollas. UNESUM.",
+        "url": "https://repositorio.unesum.edu.ec/bitstream/53000/4623/1/UNESUM-ECU-AGROPECUARIA-2025-38.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] Certificado SSL no válido. URL: https://repositorio.unesum.edu.ec/bitstream/53000/4623/1/UNESUM-ECU-AGROPECUARIA-2025-38.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "UAE_crianza_cabras_tecnificada",
+        "fuente": "Universidad Agraria del Ecuador. Crianza de cabras bajo procesos tecnificados.",
+        "url": "https://cia.uagraria.edu.ec/Archivos/VERA%20MORA%20JONATAN%20SAUL.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://cia.uagraria.edu.ec/Archivos/VERA%20MORA%20JONATAN%20SAUL.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Morales_2025_entorno_social_productivo_caprinos_UTC",
+        "fuente": "Morales, J.B. (2025). Determinacion del entorno social y productivo de caprinos criollos. UTC.",
+        "url": "https://investigacion.utc.edu.ec/dateh/article/view/68",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://investigacion.utc.edu.ec/dateh/article/view/68",
+        "ok": false
+      },
+      {
+        "archivo": "AICA_2023_produccion_leche_cabras_criollas",
+        "fuente": "AICA (2023). Produccion de leche de cabras criollas en Ecuador.",
+        "url": "https://s59b6fdfe9e4460e7.jimcontent.com/download/version/1687298986/module/14395206073/name/40-PRODUCCION-DE-LECHE-DE-CABRAS-CRIOLLAS-EN-LA.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://s59b6fdfe9e4460e7.jimcontent.com/download/version/1687298986/module/14395206073/name/40-PRODUCCION-DE-LECHE-DE-CABRAS-CRIOLLAS-EN-LA.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Lucas_2020_tipificacion_sistemas_caprinos_UPS",
+        "fuente": "Lucas, L.A.S. (2020). Tipificacion integral de sistemas caprinos. Universidad Politecnica Salesiana.",
+        "url": "https://lagranja.ups.edu.ec/index.php/granja/article/view/31.2020.05",
+        "titulo_web": "Propagación in vitro de Quishuar (buddleja incana ruíz&pav). \n\t\t\t\t\t\t\t| La Granja",
+        "resumen": "Quishuar es una especie forestal apreciada por sus usos. La explotación intensiva y la oferta insatisfecha de plantas han sido limitantes para cumplir con programas de reforestación. La micropropagación es una técnica que ayudaría a erradicar este problema ya que el propósito es producir mayor cantidad de plantas en menor tiempo. El objetivo de esta investigación fue desarrollar protocolos para la desinfección, establecimiento y multiplicación in vitro, para el efecto se realizaron ensayos parti…",
+        "ok": true
+      },
+      {
+        "archivo": "COVIHER_2023_ganaderia_regenerativa_caprino_ovino",
+        "fuente": "COVIHER (2023). La Ganaderia Regenerativa en el caprino-ovino.",
+        "url": "https://coviher.com/ganaderia-regenerativa-en-el-caprino-ovino/",
+        "titulo_web": "La Ganadería Regenerativa en el caprino-ovino",
+        "resumen": "El campo precisa de nuevas herramientas para potenciar la sostenibilidad, la ganadería regenerativa puede convertir el sector del caprino-ovino en el más sostenible del ámbito cárnico. Las ventajas de la cría de cabras y ovejas frente a otro tipo de ganado son conocidas. Animales pequeños que ofrecen una gran calidad de carnes, lanas y leches, aportando numerosos beneficios a los ecosistemas. La protección de la biodiversidad que aporta la trashumancia facilita que las diferentes especies se dis…",
+        "ok": true
+      },
+      {
+        "archivo": "ProduccionAnimal_manejo_sanitario_hato_caprino",
+        "fuente": "Produccion-animal.com.ar. Manejo Sanitario del Hato Caprino.",
+        "url": "http://www.produccion-animal.com.ar/produccion_caprina/02-manejo_sanitario_caprino.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: http://www.produccion-animal.com.ar/produccion_caprina/02-manejo_sanitario_caprino.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "MSDVetManual_manejo_general_cabras",
+        "fuente": "MSD Veterinary Manual. Manejo general de las cabras.",
+        "url": "https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/descripcion-general-del-manejo-de-las-cabras",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/descripcion-general-del-manejo-de-las-cabras",
+        "ok": false
+      },
+      {
+        "archivo": "MSDVetManual_atencion_sanitaria_preventiva_cabras",
+        "fuente": "Merck Veterinary Manual. Atencion sanitaria preventiva y vacunacion en cabras.",
+        "url": "https://www.merckvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/descripcion-general-de-la-atencion-sanitaria-preventiva-y-programa-de-vacunacion-en-cabras",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.merckvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/descripcion-general-de-la-atencion-sanitaria-preventiva-y-programa-de-vacunacion-en-cabras",
+        "ok": false
+      },
+      {
+        "archivo": "Agrocalidad_2025_programa_nacional_sanitario_ovinos_caprinos",
+        "fuente": "Agrocalidad (2025). Resolucion 0255 – Programa Nacional Sanitario de Ovinos y Caprinos.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2025/04/Resolucion-0255-Programa-Nacional-Sanitario-de-ovinos-caprinos.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.agrocalidad.gob.ec/wp-content/uploads/2025/04/Resolucion-0255-Programa-Nacional-Sanitario-de-ovinos-caprinos.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "MSDVetManual_nutricion_cabras_calcio_fosforo_proteina",
+        "fuente": "MSD Veterinary Manual. Nutricion de las cabras.",
+        "url": "https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/nutricion-de-las-cabras",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.msdvetmanual.com/es/manejo-y-nutricion/manejo-de-las-cabras/nutricion-de-las-cabras",
+        "ok": false
+      },
+      {
+        "archivo": "SciELO_SENESCYT_caracterizacion_sistemas_caprinos_Ecuador",
+        "fuente": "Matias, J.V. (2017). Caracterizacion de los sistemas de produccion caprinos en Ecuador.",
+        "url": "https://scielo.senescyt.gob.ec/pdf/rctu/1390-9363/rctu.2017.9.1.007.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://scielo.senescyt.gob.ec/pdf/rctu/1390-9363/rctu.2017.9.1.007.pdf",
+        "ok": false
+      }
+    ]
+  },
+  "cuyes": {
+    "referencias": [
+      {
+        "archivo": "FAO_sanidad_cuyes_cap7_mortalidad_prevencion",
+        "fuente": "FAO. Capitulo 7: Sanidad en cuyes.",
+        "url": "https://www.fao.org/3/w6562s/w6562s09.htm",
+        "titulo_web": "Producción de cuyes (Cavia porcellus)",
+        "resumen": "1 La cría animal: artículos seleccionados de la Revista mundial de zootecnia, 1977 (C E F I) 2 Erradicación de la peste porcina y la peste porcina africana, 1977 (E F I) 3 Insecticides and application equipment for tsetse control, 1977 (F I) 4 Nuevos recursos forrajeros, 1977 (E/F/I) 5 Bibliografía del ganado vacuno criollo de las Américas, 1977 ( E/I) 6 Mediterranean cattle and sheep in crossbreeding, 1977 (F I) 7 The environmental impact of tsetse control operations, 1977 (F I) 7 Rev. 1. The e…",
+        "ok": true
+      },
+      {
+        "archivo": "FAO_alimentacion_cuyes_agua_suministro",
+        "fuente": "FAO. Alimentacion de cuyes y conejos. Suministro de agua.",
+        "url": "https://www.fao.org/3/w6562s/w6562s10.htm",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.fao.org/3/w6562s/w6562s10.htm",
+        "ok": false
+      },
+      {
+        "archivo": "Procampo_manejo_sanitario_bioseguridad_cuyes",
+        "fuente": "Procampo Ecuador. Manejo sanitario y bioseguridad en la explotacion de cuyes.",
+        "url": "https://www.procampo.com.ec/blog/11-salud/239-manejo-sanitario-y-bioseguridad-en-la-explotacion-de-cuyes",
+        "titulo_web": "MANEJO SANITARIO Y BIOSEGURIDAD EN LA EXPLOTACIÓN DE CUYES",
+        "resumen": "Para garantizar la salubridad en la producción cuyícola, se debe manejar una política de sanidad en la que se incluya el cuidado de instalaciones, de los animales y aplicar un programa de bioseguridad. Si no existe un manejo sanitario adecuado, la aparición de enfermedades es común. En el caso de los cuyes, estas patologías son fáciles de prevenir y tratar.\nLas instalaciones deben proporcionar una buena protección. Las paredes deben tener ventanas grandes que permitan una ventilación adec…",
+        "ok": true
+      },
+      {
+        "archivo": "Agrocalidad_2022_guia_buenas_practicas_cuyes",
+        "fuente": "Agrocalidad (2022). Guia de Buenas Practicas Pecuarias en la Produccion de Cuyes. 31 paginas.",
+        "url": "https://www.agrocalidad.gob.ec/wp-content/uploads/2022/02/pecu5-guia-buenas-practicas-pecuarias-cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.agrocalidad.gob.ec/wp-content/uploads/2022/02/pecu5-guia-buenas-practicas-pecuarias-cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "HumanaEcuador_2021_manual_manejo_cuyes_forraje",
+        "fuente": "Fundacion Humana Pueblo a Pueblo Ecuador (2021). Manual de Manejo de Cuyes.",
+        "url": "https://humana-ecuador.org/uploads/2021/09/Publicacion-Manual-de-Manejo-de-Cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://humana-ecuador.org/uploads/2021/09/Publicacion-Manual-de-Manejo-de-Cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "CEDEPAS_manual_tecnico_crianza_cuyes_4_pilares",
+        "fuente": "CEDEPAS Norte. Manual Tecnico de Crianza de Cuyes: alimentacion, genetica, manejo y sanidad.",
+        "url": "https://www.cedepas.org.pe/sites/default/files/manual-tecnico-crianza-cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://www.cedepas.org.pe/sites/default/files/manual-tecnico-crianza-cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "MIDAGRI_manual_bioseguridad_sanidad_cuyes",
+        "fuente": "MIDAGRI Peru. Manual de bioseguridad y sanidad en cuyes. 90 paginas.",
+        "url": "https://repositorio.midagri.gob.pe/bitstream/MIDAGRI/20/1/Huancavelica-Manual-Bioseguridad-Sanidad-Cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://repositorio.midagri.gob.pe/bitstream/MIDAGRI/20/1/Huancavelica-Manual-Bioseguridad-Sanidad-Cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "Procampo_paso_a_paso_cuyera_nutricion",
+        "fuente": "Procampo Ecuador. Paso a paso para iniciar una cuyera.",
+        "url": "https://www.procampo.com.ec/blog/10-nutricion/178-paso-a-paso-para-iniciar-una-cuyera",
+        "titulo_web": "El Impacto De La Producción De Forraje En El Litro De Leche",
+        "resumen": "Para incrementar la producción y productividad de leche es necesario aplicar innovaciones tecnológicas orientadas a mejorar el manejo adecuado de pastos y forrajes, además de conocer las características, la composición y la función de los alimentos en el ganado.\nLos costos de producción del litro de leche están distribuidos de la siguiente manera:\nEn el trabajo de la producción de pastos tenemos como resultado un costo entre 12 y 14 centavos por kg de materia seca (MS). En el Ecuador, la producc…",
+        "ok": true
+      },
+      {
+        "archivo": "ALTROPICO_2022_guia_crianza_cuyes_noroccidente_Ecuador",
+        "fuente": "Fundacion ALTROPICO (2022). Guia para la Crianza de Cuyes en el noroccidente de Ecuador.",
+        "url": "https://altropico.org.ec/uploads/2022/03/2022-guia-crianza-cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://altropico.org.ec/uploads/2022/03/2022-guia-crianza-cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "UPS_2024_modulo_crianza_cuyes_tradicional_tecnificado",
+        "fuente": "Universidad Politecnica Salesiana (2024). Modulo de crianza de cuyes: sistemas tradicional y tecnificado.",
+        "url": "https://dspace.ups.edu.ec/bitstream/123456789/27000/1/UPS-CT011711.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://dspace.ups.edu.ec/bitstream/123456789/27000/1/UPS-CT011711.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "MAGAP_productores_cuy_kits_manejo_sanitario",
+        "fuente": "MAGAP Ecuador. Productores de cuy reciben kits para manejo sanitario.",
+        "url": "https://www.agricultura.gob.ec/productores-de-cuy-reciben-kits-para-manejo-sanitario/",
+        "titulo_web": "Productores de cuy reciben kits para manejo sanitario – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "El Ministerio de Agricultura y Ganadería (MAG) a través de la Unidad de Asistencia Técnica del cantón Cevallos y del Instituto Nacional de Investigaciones Agropecuarias (INIAP), entregaron once kits con insumos y materiales para la aplicación de Buenas Práctica Pecuarias en el manejo sanitario de cuyes.\nLos beneficiarios son once productores de los cantones Cevallos, Pelileo y Tisaleo que participaron en el proyecto de escalamiento de la producción de cuyes con pequeños productores de la Sierra …",
+        "ok": true
+      },
+      {
+        "archivo": "UCANR_manual_crianza_produccion_cuyes_pequenos_productores",
+        "fuente": "UC Agriculture and Natural Resources. Manual de crianza y produccion de cuyes para pequenos productores.",
+        "url": "https://ucanr.edu/sites/default/files/2024-06/manual-crianza-cuyes.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://ucanr.edu/sites/default/files/2024-06/manual-crianza-cuyes.pdf",
+        "ok": false
+      },
+      {
+        "archivo": "CrianzaDeCuyes_com_razas_manejo_alimentacion",
+        "fuente": "CrianzaDeCuyes.com. Crianza de Cuyes: razas, manejo tecnico y alimentacion.",
+        "url": "https://crianzadecuyes.com",
+        "titulo_web": "Crianza de Cuyes: Razas Manejo Técnico, Alimentación, Sanidad y Comercialización",
+        "resumen": "La producción de Forraje verde Hidropónico viene hacer lo que se se conoce como: Ehidroponía, de las palabras griegas «hydro«, que significa agua, y «ponos»,\nEl agua es uno elementos más importantes que debe considerarse en la alimentación. El animal la obtiene de acuerdo a su necesidad de tres fuentes:\nEl cuy raza Inti se caracteriza por su precocidad y prolificidad. Puede llegar a parir un promedio de 3.2 crías por parto, en un período\nEl cuy raza Andina es prolífica, es decir que las crías qu…",
+        "ok": true
+      }
+    ]
+  },
+  "ganado_bovino": {
+    "referencias": [
+      {
+        "archivo": "MAGAP_hatos_ganaderos_buenas_practicas_pecuarias",
+        "fuente": "MAGAP Ecuador. Hatos ganaderos mejoran con buenas practicas pecuarias.",
+        "url": "https://www.agricultura.gob.ec/tungurahua-hatos-ganaderos-mejoran-con-buenas-practicas-pecuarias/",
+        "titulo_web": "Tungurahua: hatos ganaderos mejoran con buenas prácticas pecuarias – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "Tungurahua: hatos ganaderos mejoran con buenas prácticas pecuarias\nPequeños y medianos productores del cantón Baños de Agua Santa, provincia de Tungurahua, adquirieron conocimientos en manejo, nutrición, reproducción y sanidad animal, que los aplican en sus hatos ganaderos para mejorar su producción y alcanzar una mejor competitividad y desarrollo sostenible en sus comunidades.\nLa entrega de ensiladora, picadora y cortadora, por parte del Ministerio de Agricultura y Ganadería (MAG), permite que …",
+        "ok": true
+      },
+      {
+        "archivo": "FAO_manual_buenas_practicas_ganaderia_bovina",
+        "fuente": "FAO. Manual de Buenas Practicas de Ganaderia Bovina para la Produccion de Leche. 169 paginas.",
+        "url": "https://www.fao.org/3/a0126s/a0126s00.pdf",
+        "titulo_web": "a0126s00.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://www.fao.org/3/a0126s/a0126s00.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "ClubGanadero_tips_cuidado_cria_ganado_bovino",
+        "fuente": "Club Ganadero. Tips para el cuidado y cria de ganado bovino.",
+        "url": "https://www.clubganadero.com/cria-de-ganado/",
+        "titulo_web": "Tips para el cuidado y cría de ganado bovino - Club ganadero",
+        "resumen": "Inicio > Blog > Categoría > Tips para el cuidado y cría de ganado bovino\nEl manejo adecuado de los bovinos en los corrales de alimentación intensiva es de gran importancia para garantizar una buena salud, maximizar la eficiencia y rentabilidad ganadera, impulsando así el nivel de producción de carne.\nAl implementar buenas prácticas en las unidades ganaderas también se garantiza que los alimentos provengan de animales en excelentes condiciones , de una manera responsable y sostenible desde el pun…",
+        "ok": true
+      },
+      {
+        "archivo": "Agrotendencia_ganado_vacuno_tipos_razas_manejo",
+        "fuente": "Agrotendencia.tv. Ganado vacuno: tipos, razas, manejo y sistema de crianza.",
+        "url": "https://agrotendencia.tv/agropedia/el-ganado-vacuno/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://agrotendencia.tv/agropedia/el-ganado-vacuno/",
+        "ok": false
+      },
+      {
+        "archivo": "VITAAM_2024_principales_razas_ganado_vacuno_Ecuador",
+        "fuente": "VITAAM Ecuador (2024). Las principales razas de ganado vacuno en Ecuador.",
+        "url": "https://vitaam.ec/las-principales-razas-de-ganado-vacuno-en-ecuador/",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://vitaam.ec/las-principales-razas-de-ganado-vacuno-en-ecuador/",
+        "ok": false
+      },
+      {
+        "archivo": "ContextoGanadero_2016_razas_bovinas_Suramerica",
+        "fuente": "CONtexto Ganadero (2016). Las razas bovinas que predominan en Suramerica.",
+        "url": "https://www.contextoganadero.com/internacional/informe-las-razas-bovinas-que-predominan-en-suramerica",
+        "titulo_web": "Informe: Las razas bovinas que predominan en Suramérica | CONtexto Ganadero",
+        "resumen": "La gran variedad de razas en el continente evidencian la diversidad de climas y paisajes de la región. Mientras que en países como Argentina, Brasil y Uruguay predomina el ganado cárnico, en otros como Ecuador y Perú la producción lechera es esencial.\nLa gran variedad de razas en el continente evidencian la diversidad de climas y paisajes de la región. Mientras que en países como Argentina, Brasil y Uruguay predomina el ganado cárnico, en otros como Ecuador y Perú la producción lechera es esenci…",
+        "ok": true
+      },
+      {
+        "archivo": "VeterinarioDigital_2021_razas_bovinas_especializadas_leche",
+        "fuente": "Veterinaria Digital (2021). Razas bovinas especializadas en leche.",
+        "url": "https://www.veterinariadigital.com/articulos/razas-bovinas-especializadas-en-leche/",
+        "titulo_web": "Razas bovinas especializadas en leche - Rumiantes",
+        "resumen": "Toda la información sobre medicina veterinaria y producción animal\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nLas razas bovinas se han ido mejorando con el pasar de las décadas para obtener un mayor rendimiento de leche.\nLas razas bovinas se han ido mejorando c…",
+        "ok": true
+      },
+      {
+        "archivo": "Agronet_2024_razas_ganado_bovino_Bos_taurus_Bos_indicus",
+        "fuente": "Agronet Colombia (2024). Razas de ganado bovino para tener en cada region.",
+        "url": "https://agronet.gov.co/Noticias/razas-de-ganado-para-tener-en-cada-region",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://agronet.gov.co/Noticias/razas-de-ganado-para-tener-en-cada-region",
+        "ok": false
+      },
+      {
+        "archivo": "UDLA_2018_razas_ganado_carne_Ecuador_Brahman_Charolais",
+        "fuente": "Zapata Cando, C.L. (2018). Razas de ganado de carne en Ecuador. UDLA. 78 paginas.",
+        "url": "https://dspace.udla.edu.ec/bitstream/33000/8832/1/UDLA-EC-TMVZ-2018-48.pdf",
+        "titulo_web": "",
+        "resumen": "[ERROR] HTTP 404. URL: https://dspace.udla.edu.ec/bitstream/33000/8832/1/UDLA-EC-TMVZ-2018-48.pdf",
+        "ok": false
+      }
+    ]
+  }
+}

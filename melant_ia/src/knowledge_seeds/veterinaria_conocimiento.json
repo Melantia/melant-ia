@@ -19,15 +19,11 @@
       ],
       "formato": "markdown"
     }
-    // Puedes agregar más manuales aquí siguiendo este formato
   ],
   "protocolos": [
-    // Aquí se pueden agregar protocolos de emergencia, salud, etc.
   ],
   "bibliografia": [
-    // Aquí se integrarán los registros de bibliografía descargados o validados por descarga_masiva_bibliografia.py
   ],
   "recursos": [
-    // Otros recursos relevantes (videos, imágenes, enlaces, etc.)
   ]
 }

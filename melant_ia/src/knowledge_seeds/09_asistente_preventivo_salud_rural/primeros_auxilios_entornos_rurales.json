@@ -1,0 +1,10 @@
+{
+  "id": "PA_003",
+  "titulo": "Primeros Auxilios en Áreas Remotas",
+  "autor": "Manual de Medicina de Montaña",
+  "idioma": "es",
+  "nivel_prevencion": "Secundaria / Supervivencia",
+  "tipo_recurso": "Manual Técnico",
+  "temas": ["picaduras de animales", "fracturas", "hipotermia", "transporte de heridos"],
+  "descripcion": "Estrategias de auxilio médico cuando los servicios de emergencia están a más de 2 horas de distancia."
+}

@@ -1,5 +1,5 @@
 """
-Procesa los datos descargados de la API OCDS y los inserta/actualiza en la base de datos SQLite de MELANT IA.
+Procesa los datos descargados de la API OCDS y los inserta/actualiza en la base de datos SQLite de MELANTIA.
 Puede ejecutarse periódicamente para mantener la información actualizada.
 """
 import os

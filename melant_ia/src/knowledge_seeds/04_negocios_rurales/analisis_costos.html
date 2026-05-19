@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Análisis de Costos y Beneficios — MELANT IA</title>
+  <meta name="theme-color" content="#0C1A0E">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body style="background:var(--bg,#0C1A0E);color:var(--fg,#EDE8D5);font-family:'DM Sans',sans-serif;">
+  <section class="view active" id="view-informe-costos" style="max-width:700px;margin:32px auto;">
+    <div class="card">
+      <h2 style="margin-bottom:10px;">Análisis de Costos y Beneficios — Agricultura de Precisión</h2>
+      <form id="formCostosBeneficios">
+        <div class="auth-field"><label>Monto invertido en tecnología y servicios (USD)</label><input type="number" name="inversion_total" min="0" step="0.01" required> <button type="button" onclick="dictarCampo('inversion_total')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <div class="auth-field"><label>Reducción de insumos y labores (%)</label><input type="number" name="ahorro_estimado" min="0" max="100" step="0.1"> <button type="button" onclick="dictarCampo('ahorro_estimado')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <div class="auth-field"><label>Aumento de producción (kg/ha o %)</label><input type="text" name="incremento_rendimiento"> <button type="button" onclick="dictarCampo('incremento_rendimiento')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <div class="auth-field"><label>Costo por tonelada/ha antes y después (USD)</label><input type="text" name="costo_unitario_produccion"> <button type="button" onclick="dictarCampo('costo_unitario_produccion')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <div class="auth-field"><label>Retorno de inversión estimado (%)</label><input type="number" name="roi" min="-100" max="1000" step="0.1"> <button type="button" onclick="dictarCampo('roi')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <div class="auth-field"><label>Año agrícola o campaña considerada</label><input type="text" name="periodo_analisis"> <button type="button" onclick="dictarCampo('periodo_analisis')" title="Dictar por voz" style="margin-left:4px;">🎤</button></div>
+        <button type="submit" class="btn btn-green" style="margin-top:16px;">Guardar análisis</button>
+      </form>
+      <div id="costosBeneficiosResultado" style="margin-top:18px;"></div>
+    </div>
+  </section>
+  <script>
+  // Dictado por voz universal para formularios
+  function dictarCampo(nombreCampo){
+    if(!('webkitSpeechRecognition' in window)){
+      alert('Reconocimiento de voz no soportado'); return;
+    }
+    const recog = new webkitSpeechRecognition();
+    recog.lang = 'es-EC';
+    recog.onresult = function(e){
+      const texto = e.results[0][0].transcript;
+      document.querySelector(`[name=${nombreCampo}]`).value = texto;
+    };
+    recog.start();
+  }
+  document.addEventListener('DOMContentLoaded',()=>{
+    const form = document.getElementById('formCostosBeneficios');
+    if(form){
+      form.onsubmit = function(e){
+        e.preventDefault();
+        const fd = new FormData(form);
+        const datos = {
+          inversion_total: fd.get('inversion_total'),
+          ahorro_estimado: fd.get('ahorro_estimado'),
+          incremento_rendimiento: fd.get('incremento_rendimiento'),
+          costo_unitario_produccion: fd.get('costo_unitario_produccion'),
+          roi: fd.get('roi'),
+          periodo_analisis: fd.get('periodo_analisis')
+        };
+        document.getElementById('costosBeneficiosResultado').innerHTML =
+          `<div class='card' style='background:#182E1C;margin-top:16px;'>
+            <h3>Resumen de Análisis</h3>
+            <div><b>Inversión total:</b> $${datos.inversion_total}</div>
+            <div><b>Ahorro estimado:</b> ${datos.ahorro_estimado}%</div>
+            <div><b>Incremento de rendimiento:</b> ${datos.incremento_rendimiento}</div>
+            <div><b>Costo unitario producción:</b> ${datos.costo_unitario_produccion}</div>
+            <div><b>ROI estimado:</b> ${datos.roi}%</div>
+            <div><b>Periodo de análisis:</b> ${datos.periodo_analisis}</div>
+          </div>`;
+      }
+    }
+  });
+  </script>
+</body>
+</html>

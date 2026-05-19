@@ -1,0 +1,83 @@
+[
+  {
+    "id": "curso_agricultura_precision",
+    "titulo": "Agricultura de Precisión Integral",
+    "descripcion": "Curso completo sobre mapeo de suelos, NDVI, monitores de rendimiento y sensores conectados a MELANT IA. Incluye bibliografía activa y ejercicios prácticos.",
+    "modulos": [
+      {
+        "titulo": "Mapeo de Suelos y Conductividad Eléctrica (CE)",
+        "descripcion": "Principios, sensores, recorrido de campo y análisis de mapas de CE."
+      },
+      {
+        "titulo": "Índices de Vegetación (NDVI)",
+        "descripcion": "Uso de drones, satélites y cálculo de NDVI para diagnóstico temprano."
+      },
+      {
+        "titulo": "Monitor de Rendimiento",
+        "descripcion": "Sensores en cosechadoras, mapas de rendimiento y toma de decisiones."
+      },
+      {
+        "titulo": "Integración de Sensores con MELANT IA",
+        "descripcion": "Conexión, visualización y automatización de datos de sensores en la app."
+      }
+    ],
+    "ejercicios": [
+      "Dibuja el recorrido de mapeo y analiza un mapa de CE. ¿Qué manejo recomendarías en zonas de baja CE?",
+      "Calcula NDVI de una imagen satelital y localiza zonas críticas. ¿Cómo usarías el NDVI para decidir la dosis de fertilizante?",
+      "Analiza un mapa de rendimiento y propón mejoras para la zona menos productiva.",
+      "Simula la conexión de un sensor y genera un reporte de campo. ¿Qué ventajas tiene la integración automática de datos frente al registro manual?"
+    ],
+    "recursos": [
+      {
+        "tipo": "biblioteca",
+        "nombre": "OpenCV",
+        "url": "https://opencv.org/",
+        "descripcion": "Procesamiento y análisis de imágenes agrícolas."
+      },
+      {
+        "tipo": "biblioteca",
+        "nombre": "TensorFlow/Keras",
+        "url": "https://www.tensorflow.org/",
+        "descripcion": "Modelos de IA para clasificación y diagnóstico visual."
+      },
+      {
+        "tipo": "biblioteca",
+        "nombre": "YOLOv8",
+        "url": "https://docs.ultralytics.com/",
+        "descripcion": "Detección de objetos y plagas en tiempo real."
+      }
+    ],
+    "datasets": [
+      {
+        "nombre": "PlantVillage",
+        "url": "https://www.kaggle.com/datasets/emmarex/plantdisease",
+        "descripcion": "+54,000 imágenes de hojas y enfermedades."
+      },
+      {
+        "nombre": "PlantDoc",
+        "url": "https://github.com/pratikkayal/PlantDoc-Dataset",
+        "descripcion": "Dataset realista para diagnóstico en campo."
+      },
+      {
+        "nombre": "Kaggle New Plant Diseases",
+        "url": "https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset",
+        "descripcion": "Dataset aumentado para mayor precisión."
+      }
+    ],
+    "enlaces_bibliografia": [
+      {"titulo": "Plant-disease-leaf-detection (GitHub)", "url": "https://github.com/ALaboriano/Plant-disease-leaf-detection"},
+      {"titulo": "PlantVillage info (Innovatiana)", "url": "https://www.innovatiana.com/es/datasets/plantvillage#:~:text=PlantVillage%20re%C3%BAne%20m%C3%A1s%20de%2054%20000%20im%C3%A1genes,el%20reconocimiento%20de%20enfermedades%20de%20las%20plantas."},
+      {"titulo": "PlantDoc info (GitHub)", "url": "https://github.com/pratikkayal/PlantDoc-Dataset#:~:text=This%20repository%20contains%20the%20Cropped%2DPlantDoc%20dataset%20used,dataset%20can%20accessed%20through%20the%20following%20link."},
+      {"titulo": "Video Streamlit para IA agrícola", "url": "https://www.youtube.com/watch?v=iPovFOeXNoQ#:~:text=This%20tutorial%20explains%20how%20to%20train%20a,for%20disease%20prediction%20through%20a%20Streamlit%20interface."}
+    ],
+    "tecnologias_app": [
+      {"nombre": "Streamlit", "url": "https://streamlit.io/", "descripcion": "Interfaz web rápida para probar modelos de IA agrícola."},
+      {"nombre": "Flask", "url": "https://flask.palletsprojects.com/", "descripcion": "Backend ligero para APIs y conexión a base de datos."},
+      {"nombre": "FastAPI", "url": "https://fastapi.tiangolo.com/", "descripcion": "Backend moderno y eficiente para apps científicas."}
+    ],
+    "logo_concepto": {
+      "descripcion": "Hoja estilizada con nervios en forma de circuitos electrónicos o red neuronal. Colores: verdes intensos y azules profundos.",
+      "sugerencia_visual": "Ideal para transmitir tecnología y naturaleza en la app rural."
+    }
+  }
+]

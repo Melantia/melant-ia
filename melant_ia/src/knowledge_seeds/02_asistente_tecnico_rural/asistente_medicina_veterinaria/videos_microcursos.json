@@ -1,0 +1,29 @@
+{
+  "videos_microcursos": [
+    {
+      "tema": "Manejo de partos en bovinos",
+      "descripcion": "Cómo asistir un parto normal y cuándo llamar al veterinario.",
+      "url": "https://www.youtube.com/watch?v=parto_bovino_demo"
+    },
+    {
+      "tema": "Aplicación correcta de inyectables",
+      "descripcion": "Técnicas para evitar abscesos y asegurar la eficacia del tratamiento.",
+      "url": "https://www.youtube.com/watch?v=inyectables_demo"
+    },
+    {
+      "tema": "Uso seguro de desparasitantes",
+      "descripcion": "Cómo calcular dosis y evitar resistencia en parásitos.",
+      "url": "https://www.youtube.com/watch?v=desparasitantes_demo"
+    },
+    {
+      "tema": "Identificación de signos de alarma",
+      "descripcion": "Reconocer síntomas que requieren atención veterinaria urgente.",
+      "url": "https://www.youtube.com/watch?v=signos_alarma_demo"
+    },
+    {
+      "tema": "Estimación de peso sin báscula",
+      "descripcion": "Método de cinta métrica para calcular el peso del animal.",
+      "url": "https://www.youtube.com/watch?v=estimacion_peso_demo"
+    }
+  ]
+}

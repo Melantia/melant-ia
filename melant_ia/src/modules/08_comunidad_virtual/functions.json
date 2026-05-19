@@ -1,0 +1,20 @@
+{
+  "modulo": "Formación y Comunidad",
+  "ai_logic": {
+    "priority": "Capacitación y Respaldo Legal",
+    "search_context": [
+      "Leyes de tierras y derechos del ciudadano rural",
+      "Buenas Prácticas Agrícolas (BPA) y Regenerativas",
+      "Formatos de contratos y documentos legales agrarios",
+      "Novedades en convocatorias de apoyo gubernamental"
+    ],
+    "escuela_virtual": {
+      "nombre": "Escuela de Campo",
+      "promocion": "Don Eloy puede promocionar cursos según la conversación comunitaria.",
+      "descarga_manual_certificado": "Todos los manuales y certificados de cursos/prácticas se envían y descargan desde la Carpeta de Documentos del módulo 11, no desde aquí."
+    }
+  },
+  "funciones_boton": {
+    "on_legal_consult": "Abrir chat de asesoría ciudadana"
+  }
+}

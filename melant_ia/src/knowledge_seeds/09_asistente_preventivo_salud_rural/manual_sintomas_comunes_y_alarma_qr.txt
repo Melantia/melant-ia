@@ -1,0 +1,2 @@
+Simulación QR: https://descarga.melant-ia/manual_sintomas_comunes_y_alarma.pdf
+(En producción, aquí se generaría la imagen QR para el enlace de descarga offline)

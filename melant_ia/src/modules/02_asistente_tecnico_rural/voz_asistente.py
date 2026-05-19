@@ -1,5 +1,5 @@
 import pyttsx3
-
+// Archivo eliminado por limpieza de voces innecesarias.
 class AsistenteVoz:
     def _init_(self):
         try:

@@ -1,0 +1,16 @@
+# La Ganadería Regenerativa en el caprino-ovino
+
+**Categoría:** cabras  
+**Fuente:** COVIHER (2023). La Ganaderia Regenerativa en el caprino-ovino.  
+**URL:** https://coviher.com/ganaderia-regenerativa-en-el-caprino-ovino/  
+
+---
+
+## Contenido extraído
+
+El campo precisa de nuevas herramientas para potenciar la sostenibilidad, la ganadería regenerativa puede convertir el sector del caprino-ovino en el más sostenible del ámbito cárnico. Las ventajas de la cría de cabras y ovejas frente a otro tipo de ganado son conocidas. Animales pequeños que ofrecen una gran calidad de carnes, lanas y leches, aportando numerosos beneficios a los ecosistemas. La protección de la biodiversidad que aporta la trashumancia facilita que las diferentes especies se distribuyan por el terreno gracias a la alimentación de los rumiantes y a sus heces. Además, en concreto, las razas autóctonas andaluzas se adaptan a los climas extremos, facilitando una integración perfecta con el entorno natural.
+¿Qué es la ganadería regenerativa? La ganadería regenerativa busca una protección eficaz de los ecosistemas, implementando diferentes técnicas y usos que ayudan a regenerar terrenos para potenciar una biodiversidad sostenible. Se basa en la restauración de los ciclos de nutrientes y el agua para devolver la fertilidad al terreno. El pastoreo rotacional planeado, la protección de la genética local y la creación de un vínculo entre caprino-ovino, suelo y los pastos para conseguir la regeneración de los suelos son sus ejes centrales.
+La ganadería regenerativa asociada al caprino-ovino aplica el conocimiento profundo sobre el campo y las razas autóctonas que viven en ellos. En este sentido, la intención de este tipo de herramienta sostenible se centra en nuestra capacidad para regenerar el terreno. La orografía de Andalucía es diversa, desde valles a montes pasando por marismas o sierras. El caprino-ovino se desarrolla en todo tipo de terrenos, posibilitando una forma sostenible de distribuir los animales por las diferentes comarcas.
+El agua es un bien esencial en el campo, es por ello que la ganadería regenerativa busca diseñar formas sostenibles y ecológicas para aumentar la infiltración de agua en el terreno. Para ello es necesario centrar la tarea en un conocimiento profundo del hábitat natural del rebaño para potenciar la infiltración de agua, a través de sistemas de filtración para el aprovechamiento de aguas sucias, creando estanques artificiales que faciliten la filtración a través de piedras para potenciar la humedad o seleccionando flora autóctona que ayude a dar forma a nuevos espacios verdes.
+Del mismo modo que ocurre en la agricultura, en la ganadería regenerativa la fertilidad del suelo es fundamental para una correcta alimentación de los rebaños, pero también para proteger los nutrientes esenciales. La revisión del estado del suelo ayudará a potenciar el uso de estiércol o materia orgánica que ayude, junto al agua, a recuperar los ciclos naturales de cada zona. Las coberturas vegetales y humedad relativa ayudarán a generar el carbono necesario para nutrir cada terreno.
+Los biofertilizantes ayudan a la tierra a recuperar nutrientes, que a su vez potenciarán el crecimiento de brotes. El uso de este tipo de fertilizantes de…

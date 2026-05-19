@@ -1,0 +1,18 @@
+{
+  "cursos_capacitacion": [
+    {
+      "modulo": "Instalacion de Sensores",
+      "lecciones": [
+        {"titulo": "Configuracion USB-OTG", "duracion": "5 min", "tipo": "Video_Tutorial"},
+        {"titulo": "Calibracion de Sondas NPK", "duracion": "10 min", "tipo": "Guia_Interactiva"}
+      ]
+    },
+    {
+      "modulo": "Interpretacion de Datos",
+      "lecciones": [
+        {"titulo": "Entendiendo el pH del Suelo", "duracion": "7 min", "tipo": "Infografia"},
+        {"titulo": "Alertas de Riego", "duracion": "4 min", "tipo": "Simulador_Offline"}
+      ]
+    }
+  ]
+}

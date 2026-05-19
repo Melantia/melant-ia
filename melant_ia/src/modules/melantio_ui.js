@@ -1,7 +1,9 @@
 // modules/melantio_ui.js
 // Lógica UI para Melantio: botón de canje y utilidades
+// NOTA: Melantio (la moneda virtual) solo interviene con voz para explicar la conversión "100 Melantios = $1" cuando el usuario consulta su saldo. Todas las demás explicaciones y mensajes de voz quedan a cargo de Don Eloy o Angel según corresponda.
 
 // Función para crear el botón de canje Melantios
+// Solo permite cubrir hasta el 25% del valor del producto con Melantios.
 function crearBotonCanjemelantios(callbackFuncion) {
   return `
     <button 
@@ -22,9 +24,10 @@ function crearBotonCanjemelantios(callbackFuncion) {
       "
       onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(245, 158, 11, 0.4)';"
       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+      title="Solo puedes cubrir hasta el 25% del valor del producto con Melantios. El resto debe ser en dinero real."
     >
       <img src="/src/assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />
-      <span>Usar Melantios</span>
+      <span>Usar Melantios (máx. 25%)</span>
     </button>
   `;
 }
@@ -48,6 +51,26 @@ function crearMelantioBadgeConUSD(cantidad) {
     class="melantio-icon"
   />`;
 
+  // Melantio solo interviene aquí: explicación de conversión al consultar saldo
+  if (typeof window !== 'undefined' && window.speechSynthesis) {
+    const mensaje = `Recuerda: 100 Melantios equivalen a 1 dólar. Tu saldo es de ${cantidad} Melantios, es decir, $${usd} dólares.`;
+    const utt = new window.SpeechSynthesisUtterance(mensaje);
+    utt.lang = 'es-EC';
+    utt.rate = 0.98;
+    utt.pitch = 1.1;
+    // Selección de voz Melantio (puedes personalizar el filtro si tienes una voz específica)
+    const voces = window.speechSynthesis.getVoices();
+    utt.voice =
+      voces.find(
+        (v) =>
+          v.lang.startsWith('es') && v.name.toLowerCase().includes('melantio')
+      ) ||
+      voces.find((v) => v.lang.startsWith('es')) ||
+      voces[0];
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utt);
+  }
+
   return `
     <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; background: #FEF3C7; border-radius: 4px; border: 1px solid #FCD34D;">
       ${svgIcon}
@@ -63,7 +86,9 @@ function abrirPanelCanjemelantios() {
 }
 
 // CONFIGURACIÓN DE LA MONEDA MELANTIA
+// 100 Melantios = $1.00 USD. Límite de canje en tiendas: 25% del valor del producto.
 const TASA_CAMBIO = 100; // 100 Melantios = $1.00 USD
+const LIMITE_CANJE_GLOBAL = 0.25; // Solo puedes usar Melantios para el 25% del valor
 
 /**
  * Convierte el valor de los premios acumulados a dólares

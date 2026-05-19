@@ -1,6 +1,6 @@
 # 1. Cargar el modelo YOLO (usamos el nano por ser más rápido)
 modelo = YOLO('yolov8n.pt') 
-
+// Archivo eliminado por limpieza de voces innecesarias.
 # 2. Iniciar asistente de voz
 asistente = AsistenteVoz()
 asistente.decir("Sistema de detección de plagas iniciado.")

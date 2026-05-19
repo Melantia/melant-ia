@@ -1,0 +1,27 @@
+{
+  "calendario_lunar": {
+    "fases": [
+      { "nombre": "Luna Nueva", "descripcion": "Baja actividad de savia, ideal para deshierbe y control de plagas." },
+      { "nombre": "Cuarto Creciente", "descripcion": "Savia en ascenso, buen momento para siembra de hortalizas de hoja." },
+      { "nombre": "Luna Llena", "descripcion": "Savia en la parte superior, ideal para cosecha de frutos jugosos y nutritivos." },
+      { "nombre": "Cuarto Menguante", "descripcion": "Savia concentrada en raíces, ideal para poda y fertilización." }
+    ],
+    "recomendaciones": {
+      "cosecha_ideal": {
+        "fase": "Luna Llena",
+        "justificacion": "La savia está en la parte superior; frutos más jugosos y nutritivos.",
+        "beneficio": "Mayor durabilidad post-cosecha y mejor sabor."
+      },
+      "labores_complementarias": [
+        { "fase": "Luna Nueva", "actividad": "Control de plagas y deshierbe", "razon": "Baja actividad de savia, menor estrés para el suelo." },
+        { "fase": "Cuarto Menguante", "actividad": "Poda y fertilización", "razon": "Savia concentrada en raíces, ideal para fortalecer la base." }
+      ]
+    },
+    "referencias": [
+      "https://elproductor.com/2025/05/la-influencia-del-calendario-lunar-en-el-sector-agropecuario-ciencia-y-tradicion-de-la-mano/",
+      "https://www.tiktok.com/@laplantaec/video/7554551836686945592",
+      "https://www.pesca.news/noticias/50410/que-influencia-tiene-realmente-la-luna-en-la-pesca-maritima",
+      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3720238"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "curriculo_capacitacion": {
+    "curso_id": "AP-001",
+    "nombre": "Especialista en Sensores Agricolas",
+    "unidades": [
+      {
+        "unidad": 1,
+        "titulo": "Hardware y Conectividad",
+        "teoria": "Protocolos Serial, Bluetooth y protocolos de bajo consumo.",
+        "evaluacion": "Cuestionario de 5 preguntas sobre tipos de sensores."
+      },
+      {
+        "unidad": 2,
+        "titulo": "Nutricion y pH",
+        "teoria": "Relacion entre pH y disponibilidad de Fosforo y Potasio.",
+        "practica": "Lectura real con sensor NPK conectando a la App."
+      }
+    ],
+    "requisitos": ["Celular Android", "Kit Basico de Sensores", "App Instalada"]
+  }
+}

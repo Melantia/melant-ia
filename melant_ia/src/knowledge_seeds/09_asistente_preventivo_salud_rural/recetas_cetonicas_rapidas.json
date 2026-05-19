@@ -1,0 +1,33 @@
+{
+  "recetas_cetonicas_rapidas": {
+    "version": "1.0",
+    "descripcion": "Recetas rápidas y funcionales para ayuno y limpieza cetónica usando superalimentos locales.",
+    "recetas": [
+      {
+        "nombre": "Tortilla Verde Keto",
+        "ingredientes": ["2 huevos", "Espinaca o kale (1 taza)", "Ajo picado (1 diente)", "Aceite de oliva (1 cda)", "Sal marina al gusto"],
+        "preparacion": "Saltear el ajo en aceite, añadir la espinaca, luego los huevos batidos. Cocinar hasta cuajar."
+      },
+      {
+        "nombre": "Ensalada Detox de Remolacha y Fresas",
+        "ingredientes": ["Remolacha rallada (1/2 taza)", "Fresas en cubos (1/2 taza)", "Nueces (1 puñado)", "Jugo de limón (1 cda)", "Pimienta negra al gusto"],
+        "preparacion": "Mezclar todos los ingredientes y servir fría."
+      },
+      {
+        "nombre": "Shot Antiinflamatorio Keto",
+        "ingredientes": ["Jugo de 1 limón", "1 cm de cúrcuma fresca", "1 cm de jengibre", "Pizca de pimienta negra"],
+        "preparacion": "Licuar todo y tomar en ayunas."
+      },
+      {
+        "nombre": "Bowl Keto de Frutos Rojos",
+        "ingredientes": ["Fresas (1/2 taza)", "Arándanos (1/4 taza)", "Semillas de chía (1 cda, activada)", "Yogur natural sin azúcar (1/2 taza)", "Nueces (1 puñado)"],
+        "preparacion": "Mezclar todos los ingredientes y dejar reposar 10 minutos antes de consumir."
+      },
+      {
+        "nombre": "Sopa de Bulbos y Raíces",
+        "ingredientes": ["Cebolla morada (1/2)", "Ajo (2 dientes)", "Remolacha (1 pequeña)", "Caldo de verduras (2 tazas)", "Aceite de oliva (1 cda)", "Sal y pimienta al gusto"],
+        "preparacion": "Saltear ajo y cebolla, añadir remolacha y caldo. Cocinar 15 min, licuar y servir con aceite de oliva." 
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "descripcion": "Normativas internacionales y nacionales para la cría y manejo del Caballo de Paso Fino.",
+  "secciones": [
+    "Bienestar animal (OIE, FEI)",
+    "Registro genealógico y trazabilidad",
+    "Sanidad y vacunación obligatoria",
+    "Normas de competencias y exposiciones",
+    "Prácticas de manejo sostenible",
+    "Normativa nacional SENASAG/SAGARPA/SENASA",
+    "Identificación individual (microchip, QR, foto)",
+    "Transporte y comercio internacional",
+    "Requisitos para exportación/importación"
+  ],
+  "logos": {
+    "animal": "🐎",
+    "bienestar": "🌱",
+    "registro": "📜",
+    "sanidad": "💉",
+    "competencias": "🏆",
+    "manejo": "🌾",
+    "nacional": "🇪🇨",
+    "identificacion": "🔖",
+    "transporte": "🚚",
+    "exportacion": "🌎"
+  },
+  "ultima_actualizacion": "2026-04-20"
+}

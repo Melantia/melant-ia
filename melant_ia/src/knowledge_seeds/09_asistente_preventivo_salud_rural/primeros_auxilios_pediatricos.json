@@ -1,0 +1,10 @@
+{
+  "id": "PA_002",
+  "titulo": "Primeros Auxilios en Bebés y Niños",
+  "autor": "Asociación Española de Pediatría",
+  "idioma": "es",
+  "nivel_prevencion": "Primaria",
+  "tipo_recurso": "Guía de Cuidados",
+  "temas": ["fiebre", "quemaduras", "caídas", "intoxicaciones"],
+  "descripcion": "Instrucciones paso a paso para el manejo de accidentes domésticos comunes en la infancia."
+}

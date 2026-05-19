@@ -1,8 +1,23 @@
 # main.py — MELANTIA Admin Desktop
+
 import os
 import sys
 import subprocess
 import time
+# Integración de lógica de supervivencia MELANTIA
+try:
+    from utils.supervivencia import (
+        verificar_estado_celular,
+        guardar_evidencia_offline,
+        barra_progreso_ligera,
+        ejecutar_proceso_seguro,
+        verificar_modo_offline,
+        activar_modo_nocturno,
+        desactivar_modo_nocturno,
+        procesar_evidencia_inteligente
+    )
+except ImportError:
+    print("[ADVERTENCIA] No se pudo cargar utils/supervivencia.py. Funciones de ahorro extremo deshabilitadas.")
 
 def hay_conexion_internet():
     import socket
@@ -35,7 +50,7 @@ def verificar_actualizaciones():
 
 def main():
     print("=== MELANTIA Admin Desktop ===")
-    verificar_actualizaciones()
+    # verificar_actualizaciones()  # Desactivado: ahora la actualización es solo en horarios programados
     # Aquí puedes agregar más lógica de administración, menús, etc.
     # ...
 

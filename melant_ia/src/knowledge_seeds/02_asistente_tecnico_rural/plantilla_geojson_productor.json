@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "productor": "[Nombre]",
+        "id": "[Código Único]",
+        "area_ha": "[X]",
+        "proyecto_carbono": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ -80.123, -1.234 ],
+            [ -80.124, -1.234 ],
+            [ -80.124, -1.235 ],
+            [ -80.123, -1.235 ],
+            [ -80.123, -1.234 ]
+          ]
+        ]
+      }
+    }
+  ]
+}

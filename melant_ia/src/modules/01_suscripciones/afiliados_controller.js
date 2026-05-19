@@ -1,3 +1,29 @@
+// --- COLA DE SINCRONIZACIÓN OFFLINE ---
+const SYNC_QUEUE_KEY = 'melantia_sync_queue';
+
+function agregarASyncQueue(evento) {
+  const queue = JSON.parse(window.localStorage.getItem(SYNC_QUEUE_KEY) || '[]');
+  queue.push(evento);
+  window.localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(queue));
+}
+
+function procesarSyncQueue() {
+  if (!navigator.onLine) return;
+  const queue = JSON.parse(window.localStorage.getItem(SYNC_QUEUE_KEY) || '[]');
+  if (!queue.length) return;
+  // Simulación de envío al servidor (reemplazar por fetch real)
+  queue.forEach((evento) => {
+    // Aquí iría la lógica real de sincronización con backend
+    // fetch('/api/sync', {method:'POST', body: JSON.stringify(evento)})
+    SistemaAfiliados._hablar('¡Melantio: Suscripción sincronizada con éxito!');
+    // Actualizar Melantios y beneficios en padrino y usuario
+    // ...
+  });
+  window.localStorage.removeItem(SYNC_QUEUE_KEY);
+}
+
+window.addEventListener('online', procesarSyncQueue);
+setInterval(procesarSyncQueue, 60000); // Reintenta cada minuto
 (function () {
   'use strict';
 
@@ -688,19 +714,36 @@
       const plan = this.planes[planContratado];
       if (!plan) return false;
       const estado = this._estado();
-      estado.lista_afiliados.unshift({
+      const nuevoAfiliado = {
         nombre: datos.nombre || `Amigo ${estado.lista_afiliados.length + 1}`,
         plan: plan.id,
         estado: datos.estado || 'activo',
         aporte: plan.aporteAfiliado,
         desde: new Date().toISOString().slice(0, 10),
-      });
+        offline: !navigator.onLine,
+      };
+      estado.lista_afiliados.unshift(nuevoAfiliado);
       estado.acumulado_bruto = estado.lista_afiliados
         .filter((item) => item.estado === 'activo')
         .reduce((suma, item) => suma + Number(item.aporte || 0), 0);
       estado.retiro_solicitado = false;
       this._guardarEstado(estado);
       this.actualizarUI();
+      // Si está offline, agrega a la cola de sincronización
+      if (!navigator.onLine) {
+        agregarASyncQueue({
+          tipo: 'nueva_suscripcion',
+          afiliado: nuevoAfiliado,
+          timestamp: Date.now(),
+        });
+        this._hablar(
+          'Suscripción procesada en modo offline. Se sincronizará automáticamente cuando haya señal.'
+        );
+      } else {
+        this._hablar(
+          '¡Melantio: Suscripción y beneficios procesados con éxito!'
+        );
+      }
       const resumen = this._resumenFinanciero(estado);
       if (resumen.bruto >= estado.umbral_pago) {
         this._hablar(

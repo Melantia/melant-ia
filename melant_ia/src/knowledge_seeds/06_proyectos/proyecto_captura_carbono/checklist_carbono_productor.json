@@ -1,0 +1,53 @@
+{
+  "descripcion": "Checklist profesional y validable para proyectos de carbono, alineado a Verra, Gold Standard y FAO.",
+  "estructura_expediente": [
+    {
+      "bloque": "Documentación de Propiedad y Legalidad",
+      "campos": [
+        "titulo_propiedad_escaneado",
+        "cedula_identidad_fiscal",
+        "contrato_cesion_beneficios_carbono"
+      ]
+    },
+    {
+      "bloque": "Línea de Base",
+      "campos": [
+        "declaracion_jurada_practicas_anteriores",
+        "mapa_poligonos_geojson",
+        "foto_suelo_inicial"
+      ]
+    },
+    {
+      "bloque": "Evidencia de Implementación (MRV Digital)",
+      "campos": [
+        "registro_siembra",
+        "bitacora_insumos",
+        "registro_no_labranza",
+        "certificado_capacitacion"
+      ]
+    },
+    {
+      "bloque": "Datos Técnicos de Suelo",
+      "campos": [
+        "ficha_densidad_aparente",
+        "resultado_laboratorio_pdf"
+      ]
+    }
+  ],
+  "modo_offline": "Permite llenar el checklist y tomar fotos sin conexión. Sincroniza datos cuando hay Wi-Fi o 4G.",
+  "generacion_pdf": "Botón para generar reporte profesional con datos y fotos, listo para auditores.",
+  "ejemplo_reporte": {
+    "productor": "[Nombre]",
+    "id": "[Código Único]",
+    "lote": "[Nombre del Polígono]",
+    "area_ha": "[X]",
+    "actividades": [
+      "Capacitación en Agricultura Regenerativa completada.",
+      "Aplicación de cobertura vegetal (Foto ID: 123).",
+      "Reducción de fertilizantes sintéticos en un [X]%.",
+      "Prueba de Densidad Aparente realizada el: [Fecha]."
+    ],
+    "gps_metadatos": "Respaldo de coordenadas GPS y metadatos inalterables."
+  },
+  "ultima_actualizacion": "2026-04-20"
+}

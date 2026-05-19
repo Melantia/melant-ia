@@ -1,0 +1,10 @@
+{
+  "id": "PA_001",
+  "titulo": "Soporte Vital Básico y RCP",
+  "autor": "Cruz Roja / Guías Internacionales",
+  "idioma": "es",
+  "nivel_prevencion": "Primaria / Emergencia",
+  "tipo_recurso": "Curso Práctico",
+  "temas": ["RCP", "atragantamiento", "hemorragias", "desmayos"],
+  "descripcion": "Manual esencial para actuar en los primeros minutos de una emergencia médica antes de que llegue la ayuda profesional."
+}

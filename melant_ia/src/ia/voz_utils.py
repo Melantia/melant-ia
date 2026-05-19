@@ -1,7 +1,11 @@
 import os
 import json
 
-from plyer import tts
+try:
+    from plyer import tts
+except ImportError:
+    tts = None
+    print("Advertencia: No se pudo importar 'plyer.tts'. Las funciones de voz no estarán disponibles.")
 
 def asegurar_config_voz():
     ruta = 'config_voz.json'
@@ -25,6 +29,9 @@ def guardar_ajustes_voz(rate, pitch):
 
 def decir_texto(texto):
     ajustes = cargar_ajustes_voz()
+    if tts is None:
+        print("Función de voz no disponible: 'plyer.tts' no está instalado.")
+        return
     try:
         tts.speak(text=texto, rate=ajustes["rate"], pitch=ajustes["pitch"])
     except Exception as e:

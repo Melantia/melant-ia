@@ -1,0 +1,104 @@
+{
+  "modulo_recetario_maestro": {
+    "descripcion": "Protocolos de elaboración y uso de bio-insumos y prácticas regenerativas para el fortalecimiento del sistema inmunológico vegetal y la salud del suelo.",
+    "formulas": [
+      {
+        "nombre": "Caldo Sulfocálcico",
+        "objetivo": "Control de hongos, ácaros y aporte de minerales críticos.",
+        "argumentacion_teorica": "El azufre actúa como un elicitador que activa las defensas naturales de la planta (fitoalexinas). Al combinarse con la cal bajo calor, se forman polisulfuros que alteran el pH de la superficie foliar, impidiendo que las esporas de hongos se anclen.",
+        "beneficios": [
+          "Efecto fungicida y acaricida de amplio espectro.",
+          "Aporte de Azufre y Calcio, esenciales para la síntesis de proteínas.",
+          "No genera resistencia en patógenos a diferencia de los fungicidas sintéticos."
+        ],
+        "preparacion_estandar": "Hervir 20L de agua con 2kg de azufre y 1kg de cal viva hasta que la mezcla sea color vino tinto (aprox. 45-60 min).",
+        "aplicacion": {
+          "dosis_general": "1 parte de caldo por 20 partes de agua.",
+          "metodo": "Aspersión foliar en horas de baja radiación solar.",
+          "frecuencia": "Preventivo: cada 15 días. Curativo: cada 8 días."
+        }
+      },
+      {
+        "nombre": "Biol de Microorganismos (Biofertilizante Líquido)",
+        "objetivo": "Inoculación de vida microbiana y nutrición quelatada.",
+        "argumentacion_teorica": "La fermentación anaeróbica rompe moléculas complejas y las convierte en nutrientes quelatados por ácidos orgánicos. Esto permite que la planta absorba minerales sin gasto energético extra, algo que los químicos (sales) no pueden lograr.",
+        "beneficios": [
+          "Restaura la microbiología del suelo y el follaje.",
+          "Contiene fitohormonas naturales que estimulan el crecimiento.",
+          "Evita la lixiviación de nitratos hacia las aguas subterráneas."
+        ],
+        "preparacion_estandar": "Fermentar en bidón sellado: Estiércol fresco, melaza, leche/suero, ceniza y agua durante 30 a 45 días.",
+        "aplicacion": {
+          "dosis_general": "2 a 5 litros de Biol por cada 100 litros de agua.",
+          "metodo": "Foliar o vía riego (Drench).",
+          "frecuencia": "Cada 20 días durante el crecimiento vegetativo."
+        }
+      },
+      {
+        "nombre": "Bocashi (Compost Fermentado)",
+        "objetivo": "Aporte de materia orgánica estable y activación de la biología del suelo.",
+        "argumentacion_teorica": "El Bocashi es un abono fermentado que acelera la descomposición de residuos vegetales y estiércol, generando una alta diversidad microbiana. Esto mejora la estructura del suelo, la retención de agua y la disponibilidad de nutrientes.",
+        "beneficios": [
+          "Incrementa la fertilidad y aireación del suelo.",
+          "Reduce enfermedades radiculares por competencia microbiana.",
+          "Favorece la formación de agregados estables."
+        ],
+        "preparacion_estandar": "Mezclar 100kg de rastrojo picado, 20kg de estiércol, 10kg de tierra, 5kg de carbón vegetal, 5kg de ceniza, 1L de melaza y agua hasta 60% humedad. Voltear 2 veces al día por 10-12 días.",
+        "aplicacion": {
+          "dosis_general": "2-5 kg/m² de suelo o 500g por planta.",
+          "metodo": "Incorporar al suelo antes de la siembra o como cobertura.",
+          "frecuencia": "Una vez por ciclo o según análisis de suelo."
+        }
+      },
+      {
+        "nombre": "Extracto Etológico de Ajo y Ají",
+        "objetivo": "Repelencia sistémica y control de insectos de cuerpo blando.",
+        "argumentacion_teorica": "Los compuestos azufrados (alicina) y la capsaicina saturan los receptores sensoriales de los insectos. No es un veneno que mata la vida, sino un repelente que rompe el ciclo de colonización sin afectar a las abejas.",
+        "beneficios": [
+          "Confusión olfativa y gustativa para insectos fitófagos.",
+          "Inocuidad total para el operario y el consumidor final.",
+          "Compatible con la presencia de polinizadores."
+        ],
+        "preparacion_estandar": "Licuar 500g de ajo y 500g de ají picante en 5L de alcohol o agua. Reposar 7 días.",
+        "aplicacion": {
+          "dosis_general": "250 ml del extracto por bomba de 20 litros.",
+          "metodo": "Aspersión total, cubriendo el envés de las hojas.",
+          "frecuencia": "Semanal en épocas de alta presión de plagas."
+        }
+      },
+      {
+        "nombre": "Lombricultura (Humus de Lombriz)",
+        "objetivo": "Producción de humus estable y multiplicación de microorganismos benéficos.",
+        "argumentacion_teorica": "Las lombrices transforman residuos orgánicos en humus, un abono rico en microorganismos, enzimas y nutrientes quelatados. El humus mejora la estructura, aireación y capacidad de retención de agua del suelo, además de suprimir patógenos.",
+        "beneficios": [
+          "Aporta nutrientes de liberación lenta y equilibrada.",
+          "Incrementa la biodiversidad microbiana y la resiliencia del suelo.",
+          "Reduce la compactación y mejora la infiltración de agua."
+        ],
+        "preparacion_estandar": "Preparar una cama de 1m x 2m x 0.4m con residuos vegetales y estiércol semidescompuesto. Introducir lombriz roja californiana. Mantener humedad y cubrir con cartón o manta. Cosechar humus a los 3-4 meses.",
+        "aplicacion": {
+          "dosis_general": "1-2 kg/m² de suelo o 200g por planta.",
+          "metodo": "Mezclar con el suelo en la siembra o aplicar como cobertura.",
+          "frecuencia": "Cada ciclo de cultivo o según necesidad."
+        }
+      },
+      {
+        "nombre": "Cobertura con Cartón Simple",
+        "objetivo": "Mantener la estructura y humedad del suelo, promover la comunicación radicular y reducir la intervención mecánica.",
+        "argumentacion_teorica": "El cartón sin tinta ni plastificado actúa como una barrera física que protege el suelo de la erosión, reduce la evaporación y favorece la vida microbiana. Al descomponerse, libera celulosa que alimenta hongos y bacterias, facilitando la red de comunicación entre raíces (rizosfera). Las raíces pueden migrar y compartir nutrientes a través de la finca, optimizando el uso de recursos sin necesidad de laboreo intensivo.",
+        "beneficios": [
+          "Reduce la compactación y la erosión del suelo.",
+          "Favorece la migración de raíces y microorganismos.",
+          "Disminuye la necesidad de riego y deshierbe."
+        ],
+        "preparacion_estandar": "Colocar láminas de cartón simple (sin tinta ni adhesivos) sobre el suelo entre líneas de cultivo, solapando los bordes. Humedecer ligeramente para fijar y cubrir con paja o rastrojo si se desea.",
+        "aplicacion": {
+          "dosis_general": "Cubrir toda la superficie expuesta entre cultivos.",
+          "metodo": "Mantener la cobertura durante todo el ciclo, reponer según degradación.",
+          "frecuencia": "Revisar cada ciclo y reponer según necesidad."
+        }
+      }
+    ],
+    "advertencia_tecnica": "A diferencia de los agrotóxicos que son 'recetas muertas', los bio-insumos y prácticas regenerativas son procesos vivos. Su eficacia aumenta con la constancia, la observación y la salud general del suelo."
+  }
+}

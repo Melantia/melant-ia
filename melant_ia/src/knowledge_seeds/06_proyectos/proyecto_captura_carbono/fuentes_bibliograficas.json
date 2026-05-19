@@ -1,0 +1,38 @@
+{
+  "descripcion": "Fuentes técnicas y normativas para MELANT IA, almacenadas offline.",
+  "enlaces": [
+    {
+      "titulo": "ISO 14068-1:2023 - Neutralidad de Carbono",
+      "url": "https://weya.academy/iso-14068-carbono-neutral/"
+    },
+    {
+      "titulo": "ISO 14067 - Huella de Carbono de Productos",
+      "url": "https://www.bureauveritas.es/certificacion/medioambiente-y-sostenibilidad/iso-14067-huella-de-carbono"
+    },
+    {
+      "titulo": "Artículo 6 del Acuerdo de París",
+      "url": "https://www.carbonneutralplus.com/articulo-6-del-acuerdo-de-paris-3-aspectos-clave-del-mercado-de-carbono/"
+    },
+    {
+      "titulo": "Glosario de Carbono y Fugas (Leakage)",
+      "url": "https://latcarbon.com/glosario/"
+    },
+    {
+      "titulo": "Precios de Bonos de Carbono 2026 (Sylvera)",
+      "url": "https://www.sylvera.com/es/blog/carbon-offset-price"
+    },
+    {
+      "titulo": "Inventario Nacional de GEI",
+      "url": "https://www.bbva.com/es/es/sostenibilidad/como-se-calcula-la-huella-de-carbono/"
+    },
+    {
+      "titulo": "ClimatePartner - Estándares de Proyectos",
+      "url": "https://www.climatepartner.com/es/estandares-de-los-proyectos"
+    },
+    {
+      "titulo": "CarbonSpace (Monitoreo Satelital)",
+      "url": "https://www.youtube.com/watch?v=d3bF0Wmk8DY"
+    }
+  ],
+  "ultima_actualizacion": "2026-04-20"
+}

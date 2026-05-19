@@ -1,0 +1,13 @@
+{
+  "titulo": "Prevención Básica en Salud Comunitaria",
+  "autor": "Equipo MELANT IA",
+  "idioma": "es",
+  "nivel": "basico",
+  "tipo": "curso",
+  "descripcion": "Curso introductorio sobre los principios y prácticas esenciales de la medicina preventiva en comunidades rurales. Incluye higiene, vacunación, alimentación saludable y prevención de enfermedades infecciosas.",
+  "url_archivo": "medicina_preventiva/es/curso_prevencion_basica.pdf",
+  "qr": "medicina_preventiva/es/curso_prevencion_basica_qr.png",
+  "pin": "123456",
+  "fecha": "2026-04-21",
+  "tags": ["higiene", "vacunación", "alimentación", "prevención"]
+}

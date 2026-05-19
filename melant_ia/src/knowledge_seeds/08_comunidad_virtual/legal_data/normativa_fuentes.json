@@ -1,0 +1,81 @@
+{
+  "objetivo": "Mantener base de referencia legal e institucional para recomendaciones alineadas a marco vigente.",
+  "tipos_fuente": [
+    "Leyes y reglamentos",
+    "Acuerdos ministeriales",
+    "Guias institucionales (INIAP, Agrocalidad, FAO y equivalentes)"
+  ],
+  "uso_en_decisiones": [
+    "Si una accion tecnica esta regulada, mostrar observacion de cumplimiento.",
+    "Si aplica certificacion o control oficial, indicar entidad de referencia.",
+    "Si no hay certeza normativa, marcar como 'revisar norma vigente'."
+  ],
+  "fuentes_ATR_priorizadas": [
+    "Acuerdo_Ministerial_142_Plan_fusarium_OK (1) (1).pdf",
+    "Agrocalidad Sanidad Vegetal Natalia Aguirre.pdf",
+    "Ley de Fomento Productivo.pdf",
+    "Publicacion_INIAP_final_imprenta.pdf",
+    "REGLAMENTO DE CREDITO.doc"
+  ],
+  "nota": "Este archivo es de referencia. No sustituye validacion juridica formal cuando exista riesgo regulatorio alto.",
+  "bases_bibliograficas_suramerica": [
+    {
+      "nombre": "Embrapa / BDPA (Brasil)",
+      "descripcion": "Base de Dados da Pesquisa Agropecuária. Cultivos tropicales, recuperación de suelos, ganadería sustentable.",
+      "url": "https://www.bdpa.cnptia.embrapa.br"
+    },
+    {
+      "nombre": "SIOC / MinAgricultura (Colombia)",
+      "descripcion": "Cadenas productivas, costos de producción, áreas sembradas, rendimiento por departamento.",
+      "url": "https://sioc.minagricultura.gov.co"
+    },
+    {
+      "nombre": "INIAP Repositorio (Ecuador)",
+      "descripcion": "Manuales MIP para banano, plátano, cacao, palma. Guías de control biológico específicas para suelos ecuatorianos.",
+      "url": "https://repositorio.iniap.gob.ec"
+    },
+    {
+      "nombre": "COSAVE (Cono Sur)",
+      "descripcion": "Alertas fitosanitarias regionales (AR, BR, CL, PY, PE, UY). Si plaga aparece en Perú → alerta preventiva en Ecuador.",
+      "url": "https://www.cosave.org"
+    }
+  ],
+  "apis_datasets_externos": [
+    {
+      "nombre": "CABI BioProtection Portal API",
+      "descripcion": "Base de datos mundial de biopesticidas y tratamientos biológicos autorizados por país/enfermedad. Prioridad alta para recomendaciones de tratamiento."
+    },
+    {
+      "nombre": "EPPO Data Services API",
+      "descripcion": "Nombres científicos, códigos y estatus de cuarentena de plagas y enfermedades (Organización Europea y Mediterránea de Protección de Plantas)."
+    },
+    {
+      "nombre": "Open Phytopathology",
+      "descripcion": "Datasets abiertos y recursos computacionales para entrenar modelos de detección de enfermedades."
+    }
+  ],
+  "bibliotecas_vision_computadora": [
+    {
+      "nombre": "PlantMD",
+      "descripcion": "Framework con modelos pre-entrenados para detección de enfermedades foliares."
+    },
+    {
+      "nombre": "DeepPlantPhenomics",
+      "descripcion": "Deep learning para fenotipado de plantas, clasificación de lesiones y severidad."
+    },
+    {
+      "nombre": "TensorFlow Hub (PlantVillage)",
+      "descripcion": "Modelos entrenados con 50,000+ imágenes de hojas sanas/enfermas de 14 especies."
+    }
+  ],
+  "bibliotecas_diagnostico_molecular": [
+    {
+      "nombre": "Scikit-Bio",
+      "descripcion": "Análisis de diversidad del microbioma en planta. Identifica bacterias patógenas comparando secuencias."
+    },
+    {
+      "nombre": "Metaphlan",
+      "descripcion": "Perfilación de comunidades microbianas. Para analizar datos de secuenciación y encontrar virus/bacterias específicas."
+    }
+  ]
+}

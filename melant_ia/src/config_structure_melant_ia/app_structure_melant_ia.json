@@ -13,25 +13,15 @@
       {
         "id": 2,
         "titulo": "Asistente Técnico Rural",
-        "items": []
-      },
-      {
-        "id": 3,
-        "titulo": "Asistente Técnico Veterinario",
-        "items": ["Salud y Medicina Veterinaria"]
-      },
-      {
-        "id": 4,
-        "titulo": "Agricultura Digital",
-        "voz_principal": "Fabrizzio",
-        "genero": "Masculino",
         "items": [
-          "Agricultura de precisión (Uso de Sensores)",
+          "Asistente Técnico Veterinario",
+          "Salud y Medicina Veterinaria",
+          "Agricultura de precisión  (Uso de Sensores)",
           "GPS (Medición de Terrenos)"
         ]
       },
       {
-        "id": 5,
+        "id": 3,
         "titulo": "Gestión de Fincas y Trazabilidad",
         "voz_principal": "Angel",
         "genero": "Masculina",
@@ -39,30 +29,29 @@
           "Gestión de Fincas",
           "Trazabilidad Digital del Cacao (EUDR, Agrocalidad, EEUU, Rusia, Asia)",
           "Trazabilidad Digital del Café (EUDR, Agrocalidad, EEUU, Rusia, Asia)",
-          "Gestión de Granjas",
+          "Trazabilidad de Granjas",
           "Gestión Empresarial"
         ]
       },
       {
-        "id": 6,
+        "id": 4,
         "titulo": "Negocios Rurales",
         "items": [
           "Tienda MELANTIA",
           "Ventas de Gestión Productiva",
           "Bienes Raíces Rurales",
           "Monte su TIENDA VIRTUAL",
-          "Servicios Financieros",
           "Oportunidades Públicas",
           "Mercado de Plátano"
         ]
       },
       {
-        "id": 7,
+        "id": 5,
         "titulo": "Emprendedor y Finanzas Personales",
         "items": ["Emprendimientos", "Finanzas Personales"]
       },
       {
-        "id": 8,
+        "id": 6,
         "titulo": "Sostenibilidad y Proyectos",
         "items": [
           "Proyecto Captura de Carbono",
@@ -72,17 +61,17 @@
         ]
       },
       {
-        "id": 9,
+        "id": 7,
         "titulo": "Escuela de Campo",
         "items": ["Cursos", "Prácticas Regenerativas"]
       },
       {
-        "id": 10,
+        "id": 8,
         "titulo": "Mi Comunidad Virtual",
         "items": ["Ciudadano Rural", "Asesoría Legal", "Walkie Talkie"]
       },
       {
-        "id": 11,
+        "id": 9,
         "titulo": "Asistente Preventivo de Salud",
         "items": [
           "Asistente Preventivo de Salud",
@@ -90,7 +79,7 @@
         ]
       },
       {
-        "id": 12,
+        "id": 10,
         "titulo": "Servicios Financieros Melantia",
         "items": [
           "Apertura de Cuenta Digital",
@@ -104,7 +93,7 @@
         ]
       },
       {
-        "id": 13,
+        "id": 11,
         "titulo": "Registro Evidencias y Documentos",
         "items": [
           "Registro de Evidencia Fotografica",

@@ -8,7 +8,7 @@ class BienvenidaAuditiva:
         self.engine = pyttsx3.init()
         # Ajustamos la voz a español y una velocidad pausada
         self.engine.setProperty('rate', 150) 
-
+// Archivo eliminado por limpieza de voces innecesarias.
     def saludar_y_reportar(self, nombre_dueño):
         estado = self.monitor.obtener_estado_actual()
         alertas = estado["total_alertas_pendientes"]

@@ -1,0 +1,62 @@
+{
+  "descripcion": "Tablero de Control para el Módulo de Ganadería en MELANT IA.",
+  "secciones": [
+    "Inventario de animales",
+    "Registro de partos y eventos",
+    "Sanidad y vacunación",
+    "Prácticas regenerativas en pasturas",
+    "Producción de leche/carne",
+    "Alertas sanitarias",
+    "Indicadores de eficiencia",
+    "Modo Ahorro de Energía",
+    "Trazabilidad completa desde nacimiento",
+    "Identificación individual (arete, QR, foto)",
+    "Historial de movimientos y ventas",
+    "Galería de fotos del proceso productivo"
+  ],
+  "inventario_animales": [
+    {
+      "animal_id": "",
+      "nombre": "",
+      "especie": "Bovino",
+      "raza": "",
+      "fecha_nacimiento": "",
+      "madre_id": "",
+      "padre_id": "",
+      "arete": "",
+      "qr_identificacion": "",
+      "foto": "",
+      "galeria_fotos": [
+        {
+          "etapa": "Nacimiento",
+          "foto": "IMG_NAC.jpg",
+          "timestamp": "",
+          "gps": [0,0],
+          "comentario": ""
+        },
+        {
+          "etapa": "Crianza",
+          "foto": "IMG_CRIA.jpg",
+          "timestamp": "",
+          "gps": [0,0],
+          "comentario": ""
+        }
+        // ...más etapas
+      ],
+      "eventos": [],
+      "sanidad": [],
+      "movimientos": [],
+      "ventas": [],
+      "practicas_regenerativas": []
+    }
+    // ...más animales
+  ],
+  "eventos": [],
+  "sanidad": [],
+  "practicas_regenerativas": [],
+  "produccion": [],
+  "alertas": [],
+  "indicadores": {},
+  "modo_ahorro": false,
+  "ultima_actualizacion": "2026-04-20"
+}

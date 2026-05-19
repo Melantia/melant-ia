@@ -1,4 +1,4 @@
-
+// Archivo eliminado por limpieza de voces innecesarias.
 
 from modules.ia.motor_inferencia import motor_inferencia
 

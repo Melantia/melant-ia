@@ -1,0 +1,17 @@
+# Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador
+							| Revista Amazónica. Ciencia y Tecnología
+
+**Categoría:** aves  
+**Fuente:** Andrade-Yucailla et al. (2017). Comportamiento productivo de dos fenotipos de pollos camperos en la region Amazonica de Ecuador.  
+**URL:** https://doi.org/10.59410/RACYT-v06n01ep01-0075  
+
+---
+
+## Contenido extraído
+
+Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador
+Verónica Andrade–Yucailla Universidad Estatal Amazónica image/svg+xml
+Julio César Vargas Burgos Universidad Estatal Amazónica image/svg+xml
+Orozco Lima Centro de Investigaciones Agropecuarias https://orcid.org/0000-0001-7909-2128
+El estudio se realizó en el Centro de Investigación Posgrado y Conservación Amazónica (CIPCA), en el Programa Avícola de la Universidad Estatal Amazónica, el objetivo de la investigación fue evaluar el efecto del fenotipo de pollos camperos sobre el comportamiento de los principales parámetros productivos. Se utilizaron 100 pollos de cada fenotipo, según el color del plumaje (rojo y negro) para la evaluación del comportamiento productivo se estudió el pesos vivo inicial y final, ganancia de peso, conversión alimenticia, peso a la canal y rendimiento a la canal, se aplicó un diseño completamente aleatorizado, para el análisis de la comparación de medias se utilizó la dócima Tukey (1949) todos los datos fueron analizados en el paquete estadístico InfoStat. En las tres etapas de desarrollo estudiadas (inicial, crecimiento y engorde) se presentaron diferencias significativas (P< 0,001) entre los tratamientos, obteniendo los mejores resultados en cuanto a ganancia de peso vivo 1260; 2120 y 1660 g, respectivamente, conversión alimenticia (0,76; 1,77 y 3,28) el tratamiento del fenotipo rojo y peso vivo final (5080 g), lo que demuestra que el color del plumaje tuvo influencias sobre el comportamiento bioproductivo de pollos camperos, en el cual el fenotipo rojo supero al fenotipo negro catalogándolo como un fenotipo de excelencia en producción de carne en las condiciones agro-meteorológicas de la región Amazónica de Ecuador.
+The study was conducted at the Centro de Investigación Posgrado y Conservación Amazónica (CIPCA), in the Poultry Program of the Universidad Estatal Amazónica, the objective of the research was to evaluate the effect of the phenotype of field chicken on the behavior of the main productive parameters. We used 100 chickens of each phenotype, according to the plumage color (red and black) for the evaluation of the productive behavior we studied the initial and final weight, weight gain, feed conversion, weight to the channel and yield to the channel, we applied a completely randomized design, for the analysis of the means comparison we used Tukey's 10th (1949) all data were analyzed in the statistical package Info Stat. In the three stages of development (initial, growth and fattening), there were significant differences (P <0.001) between the treatments, obtaining the best results in terms of gain of live weight 1260; 2120 and 1660 g, respectively, feed conversion (0.76, 1.77 and 3.28) treatment of the red phenotype and final live weight (5080 g), which shows that the color of the plumage had influences on the bioproductive behavior of field chicken, in which the red phenotype exceeded the black phenotype, cataloging…

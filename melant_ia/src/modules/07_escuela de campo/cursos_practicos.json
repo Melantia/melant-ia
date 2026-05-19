@@ -1,0 +1,76 @@
+{
+  "cursos_practicos": [
+    {
+      "nombre": "Centinelas Digitales",
+      "audiencia": "Productores",
+      "objetivo": "Identificar plagas en campo y aplicar protocolos de bioseguridad inmediata.",
+      "modulos": [
+        {
+          "titulo": "Uso de la cámara para escaneo de síntomas",
+          "teoria": "Identificación visual de síntomas de plagas y enfermedades.",
+          "practica": "Escanear hojas y frutos con la cámara de la App y registrar hallazgos."
+        },
+        {
+          "titulo": "Desinfección de herramientas",
+          "teoria": "Importancia de la bioseguridad en campo.",
+          "practica": "Aplicar protocolos de limpieza tras cada intervención."
+        }
+      ],
+      "manual": "manual_centinelas_digitales.pdf"
+    },
+    {
+      "nombre": "Fitopatología Avanzada e IA",
+      "audiencia": "Estudiantes",
+      "objetivo": "Entender la etiología de las enfermedades y la lógica de los algoritmos de detección.",
+      "modulos": [
+        {
+          "titulo": "Correlación de datos climáticos y aparición de hongos",
+          "teoria": "Relación entre humedad, temperatura y brotes de enfermedades.",
+          "practica": "Analizar datos de sensores y registrar correlaciones en la App."
+        },
+        {
+          "titulo": "El Triángulo de la Enfermedad",
+          "teoria": "Hospedero, patógeno y ambiente propicio.",
+          "practica": "Interpretar gráficas y activar alertas en la App."
+        }
+      ],
+      "manual": "manual_fitopatologia_ia.pdf"
+    },
+    {
+      "nombre": "Bioseguridad y Exclusión en Fincas",
+      "audiencia": "Productores",
+      "objetivo": "Aplicar protocolos de prevención ante Fusarium R4T y otras amenazas.",
+      "modulos": [
+        {
+          "titulo": "Prevención del Fusarium R4T",
+          "teoria": "Mecanismos de dispersión y supervivencia del hongo.",
+          "practica": "Diseñar pediluvios y arcos de desinfección en la finca."
+        },
+        {
+          "titulo": "Registro de visitas y control de acceso",
+          "teoria": "Importancia del registro de personas y vehículos.",
+          "practica": "Usar el módulo de la App para registrar visitas y desinfección."
+        }
+      ],
+      "manual": "manual_bioseguridad.pdf"
+    },
+    {
+      "nombre": "Sensores y Alerta Temprana",
+      "audiencia": "General",
+      "objetivo": "Configurar sensores para activar notificaciones preventivas.",
+      "modulos": [
+        {
+          "titulo": "Sensores y humedad de hoja",
+          "teoria": "Relación entre humedad relativa y germinación de esporas.",
+          "practica": "Configurar alertas automáticas en la App usando sensores DHT22."
+        },
+        {
+          "titulo": "Manejo Integrado de Plagas (MIP)",
+          "teoria": "Umbrales económicos y toma de decisiones.",
+          "practica": "Registrar conteo de insectos y activar recomendaciones automáticas."
+        }
+      ],
+      "manual": "manual_sensores_alerta.pdf"
+    }
+  ]
+}

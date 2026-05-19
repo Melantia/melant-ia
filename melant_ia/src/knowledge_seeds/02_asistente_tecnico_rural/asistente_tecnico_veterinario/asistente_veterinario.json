@@ -1,0 +1,366 @@
+{
+  "ganado_bovino": {
+    "fuente": "Repositorio UPSE / Kellems & Church",
+    "detalle": "Manejo nutricional y preventivo. Control de mastitis y protocolos de vacunación para Fiebre Aftosa en zonas tropicales.",
+    "url": "https://repositorio.upse.edu.ec/download/mateo-lim",
+    "referencias": [
+      {
+        "archivo": "MAGAP_hatos_ganaderos_buenas_practicas_pecuarias",
+        "fuente": "MAGAP Ecuador. Hatos ganaderos mejoran con buenas practicas pecuarias.",
+        "url": "https://www.agricultura.gob.ec/tungurahua-hatos-ganaderos-mejoran-con-buenas-practicas-pecuarias/",
+        "titulo_web": "Tungurahua: hatos ganaderos mejoran con buenas prácticas pecuarias – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "Tungurahua: hatos ganaderos mejoran con buenas prácticas pecuarias\nPequeños y medianos productores del cantón Baños de Agua Santa, provincia de Tungurahua, adquirieron conocimientos en manejo, nutrición, reproducción y sanidad animal, que los aplican en sus hatos ganaderos para mejorar su producción y alcanzar una mejor competitividad y desarrollo sostenible en sus comunidades.\nLa entrega de ensiladora, picadora y cortadora, por parte del Ministerio de Agricultura y Ganadería (MAG), permite que …",
+        "ok": true
+      },
+      {
+        "archivo": "FAO_manual_buenas_practicas_ganaderia_bovina",
+        "fuente": "FAO. Manual de Buenas Practicas de Ganaderia Bovina para la Produccion de Leche. 169 paginas.",
+        "url": "https://www.fao.org/3/a0126s/a0126s00.pdf",
+        "titulo_web": "a0126s00.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://www.fao.org/3/a0126s/a0126s00.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "ClubGanadero_tips_cuidado_cria_ganado_bovino",
+        "fuente": "Club Ganadero. Tips para el cuidado y cria de ganado bovino.",
+        "url": "https://www.clubganadero.com/cria-de-ganado/",
+        "titulo_web": "Tips para el cuidado y cría de ganado bovino - Club ganadero",
+        "resumen": "Inicio > Blog > Categoría > Tips para el cuidado y cría de ganado bovino\nEl manejo adecuado de los bovinos en los corrales de alimentación intensiva es de gran importancia para garantizar una buena salud, maximizar la eficiencia y rentabilidad ganadera, impulsando así el nivel de producción de carne.\nAl implementar buenas prácticas en las unidades ganaderas también se garantiza que los alimentos provengan de animales en excelentes condiciones , de una manera responsable y sostenible desde el pun…",
+        "ok": true
+      },
+      {
+        "archivo": "ContextoGanadero_2016_razas_bovinas_Suramerica",
+        "fuente": "CONtexto Ganadero (2016). Las razas bovinas que predominan en Suramerica.",
+        "url": "https://www.contextoganadero.com/internacional/informe-las-razas-bovinas-que-predominan-en-suramerica",
+        "titulo_web": "Informe: Las razas bovinas que predominan en Suramérica | CONtexto Ganadero",
+        "resumen": "La gran variedad de razas en el continente evidencian la diversidad de climas y paisajes de la región. Mientras que en países como Argentina, Brasil y Uruguay predomina el ganado cárnico, en otros como Ecuador y Perú la producción lechera es esencial.\nLa gran variedad de razas en el continente evidencian la diversidad de climas y paisajes de la región. Mientras que en países como Argentina, Brasil y Uruguay predomina el ganado cárnico, en otros como Ecuador y Perú la producción lechera es esenci…",
+        "ok": true
+      },
+      {
+        "archivo": "VeterinarioDigital_2021_razas_bovinas_especializadas_leche",
+        "fuente": "Veterinaria Digital (2021). Razas bovinas especializadas en leche.",
+        "url": "https://www.veterinariadigital.com/articulos/razas-bovinas-especializadas-en-leche/",
+        "titulo_web": "Razas bovinas especializadas en leche - Rumiantes",
+        "resumen": "Toda la información sobre medicina veterinaria y producción animal\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nLas razas bovinas se han ido mejorando con el pasar de las décadas para obtener un mayor rendimiento de leche.\nLas razas bovinas se han ido mejorando c…",
+        "ok": true
+      }
+    ]
+  },
+  "aves_corral": {
+    "fuente": "Phillips et al. (2002)",
+    "detalle": "Sistemas agroforestales para pollos. Mejora del bienestar animal y reducción de estrés térmico mediante sombreado natural.",
+    "url": "https://orgprints.org/id/eprint/8417/"
+  },
+  "cabras_caprinos": {
+    "fuente": "Manual de Pequeños Rumiantes Ecuador",
+    "detalle": "Producción de leche y carne. Manejo de pastoreo rotativo para evitar parásitos internos y optimización de forrajes arbustivos.",
+    "url": "None"
+  },
+  "cuyes_cobayos": {
+    "fuente": "Guía Técnica de Producción de Cuyes",
+    "detalle": "Manejo de líneas mejoradas (Perú, Andina). Alimentación mixta (forraje y concentrado) y control de Salmonelosis y ectoparásitos.",
+    "url": "None"
+  },
+  "aves": {
+    "referencias": [
+      {
+        "archivo": "Andrade-Yucailla_2017_pollos_camperos_Ecuador",
+        "fuente": "Andrade-Yucailla et al. (2017). Comportamiento productivo de dos fenotipos de pollos camperos en la region Amazonica de Ecuador.",
+        "url": "https://doi.org/10.59410/RACYT-v06n01ep01-0075",
+        "titulo_web": "Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador\n\t\t\t\t\t\t\t| Revista Amazónica. Ciencia y Tecnología",
+        "resumen": "Comportamiento productivo de dos fenotipos de pollos camperos en la región Amazónica de Ecuador\nVerónica Andrade–Yucailla Universidad Estatal Amazónica image/svg+xml\nJulio César Vargas Burgos Universidad Estatal Amazónica image/svg+xml\nOrozco Lima Centro de Investigaciones Agropecuarias https://orcid.org/0000-0001-7909-2128\nEl estudio se realizó en el Centro de Investigación Posgrado y Conservación Amazónica (CIPCA), en el Programa Avícola de la Universidad Estatal Amazónica, el objetivo de la i…",
+        "ok": true
+      },
+      {
+        "archivo": "Angarita_Castrillon_2020_gallinas_criollas",
+        "fuente": "Angarita, L., y Castrillon, Z. (2020). Produccion agroecologica de gallinas criollas. Corporacion Universitaria Minuto de Dios.",
+        "url": "https://semillas.org.co/apc-aa-files/5d99b14191c59782eab3da99d8f95126/sin-prueba_compressed-1.pdf",
+        "titulo_web": "sin-prueba_compressed-1.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://semillas.org.co/apc-aa-files/5d99b14191c59782eab3da99d8f95126/sin-prueba_compressed-1.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "FAO_2015_integrated_backyard_systems",
+        "fuente": "FAO. (2015). Integrated backyard systems.",
+        "url": "https://www.fao.org/agriculture/animal-production-and-health/en/",
+        "titulo_web": "Animal Production and Health Division (NSA)",
+        "resumen": "The NSA Division supports member countries to strengthen the contribution of the livestock sector towards the achievement of the Sustainable Development Goals (SDGs) – as animal rearing on farms can be particularly effective at reducing hunger and poverty.\nThe Division endeavours to facilitate the participation of all livestock producers – large and small – to grow the sector, especially in developing countries.\nA world where the livestock sector sustainably contributes to the welfare of people …",
+        "ok": true
+      },
+      {
+        "archivo": "Gallard_2022_densidad_alojamiento_bienestar_parrilleros",
+        "fuente": "Gallard et al. (2022). Efecto de la densidad de alojamiento sobre bienestar en pollos parrilleros.",
+        "url": "https://doi.org/10.30972/vet.3326188",
+        "titulo_web": "Efecto de la densidad de alojamiento y la zona del galpón sobre indicadores de bienestar en pollos parrilleros\n\t\t\t\t\t\t\t| Revista Veterinaria",
+        "resumen": "Efecto de la densidad de alojamiento y la zona del galpón sobre indicadores de bienestar en pollos parrilleros\nE. A. Gallard Instituto Nacional de Tecnología Agropecuaria.\nEstación Experimental Agropecuaria Reconquista\nM. L. Menichelli Instituto Nacional de Tecnología Agropecuaria.\nEstación Experimental Agropecuaria Reconquista\nUniversidad Católica de Santa Fe. Facultad de Ciencias Agropecuarias\nR. J. Di Masso Universidad Nacional del Rosario. Facultad de Ciencias Veterinarias\nF. A. Revidatti Un…",
+        "ok": true
+      },
+      {
+        "archivo": "Hernandez-Cabrera_2015_pastoreo_gallinas_malezas",
+        "fuente": "Hernandez-Cabrera, C. (2015). Efecto del pastoreo de gallinas en el control de malezas. Zamorano.",
+        "url": "https://bdigital.zamorano.edu/server/api/core/bitstreams/3a84a03d-8725-4ccf-acfa-cdcab82a3a8e/content",
+        "titulo_web": "content",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://bdigital.zamorano.edu/server/api/core/bitstreams/3a84a03d-8725-4ccf-acfa-cdcab82a3a8e/content\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "Phillips_Engel_2002_agroforestry_chicken",
+        "fuente": "Phillips, I., y Engel, C. (2002). Development of an agroforestry system for chicken production.",
+        "url": "https://orgprints.org/id/eprint/8417/",
+        "titulo_web": "Organic Eprints -  Development of an agroforestry system for chicken production",
+        "resumen": "Philipps, Lois ; Engel, Cindy and Wolfe, Martin (2002)\nDevelopment of an agroforestry system for chicken production.\nIn: Powell, Jane and et al. (Eds.) Proceedings of the UK Organic Research 2002 Conference , Organic Centre Wales, Institute of Rural Studies, University of Wales Aberystwyth, pp. 257-258.\nThis report was presented at the UK Organic Research 2002 Conference. Because conventional production of chickens has gone further than any other animal production system towards complete control…",
+        "ok": true
+      },
+      {
+        "archivo": "Avinews_2025_protocolos_bioseguridad_pollos_engorde",
+        "fuente": "Avinews (2025). Protocolos de bioseguridad en el manejo de pollos de engorde.",
+        "url": "https://avinews.com/protocolos-de-bioseguridad-en-el-manejo-de-pollos-de-engorde/",
+        "titulo_web": "Protocolos de Bioseguridad en el Manejo de Pollos de Engorde",
+        "resumen": "Protocolos de Bioseguridad en el Manejo Diario de una Granja de Pollos de Engorde\nImplementar protocolos de bioseguridad bien definidos, monitorearlos constantemente y capacitar al personal son acciones esenciales para asegurar la salud del plantel, proteger la inversión y contribuir con la inocuidad alimentaria en toda la cadena productiva.\nLa producción avícola representa uno de los sectores agropecuarios más importantes a nivel mundial, y la bioseguridad se ha convertido en una herramienta in…",
+        "ok": true
+      },
+      {
+        "archivo": "PAE_gallinas_libres_Ecuador_inanicion_prohibida",
+        "fuente": "Proteccion Animal Ecuador (PAE). Gallinas Libres Ecuador.",
+        "url": "https://pae.ec/campanas/gallinas-libres-ecuador/",
+        "titulo_web": "Gallinas libres Ecuador | PAE",
+        "resumen": "Gallinas Libres Ecuador nace en 2018 como parte de una coalición internacional conformada por más de 90 organizaciones, conocida como Open Wing Alliance , cuyo objetivo es poner fin a la crueldad a la que son sometidas las gallinas en la industria avícola.\nVisita el canal de Youtube y mira esta charla para conocer de las necesidades de las gallinas.\nCada año, cerca de 158.000 millones de gallinas y pollos son matados en todo el mundo. Debido a esta explotación masiva, se trata de la especie de a…",
+        "ok": true
+      }
+    ]
+  },
+  "cerdos": {
+    "referencias": [
+      {
+        "archivo": "CIAP_manual_produccion_porcicola",
+        "fuente": "Centro de Informacion de Actividades Porcinas. Manual de produccion porcicola. 114 paginas.",
+        "url": "https://www.ciap.org.ar/Sitio/Archivos/Manual%20de%20produccion%20porcicola.pdf",
+        "titulo_web": "Manual de produccion porcicola.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://www.ciap.org.ar/Sitio/Archivos/Manual%20de%20produccion%20porcicola.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "3tres3_sistema_produccion_sitio_multiple_cerdos",
+        "fuente": "3tres3.com. Sistema de produccion en un sitio y en multiples sitios.",
+        "url": "https://www.3tres3.com/latam/articulos/sistema-de-produccion-en-un-sitio-y-en-multiples-sitios_36533/",
+        "titulo_web": "Artículos - 3tres3 LATAM, la página del Cerdo",
+        "resumen": "Artículos sobre porcicultura y todo lo relacionado con la cría, engorde, levante, comercialización de cerdos",
+        "ok": true
+      },
+      {
+        "archivo": "GranjasSanAntonio_2023_proceso_productivo_cerdos",
+        "fuente": "Granjas San Antonio (2023). El proceso productivo en una granja de cerdos ecologicos.",
+        "url": "https://granjassanantonio.com/el-proceso-productivo-en-una-granja-de-cerdos-ecologicos/",
+        "titulo_web": "El proceso productivo en una granja de cerdos I Blog",
+        "resumen": "El proceso productivo en Granjas San Antonio es un proceso complejo que requiere especialización y disciplina. La producción de carne de cerdo 100% ecológico exige la puesta en marcha de unos procesos y sistemas específicos que aseguren el bienestar de los animales durante toda su vida y que además nos permitan garantizar a nuestros clientes una carne de una calidad excepcional.\nLa genética: un factor esencial en una granja de cerdos ecológicos\nEn Granjas San Antonio diseñamos nuestra propia gen…",
+        "ok": true
+      },
+      {
+        "archivo": "DehesaBaronDeLey_2021_fases_crianza_cerdo_iberico",
+        "fuente": "Dehesa Baron De Ley (2021). El cerdo iberico: fases de su crianza.",
+        "url": "https://www.dehesabarondeley.com/el-cerdo-iberico-conoces-las-fases-de-su-crianza/",
+        "titulo_web": "Fases de crianza del cerdo ibérico - Dehesa Barón de Ley",
+        "resumen": "La clave de un buen ibérico es la forma de crianza de un buen cerdo . ¿Sabías que cada cerdo ibérico con el que se elaboran los productos de Dehesa Barón de Ley dispone de tres hectáreas para su crianza sólo con bellota y hierba? Esto es solo una pincelada de cómo se crían los cerdos ibéricos en nuestro entorno, en la dehesa extremeña. Un enclave privilegiado en el Valle de Ambroz , en la provincia de Cáceres.\nVamos a ver las diferentes fases de crianza del cerdo ibérico y la importancia de cada…",
+        "ok": true
+      },
+      {
+        "archivo": "MAGAP_2024_Ecuador_exporta_carne_cerdo",
+        "fuente": "MAGAP (2024). Ecuador exporta por segunda vez carne de cerdo.",
+        "url": "https://www.agricultura.gob.ec/ecuador-exporta-por-segunda-vez-carne-de-cerdo/",
+        "titulo_web": "Ecuador exporta por segunda vez carne de cerdo – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "Quito, 10 de septiembre de 2024.- Mediante un trabajo conjunto entre el sector privado y el sector público, Ecuador exporta 27 toneladas de carne de cerdo a Vietnam. Esta exportación se concreta tras la búsqueda de nuevos mercados para los productos ecuatorianos realizada desde las autoridades y los representantes de las empresas privadas.\nDanilo Palacios, ministro de Agricultura y Ganadería, felicitó a la empresa privada por la exportación y resaltó que tienen el apoyo del Estado para llegar a …",
+        "ok": true
+      },
+      {
+        "archivo": "ESPOCH_2023_porcicultura_manejo_sanitario_genetico",
+        "fuente": "ESPOCH (2023). Porcicultura: crianza, produccion y reproduccion de cerdos.",
+        "url": "https://dspace.espoch.edu.ec/bitstream/123456789/19374/1/23T0785.pdf",
+        "titulo_web": "23T0785.pdf",
+        "resumen": "[PDF] Documento descargable. Enlace directo: https://dspace.espoch.edu.ec/bitstream/123456789/19374/1/23T0785.pdf\nPara leerlo, abrirlo con un visor de PDF.",
+        "ok": true
+      },
+      {
+        "archivo": "Garimori_2025_cerdo_iberico_agricultura_regenerativa",
+        "fuente": "Garimori Guijuelo (2025). La adaptacion del cerdo iberico a la agricultura regenerativa.",
+        "url": "https://www.garimori.es/la-adaptacion-del-cerdo-iberico-a-la-agricultura-regenerativa/",
+        "titulo_web": "La adaptación del cerdo ibérico a la agricultura regenerativa - Garimori Guijuelo",
+        "resumen": "La adaptación del cerdo ibérico a la agricultura regenerativa\nEl modelo de agricultura regenerativa busca recuperar la salud del suelo, aumentar la biodiversidad y mejorar los ecosistemas. El cerdo ibérico , por sus características y su estrecha relación con la dehesa , se ha convertido en un gran aliado de este sistema sostenible.\nEl cerdo ibérico vive tradicionalmente en libertad, moviéndose por grandes extensiones arboladas, lo que reduce el impacto ambiental de su crianza. Su capacidad para …",
+        "ok": true
+      },
+      {
+        "archivo": "VeterinarioDigital_2022_reproductoras_porcinas_Ecuador",
+        "fuente": "Veterinaria Digital (2022). Reproductoras porcinas en Ecuador. Razas principales.",
+        "url": "https://www.veterinariadigital.com/noticias/reproductoras-porcinas-en-ecuador/",
+        "titulo_web": "Reproductoras porcinas en Ecuador",
+        "resumen": "Toda la información sobre medicina veterinaria y producción animal\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nRevista de información veterinaria, medicina y zootécnia, especializada en los sectores de avicultura, porcicultura, rumiantes y acuicultura\nEn Ecuador la porcicultura tiene un aporte en el PIB agropecuario de 8%, generando aproximadamente 80 mil empleos directos.\nLa porcicultura en Latinoam…",
+        "ok": true
+      },
+      {
+        "archivo": "ASPE_razas_cerdo_Ecuador_Yorkshire_Landrace_Hampshire",
+        "fuente": "Asociacion de Porcicultores del Ecuador (ASPE). Razas de cerdo en Ecuador.",
+        "url": "https://aspe.org.ec/razas-de-cerdo-en-ecuador/",
+        "titulo_web": "Razas de cerdo en Ecuador - ASPE",
+        "resumen": "Aquí encontrarás información detallada sobre las diferentes razas de cerdos criados en el país, sus características, hábitat, alimentación y cuidados.",
+        "ok": true
+      }
+    ]
+  },
+  "cabras": {
+    "referencias": [
+      {
+        "archivo": "COVIHER_2023_ganaderia_regenerativa_caprino_ovino",
+        "fuente": "COVIHER (2023). La Ganaderia Regenerativa en el caprino-ovino.",
+        "url": "https://coviher.com/ganaderia-regenerativa-en-el-caprino-ovino/",
+        "titulo_web": "La Ganadería Regenerativa en el caprino-ovino",
+        "resumen": "El campo precisa de nuevas herramientas para potenciar la sostenibilidad, la ganadería regenerativa puede convertir el sector del caprino-ovino en el más sostenible del ámbito cárnico. Las ventajas de la cría de cabras y ovejas frente a otro tipo de ganado son conocidas. Animales pequeños que ofrecen una gran calidad de carnes, lanas y leches, aportando numerosos beneficios a los ecosistemas. La protección de la biodiversidad que aporta la trashumancia facilita que las diferentes especies se dis…",
+        "ok": true
+      }
+    ]
+  },
+  "cuyes": {
+    "referencias": [
+      {
+        "archivo": "Procampo_manejo_sanitario_bioseguridad_cuyes",
+        "fuente": "Procampo Ecuador. Manejo sanitario y bioseguridad en la explotacion de cuyes.",
+        "url": "https://www.procampo.com.ec/blog/11-salud/239-manejo-sanitario-y-bioseguridad-en-la-explotacion-de-cuyes",
+        "titulo_web": "MANEJO SANITARIO Y BIOSEGURIDAD EN LA EXPLOTACIÓN DE CUYES",
+        "resumen": "Para garantizar la salubridad en la producción cuyícola, se debe manejar una política de sanidad en la que se incluya el cuidado de instalaciones, de los animales y aplicar un programa de bioseguridad. Si no existe un manejo sanitario adecuado, la aparición de enfermedades es común. En el caso de los cuyes, estas patologías son fáciles de prevenir y tratar.\nLas instalaciones deben proporcionar una buena protección. Las paredes deben tener ventanas grandes que permitan una ventilación adec…",
+        "ok": true
+      },
+      {
+        "archivo": "MAGAP_productores_cuy_kits_manejo_sanitario",
+        "fuente": "MAGAP Ecuador. Productores de cuy reciben kits para manejo sanitario.",
+        "url": "https://www.agricultura.gob.ec/productores-de-cuy-reciben-kits-para-manejo-sanitario/",
+        "titulo_web": "Productores de cuy reciben kits para manejo sanitario – Ministerio de Agricultura, Ganadería y Pesca",
+        "resumen": "El Ministerio de Agricultura y Ganadería (MAG) a través de la Unidad de Asistencia Técnica del cantón Cevallos y del Instituto Nacional de Investigaciones Agropecuarias (INIAP), entregaron once kits con insumos y materiales para la aplicación de Buenas Práctica Pecuarias en el manejo sanitario de cuyes.\nLos beneficiarios son once productores de los cantones Cevallos, Pelileo y Tisaleo que participaron en el proyecto de escalamiento de la producción de cuyes con pequeños productores de la Sierra …",
+        "ok": true
+      },
+      {
+        "archivo": "CrianzaDeCuyes_com_razas_manejo_alimentacion",
+        "fuente": "CrianzaDeCuyes.com. Crianza de Cuyes: razas, manejo tecnico y alimentacion.",
+        "url": "https://crianzadecuyes.com",
+        "titulo_web": "Crianza de Cuyes: Razas Manejo Técnico, Alimentación, Sanidad y Comercialización",
+        "resumen": "La producción de Forraje verde Hidropónico viene hacer lo que se se conoce como: Ehidroponía, de las palabras griegas «hydro«, que significa agua, y «ponos»,\nEl agua es uno elementos más importantes que debe considerarse en la alimentación. El animal la obtiene de acuerdo a su necesidad de tres fuentes:\nEl cuy raza Inti se caracteriza por su precocidad y prolificidad. Puede llegar a parir un promedio de 3.2 crías por parto, en un período\nEl cuy raza Andina es prolífica, es decir que las crías qu…",
+        "ok": true
+      }
+    ]
+  },
+  "pastos_forrajes": {
+    "fuente": "Múltiples fuentes académicas y técnicas 2014–2026",
+    "detalle": "Manejo sostenible de pastos, forrajes y sistemas silvopastoriles. Gramíneas de alto rendimiento (Pasto Elefante, King Grass, Mombasa, Brachiaria). Pastoreo rotativo y ganadería regenerativa en Ecuador.",
+    "referencias": [
+      {
+        "archivo": "Castro_2025_manejo_sostenible_pastos_forrajes_LATAM",
+        "fuente": "Castro, D. P. (2025). Manejo Sostenible de Pastos, Forrajes y Sistemas. LATAM Revista Latinoamericana de Ciencias Sociales y Humanidades. Mencionado por 4.",
+        "url": "https://revistalatam.redilat.org/index.php/article/view",
+        "titulo_web": "Manejo Sostenible de Pastos, Forrajes y Sistemas - LATAM Revista",
+        "resumen": "Los resultados destacan que gramíneas de alto rendimiento, como Pasto Elefante, King Grass y Pasto Mombasa, ofrecen una elevada producción de biomasa. Revisión de sistemas silvopastoriles y manejo sostenible de pastizales en Latinoamérica.",
+        "ok": true
+      },
+      {
+        "archivo": "Castro_2025_manejo_sostenible_pastos_forrajes_Dialnet",
+        "fuente": "Castro, D. P. (2025). Manejo Sostenible de Pastos, Forrajes y Sistemas. Dialnet. Mencionado por 4.",
+        "url": "https://dialnet.unirioja.es/servlet/articulo",
+        "titulo_web": "Manejo Sostenible de Pastos, Forrajes y Sistemas - Dialnet",
+        "resumen": "Los resultados destacan que gramíneas de alto rendimiento, como Pasto Elefante, King Grass y Pasto Mombasa, ofrecen una elevada producción de biomasa, mientras que los sistemas silvopastoriles combinan producción animal y conservación ambiental.",
+        "ok": true
+      },
+      {
+        "archivo": "Adrian_2022_pastos_forrajes_UTC_Cotopaxi",
+        "fuente": "Adrián, M. R. J. (2022). Pastos y forrajes para producción ganadera. Universidad Técnica de Cotopaxi Extensión La Maná. PDF. Mencionado por 8.",
+        "url": "https://repositorio.utc.edu.ec/bitstreams/content",
+        "titulo_web": "Pastos y forrajes UTC Cotopaxi - PDF",
+        "resumen": "[PDF] Los pastos y forrajes se han convertido a nivel mundial y específicamente para los países latinoamericanos en un componente fundamental de la producción ganadera. Pastos y forrajes del Ecuador: siembra y producción de pasturas.",
+        "ok": true
+      },
+      {
+        "archivo": "Leon_2018_pastos_forrajes_Ecuador_UPS",
+        "fuente": "León, R. (2018). Pastos y forrajes del Ecuador. Siembra y producción de pasturas. Repositorio UPS. 622 páginas. Mencionado por 166.",
+        "url": "https://dspace.ups.edu.ec/bitstream/123456789/pastos-y-forrajes-del-ecuador",
+        "titulo_web": "Pastos y forrajes del Ecuador - Siembra y producción de pasturas - UPS",
+        "resumen": "[PDF] Obra de referencia de 622 páginas sobre pastos y forrajes en Ecuador. Cubre factores de producción de los principales pastos y forrajes tropicales y de altura, manejo agronómico, siembra, fertilización y producción de pasturas.",
+        "ok": true
+      },
+      {
+        "archivo": "Leon_2018_pastos_forrajes_Ecuador_ResearchGate",
+        "fuente": "León, R. (2018/2022). PASTOS Y FORRAJES DEL ECUADOR. ResearchGate. Publicado 2 dic 2022.",
+        "url": "https://www.researchgate.net/publication/365964330",
+        "titulo_web": "(PDF) PASTOS Y FORRAJES DEL ECUADOR - ResearchGate",
+        "resumen": "En este trabajo el lector encontrará la más variada información sobre los factores de producción de los principales pastos y forrajes. Libro de consulta técnica ampliamente citado en Ecuador y Latinoamérica.",
+        "ok": true
+      },
+      {
+        "archivo": "INIAP_pastizales_zona_interandina_Ecuador",
+        "fuente": "INIAP Ecuador. Producción y utilización de pastizales en la región interandina. Repositorio INIAP. PDF.",
+        "url": "https://repositorio.iniap.gob.ec/download",
+        "titulo_web": "Producción y utilización de pastizales región interandina - INIAP",
+        "resumen": "[PDF] Entre las leguminosas para pastoreo sobresalen el trébol blanco (Trifolium repens), trébol rojo (Trifolium pratense) y como pastos de corte la avena forrajera. Publicación técnica del INIAP sobre manejo de pastizales en la sierra ecuatoriana.",
+        "ok": true
+      },
+      {
+        "archivo": "ServiciosAgropecuariosEcuador_gestion_eficiente_pastoreo",
+        "fuente": "Servicios Agropecuarios Ecuador. Gestión Eficiente del Pastoreo: Mejores Prácticas para la Ganadería.",
+        "url": "https://serviciosagropecuariosecuador.com/gestion-eficiente-del-pastoreo/",
+        "titulo_web": "Gestión Eficiente del Pastoreo: Mejores Prácticas para la Ganadería - SAE",
+        "resumen": "La gestión eficiente del pastoreo es esencial para maximizar la productividad en la ganadería. Incluye el manejo de estacionalidad y reproducción. Introducir alimentos concentrados o forrajes almacenados ayuda a mantener una nutrición adecuada para el ganado.",
+        "ok": true
+      },
+      {
+        "archivo": "ContextoGanadero_2025_pastos_ideales_engorde_bovinos",
+        "fuente": "CONtexto Ganadero (22 ene 2025). Pastos ideales que maximizan el engorde de bovinos.",
+        "url": "https://www.contextoganadero.com/pastos-ideales-que-maximizan-el-engorde-de-bovinos",
+        "titulo_web": "Pastos ideales que maximizan el engorde de bovinos | CONtexto Ganadero",
+        "resumen": "Cinco especies de pastos son ideales para el engorde bovino: mombasa, brachiaria humidicola, kikuyo, estrella africana y alfalfa. Cada especie con sus características de adaptación climática y productividad.",
+        "ok": true
+      },
+      {
+        "archivo": "ElProductor_2025_buen_pasto_clave_ganaderia",
+        "fuente": "El Productor Ecuador (2025). El buen pasto: clave fundamental para una ganadería rentable.",
+        "url": "https://elproductor.com/2025/04/el-buen-pasto-clave-fundamental-para-una-ganaderia-rentable/",
+        "titulo_web": "El buen pasto: clave fundamental para una ganadería rentable - El Productor",
+        "resumen": "En la producción ganadera, uno de los factores más determinantes para lograr animales sanos y con buen rendimiento es la calidad del pasto que consumen. Análisis de variedades recomendadas según zona agroecológica.",
+        "ok": true
+      },
+      {
+        "archivo": "ElTelegrafo_2026_ganaderia_regenerativa_Ecuador_inversion",
+        "fuente": "El Telégrafo (20 mar 2026). Gobierno impulsa la ganadería regenerativa con inversión de USD 9 millones hasta 2029.",
+        "url": "https://www.eltelegrafo.com.ec/noticias/nacionales/ganaderia-regenerativa-inversion-2026",
+        "titulo_web": "Gobierno impulsa la ganadería regenerativa con inversión - El Telégrafo",
+        "resumen": "El Gobierno Nacional prevé invertir más de USD 9 millones hasta 2029 para impulsar la ganadería regenerativa en Ecuador, con un plan que apunta a la restauración de suelos, uso eficiente de pasturas y reducción de huella de carbono en el sector pecuario.",
+        "ok": true
+      },
+      {
+        "archivo": "Engormix_2014_pastos_forrajes_tropicales_BrachiariaMulatoII",
+        "fuente": "Engormix (21 jul 2014). Pastos y forrajes tropicales introducidos y experimentados. Sección Manejo de Pasturas.",
+        "url": "https://www.engormix.com/ganaderia/manejo-pasturas/articulos/pastos-forrajes-tropicales-introducidos",
+        "titulo_web": "Pastos y forrajes tropicales introducidos y experimentados - Engormix",
+        "resumen": "El Mulato II es un híbrido recomendado para nichos agro-ecológicos donde se siembra Brachiaria brizantha cv Marandú (sistemas semi-intensivos). Revisión de variedades tropicales introducidas y su comportamiento en diferentes condiciones de suelo y clima.",
+        "ok": true
+      },
+      {
+        "archivo": "Slideshare_5_mejores_pastos_tropico_bajo_Colombia",
+        "fuente": "Slideshare / Empresariales. Los 5 mejores pastos para el ganado en el trópico bajo.",
+        "url": "https://es.slideshare.net/Empresariales/los-5-mejores-pastos-para-el-ganado-en-el-tropico-bajo",
+        "titulo_web": "Los 5 mejores pastos para el ganado en el trópico bajo | Slideshare",
+        "resumen": "Presentación sobre los 5 mejores pastos para el ganado en el trópico bajo. El primer puesto lo ocupa el angleton, seguido de otras gramíneas de alta adaptabilidad al calor y suelos ácidos. Referencia aplicable a zonas costeras de Ecuador.",
+        "ok": true
+      },
+      {
+        "archivo": "FAO_2026_ano_internacional_pastizales_pastores",
+        "fuente": "FAO (2026). Año Internacional de los Pastizales y los Pastores 2026.",
+        "url": "https://www.fao.org/pasturelands-pastoralists/es/",
+        "titulo_web": "Año Internacional de los Pastizales y los Pastores 2026 - FAO",
+        "resumen": "Los pastizales cubren aproximadamente la mitad de las tierras del mundo. El Año Internacional 2026 busca visibilizar la importancia de los sistemas pastoriles para la seguridad alimentaria, la biodiversidad y el cambio climático a nivel global.",
+        "ok": true
+      },
+      {
+        "archivo": "TheBeefSite_sistemas_forraje_ganado_engorde",
+        "fuente": "The Beef Site. Sistemas de forraje para ganado de engorde. Traducido por Google.",
+        "url": "https://www.thebeefsite.com/articles/forage-systems-for-beef-cattle",
+        "titulo_web": "Sistemas de forraje para ganado de engorde - The Beef Site",
+        "resumen": "El trébol blanco suele ser más adecuado para pastizales de festuca alta con pastoreo continuo o con pastoreo que permite que los animales seleccionen el forraje más nutritivo. Análisis de sistemas de forraje para maximizar ganancia de peso en bovinos.",
+        "ok": true
+      }
+    ]
+  }
+}

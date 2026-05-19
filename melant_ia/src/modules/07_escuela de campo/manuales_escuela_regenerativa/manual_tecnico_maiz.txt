@@ -1,0 +1,36 @@
+## ESTRUCTURA DEL MANUAL TÉCNICO: MAÍZ (Zea mays)
+Enfoque: Agricultura Orgánica y Regenerativa
+
+## 1. Ficha Técnica de Identificación
+* Nombre común y científico: Maíz - Zea mays
+* Ciclo de vida: Anual
+* Requerimientos Climáticos: Altitud 0-3000 msnm, Temperatura ideal 18-28°C, Humedad media
+* Tipo de Suelo ideal: Franco-arenoso, bien drenado, pH 5.5-7.0
+
+## 2. Diseño del Sistema (Biodiversidad)
+* Asociaciones Benéficas: Frijol, zapallo, girasol
+* Plantas Repelentes/Atrayentes: Caléndula, tagetes
+* Rotación Sugerida: Leguminosas, hortalizas, descanso
+
+## 3. Nutrición y Preparación del Suelo
+* Preparación de la Cama: Labranza mínima, camellones
+* Abonado de Fondo: 2 kg compost + 1 kg humus por surco
+* Plan de Fertilización Foliar: Biol o caldo mineral cada 20 días
+
+## 4. Manejo Técnico del Cultivo (Prácticas)
+* Siembra/Trasplante: 25 cm entre plantas, 80 cm entre surcos
+* Riego: Manual, cada 7-10 días
+* Labores Culturales: Deshierbe manual, aporques
+
+## 5. Manejo Etológico y Sanitario (Lógica Orgánica)
+* Monitoreo: Buscar gusano cogollero, hongos, pulgón
+* Prevención: Caldo bordelés, caldo sulfocálcico
+* Control Biológico/Botánico: Extracto de ajo-ají, liberación de insectos benéficos
+
+## 6. Cosecha y Postcosecha
+* Indicadores de Madurez: Mazorca seca, grano duro
+* Técnica de Recolección: Manual, en la mañana
+* Almacenamiento: Lugar seco, ventilado, oscuro
+
+## 7. Registro de Prácticas (Anexo de Control)
+* Tabla para llenar: Fecha | Actividad Realizada | Insumo Usado | Observaciones
