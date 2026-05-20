@@ -1,0 +1,169 @@
+{
+  "curso": "Gestión Empresarial, Manejo de Suelos y Pasturas, Nutrición, Sanidad y Reproducción",
+  "modulos": [
+    {
+      "modulo": "Ganadería Empresarial y Rentabilidad",
+      "items": [
+        {
+          "titulo": "Economía y Finanzas Ganaderas",
+          "objetivo": "Calcular costos de producción, punto de equilibrio y registrar ingresos para maximizar la rentabilidad.",
+          "concepto": "La gestión financiera es clave para la sostenibilidad. Un productor debe conocer sus costos, ingresos y márgenes para tomar decisiones informadas.",
+          "desarrollo": [
+            "Identificación de costos fijos y variables.",
+            "Cálculo del punto de equilibrio.",
+            "Registro de ingresos y egresos en una bitácora."
+          ],
+          "ejemplo": "Un productor implementa un registro mensual de gastos y ventas, identificando que el 60% de sus costos son alimentación y sanidad. Ajusta el manejo y mejora su margen en 15% anual.",
+          "ejercicio": "Bitacora_Finanzas_Ganaderas.xlsx",
+          "puntos_clave": [
+            "El control financiero permite anticipar crisis y aprovechar oportunidades.",
+            "El punto de equilibrio es el mínimo que debes producir para no perder dinero."
+          ]
+        },
+        {
+          "titulo": "Administración del Predio",
+          "objetivo": "Planificar estratégicamente el predio y aplicar herramientas de gerencia para productores.",
+          "concepto": "La administración moderna integra planificación, control y evaluación de resultados.",
+          "desarrollo": [
+            "Elaboración de un plan estratégico anual.",
+            "Definición de metas productivas y financieras.",
+            "Evaluación periódica de resultados."
+          ],
+          "ejemplo": "Una finca define metas de producción de leche y carne, ajustando el manejo según resultados trimestrales.",
+          "ejercicio": "Plan_Estrategico_Predio.pdf",
+          "puntos_clave": [
+            "La planificación reduce riesgos y mejora la eficiencia.",
+            "La evaluación constante permite corregir a tiempo."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Agricultura en Ganadería (Manejo de Suelos y Pasturas)",
+      "items": [
+        {
+          "titulo": "El Suelo en la Ganadería",
+          "objetivo": "Analizar el suelo, evitar compactación y aplicar fertilización adecuada.",
+          "concepto": "Un suelo sano es la base de la productividad forrajera y animal.",
+          "desarrollo": [
+            "Toma y análisis de muestras de suelo.",
+            "Identificación de compactación y corrección con prácticas regenerativas.",
+            "Fertilización orgánica e inorgánica según análisis."
+          ],
+          "ejemplo": "Un productor detecta compactación y aplica roturación superficial y abonos orgánicos, mejorando el crecimiento del pasto.",
+          "ejercicio": "Manual_Analisis_Suelo_Ganadero.pdf",
+          "puntos_clave": [
+            "El suelo compactado limita el crecimiento de raíces y la producción de forraje.",
+            "La fertilización debe basarse en análisis, no en recetas generales."
+          ]
+        },
+        {
+          "titulo": "Manejo de Pasturas",
+          "objetivo": "Optimizar la producción y calidad del forraje mediante manejo ecofisiológico y sistemas de pastoreo.",
+          "concepto": "El pasto es un cultivo que requiere manejo técnico para sostener la producción animal.",
+          "desarrollo": [
+            "Presupuestación forrajera anual.",
+            "Manejo de sistemas de pastoreo rotacional y continuo.",
+            "Renovación y diversificación de especies forrajeras."
+          ],
+          "ejemplo": "Una finca implementa pastoreo rotacional, duplicando la producción de forraje y mejorando la condición corporal del ganado.",
+          "ejercicio": "Presupuesto_Forrajero.xlsx",
+          "puntos_clave": [
+            "El pastoreo rotacional mejora la recuperación del pasto y la salud del suelo.",
+            "Diversificar especies forrajeras reduce riesgos climáticos."
+          ]
+        },
+        {
+          "titulo": "Instalaciones Ganaderas",
+          "objetivo": "Diseñar y mantener corrales, cercas eléctricas y bebederos para el bienestar animal.",
+          "concepto": "Las instalaciones adecuadas mejoran la eficiencia y reducen el estrés animal.",
+          "desarrollo": [
+            "Criterios técnicos para corrales y mangas.",
+            "Instalación y mantenimiento de cercas eléctricas.",
+            "Diseño de bebederos y manejo del agua."
+          ],
+          "ejemplo": "Un productor instala cercas eléctricas y bebederos automáticos, reduciendo accidentes y mejorando el consumo de agua.",
+          "ejercicio": "Manual_Instalaciones_Ganaderas.pdf",
+          "puntos_clave": [
+            "El bienestar animal impacta directamente en la producción.",
+            "El agua limpia y accesible es clave para el rendimiento."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Nutrición y Sanidad Animal",
+      "items": [
+        {
+          "titulo": "Nutrición y Alimentación",
+          "objetivo": "Formular raciones y ensilajes según etapa productiva.",
+          "concepto": "La nutrición balanceada maximiza la producción y la salud animal.",
+          "desarrollo": [
+            "Requerimientos nutricionales por etapa (cría, levante, producción).",
+            "Elaboración de raciones y ensilajes.",
+            "Uso de recursos locales y subproductos."
+          ],
+          "ejemplo": "Una finca formula raciones con base en análisis de forrajes y logra aumentar la producción de leche en 20%.",
+          "ejercicio": "Formulador_Raciones.xlsx",
+          "puntos_clave": [
+            "La alimentación debe ajustarse a la etapa y condición del animal.",
+            "El ensilaje permite conservar forraje para épocas críticas."
+          ]
+        },
+        {
+          "titulo": "Sanidad Preventiva",
+          "objetivo": "Implementar un calendario de vacunación y desparasitación.",
+          "concepto": "La prevención es más eficiente y económica que el tratamiento de enfermedades.",
+          "desarrollo": [
+            "Elaboración de un calendario sanitario anual.",
+            "Manejo de medicamentos y registro de tratamientos.",
+            "Buenas Prácticas Agropecuarias (BPA) para inocuidad alimentaria."
+          ],
+          "ejemplo": "Un productor implementa un calendario sanitario y reduce la incidencia de enfermedades en un 40%.",
+          "ejercicio": "Calendario_Sanitario.xlsx",
+          "puntos_clave": [
+            "El registro sanitario es obligatorio para certificaciones.",
+            "La inocuidad alimentaria protege la salud del consumidor."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Reproducción y Genética (En Bovinos)",
+      "items": [
+        {
+          "titulo": "Fisiología Reproductiva",
+          "objetivo": "Comprender la anatomía y fisiología reproductiva para mejorar la eficiencia.",
+          "concepto": "El conocimiento anatómico permite detectar problemas y optimizar la reproducción.",
+          "desarrollo": [
+            "Anatomía de la hembra y el macho bovino.",
+            "Ciclo estral y detección de celo.",
+            "Manejo reproductivo básico."
+          ],
+          "ejemplo": "Una finca capacita a su personal en detección de celo y mejora la tasa de preñez en 18%.",
+          "ejercicio": "Manual_Fisiologia_Reproductiva.pdf",
+          "puntos_clave": [
+            "La detección temprana de celo es clave para la eficiencia reproductiva.",
+            "El registro de servicios y partos mejora la gestión."
+          ]
+        },
+        {
+          "titulo": "Mejoramiento Genético",
+          "objetivo": "Seleccionar reproductores y aplicar biotecnologías para mejorar el hato.",
+          "concepto": "El mejoramiento genético acelera el progreso productivo y sanitario.",
+          "desarrollo": [
+            "Selección de reproductores por desempeño y genealogía.",
+            "Inseminación Artificial a Tiempo Fijo (IATF).",
+            "Evaluación de resultados y registros."
+          ],
+          "ejemplo": "Una finca implementa IATF y logra un 60% de preñez en el primer servicio.",
+          "ejercicio": "Manual_Mejoramiento_Genetico.pdf",
+          "puntos_clave": [
+            "La genética impacta en la producción y resistencia a enfermedades.",
+            "Las biotecnologías permiten avanzar más rápido y con precisión."
+          ]
+        }
+      ]
+    }
+  ]
+}

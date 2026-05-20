@@ -1,0 +1,23 @@
+{
+  "descripcion": "Archivo privado para registrar usos medicinales tradicionales de plantas según la memoria cultural de la comunidad.",
+  "estructura": [
+    {
+      "id": "string (único, autogenerado)",
+      "planta": "string (nombre común y científico si se conoce)",
+      "uso_medicinal": "string (descripción del remedio o tratamiento)",
+      "preparacion": "string (cómo se prepara y administra)",
+      "narrador": "string (nombre de la abuela, curandero/a o informante)",
+      "fecha_registro": "string (ISO 8601)",
+      "lugar": "string (pueblo, ciudad o comunidad de origen)",
+      "evidencia": {
+        "foto": "ruta/archivo (opcional)",
+        "audio": "ruta/archivo (opcional)"
+      },
+      "validacion": {
+        "comprobada": "boolean",
+        "testigos": ["string (nombre de testigo)"]
+      },
+      "notas": "string (opcional)"
+    }
+  ]
+}

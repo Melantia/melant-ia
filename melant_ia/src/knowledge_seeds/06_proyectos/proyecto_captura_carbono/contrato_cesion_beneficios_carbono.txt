@@ -1,0 +1,45 @@
+CONTRATO DE CESIÓN DE BENEFICIOS DE CARBONO
+
+Entre: [Nombre del Productor], identificado con cédula [N°], propietario del predio [Nombre/Lote], en adelante EL PRODUCTOR,
+y [Nombre de la Organización/Proyecto], en adelante EL PROYECTO,
+
+CONSIDERANDO:
+- Que EL PRODUCTOR es titular legítimo del predio y desea participar en el Proyecto de Captura de Carbono bajo estándares internacionales (Verra, Gold Standard, ISO 14068, ISO 14067).
+- Que EL PROYECTO implementa prácticas de mitigación y captura de carbono, y requiere la cesión de derechos sobre los beneficios de carbono generados.
+
+CLÁUSULAS:
+
+1. OBJETO
+EL PRODUCTOR cede a EL PROYECTO, de manera exclusiva, los derechos de generación, certificación y comercialización de los beneficios de carbono (bonos de carbono) derivados de las prácticas implementadas en el predio identificado.
+
+2. DURACIÓN
+El presente contrato tendrá una vigencia de [X] años, renovable previo acuerdo de las partes.
+
+3. OBLIGACIONES DEL PRODUCTOR
+- Permitir el acceso para monitoreo, verificación y auditoría de prácticas y resultados.
+- Implementar y mantener prácticas agrícolas alineadas a los estándares internacionales mencionados.
+- Registrar evidencias (fotos, documentos, geolocalización) a través del sistema MELANTIA, conectando el módulo de fotos con el registro de evidencia del proyecto carbono.
+- No transferir ni ceder los derechos de carbono a terceros durante la vigencia del contrato.
+
+4. OBLIGACIONES DEL PROYECTO
+- Gestionar la certificación y comercialización de los bonos de carbono.
+- Compartir con EL PRODUCTOR los reportes de auditoría y resultados de verificación.
+- Transferir al PRODUCTOR el porcentaje acordado de los beneficios económicos netos obtenidos por la venta de bonos de carbono, según tabla anexa.
+
+5. REGISTRO DE EVIDENCIA
+Toda evidencia (fotos, documentos, geolocalización) deberá ser registrada en el sistema MELANTIA, quedando asociada al expediente digital del productor y lote correspondiente. El módulo de fotos se integra automáticamente con el registro de evidencia para trazabilidad y auditoría.
+
+6. RESOLUCIÓN DE CONFLICTOS
+Las partes acuerdan resolver cualquier controversia mediante mediación y, en su defecto, arbitraje conforme a la legislación vigente.
+
+7. ACEPTACIÓN
+Ambas partes declaran haber leído, entendido y aceptado todas las cláusulas del presente contrato.
+
+Firmas:
+
+__________________________           __________________________
+EL PRODUCTOR                              EL PROYECTO
+
+Fecha: ____/____/______
+
+Anexo: Tabla de distribución de beneficios, cronograma de monitoreo, lista de prácticas obligatorias.

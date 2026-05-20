@@ -1,0 +1,118 @@
+{
+  "curso": "La Trazabilidad del Cacao",
+  "resumen": "Curso integral para comprender y aplicar la trazabilidad en la cadena de valor del cacao ecuatoriano, abordando fundamentos, normativas, herramientas digitales y requisitos de exportación. Incluye ejemplos prácticos, ejercicios descargables, puntos clave y banco de preguntas para autoevaluación.",
+  "modulos": [
+    {
+      "modulo": "Fundamentos y Beneficios de la Trazabilidad",
+      "objetivo": "Explicar qué es la trazabilidad, sus tipos y beneficios para productores, exportadores y consumidores.",
+      "concepto": "La trazabilidad permite registrar cada etapa del cacao, desde la siembra hasta la exportación, asegurando autenticidad y calidad.",
+      "ejemplo": "Un lote de cacao ecuatoriano certificado con trazabilidad puede demostrar su origen, prácticas sostenibles y ausencia de contaminantes, accediendo a mercados premium.",
+      "ejercicio": "Mapa_Cadena_Trazabilidad_Cacao.pdf",
+      "puntos_clave": [
+        "Tipos de trazabilidad: interna y externa.",
+        "Beneficios: acceso a mercados, confianza del consumidor, prevención de fraudes, cumplimiento normativo."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué es la trazabilidad y por qué es clave para el cacao ecuatoriano?",
+          "opciones": [
+            "Permite registrar y seguir el grano desde el origen hasta el consumidor.",
+            "Solo es un requisito burocrático.",
+            "Sirve únicamente para grandes empresas."
+          ],
+          "respuesta_correcta": "Permite registrar y seguir el grano desde el origen hasta el consumidor."
+        }
+      ]
+    },
+    {
+      "modulo": "Trazabilidad del Cacao en Ecuador y su Importancia",
+      "objetivo": "Analizar el contexto ecuatoriano, normativas nacionales y casos de éxito.",
+      "concepto": "Ecuador ha implementado sistemas de trazabilidad para cacao fino de aroma, exigidos por certificaciones internacionales.",
+      "ejemplo": "Cooperativas ecuatorianas usan códigos QR en sacos para registrar finca, productor, fecha y prácticas agrícolas, facilitando auditorías y exportaciones.",
+      "ejercicio": "Guía_Trazabilidad_Ecuador.pdf",
+      "puntos_clave": [
+        "Normativas nacionales (Agrocalidad, MAG).",
+        "Certificaciones internacionales y su relación con la trazabilidad.",
+        "Casos de éxito: asociaciones exportadoras y cooperativas."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?",
+          "opciones": [
+            "Orgánico, Fairtrade, Rainforest Alliance.",
+            "Solo Agrocalidad.",
+            "Ninguna."
+          ],
+          "respuesta_correcta": "Orgánico, Fairtrade, Rainforest Alliance."
+        }
+      ]
+    },
+    {
+      "modulo": "Trazabilidad Digital y Herramientas Tecnológicas",
+      "objetivo": "Presentar soluciones digitales para la trazabilidad eficiente y segura.",
+      "concepto": "Plataformas digitales, apps móviles y blockchain permiten registrar datos en tiempo real, reducir errores y aumentar la transparencia.",
+      "ejemplo": "Uso de apps móviles para registrar cosecha, secado y transporte; integración de blockchain para exportaciones a Europa.",
+      "ejercicio": "Herramientas_Trazabilidad_Digital.pdf",
+      "puntos_clave": [
+        "Ventajas de la trazabilidad digital vs. manual.",
+        "Ejemplos de plataformas: Farmforce, AgroTrace, IBM Food Trust.",
+        "Recomendaciones para pequeños productores."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "Mencione dos beneficios de implementar trazabilidad digital.",
+          "opciones": [
+            "Reduce errores y aumenta la transparencia.",
+            "Solo encarece el proceso.",
+            "No aporta ventajas."
+          ],
+          "respuesta_correcta": "Reduce errores y aumenta la transparencia."
+        },
+        {
+          "pregunta": "¿Qué herramientas tecnológicas pueden usarse para la trazabilidad?",
+          "opciones": [
+            "Apps móviles, blockchain, plataformas digitales.",
+            "Solo papel y lápiz.",
+            "Ninguna."
+          ],
+          "respuesta_correcta": "Apps móviles, blockchain, plataformas digitales."
+        }
+      ]
+    },
+    {
+      "modulo": "Requisitos para Exportar Cacao a Europa, Asia, Rusia y EEUU",
+      "objetivo": "Detallar los requisitos de trazabilidad, documentación y certificaciones para exportar a mercados internacionales.",
+      "concepto": "Cada región exige trazabilidad documental, sanitaria y de sostenibilidad. El incumplimiento puede resultar en rechazos o sanciones.",
+      "ejemplo": "Exportar a la UE requiere trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos y cumplimiento de la nueva Ley de Deforestación.",
+      "ejercicio": "Checklist_Exportacion_Cacao.pdf",
+      "puntos_clave": [
+        "Requisitos UE: Reglamento 2023/1115, Ley de Deforestación, certificaciones orgánicas.",
+        "Requisitos Asia y Rusia: trazabilidad documental, análisis de residuos, etiquetado.",
+        "Requisitos EEUU: FDA, FSMA, trazabilidad y registros electrónicos."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué requisitos específicos impone la Unión Europea para la importación de cacao?",
+          "opciones": [
+            "Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación.",
+            "Solo etiqueta bonita.",
+            "Ningún requisito."
+          ],
+          "respuesta_correcta": "Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación."
+        }
+      ]
+    }
+  ],
+  "referencias": [
+    "Agrocalidad Ecuador: https://www.agrocalidad.gob.ec/",
+    "MAG Ecuador: https://www.agricultura.gob.ec/",
+    "Reglamento (UE) 2023/1115 sobre productos libres de deforestación",
+    "Fairtrade International: https://www.fairtrade.net/",
+    "Rainforest Alliance: https://www.rainforest-alliance.org/",
+    "IBM Food Trust: https://www.ibm.com/blockchain/solutions/food-trust",
+    "Farmforce: https://www.farmforce.com/",
+    "AgroTrace: https://www.agrotrace.com/",
+    "FDA: https://www.fda.gov/",
+    "FSMA: https://www.fda.gov/food/food-safety-modernization-act-fsma"
+  ]
+}

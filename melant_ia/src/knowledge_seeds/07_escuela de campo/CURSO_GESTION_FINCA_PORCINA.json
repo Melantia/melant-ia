@@ -1,0 +1,142 @@
+{
+  "curso": "Gestión de Fincas Porcinas (Trópico Ecuatoriano)",
+  "modulos": [
+    {
+      "modulo": "Infraestructura, Diseño y Bioseguridad",
+      "items": [
+        {
+          "titulo": "Selección de Terrenos y Diseño de Instalaciones",
+          "objetivo": "Seleccionar el terreno y diseñar galpones óptimos para el bienestar animal y la eficiencia productiva.",
+          "concepto": "La ubicación, topografía y orientación de los galpones influyen en la salud y productividad de los cerdos.",
+          "desarrollo": [
+            "Criterios para elegir el terreno (acceso, drenaje, distancia a viviendas).",
+            "Diseño de galpones: ventilación, cortinas, materiales y orientación.",
+            "Distribución de áreas: cuarentena, maternidad, engorde y estercoleros."
+          ],
+          "ejemplo": "Una finca selecciona un terreno elevado y orienta los galpones de este a oeste, mejorando la ventilación y reduciendo enfermedades respiratorias.",
+          "ejercicio": "Diseno_Instalaciones_Porcinas.pdf",
+          "puntos_clave": [
+            "Un buen diseño reduce costos y mejora la sanidad.",
+            "La ubicación previene inundaciones y facilita el manejo."
+          ]
+        },
+        {
+          "titulo": "Bioseguridad y Manejo de Residuos",
+          "objetivo": "Implementar medidas de bioseguridad y gestión ambiental exigidas por Agrocalidad.",
+          "concepto": "La bioseguridad previene el ingreso y diseminación de enfermedades.",
+          "desarrollo": [
+            "Arcos de desinfección, pediluvios y control de visitas.",
+            "Manejo de plagas y control de roedores.",
+            "Gestión de purines y estercoleros para cumplir normas ambientales."
+          ],
+          "ejemplo": "Una finca instala pediluvios y arcos de desinfección en los accesos, reduciendo brotes de enfermedades.",
+          "ejercicio": "Checklist_Bioseguridad_Porcina.pdf",
+          "puntos_clave": [
+            "La bioseguridad es obligatoria para la certificación.",
+            "El manejo adecuado de residuos evita sanciones ambientales."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Ciclo Productivo y Manejo de Animales",
+      "items": [
+        {
+          "titulo": "Fase de Reproducción y Maternidad",
+          "objetivo": "Optimizar la reproducción, atención al parto y cuidado del lechón.",
+          "concepto": "El manejo adecuado de la reproducción y maternidad mejora la productividad y reduce mortalidad.",
+          "desarrollo": [
+            "Manejo de verracos y selección de hembras.",
+            "Inseminación artificial, diagnóstico de gestación y atención al parto.",
+            "Cuidados del lechón: corte de cola, descolmillado, aplicación de hierro."
+          ],
+          "ejemplo": "Una finca implementa inseminación artificial y reduce la mortalidad de lechones en un 20%.",
+          "ejercicio": "Manejo_Maternidad_Porcina.pdf",
+          "puntos_clave": [
+            "La atención al parto es crítica para la supervivencia de los lechones.",
+            "El manejo sanitario inicial previene enfermedades."
+          ]
+        },
+        {
+          "titulo": "Destete, Recría y Engorde",
+          "objetivo": "Manejar adecuadamente las fases de destete, recría y engorde para maximizar el crecimiento y la eficiencia alimenticia.",
+          "concepto": "Cada fase requiere condiciones ambientales y nutricionales específicas.",
+          "desarrollo": [
+            "Manejo de lechones destetados: temperatura, alimentación y agrupamiento.",
+            "Curvas de temperatura y alimentación inicial.",
+            "Manejo de engorde: densidad, alimentación y monitoreo de peso."
+          ],
+          "ejemplo": "Una finca ajusta la temperatura y alimentación en destete, logrando un crecimiento uniforme y reducción de enfermedades.",
+          "ejercicio": "Control_Destete_Engorde.xlsx",
+          "puntos_clave": [
+            "El destete es un momento crítico para la salud y el crecimiento.",
+            "El monitoreo constante mejora la conversión alimenticia."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Nutrición y Alimentación Porcina",
+      "items": [
+        {
+          "titulo": "Requerimientos Nutricionales y Materias Primas",
+          "objetivo": "Formular dietas balanceadas según la etapa productiva y aprovechar materias primas locales.",
+          "concepto": "La nutrición adecuada reduce costos y mejora la ganancia de peso.",
+          "desarrollo": [
+            "Requerimientos nutricionales por etapa: lechones, gestación, lactancia y engorde.",
+            "Uso de maíz, soya y subproductos agrícolas.",
+            "Formulación de raciones y cálculo de dietas."
+          ],
+          "ejemplo": "Una finca formula dietas con subproductos locales, reduciendo el costo de alimentación en un 18%.",
+          "ejercicio": "Formulador_Dietas_Porcinas.xlsx",
+          "puntos_clave": [
+            "La dieta debe ajustarse a la etapa y condición del animal.",
+            "El uso de subproductos locales reduce costos y dependencia externa."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Sanidad y Manejo Zoosanitario",
+      "items": [
+        {
+          "titulo": "Enfermedades, Vacunación y Bienestar Animal",
+          "objetivo": "Prevenir y controlar enfermedades, garantizar el bienestar y cumplir el calendario sanitario.",
+          "concepto": "La sanidad y el bienestar animal son esenciales para la productividad y la certificación.",
+          "desarrollo": [
+            "Enfermedades comunes: prevención y tratamiento.",
+            "Programas de vacunación y desparasitación.",
+            "Densidad de animales, espacio de comederos y bebederos."
+          ],
+          "ejemplo": "Una finca implementa un calendario sanitario y reduce la incidencia de enfermedades respiratorias en un 30%.",
+          "ejercicio": "Calendario_Sanitario_Porcino.xlsx",
+          "puntos_clave": [
+            "El bienestar animal impacta en la producción y la calidad de la carne.",
+            "El registro sanitario es obligatorio para la certificación."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Administración, Costos y Gestión Empresarial",
+      "items": [
+        {
+          "titulo": "Registros, Costos y Plan de Negocios",
+          "objetivo": "Gestionar registros, calcular costos y diseñar un plan de negocios rentable.",
+          "concepto": "El control empresarial asegura la rentabilidad y la sostenibilidad de la finca.",
+          "desarrollo": [
+            "Control de sábanas de cubrición, nacimientos y tasas de parición.",
+            "Cálculo de costo por kilo producido y análisis de rentabilidad.",
+            "Estrategias de comercialización y flujo de caja."
+          ],
+          "ejemplo": "Una finca implementa control digital de registros y mejora la rentabilidad en un 15%.",
+          "ejercicio": "Plan_Negocio_Porcino.xlsx",
+          "puntos_clave": [
+            "El control de registros permite tomar mejores decisiones.",
+            "Un buen plan de negocios facilita el acceso a financiamiento y mercados."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+<MenuScreen@BoxLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fondo_menu.jpg'
+    Label:
+        text: 'Memoria Viva MELANTIA'
+        font_size: 32
+        color: 0.2,0.3,0.6,1
+        bold: True
+        font_name: 'Roboto-Bold'
+        size_hint_y: None
+        height: 60
+    Image:
+        source: 'icono_abuelos.png'
+        size_hint: None, None
+        size: 100, 100
+        pos_hint: {'center_x':0.5}
+    Button:
+        text: 'Tesoro de los Abuelos'
+        font_size: 22
+        background_color: 0.7,0.5,0.3,1
+        color: 1,1,1,1
+        size_hint_y: None
+        height: 60
+        on_release: app.root.current = 'tesoro'
+    Image:
+        source: 'icono_herbario.png'
+        size_hint: None, None
+        size: 100, 100
+        pos_hint: {'center_x':0.5}
+    Button:
+        text: 'Herbario Memoria'
+        font_size: 22
+        background_color: 0.2,0.6,0.3,1
+        color: 1,1,1,1
+        size_hint_y: None
+        height: 60
+        on_release: app.root.current = 'herbario'
+
+<TesoroScreen@BoxLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fondo_tesoro.jpg'
+    Label:
+        text: 'Tesoro de los Abuelos'
+        font_size: 28
+        color: 0.5,0.3,0.1,1
+        font_name: 'Roboto-Bold'
+        size_hint_y: None
+        height: 50
+    TesoroAbuelosForm:
+        id: tesoro_form
+    TesoroAbuelosViewer:
+        id: tesoro_viewer
+    Button:
+        text: 'Volver'
+        size_hint_y: None
+        height: 50
+        on_release: app.root.current = 'menu'
+
+<HerbarioScreen@BoxLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fondo_herbario.jpg'
+    Label:
+        text: 'Herbario Memoria Cultural'
+        font_size: 28
+        color: 0.1,0.4,0.1,1
+        font_name: 'Roboto-Bold'
+        size_hint_y: None
+        height: 50
+    HerbarioMemoriaForm:
+        id: herbario_form
+    HerbarioMemoriaViewer:
+        id: herbario_viewer
+    Button:
+        text: 'Volver'
+        size_hint_y: None
+        height: 50
+        on_release: app.root.current = 'menu'
+
+ScreenManager:
+    transition: FadeTransition()
+    MenuScreen:
+        name: 'menu'
+    TesoroScreen:
+        name: 'tesoro'
+    HerbarioScreen:
+        name: 'herbario'

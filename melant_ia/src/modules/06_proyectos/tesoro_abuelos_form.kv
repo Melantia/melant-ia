@@ -1,0 +1,68 @@
+<TesoroAbuelosForm@BoxLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    Label:
+        text: 'Registrar Historia - Tesoro de los Abuelos'
+        font_size: 22
+        size_hint_y: None
+        height: 40
+    TextInput:
+        id: titulo
+        hint_text: 'Título del cuento/historia/fiesta'
+    TextInput:
+        id: relato
+        hint_text: 'Relato completo'
+        multiline: True
+        height: 100
+    TextInput:
+        id: narrador
+        hint_text: 'Nombre del narrador/a (abuelo/a)'
+    TextInput:
+        id: lugar
+        hint_text: 'Lugar de origen (pueblo, ciudad, comunidad)'
+    FileChooserIconView:
+        id: evidencia_foto
+        filters: ['*.jpg', '*.png']
+        size_hint_y: None
+        height: 150
+    CheckBox:
+        id: comprobada
+        size_hint_x: None
+        width: 40
+    Label:
+        text: '¿Historia comprobada?'
+        size_hint_x: None
+        width: 200
+    TextInput:
+        id: testigos
+        hint_text: 'Testigos (separados por coma)'
+    TextInput:
+        id: notas
+        hint_text: 'Notas adicionales (opcional)'
+    Button:
+        text: 'Guardar Historia'
+        size_hint_y: None
+        height: 50
+        on_release: app.guardar_historia_abuelos(root)
+
+<TesoroAbuelosViewer@BoxLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    Label:
+        text: 'Historias Registradas - Tesoro de los Abuelos'
+        font_size: 22
+        size_hint_y: None
+        height: 40
+    ScrollView:
+        GridLayout:
+            id: historias_grid
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+    Button:
+        text: 'Actualizar Lista'
+        size_hint_y: None
+        height: 50
+        on_release: app.mostrar_historias_abuelos(root)

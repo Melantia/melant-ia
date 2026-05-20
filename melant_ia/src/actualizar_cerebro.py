@@ -1,7 +1,10 @@
-> > 
-### 🛠️ El Script Completo y Unificado: actualizar_cerebro.py
-Reemplace toda la función de copiado en su archivo para que el ciclo for carpeta in DESTINOS: procese tanto los archivos de configuración sueltos como los *252 MB de imágenes clínicas* de Dataset_Optimizado, salvando el tramo de logs que se lee en su pantalla:
-python
+
+import os
+import json
+import shutil
+from datetime import datetime
+import threading
+import time
 import os
 import json
 import shutil

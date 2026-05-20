@@ -1,8 +1,7 @@
 # LA TRAZABILIDAD DEL CACAO
 
-## Introducción
-
-La trazabilidad del cacao es el proceso de registrar y seguir el recorrido del grano desde su origen en la finca hasta el consumidor final. En Ecuador, país líder en producción de cacao fino de aroma, la trazabilidad es clave para garantizar calidad, transparencia, sostenibilidad y acceso a mercados internacionales exigentes.
+**Resumen:**
+Curso integral para comprender y aplicar la trazabilidad en la cadena de valor del cacao ecuatoriano, abordando fundamentos, normativas, herramientas digitales y requisitos de exportación. Incluye ejemplos prácticos, ejercicios descargables, puntos clave y banco de preguntas para autoevaluación.
 
 ## Objetivos del Curso
 
@@ -27,6 +26,13 @@ La trazabilidad del cacao es el proceso de registrar y seguir el recorrido del g
 - Tipos de trazabilidad: interna (dentro de la finca/empresa) y externa (entre actores de la cadena).
 - Beneficios: acceso a mercados, confianza del consumidor, prevención de fraudes, cumplimiento normativo.
 
+### Banco de Preguntas Módulo 1
+
+1. ¿Qué es la trazabilidad y por qué es clave para el cacao ecuatoriano?
+   - A) Permite registrar y seguir el grano desde el origen hasta el consumidor.
+   - B) Solo es un requisito burocrático.
+   - C) Sirve únicamente para grandes empresas.
+
 ---
 
 ## Módulo 2: Trazabilidad del Cacao en Ecuador y su Importancia
@@ -44,6 +50,13 @@ La trazabilidad del cacao es el proceso de registrar y seguir el recorrido del g
 - Normativas nacionales (Agrocalidad, MAG).
 - Certificaciones internacionales y su relación con la trazabilidad.
 - Casos de éxito: asociaciones exportadoras y cooperativas.
+
+### Banco de Preguntas Módulo 2
+
+1. ¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?
+   - A) Orgánico, Fairtrade, Rainforest Alliance.
+   - B) Solo Agrocalidad.
+   - C) Ninguna.
 
 ---
 
@@ -63,6 +76,17 @@ La trazabilidad del cacao es el proceso de registrar y seguir el recorrido del g
 - Ejemplos de plataformas: Farmforce, AgroTrace, IBM Food Trust.
 - Recomendaciones para pequeños productores.
 
+### Banco de Preguntas Módulo 3
+
+1. Mencione dos beneficios de implementar trazabilidad digital.
+   - A) Reduce errores y aumenta la transparencia.
+   - B) Solo encarece el proceso.
+   - C) No aporta ventajas.
+2. ¿Qué herramientas tecnológicas pueden usarse para la trazabilidad?
+   - A) Apps móviles, blockchain, plataformas digitales.
+   - B) Solo papel y lápiz.
+   - C) Ninguna.
+
 ---
 
 ## Módulo 4: Requisitos para Exportar Cacao a Europa, Asia, Rusia y EEUU
@@ -81,15 +105,12 @@ La trazabilidad del cacao es el proceso de registrar y seguir el recorrido del g
 - Requisitos Asia y Rusia: trazabilidad documental, análisis de residuos, etiquetado.
 - Requisitos EEUU: FDA, FSMA, trazabilidad y registros electrónicos.
 
----
+### Banco de Preguntas Módulo 4
 
-## Banco de Preguntas
-
-1. ¿Qué es la trazabilidad y por qué es clave para el cacao ecuatoriano?
-2. Mencione dos beneficios de implementar trazabilidad digital.
-3. ¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?
-4. ¿Qué herramientas tecnológicas pueden usarse para la trazabilidad?
-5. ¿Qué requisitos específicos impone la Unión Europea para la importación de cacao?
+1. ¿Qué requisitos específicos impone la Unión Europea para la importación de cacao?
+   - A) Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación.
+   - B) Solo etiqueta bonita.
+   - C) Ningún requisito.
 
 ---
 

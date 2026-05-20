@@ -1,0 +1,163 @@
+{
+  "curso": "Gestión de Granjas de Gallinas Criollas",
+  "modulos": [
+    {
+      "modulo": "Fundamentos de la Avicultura Criolla",
+      "items": [
+        {
+          "titulo": "Origen y Características",
+          "objetivo": "Diferenciar y comprender el comportamiento natural de las gallinas criollas locales.",
+          "concepto": "Las gallinas criollas presentan rusticidad, diversidad genética y adaptabilidad al entorno tropical.",
+          "desarrollo": [
+            "Origen y evolución de las gallinas criollas en la región.",
+            "Comportamiento natural y social.",
+            "Ventajas de rusticidad y resistencia a enfermedades."
+          ],
+          "ejemplo": "Una familia selecciona gallinas criollas resistentes y mejora la supervivencia en el sistema de traspatio.",
+          "ejercicio": "Caracteristicas_Gallinas_Criollas.pdf",
+          "puntos_clave": [
+            "La rusticidad es clave para sistemas de bajo costo.",
+            "La diversidad genética mejora la adaptación."
+          ]
+        },
+        {
+          "titulo": "Sistemas de Producción y Adaptación",
+          "objetivo": "Analizar ventajas y desventajas de los sistemas tradicional, semi-intensivo y libre pastoreo.",
+          "concepto": "El sistema de manejo influye en la productividad, sanidad y bienestar de las aves.",
+          "desarrollo": [
+            "Descripción de sistemas: tradicional, semi-intensivo y libre pastoreo.",
+            "Adaptación al clima tropical y resistencia a enfermedades.",
+            "Capacidad de forrajeo y aprovechamiento de recursos locales."
+          ],
+          "ejemplo": "Una granja implementa libre pastoreo y reduce el gasto en alimento balanceado.",
+          "ejercicio": "Sistemas_Produccion_Avicola.xlsx",
+          "puntos_clave": [
+            "El libre pastoreo mejora la calidad del huevo y la carne.",
+            "La adaptación local reduce costos sanitarios."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Instalaciones y Bioseguridad",
+      "items": [
+        {
+          "titulo": "Diseño y Equipamiento del Gallinero",
+          "objetivo": "Construir gallineros adecuados para el clima y bienestar de las aves.",
+          "concepto": "Un buen diseño mejora la producción y reduce enfermedades.",
+          "desarrollo": [
+            "Orientación, ventilación y materiales del gallinero.",
+            "Equipamiento: bebederos, comederos, perchas y nidales.",
+            "Control de temperatura y humedad."
+          ],
+          "ejemplo": "Una familia construye un gallinero con materiales locales y mejora la postura de las aves.",
+          "ejercicio": "Diseno_Gallinero_Criollo.pdf",
+          "puntos_clave": [
+            "El gallinero debe proteger de depredadores y clima extremo.",
+            "El equipamiento adecuado reduce el estrés y mejora la postura."
+          ]
+        },
+        {
+          "titulo": "Bioseguridad y Prevención",
+          "objetivo": "Implementar medidas de limpieza, desinfección y control de depredadores.",
+          "concepto": "La bioseguridad es esencial para prevenir enfermedades y pérdidas.",
+          "desarrollo": [
+            "Manejo de camas y limpieza periódica.",
+            "Desinfección de instalaciones y equipos.",
+            "Control de depredadores y roedores."
+          ],
+          "ejemplo": "Una granja implementa limpieza semanal y reduce la mortalidad por enfermedades.",
+          "ejercicio": "Checklist_Bioseguridad_Avicola.pdf",
+          "puntos_clave": [
+            "La limpieza regular previene brotes sanitarios.",
+            "El control de depredadores protege la inversión."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Nutrición y Alimentación",
+      "items": [
+        {
+          "titulo": "Dietas y Alimentación Alternativa",
+          "objetivo": "Formular dietas balanceadas y aprovechar recursos locales.",
+          "concepto": "La alimentación adecuada mejora la postura y la salud de las aves.",
+          "desarrollo": [
+            "Requerimientos nutricionales por etapa: iniciación, crecimiento y postura.",
+            "Uso de maíz, forrajes y subproductos agrícolas.",
+            "Manejo de comederos y frecuencia de alimentación."
+          ],
+          "ejemplo": "Una granja utiliza forrajes locales y reduce el costo de alimentación en un 20%.",
+          "ejercicio": "Formulador_Dietas_Aves.xlsx",
+          "puntos_clave": [
+            "La dieta debe ajustarse a la etapa de desarrollo.",
+            "El agua fresca es esencial para la producción de huevos."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Manejo Sanitario y Legal en Ecuador",
+      "items": [
+        {
+          "titulo": "Vacunación, Control de Parásitos y Normativa",
+          "objetivo": "Prevenir enfermedades, controlar parásitos y cumplir la normativa nacional.",
+          "concepto": "La sanidad y el cumplimiento legal aseguran la sostenibilidad del negocio.",
+          "desarrollo": [
+            "Calendario de vacunación: Newcastle, Bronquitis Infecciosa y otras.",
+            "Desparasitación interna y externa (piojos, ácaros).",
+            "Requisitos para el Certificado Zoosanitario de Funcionamiento (CZPM-F) de AGROCALIDAD."
+          ],
+          "ejemplo": "Una granja implementa el calendario sanitario y obtiene el CZPM-F, accediendo a nuevos mercados.",
+          "ejercicio": "Calendario_Sanitario_Aves.xlsx",
+          "puntos_clave": [
+            "El control sanitario es obligatorio para la comercialización.",
+            "La desparasitación regular mejora la producción y la salud."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Reproducción y Manejo de Polluelos",
+      "items": [
+        {
+          "titulo": "Selección, Incubación y Crianza",
+          "objetivo": "Mejorar la reproducción y supervivencia de polluelos en sistemas criollos.",
+          "concepto": "La selección y el manejo materno aumentan la tasa de supervivencia.",
+          "desarrollo": [
+            "Selección del pie de cría: mejores gallos y gallinas.",
+            "Incubación natural: manejo de la clueca y temperatura.",
+            "Crianza de polluelos: cuidados térmicos y alimentación inicial."
+          ],
+          "ejemplo": "Una familia selecciona gallinas con buen instinto materno y logra un 95% de supervivencia de polluelos.",
+          "ejercicio": "Manejo_Polluelos_Criollos.pdf",
+          "puntos_clave": [
+            "La selección adecuada mejora la productividad.",
+            "El manejo materno reduce la mortalidad en las primeras semanas."
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Producción y Gestión del Negocio",
+      "items": [
+        {
+          "titulo": "Producción de Huevos, Administración y Comercialización",
+          "objetivo": "Optimizar la producción, registrar datos y comercializar con valor agregado.",
+          "concepto": "La gestión empresarial y la calidad del producto mejoran la rentabilidad.",
+          "desarrollo": [
+            "Recolección, limpieza y selección de huevos.",
+            "Registro de postura, consumo de alimento y mortalidad.",
+            "Estrategias de venta y valor agregado (huevos orgánicos)."
+          ],
+          "ejemplo": "Una granja implementa registro de datos y vende huevos orgánicos a mejor precio en el mercado local.",
+          "ejercicio": "Registro_Produccion_Huevos.xlsx",
+          "puntos_clave": [
+            "El registro de datos permite tomar mejores decisiones.",
+            "El valor agregado aumenta la rentabilidad."
+          ]
+        }
+      ]
+    }
+  ]
+}

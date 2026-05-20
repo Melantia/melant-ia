@@ -1,0 +1,141 @@
+{
+  "titulo": "EL ARTE DE ENSILAR",
+  "resumen": "Curso práctico y modular para productores rurales y familias campesinas sobre la elaboración de ensilaje como estrategia clave para la alimentación animal en épocas de sequía. Incluye el paso a paso de la elaboración, ejemplos prácticos, la importancia de cumplir los tiempos y procedimientos, y los beneficios en la rentabilidad y sostenibilidad de la finca.",
+  "objetivos": [
+    "Comprender el proceso y la importancia del ensilaje en la producción agropecuaria.",
+    "Aprender a elaborar ensilaje correctamente, paso a paso, evitando errores comunes.",
+    "Valorar el ensilaje como herramienta para enfrentar épocas de sequía y mejorar la rentabilidad.",
+    "Promover la autonomía alimentaria y la sostenibilidad en la finca."
+  ],
+  "modulos": [
+    {
+      "nombre": "¿Qué es el Ensilaje y por qué es clave?",
+      "objetivo": "Entender el concepto de ensilaje y su importancia en la alimentación animal.",
+      "concepto": "El ensilaje es una técnica de conservación de forrajes que permite almacenar alimento de calidad para épocas de escasez, asegurando la nutrición animal y la estabilidad productiva.",
+      "desarrollo": [
+        "Definición y principios del ensilaje.",
+        "Importancia en la seguridad alimentaria animal.",
+        "Ventajas frente a otros métodos de conservación.",
+        "Impacto en la rentabilidad y sostenibilidad de la finca."
+      ],
+      "ejemplo": "Video: ¿Qué es el ensilaje? (https://www.youtube.com/watch?v=EnsEjemplo1)",
+      "ejercicio": "Mapa_Importancia_Ensilaje.pdf",
+      "puntos_clave": [
+        "Conservación de forrajes.",
+        "Seguridad alimentaria en sequía.",
+        "Mejora de la rentabilidad."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Cuál es el principal beneficio del ensilaje?",
+          "opciones": [
+            "Permite conservar alimento para épocas de escasez.",
+            "Solo ocupa espacio.",
+            "No tiene importancia."
+          ],
+          "respuesta_correcta": "Permite conservar alimento para épocas de escasez."
+        }
+      ]
+    },
+    {
+      "nombre": "Elaboración Paso a Paso del Ensilaje",
+      "objetivo": "Aprender el proceso correcto de elaboración de ensilaje, cumpliendo cada paso y tiempo necesario.",
+      "concepto": "La calidad del ensilaje depende del cumplimiento estricto de los pasos, la higiene y el manejo adecuado de los materiales.",
+      "desarrollo": [
+        "Selección del forraje (maíz, sorgo, pasto, etc.).",
+        "Corte en el momento óptimo (antes de floración completa).",
+        "Picado uniforme del material vegetal.",
+        "Compactación y eliminación de aire.",
+        "Sellado hermético (bolsas, silos, toneles).",
+        "Fermentación (mínimo 21 días, ideal 30-45 días).",
+        "Almacenamiento y manejo del ensilaje."
+      ],
+      "ejemplo": "Video: Elaboración de Ensilaje Paso a Paso (https://www.youtube.com/watch?v=EnsEjemplo2)",
+      "ejercicio": "Guía_Elaboración_Ensilaje.pdf",
+      "puntos_clave": [
+        "Cumplir cada paso y tiempo.",
+        "Higiene y compactación.",
+        "Sellado hermético y fermentación adecuada."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Por qué es fundamental cumplir los tiempos de fermentación?",
+          "opciones": [
+            "Para asegurar la calidad y evitar pérdidas.",
+            "Solo por costumbre.",
+            "No influye en el resultado."
+          ],
+          "respuesta_correcta": "Para asegurar la calidad y evitar pérdidas."
+        }
+      ]
+    },
+    {
+      "nombre": "Uso del Ensilaje en Épocas de Sequía",
+      "objetivo": "Aplicar el ensilaje como estrategia para enfrentar la escasez de forraje y mantener la producción animal.",
+      "concepto": "El ensilaje permite alimentar al ganado en épocas críticas, evitando pérdidas de peso, producción y rentabilidad.",
+      "desarrollo": [
+        "Identificación de épocas críticas y planificación del ensilaje.",
+        "Raciones recomendadas según tipo de animal.",
+        "Manejo del ensilaje durante la sequía.",
+        "Ejemplos de éxito en fincas familiares."
+      ],
+      "ejemplo": "Video: Uso del Ensilaje en Sequía (https://www.youtube.com/watch?v=EnsEjemplo3)",
+      "ejercicio": "Planificador_Sequía_Ensilaje.pdf",
+      "puntos_clave": [
+        "Seguridad alimentaria en sequía.",
+        "Reducción de mortalidad y pérdidas.",
+        "Sostenibilidad productiva."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué ventaja aporta el ensilaje en sequía?",
+          "opciones": [
+            "Mantiene la producción y evita pérdidas.",
+            "Solo es una tradición.",
+            "No tiene impacto."
+          ],
+          "respuesta_correcta": "Mantiene la producción y evita pérdidas."
+        }
+      ]
+    },
+    {
+      "nombre": "Beneficios del Ensilaje en la Rentabilidad y Autonomía",
+      "objetivo": "Valorar el impacto del ensilaje en la economía familiar y la autonomía productiva.",
+      "concepto": "El ensilaje bien manejado reduce costos, mejora la producción y fortalece la autonomía de la finca.",
+      "desarrollo": [
+        "Reducción de compra de alimentos externos.",
+        "Mejor aprovechamiento de recursos locales.",
+        "Incremento de la producción de leche, carne y bienestar animal.",
+        "Casos de éxito y testimonios."
+      ],
+      "ejemplo": "Video: Beneficios Económicos del Ensilaje (https://www.youtube.com/watch?v=EnsEjemplo4)",
+      "ejercicio": "Calculadora_Beneficio_Ensilaje.xlsx",
+      "puntos_clave": [
+        "Reducción de costos.",
+        "Mayor producción y rentabilidad.",
+        "Autonomía y resiliencia familiar."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Cómo impacta el ensilaje en la rentabilidad?",
+          "opciones": [
+            "Reduce costos y aumenta la producción.",
+            "Solo genera trabajo extra.",
+            "No tiene efecto."
+          ],
+          "respuesta_correcta": "Reduce costos y aumenta la producción."
+        }
+      ]
+    }
+  ],
+  "referencias": [
+    "Video: ¿Qué es el ensilaje? (https://www.youtube.com/watch?v=EnsEjemplo1)",
+    "Video: Elaboración de Ensilaje Paso a Paso (https://www.youtube.com/watch?v=EnsEjemplo2)",
+    "Video: Uso del Ensilaje en Sequía (https://www.youtube.com/watch?v=EnsEjemplo3)",
+    "Video: Beneficios Económicos del Ensilaje (https://www.youtube.com/watch?v=EnsEjemplo4)",
+    "Manual FAO de Ensilaje: https://www.fao.org/3/y1936s/y1936s00.htm",
+    "INTA Argentina: https://inta.gob.ar/documentos/ensilaje",
+    "El Ensilaje en la Finca Familiar MAG Ecuador",
+    "Testimonios de productores locales"
+  ]
+}

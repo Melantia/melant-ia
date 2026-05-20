@@ -1,0 +1,23 @@
+{
+  "descripcion": "Archivo privado para registrar historias, cuentos, leyendas y fiestas tradicionales relatadas por abuelos/as de la comunidad.",
+  "estructura": [
+    {
+      "id": "string (único, autogenerado)",
+      "titulo": "string (título del cuento, historia o fiesta)",
+      "relato": "string (texto completo de la historia o cuento)",
+      "narrador": "string (nombre del abuelo/a o persona que narra)",
+      "fecha_registro": "string (ISO 8601)",
+      "lugar": "string (pueblo, ciudad o comunidad de origen)",
+      "evidencia": {
+        "audio": "ruta/archivo (opcional)",
+        "foto": "ruta/archivo (opcional)",
+        "video": "ruta/archivo (opcional)"
+      },
+      "validacion": {
+        "comprobada": "boolean",
+        "testigos": ["string (nombre de testigo)"]
+      },
+      "notas": "string (opcional)"
+    }
+  ]
+}

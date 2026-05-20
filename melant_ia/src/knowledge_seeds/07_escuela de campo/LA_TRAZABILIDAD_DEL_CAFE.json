@@ -1,0 +1,120 @@
+{
+  "curso": "La Trazabilidad del Café",
+  "resumen": "Curso integral para comprender y aplicar la trazabilidad en la cadena de valor del café ecuatoriano, abordando fundamentos, normativas, herramientas digitales, denominación de origen y requisitos de exportación. Incluye ejemplos prácticos, ejercicios descargables, puntos clave y banco de preguntas para autoevaluación.",
+  "modulos": [
+    {
+      "modulo": "Fundamentos y Beneficios de la Trazabilidad en Café",
+      "objetivo": "Explicar qué es la trazabilidad, sus tipos y beneficios para productores, exportadores y consumidores.",
+      "concepto": "La trazabilidad permite registrar cada etapa del café, desde la siembra hasta la exportación, asegurando autenticidad y calidad.",
+      "ejemplo": "Un lote de café ecuatoriano con trazabilidad certificada puede demostrar su origen, prácticas sostenibles y atributos de calidad, accediendo a mercados premium.",
+      "ejercicio": "Mapa_Cadena_Trazabilidad_Cafe.pdf",
+      "puntos_clave": [
+        "Tipos de trazabilidad: interna y externa.",
+        "Beneficios: acceso a mercados, confianza del consumidor, prevención de fraudes, cumplimiento normativo."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué es la trazabilidad y por qué es clave para el café ecuatoriano?",
+          "opciones": [
+            "Permite registrar y seguir el grano desde la finca hasta la taza.",
+            "Solo es un requisito burocrático.",
+            "Sirve únicamente para grandes empresas."
+          ],
+          "respuesta_correcta": "Permite registrar y seguir el grano desde la finca hasta la taza."
+        }
+      ]
+    },
+    {
+      "modulo": "Trazabilidad del Café en Ecuador, Denominación de Origen y Café de Especialidad",
+      "objetivo": "Analizar el contexto ecuatoriano, normativas nacionales, denominación de origen y el valor del café de especialidad.",
+      "concepto": "Ecuador ha implementado sistemas de trazabilidad para cafés de origen y especialidad, exigidos por certificaciones internacionales.",
+      "ejemplo": "Asociaciones cafetaleras ecuatorianas usan códigos QR para registrar finca, productor, variedad, altitud y prácticas agrícolas, facilitando auditorías y exportaciones.",
+      "ejercicio": "Guía_Trazabilidad_Cafe_Ecuador.pdf",
+      "puntos_clave": [
+        "Normativas nacionales (Agrocalidad, MAG).",
+        "Denominación de origen: reconocimiento de zonas productoras con atributos únicos.",
+        "Café de especialidad: requisitos de calidad, trazabilidad y certificaciones.",
+        "Casos de éxito: asociaciones exportadoras y cooperativas."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué diferencia aporta la denominación de origen en el café?",
+          "opciones": [
+            "Reconoce zonas productoras con atributos únicos.",
+            "Solo es un trámite más.",
+            "No tiene impacto en el mercado."
+          ],
+          "respuesta_correcta": "Reconoce zonas productoras con atributos únicos."
+        },
+        {
+          "pregunta": "¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?",
+          "opciones": [
+            "Orgánico, Fairtrade, Rainforest Alliance.",
+            "Solo Agrocalidad.",
+            "Ninguna."
+          ],
+          "respuesta_correcta": "Orgánico, Fairtrade, Rainforest Alliance."
+        }
+      ]
+    },
+    {
+      "modulo": "Trazabilidad Digital y Herramientas Tecnológicas",
+      "objetivo": "Presentar soluciones digitales para la trazabilidad eficiente y segura.",
+      "concepto": "Plataformas digitales, apps móviles y blockchain permiten registrar datos en tiempo real, reducir errores y aumentar la transparencia.",
+      "ejemplo": "Uso de apps móviles para registrar cosecha, beneficio y transporte; integración de blockchain para exportaciones a Europa.",
+      "ejercicio": "Herramientas_Trazabilidad_Digital_Cafe.pdf",
+      "puntos_clave": [
+        "Ventajas de la trazabilidad digital vs. manual.",
+        "Ejemplos de plataformas: Farmforce, AgroTrace, IBM Food Trust.",
+        "Recomendaciones para pequeños productores."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué herramientas tecnológicas pueden usarse para la trazabilidad del café?",
+          "opciones": [
+            "Apps móviles, blockchain, plataformas digitales.",
+            "Solo papel y lápiz.",
+            "Ninguna."
+          ],
+          "respuesta_correcta": "Apps móviles, blockchain, plataformas digitales."
+        }
+      ]
+    },
+    {
+      "modulo": "Requisitos para Exportar Café a Europa, Asia, Rusia y EEUU",
+      "objetivo": "Detallar los requisitos de trazabilidad, documentación y certificaciones para exportar a mercados internacionales.",
+      "concepto": "Cada región exige trazabilidad documental, sanitaria y de sostenibilidad. El incumplimiento puede resultar en rechazos o sanciones.",
+      "ejemplo": "Exportar a la UE requiere trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos y cumplimiento de la nueva Ley de Deforestación.",
+      "ejercicio": "Checklist_Exportacion_Cafe.pdf",
+      "puntos_clave": [
+        "Requisitos UE: Reglamento 2023/1115, Ley de Deforestación, certificaciones orgánicas.",
+        "Requisitos Asia y Rusia: trazabilidad documental, análisis de residuos, etiquetado.",
+        "Requisitos EEUU: FDA, FSMA, trazabilidad y registros electrónicos."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué requisitos específicos impone la Unión Europea para la importación de café?",
+          "opciones": [
+            "Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación.",
+            "Solo etiqueta bonita.",
+            "Ningún requisito."
+          ],
+          "respuesta_correcta": "Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación."
+        }
+      ]
+    }
+  ],
+  "referencias": [
+    "Agrocalidad Ecuador: https://www.agrocalidad.gob.ec/",
+    "MAG Ecuador: https://www.agricultura.gob.ec/",
+    "Reglamento (UE) 2023/1115 sobre productos libres de deforestación",
+    "Fairtrade International: https://www.fairtrade.net/",
+    "Rainforest Alliance: https://www.rainforest-alliance.org/",
+    "Specialty Coffee Association: https://sca.coffee/",
+    "IBM Food Trust: https://www.ibm.com/blockchain/solutions/food-trust",
+    "Farmforce: https://www.farmforce.com/",
+    "AgroTrace: https://www.agrotrace.com/",
+    "FDA: https://www.fda.gov/",
+    "FSMA: https://www.fda.gov/food/food-safety-modernization-act-fsma"
+  ]
+}

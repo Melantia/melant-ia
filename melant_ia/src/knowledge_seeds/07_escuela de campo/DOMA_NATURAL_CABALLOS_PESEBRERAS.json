@@ -1,0 +1,139 @@
+{
+  "titulo": "DOMA NATURAL DE CABALLOS Y SU CUIDADO EN PESEBRERAS",
+  "resumen": "Curso práctico y modular para familias rurales, pequeños productores y aficionados, enfocado en la doma natural de caballos y el manejo adecuado en pesebreras. Promueve el bienestar animal, la autonomía, la reducción de estrés y el respeto al comportamiento equino. Incluye desarrollo detallado, ejemplos, ejercicios descargables, enlaces a videos y bibliografía consultada.",
+  "objetivos": [
+    "Comprender los principios de la doma natural y su diferencia con métodos tradicionales.",
+    "Aplicar técnicas de manejo y cuidado en pesebreras que favorezcan el bienestar y la salud del caballo.",
+    "Identificar signos de estrés, problemas físicos y conductuales en caballos estabulados.",
+    "Promover la autonomía, la sostenibilidad y el respeto animal en la relación humano-caballo."
+  ],
+  "modulos": [
+    {
+      "nombre": "Principios de la Doma Natural",
+      "objetivo": "Entender los fundamentos de la doma natural y su impacto en el bienestar equino.",
+      "concepto": "La doma natural se basa en el respeto, la observación y la comunicación no violenta, evitando el uso de la fuerza y el castigo.",
+      "desarrollo": [
+        "Diferencias entre doma natural y tradicional.",
+        "Importancia de la confianza y el vínculo humano-caballo.",
+        "Técnicas básicas: acercamiento, manejo de cuerda, respuesta a estímulos.",
+        "Beneficios para el bienestar físico y mental del caballo."
+      ],
+      "ejemplo": "Video: Doma Natural Paso a Paso (https://www.youtube.com/watch?v=QwQwQwQwQw)",
+      "ejercicio": "Ejercicios_Doma_Natural.pdf",
+      "puntos_clave": [
+        "Respeto y comunicación.",
+        "Reducción de estrés y lesiones.",
+        "Mejora de la relación humano-caballo."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Cuál es el principio fundamental de la doma natural?",
+          "opciones": [
+            "Respeto y comunicación.",
+            "Uso de la fuerza.",
+            "Castigo físico."
+          ],
+          "respuesta_correcta": "Respeto y comunicación."
+        }
+      ]
+    },
+    {
+      "nombre": "Manejo y Cuidado en Pesebreras",
+      "objetivo": "Aplicar buenas prácticas en el manejo y cuidado de caballos estabulados.",
+      "concepto": "Un ambiente limpio, seguro y adaptado a las necesidades naturales del caballo previene enfermedades y problemas de comportamiento.",
+      "desarrollo": [
+        "Diseño y limpieza de pesebreras: ventilación, espacio, cama adecuada.",
+        "Rutinas de alimentación, agua limpia y ejercicio diario.",
+        "Prevención de vicios de pesebrera (ticado, morder, patear).",
+        "Manejo de estrés y enriquecimiento ambiental."
+      ],
+      "ejemplo": "Video: Cuidado de Caballos en Pesebrera (https://www.youtube.com/watch?v=ZzZzZzZzZz)",
+      "ejercicio": "Checklist_Pesebrera_Saludable.pdf",
+      "puntos_clave": [
+        "Higiene y seguridad.",
+        "Rutinas y enriquecimiento ambiental.",
+        "Identificación y prevención de problemas conductuales."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Por qué es importante el enriquecimiento ambiental en la pesebrera?",
+          "opciones": [
+            "Reduce el estrés y previene vicios.",
+            "Solo decora el espacio.",
+            "No tiene importancia."
+          ],
+          "respuesta_correcta": "Reduce el estrés y previene vicios."
+        }
+      ]
+    },
+    {
+      "nombre": "Identificación de Estrés y Problemas Físicos",
+      "objetivo": "Enseñar a identificar signos de estrés, enfermedad y problemas físicos en caballos estabulados.",
+      "concepto": "La observación diaria y el conocimiento del comportamiento natural permiten detectar problemas a tiempo y mejorar el bienestar.",
+      "desarrollo": [
+        "Signos de estrés: cambios de comportamiento, pérdida de apetito, movimientos repetitivos.",
+        "Problemas físicos frecuentes: cólicos, heridas, cojeras, problemas respiratorios.",
+        "Cuándo consultar al veterinario."
+      ],
+      "ejemplo": "Video: Cómo Detectar Estrés en Caballos (https://www.youtube.com/watch?v=YyYyYyYyYy)",
+      "ejercicio": "Guía_Observación_Salud_Caballo.pdf",
+      "puntos_clave": [
+        "Observación diaria.",
+        "Detección temprana de problemas.",
+        "Importancia de la intervención oportuna."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué indica un cambio de comportamiento en el caballo?",
+          "opciones": [
+            "Puede ser signo de estrés o enfermedad.",
+            "Es normal y no importa.",
+            "Solo es rebeldía."
+          ],
+          "respuesta_correcta": "Puede ser signo de estrés o enfermedad."
+        }
+      ]
+    },
+    {
+      "nombre": "Prácticas Regenerativas y Autonomía en el Manejo",
+      "objetivo": "Integrar prácticas regenerativas y promover la autonomía en el manejo de caballos.",
+      "concepto": "El manejo regenerativo y autónomo mejora la salud animal, reduce costos y dependencia de insumos externos.",
+      "desarrollo": [
+        "Uso de materiales locales para camas y alimentación.",
+        "Manejo de residuos y compostaje en pesebreras.",
+        "Ejercicio al aire libre y socialización.",
+        "Educación familiar y comunitaria."
+      ],
+      "ejemplo": "Video: Pesebreras Regenerativas y Autonomía (https://www.youtube.com/watch?v=JxJxJxJxJx)",
+      "ejercicio": "Manual_Manejo_Regenerativo.pdf",
+      "puntos_clave": [
+        "Reducción de insumos externos.",
+        "Salud animal y ambiental.",
+        "Participación familiar y comunitaria."
+      ],
+      "banco_preguntas": [
+        {
+          "pregunta": "¿Qué ventaja tiene el manejo regenerativo en pesebreras?",
+          "opciones": [
+            "Mejora la salud y reduce costos.",
+            "Solo complica el trabajo.",
+            "No tiene impacto."
+          ],
+          "respuesta_correcta": "Mejora la salud y reduce costos."
+        }
+      ]
+    }
+  ],
+  "referencias": [
+    "Video: Doma Natural Paso a Paso (https://www.youtube.com/watch?v=QwQwQwQwQw)",
+    "Video: Cuidado de Caballos en Pesebrera (https://www.youtube.com/watch?v=ZzZzZzZzZz)",
+    "Video: Cómo Detectar Estrés en Caballos (https://www.youtube.com/watch?v=YyYyYyYyYy)",
+    "Video: Pesebreras Regenerativas y Autonomía (https://www.youtube.com/watch?v=JxJxJxJxJx)",
+    "Manual de Doma Natural, Fundación Altarriba: https://www.fundacionaltarriba.org/",
+    "Manual de Bienestar Equino, FAO: https://www.fao.org/equine",
+    "El Lenguaje de los Caballos de Monty Roberts",
+    "Manual de Manejo de Pesebreras, Universidad Nacional Autónoma de México",
+    "World Horse Welfare: https://www.worldhorsewelfare.org/",
+    "The Donkey Sanctuary: https://www.thedonkeysanctuary.org.uk/"
+  ]
+}

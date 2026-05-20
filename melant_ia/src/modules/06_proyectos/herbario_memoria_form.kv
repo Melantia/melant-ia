@@ -1,0 +1,71 @@
+<HerbarioMemoriaForm@BoxLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    Label:
+        text: 'Registrar Remedio - Herbario Memoria Cultural'
+        font_size: 22
+        size_hint_y: None
+        height: 40
+    TextInput:
+        id: planta
+        hint_text: 'Nombre de la planta (común y científico)'
+    TextInput:
+        id: uso_medicinal
+        hint_text: 'Uso medicinal/tradicional'
+    TextInput:
+        id: preparacion
+        hint_text: 'Preparación y administración'
+        multiline: True
+        height: 80
+    TextInput:
+        id: narrador
+        hint_text: 'Nombre del informante (abuela, curandero/a, etc.)'
+    TextInput:
+        id: lugar
+        hint_text: 'Lugar de origen (pueblo, ciudad, comunidad)'
+    FileChooserIconView:
+        id: evidencia_foto
+        filters: ['*.jpg', '*.png']
+        size_hint_y: None
+        height: 150
+    CheckBox:
+        id: comprobada
+        size_hint_x: None
+        width: 40
+    Label:
+        text: '¿Remedio comprobado?'
+        size_hint_x: None
+        width: 200
+    TextInput:
+        id: testigos
+        hint_text: 'Testigos (separados por coma)'
+    TextInput:
+        id: notas
+        hint_text: 'Notas adicionales (opcional)'
+    Button:
+        text: 'Guardar Remedio'
+        size_hint_y: None
+        height: 50
+        on_release: app.guardar_remedio_herbario(root)
+
+<HerbarioMemoriaViewer@BoxLayout>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+    Label:
+        text: 'Remedios Registrados - Herbario Memoria Cultural'
+        font_size: 22
+        size_hint_y: None
+        height: 40
+    ScrollView:
+        GridLayout:
+            id: remedios_grid
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+    Button:
+        text: 'Actualizar Lista'
+        size_hint_y: None
+        height: 50
+        on_release: app.mostrar_remedios_herbario(root)

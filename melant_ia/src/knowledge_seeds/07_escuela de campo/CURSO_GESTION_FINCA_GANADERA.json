@@ -1,0 +1,274 @@
+{
+  "curso": "Gestión de Fincas Ganaderas",
+  "resumen": "Curso integral para transformar la finca en una empresa rentable y sostenible, abordando administración, manejo de recursos, producción, bienestar animal y sostenibilidad. Cada módulo incluye objetivos claros, desarrollo detallado, ejemplos prácticos, ejercicios descargables, puntos clave y banco de preguntas para autoevaluación.",
+  "modulos": [
+    {
+      "modulo": "Administración y Economía Ganadera",
+      "items": [
+        {
+          "titulo": "Gestión Empresarial de la Finca",
+          "objetivo": "Gestionar la finca como una empresa, controlando costos, ingresos y flujo de caja.",
+          "concepto": "La rentabilidad depende de la visión empresarial, el control financiero y la toma de decisiones basada en datos.",
+          "desarrollo": [
+            "Identificación de costos fijos y variables.",
+            "Registro de ingresos y egresos.",
+            "Elaboración y análisis del flujo de caja."
+          ],
+          "ejemplo": "Un productor implementa un sistema de registro digital y detecta fugas de dinero en compras innecesarias, logrando ahorrar un 12% anual.",
+          "ejercicio": "Flujo_Caja_Finca.xlsx",
+          "puntos_clave": [
+            "La finca es una empresa: todo gasto e ingreso debe registrarse.",
+            "El flujo de caja permite anticipar problemas y planificar inversiones."
+          ]
+        },
+        {
+          "titulo": "Planificación Estratégica y Toma de Decisiones",
+          "objetivo": "Utilizar registros y benchmarks para mejorar la gestión y la rentabilidad.",
+          "concepto": "La comparación con estándares y el uso de datos históricos permite tomar mejores decisiones.",
+          "desarrollo": [
+            "Uso de registros productivos y económicos.",
+            "Benchmarking: comparación con fincas modelo.",
+            "Análisis de resultados y ajustes de manejo."
+          ],
+          "ejemplo": "Una finca compara su producción de leche por hectárea con el promedio nacional y ajusta su manejo para superar el benchmark.",
+          "ejercicio": "Benchmarking_Finca.pdf",
+          "puntos_clave": [
+            "Los registros son la base de la mejora continua.",
+            "El benchmarking motiva y orienta el progreso."
+          ]
+        },
+        {
+          "titulo": "Finanzas Ganaderas y Administración de Personal",
+          "objetivo": "Analizar la rentabilidad por hectárea y gestionar el recurso humano eficientemente.",
+          "concepto": "La administración moderna integra finanzas y gestión de personal para maximizar resultados.",
+          "desarrollo": [
+            "Cálculo de rentabilidad por hectárea y por animal.",
+            "Planificación y control de tareas del personal.",
+            "Evaluación de desempeño y motivación."
+          ],
+          "ejemplo": "Un productor implementa incentivos por cumplimiento de metas y mejora la productividad del equipo.",
+          "ejercicio": "Rentabilidad_Hectarea.xlsx",
+          "puntos_clave": [
+            "La rentabilidad debe medirse por unidad de superficie y animal.",
+            "El personal motivado es clave para el éxito."
+          ]
+        },
+        {
+          "banco_preguntas": [
+            {
+              "pregunta": "¿Por qué es importante registrar todos los ingresos y egresos de la finca?",
+              "opciones": [
+                "Para anticipar problemas y planificar inversiones.",
+                "Solo por costumbre.",
+                "Para aumentar gastos innecesarios."
+              ],
+              "respuesta_correcta": "Para anticipar problemas y planificar inversiones."
+            },
+            {
+              "pregunta": "¿Qué aporta el benchmarking en la gestión ganadera?",
+              "opciones": [
+                "Motiva y orienta el progreso.",
+                "Solo genera papeleo.",
+                "Reduce la productividad."
+              ],
+              "respuesta_correcta": "Motiva y orienta el progreso."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Manejo de Suelos, Pastos y Forrajes",
+      "items": [
+        {
+          "titulo": "Agricultura Ganadera y Conservación de Suelos",
+          "objetivo": "Analizar, conservar y mejorar el suelo para maximizar la producción forrajera.",
+          "concepto": "El suelo es la base de la productividad y debe manejarse con prácticas regenerativas.",
+          "desarrollo": [
+            "Toma y análisis de muestras de suelo.",
+            "Prácticas de conservación: terrazas, cobertura vegetal, rotación de cultivos.",
+            "Corrección de compactación y fertilización adecuada."
+          ],
+          "ejemplo": "Una finca implementa rotación de cultivos y cobertura vegetal, duplicando la producción de forraje en 2 años.",
+          "ejercicio": "Analisis_Suelo_Forrajes.pdf",
+          "puntos_clave": [
+            "El suelo sano es la base de la rentabilidad.",
+            "La conservación previene la degradación y aumenta la resiliencia."
+          ]
+        },
+        {
+          "titulo": "Diseño de Sistemas de Pastoreo y Banco de Forrajes",
+          "objetivo": "Optimizar la producción y calidad del forraje mediante sistemas de pastoreo y bancos forrajeros.",
+          "concepto": "El manejo técnico de pasturas y forrajes es clave para la eficiencia productiva.",
+          "desarrollo": [
+            "Diseño de sistemas de pastoreo rotativo y racional.",
+            "Establecimiento y manejo de bancos de forrajes.",
+            "Presupuestación y conservación de forrajes."
+          ],
+          "ejemplo": "Una finca implementa pastoreo racional y banco de forrajes, logrando alimentar el hato todo el año sin comprar forraje externo.",
+          "ejercicio": "Diseno_Pastoreo.xlsx",
+          "puntos_clave": [
+            "El pastoreo racional mejora la recuperación del pasto y la salud animal.",
+            "Los bancos de forrajes aseguran alimento en épocas críticas."
+          ]
+        },
+        {
+          "titulo": "Sistemas Agrosilvopastoriles",
+          "objetivo": "Integrar árboles, arbustos y pasturas para mejorar la dieta animal y el medio ambiente.",
+          "concepto": "Los sistemas agrosilvopastoriles aumentan la biodiversidad y la resiliencia de la finca.",
+          "desarrollo": [
+            "Selección de especies arbóreas y arbustivas.",
+            "Diseño e implementación de sistemas integrados.",
+            "Beneficios ambientales y productivos."
+          ],
+          "ejemplo": "Una finca integra árboles forrajeros y mejora la dieta del ganado, reduce el estrés térmico y aumenta la producción de leche.",
+          "ejercicio": "Manual_Agrosilvopastoril.pdf",
+          "puntos_clave": [
+            "La integración de árboles mejora el microclima y la dieta.",
+            "Los sistemas integrados son más resilientes al cambio climático."
+          ]
+        },
+        {
+          "banco_preguntas": [
+            {
+              "pregunta": "¿Por qué es clave la conservación del suelo en la ganadería?",
+              "opciones": [
+                "Previene degradación y aumenta resiliencia.",
+                "Solo por estética.",
+                "Reduce la producción."
+              ],
+              "respuesta_correcta": "Previene degradación y aumenta resiliencia."
+            },
+            {
+              "pregunta": "¿Qué ventaja aporta el banco de forrajes?",
+              "opciones": [
+                "Asegura alimento en épocas críticas.",
+                "Solo ocupa espacio.",
+                "Disminuye la salud animal."
+              ],
+              "respuesta_correcta": "Asegura alimento en épocas críticas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Producción y Nutrición Animal",
+      "items": [
+        {
+          "titulo": "Nutrición y Alimentación Específica",
+          "objetivo": "Diseñar dietas según la etapa productiva (cría, engorde, leche).",
+          "concepto": "La nutrición balanceada maximiza la producción y la salud animal.",
+          "desarrollo": [
+            "Requerimientos nutricionales por etapa.",
+            "Formulación de dietas y uso de subproductos.",
+            "Conservación de forrajes y ensilajes."
+          ],
+          "ejemplo": "Una finca formula dietas específicas y aumenta la producción de leche en 18%.",
+          "ejercicio": "Formulador_Dietas.xlsx",
+          "puntos_clave": [
+            "La dieta debe ajustarse a la etapa y condición del animal.",
+            "El ensilaje permite conservar forraje para épocas críticas."
+          ]
+        },
+        {
+          "titulo": "Mejora Genética y Sanidad",
+          "objetivo": "Seleccionar razas, aplicar biotecnología reproductiva y mantener la sanidad del hato.",
+          "concepto": "La genética y la sanidad son pilares de la productividad y sostenibilidad.",
+          "desarrollo": [
+            "Selección de razas y cruzamientos.",
+            "Inseminación artificial y biotecnologías.",
+            "Prevención y control de plagas, vacunación y bioseguridad."
+          ],
+          "ejemplo": "Una finca implementa inseminación artificial y reduce la incidencia de enfermedades en un 30%.",
+          "ejercicio": "Manual_Genetica_Sanidad.pdf",
+          "puntos_clave": [
+            "La genética impacta en la producción y resistencia a enfermedades.",
+            "La bioseguridad protege la inversión y la salud del hato."
+          ]
+        },
+        {
+          "banco_preguntas": [
+            {
+              "pregunta": "¿Por qué debe ajustarse la dieta según la etapa productiva?",
+              "opciones": [
+                "Para maximizar producción y salud.",
+                "Para gastar más en alimento.",
+                "Para aumentar enfermedades."
+              ],
+              "respuesta_correcta": "Para maximizar producción y salud."
+            },
+            {
+              "pregunta": "¿Cómo impacta la genética en la ganadería?",
+              "opciones": [
+                "Mejora producción y resistencia.",
+                "Solo encarece el manejo.",
+                "Reduce la sostenibilidad."
+              ],
+              "respuesta_correcta": "Mejora producción y resistencia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modulo": "Instalaciones y Sostenibilidad",
+      "items": [
+        {
+          "titulo": "Bienestar Animal y Diseño de Instalaciones",
+          "objetivo": "Diseñar corrales, mangas y cercas para el bienestar animal y manejo eficiente.",
+          "concepto": "El bienestar animal mejora la producción y reduce el estrés.",
+          "desarrollo": [
+            "Diseño de corrales, mangas y cercas eléctricas.",
+            "Manejo sin estrés y buenas prácticas de arreo.",
+            "Acceso a agua limpia y sombra."
+          ],
+          "ejemplo": "Una finca rediseña sus corrales y reduce accidentes y estrés animal, mejorando la ganancia de peso.",
+          "ejercicio": "Manual_Bienestar_Animal.pdf",
+          "puntos_clave": [
+            "El bienestar animal es clave para la rentabilidad.",
+            "El acceso a agua y sombra mejora la salud y productividad."
+          ]
+        },
+        {
+          "titulo": "Sostenibilidad, Legislación y Adaptación Climática",
+          "objetivo": "Adaptar la finca al cambio climático, cumplir normas ambientales y comerciales.",
+          "concepto": "La sostenibilidad y el cumplimiento legal aseguran el futuro del negocio.",
+          "desarrollo": [
+            "Adaptación al cambio climático: manejo del agua y recursos.",
+            "Cumplimiento de normas ambientales y de comercialización.",
+            "Certificaciones y acceso a mercados diferenciados."
+          ],
+          "ejemplo": "Una finca implementa cosecha de agua y obtiene certificación ambiental, accediendo a mejores precios de mercado.",
+          "ejercicio": "Checklist_Sostenibilidad.pdf",
+          "puntos_clave": [
+            "La sostenibilidad es una ventaja competitiva.",
+            "Cumplir la legislación evita sanciones y abre mercados."
+          ]
+        },
+        {
+          "banco_preguntas": [
+            {
+              "pregunta": "¿Por qué es clave el bienestar animal en la finca?",
+              "opciones": [
+                "Mejora rentabilidad y salud.",
+                "Solo aumenta el trabajo.",
+                "Reduce la productividad."
+              ],
+              "respuesta_correcta": "Mejora rentabilidad y salud."
+            },
+            {
+              "pregunta": "¿Qué ventaja aporta cumplir la legislación ambiental?",
+              "opciones": [
+                "Abre mercados y evita sanciones.",
+                "Solo genera trámites.",
+                "Disminuye la competitividad."
+              ],
+              "respuesta_correcta": "Abre mercados y evita sanciones."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

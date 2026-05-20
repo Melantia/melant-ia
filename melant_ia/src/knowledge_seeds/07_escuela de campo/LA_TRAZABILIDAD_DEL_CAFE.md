@@ -1,8 +1,7 @@
 # LA TRAZABILIDAD DEL CAFÉ
 
-## Introducción
-
-La trazabilidad del café es el proceso de registrar y seguir el recorrido del grano desde la finca hasta la taza. En Ecuador, la trazabilidad es fundamental para garantizar calidad, transparencia, acceso a mercados de café de especialidad y cumplir con normativas internacionales.
+**Resumen:**
+Curso integral para comprender y aplicar la trazabilidad en la cadena de valor del café ecuatoriano, abordando fundamentos, normativas, herramientas digitales, denominación de origen y requisitos de exportación. Incluye ejemplos prácticos, ejercicios descargables, puntos clave y banco de preguntas para autoevaluación.
 
 ## Objetivos del Curso
 
@@ -28,6 +27,13 @@ La trazabilidad del café es el proceso de registrar y seguir el recorrido del g
 - Tipos de trazabilidad: interna (dentro de la finca/empresa) y externa (entre actores de la cadena).
 - Beneficios: acceso a mercados, confianza del consumidor, prevención de fraudes, cumplimiento normativo.
 
+### Banco de Preguntas Módulo 1
+
+1. ¿Qué es la trazabilidad y por qué es clave para el café ecuatoriano?
+   - A) Permite registrar y seguir el grano desde la finca hasta la taza.
+   - B) Solo es un requisito burocrático.
+   - C) Sirve únicamente para grandes empresas.
+
 ---
 
 ## Módulo 2: Trazabilidad del Café en Ecuador, Denominación de Origen y Café de Especialidad
@@ -47,6 +53,17 @@ La trazabilidad del café es el proceso de registrar y seguir el recorrido del g
 - Café de especialidad: requisitos de calidad, trazabilidad y certificaciones.
 - Casos de éxito: asociaciones exportadoras y cooperativas.
 
+### Banco de Preguntas Módulo 2
+
+1. ¿Qué diferencia aporta la denominación de origen en el café?
+   - A) Reconoce zonas productoras con atributos únicos.
+   - B) Solo es un trámite más.
+   - C) No tiene impacto en el mercado.
+2. ¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?
+   - A) Orgánico, Fairtrade, Rainforest Alliance.
+   - B) Solo Agrocalidad.
+   - C) Ninguna.
+
 ---
 
 ## Módulo 3: Trazabilidad Digital y Herramientas Tecnológicas
@@ -64,6 +81,13 @@ La trazabilidad del café es el proceso de registrar y seguir el recorrido del g
 - Ventajas de la trazabilidad digital vs. manual.
 - Ejemplos de plataformas: Farmforce, AgroTrace, IBM Food Trust.
 - Recomendaciones para pequeños productores.
+
+### Banco de Preguntas Módulo 3
+
+1. ¿Qué herramientas tecnológicas pueden usarse para la trazabilidad del café?
+   - A) Apps móviles, blockchain, plataformas digitales.
+   - B) Solo papel y lápiz.
+   - C) Ninguna.
 
 ---
 
@@ -83,15 +107,12 @@ La trazabilidad del café es el proceso de registrar y seguir el recorrido del g
 - Requisitos Asia y Rusia: trazabilidad documental, análisis de residuos, etiquetado.
 - Requisitos EEUU: FDA, FSMA, trazabilidad y registros electrónicos.
 
----
+### Banco de Preguntas Módulo 4
 
-## Banco de Preguntas
-
-1. ¿Qué es la trazabilidad y por qué es clave para el café ecuatoriano?
-2. ¿Qué diferencia aporta la denominación de origen en el café?
-3. ¿Qué certificaciones internacionales exigen trazabilidad en Ecuador?
-4. ¿Qué herramientas tecnológicas pueden usarse para la trazabilidad del café?
-5. ¿Qué requisitos específicos impone la Unión Europea para la importación de café?
+1. ¿Qué requisitos específicos impone la Unión Europea para la importación de café?
+   - A) Trazabilidad desde la finca, certificación fitosanitaria, ausencia de residuos, Ley de Deforestación.
+   - B) Solo etiqueta bonita.
+   - C) Ningún requisito.
 
 ---
 
