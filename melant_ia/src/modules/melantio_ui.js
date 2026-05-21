@@ -1,9 +1,12 @@
+javascript;
 // modules/melantio_ui.js
-// Lógica UI para Melantio: botón de canje y utilidades
-// NOTA: Melantio (la moneda virtual) solo interviene con voz para explicar la conversión "100 Melantios = $1" cuando el usuario consulta su saldo. Todas las demás explicaciones y mensajes de voz quedan a cargo de Don Eloy o Angel según corresponda.
+// Lógica UI para Melantio: botón de canje, utilidades y renderizado de módulos
+// NOTA: Melantio solo interviene con voz para explicar la conversión "100 Melantios = $1" al consultar saldo.
 
-// Función para crear el botón de canje Melantios
-// Solo permite cubrir hasta el 25% del valor del producto con Melantios.
+// =========================================================================
+// 1. FUNCIONES ORIGINALES DE LA MONEDA VIRTUAL (MELANTIOS)
+// =========================================================================
+
 function crearBotonCanjemelantios(callbackFuncion) {
   return `
     <button 
@@ -32,7 +35,6 @@ function crearBotonCanjemelantios(callbackFuncion) {
   `;
 }
 
-// Función para crear el badge de saldo Melantios
 function crearMelantioBadge(cantidad) {
   return `
     <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; background: #FEF3C7; border-radius: 4px; border: 1px solid #FCD34D;">
@@ -42,23 +44,16 @@ function crearMelantioBadge(cantidad) {
   `;
 }
 
-// Función para renderizar el badge de Melantios con valor en USD
 function crearMelantioBadgeConUSD(cantidad) {
   const usd = calcularValorPremios(cantidad).toFixed(2);
-  const svgIcon = `<img 
-    src="/src/assets/ui/icons/melantio_gold.svg" 
-    alt="Melantio" 
-    class="melantio-icon"
-  />`;
+  const svgIcon = `<img src="/src/assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />`;
 
-  // Melantio solo interviene aquí: explicación de conversión al consultar saldo
   if (typeof window !== 'undefined' && window.speechSynthesis) {
     const mensaje = `Recuerda: 100 Melantios equivalen a 1 dólar. Tu saldo es de ${cantidad} Melantios, es decir, $${usd} dólares.`;
     const utt = new window.SpeechSynthesisUtterance(mensaje);
     utt.lang = 'es-EC';
     utt.rate = 0.98;
     utt.pitch = 1.1;
-    // Selección de voz Melantio (puedes personalizar el filtro si tienes una voz específica)
     const voces = window.speechSynthesis.getVoices();
     utt.voice =
       voces.find(
@@ -80,47 +75,148 @@ function crearMelantioBadgeConUSD(cantidad) {
   `;
 }
 
-// Ejemplo de función de callback para el botón
 function abrirPanelCanjemelantios() {
   alert('Panel de canje de Melantios (demo)');
 }
 
-// CONFIGURACIÓN DE LA MONEDA MELANTIA
-// 100 Melantios = $1.00 USD. Límite de canje en tiendas: 25% del valor del producto.
-const TASA_CAMBIO = 100; // 100 Melantios = $1.00 USD
-const LIMITE_CANJE_GLOBAL = 0.25; // Solo puedes usar Melantios para el 25% del valor
+const TASA_CAMBIO = 100;
+const LIMITE_CANJE_GLOBAL = 0.25;
 
-/**
- * Convierte el valor de los premios acumulados a dólares
- * para que el socio sepa cuánto dinero real tiene en "premios".
- */
 function calcularValorPremios(melantiosAcumulados) {
   return melantiosAcumulados / TASA_CAMBIO;
 }
 
-/**
- * Calcula el premio por suscripción (10% del valor del plan)
- * El resultado se entrega en Melantios.
- */
 function calcularPremioPorSuscripcion(precioPlanUSD) {
-  const beneficioUSD = precioPlanUSD * 0.1; // 10% de beneficio
-  return beneficioUSD * TASA_CAMBIO; // Convertido a Melantios
+  const beneficioUSD = precioPlanUSD * 0.1;
+  return beneficioUSD * TASA_CAMBIO;
 }
 
-// Insertar el botón en el contenedor de checkout-actions
+// =========================================================================
+// 2. MOTOR DE RENDERIZADO DINÁMICO (TÍTULOS LIMPIOS SIN VOCES)
+// =========================================================================
+
+function renderizarModulosPrincipales(modulos) {
+  // Buscamos un contenedor válido en la interfaz de inicio
+  const contenedorMenu =
+    document.getElementById('contenedor-modulos-menu') ||
+    document.querySelector('.grid-container') ||
+    document.body;
+
+  if (!modulos || modulos.length === 0) {
+    console.warn('[MELANTIA UI] No se encontraron módulos para renderizar.');
+    return;
+  }
+
+  let htmlGrid = `
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    ">
+  `;
+
+  // Renderiza los 11 módulos mostrando ÚNICAMENTE el título limpio
+  modulos.forEach((modulo) => {
+    htmlGrid += `
+      <div 
+        onclick="abrirModuloEspecifico(${modulo.id}, '${modulo.titulo}')"
+        style="
+          background: #ffffff;
+          border: 1px solid #E2E8F0;
+          border-radius: 12px;
+          padding: 24px;
+          cursor: pointer;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+          transition: all 0.25s ease;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+          overflow: hidden;
+        "
+        onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1)'; this.style.borderColor='#F59E0B';"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#E2E8F0';"
+      >
+        <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #F59E0B;"></div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span style="
+            background: #FEF3C7; 
+            color: #B45309; 
+            font-weight: bold; 
+            border-radius: 50%; 
+            width: 28px; 
+            height: 28px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 13px;
+          ">${modulo.id}</span>
+          <h3 style="margin: 0; font-size: 16px; color: #1E293B; font-weight: 700; font-family: sans-serif;">
+            ${modulo.titulo}
+          </h3>
+        </div>
+        
+        <div style="text-align: right; margin-top: 12px;">
+          <span style="color: #64748B; font-size: 12px; font-weight: 500;">Ingresar →</span>
+        </div>
+      </div>
+    `;
+  });
+
+  htmlGrid += `</div>`;
+
+  if (contenedorMenu === document.body) {
+    const seccionMenu = document.createElement('section');
+    seccionMenu.id = 'seccion-dinamica-modulos';
+    seccionMenu.innerHTML =
+      `<h2 style="text-align:center; color:#1E293B; font-family:sans-serif; margin-top:30px;">Módulos del Sistema</h2>` +
+      htmlGrid;
+    document.body.appendChild(seccionMenu);
+  } else {
+    contenedorMenu.innerHTML = htmlGrid;
+  }
+}
+
+function abrirModuloEspecifico(id, titulo) {
+  console.log(`[MELANTIA UI] Abriendo módulo ID ${id}: ${titulo}`);
+  alert(`Cargando entorno de: ${titulo}`);
+}
+
+// =========================================================================
+// 3. LISTENERS DE CARGA (PROCESAMIENTO AL INICIAR)
+// =========================================================================
+
 window.addEventListener('DOMContentLoaded', function () {
+  // 1. Render de utilidades de saldo
   var checkout = document.getElementById('checkout-actions');
   if (checkout) {
     checkout.innerHTML = crearBotonCanjemelantios('abrirPanelCanjemelantios');
   }
-});
 
-// Insertar el badge de saldo en el contenedor correspondiente de forma dinámica
-window.addEventListener('DOMContentLoaded', function () {
   var saldo = document.getElementById('saldo-melantios');
   if (saldo) {
-    // Aquí puedes obtener el saldo real dinámicamente si lo tienes
-    const saldoActual = 250; // Reemplazar por variable dinámica si existe
+    const saldoActual = 250;
     saldo.innerHTML = crearMelantioBadgeConUSD(saldoActual);
   }
+
+  // 2. Carga dinámica del JSON correcto de MELANTIA
+  fetch('/app_structure_melant_ia.json')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('No se pudo leer app_structure_melant_ia.json');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data && data.modulos) {
+        renderizarModulosPrincipales(data.modulos);
+      }
+    })
+    .catch((error) => {
+      console.error('[MELANTIA UI] Error cargando los módulos:', error);
+    });
 });

@@ -12,12 +12,15 @@
   </head>
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw-melantia.js').then(function(reg) {
-          console.log('Service Worker MELANTIA registrado:', reg.scope);
-        }, function(err) {
-          console.log('Error al registrar Service Worker:', err);
-        });
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw-melantia.js').then(
+          function (reg) {
+            console.log('Service Worker MELANTIA registrado:', reg.scope);
+          },
+          function (err) {
+            console.log('Error al registrar Service Worker:', err);
+          }
+        );
       });
     }
   </script>
@@ -154,15 +157,30 @@
     </div>
 
     <!-- Botón para buscar mejor cobertura en la tienda -->
-    <div id="btn-cobertura-tienda-wrap" style="text-align:center;margin:18px 0;">
+    <div
+      id="btn-cobertura-tienda-wrap"
+      style="text-align: center; margin: 18px 0"
+    >
       <button
         id="btn-cobertura-tienda"
         onclick="window.guiarAZonaCobertura()"
-        style="background:#276749;color:#fff;padding:12px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;"
+        style="
+          background: #276749;
+          color: #fff;
+          padding: 12px 28px;
+          border: none;
+          border-radius: 8px;
+          font-size: 1em;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+          font-weight: 600;
+        "
       >
         📶 Buscar mejor cobertura para comprar
       </button>
-      <div style="font-size:12px;color:#2c3e50;margin-top:4px;">¿Sin señal? Pulsa aquí antes de comprar</div>
+      <div style="font-size: 12px; color: #2c3e50; margin-top: 4px">
+        ¿Sin señal? Pulsa aquí antes de comprar
+      </div>
     </div>
 
     <header>
@@ -250,21 +268,31 @@
       <span class="status-text">MELANTIA ESTÁ TRABAJANDO LOCALMENTE...</span>
     </div>
 
-    <script src="supabase_config.js"></script>
-    <script src="staff_controller.js"></script>
-    <script src="knowledge_seeds/10_salud_bienestar_rural/salud.js"></script>
-    <script src="modules/formacion_comunidad/escuela_campo_certificados.js"></script>
-    <script src="modules/sistema_afiliados/afiliados_controller.js"></script>
-    <script src="modules/sistema_afiliados/verificador_pago.js"></script>
-    <script src="modules/asistente_tecnico_rural/gestor_rural_melantia.js"></script>
-    <script type="module" src="main_controller_BANK.js"></script>
-</script>
+    <!-- Tren de carga modularizado MELANTIA -->
+    <script src="modules/app_core.js"></script>
     <script src="modules/melantio_ui.js"></script>
-    <script src="./src/modules/economia_melantia.js"></script>
-    <script src="./src/main_controller.js"></script>
+    <script src="modules/modulo_negocios.js"></script>
+    <!-- Puedes agregar aquí otros módulos según necesidad -->
+    <script src="main_controller.js"></script>
     <!-- Footer institucional MELANTIA -->
-    <footer style="background:#f4f4f4;color:#276749;text-align:center;padding:16px 0;font-size:0.98em;margin-top:32px;border-top:1px solid #e0e0e0;">
-      Contacto institucional: <a href="mailto:melantiapro@gmail.com" style="color:#276749;text-decoration:underline;">melantiapro@gmail.com</a> &nbsp;|&nbsp; © 2026 MELANTIA
+    <footer
+      style="
+        background: #f4f4f4;
+        color: #276749;
+        text-align: center;
+        padding: 16px 0;
+        font-size: 0.98em;
+        margin-top: 32px;
+        border-top: 1px solid #e0e0e0;
+      "
+    >
+      Contacto institucional:
+      <a
+        href="mailto:melantiapro@gmail.com"
+        style="color: #276749; text-decoration: underline"
+        >melantiapro@gmail.com</a
+      >
+      &nbsp;|&nbsp; © 2026 MELANTIA
     </footer>
   </body>
 </html>

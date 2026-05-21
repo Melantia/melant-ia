@@ -16,6 +16,76 @@
   },
   "modulos": [
     {
+      "nombre_global": "MelantiaAsistente",
+      "voz_principal": "Melantia",
+      "genero": "Femenina"
+    },
+    {
+      "nombre_global": "MelantiaComandosVoz",
+      "voz_principal": "Melantia",
+      "genero": "Femenina"
+    },
+    {
+      "nombre_global": "GestorGranjasMelantia",
+      "voz_principal": "Angel",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "SuscripcionesMelantia",
+      "voz_principal": "Melantio",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "AsistenteTecnicoRural",
+      "voz_principal": "Fabrizzio",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "TrazabilidadMelantia",
+      "voz_principal": "Angel",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "NegociosRuralesMelantia",
+      "voz_principal": "Don Eloy",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "FinanzasPersonalesMelantia",
+      "voz_principal": "Angel",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "ProyectosMelantia",
+      "voz_principal": "Don Eloy",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "EscuelaCampoMelantia",
+      "voz_principal": "Fabrizzio",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "ComunidadVirtualMelantia",
+      "voz_principal": "Don Eloy",
+      "genero": "Masculina"
+    },
+    {
+      "nombre_global": "SaludPreventivaMelantia",
+      "voz_principal": "Paulette",
+      "genero": "Femenina"
+    },
+    {
+      "nombre_global": "ServiciosFinancierosMelantia",
+      "voz_principal": "Paulette",
+      "genero": "Femenina"
+    },
+    {
+      "nombre_global": "RegistroEvidenciasMelantia",
+      "voz_principal": "Melantia",
+      "genero": "Femenina"
+    },
+    {
       "id": 1,
       "titulo": "Sistema de Suscripciones",
       "voz_principal": "Melantio",
