@@ -1,0 +1,20 @@
+{
+  "tema": "avicultura",
+  "archivos": [
+    "PROCESO DE CRIA DE POLLOS DE ENGORDE.docx.txt",
+    "SANIDAD EN POLLOS.docx.txt",
+    "LA AVICULTURA REGENERATIVA Y SUS BENEFICIOS.docx.txt",
+    "Enfermedades respiratorias virales en avicultura, Cómo prevenirlas con sistemas de vacunación.docx.txt"
+  ],
+  "contenido": {
+    "proceso_cria": "La cría de pollos de engorde en Ecuador es intensiva (35-45 días), con genética especializada, galpones controlados, alimentación balanceada y estrictos planes de vacunación. El ciclo permite la comercialización eficiente y carne de alta calidad.",
+    "sanidad": "La sanidad en pollos de engorde y libre pastoreo se basa en bioseguridad, vacunación, limpieza, control de plagas y manejo ambiental. Es fundamental aislar aves enfermas y mantener higiene en instalaciones y equipos.",
+    "avicultura_regenerativa": "La avicultura regenerativa promueve el bienestar animal, la restauración del suelo y la biodiversidad mediante pastoreo rotacional y sistemas silvopastoriles. Produce alimentos más nutritivos y sostenibles.",
+    "referencias": [
+      "PROCESO DE CRIA DE POLLOS DE ENGORDE.docx.txt",
+      "SANIDAD EN POLLOS.docx.txt",
+      "LA AVICULTURA REGENERATIVA Y SUS BENEFICIOS.docx.txt",
+      "Enfermedades respiratorias virales en avicultura, Cómo prevenirlas con sistemas de vacunación.docx.txt"
+    ]
+  }
+}

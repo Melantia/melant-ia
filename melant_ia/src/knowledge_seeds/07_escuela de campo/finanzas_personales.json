@@ -1,0 +1,153 @@
+{
+  "cursos_finanzas_personales": [
+    {
+      "nombre": "Finanzas Personales Integrales",
+      "objetivos": [
+        "Comprender la importancia de la gestión financiera personal y su impacto en la vida diaria y familiar.",
+        "Aprender a elaborar, controlar y ajustar un presupuesto para anticipar necesidades y evitar sorpresas.",
+        "Identificar y adoptar hábitos financieros saludables como el ahorro constante y el registro de gastos.",
+        "Diferenciar entre ahorro e inversión, conocer sus riesgos y cómo minimizarlos.",
+        "Desarrollar la capacidad de enfrentar deudas y volver a la rentabilidad personal y de negocios."
+      ],
+      "temas": [
+        {
+          "titulo": "¿Qué son las finanzas personales?",
+          "teoria": "Son el conjunto de decisiones y acciones para administrar dinero, ingresos, gastos, ahorros e inversiones.",
+          "ejemplo": "Decidir si compras un celular nuevo o ahorras ese dinero para una emergencia."
+        },
+        {
+          "titulo": "Elaboración de presupuestos",
+          "teoria": "El presupuesto permite planificar y controlar recursos económicos, anticipando ingresos y gastos.",
+          "ejemplo": "Hacer una lista mensual de ingresos y gastos, y ajustar si gastas más de lo que ganas."
+        },
+        {
+          "titulo": "Ahorro personal",
+          "teoria": "El ahorro es la parte del ingreso que no se gasta y se reserva para el futuro o emergencias.",
+          "ejemplo": "Guardar una parte de tu sueldo cada mes en una cuenta separada."
+        },
+        {
+          "titulo": "Ahorro e inversión y sus riesgos",
+          "teoria": "Ahorrar es guardar dinero, invertir es ponerlo a trabajar para generar más. Toda inversión tiene riesgos, pero se pueden minimizar informándose y diversificando.",
+          "ejemplo": "Ahorrar en una cuenta bancaria es seguro, invertir en un negocio puede dar más ganancias pero también puedes perder."
+        },
+        {
+          "titulo": "Tipos de ahorro",
+          "teoria": "Existen ahorros líquidos (dinero disponible en cualquier momento) y ahorros a plazo (no se puede retirar antes de una fecha, pero da más intereses).",
+          "ejemplo": "Cuenta de ahorros vs. depósito a plazo fijo."
+        },
+        {
+          "titulo": "Introducción a la inversión",
+          "teoria": "Invertir es destinar dinero a instrumentos como negocios, bienes raíces o fondos, esperando obtener una ganancia.",
+          "ejemplo": "Comprar acciones de una empresa, invertir en un pequeño negocio familiar."
+        },
+        {
+          "titulo": "Control de gastos y su importancia",
+          "teoria": "Controlar los gastos permite evitar el desperdicio de dinero y priorizar lo realmente importante.",
+          "ejemplo": "Registrar todos tus gastos diarios y eliminar los innecesarios, como suscripciones que no usas."
+        },
+        {
+          "titulo": "Gastos innecesarios",
+          "teoria": "Son aquellos que no aportan valor real a tu vida y pueden evitarse para mejorar tu economía.",
+          "ejemplo": "Compras impulsivas, comidas fuera de casa frecuentes."
+        },
+        {
+          "titulo": "Manejo responsable de deudas y cómo enfrentarlas",
+          "teoria": "Una deuda responsable es aquella que puedes pagar sin afectar tu bienestar. Prioriza las más costosas, negocia plazos y evita nuevas deudas innecesarias.",
+          "ejemplo": "Consolidar deudas en un solo préstamo con menor interés, pagar primero tarjetas de crédito."
+        },
+        {
+          "titulo": "Cómo volver a ser rentables y productivos en nuestros negocios",
+          "teoria": "Rentabilidad es que los ingresos superen los gastos. Para lograrlo, controla costos, mejora procesos y busca nuevas oportunidades.",
+          "ejemplo": "Analizar ventas y gastos, eliminar productos poco rentables, buscar nuevos clientes."
+        }
+      ],
+      "beneficios": [
+        "Mejor toma de decisiones económicas: puedes decidir con mayor seguridad en qué gastar, ahorrar o invertir, evitando errores costosos.",
+        "Reducción del estrés financiero: tener control sobre tu dinero disminuye la ansiedad y te permite enfrentar imprevistos con mayor tranquilidad.",
+        "Capacidad de ahorro y planificación a futuro: aprender a ahorrar te ayuda a cumplir metas como estudios, viajes o la compra de una casa.",
+        "Mayor rentabilidad y productividad en tu negocio: aplicar principios financieros mejora la eficiencia y los resultados de tu emprendimiento.",
+        "Resiliencia ante crisis: saber manejar deudas y ahorrar te permite recuperarte más rápido ante emergencias o pérdidas."
+      ],
+      "curriculum": [
+        {
+          "leccion": "Conceptos básicos de finanzas personales",
+          "contenido": "Las finanzas personales abarcan la administración de ingresos, gastos, ahorros, inversiones y deudas. Su objetivo es lograr estabilidad y crecimiento económico a lo largo del tiempo. Ejemplo: Si cada mes gastas menos de lo que ganas, puedes ahorrar y estar preparado para emergencias."
+        },
+        {
+          "leccion": "Presupuestos: tu mapa financiero",
+          "contenido": "El presupuesto es una herramienta que te permite anticipar y controlar tus recursos. Incluye todos los ingresos y gastos, y te ayuda a identificar excesos o áreas de mejora. Ejemplo: Si tu presupuesto muestra que gastas mucho en entretenimiento, puedes reducir ese rubro para ahorrar más."
+        },
+        {
+          "leccion": "Ahorro personal: importancia y técnicas",
+          "contenido": "Ahorrar es separar una parte de tus ingresos para el futuro. Técnicas: 'págate primero' (ahorra antes de gastar), automatiza transferencias, fija metas de ahorro. Ejemplo: Programar una transferencia automática a tu cuenta de ahorros cada vez que recibes tu sueldo."
+        },
+        {
+          "leccion": "Ahorro e inversión y sus riesgos",
+          "contenido": "Ahorrar es seguro pero da pocos intereses; invertir puede dar más ganancias pero implica riesgos. Para minimizar riesgos: infórmate, diversifica, invierte solo lo que puedes perder. Ejemplo: No pongas todos tus ahorros en un solo negocio, reparte entre diferentes opciones."
+        },
+        {
+          "leccion": "Tipos de ahorro",
+          "contenido": "Ahorro líquido: puedes usar el dinero cuando quieras (ej. cuenta de ahorros). Ahorro a plazo: no puedes retirarlo antes de una fecha, pero da más intereses (ej. depósito a plazo fijo). Ejemplo: Tener una parte de tus ahorros en una cuenta de fácil acceso y otra en un depósito a plazo."
+        },
+        {
+          "leccion": "Introducción a la inversión",
+          "contenido": "Invertir es poner tu dinero a trabajar en negocios, bienes raíces, fondos, etc. Antes de invertir, infórmate sobre riesgos, plazos y posibles ganancias. Ejemplo: Invertir en un pequeño negocio familiar, comprar acciones o bonos."
+        },
+        {
+          "leccion": "Control de gastos y su importancia",
+          "contenido": "Llevar un registro de todos tus gastos te permite identificar fugas de dinero y ajustar tu comportamiento. Elimina gastos innecesarios y prioriza lo esencial. Ejemplo: Usar una app o libreta para anotar cada gasto diario."
+        },
+        {
+          "leccion": "Gastos innecesarios",
+          "contenido": "Son compras o pagos que no aportan valor real. Identificarlos y eliminarlos mejora tu economía. Ejemplo: Cancelar suscripciones que no usas, evitar compras impulsivas."
+        },
+        {
+          "leccion": "Manejo responsable de deudas y cómo enfrentarlas",
+          "contenido": "Prioriza pagar deudas con mayor interés, negocia plazos si es necesario, evita nuevas deudas y busca apoyo si no puedes pagar. Ejemplo: Unificar deudas en un solo préstamo con menor interés, buscar asesoría financiera."
+        },
+        {
+          "leccion": "Cómo volver a ser rentables y productivos en nuestros negocios",
+          "contenido": "Analiza tus ingresos y gastos, elimina lo que no aporta, busca nuevas oportunidades y capacítate constantemente. Ejemplo: Mejorar la atención al cliente, diversificar productos, reducir costos innecesarios."
+        }
+      ],
+      "bibliografia": [
+        {
+          "titulo": "Padre Rico, Padre Pobre",
+          "autor": "Robert Kiyosaki",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "El Hombre Más Rico de Babilonia",
+          "autor": "George S. Clason",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "Finanzas Personales para Dummies",
+          "autor": "Vicens Castellano",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "Pequeño Cerdo Capitalista",
+          "autor": "Sofía Macías",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "El Camino hacia la Libertad Financiera",
+          "autor": "Bodo Schäfer",
+          "tipo": "Libro"
+        }
+      ],
+      "preguntas": [
+        "¿Por qué es importante llevar un registro de tus gastos?",
+        "¿Qué ventajas tiene elaborar un presupuesto mensual?",
+        "¿Cómo puedes empezar a ahorrar si tienes ingresos limitados?",
+        "¿Qué riesgos implica no controlar tus deudas?",
+        "¿Cuál es la diferencia entre ahorrar e invertir?",
+        "¿Por qué es importante diversificar tus inversiones?",
+        "¿Qué gastos puedes eliminar para mejorar tu economía?",
+        "¿Cómo puedes enfrentar una deuda que te supera?",
+        "¿Qué acciones puedes tomar para que tu negocio sea más rentable y productivo?"
+      ]
+    }
+  ]
+}

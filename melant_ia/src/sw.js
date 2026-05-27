@@ -2,8 +2,8 @@ const CACHE_NAME = 'melantia-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/assets/ui/ml5.min.js',
-  '/assets/ui/models/coco-ssd/model.json', // Ajusta esta ruta si es necesario
+  '/js/ml5.min.js',
+  // '/assets/ui/models/coco-ssd/model.json', // Ruta comentada porque no existe
 ];
 
 // Instalar y cachear assets

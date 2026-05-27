@@ -8,7 +8,22 @@
     <link rel="manifest" href="manifest.json" />
     <script src="https://unpkg.com"></script>
 
+    <link
+      rel="icon"
+      type="image/webp"
+      href="storage/assets/icono_melantia.webp"
+    />
+    <link rel="apple-touch-icon" href="storage/assets/icono_melantia.webp" />
+
     <link rel="stylesheet" href="styles.css" />
+    <!-- CSS de afiliados solo para móviles -->
+    <link
+      rel="stylesheet"
+      href="modules/01_suscripciones/afiliados_controller.css"
+      media="(max-width: 600px)"
+    />
+    <!-- Ejemplo: otro CSS solo para impresión -->
+    <!-- <link rel="stylesheet" href="modules/01_suscripciones/afiliados_controller.css" media="print" /> -->
   </head>
   <script>
     if ('serviceWorker' in navigator) {
@@ -26,6 +41,14 @@
   </script>
   <body>
     <!-- Banner de estado offline -->
+    <div id="splash-screen">
+      <img
+        src="storage/assets/melantia_idle.webp"
+        alt="Melantia en reposo"
+        class="img-idle"
+      />
+      <h1>MELANT IA</h1>
+    </div>
     <div
       id="status-banner"
       style="
@@ -159,7 +182,7 @@
     <!-- Botón para buscar mejor cobertura en la tienda -->
     <div
       id="btn-cobertura-tienda-wrap"
-      style="text-align: center; margin: 18px 0"
+      style="text-align: center; margin: 18px 0; display: none"
     >
       <button
         id="btn-cobertura-tienda"
@@ -186,7 +209,7 @@
     <header>
       <h1>MELANTIA</h1>
       <p id="app-slogan" class="slogan">
-        PRODUCTIVIDAD AGRÍCOLA INTELIGENTE OFFLINE
+        PRODUCTIVIDAD AGROPECUARIA INTELIGENTE OFFLINE
       </p>
       <div class="offline-badge">FUNCIONA SIN INTERNET 🛜</div>
 
@@ -248,8 +271,9 @@
       <img
         id="robot-asistente"
         class="robot-icon"
-        src="src/storage/assets/melantia_idle.png"
+        src="src/storage/assets/melantia_idle.webp"
         alt="MELANTIA"
+        loading="lazy"
         onerror="
           this.style.display = 'none';
           this.nextElementSibling.style.display = 'block';
@@ -294,5 +318,34 @@
       >
       &nbsp;|&nbsp; © 2026 MELANTIA
     </footer>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((reg) => console.log('Service Worker registrado:', reg.scope))
+            .catch((err) => console.log('Error al registrar SW:', err));
+        });
+      }
+    </script>
+    <!-- Phoenix JS (ajusta según los módulos que uses) -->
+    <script src="js/phoenix/constants.js"></script>
+    <script src="js/phoenix/utils.js"></script>
+    <script src="js/phoenix/ajax.js"></script>
+    <script src="js/phoenix/timer.js"></script>
+    <script src="js/phoenix/serializer.js"></script>
+    <script src="js/phoenix/push.js"></script>
+    <script src="js/phoenix/channel.js"></script>
+    <script src="js/phoenix/presence.js"></script>
+    <script src="js/phoenix/longpoll.js"></script>
+    <script src="js/phoenix/socket.js"></script>
+    <script src="js/phoenix/types.js"></script>
+    <script src="js/phoenix/index.js"></script>
+
+    <!-- ml5.js IA -->
+    <script src="js/ml5.min.js"></script>
+
+    <!-- Otros scripts de tu app -->
+    <!-- <script src="js/tu_script.js"></script> -->
   </body>
 </html>

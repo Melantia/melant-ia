@@ -153,6 +153,9 @@ const Precision = {
   }
 };
 
+// Permitir carga dinámica como submódulo
+export { Precision };
+
 document.addEventListener('DOMContentLoaded', () => {
   const view = document.getElementById('view-precision');
   if (view) {

@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Arraigo: Del campo venimos, en el campo crecemos y a la tierra nos debemos.",
+    "explicacion": "El sentido de pertenencia al campo es la raíz de nuestra identidad rural.",
+    "bibliografia": []
+  },
+  {
+    "id": 2,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Autenticidad: Agricultor por herencia, orgulloso por elección.",
+    "explicacion": "La autenticidad del agricultor reside en su vocación y orgullo por el trabajo rural.",
+    "bibliografia": []
+  },
+  {
+    "id": 3,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Base: La agricultura es la madre fecunda que mueve al comercio y al arte.",
+    "explicacion": "La agricultura es el fundamento de la economía y la cultura. (Manuel Belgrano)",
+    "bibliografia": [
+      "https://es.scribd.com/document/796093699/Frases-de-Agricultura"
+    ]
+  },
+  {
+    "id": 4,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Dignidad: Ningún oficio es más digno para un hombre libre que cultivar la tierra.",
+    "explicacion": "El cultivo de la tierra es símbolo de libertad y dignidad. (Cicerón)",
+    "bibliografia": ["https://es.wikiquote.org/wiki/Agricultura"]
+  },
+  {
+    "id": 5,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Esencia: Sangre, sudor y tierra: la herencia de los que alimentan al mundo.",
+    "explicacion": "El esfuerzo y la dedicación del agricultor son la base de la alimentación mundial.",
+    "bibliografia": []
+  },
+  {
+    "id": 6,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Patrimonio: El campo es el verdadero motor y corazón de nuestra geografía.",
+    "explicacion": "El campo sostiene la vida y la economía de la nación.",
+    "bibliografia": []
+  },
+  {
+    "id": 7,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Pilares: El campo son los pies que sostienen a toda la nación.",
+    "explicacion": "La agricultura es el pilar fundamental de la sociedad. (Tomás Moro)",
+    "bibliografia": [
+      "https://es.scribd.com/document/796093699/Frases-de-Agricultura"
+    ]
+  },
+  {
+    "id": 8,
+    "bloque": "Identidad, Tradición y Patria",
+    "lema": "Soberanía: Un pueblo que sabe cultivar su tierra es un pueblo libre.",
+    "explicacion": "La soberanía alimentaria es la base de la libertad de los pueblos.",
+    "bibliografia": ["https://www.mundifrases.com/tema/agricultura/"]
+  },
+  {
+    "es_especial": false,
+    "categoria": "Honestidad",
+    "lema": "El fruto más valioso de la labranza es un apellido limpio.",
+    "explicacion": "Los negocios del campo prosperan cuando la palabra empeñada vale más que cualquier papel firmado."
+  },
+  {
+    "es_especial": false,
+    "categoria": "Emprendedor Rural",
+    "lema": "Innovación en las ideas, tradición en el esfuerzo.",
+    "explicacion": "El productor moderno utiliza la tecnología y nuevas técnicas para hacer rendir el legado de sus ancestros."
+  },
+  {
+    "es_especial": false,
+    "categoria": "La Tierra",
+    "lema": "Trata bien a la tierra hoy y ella te alimentará mañana.",
+    "explicacion": "El suelo fértil es un préstamo de la naturaleza que debemos cuidar con abonos orgánicos y labranza responsable."
+  },
+  {
+    "es_especial": false,
+    "categoria": "La Naturaleza",
+    "lema": "El campo no nos pertenece, nosotros pertenecemos a sus ciclos.",
+    "explicacion": "Aprender a observar el viento, la lluvia y los tiempos del ecosistema es el secreto del productor sabio."
+  },
+  {
+    "es_especial": false,
+    "categoria": "El Agro",
+    "lema": "La agricultura es el motor silencioso que mueve a las grandes ciudades.",
+    "explicacion": "Aunque el trabajo en el surco ocurre lejos del pavimento, de él depende la vida de todas las naciones."
+  },
+  {
+    "es_especial": false,
+    "categoria": "Honestidad",
+    "lema": "Báscula exacta y trato justo: el sello del buen productor.",
+    "explicacion": "La transparencia en el pesaje y en las ventas asegura clientes de por vida y la bendición en las finanzas."
+  },
+  {
+    "es_especial": false,
+    "categoria": "Emprendedor Rural",
+    "lema": "El verdadero valor del agro está en transformar la materia prima.",
+    "explicacion": "El campo prospera cuando dejamos de vender solo materias primas y empezamos a crear productos con valor agregado."
+  },
+  {
+    "es_especial": false,
+    "categoria": "La Tierra",
+    "lema": "En cada puñado de suelo fértil habitan millones de aliados para el cultivo.",
+    "explicacion": "Proteger la vida microbiológica de la tierra es la clave para obtener plantas fuertes y cosechas abundantes."
+  },
+  {
+    "es_especial": false,
+    "categoria": "La Naturaleza",
+    "lema": "Producir en armonía con el entorno es el único camino hacia el porvenir.",
+    "explicacion": "Cuidar las fuentes de agua y los árboles nativos garantiza la supervivencia de nuestra propia producción."
+  },
+  {
+    "es_especial": false,
+    "categoria": "El Agro",
+    "lema": "La labranza enseña que las grandes recompensas requieren paciencia y cuidado.",
+    "explicacion": "En el campo nada ocurre de la noche a la mañana; la constancia en el manejo técnico siempre rinde frutos."
+  },
+  {
+    "es_especial": false,
+    "categoria": "Honestidad",
+    "lema": "Trabajar de cara al sol y con la verdad por delante.",
+    "explicacion": "No hay mayor tranquilidad que vender un producto sabiendo que su calidad es real y transparente."
+  },
+  {
+    "es_especial": false,
+    "categoria": "Emprendedor Rural",
+    "lema": "Finca diversificada, economía rural asegurada.",
+    "explicacion": "El emprendedor inteligente no pone todos sus recursos en un solo cultivo; diversifica para reducir riesgos climáticos."
+  }
+]

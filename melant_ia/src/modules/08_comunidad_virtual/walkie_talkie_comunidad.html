@@ -49,6 +49,42 @@
   </head>
   <body>
     <div id="walkie-container">
+      <div
+        id="explicacion-don-eloy"
+        style="
+          background: #fefcbf;
+          color: #744210;
+          border-radius: 8px;
+          padding: 10px;
+          margin-bottom: 12px;
+          border: 1px solid #f6e05e;
+          font-size: 15px;
+        "
+      >
+        <b>Don Eloy te explica:</b><br />
+        <ul style="margin: 8px 0 0 18px; padding: 0">
+          <li>
+            Pulsa <b>Enviar</b> para mandar un mensaje de texto a la comunidad o
+            a tu grupo.
+          </li>
+          <li>
+            Pulsa <b>🎤 Push to Talk</b> para grabar y enviar un mensaje de voz
+            (máx. 3 segundos).
+          </li>
+          <li>
+            La comunicación es directa y segura entre vecinos (P2P). Si hay
+            varios conectados, el mensaje viaja por todos.
+          </li>
+          <li>
+            ¡No necesitas internet! Si hay señal mesh o red local, funciona
+            igual.
+          </li>
+        </ul>
+        <span style="color: #b91c1c; font-size: 13px"
+          >Recuerda: No uses palabras ofensivas ni política. Yo, Don Eloy,
+          modero el canal.</span
+        >
+      </div>
       <div id="mensajes-lista"></div>
       <input
         id="mensaje-input"
@@ -60,7 +96,23 @@
       <div id="audios-lista"></div>
     </div>
     <script src="walkie_talkie.js"></script>
+    <script src="walkie_talkie_p2p.js"></script>
     <script>
+      // Permite abrir el walkie talkie desde otros módulos
+      window.abrirWalkieTalkie = function (contexto) {
+        // Se puede usar contexto para filtrar mensajes o mostrar info
+        // Por ahora solo muestra el panel, pero se puede expandir
+        document
+          .getElementById('walkie-container')
+          .scrollIntoView({ behavior: 'smooth' });
+        // Opcional: mostrar mensaje contextual
+        if (contexto) {
+          const explic = document.getElementById('explicacion-don-eloy');
+          if (explic) {
+            explic.innerHTML += `<div style='margin-top:8px;font-size:13px;color:#1e88e5;'>Modo rápido desde: <b>${contexto.replace('_', ' ').toUpperCase()}</b></div>`;
+          }
+        }
+      };
       // --- Integración básica ---
       const walkie = new WalkieTalkie();
       async function renderMensajes() {
@@ -101,6 +153,15 @@
         const input = document.getElementById('mensaje-input');
         if (input.value.trim()) {
           await walkie.agregarMensaje(input.value, window.usuarioActual);
+          // Enviar por P2P si está activo
+          if (window.p2pWalkie && window.p2pWalkie.estaActivo()) {
+            window.p2pWalkie.enviarMensaje({
+              tipo: 'texto',
+              texto: input.value,
+              autor: window.usuarioActual,
+              timestamp: Date.now(),
+            });
+          }
           input.value = '';
           await renderMensajes();
         }
@@ -122,6 +183,15 @@
           const blob = new Blob(chunks, { type: 'audio/webm' });
           const url = URL.createObjectURL(blob);
           await walkie.agregarAudio(url, window.usuarioActual);
+          // Enviar por P2P si está activo
+          if (window.p2pWalkie && window.p2pWalkie.estaActivo()) {
+            window.p2pWalkie.enviarMensaje({
+              tipo: 'audio',
+              blob,
+              autor: window.usuarioActual,
+              timestamp: Date.now(),
+            });
+          }
           await renderAudios();
         };
         recorder.start();
@@ -137,6 +207,20 @@
         }, 30000); // 30 segundos
       };
 
+      // --- Inicializar P2P ---
+      window.p2pWalkie = new P2PWalkie({
+        onMensajeRecibido: async (msg) => {
+          if (msg.tipo === 'texto') {
+            await walkie.agregarMensaje(msg.texto, msg.autor);
+            await renderMensajes();
+          } else if (msg.tipo === 'audio') {
+            // Recibe blob de audio
+            const url = URL.createObjectURL(msg.blob);
+            await walkie.agregarAudio(url, msg.autor);
+            await renderAudios();
+          }
+        },
+      });
       // Cargar mensajes/audios al iniciar
       renderMensajes();
       renderAudios();

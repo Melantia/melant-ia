@@ -1,0 +1,22 @@
+{
+  "memoria_viva": [
+    {
+      "id": "relato_001",
+      "titulo": "La siembra según la luna",
+      "autor_sabio": "Don Eloy",
+      "contenido": "Texto o enlace al audio...",
+      "tags": ["luna", "siembra", "ancestral"],
+      "fecha": "2026-05-26"
+    }
+  ],
+  "herbario_cultural": [
+    {
+      "id": "planta_001",
+      "nombre_cientifico": "Ocimum basilicum",
+      "nombre_local": "Albahaca",
+      "usos_medicinales": "Dolor de estómago, nervios",
+      "historia_cultural": "Usada tradicionalmente para proteger la casa...",
+      "imagen_url": "storage/assets/albahaca.webp"
+    }
+  ]
+}

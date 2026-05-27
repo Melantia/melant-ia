@@ -1,16 +1,16 @@
 {
   "name": "MELANTIA",
   "short_name": "MELANTIA",
-  "description": "Asistente integral MELANTIA: Potencia tu producción con IA local. FUNCIONA SIN INTERNET.",
+  "description": "PRODUCTIVIDAD AGROPECUARIA INTELIGENTE OFFLINE. FUNCIONA SIN INTERNET.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#276749",
   "theme_color": "#276749",
   "icons": [
     {
-      "src": "src/storage/assets/icon_512.png",
+      "src": "storage/assets/icono_melantia.webp",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/webp"
     }
   ]
 }

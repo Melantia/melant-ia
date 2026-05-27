@@ -1,0 +1,120 @@
+{
+  "cursos_finanzas_personales": [
+    {
+      "nombre": "Fundamentos de Finanzas Personales",
+      "objetivos": [
+        "Comprender la importancia de la gestión financiera personal.",
+        "Aprender a elaborar y controlar un presupuesto.",
+        "Identificar hábitos financieros saludables."
+      ],
+      "temas": [
+        "¿Qué son las finanzas personales?",
+        "Elaboración de presupuestos",
+        "Ahorro e inversión",
+        "Control de gastos",
+        "Deudas y su manejo"
+      ],
+      "beneficios": [
+        "Mejor toma de decisiones económicas.",
+        "Reducción del estrés financiero.",
+        "Capacidad de ahorro y planificación a futuro."
+      ],
+      "curriculum": [
+        {
+          "leccion": "Introducción a las Finanzas Personales",
+          "contenido": "Conceptos básicos, importancia y objetivos."
+        },
+        {
+          "leccion": "Presupuestos: tu mapa financiero",
+          "contenido": "Cómo crear, mantener y ajustar un presupuesto personal."
+        },
+        {
+          "leccion": "Ahorro e inversión",
+          "contenido": "Estrategias para ahorrar, tipos de ahorro, introducción a la inversión."
+        },
+        {
+          "leccion": "Control de gastos y deudas",
+          "contenido": "Identificación de gastos innecesarios, manejo responsable de deudas."
+        }
+      ],
+      "bibliografia": [
+        {
+          "titulo": "Padre Rico, Padre Pobre",
+          "autor": "Robert Kiyosaki",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "El Hombre Más Rico de Babilonia",
+          "autor": "George S. Clason",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "Finanzas Personales para Dummies",
+          "autor": "Vicens Castellano",
+          "tipo": "Libro"
+        }
+      ],
+      "preguntas": [
+        "¿Por qué es importante llevar un registro de tus gastos?",
+        "¿Qué ventajas tiene elaborar un presupuesto mensual?",
+        "¿Cómo puedes empezar a ahorrar si tienes ingresos limitados?",
+        "¿Qué riesgos implica no controlar tus deudas?"
+      ]
+    },
+    {
+      "nombre": "Ahorro e Inversión para Todos",
+      "objetivos": [
+        "Diferenciar entre ahorro e inversión.",
+        "Conocer instrumentos básicos de inversión.",
+        "Desarrollar hábitos de ahorro sostenibles."
+      ],
+      "temas": [
+        "¿Por qué ahorrar?",
+        "Opciones de ahorro",
+        "Riesgo y rentabilidad",
+        "Inversiones seguras para principiantes"
+      ],
+      "beneficios": [
+        "Incremento del patrimonio personal.",
+        "Mayor seguridad ante imprevistos.",
+        "Acceso a oportunidades de inversión."
+      ],
+      "curriculum": [
+        {
+          "leccion": "El hábito del ahorro",
+          "contenido": "Técnicas y motivaciones para ahorrar regularmente."
+        },
+        {
+          "leccion": "Instrumentos de ahorro",
+          "contenido": "Cuentas de ahorro, alcancías, fondos."
+        },
+        {
+          "leccion": "Introducción a la inversión",
+          "contenido": "Diferencias entre ahorro e inversión, riesgos y beneficios."
+        },
+        {
+          "leccion": "Primeros pasos como inversionista",
+          "contenido": "Cómo elegir inversiones seguras y accesibles."
+        }
+      ],
+      "bibliografia": [
+        {
+          "titulo": "Pequeño Cerdo Capitalista",
+          "autor": "Sofía Macías",
+          "tipo": "Libro"
+        },
+        {
+          "titulo": "El Camino hacia la Libertad Financiera",
+          "autor": "Bodo Schäfer",
+          "tipo": "Libro"
+        }
+      ],
+      "preguntas": [
+        "¿Cuál es la diferencia entre ahorrar e invertir?",
+        "¿Qué instrumentos de ahorro conoces?",
+        "¿Por qué es importante diversificar tus inversiones?",
+        "¿Qué riesgos debes considerar antes de invertir?"
+      ]
+    }
+  ]
+}

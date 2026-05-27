@@ -26,38 +26,8 @@ export class CiudadanoRural {
     };
   }
 
-  // Mostrar requisitos para solicitar créditos BanEcuador
-  obtenerRequisitosCreditoBanEcuador() {
-    return [
-      'Copia de cédula y papeleta de votación',
-      'Certificado de Productor (fotos de evidencia)',
-      'Plan de inversión detallado',
-      'Récord de sede/productivo',
-      'Certificado de no adeudar al SRI/IESS',
-      'Estatutos y acta constitutiva (si es asociación)',
-      'Otros documentos según el tipo de crédito',
-    ];
-  }
-
-  // Don Eloy ayuda a armar la carpeta de crédito
-  armarCarpetaCredito(usuario) {
-    const requisitos = this.obtenerRequisitosCreditoBanEcuador();
-    return {
-      mensaje: `Hola ${usuario}, soy Don Eloy y te ayudo a armar tu carpeta para BanEcuador. Asegúrate de tener:`,
-      requisitos,
-    };
-  }
-
-  // Guía de Agrocalidad para trámites y certificaciones
-  obtenerGuiaAgrocalidad() {
-    return [
-      'Registro de predio y productor',
-      'Certificación de Buenas Prácticas Agrícolas (BPA)',
-      'Certificado fitosanitario para exportación',
-      'Guía de movilización de productos',
-      'Otros trámites según el rubro',
-    ];
-  }
+  // --- Lógica de trámites y normativa se mueve a archivos separados ---
+  // Métodos eliminados del panel visual de reputación y sello confiable.
 
   // Asesor Legal guía en documentación para organizaciones/comunas
   obtenerGuiaOrganizaciones() {
@@ -232,4 +202,6 @@ export class CiudadanoRural {
   obtenerPrecios() {
     return this.precios;
   }
+
+  // --- Fin de CiudadanoRural. Panel visual de reputación y sello confiable eliminado. ---
 }

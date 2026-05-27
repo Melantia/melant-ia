@@ -17,3 +17,6 @@ const AsistenteTecnico = {
     return `MELANTIA-CACAO-${loteId}-${productor}`;
   },
 };
+
+// Permitir carga dinámica como submódulo
+export { AsistenteTecnico };

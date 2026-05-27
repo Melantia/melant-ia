@@ -4,7 +4,17 @@
 
 // Carga dinámica de módulos desde el JSON de configuración
 function cargarEstructuraApp(callback) {
-  fetch('app_structure_melant_ia.json')
+  // Buscar el JSON en la raíz de src, sin importar desde dónde se llame
+  let ruta = '';
+  if (
+    window.location.pathname.endsWith('/index.html') ||
+    window.location.pathname.endsWith('/')
+  ) {
+    ruta = 'app_structure_melant_ia.json';
+  } else {
+    ruta = '../app_structure_melant_ia.json';
+  }
+  fetch(ruta)
     .then((response) => {
       if (!response.ok)
         throw new Error('No se pudo leer app_structure_melant_ia.json');
@@ -93,7 +103,97 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 // ===================== Exportar función global para la UI =====================
+// Panel de detalle de módulo
 window.abrirModuloEspecifico = function (id, titulo) {
-  console.log(`[MELANTIA CORE] Abriendo módulo ID ${id}: ${titulo}`);
-  alert(`Cargando entorno de: ${titulo}`);
+  // Buscar el JSON en la raíz de src, igual que en cargarEstructuraApp
+  let ruta = '';
+  if (
+    window.location.pathname.endsWith('/index.html') ||
+    window.location.pathname.endsWith('/')
+  ) {
+    ruta = 'app_structure_melant_ia.json';
+  } else {
+    ruta = '../app_structure_melant_ia.json';
+  }
+  fetch(ruta)
+    .then((response) => response.json())
+    .then((data) => {
+      const modulos = data.menu_principal.modulos;
+      const modulo = modulos.find((m) => m.id === id);
+      if (!modulo) return;
+
+      // Ocultar el menú principal
+      const contenedorMenu =
+        document.getElementById('contenedor-modulos-menu') || document.body;
+      contenedorMenu.innerHTML = '';
+
+      // Mostrar/ocultar botón de cobertura según el módulo
+      const btnCobertura = document.getElementById('btn-cobertura-tienda-wrap');
+      if (
+        modulo.titulo === 'Tienda MELANTIA' ||
+        modulo.titulo === 'Monte su TIENDA VIRTUAL' ||
+        (modulo.items &&
+          modulo.items.some((i) => i.toLowerCase().includes('tienda')))
+      ) {
+        btnCobertura && (btnCobertura.style.display = 'block');
+      } else {
+        btnCobertura && (btnCobertura.style.display = 'none');
+      }
+
+      // Panel de detalle
+      let html = `<div style=\"max-width:600px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;\">
+        <h2 style='color:#276749;margin-bottom:8px;'>${modulo.titulo}</h2>
+        <p style='color:#444;font-size:1.1em;margin-bottom:18px;'>${modulo.descripcion || 'Sin descripción disponible.'}</p>`;
+      if (modulo.items && modulo.items.length > 0) {
+        html += `<h4 style='margin-bottom:8px;'>Opciones disponibles:</h4><ul style='padding-left:20px;'>`;
+        modulo.items.forEach((item) => {
+          html += `<li style='margin-bottom:6px;'>${item}</li>`;
+        });
+        html += `</ul>`;
+      }
+      html += `<button onclick=\"window.volverAlMenuPrincipal()\" style=\"margin-top:24px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;\">Volver al menú principal</button></div>`;
+
+      contenedorMenu.innerHTML = html;
+
+      // === CARGA DINÁMICA DE FUNCIONALIDAD DEL MÓDULO ===
+      // Mapear títulos a archivos JS (ajusta según tus módulos reales)
+      const moduloMap = {
+        'Tienda MELANTIA': './modules/modulo_negocios.js',
+        'Monte su TIENDA VIRTUAL': './modules/modulo_negocios.js',
+        Suscripciones: './modules/01_suscripciones/afiliados_controller.js',
+        'Asistente Técnico Rural':
+          './modules/02_asistente_tecnico_rural/asistencia_tecnica_rural.js',
+        'Gestión de Fincas y Trazabilidad': './modules/modulo_trazabilidad.js',
+        Proyectos: './modules/modulo_proyectos.js',
+        'Escuela de Campo': './modules/modulo_escuela.js',
+        'Mi Comunidad Virtual': './modules/modulo_comunidad.js',
+        'Asistente Preventivo de Salud': './modules/modulo_salud.js',
+        'Servicios Financieros Melantia': './modules/servicios_financieros.js',
+        'Registro Evidencias y Documentos': './modules/modulo_evidencias.js',
+        // Agrega aquí más módulos según tu estructura
+      };
+      const jsPath = moduloMap[modulo.titulo];
+      if (jsPath) {
+        import(jsPath)
+          .then((mod) => {
+            // Si el módulo exporta una función principal, ejecútala
+            if (typeof mod.default === 'function') {
+              mod.default();
+            } else if (typeof window.cargarDatosModulo === 'function') {
+              window.cargarDatosModulo(id, modulo.titulo);
+            }
+          })
+          .catch((err) => {
+            console.error('[MELANTIA] Error al cargar el módulo JS:', err);
+          });
+      }
+    });
+};
+
+// Función para volver al menú principal
+window.volverAlMenuPrincipal = function () {
+  // Ocultar el botón de cobertura
+  const btnCobertura = document.getElementById('btn-cobertura-tienda-wrap');
+  if (btnCobertura) btnCobertura.style.display = 'none';
+  cargarEstructuraApp(renderizarModulosPrincipales);
 };

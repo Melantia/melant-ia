@@ -1,10 +1,11 @@
-# Definición de niveles en la lógica de Tienda Virtual MELANTIA
 
-PLANES_MELANTIA = {
-    "SEMILLA": {"limite": 10, "precio": 0, "dias": 30},
-    "PRODUCTOR": {"limite": 250, "precio": 25, "dias": 30},
-    "PREMIUM": {"limite": 1000, "precio": 50, "dias": 30}
-}
+# Definición de niveles en la lógica de Tienda Virtual MELANTIA (centralizado)
+import json
+import os
+
+RUTA_PLANES = os.path.join(os.path.dirname(__file__), '..', '01_suscripciones', 'planes_tienda_virtual.json')
+with open(RUTA_PLANES, encoding='utf-8') as f:
+    PLANES_MELANTIA = json.load(f)
 
 def bienvenida_don_eloy(usuario):
     if usuario.plan == "SEMILLA":

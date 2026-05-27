@@ -1,4 +1,3 @@
-javascript;
 // modules/melantio_ui.js
 // Lógica UI para Melantio: botón de canje, utilidades y renderizado de módulos
 // NOTA: Melantio solo interviene con voz para explicar la conversión "100 Melantios = $1" al consultar saldo.
@@ -29,7 +28,7 @@ function crearBotonCanjemelantios(callbackFuncion) {
       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
       title="Solo puedes cubrir hasta el 25% del valor del producto con Melantios. El resto debe ser en dinero real."
     >
-      <img src="/src/assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />
+      <img src="assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />
       <span>Usar Melantios (máx. 25%)</span>
     </button>
   `;
@@ -46,7 +45,7 @@ function crearMelantioBadge(cantidad) {
 
 function crearMelantioBadgeConUSD(cantidad) {
   const usd = calcularValorPremios(cantidad).toFixed(2);
-  const svgIcon = `<img src="/src/assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />`;
+  const svgIcon = `<img src="assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />`;
 
   if (typeof window !== 'undefined' && window.speechSynthesis) {
     const mensaje = `Recuerda: 100 Melantios equivalen a 1 dólar. Tu saldo es de ${cantidad} Melantios, es decir, $${usd} dólares.`;
@@ -181,9 +180,30 @@ function renderizarModulosPrincipales(modulos) {
   }
 }
 
-function abrirModuloEspecifico(id, titulo) {
+async function abrirModuloEspecifico(id, titulo) {
   console.log(`[MELANTIA UI] Abriendo módulo ID ${id}: ${titulo}`);
-  alert(`Cargando entorno de: ${titulo}`);
+  try {
+    // Mostrar estado de carga en la UI
+    const contenedor =
+      document.getElementById('contenedor-principal') || document.body;
+    if (contenedor)
+      contenedor.innerHTML = `<p style='text-align:center;font-size:1.2em;margin:40px 0;'>Cargando <b>${titulo}</b>...</p>`;
+
+    // Lógica de carga real del módulo (debes implementar cargarDatosModulo según tu estructura)
+    if (typeof cargarDatosModulo === 'function') {
+      await cargarDatosModulo(id, titulo);
+    } else {
+      // Si no existe, solo muestra el panel de carga
+      contenedor.innerHTML += `<p style='color:#b91c1c;text-align:center;'>No se encontró la función de carga para este módulo.</p>`;
+    }
+    console.log(`[MELANTIA UI] Módulo ${id} cargado exitosamente.`);
+  } catch (error) {
+    console.error(
+      `[MELANTIA UI] Error crítico al cargar el módulo ${id}:`,
+      error
+    );
+    alert('No se pudo cargar el entorno. Verifica tu conexión local.');
+  }
 }
 
 // =========================================================================

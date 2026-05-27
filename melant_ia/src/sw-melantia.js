@@ -1,21 +1,17 @@
 // sw-melantia.js — Service Worker para actualización híbrida MELANTIA
 const CACHE_NAME = 'melantia-cache-v1';
+// Solo recursos esenciales para arranque y uso offline básico
 const RECURSOS_CRITICOS = [
   '/knowledge_seeds/config.json',
-  '/knowledge_seeds/10_comunidad_virtual/legal_data/guia_procesos_legales.json',
-  '/knowledge_seeds/voces_melantia.json',
   '/knowledge_seeds/update.json',
-  '/knowledge_seeds/modulo_seguridad.json',
-  '/knowledge_seeds/don_eloy_historias.json',
-  '/knowledge_seeds/config_voz.json',
-  // Agrega más recursos si es necesario
+  // Elimina PDFs, imágenes grandes y recursos no críticos
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(RECURSOS_CRITICOS))
   );
-});
+});)
 
 self.addEventListener('fetch', (event) => {
   if (RECURSOS_CRITICOS.some((r) => event.request.url.includes(r))) {

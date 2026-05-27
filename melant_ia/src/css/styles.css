@@ -1,3 +1,65 @@
+/* === TARJETAS Y ESTADOS MELANTIA === */
+.glass-card {
+  background: rgba(
+    24,
+    46,
+    28,
+    0.85
+  ); /* Usa el color --bg-card con transparencia */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 14px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cultivo-card {
+  animation: fadeIn 0.4s ease;
+}
+
+.badge-offline {
+  background: #a4ff3f;
+  color: #0c1a0e;
+  padding: 4px 10px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state {
+  text-align: center;
+  opacity: 0.7;
+  color: #fff;
+  font-size: 1.1em;
+  margin: 32px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* === ICONOS SVG SPRITE MELANTIA === */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #5d4037; /* Color tierra, acorde a la identidad */
+  transition: fill 0.3s;
+}
+.icon:hover {
+  fill: #8d6e63;
+}
 .melantio-icon {
   width: 24px;
   height: 18px;

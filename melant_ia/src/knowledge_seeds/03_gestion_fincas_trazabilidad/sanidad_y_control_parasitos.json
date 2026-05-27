@@ -1,0 +1,18 @@
+{
+  "tema": "sanidad_y_control_parasitos",
+  "archivos": [
+    "El manejo integral de pulgas, moscas y garrapatas.docx.txt",
+    "El control biológico de ectoparásitos (garrapatas, moscas) en ganado.txt",
+    "El uso de hogos en el ecuador para el control de moscas, garrapatas en el ganado bovino.docx.txt"
+  ],
+  "contenido": {
+    "manejo_integral": "El manejo integral de pulgas, moscas y garrapatas en el ganado combina métodos químicos (baños, pour-on, aretes insecticidas, ivermectinas), preventivos (sal mineralizada con azufre, rotación de potreros) y biológicos (hongos entomopatógenos como Beauveria bassiana). Es clave la rotación de productos y la limpieza de instalaciones para evitar resistencias y pérdidas económicas.",
+    "control_biologico": "El control biológico de ectoparásitos utiliza hongos entomopatógenos aplicados por aspersión para combatir garrapatas y moscas sin generar resistencia. El manejo ambiental y la rotación de potreros son fundamentales.",
+    "impacto_economico": "Los ectoparásitos provocan pérdidas económicas significativas en la producción de leche y carne, además de transmitir enfermedades como babesia, anaplasma y queratoconjuntivitis.",
+    "referencias": [
+      "El manejo integral de pulgas, moscas y garrapatas.docx.txt",
+      "El control biológico de ectoparásitos (garrapatas, moscas) en ganado.txt",
+      "El uso de hogos en el ecuador para el control de moscas, garrapatas en el ganado bovino.docx.txt"
+    ]
+  }
+}

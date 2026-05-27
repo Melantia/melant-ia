@@ -29,6 +29,9 @@ const Salud = {
   },
 };
 
+// Permitir carga dinámica como submódulo
+export { Salud };
+
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('view-salud')) Salud.init();
 });

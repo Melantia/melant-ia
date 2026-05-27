@@ -23,12 +23,14 @@ def confirmar_venta_exitosa(id_venta, datos_vendedor):
     
     enviar_notificacion_vendedor(datos_vendedor['telefono'], aviso_tienda)
 
-# --- Tabla de Planes MELANTIA actualizada ---
-PLANES_MELANTIA = {
-    "SEMILLA": {"limite": 10, "precio": 0, "prioridad": 3, "almacenamiento": "50 MB"},
-    "PRODUCTOR": {"limite": 250, "precio": 25, "prioridad": 2, "almacenamiento": "500 MB"},
-    "PROFESIONAL": {"limite": 1000, "precio": 50, "prioridad": 1, "almacenamiento": "2 GB"}
-}
+
+# --- TABLA DE PLANES DE LA TIENDA MELANTIA centralizada ---
+import json
+import os
+
+RUTA_PLANES = os.path.join(os.path.dirname(__file__), 'modules', '01_suscripciones', 'planes_tienda_virtual.json')
+with open(RUTA_PLANES, encoding='utf-8') as f:
+    PLANES_MELANTIA = json.load(f)
 
 def configurar_perfil_tienda(usuario_id, tipo_plan):
     if tipo_plan == "PROFESIONAL":

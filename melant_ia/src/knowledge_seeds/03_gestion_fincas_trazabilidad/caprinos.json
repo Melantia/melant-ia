@@ -1,0 +1,17 @@
+{
+  "tema": "caprinos",
+  "archivos": ["PROCESO DE CRIA DE CABRAS.docx.txt"],
+  "contenido": {
+    "proceso_cria": "La cría de cabras en Ecuador es mayormente extensiva y familiar, enfocada en la producción de carne y leche. El proceso incluye selección de animales, manejo reproductivo estacional, parto, alimentación balanceada, sanidad (vacunación y desparasitación), y transformación artesanal de productos. Las principales razas son Boer, Saanen, Anglo Nubia y criollas. Es fundamental la capacitación y la mejora de instalaciones para aumentar la productividad y sostenibilidad.",
+    "fases_clave": [
+      "Diagnóstico y planificación",
+      "Manejo reproductivo (fotoperiodo, cruces)",
+      "Gestación y parto",
+      "Manejo de crías (descornado, desinfección, pesaje)",
+      "Alimentación y sanidad",
+      "Producción y venta"
+    ],
+    "zonas_principales": ["Loja", "Manabí", "Guayas", "Santa Elena"],
+    "referencias": ["PROCESO DE CRIA DE CABRAS.docx.txt"]
+  }
+}

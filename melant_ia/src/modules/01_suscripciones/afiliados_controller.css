@@ -1,0 +1,445 @@
+/*
+  Estilos del módulo SistemaAfiliados extraídos de afiliados_controller.js
+  Puedes importar este archivo en tu HTML o bundler para mejorar el rendimiento en móviles.
+*/
+.afiliados-wrapper {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.afiliados-shell {
+  display: grid;
+  gap: 16px;
+}
+.afiliados-hero {
+  display: grid;
+  grid-template-columns: 1.6fr minmax(220px, 320px);
+  gap: 16px;
+  align-items: stretch;
+  background: linear-gradient(135deg, #fff6eb 0%, #fff 100%);
+  border: 1px solid #f2d6b3;
+  border-radius: 22px;
+  padding: 18px;
+}
+.afiliados-eyebrow {
+  margin: 0 0 8px;
+  color: #9a611f;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.afiliados-legal-note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff8ef;
+  border: 1px solid #f0d4ad;
+  border-radius: 14px;
+  font-size: 13px;
+  color: #6b543b;
+}
+.afiliados-hero h2 {
+  margin: 0 0 8px;
+  color: #6f3d09;
+}
+.afiliados-hero p {
+  margin: 0;
+  color: #614b37;
+  line-height: 1.5;
+}
+.afiliados-pin-box {
+  display: grid;
+  gap: 8px;
+  background: #6f3d09;
+  color: #fff;
+  padding: 16px;
+  border-radius: 18px;
+  align-content: start;
+}
+.afiliados-pin-box span {
+  opacity: 0.8;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.afiliados-pin-box strong {
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+.afiliados-mini-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.afiliados-mini-actions.wrap {
+  margin-top: 6px;
+}
+.afiliados-mini-actions button,
+.afiliados-footer-note button,
+.afiliados-solicitud button,
+.afiliados-material-card button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #b56a12;
+  color: #fff;
+}
+.afiliados-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.afiliados-tab {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  background: #f7e5cf;
+  color: #7c4a10;
+  cursor: pointer;
+}
+.afiliados-tab.activo {
+  background: #b56a12;
+  color: #fff;
+}
+.afiliados-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.afiliados-card {
+  display: grid;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #efdfce;
+  border-radius: 18px;
+  padding: 16px;
+}
+.afiliados-card h3,
+.afiliados-card h4 {
+  margin: 0;
+  color: #74430f;
+}
+.afiliados-card p {
+  margin: 0;
+  color: #5f5145;
+  line-height: 1.5;
+}
+.afiliados-card.fuerte {
+  background: linear-gradient(180deg, #fffdf8 0%, #fff 100%);
+}
+.afiliados-card.dorada {
+  background: linear-gradient(180deg, #fff8e6 0%, #fff 100%);
+  border-color: #f1d491;
+}
+.afiliados-card.dorada.activa {
+  box-shadow: 0 10px 26px rgba(181, 106, 18, 0.12);
+}
+.afiliados-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.afiliados-kpis.compactos {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.afiliados-kpis div,
+.afiliados-liderazgo div {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  background: #fff8f0;
+  border: 1px solid #f4dfc6;
+  border-radius: 14px;
+}
+.afiliados-kpis span,
+.afiliados-liderazgo span {
+  font-size: 12px;
+  color: #8c6741;
+}
+.afiliados-kpis strong,
+.afiliados-liderazgo strong {
+  color: #6a3705;
+}
+.afiliados-progress-track {
+  height: 16px;
+  background: #f3e1ca;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.afiliados-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e9a52c 0%, #c96f12 100%);
+  border-radius: 999px;
+}
+.afiliados-boveda-principal {
+  gap: 14px;
+  background: linear-gradient(180deg, #f7fff6 0%, #fff8eb 100%);
+  border-color: #cfe4c6;
+}
+.afiliados-boveda-estado {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #d4e8c8;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f3fff0 0%, #fff9ec 100%);
+}
+.afiliados-boveda-estado.activo {
+  box-shadow: 0 12px 30px rgba(54, 120, 52, 0.1);
+}
+.afiliados-boveda-estado div {
+  display: grid;
+  gap: 4px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid #e1ecd9;
+  border-radius: 14px;
+}
+.afiliados-boveda-estado span {
+  font-size: 12px;
+  color: #5e7a47;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.afiliados-boveda-estado strong {
+  color: #2b5d22;
+  font-size: 18px;
+}
+.afiliados-termometro {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #e4d5c2;
+  background: #fffaf4;
+}
+.afiliados-termometro.disponible {
+  border-color: #8ac0ff;
+  background: linear-gradient(135deg, #eef7ff 0%, #fff 100%);
+  box-shadow: 0 10px 24px rgba(62, 129, 219, 0.1);
+}
+.afiliados-termometro-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  color: #654420;
+}
+.afiliados-tabla-fondos {
+  display: grid;
+  gap: 8px;
+}
+.afiliados-tabla-fondos > div {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #efdfce;
+  border-radius: 14px;
+  background: #fffaf4;
+  color: #5f5145;
+}
+.afiliados-tabla-fondos .afiliados-tabla-head {
+  background: #f8ead7;
+  font-weight: 800;
+  color: #7a4b15;
+}
+.afiliados-tabla-fondos .total {
+  background: #fff2da;
+  font-weight: 800;
+  color: #6f3d09;
+}
+.afiliados-alerta.riesgo {
+  background: #fff1ec;
+  border-color: #efb4a2;
+}
+.afiliados-recibo {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffdfa 0%, #fff4e8 100%);
+  border: 1px solid #ecd7bf;
+}
+.afiliados-recibo-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.afiliados-recibo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.afiliados-recibo-bloque {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #ead7c0;
+  background: #fff;
+}
+.afiliados-recibo-sello {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #dff4e0;
+  color: #1d7240;
+  font-weight: 800;
+  animation: afiliados-sello 0.45s ease-out both;
+}
+@keyframes afiliados-sello {
+  0% {
+    transform: scale(0.6) rotate(-8deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+.afiliados-solicitud {
+  display: grid;
+  gap: 6px;
+}
+.afiliados-solicitud button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.afiliados-solicitud small {
+  color: #826c57;
+}
+.afiliados-lista-simple,
+.afiliados-ranking {
+  margin: 0;
+  padding-left: 18px;
+  color: #5e5043;
+}
+.afiliados-ranking li {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+.afiliados-ranking span,
+.afiliados-ranking small {
+  color: #846a4a;
+}
+.afiliados-red-lista {
+  display: grid;
+  gap: 10px;
+}
+.afiliados-red-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #eddcc5;
+  background: #fffaf4;
+}
+.afiliados-red-item.activo {
+  border-left: 5px solid #1f8a4c;
+}
+.afiliados-red-item.pendiente {
+  border-left: 5px solid #e39b1d;
+}
+.afiliados-red-item.desactivado {
+  border-left: 5px solid #b33a2b;
+}
+.afiliados-red-item p {
+  margin: 4px 0 0;
+}
+.afiliados-alerta {
+  display: grid;
+  gap: 6px;
+  background: #fff3db;
+  border: 1px solid #f0cd8b;
+  border-radius: 14px;
+  padding: 12px;
+}
+.afiliados-materiales,
+.afiliados-planes-grid {
+  display: grid;
+  gap: 10px;
+}
+.afiliados-material-card,
+.afiliados-plan-card {
+  display: grid;
+  gap: 8px;
+  background: #fffaf4;
+  border: 1px solid #efdfce;
+  border-radius: 16px;
+  padding: 14px;
+}
+.afiliados-plan-precio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #b56a12;
+  color: #fff;
+  font-weight: 800;
+}
+.afiliados-plan-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #5f5145;
+}
+.afiliados-plan-card small {
+  color: #856b4b;
+}
+.afiliados-footer-note {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: #fff7ef;
+  border: 1px solid #eedbc6;
+  border-radius: 18px;
+  padding: 14px;
+}
+.afiliados-footer-note p {
+  margin: 6px 0 0;
+  color: #5e5043;
+  max-width: 720px;
+}
+.afiliados-card-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background: #fff1dc;
+  color: #8b4f12;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+@media (max-width: 820px) {
+  .afiliados-hero,
+  .afiliados-grid-2,
+  .afiliados-kpis,
+  .afiliados-kpis.compactos,
+  .afiliados-boveda-estado,
+  .afiliados-recibo-grid {
+    grid-template-columns: 1fr;
+  }
+  .afiliados-pin-box strong {
+    font-size: 26px;
+  }
+  .afiliados-tabla-fondos > div {
+    grid-template-columns: 1fr;
+  }
+}
