@@ -111,4 +111,46 @@ export const TiendaMelantia = {
       estadoBanner.style.backgroundColor = '#1a4d34';
     }
   },
+  // Panel principal de la tienda MELANTIA
+  mostrarPanel(contenedorId = 'app-menu') {
+    const cont = document.getElementById(contenedorId);
+    if (!cont) return;
+    cont.innerHTML = `
+      <h2>Tienda MELANTIA — Marketplace Rural</h2>
+      <button id="btn-publicar-oferta" class="btn-melantia">Publicar Oferta</button>
+      <button id="btn-ver-bienes-raices" class="btn-melantia">Ver Bienes Raíces</button>
+      <div id="panel-ofertas-tienda"></div>
+      <div id="panel-bienes-raices" style="display:none;"></div>
+    `;
+    // Lógica para mostrar ofertas de la tienda (productos, servicios, etc.)
+    const panelOfertas = document.getElementById('panel-ofertas-tienda');
+    panelOfertas.innerHTML = '<p>No hay ofertas publicadas aún.</p>';
+    // Botón para publicar oferta
+    document.getElementById('btn-publicar-oferta').onclick = () => {
+      panelOfertas.innerHTML = `
+        <h3>Publicar nueva oferta</h3>
+        <form id="form-publicar-oferta">
+          <input type="text" name="titulo" placeholder="Título de la oferta" required><br>
+          <input type="number" name="precio" placeholder="Precio" required><br>
+          <textarea name="descripcion" placeholder="Descripción" required></textarea><br>
+          <button type="submit">Publicar</button>
+        </form>
+      `;
+      document.getElementById('form-publicar-oferta').onsubmit = (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        // Aquí se guardaría la oferta (puedes integrar almacenamiento real)
+        panelOfertas.innerHTML = `<b>Oferta publicada:</b> ${data.titulo} — $${data.precio}<br>${data.descripcion}`;
+        TiendaMelantia.hablarAtencionVentas('Oferta publicada correctamente.');
+      };
+    };
+    // Botón para ver bienes raíces
+    document.getElementById('btn-ver-bienes-raices').onclick = () => {
+      const panelBienes = document.getElementById('panel-bienes-raices');
+      panelBienes.style.display = 'block';
+      import('../bienes_raices_rurales.js').then((mod) => {
+        mod.mostrarCatalogoPropiedades('panel-bienes-raices');
+      });
+    };
+  },
 };

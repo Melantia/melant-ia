@@ -1,3 +1,24 @@
+// Panel principal exportado para Saberes y Folklore
+export function mostrarPanel(contenedorId = 'app-menu') {
+  const cont = document.getElementById(contenedorId);
+  if (!cont) return;
+  cont.innerHTML = `
+    <h2>Proyecto Saberes Ancestrales y Folklore</h2>
+    <button id="btn-escuchar-historia" class="btn-melantia">Escuchar historia del día</button>
+    <div id="panel-historia"></div>
+  `;
+  SaberesFolklore.init();
+  document.getElementById('btn-escuchar-historia').onclick = () => {
+    const h = SaberesFolklore.historiaActual;
+    if (!h) {
+      document.getElementById('panel-historia').innerHTML =
+        '<p>No hay historia disponible.</p>';
+      return;
+    }
+    document.getElementById('panel-historia').innerHTML =
+      `<b>${h.titulo}</b> — ${h.region}<br><audio controls src='${h.audio}'></audio>`;
+  };
+}
 // Módulo Saberes y Folklore
 const SaberesFolklore = {
   historias: [],
@@ -14,9 +35,27 @@ const SaberesFolklore = {
   cargarHistorias() {
     // Aquí se cargarían desde un JSON o base de datos local
     this.historias = [
-      { id: 1, titulo: "La leyenda del Cuy", region: "Sierra", audio: "audios/cuy.mp3", duracion: 180 },
-      { id: 2, titulo: "El duende de la selva", region: "Oriente", audio: "audios/duende.mp3", duracion: 240 },
-      { id: 3, titulo: "La Tunda", region: "Costa", audio: "audios/tunda.mp3", duracion: 300 }
+      {
+        id: 1,
+        titulo: 'La leyenda del Cuy',
+        region: 'Sierra',
+        audio: 'audios/cuy.mp3',
+        duracion: 180,
+      },
+      {
+        id: 2,
+        titulo: 'El duende de la selva',
+        region: 'Oriente',
+        audio: 'audios/duende.mp3',
+        duracion: 240,
+      },
+      {
+        id: 3,
+        titulo: 'La Tunda',
+        region: 'Costa',
+        audio: 'audios/tunda.mp3',
+        duracion: 300,
+      },
       // ...más historias
     ];
     // Cargar desde los JSON existentes
@@ -32,18 +71,25 @@ const SaberesFolklore = {
       this.historiaActual = JSON.parse(historiaGuardada);
     } else {
       // Filtrar historias no escuchadas
-      const disponibles = this.historias.filter(h => !this.escuchadas.includes(h.id));
+      const disponibles = this.historias.filter(
+        (h) => !this.escuchadas.includes(h.id)
+      );
       let seleccionada;
       if (disponibles.length === 0) {
         // Reset si ya escuchó todas
         this.escuchadas = [];
         localStorage.removeItem('saberes_escuchadas');
-        seleccionada = this.historias[Math.floor(Math.random() * this.historias.length)];
+        seleccionada =
+          this.historias[Math.floor(Math.random() * this.historias.length)];
       } else {
-        seleccionada = disponibles[Math.floor(Math.random() * disponibles.length)];
+        seleccionada =
+          disponibles[Math.floor(Math.random() * disponibles.length)];
       }
       this.historiaActual = seleccionada;
-      localStorage.setItem('saberes_historia_' + hoy, JSON.stringify(seleccionada));
+      localStorage.setItem(
+        'saberes_historia_' + hoy,
+        JSON.stringify(seleccionada)
+      );
     }
     this.vecesEscuchada = 0;
   },
@@ -54,14 +100,14 @@ const SaberesFolklore = {
     if (window.Notification && Notification.permission === 'granted') {
       new Notification('Nueva historia disponible', {
         body: `Hoy puedes escuchar o leer: "${this.historiaActual.titulo}"`,
-        icon: '/assets/logo_melant_ia.png'
+        icon: '/assets/logo_melant_ia.png',
       });
     } else if (window.Notification && Notification.permission !== 'denied') {
-      Notification.requestPermission().then(permission => {
+      Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
           new Notification('Nueva historia disponible', {
             body: `Hoy puedes escuchar o leer: "${this.historiaActual.titulo}"`,
-            icon: '/assets/logo_melant_ia.png'
+            icon: '/assets/logo_melant_ia.png',
           });
         }
       });
@@ -69,7 +115,8 @@ const SaberesFolklore = {
       // Fallback: mensaje en la app
       setTimeout(() => {
         if (document.getElementById('saberesMsg')) {
-          document.getElementById('saberesMsg').innerHTML = `<b>¡Nueva historia disponible hoy!</b> <br> "${this.historiaActual.titulo}"`;
+          document.getElementById('saberesMsg').innerHTML =
+            `<b>¡Nueva historia disponible hoy!</b> <br> "${this.historiaActual.titulo}"`;
         }
       }, 1000);
     }
@@ -88,7 +135,7 @@ const SaberesFolklore = {
         <h3>${this.historiaActual.titulo} <span style='font-size:13px;color:var(--accent);'>(${this.historiaActual.region})</span></h3>
         <div style="margin:10px 0;font-size:14px;">${this.historiaActual.descripcion}</div>
         ${this.historiaActual.audio ? `<audio id="audioSaberes" controls preload="auto" style="width:100%;margin:12px 0;"><source src="${this.historiaActual.audio}" type="audio/mpeg">Tu navegador no soporta audio.</audio>` : ''}
-        <div style="margin:10px 0;font-size:13px;">${this.historiaActual.duracion ? `Duración: ${Math.round(this.historiaActual.duracion/60)} min` : ''}</div>
+        <div style="margin:10px 0;font-size:13px;">${this.historiaActual.duracion ? `Duración: ${Math.round(this.historiaActual.duracion / 60)} min` : ''}</div>
         <button class="btn btn-primary" onclick="SaberesFolklore.marcarEscuchada()" id="btnEscucharSaberes">Marcar como escuchada</button>
         <button class="btn btn-ghost" onclick="SaberesFolklore.enviarOficina()">Pedir cuento por QR</button>
       </div>
@@ -103,13 +150,15 @@ const SaberesFolklore = {
     audio.onplay = () => {
       if (this.vecesEscuchada >= this.maxVeces) {
         audio.pause();
-        document.getElementById('saberesMsg').textContent = 'Ya escuchaste el cuento el máximo de veces hoy.';
+        document.getElementById('saberesMsg').textContent =
+          'Ya escuchaste el cuento el máximo de veces hoy.';
       }
     };
     audio.onended = () => {
       this.vecesEscuchada++;
       if (this.vecesEscuchada >= this.maxVeces) {
-        document.getElementById('saberesMsg').textContent = 'Ya escuchaste el cuento el máximo de veces hoy.';
+        document.getElementById('saberesMsg').textContent =
+          'Ya escuchaste el cuento el máximo de veces hoy.';
         document.getElementById('btnEscucharSaberes').disabled = true;
       }
     };
@@ -118,15 +167,21 @@ const SaberesFolklore = {
     if (!this.historiaActual) return;
     if (!this.escuchadas.includes(this.historiaActual.id)) {
       this.escuchadas.push(this.historiaActual.id);
-      localStorage.setItem('saberes_escuchadas', JSON.stringify(this.escuchadas));
+      localStorage.setItem(
+        'saberes_escuchadas',
+        JSON.stringify(this.escuchadas)
+      );
     }
     this.historiaActual = null;
     this.render();
   },
   enviarOficina() {
     // Simulación: mostrar QR para descarga
-    document.getElementById('saberesMsg').innerHTML = '<b>QR generado:</b> <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://melant-ia.com/descarga/'+this.historiaActual.id+'" alt="QR descarga" style="margin-top:8px;">';
-  }
+    document.getElementById('saberesMsg').innerHTML =
+      '<b>QR generado:</b> <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://melant-ia.com/descarga/' +
+      this.historiaActual.id +
+      '" alt="QR descarga" style="margin-top:8px;">';
+  },
 };
 
 document.addEventListener('DOMContentLoaded', () => {

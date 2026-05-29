@@ -3,41 +3,46 @@
 
 import { renderizarMemoriaViva } from './proyectos_memoria_viva.js';
 
-window.MelantiaProyectos = {
-  mostrarTesoroAbuelos(contenedorId = 'app-menu') {
-    const cont = document.getElementById(contenedorId);
-    if (!cont) return;
-    cont.innerHTML = `
-      <h2>El Tesoro de los Abuelos</h2>
-      <div class="tarjetas-grid" id="memoria-herbario"></div>
-    `;
-    renderizarMemoriaViva('memoria-herbario');
-  },
-  mostrarMenuProyectos(contenedorId = 'app-menu') {
-    const cont = document.getElementById(contenedorId);
-    if (!cont) return;
-    cont.innerHTML = `
-      <h2 style="color:#276749;text-align:center;margin-bottom:24px;">🌱 Proyectos MELANTIA</h2>
-      <div class="tarjetas-grid" style="margin-bottom:18px;">
-        <div class="card card-sostenible" style="min-width:260px;max-width:340px;cursor:pointer;" onclick="MelantiaProyectos.mostrarProyectoCarbono()">
-          <div style="font-size:2.2em;">🌳</div>
-          <h3 class="titulo-proyecto" style="margin-bottom:6px;">Captura de Carbono</h3>
-          <p style="margin:0 0 8px 0;">Registra prácticas regenerativas, checklist profesional y genera tu contrato digital para acceder a beneficios ambientales y económicos.</p>
-          <span class="badge-carbono">Verificado ISO/Verra</span>
-        </div>
-        <div class="card card-sostenible" style="min-width:260px;max-width:340px;cursor:pointer;" onclick="MelantiaProyectos.mostrarTesoroAbuelos()">
-          <div style="font-size:2.2em;">🧓</div>
-          <h3 class="titulo-proyecto" style="margin-bottom:6px;">El Tesoro de los Abuelos</h3>
-          <p style="margin:0 0 8px 0;">Historias, saberes y relatos ancestrales de la comunidad. Preserva la memoria viva y comparte el legado cultural.</p>
-          <span class="badge-carbono" style="background:#a0aec0;color:#fff;">Memoria Viva</span>
-        </div>
+export function mostrarPanel() {
+  const cont = document.getElementById('contenedor-principal') || document.body;
+  if (!cont) return;
+  cont.innerHTML = `
+    <h2 style="color:#276749;text-align:center;margin-bottom:24px;">🌱 Proyectos MELANTIA</h2>
+    <div class="tarjetas-grid" style="margin-bottom:18px;">
+      <div class="card card-sostenible" style="min-width:260px;max-width:340px;cursor:pointer;" id="btn-proyecto-carbono">
+        <div style="font-size:2.2em;">🌳</div>
+        <h3 class="titulo-proyecto" style="margin-bottom:6px;">Captura de Carbono</h3>
+        <p style="margin:0 0 8px 0;">Registra prácticas regenerativas, checklist profesional y genera tu contrato digital para acceder a beneficios ambientales y económicos.</p>
+        <span class="badge-carbono">Verificado ISO/Verra</span>
       </div>
-      <div id="proyectos-submodulo"></div>
-    `;
-  },
-  async mostrarProyectoCarbono(contenedorId = 'app-menu') {
-    const cont = document.getElementById(contenedorId);
-    if (!cont) return;
+      <div class="card card-sostenible" style="min-width:260px;max-width:340px;cursor:pointer;" id="btn-tesoro-abuelos">
+        <div style="font-size:2.2em;">🧓</div>
+        <h3 class="titulo-proyecto" style="margin-bottom:6px;">El Tesoro de los Abuelos</h3>
+        <p style="margin:0 0 8px 0;">Historias, saberes y relatos ancestrales de la comunidad. Preserva la memoria viva y comparte el legado cultural.</p>
+        <span class="badge-carbono" style="background:#a0aec0;color:#fff;">Memoria Viva</span>
+      </div>
+    </div>
+    <div id="proyectos-submodulo"></div>
+    <button onclick="window.volverAlMenuPrincipal()" style="margin-top:24px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+  `;
+  // Listeners para subpaneles
+  document.getElementById('btn-proyecto-carbono').onclick = () => mostrarProyectoCarbono('proyectos-submodulo');
+  document.getElementById('btn-tesoro-abuelos').onclick = () => mostrarTesoroAbuelos('proyectos-submodulo');
+}
+
+function mostrarTesoroAbuelos(contenedorId = 'app-menu') {
+  const cont = document.getElementById(contenedorId);
+  if (!cont) return;
+  cont.innerHTML = `
+    <h2>El Tesoro de los Abuelos</h2>
+    <div class="tarjetas-grid" id="memoria-herbario"></div>
+  `;
+  renderizarMemoriaViva('memoria-herbario');
+}
+
+async function mostrarProyectoCarbono(contenedorId = 'app-menu') {
+  const cont = document.getElementById(contenedorId);
+  if (!cont) return;
     cont.innerHTML = `<h2 class="titulo-proyecto">Proyecto Captura de Carbono</h2>
       <div id="carbono-bienvenida" class="card-sostenible"></div>
       <div id="carbono-checklist" class="card-sostenible"></div>

@@ -8,16 +8,23 @@
       {
         "id": 1,
         "titulo": "Suscripciones",
-        "items": ["Gestión de Suscripciones", "Planes y Pagos"]
+        "items": [
+          "Gestión de Suscripciones",
+          "Planes y Pagos",
+          "Moneda Virtual Melantios"
+        ]
       },
       {
         "id": 2,
         "titulo": "Asistente Técnico Rural",
         "items": [
+          "Asistente Técnico en Cultivos",
           "Asistente Técnico Veterinario",
           "Salud y Medicina Veterinaria",
-          "Agricultura de precisión  (Uso de Sensores)",
-          "GPS (Medición de Terrenos)"
+          "Agricultura de precisión  (Uso dSe Sensores)",
+          "GPS (Medición de Terrenos)",
+          "Visión Artificial",
+          "Visión Satelital"
         ]
       },
       {
@@ -27,7 +34,7 @@
         "genero": "Masculina",
         "items": [
           "Gestión de Fincas",
-          "Apiccultura",
+          "Apicultura",
           "Trazabilidad Cultivos Especiales",
           "Trazabilidad de Granjas",
           "Gestión Empresarial"
@@ -76,7 +83,9 @@
         "titulo": "Asistente Preventivo de Salud",
         "items": [
           "Asistente Preventivo de Salud",
-          "Guia de Primeros Auxilios y Respuesta Rapida"
+          "Guia de Primeros Auxilios y Respuesta Rapida",
+          "Botiquín Casero Inteligente",
+          "Ficha Médica / Historia Clínica"
         ]
       },
       {

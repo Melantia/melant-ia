@@ -113,6 +113,72 @@
           }
         }
       };
+      // --- Visión Satelital Global ---
+      if (!document.getElementById('modal-vision-satelital')) {
+        const modal = document.createElement('div');
+        modal.id = 'modal-vision-satelital';
+        modal.style =
+          'display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);';
+        modal.innerHTML = `
+          <div id="panel-vision-satelital" style="background:#fff;max-width:420px;margin:60px auto;padding:28px 22px;border-radius:16px;box-shadow:0 4px 32px #0003;position:relative;">
+            <button id="cerrar-vision-satelital" style="position:absolute;top:10px;right:10px;font-size:1.3em;background:none;border:none;cursor:pointer;">✖️</button>
+            <h2 style="margin-top:0;font-size:1.3em;color:#1e88e5;display:flex;align-items:center;gap:8px;">🛰️ Visión Satelital Sentinel-1/2</h2>
+            <div id="vision-satelital-contexto" style="font-size:1em;margin-bottom:10px;"></div>
+            <div id="vision-satelital-mensaje" style="font-size:0.98em;color:#444;margin-bottom:12px;"></div>
+            <label for="selector-finca" style="font-size:0.97em;color:#333;margin-bottom:6px;display:block;">Selecciona tu finca:</label>
+            <select id="selector-finca" style="width:100%;padding:7px 6px;margin-bottom:12px;border-radius:7px;border:1px solid #bbb;font-size:1em;"></select>
+            <div id="vision-satelital-imagenes" style="margin-bottom:10px;"></div>
+            <div style="font-size:0.93em;color:#888;">Límite: 1 imagen Sentinel-1/mes, 1 Sentinel-2/15 días, máx. 3 imágenes/mes por usuario.<br>Las imágenes se optimizan y almacenan en Supabase.</div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        document.getElementById('cerrar-vision-satelital').onclick = () => {
+          modal.style.display = 'none';
+        };
+      }
+
+      // Modularización: importar la función desde vision_satelital.js
+      import('./vision_satelital.js').then((mod) => {
+        // Cargar fincas desde Supabase y poblar el selector
+        async function cargarFincasEnSelector() {
+          const { supabase } = await import('./supabase_config.js');
+          const { data, error } = await supabase
+            .from('fincas')
+            .select('id, nombre, tipo_cultivo');
+          const selector = document.getElementById('selector-finca');
+          selector.innerHTML = '';
+          if (error || !data || data.length === 0) {
+            selector.innerHTML =
+              '<option value="">No hay fincas registradas</option>';
+            selector.disabled = true;
+            return;
+          }
+          data.forEach((f) => {
+            const opt = document.createElement('option');
+            opt.value = f.id;
+            opt.textContent = `${f.nombre} (${f.tipo_cultivo || 'Sin cultivo'})`;
+            selector.appendChild(opt);
+          });
+          selector.disabled = false;
+        }
+        window.abrirVisionSatelital = async (contexto) => {
+          await cargarFincasEnSelector();
+          const modal = document.getElementById('modal-vision-satelital');
+          modal.style.display = 'block';
+          // Esperar a que el usuario seleccione finca y luego consultar
+          const selector = document.getElementById('selector-finca');
+          selector.onchange = () => {
+            if (selector.value) {
+              mod.abrirVisionSatelital(contexto, selector.value);
+            }
+          };
+          // Si hay una finca seleccionada por defecto, lanzar consulta
+          if (selector.value) {
+            mod.abrirVisionSatelital(contexto, selector.value);
+          }
+        };
+      });
+
       // --- Integración básica ---
       const walkie = new WalkieTalkie();
       async function renderMensajes() {

@@ -1,6 +1,10 @@
 // Módulo: Trazabilidad Digital del Cacao
 // Lógica y UI para la trazabilidad del cacao en MELANTIA
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadCacao.mostrarPanel();
+}
+
 const MelantiaTrazabilidadCacao = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;

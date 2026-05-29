@@ -46,41 +46,7 @@
   };
 
   // --- Sistema de Suscripciones Offline y Melantios ---
-  window.Melantios = {
-    config: {
-      EXCHANGE_RATE: 0.01, // 1M = $0.01
-      CONVERSION: 100, // 100M = $1
-      MAX_PAYMENT_PCT: 0.5,
-      EXPIRATION_DAYS: 90,
-    },
-    saldo: 0,
-    historialGanancia: [],
-    historialGasto: [],
-    ganar(tipo, cantidad) {
-      this.historialGanancia.push({
-        tipo,
-        cantidad,
-        fecha: new Date().toISOString(),
-      });
-      this.saldo += cantidad;
-      return this.saldo;
-    },
-    gastar(tipo, cantidad) {
-      this.historialGasto.push({
-        tipo,
-        cantidad,
-        fecha: new Date().toISOString(),
-      });
-      this.saldo -= cantidad;
-      return this.saldo;
-    },
-    convertirADolares(melantios) {
-      return (melantios * this.config.EXCHANGE_RATE).toFixed(2);
-    },
-    convertirAMelantios(usd) {
-      return Math.floor(usd / this.config.EXCHANGE_RATE);
-    },
-  };
+  // Lógica centralizada en modules/moneda_virtual_melantios.js como window.MelantiosCore
 
   // --- Don Eloy (voz y lógica de negocios) ---
   window.DonEloy = {

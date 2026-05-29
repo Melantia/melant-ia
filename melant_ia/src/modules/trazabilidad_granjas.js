@@ -1,17 +1,149 @@
 // Módulo: Trazabilidad de Granjas
 // Lógica y UI para la trazabilidad de granjas en MELANTIA
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadGranjas.mostrarPanel();
+}
+
 const MelantiaTrazabilidadGranjas = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;
     panel.innerHTML = `
-      <div class="panel-trazabilidad" style="max-width:600px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <div class="panel-trazabilidad" style="max-width:900px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
         <h2 style='color:#1E88E5;margin-bottom:8px;'>Trazabilidad de Granjas</h2>
         <div id="trazabilidad-granjas-content"></div>
+        <h3 style="color:#1976d2;">Libro de Campo</h3>
+        <form id="form-actividad-granja" style="margin-bottom:18px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;">
+          <input type="date" id="fecha-actividad" required style="padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+          <input type="text" id="especie-actividad" placeholder="Especie (ej: Bovino)" style="width:120px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+          <input type="text" id="actividad-granja" placeholder="Actividad (ej: Vacunación)" style="width:180px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+          <input type="text" id="detalle-actividad" placeholder="Detalle" style="width:180px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+          <button type="submit" style="background:#1E88E5;color:#fff;padding:7px 18px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Registrar</button>
+        </form>
+        <div id="tabla-libro-granja" style="margin-bottom:24px;"></div>
+        <h3 style="color:#1976d2;">Calendario de Vacunación</h3>
+        <div id="calendario-vacunacion-granja" style="margin-bottom:24px;"></div>
+        <h3 style="color:#1976d2;">Calculadoras Técnicas</h3>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:260px;">
+            <b>Alimento diario recomendado (kg):</b>
+            <form id="form-alimento-granja">
+              <input type="number" id="num-animales-alim" placeholder="N° Animales" min="0" style="width:120px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+              <input type="number" id="peso-promedio" placeholder="Peso promedio (kg)" min="0" style="width:140px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+              <button type="submit" style="background:#43a047;color:#fff;padding:6px 14px;border:none;border-radius:6px;font-size:1em;cursor:pointer;">Calcular</button>
+            </form>
+            <div id="resultado-alimento-granja" style="margin-top:8px;color:#276749;"></div>
+          </div>
+          <div style="flex:1;min-width:260px;">
+            <b>Fertilizante por lote (kg):</b>
+            <form id="form-fertilizante-granja">
+              <input type="number" id="num-lotes-fert" placeholder="N° Lotes" min="1" style="width:120px;padding:6px 10px;border-radius:6px;border:1px solid #ccc;">
+              <button type="submit" style="background:#fbc02d;color:#222;padding:6px 14px;border:none;border-radius:6px;font-size:1em;cursor:pointer;">Calcular</button>
+            </form>
+            <div id="resultado-fertilizante-granja" style="margin-top:8px;color:#1976d2;"></div>
+          </div>
+        </div>
+        <h3 style="color:#1976d2;margin-top:32px;">Informe Técnico y Visualización</h3>
+        <div id="informe-granja" style="margin-bottom:24px;"></div>
         <button onclick="window.volverAlMenuPrincipal()" style="margin-top:24px;background:#1E88E5;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
       </div>
     `;
     this.cargarDatosDemo();
+
+    // Lógica de libro de campo
+    let libroCampo = JSON.parse(
+      localStorage.getItem('libroCampoGranja') || '[]'
+    );
+    function renderTabla() {
+      const tabla = document.getElementById('tabla-libro-granja');
+      if (!tabla) return;
+      if (!libroCampo.length) {
+        tabla.innerHTML = '<i>No hay registros aún.</i>';
+        return;
+      }
+      let html = `<table style="width:100%;border-collapse:collapse;">
+        <thead><tr style="background:#e3f2fd;"><th>Fecha</th><th>Especie</th><th>Actividad</th><th>Detalle</th></tr></thead><tbody>`;
+      libroCampo.forEach((r) => {
+        html += `<tr><td>${r.fecha}</td><td>${r.especie}</td><td>${r.actividad}</td><td>${r.detalle}</td></tr>`;
+      });
+      html += '</tbody></table>';
+      tabla.innerHTML = html;
+    }
+    renderTabla();
+
+    document.getElementById('form-actividad-granja').onsubmit = function (e) {
+      e.preventDefault();
+      const fecha = document.getElementById('fecha-actividad').value;
+      const especie = document.getElementById('especie-actividad').value.trim();
+      const actividad = document
+        .getElementById('actividad-granja')
+        .value.trim();
+      const detalle = document.getElementById('detalle-actividad').value.trim();
+      if (!fecha || !actividad) return;
+      libroCampo.push({ fecha, especie, actividad, detalle });
+      localStorage.setItem('libroCampoGranja', JSON.stringify(libroCampo));
+      renderTabla();
+      this.reset();
+      renderInforme();
+    };
+
+    // Calendario de vacunación (simulado)
+    const calendario = [
+      { fecha: '2026-06-05', evento: 'Vacunación fiebre aftosa (Bovinos)' },
+      { fecha: '2026-07-10', evento: 'Desparasitación anual (Porcinos)' },
+      { fecha: '2026-08-20', evento: 'Vacunación Newcastle (Aves)' },
+    ];
+    const calDiv = document.getElementById('calendario-vacunacion-granja');
+    calDiv.innerHTML =
+      '<ul style="padding-left:18px;">' +
+      calendario
+        .map((ev) => `<li><b>${ev.fecha}:</b> ${ev.evento}</li>`)
+        .join('') +
+      '</ul>';
+
+    // Calculadora de alimento
+    document.getElementById('form-alimento-granja').onsubmit = function (e) {
+      e.preventDefault();
+      const animales =
+        parseInt(document.getElementById('num-animales-alim').value) || 0;
+      const peso =
+        parseFloat(document.getElementById('peso-promedio').value) || 0;
+      // Fórmula ejemplo: 3% del peso vivo total
+      const resultado =
+        animales > 0 && peso > 0 ? (animales * peso * 0.03).toFixed(2) : 0;
+      document.getElementById('resultado-alimento-granja').textContent =
+        resultado + ' kg/día';
+    };
+    // Calculadora de fertilizante
+    document.getElementById('form-fertilizante-granja').onsubmit = function (
+      e
+    ) {
+      e.preventDefault();
+      const lotes =
+        parseInt(document.getElementById('num-lotes-fert').value) || 0;
+      const resultado = lotes > 0 ? (lotes * 25).toFixed(2) : 0;
+      document.getElementById('resultado-fertilizante-granja').textContent =
+        resultado + ' kg/mes';
+    };
+
+    // Informe técnico y visualización
+    function renderInforme() {
+      const div = document.getElementById('informe-granja');
+      if (!div) return;
+      if (!libroCampo.length) {
+        div.innerHTML = '<i>No hay datos para informe.</i>';
+        return;
+      }
+      const totalActividades = libroCampo.length;
+      const especies = [...new Set(libroCampo.map((r) => r.especie))];
+      div.innerHTML = `
+        <div style="background:#e3f2fd;padding:18px;border-radius:12px;max-width:600px;margin:18px auto;">
+          <b>Total actividades registradas:</b> ${totalActividades}<br>
+          <b>Especies gestionadas:</b> ${especies.join(', ') || 'N/A'}<br>
+        </div>
+      `;
+    }
+    renderInforme();
   },
   cargarDatosDemo: function () {
     // Adaptado: fases y ejemplos reales de trazabilidad de granjas

@@ -11,7 +11,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(RECURSOS_CRITICOS))
   );
-});)
+});
 
 self.addEventListener('fetch', (event) => {
   if (RECURSOS_CRITICOS.some((r) => event.request.url.includes(r))) {

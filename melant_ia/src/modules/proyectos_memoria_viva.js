@@ -1,3 +1,15 @@
+export function mostrarPanel() {
+  const cont = document.getElementById('contenedor-principal') || document.body;
+  cont.innerHTML = `
+    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#276749;text-align:center;margin-bottom:24px;'>Memoria Viva y Herbario</h2>
+      <div id="memoria-herbario"></div>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+  renderizarMemoriaViva('memoria-herbario');
+}
+
 // proyectos_memoria_viva.js
 // Renderiza tarjetas de "Memoria Viva" y "Herbario" desde JSON
 

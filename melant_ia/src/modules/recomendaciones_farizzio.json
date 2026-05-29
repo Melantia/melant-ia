@@ -1,0 +1,51 @@
+// recomendaciones_farizzio.json
+{
+  "cafe": {
+    "excelente": [
+      "Mantén el plan de fertilización y riego actual.",
+      "Monitorea brotes nuevos y floración.",
+      "Revisa sombra y control de malezas cada 15 días."
+    ],
+    "observacion": [
+      "Verifica humedad del suelo y ajusta riego si es necesario.",
+      "Aplica bioestimulantes foliares en zonas amarillas.",
+      "Monitorea roya y broca en las áreas de menor vigor."
+    ],
+    "alerta": [
+      "Haz inspección urgente en zonas rojas del NDVI.",
+      "Revisa sistema de riego y fertilización de rescate.",
+      "Consulta con técnico para diagnóstico de enfermedades."
+    ]
+  },
+  "bovino": {
+    "excelente": [
+      "Mantén la rotación de potreros y suplementación mineral.",
+      "Monitorea calidad de pasto y agua.",
+      "Revisa cercas y sombra para el ganado."
+    ],
+    "observacion": [
+      "Ajusta la carga animal en zonas amarillas.",
+      "Evalúa suplementación energética si hay estrés hídrico.",
+      "Monitorea parásitos y salud animal."
+    ],
+    "alerta": [
+      "Reduce carga animal en áreas críticas.",
+      "Implementa riego de emergencia si es posible.",
+      "Solicita visita de veterinario o técnico pecuario."
+    ]
+  },
+  "default": {
+    "excelente": [
+      "Continúa con el manejo actual y monitorea cada 15 días.",
+      "Registra fotos de referencia para comparar en el futuro."
+    ],
+    "observacion": [
+      "Verifica riego y aplica bioestimulantes si es necesario.",
+      "Monitorea plagas y enfermedades en zonas amarillas."
+    ],
+    "alerta": [
+      "Haz inspección urgente en campo.",
+      "Consulta con técnico agrícola para diagnóstico presencial."
+    ]
+  }
+}

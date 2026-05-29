@@ -1,6 +1,10 @@
 // Módulo: Trazabilidad Digital del Plátano Barraganete
 // Lógica y UI para la trazabilidad del plátano en MELANTIA
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadPlatano.mostrarPanel();
+}
+
 const MelantiaTrazabilidadPlatano = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;

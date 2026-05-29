@@ -6,30 +6,301 @@
   "nivel": "basico",
   "tipo": "manual",
   "descripcion": "Manual para identificar síntomas frecuentes y señales de alarma en salud. Incluye enfermedades comunes, síntomas graves y consideraciones especiales en niños.",
-  "temas": ["resfriado", "gripe", "gastroenteritis", "alergias", "infección urinaria", "infarto", "ACV", "dificultad respiratoria", "sepsis", "shock", "niños"],
+  "temas": [
+    "resfriado",
+    "gripe",
+    "gastroenteritis",
+    "alergias",
+    "infección urinaria",
+    "infarto",
+    "ACV",
+    "dificultad respiratoria",
+    "sepsis",
+    "shock",
+    "niños"
+  ],
   "contenido": {
     "enfermedades_comunes": [
-      {"nombre": "Resfriado Común / Gripe", "sintomas": ["Fiebre moderada", "escalofríos", "fatiga", "congestión nasal", "dolor de garganta", "tos"]},
-      {"nombre": "Gastroenteritis", "sintomas": ["Dolor abdominal intenso", "diarrea prolongada", "náuseas", "vómitos"]},
-      {"nombre": "Alergias", "sintomas": ["Estornudos", "picazón en ojos o piel", "erupciones cutáneas", "hinchazón leve"]},
-      {"nombre": "Infecciones Urinarias", "sintomas": ["Ardor al orinar", "dolor persistente", "necesidad frecuente de orinar"]}
+      {
+        "nombre": "Resfriado Común / Gripe",
+        "sintomas": [
+          "Fiebre moderada",
+          "escalofríos",
+          "fatiga",
+          "congestión nasal",
+          "dolor de garganta",
+          "tos"
+        ]
+      },
+      {
+        "nombre": "Gastroenteritis",
+        "sintomas": [
+          "Dolor abdominal intenso",
+          "diarrea prolongada",
+          "náuseas",
+          "vómitos"
+        ]
+      },
+      {
+        "nombre": "Alergias",
+        "sintomas": [
+          "Estornudos",
+          "picazón en ojos o piel",
+          "erupciones cutáneas",
+          "hinchazón leve"
+        ]
+      },
+      {
+        "nombre": "Infecciones Urinarias",
+        "sintomas": [
+          "Ardor al orinar",
+          "dolor persistente",
+          "necesidad frecuente de orinar"
+        ]
+      }
     ],
     "sintomas_graves": [
-      {"nombre": "Infarto", "sintomas": ["Dolor de pecho opresivo", "dolor en mandíbula o brazo izquierdo", "sudor frío", "náuseas"]},
-      {"nombre": "ACV", "sintomas": ["Debilidad súbita en un lado", "dificultad para hablar o entender"]},
-      {"nombre": "Dificultad Respiratoria", "sintomas": ["Falta de aire súbita", "uso de músculos del cuello", "incapacidad para terminar frases"]},
-      {"nombre": "Trombosis Venosa Profunda", "sintomas": ["Hinchazón y dolor en una pierna", "calor localizado"]},
-      {"nombre": "Sepsis/Meningitis", "sintomas": ["Fiebre muy alta", "rigidez de cuello", "confusión", "manchas en la piel"]},
-      {"nombre": "Shock", "sintomas": ["Piel pálida y fría", "taquicardia", "pérdida de conocimiento"]}
+      {
+        "nombre": "Infarto",
+        "sintomas": [
+          "Dolor de pecho opresivo",
+          "dolor en mandíbula o brazo izquierdo",
+          "sudor frío",
+          "náuseas"
+        ]
+      },
+      {
+        "nombre": "ACV",
+        "sintomas": [
+          "Debilidad súbita en un lado",
+          "dificultad para hablar o entender"
+        ]
+      },
+      {
+        "nombre": "Dificultad Respiratoria",
+        "sintomas": [
+          "Falta de aire súbita",
+          "uso de músculos del cuello",
+          "incapacidad para terminar frases"
+        ]
+      },
+      {
+        "nombre": "Trombosis Venosa Profunda",
+        "sintomas": ["Hinchazón y dolor en una pierna", "calor localizado"]
+      },
+      {
+        "nombre": "Sepsis/Meningitis",
+        "sintomas": [
+          "Fiebre muy alta",
+          "rigidez de cuello",
+          "confusión",
+          "manchas en la piel"
+        ]
+      },
+      {
+        "nombre": "Shock",
+        "sintomas": [
+          "Piel pálida y fría",
+          "taquicardia",
+          "pérdida de conocimiento"
+        ]
+      }
     ],
     "ninos": [
-      {"nombre": "Señales clave en niños", "sintomas": ["Hundimiento de costillas al respirar", "irritabilidad extrema", "incapacidad para beber líquidos"]}
+      {
+        "nombre": "Señales clave en niños",
+        "sintomas": [
+          "Hundimiento de costillas al respirar",
+          "irritabilidad extrema",
+          "incapacidad para beber líquidos"
+        ]
+      }
     ],
-    "banderas_rojas": ["Pérdida de peso inexplicable", "fiebre persistente con sudoración nocturna"]
+    "banderas_rojas": [
+      "Pérdida de peso inexplicable",
+      "fiebre persistente con sudoración nocturna"
+    ]
+  },
+  "garrapatas_y_salud": {
+    "descripcion": "Las garrapatas son parásitos que pueden transmitir diversas enfermedades a los humanos. Es fundamental conocer los síntomas, actuar rápidamente y extraerlas correctamente para prevenir complicaciones.",
+    "enfermedades": [
+      {
+        "nombre": "Fiebre Maculosa de las Montañas Rocosas",
+        "sintomas": [
+          "Fiebre alta",
+          "dolor de cabeza intenso",
+          "erupción cutánea",
+          "dolor muscular",
+          "náuseas",
+          "vómitos"
+        ],
+        "causada_por": [
+          "Dermacentor variabilis",
+          "Dermacentor andersoni",
+          "Rhipicephalus sanguineus"
+        ]
+      },
+      {
+        "nombre": "Enfermedad de Lyme",
+        "sintomas": [
+          "Mancha roja en forma de diana",
+          "fiebre",
+          "dolor articular",
+          "fatiga",
+          "dolor de cabeza"
+        ],
+        "causada_por": ["Ixodes scapularis", "Ixodes pacificus"]
+      },
+      {
+        "nombre": "Anaplasmosis",
+        "sintomas": [
+          "Fiebre",
+          "escalofríos",
+          "dolor muscular",
+          "malestar general",
+          "náuseas"
+        ],
+        "causada_por": ["Ixodes scapularis", "Ixodes pacificus"]
+      },
+      {
+        "nombre": "Babesiosis",
+        "sintomas": ["Fiebre", "escalofríos", "sudoración", "fatiga", "anemia"],
+        "causada_por": ["Ixodes scapularis"]
+      },
+      {
+        "nombre": "Ehrlichiosis",
+        "sintomas": [
+          "Fiebre",
+          "dolor muscular",
+          "dolor de cabeza",
+          "malestar general",
+          "erupción cutánea"
+        ],
+        "causada_por": ["Amblyomma americanum", "Dermacentor variabilis"]
+      },
+      {
+        "nombre": "Tularemia",
+        "sintomas": [
+          "Fiebre súbita",
+          "úlceras en la piel",
+          "inflamación de ganglios linfáticos",
+          "dolor de cabeza"
+        ],
+        "causada_por": ["Dermacentor variabilis", "Amblyomma americanum"]
+      }
+    ],
+    "como_actuar": [
+      "Si encuentras una garrapata adherida, retírala lo antes posible.",
+      "Lava la zona con agua y jabón tras la extracción.",
+      "Observa la zona durante varias semanas por si aparecen manchas, fiebre o síntomas inusuales.",
+      "Consulta a un médico si presentas síntomas o si la garrapata estuvo adherida más de 24 horas."
+    ],
+    "como_extraer": [
+      "Utiliza pinzas finas, agarra la garrapata lo más cerca posible de la piel y tira suavemente hacia arriba sin girar.",
+      "No aplastes ni quemes la garrapata mientras esté adherida.",
+      "Desinfecta la zona después de la extracción."
+    ],
+    "identificacion_y_uso_medico": [
+      "Guarda la garrapata en un recipiente limpio o una bolsa con cierre para mostrarla al médico si es necesario.",
+      "Toma una foto clara de la garrapata para ayudar en su identificación.",
+      "Anota la fecha y el lugar de la picadura."
+    ],
+    "prevencion": [
+      "Usa ropa de manga larga y pantalones al caminar por áreas con vegetación alta.",
+      "Revisa tu cuerpo y el de los niños y mascotas después de estar al aire libre.",
+      "Utiliza repelente de insectos en piel y ropa."
+    ]
+  },
+  "ratas_y_salud": {
+    "descripcion": "Las ratas son reservorios y transmisores de múltiples enfermedades infecciosas que pueden afectar gravemente la salud humana. Su control y la higiene ambiental son fundamentales para la prevención.",
+    "enfermedades": [
+      {
+        "nombre": "Leptospirosis",
+        "sintomas": [
+          "Fiebre alta",
+          "dolor muscular (especialmente en pantorrillas)",
+          "dolor de cabeza",
+          "ojos enrojecidos",
+          "ictericia (piel amarilla)",
+          "vómitos",
+          "diarrea"
+        ],
+        "transmision": "Contacto con agua, suelo o alimentos contaminados con orina de ratas infectadas."
+      },
+      {
+        "nombre": "Hantavirosis",
+        "sintomas": [
+          "Fiebre súbita",
+          "dolor muscular intenso",
+          "dificultad respiratoria progresiva",
+          "tos",
+          "náuseas",
+          "vómitos"
+        ],
+        "transmision": "Inhalación de partículas de orina, heces o saliva de roedores infectados."
+      },
+      {
+        "nombre": "Salmonelosis",
+        "sintomas": [
+          "Fiebre",
+          "dolor abdominal",
+          "diarrea",
+          "náuseas",
+          "vómitos"
+        ],
+        "transmision": "Consumo de alimentos o agua contaminados con heces de ratas."
+      },
+      {
+        "nombre": "Fiebre por mordedura de rata",
+        "sintomas": [
+          "Fiebre",
+          "úlceras en el sitio de la mordedura",
+          "dolor articular",
+          "erupción cutánea"
+        ],
+        "transmision": "Mordedura o arañazo de rata infectada."
+      },
+      {
+        "nombre": "Peste bubónica",
+        "sintomas": [
+          "Fiebre alta súbita",
+          "inflamación dolorosa de ganglios linfáticos (bubones)",
+          "escalofríos",
+          "debilidad"
+        ],
+        "transmision": "Picadura de pulgas infectadas que han estado en ratas portadoras de Yersinia pestis."
+      }
+    ],
+    "prevencion": [
+      "Mantener la vivienda y alrededores limpios y libres de basura o restos de comida.",
+      "Almacenar alimentos en recipientes herméticos y resistentes a roedores.",
+      "Reparar grietas, agujeros y sellar accesos en paredes, puertas y ventanas.",
+      "Evitar acumulación de agua estancada y limpiar regularmente desagües y patios.",
+      "No dejar comida de mascotas expuesta durante la noche.",
+      "Utilizar trampas y cebos en zonas de riesgo, siguiendo indicaciones técnicas y evitando el uso de venenos en presencia de niños o mascotas."
+    ],
+    "limpieza_y_control": [
+      "Desinfectar superficies y utensilios que hayan estado en contacto con ratas o sus excretas usando soluciones de cloro (hipoclorito de sodio al 0,5%).",
+      "Usar guantes y mascarilla al limpiar excrementos o nidos de ratas.",
+      "Ventilar los ambientes cerrados antes de limpiar.",
+      "Eliminar materiales y objetos que puedan servir de refugio a roedores (cartón, trapos, madera acumulada)."
+    ],
+    "que_hacer_ante_sintomas": [
+      "Consultar de inmediato a un centro de salud si se presentan fiebre alta, dolor muscular intenso, ictericia, dificultad respiratoria o úlceras tras contacto con ratas o sus excretas.",
+      "Informar al personal médico sobre la posible exposición a roedores.",
+      "No automedicarse y evitar remedios caseros sin supervisión profesional."
+    ]
   },
   "url_archivo": "medicina_preventiva/es/manual_sintomas_comunes_y_alarma.pdf",
   "qr": "medicina_preventiva/es/manual_sintomas_comunes_y_alarma_qr.png",
   "pin": "SC2026",
   "fecha": "2026-04-21",
-  "tags": ["sintomas", "alarma", "manual", "descargable"]
+  "tags": [
+    "sintomas",
+    "alarma",
+    "manual",
+    "descargable",
+    "garrapatas",
+    "enfermedades vectoriales"
+  ]
 }

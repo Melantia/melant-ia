@@ -1,6 +1,38 @@
 // Módulo: Escuela de Campo
 // Funciones y lógica de cursos y prácticas
 
+export function mostrarPanel() {
+  // Panel principal para el enrutador dinámico
+  const cont = document.getElementById('contenedor-principal') || document.body;
+  if (!cont) return;
+  cont.innerHTML = `
+    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#276749;text-align:center;margin-bottom:24px;'>Escuela de Campo MELANTIA</h2>
+      <div class="tarjetas-grid" style="margin-bottom:18px;">
+        <div class="card" style="min-width:260px;max-width:340px;cursor:pointer;" onclick="MelantiaEscuelaCampo.mostrarCursos()">
+          <div style="font-size:2.2em;">📚</div>
+          <h3 style="margin-bottom:6px;">Cursos Especializados</h3>
+          <p style="margin:0 0 8px 0;">Capacítate en agricultura regenerativa, trazabilidad, manejo animal y más. Acceso según tu plan.</p>
+        </div>
+        <div class="card" style="min-width:260px;max-width:340px;cursor:pointer;" onclick="MelantiaEscuelaCampo.mostrarPracticas()">
+          <div style="font-size:2.2em;">🌱</div>
+          <h3 style="margin-bottom:6px;">Prácticas Regenerativas</h3>
+          <p style="margin:0 0 8px 0;">Guías y registro de prácticas en campo. Sincroniza con gestión de fincas y evidencia.</p>
+        </div>
+      </div>
+      <div id="escuela-submodulo"></div>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+  // Voz Melantia al entrar al menú principal
+  if (window.mandoVozActivo && typeof window.hablarMelantia === 'function') {
+    window.hablarMelantia(
+      '¡Hola! Soy Melantia y te doy la bienvenida a la Escuela de Campo. Aquí aprenderás a transformar tu finca y tu vida con prácticas regenerativas, cursos innovadores y acompañamiento personalizado. ¡Explora, pregunta y crece con nosotros!',
+      7
+    );
+  }
+}
+
 window.MelantiaEscuelaCampo = {
   mostrarMenuPrincipal(contenedorId = 'app-menu') {
     const cont = document.getElementById(contenedorId);

@@ -41,6 +41,10 @@ const ComunidadVirtual = {
     localStorage.setItem(this.storageKey, JSON.stringify(this.estado));
   },
 
+export function mostrarPanel() {
+  ComunidadVirtual.mostrarPanel('contenedor-principal');
+}
+
   mostrarPanel(contenedorId = 'app-menu') {
     this.cargarEstado();
 // --- IndexedDB helpers ---

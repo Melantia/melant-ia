@@ -4,6 +4,7 @@
 const horasVentana = [8, 14]; // 8:00 y 14:00
 const intentosPorVentana = 2;
 const intervaloMin = 15;
+
 let estadoActualizacion = {
   dia: null,
   ventana: null,
@@ -11,6 +12,31 @@ let estadoActualizacion = {
   ultimaActualizacion: null,
   timerId: null,
 };
+
+// --- Consulta centralizada de update.json ---
+async function obtenerUpdateJson() {
+  const url = '/knowledge_seeds/update.json';
+  // Si está online, intenta obtener la versión más reciente
+  if (navigator.onLine) {
+    try {
+      const resp = await fetch(url + '?t=' + Date.now());
+      if (resp.ok) {
+        return await resp.json();
+      }
+    } catch (e) {}
+  }
+  // Si está offline o falla la red, intenta desde el cache del Service Worker
+  if ('caches' in window) {
+    try {
+      const cache = await caches.open('melantia-cache-v1');
+      const resp = await cache.match(url);
+      if (resp) {
+        return await resp.json();
+      }
+    } catch (e) {}
+  }
+  return null;
+}
 
 function condicionesOptimas() {
   // Cobertura verde, conectado a red eléctrica, batería > 30%, no caliente
@@ -91,9 +117,24 @@ async function intentarActualizacion(forzado = false) {
     programarSiguienteIntento();
     return;
   }
-  // Ejecutar actualización de conocimientos y sincronización climática
+
+  // --- Consulta update.json antes de actualizar conocimientos ---
+  let updateData = null;
   try {
-    window.actualizarConocimientos?.(forzado, { origen: 'programado' });
+    updateData = await obtenerUpdateJson();
+  } catch (e) {
+    console.warn('[MELANTIA] No se pudo obtener update.json:', e);
+  }
+
+  // Aquí puedes comparar la versión o cambios y decidir si actualizar
+  // Por ejemplo, si updateData.version_cerebro cambió, forzar actualización
+  // (Personaliza la lógica según tus necesidades)
+
+  try {
+    window.actualizarConocimientos?.(forzado, {
+      origen: 'programado',
+      updateData,
+    });
     if (
       typeof window.GestorRuralMelantia?.sincronizarClimaTransparente ===
       'function'
@@ -130,6 +171,7 @@ window.MelantiaActualizacionGlobal = {
   iniciar: iniciarActualizacionGlobal,
   intentar: intentarActualizacion,
   condicionesOptimas,
+  obtenerUpdateJson,
 };
 
 iniciarActualizacionGlobal();

@@ -1,6 +1,10 @@
 // Módulo: Trazabilidad de Cultivos Especiales
 // Panel integrado para trazabilidad de Cacao, Café, Aguacate, Guanábana, Plátano Barraganete y Piña
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadCultivosEspeciales.mostrarPanel();
+}
+
 const MelantiaTrazabilidadCultivosEspeciales = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;

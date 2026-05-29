@@ -1,6 +1,27 @@
 // modules/pagos.js
 // Lógica de cálculo y renderizado del bloque de pagos MELANTIA
 
+export function mostrarPanel() {
+  // Panel principal para el enrutador dinámico
+  const cont = document.getElementById('contenedor-principal') || document.body;
+  cont.innerHTML = `
+    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#1565c0;text-align:center;margin-bottom:24px;'>Servicios Financieros Melantia</h2>
+      <ul style="font-size:1.1em;line-height:1.7;">
+        <li>Apertura de Cuenta Digital</li>
+        <li>Onboarding y Validación KYC</li>
+        <li>Gestión de Pagos y Beneficios</li>
+        <li>Simulación de Perfil Financiero</li>
+        <li>Solicitar Microcrédito</li>
+        <li>Transferencias y Movimientos</li>
+        <li>Integración con Bancos y Cooperativas</li>
+        <li>Historial y Estado de Cuenta</li>
+      </ul>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#1565c0;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+}
+
 import { PAGOS_MELANTIA } from '../config_pagos_melantia.js';
 
 // Calcula los cargos y comisiones para un subtotal dado

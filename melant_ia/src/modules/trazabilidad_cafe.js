@@ -1,6 +1,10 @@
 // Módulo: Trazabilidad Digital del Café
 // Lógica y UI para la trazabilidad del café en MELANTIA
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadCafe.mostrarPanel();
+}
+
 const MelantiaTrazabilidadCafe = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;

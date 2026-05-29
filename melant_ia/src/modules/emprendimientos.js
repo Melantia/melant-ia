@@ -1,6 +1,36 @@
 // Emprendimientos — MELANTIA
 // Registro y gestión de emprendimientos, integración con ventas y tienda
 
+export function mostrarPanel(contenedorId = 'app-menu') {
+  const cont = document.getElementById(contenedorId);
+  if (!cont) return;
+  cont.innerHTML = `
+    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#6d4c41;text-align:center;margin-bottom:24px;'>Emprendimientos</h2>
+      <div id="empr-listado"></div>
+      <button onclick="window.mostrarFormularioEmprendimiento()" style="margin:24px auto 0 auto;display:block;background:#6d4c41;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Registrar Emprendimiento</button>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#6d4c41;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+  mostrarListado();
+  function mostrarListado() {
+    const div = document.getElementById('empr-listado');
+    if (!div) return;
+    if (emprendimientos.length === 0) {
+      div.innerHTML = '<p>No hay emprendimientos registrados.</p>';
+      return;
+    }
+    div.innerHTML =
+      '<ul>' +
+      emprendimientos
+        .map(
+          (e) =>
+            `<li><b>${e.nombre}</b> — ${e.categoria}<br>${e.descripcion}<br>Ventas: ${e.ventas.length} | Gastos: ${e.gastos.length}<br><button onclick=\"window.verDetalleEmprendimiento('${e.id}')\">Ver Detalle</button></li>`
+        )
+        .join('') +
+      '</ul>';
+  }
+}
 const emprendimientos = [];
 
 export function registrarEmprendimiento({ nombre, descripcion, categoria }) {

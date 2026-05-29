@@ -1,97 +1,225 @@
+// =========================
+// ENRUTADOR DINÁMICO DE SUBMÓDULOS
+// =========================
+const rutasModulos = {
+  'Ventas de Gestión Productiva': './modules/ventas_gestion_productiva.js',
+  'Moneda Virtual Melantios': './modules/moneda_virtual_melantios.js',
+  'Planes y Pagos': './modules/planes_pagos.js',
+  'Asistente Técnico Rural': './modules/asistente_tecnico.js',
+  'Trazabilidad Cultivos Especiales':
+    './modules/trazabilidad_cultivos_especiales.js',
+  'Trazabilidad de Granjas': './modules/trazabilidad_granjas.js',
+  'Trazabilidad de Café': './modules/trazabilidad_cafe.js',
+  'Trazabilidad de Cacao': './modules/trazabilidad_cacao.js',
+  'Gestión de Fincas': './modules/gestion_fincas_trazabilidad.js',
+  'Botiquín Casero Inteligente': './modules/modulo_salud.js',
+  'Servicios Financieros Melantia': './modules/servicios_financieros.js',
+  'Negocios Rurales': './modules/negocios_rurales.js',
+  'Mi Comunidad Virtual': './modules/modulo_comunidad.js',
+  Proyectos: './modules/proyectos.js',
+  'Registro Evidencias y Documentos': './modules/evidencias_documentos.js',
+  'Escuela de Campo': './modules/escuela_campo.js',
+  Emprendedor: './modules/emprendimientos.js',
+  Alertas: './modules/websocket_alertas.js',
+  Registro: './modules/registro.js',
+  // ...agrega aquí más submódulos según crees los archivos
+};
+
+window.cargarSubmodulo = async function (nombreModulo, moduloPadre) {
+  const nombre = decodeURIComponent(nombreModulo);
+  const moduloNombre = decodeURIComponent(moduloPadre);
+  const contenedor =
+    document.getElementById('contenedor-principal') || document.body;
+  const ruta = rutasModulos[nombre];
+  if (ruta) {
+    try {
+      const modulo = await import(ruta);
+      if (modulo.mostrarPanel) {
+        modulo.mostrarPanel();
+        return;
+      }
+    } catch (e) {
+      contenedor.innerHTML = `<div style='color:#b91c1c;text-align:center;margin:40px 0;'>Error cargando el submódulo: ${e.message}</div>`;
+      return;
+    }
+  }
+  // Si no existe, muestra el panel genérico
+  contenedor.innerHTML = `
+    <div style='text-align:center; margin:40px 0;'>
+      <h2 style='color:#276749;'>${moduloNombre}</h2>
+      <h3 style='color:#1E293B; margin:18px 0 10px;'>${nombre}</h3>
+      <div style='font-size:2.5em; margin-bottom:18px;'>🔄</div>
+      <p style='font-size:1.1em; color:#444;'>Aquí irá la funcionalidad específica de <b>${nombre}</b>.</p>
+      <button onclick="window.cargarDatosModulo(null, '${moduloNombre.replace(/'/g, "'")}')" style='margin-top:30px;padding:10px 24px;background:#276749;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1em;'>← Volver a ${moduloNombre}</button>
+    </div>
+  `;
+};
+// =============================================
+// FUNCIÓN GLOBAL PARA CARGA DE MÓDULOS
+// =============================================
+window.cargarDatosModulo = function (id, titulo) {
+  const contenedor =
+    document.getElementById('contenedor-principal') || document.body;
+  fetch('app_structure_melant_ia.json')
+    .then((response) => response.json())
+    .then((data) => {
+      const modulos = data.menu_principal.modulos;
+      const modulo = modulos.find((m) => m.id === id || m.titulo === titulo);
+      if (!modulo) {
+        contenedor.innerHTML = `<div style="text-align:center; margin:40px 0;"><h2 style="color:#b91c1c;">Módulo no encontrado</h2></div>`;
+        return;
+      }
+      let html = `<div style='text-align:center; margin:40px 0;'>`;
+      html += `<h2 style='color:#276749;'>${modulo.titulo}</h2>`;
+      if (modulo.items && modulo.items.length > 0) {
+        html += `<div style='display:flex; flex-direction:column; gap:16px; max-width:400px; margin:24px auto;'>`;
+        modulo.items.forEach((item, idx) => {
+          // Selección de icono por tema (puedes personalizar más adelante)
+          let icon = '📦';
+          const tema = item.toLowerCase();
+          if (tema.includes('gps')) icon = '📐';
+          else if (tema.includes('salud')) icon = '🩺';
+          else if (tema.includes('financ')) icon = '💰';
+          else if (tema.includes('tienda')) icon = '🛒';
+          else if (tema.includes('suscrip')) icon = '📝';
+          else if (tema.includes('trazabilidad')) icon = '🌱';
+          else if (tema.includes('negocio')) icon = '🏪';
+          else if (tema.includes('comunidad')) icon = '👥';
+          else if (tema.includes('proyecto')) icon = '📊';
+          else if (tema.includes('registro')) icon = '🗂️';
+          else if (tema.includes('curso') || tema.includes('escuela'))
+            icon = '🎓';
+          else if (tema.includes('emprend')) icon = '🚀';
+          else if (tema.includes('legal')) icon = '⚖️';
+          else if (tema.includes('alerta')) icon = '⚠️';
+          else if (tema.includes('documento')) icon = '📄';
+          html += `
+            <button 
+              class="btn-submodulo" 
+              style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#f4f4f4;border:none;border-radius:8px;color:#276749;font-weight:600;font-size:1.08em;box-shadow:0 2px 8px #0001;cursor:pointer;transition:background 0.2s;"
+              onclick="window.cargarSubmodulo('${encodeURIComponent(item)}','${encodeURIComponent(modulo.titulo)}')"
+              onmouseover="this.style.background='#e0f7ef'" onmouseout="this.style.background='#f4f4f4'"
+            >
+              <span style='font-size:1.6em;'>${icon}</span>
+              <span>${item}</span>
+            </button>
+          `;
+        });
+        html += `</div>`;
+      } else {
+        html += `<p style='color:#888;'>Este módulo no tiene submódulos definidos.</p>`;
+      }
+      // =============================================
+      // FUNCIÓN GLOBAL PARA CARGA DE SUBMÓDULOS
+      // =============================================
+      window.cargarSubmodulo = function (submodulo, modulo) {
+        const nombre = decodeURIComponent(submodulo);
+        const moduloNombre = decodeURIComponent(modulo);
+        const contenedor =
+          document.getElementById('contenedor-principal') || document.body;
+        // Mapeo de submódulos a funciones reales (puedes ampliar este objeto)
+        const funcionalidad = {
+          'Trazabilidad Cultivos Especiales': () =>
+            import('../modules/trazabilidad_cultivos_especiales.js').then((m) =>
+              (
+                m.default || window.MelantiaTrazabilidadCultivosEspeciales
+              ).mostrarPanel()
+            ),
+          'Trazabilidad de Granjas': () =>
+            import('../modules/trazabilidad_granjas.js').then((m) =>
+              (
+                m.default || window.MelantiaTrazabilidadGranjas
+              )?.mostrarPanel?.()
+            ),
+          'Trazabilidad de Café': () =>
+            import('../modules/trazabilidad_cafe.js').then((m) =>
+              (m.default || window.MelantiaTrazabilidadCafe).mostrarPanel()
+            ),
+          'Trazabilidad de Cacao': () =>
+            import('../modules/trazabilidad_cacao.js').then((m) =>
+              (m.default || window.MelantiaTrazabilidadCacao).mostrarPanel()
+            ),
+          'Gestión de Fincas': () =>
+            import('../modules/gestion_fincas_trazabilidad.js').then((m) =>
+              (
+                m.default || window.MelantiaGestionFincasTrazabilidad
+              )?.mostrarPanel?.()
+            ),
+          'Botiquín Casero Inteligente': () =>
+            import('../modules/modulo_salud.js').then((m) =>
+              m.cargarBotiquin?.()
+            ),
+          'Servicios Financieros Melantia': () =>
+            import('../modules/servicios_financieros.js').then((m) =>
+              m.mostrarPanel?.()
+            ),
+          'Negocios Rurales': () =>
+            import('../modules/negocios_rurales.js').then((m) =>
+              (m.default || window.MelantiaNegociosRurales)?.mostrarPanel?.()
+            ),
+          'Mi Comunidad Virtual': () =>
+            import('../modules/modulo_comunidad.js').then((m) =>
+              (m.default || window.ReporteLunes)?.mostrarPanel?.()
+            ),
+          Proyectos: () =>
+            import('../modules/proyectos.js').then((m) =>
+              (m.default || window.MelantiaProyectos)?.mostrarMenuProyectos?.()
+            ),
+          'Registro Evidencias y Documentos': () =>
+            import('../modules/evidencias_documentos.js').then((m) =>
+              (
+                m.default || window.MelantiaEvidenciasDocumentos
+              )?.mostrarPanel?.()
+            ),
+          'Escuela de Campo': () =>
+            import('../modules/escuela_campo.js').then((m) =>
+              (
+                m.default || window.MelantiaEscuelaCampo
+              )?.mostrarMenuPrincipal?.()
+            ),
+          Emprendedor: () =>
+            import('../modules/emprendimientos.js').then((m) =>
+              m.mostrarPanelEmprendimientos?.()
+            ),
+          Alertas: () =>
+            import('../modules/websocket_alertas.js').then((m) =>
+              m.inicializarWebSocketAlertas?.()
+            ),
+          Registro: () =>
+            import('../modules/registro.js').then((m) => m.mostrarPanel?.()),
+        };
+        // Buscar por nombre exacto o por inclusión parcial
+        const key = Object.keys(funcionalidad).find(
+          (k) => nombre.includes(k) || k.includes(nombre)
+        );
+        if (key && typeof funcionalidad[key] === 'function') {
+          funcionalidad[key]();
+          return;
+        }
+        // Si no hay funcionalidad específica, mostrar panel genérico
+        contenedor.innerHTML = `
+            <div style='text-align:center; margin:40px 0;'>
+              <h2 style='color:#276749;'>${moduloNombre}</h2>
+              <h3 style='color:#1E293B; margin:18px 0 10px;'>${nombre}</h3>
+              <div style='font-size:2.5em; margin-bottom:18px;'>🔄</div>
+              <p style='font-size:1.1em; color:#444;'>Aquí irá la funcionalidad específica de <b>${nombre}</b>.</p>
+              <button onclick="window.cargarDatosModulo(null, '${moduloNombre.replace(/'/g, "'")}')" style='margin-top:30px;padding:10px 24px;background:#276749;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1em;'>← Volver a ${moduloNombre}</button>
+            </div>
+          `;
+      };
+      html += `</div>`;
+      contenedor.innerHTML = html;
+    })
+    .catch((err) => {
+      contenedor.innerHTML = `<div style='text-align:center; margin:40px 0;'><h2 style='color:#b91c1c;'>Error cargando submódulos</h2><p>${err}</p></div>`;
+    });
+};
 // modules/melantio_ui.js
 // Lógica UI para Melantio: botón de canje, utilidades y renderizado de módulos
 // NOTA: Melantio solo interviene con voz para explicar la conversión "100 Melantios = $1" al consultar saldo.
 
 // =========================================================================
-// 1. FUNCIONES ORIGINALES DE LA MONEDA VIRTUAL (MELANTIOS)
-// =========================================================================
-
-function crearBotonCanjemelantios(callbackFuncion) {
-  return `
-    <button 
-      onclick="typeof ${callbackFuncion} === 'function' ? ${callbackFuncion}() : alert('Usar Melantios')"
-      style="
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 16px;
-        background: linear-gradient(135deg, #F59E0B, #B45309);
-        color: white;
-        border: 1px solid #92400E;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 14px;
-        transition: all 0.3s ease;
-      "
-      onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(245, 158, 11, 0.4)';"
-      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
-      title="Solo puedes cubrir hasta el 25% del valor del producto con Melantios. El resto debe ser en dinero real."
-    >
-      <img src="assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />
-      <span>Usar Melantios (máx. 25%)</span>
-    </button>
-  `;
-}
-
-function crearMelantioBadge(cantidad) {
-  return `
-    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; background: #FEF3C7; border-radius: 4px; border: 1px solid #FCD34D;">
-      <img src="/src/assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />
-      <span style="font-weight: bold; color: #78350F; font-size: 14px;">${cantidad}</span>
-    </div>
-  `;
-}
-
-function crearMelantioBadgeConUSD(cantidad) {
-  const usd = calcularValorPremios(cantidad).toFixed(2);
-  const svgIcon = `<img src="assets/ui/icons/melantio_gold.svg" alt="Melantio" class="melantio-icon" />`;
-
-  if (typeof window !== 'undefined' && window.speechSynthesis) {
-    const mensaje = `Recuerda: 100 Melantios equivalen a 1 dólar. Tu saldo es de ${cantidad} Melantios, es decir, $${usd} dólares.`;
-    const utt = new window.SpeechSynthesisUtterance(mensaje);
-    utt.lang = 'es-EC';
-    utt.rate = 0.98;
-    utt.pitch = 1.1;
-    const voces = window.speechSynthesis.getVoices();
-    utt.voice =
-      voces.find(
-        (v) =>
-          v.lang.startsWith('es') && v.name.toLowerCase().includes('melantio')
-      ) ||
-      voces.find((v) => v.lang.startsWith('es')) ||
-      voces[0];
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(utt);
-  }
-
-  return `
-    <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; background: #FEF3C7; border-radius: 4px; border: 1px solid #FCD34D;">
-      ${svgIcon}
-      <span style="font-weight: bold; color: #78350F; font-size: 14px;">${cantidad}M</span>
-      <span style="color: #92400E; font-size: 13px; margin-left: 6px;">($${usd} USD)</span>
-    </div>
-  `;
-}
-
-function abrirPanelCanjemelantios() {
-  alert('Panel de canje de Melantios (demo)');
-}
-
-const TASA_CAMBIO = 100;
-const LIMITE_CANJE_GLOBAL = 0.25;
-
-function calcularValorPremios(melantiosAcumulados) {
-  return melantiosAcumulados / TASA_CAMBIO;
-}
-
-function calcularPremioPorSuscripcion(precioPlanUSD) {
-  const beneficioUSD = precioPlanUSD * 0.1;
-  return beneficioUSD * TASA_CAMBIO;
-}
-
-// =========================================================================
-// 2. MOTOR DE RENDERIZADO DINÁMICO (TÍTULOS LIMPIOS SIN VOCES)
+// 1. Lógica y UI de Melantios centralizada en modules/moneda_virtual_melantios.js
 // =========================================================================
 
 function renderizarModulosPrincipales(modulos) {

@@ -1,6 +1,10 @@
 // Módulo: Trazabilidad Digital de la Guanábana
 // Lógica y UI para la trazabilidad de la guanábana en MELANTIA
 
+export function mostrarPanel() {
+  return MelantiaTrazabilidadGuanabana.mostrarPanel();
+}
+
 const MelantiaTrazabilidadGuanabana = {
   mostrarPanel: function () {
     const panel = document.getElementById('panel-novedades') || document.body;

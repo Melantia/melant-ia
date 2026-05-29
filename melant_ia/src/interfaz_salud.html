@@ -1,0 +1,184 @@
+<!-- interfaz_salud.html: UI para botiquín y ficha médica/historia clínica -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Salud Preventiva MELANTIA</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f7fafc;
+        margin: 0;
+      }
+      .panel {
+        max-width: 480px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 16px #0002;
+        padding: 24px;
+      }
+      h2 {
+        color: #1e88e5;
+        margin-top: 0;
+      }
+      label {
+        font-weight: bold;
+        margin-top: 12px;
+        display: block;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 7px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+        margin-bottom: 10px;
+      }
+      .insumo-lista {
+        margin: 0 0 18px 0;
+        padding: 0;
+        list-style: none;
+      }
+      .insumo-lista li {
+        margin-bottom: 7px;
+      }
+      .btn {
+        background: #1e88e5;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+      .btn-sec {
+        background: #43a047;
+      }
+      .btn[disabled] {
+        background: #bbb;
+        cursor: not-allowed;
+      }
+      .qr {
+        margin: 18px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <h2>🩺 Botiquín Casero Inteligente</h2>
+      <ul id="lista-botiquin" class="insumo-lista"></ul>
+      <button class="btn" onclick="guardarBotiquin()">Guardar Botiquín</button>
+      <hr />
+      <h2>📋 Ficha Médica / Historia Clínica</h2>
+      <form id="form-ficha">
+        <label>Nombre</label>
+        <input id="nombre" required />
+        <label>Cédula</label>
+        <input id="cedula" />
+        <label>Edad</label>
+        <input id="edad" type="number" min="0" />
+        <label>Sexo</label>
+        <select id="sexo">
+          <option>Femenino</option>
+          <option>Masculino</option>
+        </select>
+        <label>Contacto de emergencia</label>
+        <input id="contacto_emergencia" />
+        <label>Alergias</label>
+        <input id="alergias" placeholder="Separar por coma" />
+        <label>Enfermedades crónicas</label>
+        <input id="enfermedades_cronicas" placeholder="Separar por coma" />
+        <label>Medicación habitual</label>
+        <input id="medicacion_habitual" placeholder="Separar por coma" />
+        <label>Grupo sanguíneo</label>
+        <input id="grupo_sanguineo" />
+        <label>Vacunas</label>
+        <input id="vacunas" placeholder="Separar por coma" />
+        <label>Observaciones</label>
+        <textarea id="observaciones"></textarea>
+        <button class="btn btn-sec" type="submit">Guardar Ficha</button>
+      </form>
+      <hr />
+      <h3>🔎 Buscar Historial</h3>
+      <input id="busqueda" placeholder="Nombre o cédula" />
+      <button class="btn" onclick="buscarHistorial()">Buscar</button>
+      <div id="resultado-busqueda"></div>
+      <div class="qr" id="qr-historial"></div>
+    </div>
+    <script type="module">
+      import * as salud from './modules/modulo_salud.js';
+      let botiquin = await salud.cargarBotiquin();
+      function renderBotiquin() {
+        const ul = document.getElementById('lista-botiquin');
+        ul.innerHTML = '';
+        botiquin.insumos.forEach((i, idx) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<input type='checkbox' ${i.presente ? 'checked' : ''} onchange='toggleInsumo(${idx})' /> ${i.nombre} <span style='color:#888'>(Recom: ${i.cantidad_recomendada})</span>`;
+          ul.appendChild(li);
+        });
+      }
+      window.toggleInsumo = (idx) => {
+        botiquin.insumos[idx].presente = !botiquin.insumos[idx].presente;
+      };
+      window.guardarBotiquin = () => {
+        salud.guardarBotiquin(botiquin);
+        alert('Botiquín guardado.');
+      };
+      renderBotiquin();
+      // Ficha médica
+      const form = document.getElementById('form-ficha');
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        const ficha = {
+          nombre: form.nombre.value,
+          cedula: form.cedula.value,
+          edad: form.edad.value,
+          sexo: form.sexo.value,
+          contacto_emergencia: form.contacto_emergencia.value,
+          alergias: form.alergias.value
+            .split(',')
+            .map((x) => x.trim())
+            .filter(Boolean),
+          enfermedades_cronicas: form.enfermedades_cronicas.value
+            .split(',')
+            .map((x) => x.trim())
+            .filter(Boolean),
+          medicacion_habitual: form.medicacion_habitual.value
+            .split(',')
+            .map((x) => x.trim())
+            .filter(Boolean),
+          grupo_sanguineo: form.grupo_sanguineo.value,
+          vacunas: form.vacunas.value
+            .split(',')
+            .map((x) => x.trim())
+            .filter(Boolean),
+          observaciones: form.observaciones.value,
+        };
+        salud.guardarHistorialPaciente(ficha);
+        alert('Ficha médica guardada.');
+      };
+      window.buscarHistorial = () => {
+        const q = document.getElementById('busqueda').value.trim();
+        let ficha = null;
+        if (/^\d+$/.test(q))
+          ficha = salud.buscarHistorialPaciente({ cedula: q });
+        else ficha = salud.buscarHistorialPaciente({ nombre: q });
+        const res = document.getElementById('resultado-busqueda');
+        if (ficha) {
+          res.innerHTML = `<pre>${JSON.stringify(ficha, null, 2)}</pre><button class='btn' onclick='exportarHistorial()'>Exportar</button>`;
+          window.exportarHistorial = () =>
+            salud.exportarHistorialPaciente(ficha);
+          // QR (placeholder)
+          document.getElementById('qr-historial').innerHTML =
+            salud.generarQRHistorial(ficha);
+        } else {
+          res.innerHTML = '<span style="color:#b91c1c">No encontrado.</span>';
+          document.getElementById('qr-historial').innerHTML = '';
+        }
+      };
+    </script>
+  </body>
+</html>

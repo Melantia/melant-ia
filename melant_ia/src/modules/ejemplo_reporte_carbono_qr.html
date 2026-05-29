@@ -1,0 +1,65 @@
+<!-- Ejemplo de reporte de carbono y exportación QR para MELANTIA -->
+<div
+  id="reporte-carbono"
+  style="
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 24px 18px;
+    border-radius: 12px;
+    background: #f9fafb;
+    box-shadow: 0 2px 12px #0001;
+  "
+>
+  <h2 style="color: #276749">Reporte de Carbono y NDVI</h2>
+  <div><b>Potrero:</b> <span id="nombre-potrero">-</span></div>
+  <div><b>NDVI:</b> <span id="valor-ndvi">-</span></div>
+  <div><b>CO₂ capturado:</b> <span id="valor-co2">-</span> t/ha</div>
+  <div><b>Fecha:</b> <span id="fecha-reporte">-</span></div>
+  <div style="margin: 18px 0 8px 0">
+    <button
+      onclick="exportarInformeQR()"
+      style="
+        background: #276749;
+        color: #fff;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+      "
+    >
+      Exportar QR
+    </button>
+  </div>
+  <div id="qr-informe" style="margin: 0 auto; text-align: center"></div>
+</div>
+
+<!-- Incluye la librería QRCode.js -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script>
+  // Simulación de datos (reemplaza por datos reales de tu app)
+  const datosInforme = {
+    potrero: 'Finca La Esperanza',
+    ndvi: 0.72,
+    co2: 2.5,
+    fecha: '2026-05-29',
+  };
+  // Mostrar datos en el reporte
+  function mostrarReporte(datos) {
+    document.getElementById('nombre-potrero').textContent = datos.potrero;
+    document.getElementById('valor-ndvi').textContent = datos.ndvi;
+    document.getElementById('valor-co2').textContent = datos.co2;
+    document.getElementById('fecha-reporte').textContent = datos.fecha;
+  }
+  mostrarReporte(datosInforme);
+  // Exportar QR
+  function exportarInformeQR() {
+    const texto = JSON.stringify(datosInforme);
+    const qrDiv = document.getElementById('qr-informe');
+    qrDiv.innerHTML = '';
+    new QRCode(qrDiv, {
+      text: texto,
+      width: 256,
+      height: 256,
+    });
+  }
+</script>

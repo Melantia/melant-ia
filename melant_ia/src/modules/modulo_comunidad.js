@@ -1,43 +1,20 @@
 // módulo de interacción de comunidad MELANTIA
 // Integración: ReporteLunes (Frontend, visual y síntesis de voz)
 
-window.ReporteLunes = {
-  // ── Estado persistido en localStorage ──
-  _CLAVE_SYNC: 'melantia_ultima_sync',
-  _CLAVE_SALUD: 'melantia_salud_semana',
-  _CLAVE_PREFS: 'melantia_reporte_prefs', // preferencias de formato
-  _CLAVE_PERIODICO: 'melantia_periodico', // texto del periódico pendiente
-  _watchdog: null,
-  _cancelado: false,
-  _enCarga: false, // true cuando está enchufado
+export function mostrarPanel() {
+  const panel = document.getElementById('panel-novedades') || document.body;
+  panel.innerHTML = `
+    <div class="panel-comunidad" style="max-width:600px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#276749;margin-bottom:8px;'>Comunidad MELANTIA</h2>
+      <p style='color:#444;font-size:1.1em;'>Aquí puedes interactuar con la comunidad, ver novedades, reportes y participar en actividades colaborativas.</p>
+      <div id="comunidad-content"></div>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:24px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+  // Aquí puedes inicializar la lógica de comunidad, cargar reportes, etc.
+}
 
-  // ── Guiones del carrusel (se reemplazan con datos reales al actualizar) ──
-  _guiones: {
-    Angel: {
-      pitch: 1.1,
-      rate: 1.0,
-      texto: () => {
-        const d = window.ReporteLunes._leerDato('angel_novedad');
-        return (
-          d ||
-          'Los precios del mercado se han mantenido estables esta semana. Te recomiendo revisar los precios del cacao y el café antes de negociar.'
-        );
-      },
-    },
-    Fabrizzio: {
-      pitch: 0.85,
-      rate: 0.92,
-      texto: () => {
-        const d = window.ReporteLunes._leerDato('fabrizzio_novedad');
-        return (
-          d ||
-          'He incorporado nuevas experiencias de productores vecinos en tu manual técnico. Revisa la sección de control de plagas.'
-        );
-      },
-    },
-    'Dr. Pablo': {
-      pitch: 0.9,
-      rate: 0.88,
+// ...resto de la lógica y utilidades de ReporteLunes pueden mantenerse como funciones auxiliares o migrarse a otros archivos si es necesario...
       texto: () => {
         const d = window.ReporteLunes._leerDato('pablo_novedad');
         return (

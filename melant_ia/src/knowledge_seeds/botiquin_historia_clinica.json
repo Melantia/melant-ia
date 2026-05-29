@@ -1,0 +1,76 @@
+{
+  "modulo": "Botiquín Casero e Historia Clínica",
+  "botiquin": {
+    "descripcion": "Lista editable de insumos recomendados para un botiquín casero rural.",
+    "insumos": [
+      {
+        "nombre": "Gasas estériles",
+        "cantidad_recomendada": 10,
+        "presente": false
+      },
+      {
+        "nombre": "Vendas elásticas",
+        "cantidad_recomendada": 2,
+        "presente": false
+      },
+      {
+        "nombre": "Alcohol o antiséptico",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      {
+        "nombre": "Agua oxigenada",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      { "nombre": "Termómetro", "cantidad_recomendada": 1, "presente": false },
+      {
+        "nombre": "Guantes desechables",
+        "cantidad_recomendada": 4,
+        "presente": false
+      },
+      {
+        "nombre": "Tijeras y pinzas",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      { "nombre": "Suero oral", "cantidad_recomendada": 2, "presente": false },
+      {
+        "nombre": "Paracetamol o analgésico",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      {
+        "nombre": "Antialérgico",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      {
+        "nombre": "Linterna y pilas",
+        "cantidad_recomendada": 1,
+        "presente": false
+      },
+      {
+        "nombre": "Lista de teléfonos de emergencia",
+        "cantidad_recomendada": 1,
+        "presente": false
+      }
+    ],
+    "notas": "Personaliza según tu familia y zona. Revisa fechas de caducidad."
+  },
+  "ficha_medica": {
+    "descripcion": "Ficha médica básica editable para emergencias y prevención.",
+    "datos_personales": {
+      "nombre": "",
+      "edad": "",
+      "sexo": "",
+      "contacto_emergencia": ""
+    },
+    "alergias": [],
+    "enfermedades_cronicas": [],
+    "medicacion_habitual": [],
+    "grupo_sanguineo": "",
+    "vacunas": [],
+    "observaciones": ""
+  }
+}

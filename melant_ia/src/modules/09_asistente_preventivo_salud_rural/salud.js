@@ -1,4 +1,21 @@
 // Modulo Salud y Bienestar Rural - Paulette
+export function mostrarPanel() {
+  // Panel principal para el enrutador dinámico
+  const cont = document.getElementById('contenedor-principal') || document.body;
+  cont.innerHTML = `
+    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
+      <h2 style='color:#c62828;text-align:center;margin-bottom:24px;'>Asistente Preventivo de Salud</h2>
+      <ul style="font-size:1.1em;line-height:1.7;">
+        <li>Asistente Preventivo de Salud</li>
+        <li>Guía de Primeros Auxilios y Respuesta Rápida</li>
+        <li>Botiquín Casero Inteligente</li>
+        <li>Ficha Médica / Historia Clínica</li>
+      </ul>
+      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#c62828;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
+    </div>
+  `;
+}
+
 const Salud = {
   _metricasKey: 'melantia_salud_comandos',
   _perfilKey: 'melantia_salud_perfil',

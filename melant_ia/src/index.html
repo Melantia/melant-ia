@@ -11,9 +11,10 @@
     <link
       rel="icon"
       type="image/webp"
-      href="storage/assets/icono_melantia.webp"
+      href="src/storage/assets/icono_melantia.webp"
     />
     <link rel="apple-touch-icon" href="storage/assets/icono_melantia.webp" />
+  <link rel="apple-touch-icon" href="src/storage/assets/icono_melantia.webp" />
 
     <link rel="stylesheet" href="styles.css" />
     <!-- CSS de afiliados solo para móviles -->
@@ -25,19 +26,7 @@
     <!-- Ejemplo: otro CSS solo para impresión -->
     <!-- <link rel="stylesheet" href="modules/01_suscripciones/afiliados_controller.css" media="print" /> -->
   </head>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw-melantia.js').then(
-          function (reg) {
-            console.log('Service Worker MELANTIA registrado:', reg.scope);
-          },
-          function (err) {
-            console.log('Error al registrar Service Worker:', err);
-          }
-        );
-      });
-    }
+  <!-- Eliminado registro duplicado de Service Worker -->
   </script>
   <body>
     <!-- Banner de estado offline -->
@@ -230,6 +219,50 @@
           <span style="font-size: 30px">🔊</span>
         </button>
         <button
+          id="btn-foto-rural"
+          style="
+            background: #f59e0b;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-left: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.18);
+          "
+        >
+          <span style="font-size: 30px">📷</span>
+        </button>
+            <script>
+            // Puente universal para cargar el Asistente Técnico Rural y submódulos desde el menú principal
+            document.addEventListener('DOMContentLoaded', function() {
+              // Botón de voz: ejemplo de activación por voz (puedes conectar tu lógica de reconocimiento aquí)
+              const btnVoz = document.getElementById('btn-voz-general');
+              if (btnVoz) {
+                btnVoz.addEventListener('click', async function() {
+                  // Aquí puedes poner tu lógica de reconocimiento de voz y decidir el submódulo
+                  // Por defecto, abre el panel principal del Asistente Técnico Rural
+                  if (window.activarSubmoduloRural) {
+                    await window.activarSubmoduloRural('Asistente Técnico en Cultivos');
+                  } else if (window.cargarDatosModulo) {
+                    window.cargarDatosModulo(2, 'Asistente Técnico Rural');
+                  }
+                });
+              }
+              // Botón de foto: activa directamente Visión Artificial
+              const btnFoto = document.getElementById('btn-foto-rural');
+              if (btnFoto) {
+                btnFoto.addEventListener('click', async function() {
+                  if (window.activarSubmoduloRural) {
+                    await window.activarSubmoduloRural('Visión Artificial');
+                  } else if (window.cargarDatosModulo) {
+                    window.cargarDatosModulo(2, 'Asistente Técnico Rural');
+                  }
+                });
+              }
+            });
+            </script>
+        <button
           id="btn-privacidad-gps"
           title="Configurar privacidad de ubicación"
           style="
@@ -271,7 +304,7 @@
       <img
         id="robot-asistente"
         class="robot-icon"
-        src="src/storage/assets/melantia_idle.webp"
+        src="storage/assets/melantia_idle.webp"
         alt="MELANTIA"
         loading="lazy"
         onerror="
@@ -322,9 +355,9 @@
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
-            .register('/sw.js')
-            .then((reg) => console.log('Service Worker registrado:', reg.scope))
-            .catch((err) => console.log('Error al registrar SW:', err));
+            .register('sw-melantia.js')
+            .then((reg) => console.log('Service Worker MELANTIA registrado:', reg.scope))
+            .catch((err) => console.log('Error al registrar Service Worker:', err));
         });
       }
     </script>
@@ -344,6 +377,10 @@
 
     <!-- ml5.js IA -->
     <script src="js/ml5.min.js"></script>
+
+    <!-- TensorFlow.js y tfjs-tflite para IA offline -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1/dist/tf-tflite.min.js"></script>
 
     <!-- Otros scripts de tu app -->
     <!-- <script src="js/tu_script.js"></script> -->
