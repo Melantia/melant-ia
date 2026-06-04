@@ -1,0 +1,193 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Costos bajos, mercado premium, certificación orgánica, ROI largo plazo",
+  "contenido": {
+    "introduccion": {
+      "titulo": "7.1 Introducción Economía Papa Nativa",
+      "texto": "Papa nativa = ECONOMÍA OPUESTA convencional. Inversión MÍNIMA (semilla propia, compost casero, labor familiar). Ingresos BAJOS volumen (12 ton/hectárea) pero ALTOS precio (premium 50-75%). ROI = 60-100% si certificación orgánica alcanzada."
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial - Mínima",
+      "escenario": "5 hectáreas sierra andina",
+      "componentes": [
+        {
+          "concepto": "Semilla propia (seleccionada cosecha anterior)",
+          "cantidad": "2,500 kg (500 kg/hectárea)",
+          "costo": "USD 0 (propia)"
+        },
+        {
+          "concepto": "Preparacion terreno",
+          "cantidad": "Arada liviana",
+          "subtotal": "USD 100-150"
+        },
+        {
+          "concepto": "Compost casero",
+          "cantidad": "50 toneladas preparada anterior",
+          "costo": "USD 0 (producción propia)",
+          "labor": "USD 200 aplicación"
+        },
+        {
+          "concepto": "Abono verde (haba/lupino)",
+          "cantidad": "250 kg semilla",
+          "subtotal": "USD 75-100"
+        },
+        {
+          "concepto": "Labor siembra + mantenimiento",
+          "cantidad": "Familiar (sin pagar)",
+          "subtotal": "USD 0"
+        },
+        {
+          "concepto": "Labor cosecha manual",
+          "cantidad": "Familiar",
+          "subtotal": "USD 0"
+        }
+      ],
+      "total_inicial": "USD 575-450 (10x menos convencional)"
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos por Hectárea",
+      "desglose": [
+        {
+          "rubro": "Semilla (propia USD 0)",
+          "costo": "USD 0"
+        },
+        {
+          "rubro": "Compost casero preparación",
+          "costo": "USD 40 (labor prepación)"
+        },
+        {
+          "rubro": "Abono verde semilla",
+          "costo": "USD 15"
+        },
+        {
+          "rubro": "Labor cosecha",
+          "costo": "USD 30 (familiar)"
+        }
+      ],
+      "total_operativo": "USD 85/hectárea (vs USD 900 convencional)"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "rendimientos": [
+        {
+          "escenario": "Bajo (primeros años, menos experiencia)",
+          "rendimiento": "10 toneladas/hectárea",
+          "precio": "USD 0.35/kg (sin certificación)",
+          "ingreso": "USD 3,500/hectárea"
+        },
+        {
+          "escenario": "Medio (estabilizado)",
+          "rendimiento": "12 toneladas/hectárea",
+          "precio": "USD 0.50/kg (agroecológico local reconocido)",
+          "ingreso": "USD 6,000/hectárea"
+        },
+        {
+          "escenario": "Alto (certificación orgánica)",
+          "rendimiento": "12 toneladas/hectárea",
+          "precio": "USD 0.60-0.75/kg (orgánico certificado premium)",
+          "ingreso": "USD 7,200-9,000/hectárea"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "ano_1": {
+        "supuestos": [
+          "Inversión: USD 100/hectárea (bajo)",
+          "Costos operativos: USD 85/hectárea",
+          "Rendimiento: 10 toneladas (aprendizaje)",
+          "Precio: USD 0.30/kg (sin certificación año 1)"
+        ],
+        "ingresos": "10 ton × USD 0.30 = USD 3,000",
+        "costos": "USD 85 + USD 20 amortización = USD 105",
+        "utilidad": "USD 3,000 - USD 105 = USD 2,895",
+        "roi": "USD 2,895 ÷ (USD 500 inversión 5 ha) = 579% (excelente!)"
+      },
+      "ano_3": {
+        "supuestos": [
+          "Inversión amortizada",
+          "Costos operativos: USD 85/hectárea",
+          "Rendimiento: 12 toneladas (mejora experiencia)",
+          "Precio: USD 0.50-0.60/kg (orgánico, reputación establecida)"
+        ],
+        "ingresos": "12 ton × USD 0.55 promedio = USD 6,600",
+        "costos": "USD 85",
+        "utilidad": "USD 6,600 - USD 85 = USD 6,515",
+        "roi": "USD 6,515 ÷ (USD 100 inversión mínima) = 6,515% (extraordinario)"
+      }
+    },
+    "comparativa_final": {
+      "titulo": "7.6 Comparativa Papa Convencional vs Nativa",
+      "tabla": [
+        {
+          "item": "Inversión inicial",
+          "convencional": "USD 2,000/hectárea",
+          "nativa": "USD 100/hectárea"
+        },
+        {
+          "item": "Costos operativos/año",
+          "convencional": "USD 900/hectárea",
+          "nativa": "USD 85/hectárea"
+        },
+        {
+          "item": "Rendimiento",
+          "convencional": "22 toneladas",
+          "nativa": "12 toneladas"
+        },
+        {
+          "item": "Precio grano",
+          "convencional": "USD 0.30/kg",
+          "nativa": "USD 0.50-0.60/kg (orgánico)"
+        },
+        {
+          "item": "Ingreso bruto",
+          "convencional": "USD 6,600/hectárea",
+          "nativa": "USD 6,000-7,200/hectárea"
+        },
+        {
+          "item": "Utilidad año 1",
+          "convencional": "USD 2,400/hectárea",
+          "nativa": "USD 2,895/hectárea"
+        },
+        {
+          "item": "ROI año 1",
+          "convencional": "50%",
+          "nativa": "579% (!!)"
+        }
+      ],
+      "conclusion": "Papa nativa inversión MUCHO MENOR, ROI año 1 EXTRAORDINARIO. PERO requiere mercado premium establecido"
+    },
+    "certificacion_organica": {
+      "titulo": "7.7 Certificación Orgánica",
+      "costo": "USD 300-500/año organismo certificador",
+      "transicion": "3 años sin insumos químicos",
+      "beneficio_precio": "+40-75% precio (USD 0.50-0.75/kg vs USD 0.30 convencional)",
+      "payback": "Certificación costo USD 1,200 (3 años) / extra USD 300/hectárea/año = 4 años payback"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.8 Preguntas Frecuentes - Economía Nativa",
+      "q1": {
+        "pregunta": "¿ROI 579% es realista?",
+        "respuesta": "SÍ si: (1) semilla propia (USD 0 costo), (2) labor familiar (USD 0 pago), (3) mercado local (fácil venta). Primeros años = típico"
+      },
+      "q2": {
+        "pregunta": "¿Volumen bajo (12 ton vs 22) es problema?",
+        "respuesta": "NO si precio premium compensa (USD 0.50 vs USD 0.30 = 67% mayor). Ingresos similares, menos trabajo"
+      },
+      "q3": {
+        "pregunta": "¿Certificación orgánica vale USD 300/año?",
+        "respuesta": "SÍ ROI positivo (extra USD 300/hectárea/año = 4 años payback). Luego ganancia pura"
+      },
+      "q4": {
+        "pregunta": "¿Mercado premium siempre existe?",
+        "respuesta": "NO garantizado. Ferias agroecológicas, restaurantes gourmet, consumidor consciente = SÍ. Mercado mayorista = NO existe"
+      },
+      "q5": {
+        "pregunta": "¿Papa nativa es mejor negocio?",
+        "respuesta": "DEPENDE. Papa nativa: menor riesgo, inversión mínima, ROI extraordinario AÑO 1. Papa convencional: volumen mayor, mercado garantizado. Ambas viables"
+      }
+    ]
+  }
+}

@@ -4,6 +4,19 @@
 import PLANES from './01_suscripciones/planes_beneficios.js';
 import { moneda, escapeHtml } from './01_suscripciones/utils.js';
 
+const ICONOS_PLAN = {
+  basico: '🌱',
+  standard: '🚜',
+  premium: '🏆',
+  profesional: '🛰️',
+  comunidad_basico: '🤝',
+  comunidad_premium: '🌎',
+};
+
+function iconoPlan(planId) {
+  return ICONOS_PLAN[planId] || '💠';
+}
+
 // Utilidad para barra de progreso de días gratuitos
 function barraProgresoDiasGratis(restantes, total) {
   const pct = Math.max(0, Math.min(100, Math.round((restantes / total) * 100)));
@@ -54,59 +67,6 @@ function activarPlanOffline(planId) {
 export function mostrarPanel() {
   const contenedor =
     document.getElementById('contenedor-principal') || document.body;
-  let planesHtml = Object.values(PLANES)
-    .map(
-      (plan) => `
-    <div style="border:1px solid #eee;padding:12px;margin-bottom:10px;border-radius:8px;">
-      <strong>${escapeHtml(plan.nombre)}</strong> — ${moneda(plan.precio)}
-      <div style="font-size:0.95em;color:#555;">${escapeHtml(plan.enfoque)}</div>
-      <ul style="margin:8px 0 0 0;padding-left:18px;">
-        ${plan.accesos
-          .map(
-            (acc) =>
-              `<li style='font-size:0.97em;color:#276749;'>${escapeHtml(acc)}</li>`
-          )
-          .join('')}
-      </ul>
-      <div style="font-size:0.93em;color:#b45309;margin-top:6px;">${escapeHtml(plan.valorAgregado || '')}</div>
-    </div>
-  `
-    )
-    .join('');
-  // Simulación de plan actual y días de gratuidad
-  let perfil = null;
-  let diasGratuitosRestantes = 0;
-  let planActual = null;
-  try {
-    perfil = JSON.parse(localStorage.getItem('perfil_usuario'));
-    planActual = perfil?.plan_activo || null;
-    diasGratuitosRestantes = perfil?.dias_gratis_restantes ?? 0;
-  } catch {}
-
-  // Mensaje de advertencia de días de gratuidad
-  let mensajeGratuito = '';
-  if (diasGratuitosRestantes > 0 && diasGratuitosRestantes <= 3) {
-    mensajeGratuito = `<div style="background:#FEF3C7;color:#B45309;padding:12px 18px;border-radius:8px;margin-bottom:18px;font-weight:bold;">
-        ¡Atención! Tus <b>${diasGratuitosRestantes}</b> días de gratuidad están por terminar. Cuando se acaben, no podrás usar los servicios de la app hasta el día 1 del próximo mes, cuando se activan 5 días de gratuidad.
-      </div>`;
-  } else if (diasGratuitosRestantes === 0) {
-    mensajeGratuito = `<div style="background:#FEE2E2;color:#B91C1C;padding:12px 18px;border-radius:8px;margin-bottom:18px;font-weight:bold;">
-        Tus días de gratuidad han terminado. Los servicios de la app están bloqueados hasta el día 1 del próximo mes, cuando recibirás 5 días de gratuidad.
-      </div>`;
-  }
-
-  // Resumen del plan actual
-  let resumenPlan = '';
-  if (planActual && PLANES[planActual]) {
-    const p = PLANES[planActual];
-    resumenPlan = `<div style="background:#E0F2FE;color:#0369A1;padding:12px 18px;border-radius:8px;margin-bottom:18px;">
-        <b>Tu plan actual:</b> <span style="font-size:1.1em;">${escapeHtml(p.nombre)}</span> — <b>${moneda(p.precio)}</b><br>
-        <span style="font-size:0.98em;">${escapeHtml(p.enfoque)}</span>
-      </div>`;
-  }
-
-  // Tabla comparativa de planes
-  // Panel superior con usuario y barra de progreso
   let perfil = null;
   let diasGratuitosRestantes = 0;
   let planActual = null;
@@ -146,13 +106,13 @@ export function mostrarPanel() {
   let panelUsuario = `
     ${notificacionActivar}
     ${notificacionRenovar}
-    <div style="display:flex;align-items:center;gap:18px;background:#F3F4F6;padding:18px 18px 10px 18px;border-radius:14px;margin-bottom:18px;">
+    <div style="display:flex;align-items:center;gap:18px;background:#111827;padding:18px 18px 10px 18px;border-radius:14px;margin-bottom:18px;border:1px solid #1F2937;">
       ${avatarUsuario(perfil)}
       <div style="flex:1;">
-        <div style="font-size:1.15em;font-weight:bold;color:#276749;">${escapeHtml(nombreUsuario)}</div>
-        <div style="font-size:0.98em;color:#64748B;">${escapeHtml(correoUsuario)}</div>
-        <div style="font-size:0.97em;color:#0369A1;margin-top:4px;">Plan actual: <b>${planActual && PLANES[planActual] ? escapeHtml(PLANES[planActual].nombre) : 'Sin plan activo'}</b></div>
-        <div style="font-size:0.97em;color:#B45309;">Días de gratuidad restantes: <b>${diasGratuitosRestantes}</b></div>
+        <div style="font-size:1.15em;font-weight:bold;color:#F9FAFB;">${escapeHtml(nombreUsuario)}</div>
+        <div style="font-size:0.98em;color:#9CA3AF;">${escapeHtml(correoUsuario)}</div>
+        <div style="font-size:0.97em;color:#93C5FD;margin-top:4px;">Plan actual: <b>${planActual && PLANES[planActual] ? escapeHtml(PLANES[planActual].nombre) : 'Sin plan activo'}</b></div>
+        <div style="font-size:0.97em;color:#FCD34D;">Días de gratuidad restantes: <b>${diasGratuitosRestantes}</b></div>
         ${barraProgresoDiasGratis(diasGratuitosRestantes, 10)}
       </div>
     </div>
@@ -180,20 +140,20 @@ export function mostrarPanel() {
       badge = `<span style="background:#10B981;color:#fff;padding:2px 10px;border-radius:12px;font-size:0.92em;margin-left:8px;">Más popular</span>`;
     }
     planesHtml += `
-      <div style="background:#fff;border:2px solid #F59E0B;box-shadow:0 2px 12px #0001;border-radius:14px;padding:18px 18px 14px 18px;min-width:240px;max-width:320px;flex:1 1 260px;display:flex;flex-direction:column;align-items:center;">
-        <img src="/src/assets/ui/icons/plan_${plan.id}.svg" alt="${escapeHtml(plan.nombre)}" style="width:54px;height:54px;margin-bottom:10px;" onerror="this.style.display='none'">
-        <div style="font-size:1.25em;font-weight:bold;color:#B45309;">${escapeHtml(plan.nombre)}${badge}</div>
-        <div style="font-size:1.1em;color:#276749;margin-bottom:6px;">${moneda(plan.precio)}</div>
-        <div style="font-size:0.98em;color:#555;margin-bottom:8px;">${escapeHtml(plan.enfoque)}</div>
+      <div style="background:#0B0F19;border:1px solid #374151;box-shadow:0 2px 16px rgba(0,0,0,0.35);border-radius:14px;padding:18px 18px 14px 18px;min-width:240px;max-width:320px;flex:1 1 260px;display:flex;flex-direction:column;align-items:center;">
+        <div title="${escapeHtml(plan.nombre)}" style="width:54px;height:54px;margin-bottom:10px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#1F2937;border:1px solid #4B5563;font-size:1.5em;">${iconoPlan(plan.id)}</div>
+        <div style="font-size:1.25em;font-weight:bold;color:#FDE68A;">${escapeHtml(plan.nombre)}${badge}</div>
+        <div style="font-size:1.1em;color:#86EFAC;margin-bottom:6px;">${moneda(plan.precio)}</div>
+        <div style="font-size:0.98em;color:#D1D5DB;margin-bottom:8px;">${escapeHtml(plan.enfoque)}</div>
         <ul style="margin:0 0 8px 0;padding-left:18px;text-align:left;">
           ${plan.accesos
             .map(
               (acc) =>
-                `<li style='font-size:0.97em;color:#276749;'><span style='margin-right:6px;'>✔️</span>${escapeHtml(acc)}</li>`
+                `<li style='font-size:0.97em;color:#C7D2FE;'><span style='margin-right:6px;'>✔️</span>${escapeHtml(acc)}</li>`
             )
             .join('')}
         </ul>
-        <div style="font-size:0.93em;color:#b45309;margin-bottom:8px;">${escapeHtml(plan.valorAgregado || '')}</div>
+        <div style="font-size:0.93em;color:#F59E0B;margin-bottom:8px;">${escapeHtml(plan.valorAgregado || '')}</div>
         <button onclick="window.mostrarModalPagoPlan('${plan.id}')" style="margin-top:auto;padding:8px 18px;background:#276749;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1em;font-weight:bold;" ${planActual === plan.id ? 'disabled style=\"opacity:0.6;cursor:not-allowed;\"' : ''}>${planActual === plan.id ? 'Plan activo' : 'Contratar este plan'}</button>
       </div>
     `;
@@ -202,8 +162,8 @@ export function mostrarPanel() {
 
   // Reglas y condiciones
   let reglas = `<div style="margin:30px 0 0 0;">
-      <h3 style="color:#B45309;">Reglas y condiciones de uso</h3>
-      <ul style="color:#444;font-size:1.04em;">
+      <h3 style="color:#F59E0B;">Reglas y condiciones de uso</h3>
+      <ul style="color:#E5E7EB;font-size:1.04em;">
         <li>Los primeros 10 días tras el registro son gratuitos. Al terminar, la app se bloquea hasta el día 1 del mes siguiente, cuando se activan 5 días de gratuidad.</li>
         <li>Durante los días de gratuidad, solo puedes usar: Mi Comunidad Virtual, Suscripciones, Asistente Técnico Rural, Tienda MELANTIA, Gestión de Fincas (1 sola finca), Servicios Financieros.</li>
         <li>Extraer un documento o informe durante días gratuitos tiene un costo de $3.</li>
@@ -212,9 +172,12 @@ export function mostrarPanel() {
     </div>`;
 
   contenedor.innerHTML = `
-    <div class="panel-especifico" style="max-width:900px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
-      <h2 style="color:#276749;">Planes y Pagos</h2>
-      <p style="color:#444;font-size:1.1em;">Consulta los planes disponibles, sus beneficios y precios. Elige el que mejor se adapte a tus necesidades.</p>
+    <div class="panel-especifico" style="max-width:980px;margin:20px auto;background:linear-gradient(160deg,#05070D,#0F172A);border-radius:16px;box-shadow:0 10px 36px rgba(0,0,0,0.45);padding:32px 24px;border:1px solid #1F2937;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;">
+        <h2 style="color:#F9FAFB;margin:0;">Planes y Pagos</h2>
+        <img src="assets/ui/icons/melantio_gold.svg" alt="Logo MELANTIA" style="width:44px;height:44px;object-fit:contain;" onerror="this.style.display='none'" />
+      </div>
+      <p style="color:#D1D5DB;font-size:1.1em;">Consulta los planes disponibles, sus beneficios y precios. Elige el que mejor se adapte a tus necesidades.</p>
       ${panelUsuario}
       ${mensajeGratuito}
       ${planesHtml}

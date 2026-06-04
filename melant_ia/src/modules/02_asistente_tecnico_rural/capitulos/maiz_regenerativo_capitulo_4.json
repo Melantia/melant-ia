@@ -1,0 +1,235 @@
+{
+  "capitulo": 4,
+  "titulo": "Control Biológico de Plagas del Maíz Regenerativo",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Depredadores naturales, cultivos trampa, rotación, monitoreo biodiversidad",
+  "contenido": {
+    "introduccion": {
+      "titulo": "4.1 Introducción al Control Biológico",
+      "texto": "Control biológico maíz regenerativo reemplaza insecticida químico (USD 50-100/ha) con aumento biodiversidad. Sistema regenerativo con cobertura viva + mulch crea hábitat: escarabajos depredadores (Coccinellidae) comen áfidos/pulgones, avispas parasitoides matan orugas, arañas controlan ácaros. RESULTADO: Plagas presentes pero bajo umbral económico (< 10-15% daño), no erradicación (imposible). COSTO: USD 0-30/ha (solo labor monitoreo) vs USD 100+ insecticida."
+    },
+    "enemigos_naturales": {
+      "titulo": "4.2 Enemigos Naturales del Maíz",
+      "depredadores": [
+        {
+          "nombre": "Mariquita (Coccinella septempunctata, Coleomegilla maculata)",
+          "presa": "Áfidos, pulgones, huevos plagas pequeñas",
+          "ciclo": "Larva consume 200-400 áfidos antes pupación",
+          "atraccion": "Flores sombrilla (dill, cilantro, zanahoria silvestre)",
+          "abundancia": "1-5 por planta = suficiente control"
+        },
+        {
+          "nombre": "Araña cazadora (Lycosidae, Salticidae)",
+          "presa": "Ácaros, insectos pequeños, cogollero ninfas",
+          "ciclo": "Adulto consume 1-3 insectos/día",
+          "habitat": "Mulch, plantas perennes, cobertura entre surcos",
+          "abundancia": "Necesario 200-500 arañas/hectárea"
+        },
+        {
+          "nombre": "Escarabajo depredador (Carabidae)",
+          "presa": "Larvas plagas, babosas, nematodos",
+          "ciclo": "Larva + adulto 2-3 años ciclo (hibernan suelo)",
+          "habitat": "Suelo vivo, mulch, bosquetes árboles periféricos",
+          "nota": "Actividad nocturna, difícil observar"
+        },
+        {
+          "nombre": "Mosca sírfida (Episyrphus balteatus, Sphaerophoria)",
+          "presa": "Áfidos (larva consume 200+ por ciclo)",
+          "atraccion": "Flores amarillas pequeñas (mostaza, trébol amarillo)",
+          "polinizacion": "Bonus: polinización maíz"
+        }
+      ],
+      "parasitoides": [
+        {
+          "nombre": "Avispa parasitoidea (Trichogramma pretiosum)",
+          "presa": "Huevos cogollero, barrenador",
+          "ciclo": "Huevo - pupa dentro huevo plaga",
+          "aplicacion": "Suelta controlada USD 50-100/ha",
+          "efectividad": "60-80% control si suelta estratégica"
+        },
+        {
+          "nombre": "Avispa parasitoidea (Habrobracon hebetor)",
+          "presa": "Larvas barrenador tallo",
+          "ciclo": "Larva hospedera - pupa en larva",
+          "liberacion": "Suelta masiva V8-V12 (período barrenador crianza)"
+        },
+        {
+          "nombre": "Mosca taquínida (Archytas marmoratus)",
+          "presa": "Larvas cogollero, barrenador, orugas lepidópteras",
+          "ciclo": "Larva mosca dentro hospedera, 7-10 días emergencia",
+          "reproduccion": "Auto-perpetuante si hábitat establece (>2-3 años)"
+        }
+      ]
+    },
+    "cultivos_trampa": {
+      "titulo": "4.3 Cultivos Trampa y de Servicio",
+      "estrategia": "Cultivos secundarios entre/alrededor surcos maíz atraen plagas y depredadores, reducen presión cultivo principal",
+      "cultivos_trampa": [
+        {
+          "cultivo": "Maíz dulce (intercalado hileras)",
+          "atrae_plagas": "Cogollero (prefiere dulce), barrenador",
+          "manejo": "Destrucción 2-3 semanas post-eclosión cogollero (mata generación)",
+          "ventaja": "Plagas concentradas fuera maíz granero"
+        },
+        {
+          "cultivo": "Girasol perimetral",
+          "atrae": "Depredadores (néctar) + plagas secundarias",
+          "manejo": "Siembra 2-3 semanas pre-maíz, destrucción post-floración",
+          "ventaja": "Barrera física + hábitat enemigos naturales"
+        },
+        {
+          "cultivo": "Trébol blanco entre surcos",
+          "atrae": "Áfidos (alimento mosca sírfida), polinizadores",
+          "manejo": "Perenne, destrucción parcial pre-cosecha",
+          "ventaja": "Fijación N + biodiversidad permanente"
+        },
+        {
+          "cultivo": "Mostaza entre surcos",
+          "atrae": "Depredadores (flores), plagas crucíferas (Plutella)",
+          "manejo": "Destrucción V12-R1",
+          "ventaja": "Alelopatía maleza + confusión plagas"
+        }
+      ]
+    },
+    "monitoreo_plagas": {
+      "titulo": "4.4 Monitoreo de Plagas sin Química",
+      "método_1_inspección": [
+        "Muestreo 10 puntos/hectárea en X patrón",
+        "5 plantas/punto, inspeccionar 3 hojas superiores",
+        "Contar: huevos, larvas, áfidos, daño",
+        "Frecuencia: Semanal V4-V12, quincenal R1-R5",
+        "Tiempo: 30-45 minutos por hectárea"
+      ],
+      "método_2_trampas": [
+        {
+          "trampa": "Trampa pegajosa amarilla (insectos voladores)",
+          "ubicacion": "1 trampa/hectárea, altura 0.5-1m",
+          "lectura": "Cada 3-5 días, contar plagas específicas",
+          "costo": "USD 1-2/trampa, duración 2-3 meses"
+        },
+        {
+          "trampa": "Trampa luz (cogollero, barrenador adultos)",
+          "ubicacion": "1 trampa/2 hectáreas (centro)",
+          "lectura": "Cada amanecer, contar adultos capturados",
+          "umbral_accion": "> 5 adultos/noche = larvas dejarán > 10 días"
+        }
+      ],
+      "umbrales_accion": [
+        {
+          "plaga": "Cogollero",
+          "umbral": "> 10 larvas/100 plantas = control requerido",
+          "accion_pre": "Inspección nocturna (atracar tejido), destrucción manual"
+        },
+        {
+          "plaga": "Áfidos",
+          "umbral": "> 50 áfidos/hoja = población crece exponencial",
+          "accion_pre": "Aspersión agua fuerte V6-V8, té compost"
+        },
+        {
+          "plaga": "Araña roja (Tetranychus)",
+          "umbral": "> 10 ácaros/hoja = defoliación inicia",
+          "accion_pre": "Spray azufre mojable 1-2%, repetir 10 días"
+        }
+      ]
+    },
+    "control_biologico_aplicado": {
+      "titulo": "4.5 Control Biológico Aplicado (Inoculaciones)",
+      "metodo_1_suelta_masiva": [
+        {
+          "agente": "Trichogramma pretiosum (avispa huevos)",
+          "etapa": "V6-V8 (justo pre-cogollero postura)",
+          "cantidad": "50,000 avispas/hectárea",
+          "liberacion": "Tarjeta cartón colgada plantas (mínimo 20 puntos/ha)",
+          "costo": "USD 50-100/hectárea"
+        },
+        {
+          "agente": "Chrysoperla carnea (crisopa ojos de oro)",
+          "etapa": "V4-V8 (antes áfido población explota)",
+          "cantidad": "10,000-20,000 larvas/hectárea",
+          "liberacion": "Directa plantas, alimentan áfidos/plagas pequeñas"
+        }
+      ],
+      "metodo_2_conservacion": [
+        {
+          "accion": "Suspender insecticida >= 30 días",
+          "efecto": "Poblaciones enemigos naturales rebound 50-200x"
+        },
+        {
+          "accion": "Floración cultivos servicio (dill, cilantro)",
+          "efecto": "Alimento depredadores, aumento generaciones"
+        },
+        {
+          "accion": "Retener refugios (árboles, cercos naturales)",
+          "efecto": "Hibernación carabidae/arañas, fuente inmigrantes"
+        }
+      ]
+    },
+    "plagas_especificas": {
+      "titulo": "4.6 Plagas Específicas y Estrategia",
+      "barrenador_tallo": {
+        "biologia": "3-4 generaciones/año, larva dentro tallo 40-50 días",
+        "control": "Destrucción rastrojos (elimina pupas), rotación 2 años, suelta Habrobracon V8-V10"
+      },
+      "cogollero": {
+        "biologia": "4-6 generaciones/año, larva voraz 15-20 días",
+        "control": "Suelta Trichogramma V6-V8, cultivo trampa maíz dulce, monitoreo trampa luz"
+      },
+      "acaros": {
+        "biologia": "Tetranychus urticae (araña roja), 20+ generaciones/año",
+        "control": "Arañas depredadores, spray azufre mojable 1-2%, agua presión fuerte"
+      },
+      "pulgones": {
+        "biologia": "Multiplicación rápida (asexual), transmiten virus",
+        "control": "Mariquitas, mosca sírfida, spray insecticida neem/jabón si > 50/hoja"
+      }
+    },
+    "insecticidas_naturales_emergencia": {
+      "titulo": "4.7 Insecticidas Naturales (Último Recurso)",
+      "neem_azadiractina": {
+        "fuente": "Aceite semilla árbol Neem",
+        "dosis": "10-15 mL concentrado + agua 100L = spray",
+        "efecto": "Disrupción ecdisona (muda insectos), infertilidad",
+        "plagas": "Cogollero, pulgones, ácaros"
+      },
+      "spinosad": {
+        "fuente": "Metabolito bacteria Saccharopolyspora spinosa",
+        "dosis": "30-50 mL concentrado/hectárea",
+        "efecto": "Neurotóxico, parálisis, muerte 3-5 días",
+        "plagas": "Cogollero (especialmente larva pequeña)"
+      },
+      "azufre_mojable": {
+        "dosis": "2-4 kg/hectárea diluido agua",
+        "efecto": "Acaricida, fungicida, residual 7-10 días",
+        "precaución": "NO mezclar Cu (Burdeos), NO > 25°C ambiente (fitotoxicidad)"
+      },
+      "jabon_potasico": {
+        "dosis": "10-20 g/litro agua (casero: jabón blanco)",
+        "efecto": "Contacto, disuelve cutícula insectos blandos",
+        "plagas": "Áfidos, pulgones, trips, ácaros"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.8 Preguntas Frecuentes - Control Biológico",
+      "q1": {
+        "pregunta": "¿Control biológico es menos efectivo que química?",
+        "respuesta": "NO si monitoreo estratégico + enemigos naturales establecidos (2-3 años). Chemistry: 100% control. Biológico: 70-85% (manejable threshold). Acettrade: USD 50+ ahorros insumos"
+      },
+      "q2": {
+        "pregunta": "¿Suelta Trichogramma funciona siempre?",
+        "respuesta": "NO garantizado. Éxito depende: (1) Sincronización postura cogollero (±5 días), (2) Sin insecticida 2 semanas pre/post suelta, (3) Clima favorable. Mejor en época transición que convencional"
+      },
+      "q3": {
+        "pregunta": "¿Trelcol venenoso para mariquitas?",
+        "respuesta": "SÍ cualquier insecticida mata enemigos naturales. Solución: Usar insecticida SOLO V2-V4 (pre-mariquitas) o post-cosecha. Medio ciclo (V6-R1): PROHIBIDO"
+      },
+      "q4": {
+        "pregunta": "¿Arañas depredadores atrapan plagas suficiente?",
+        "respuesta": "SÍ si densidad > 200-500 arañas/hectárea. Problema: suelo químico NO tiene arañas (mueren pesticida). Regenerativo (año 3): densidad natura 500-2,000 arañas/hectárea = control automático"
+      },
+      "q5": {
+        "pregunta": "¿Neem es peligro humanos?",
+        "respuesta": "Muy bajo toxicidad mamíferos (LD50 > 5,000 mg/kg). Precaución: No ingerir concentrado, guantes aplicación. Producto finales (cosecha) 0 residuo (biodegrada 48 horas)"
+      }
+    ]
+  }
+}

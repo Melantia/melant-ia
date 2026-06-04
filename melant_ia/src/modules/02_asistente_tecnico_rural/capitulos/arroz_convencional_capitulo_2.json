@@ -1,0 +1,111 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento y Preparación del Arroz Convencional",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Preparación suelo, nivelación, siembra (directa vs trasplante), manejo agua",
+  "contenido": {
+    "introduccion": {
+      "titulo": "2.1 Introducción a Establecimiento",
+      "texto": "Arroz convencional requiere infraestructura compleja: drenaje/riego, suelos nivelados (desnivel > 5 cm = flujo agua desigual). Costa Ecuador = tierras aluviales planas (ventaja), pero manejo agua CRÍTICO. Sistema predominante Ecuador = siembra directa (USD 50-100/ha labor vs USD 200-300 trasplante manual)."
+    },
+    "preparacion_terreno": {
+      "titulo": "2.2 Preparación del Terreno",
+      "paso_1": "Arada 20-25 cm profundidad (menos que convencional poroto/maíz, evita traer suelos pobres profundos)",
+      "paso_2": "Rastrillado 2-3 pasadas hasta terreno firme, residuos cosecha anterior incorporados",
+      "paso_3": "Nivelación CRÍTICA (desnivel > 5 cm causa inundación irregular, estrés)",
+      "herramienta_nivelacion": "Rayo nivel manual (USD 50-100) vs láser nivel mecanizado (USD 300-500 alquiler/hectárea)"
+    },
+    "drenaje_riego": {
+      "titulo": "2.3 Sistema de Drenaje y Riego",
+      "drenaje": [
+        "Zanjas perimetrales (60 cm profundidad) drenan exceso lluvia",
+        "Drenaje interno: surcos cada 5-10 m si suelo compactado",
+        "Test drenaje: Hoyo 30 cm, agua baja 2-3 cm/hora = aceptable"
+      ],
+      "riego": [
+        "Fuente: Pozo tubelar (50-100 m profundidad), río, reservorio",
+        "Caudal: 0.5-2 L/seg por hectárea (depende clima)",
+        "Sistema: Bombeo diesel/eléctrico + canales distribución",
+        "Costo: USD 2,000-4,000 inversión inicial + USD 200-300/año operativo"
+      ]
+    },
+    "siembra_metodos": {
+      "titulo": "2.4 Métodos de Siembra",
+      "siembra_directa_humedo": {
+        "metodo": "Semilla pregerminada (24h agua) sembrada mecanicamente",
+        "ventajas": ["Labor mínima", "Rápido (1-2 días/hectárea)", "Economía USD 50-100"],
+        "desventajas": ["Requiere mecanización", "Competencia maleza mayor", "Estrés inicial humedad variable"]
+      },
+      "siembra_trasplante": {
+        "metodo": "Vivero (semillero) → plántulas 30 días → trasplante campos",
+        "ventajas": ["Control plagas vivero", "Estandarización edad"],
+        "desventajas": ["Labor intensiva USD 200-300", "Riesgo estrés trasplante", "Ciclo 2-3 semanas más"]
+      },
+      "densidad": [
+        "Siembra directa: 60-100 kg/hectárea",
+        "Trasplante: 2-3 plántulas/postura, densidad 25-40 plantas/m²"
+      ]
+    },
+    "herbicida_control_maleza": {
+      "titulo": "2.5 Control de Maleza",
+      "maleza_problema": [
+        "Ciperáceas (Cyperus rotundus): Tuberosas, rebrota post-cosecha",
+        "Echinochloa (arroz rojo/salvaje): Grano similar arroz, contaminación cosecha",
+        "Ludwigia (flores amarillas): Anual, competencia N temprana"
+      ],
+      "herbicida_uso": [
+        {
+          "producto": "Glifosato (pre-siembra)",
+          "dosis": "2-3 L/hectárea",
+          "timing": "1-2 semanas pre-inundación"
+        },
+        {
+          "producto": "Paraquat (pre-siembra)",
+          "dosis": "1-1.5 L/hectárea",
+          "timing": "Contacto inmediato plantas verdes"
+        },
+        {
+          "producto": "2,4-D (post-emergencia V3-V5)",
+          "dosis": "1-1.5 L/hectárea",
+          "ventaja": "Selectivo arroz (mata dicotiledóneas)"
+        },
+        {
+          "producto": "Bensulfurón-metil (post-emergencia V4-V8)",
+          "dosis": "30-40 g/hectárea",
+          "costo": "USD 15-20/ha"
+        }
+      ]
+    },
+    "manejo_inundacion": {
+      "titulo": "2.6 Manejo de Inundación Progresiva",
+      "fase_1": "V0-V2 (Emergencia): Inundación ligera 2-3 cm (previene cortadora tallos)",
+      "fase_2": "V3-V6 (Macollejamiento): Inundación 5-10 cm (mantiene uniforme)",
+      "fase_3": "V7-VE (Pre-floración): Aumento 10-15 cm (estrés anaerobio favorece raíces)",
+      "fase_4": "F (Floración): Mantener 5-10 cm ESTABLE (estrés agua aborta flores)",
+      "fase_5": "R1-R4 (Llenado): Drenar 10-15 días pre-madurez (endurecimiento tallo, previene acame)"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.7 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Siembra directa o trasplante mejor?",
+        "respuesta": "Directa: 70% casos Ecuador (económica, mecanizable). Trasplante: 30% (si suelo muy compactado, maleza incontrolable). Rendimiento similar si bien ejecutado"
+      },
+      "q2": {
+        "pregunta": "¿Qué pasa si inundación irregular?",
+        "respuesta": "Desastre. Zonas secas = estrés producción, maleza prolifera. Zonas profundas = anoxia muerte raíces. Nivelación USD 300-500 vale cada centavo"
+      },
+      "q3": {
+        "pregunta": "¿Glifosato mata arroz?",
+        "respuesta": "NO si aplica pre-siembra 1-2 semanas. Si aplica post-emergencia = mata arroz totalmente. Cuidado cronograma"
+      },
+      "q4": {
+        "pregunta": "¿Necesito vivero o puedo directa todo?",
+        "respuesta": "Directa viable 90% casos. Vivero solo si: (1) suelo muy problemático, (2) siembra trasplante mercado local, (3) producción semilla"
+      },
+      "q5": {
+        "pregunta": "¿Cuánta agua consumo arroz?",
+        "respuesta": "900-1,500 mm total (lluvia + riego). Si lluvia solo 500 mm, necesitas riego 500+ mm suplementario. Caudal 1 L/seg = ~86 mm/mes si bombea 30 días"
+      }
+    ]
+  }
+}

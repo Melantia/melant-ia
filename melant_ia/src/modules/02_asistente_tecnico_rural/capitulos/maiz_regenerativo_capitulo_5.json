@@ -1,0 +1,221 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Maíz Regenerativo: Prevención Biológica",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Mancha gris, pudrición tallo, virus, antifúngicos naturales, biodiversidad preventiva",
+  "contenido": {
+    "introduccion": {
+      "titulo": "5.1 Introducción a Enfermedades Regenerativas",
+      "texto": "Sistema regenerativo previene 60-70% enfermedades vs convencional mediante: (1) rotación cultivos (quiebra ciclo patógeno), (2) suelo vivo antagonista (hongos benéficos compiten patógenos), (3) mulch reduce salpicadura de esporas, (4) drenaje excelente (menos humedad foliar). RESULTADO: Fungicida químico (USD 50-100/ha) reemplazado por gestión preventiva (USD 30-50/ha)."
+    },
+    "mancha_gris": {
+      "titulo": "5.2 Mancha Gris (Cercospora zea-maydis) - Enfermedad #1",
+      "biologia": {
+        "patogeno": "Hongo ascomiceto (pseudothecia produce ascosporas)",
+        "ciclo": "Esporas sobreviven residuos 2-3 años, lluvia dispersa V8-R1 (floración = máxima susceptibilidad)",
+        "condiciones": "Humedad > 90% 12+ horas, temperatura 20-28°C óptimo"
+      },
+      "sintomas": [
+        "Manchas rectangulares gris-marrón hojas",
+        "Halo amarillo claro alrededor manchas",
+        "Progresión rápida V10-R2 (defoliación 50-80% posible)"
+      ],
+      "prevencion_regenerativa": [
+        {
+          "metodo": "Rotación cultivos",
+          "duracion": "Mínimo 2 años sin maíz/sorgo (hospederos)",
+          "efecto": "Reduce inóculo residuos 90-95%"
+        },
+        {
+          "metodo": "Destrucción rastrojos profunda",
+          "practica": "No cero-labranza total si rastrojos maíz contaminados (riesgo acumulación)",
+          "alternativa": "Cero-labranza sobre residuos descompuestos previos (< 6 meses)"
+        },
+        {
+          "metodo": "Variedad resistencia",
+          "buscar": "Variedades "R Cercospora" disponibles híbridos modernos",
+          "beneficio": "Resistencia 70-90% sincera"
+        },
+        {
+          "metodo": "Drenaje mejorado",
+          "practica": "Surcos elevados, mulch favorece aireación foliar",
+          "efecto": "Reduce humedad foliar nocturna 2-3 horas (crítico para esporulación)"
+        },
+        {
+          "metodo": "Espaciamiento plantas",
+          "practica": "Reducir densidad 10-15% (más aire circulante)",
+          "efecto": "Menor humedad relativa entre hojas"
+        }
+      ],
+      "manejo_sintomas": [
+        {
+          "fungicida_natural": "Bicarbonato potásico (KHCO₃)",
+          "dosis": "5-10 kg/hectárea + aceite mineral 10 L",
+          "mecanismo": "pH alcalino inhibe esporulación",
+          "aplicacion": "Preventivo V8-R1, cada 7-10 días si lluvia"
+        },
+        {
+          "fungicida_natural": "Azufre mojable",
+          "dosis": "2-4 kg/hectárea",
+          "mecanismo": "Directo fungicida",
+          "precaution": "NO mezclar cu, NO > 25°C"
+        },
+        {
+          "fungicida_natural": "Trichoderma harzianum",
+          "dosis": "1-2 kg/hectárea (espora)",
+          "mecanismo": "Micoparasitismo (hongo benéfico ataca patógeno)",
+          "aplicacion": "Aspersión V6-V8, preventivo"
+        }
+      ]
+    },
+    "pudricion_tallo": {
+      "titulo": "5.3 Pudrición Tallo (Fusarium, Macrophomina)",
+      "biologia": [
+        {
+          "patogeno": "Fusarium moniliforme, Macrophomina phaseolina",
+          "propagacion": "Conidias en residuos, ingresa raíces (heriditas), coloniza vascular",
+          "sintomas": "Ennegrecimiento vascular 1-2 meses post-inoculación, acame súbito post-floración"
+        }
+      ],
+      "factores_riesgo": [
+        "Estrés hídrico (sequía 2-3 semanas post-floración)",
+        "Suelo saturado precedente (predispone raíces)",
+        "Temperatura extrema (> 32°C)"
+      ],
+      "prevencion": [
+        {
+          "estrategia": "Riego deficitario EVITAR post-floración (R1-R3 crítico)",
+          "practica": "Mantener humedad 60-75% capacidad campo R1-R5",
+          "beneficio": "Estrés favorece infección, agua adecuada combate"
+        },
+        {
+          "estrategia": "Drenaje excelente",
+          "practica": "Rotación cultivos alternos años, mulch aireación",
+          "beneficio": "Drena raíces, < inóculo suelo"
+        },
+        {
+          "estrategia": "Rotación 3+ años leguminosa",
+          "razon": "Fusarium reduce densidad bajo leguminosa",
+          "beneficio": "Supresividad suelo biológica"
+        }
+      ]
+    },
+    "virus": {
+      "titulo": "5.4 Virus del Maíz (Moteado, Enano)",
+      "tipos": [
+        {
+          "virus": "Maize Mosaic Virus (MSV)",
+          "vector": "Áfido (Rhopalosiphum maidis)",
+          "sintomas": "Moteado amarillo-verde hojas, enanismo, esterilidad"
+        },
+        {
+          "virus": "Maize Dwarf Mosaic Virus (MDMV)",
+          "vector": "Áfido, Trips",
+          "sintomas": "Enano, deformación hojas, estría clorótica"
+        }
+      ],
+      "prevencion": [
+        {
+          "metodo": "Control depredadores áfidos",
+          "practica": "Mariquitas, moscas sírfidas (reduce vector 70-80%)",
+          "efecto": "Interrumpe transmisión virus"
+        },
+        {
+          "metodo": "Barrera temporal maíz dulce",
+          "practica": "Siembra 3-4 semanas previo maíz granero (atrae áfidos virulíferos)",
+          "efecto": "Concentra vector, destrucción antes maíz granero"
+        },
+        {
+          "metodo": "Resistencia genética",
+          "buscar": "Variedades con resistencia MSV/MDMV",
+          "disponibilidad": "Híbridos modernos incluyen (preguntar proveedor)"
+        }
+      ],
+      "manejo_sintomas": [
+        "NINGÚN tratamiento cura viral (prevención única opción)",
+        "Arranque plantas severamente infectadas V4-V6 (evita diseminación)",
+        "Manejo vector (spray insecticida si virus activo detectado)"
+      ]
+    },
+    "antifungicos_naturales": {
+      "titulo": "5.5 Antifúngicos Naturales - Recetas Caseras",
+      "receta_1_caldo_bordelesa": {
+        "ingredientes": "Sulfato cobre 1 kg, cal 1 kg, agua 100 L",
+        "preparacion": "Disolver cobre agua caliente, apagar cal con poco agua, mezclar",
+        "dosis": "10-15 L/hectárea",
+        "efecto": "Fungicida universal, contacto (no sistémico)",
+        "precaution": "Cu acumula suelo (máximo 2 aplicaciones/año), tóxico peces"
+      },
+      "receta_2_azufre_morado": {
+        "ingredientes": "Azufre vivo 5-8 kg, cal 2 kg, agua 100L, aceite mineral 2L",
+        "mecanismo": "Reacción exotérmica azufre-cal produce polisulfuros",
+        "dosis": "Aplicar directamente (muy concentrado)",
+        "efecto": "Acaricida + fungicida, residual 14 días",
+        "precaution": "Tóxico abejas si flores cercanas"
+      },
+      "receta_3_trichoderma_casero": {
+        "ingredientes": "Compost maduro 5 kg, melaza 100 g, agua 50 L",
+        "cultivo": "Incubación 7 días oscuridad, temperatura ambiente",
+        "aplicacion": "Aspersión foliar V6-V8, dosis 5-10 L/hectárea",
+        "efecto": "Inoculación Trichoderma, antagonista patógenos"
+      },
+      "receta_4_propolis": {
+        "ingredientes": "Propólis apícola 100-200 g, alcohol 70% 1 L",
+        "fermentacion": "15 días maceración, cuela",
+        "dosis": "Diluir 1:10 agua, 10 L/hectárea",
+        "efecto": "Antifúngico + potenciador defensas planta"
+      }
+    },
+    "diagnostico_enfermedades": {
+      "titulo": "5.6 Diagnóstico Visual de Enfermedades",
+      "mancha_gris": "Rectangulares gris-marrón hojas viejas, progresa rápido",
+      "pudricion_tallo": "Ennegrecimiento vascular (corte transversal tallo = negro vascular)",
+      "virus": "Moteado amarillo-verde, enanismo, hojas deformadas",
+      "antracnosis": "Manchas alargadas rojo-marrón, acame post-flor",
+      "roya": "Pústulas café-rojizo hojas (confundir Septoria hojas)"
+    },
+    "estrategia_integrada": {
+      "titulo": "5.7 Estrategia Integrada de Manejo",
+      "ano_1": [
+        "Rotación cultivos (leguminosa año anterior)",
+        "Cero-labranza + mulch",
+        "Variedad semi-resistencia disponible",
+        "Monitoreo semanal V8-R2",
+        "Fungicida preventivo V8 + V14 (si historial enfermedad)"
+      ],
+      "ano_2": [
+        "Microbiota suelo establecida (+50% supresividad)",
+        "Aplicaciones fungicida reducidas 40-50%",
+        "Sanidad mejorada"
+      ],
+      "ano_3_plus": [
+        "Suelo regenerado totalmente (> 3% materia orgánica)",
+        "Enfermedades bajo umbral económico natural (sin intervención)",
+        "Autosuficiente sistema"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.8 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Cero labranza AUMENTA enfermedad (residuos arriba)?",
+        "respuesta": "FALSO. Estudios: cero labranza reduce Cercospora 30-50% (humedad controlada mulch). Convencional labrado aumenta Fusarium (oxidación materia orgánica)"
+      },
+      "q2": {
+        "pregunta": "¿Bicarbonato previene Cercospora totalmente?",
+        "respuesta": "NO totalmente pero 60-70% efectivo preventivo. Mejor complemento: rotación + resistencia variedad + drenaje. No es bala plata"
+      },
+      "q3": {
+        "pregunta": "¿Compost con Trichoderma funciona?",
+        "respuesta": "SÍ si compost colonizado Trichoderma (verificar laboratorio). Casero: riesgo no tengacepas benéficas. Pero 30-40% éxito aún valioso"
+      },
+      "q4": {
+        "pregunta": "¿Virus moteado se hereda semilla?",
+        "respuesta": "NO herencia. Virus persiste vector áfido. Seleccionar semilla de plantas NO virales, desinfectar áreas semilla (sin áfidos)"
+      },
+      "q5": {
+        "pregunta": "¿Caldo bordeles es seguro?",
+        "respuesta": "SÍ si dosis correcta (< 10 L/ha), máximo 2x/año. Acumulación Cu suelo problema LARGO PLAZO. Alternativa: Azufre-cal menos problema"
+      }
+    ]
+  }
+}

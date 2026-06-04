@@ -1,0 +1,279 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía de la Ganadería Bovina",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Inversión, costos producción, ingresos leche, rentabilidad, financiamiento",
+  "contenido": {
+    "introduccion_economia": {
+      "titulo": "7.1 Introducción a Economía Ganadera",
+      "importancia": "Lechería es principal fuente ingresos agricultura Ecuador (Palma > Cacao > Café > Ganadería en valor pero Ganadería es MÁS extensivo)",
+      "produccion_nacional": [
+        "Valor producción: USD 1,200-1,500 millones/año",
+        "Empleos: Directo 150,000+ personas",
+        "Escala empresas: 80% pequeño-mediano (< 50 vacas)"
+      ]
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial para Ganadería",
+      "escenario": "Establimiento pequeño lechería: 30 vacas (tamaño representativo pequeño productor Ecuador)",
+      "componentes": [
+        {
+          "concepto": "Terreno (no incluido, asume propiedad)",
+          "hectareas": "10 hectáreas (3-4 vacas/ha pastos sierra)",
+          "costo": "Uso terreno (rentas/arrendamiento no considerado)"
+        },
+        {
+          "concepto": "Preparación pastos iniciales",
+          "actividades": "Arado, desyerbe, siembra Kikuyo/Rye grass",
+          "costo": "USD 300-500/ha × 10 ha = USD 3,000-5,000"
+        },
+        {
+          "concepto": "Cerca perímetro",
+          "material": "Alambre liso + postes madera",
+          "costo": "USD 250-350/ha × 10 ha = USD 2,500-3,500"
+        },
+        {
+          "concepto": "Infraestructura agua",
+          "items": "Bebederos, tubería, pequeño tanque",
+          "costo": "USD 1,500-2,500"
+        },
+        {
+          "concepto": "Infraestructura ordeño",
+          "equipo": "Mini-tanque + compresor (30 vacas es razonable)",
+          "costo": "USD 1,000-1,500"
+        },
+        {
+          "concepto": "Instalaciones básicas",
+          "items": "Corral, comedero, almacén alimento, sala ordeño cubierta",
+          "costo": "USD 2,000-3,000"
+        },
+        {
+          "concepto": "Vientres iniciales",
+          "cantidad": "30 vacas Holstein × USD 1,200-1,500/vaca",
+          "costo": "USD 36,000-45,000 (MAYOR gasto)"
+        },
+        {
+          "concepto": "Toro o semen IA",
+          "opcion": "Inseminación artificial (USD 10-15/dosis) vs toro (USD 2,000-3,500)",
+          "costo": "USD 300-500 (año 1, presupuesto bajo)"
+        }
+      ],
+      "total_30_vacas": "USD 46,800-63,500 (promedio USD 55,000)",
+      "costo_por_vaca": "USD 1,900-2,100/vaca installed (incluyendo infraestructura)"
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos Anuales",
+      "escenario": "30 vacas en producción, sistema semi-intensivo sierra",
+      "desglose_mensual": [
+        {
+          "concepto": "Alimento concentrado",
+          "cantidad": "30 vacas × 5 kg/día × 25 kg/bolsa = 30 bolsas/mes",
+          "costo": "30 bolsas × USD 12-15 = USD 360-450/mes"
+        },
+        {
+          "concepto": "Suplemento mineral",
+          "cantidad": "30 vacas × 50 g/día = 1.5 kg/día",
+          "costo": "USD 50-80/mes"
+        },
+        {
+          "concepto": "Sanidad (veterinaria, vacunas, antiparasitarios)",
+          "items": "Vacunas aftosa, antibióticos mastitis, desparasitantes",
+          "costo": "USD 100-150/mes (USD 1,200-1,800/año = USD 40-60/vaca)"
+        },
+        {
+          "concepto": "Mantenimiento infraestructura",
+          "reparacion": "Cercas, bebederos, ordeño, bombeo agua",
+          "costo": "USD 100-150/mes"
+        },
+        {
+          "concepto": "Labor humana",
+          "personal": "1-2 ordeadores tiempo parcial (4-6 horas/día)",
+          "costo": "USD 300-500/mes (USD 3.50-5/hora × 100-150 horas)"
+        },
+        {
+          "concepto": "Transporte leche",
+          "descripcion": "Tanquero recolección 2x/semana",
+          "costo": "USD 150-250/mes (varía distancia)"
+        }
+      ],
+      "total_anual_30_vacas": "USD 13,000-18,000/año (promedio USD 15,500)",
+      "costo_por_vaca_dia": "USD 1.20-1.65/vaca/día"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "produccion_leche": [
+        {
+          "escenario": "Año 1 (vacas jóvenes sin historial)",
+          "produccion": "30 vacas × 12 L/día × 300 días = 108,000 litros/año",
+          "promedio": "3,600 litros/vaca/año (bajo, animales nuevos)"
+        },
+        {
+          "escenario": "Año 2-3 (vacas establecidas 1-2 lactancias)",
+          "produccion": "30 vacas × 14 L/día × 300 días = 126,000 litros/año",
+          "promedio": "4,200 litros/vaca/año"
+        },
+        {
+          "escenario": "Año 4+ (rebaño estable, genética seleccionada)",
+          "produccion": "30 vacas × 16 L/día × 300 días = 144,000 litros/año",
+          "promedio": "4,800 litros/vaca/año (viablePEQUEÑO PRODUCTOR)"
+        }
+      ],
+      "precio_leche_referencia": [
+        "Precio base chero: USD 0.25-0.35 litro (altitud afecta)",
+        "Precio sierra: USD 0.28-0.32/L (mejor calidad)",
+        "Precio costa: USD 0.25-0.30/L (calidad variable)",
+        "Bonificación calidad: +USD 0.02-0.05/L si < 300,000 células/ml"
+      ],
+      "ingresos_brutos": [
+        {
+          "año": "Año 4+ estable",
+          "produccion": "144,000 litros/año",
+          "precio": "USD 0.30/litro",
+          "ingreso": "144,000 × USD 0.30 = USD 43,200/año"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "escenario_30_vacas_año_4": {
+        "supuestos": [
+          "Inversión inicial: USD 55,000",
+          "Costos operativos: USD 15,500/año",
+          "Producción: 144,000 litros/año",
+          "Precio: USD 0.30/litro"
+        ],
+        "ingresos_brutos": "USD 43,200/año",
+        "costos_anuales": "USD 15,500",
+        "utilidad_neta": "USD 43,200 - USD 15,500 = USD 27,700/año",
+        "roi": "USD 27,700 ÷ USD 55,000 = 50% ROI/año",
+        "payback_period": "USD 55,000 ÷ USD 27,700 = 2.0 años"
+      },
+      "analisis_sensibilidad": [
+        {
+          "escenario": "Precio leche BAJO (USD 0.25/L)",
+          "ingresos": "144,000 × USD 0.25 = USD 36,000",
+          "utilidad": "USD 36,000 - USD 15,500 = USD 20,500",
+          "roi": "37% (VIABLEMENTE bueno)"
+        },
+        {
+          "escenario": "Precio leche ALTO (USD 0.35/L)",
+          "ingresos": "144,000 × USD 0.35 = USD 50,400",
+          "utilidad": "USD 50,400 - USD 15,500 = USD 34,900",
+          "roi": "63% (EXCELENTE)"
+        },
+        {
+          "escenario": "Producción BAJA (12 L/día promedio)",
+          "produccion": "108,000 litros/año",
+          "ingresos": "108,000 × USD 0.30 = USD 32,400",
+          "utilidad": "USD 32,400 - USD 15,500 = USD 16,900",
+          "roi": "31% (MARGINAL, aún viable)"
+        },
+        {
+          "escenario": "Producción ALTA (18 L/día promedio)",
+          "produccion": "162,000 litros/año",
+          "ingresos": "162,000 × USD 0.30 = USD 48,600",
+          "utilidad": "USD 48,600 - USD 15,500 = USD 33,100",
+          "roi": "60% (MUY RENTABLE)"
+        }
+      ],
+      "conclusion": "Ganadería lechería VIABLE si: (a) Producción > 12 L/día/vaca, (b) Precio > USD 0.25/L, (c) Costos controlados < USD 0.50/L"
+    },
+    "comparativa_rentabilidad": {
+      "titulo": "7.6 Comparativa: Ganadería vs Otros Cultivos",
+      "tabla_comparacion": [
+        {
+          "cultivo": "Ganadería Lechería",
+          "inversion": "USD 2,000/vaca (55K/30)",
+          "costo_anual": "USD 500/vaca",
+          "ingreso": "USD 1,440/vaca",
+          "utilidad": "USD 940/vaca",
+          "roi": "47%"
+        },
+        {
+          "cultivo": "Palma Africana",
+          "inversion": "USD 5,000/ha",
+          "costo_anual": "USD 1,400/ha",
+          "ingreso": "USD 2,700/ha",
+          "utilidad": "USD 1,300/ha",
+          "roi": "26%"
+        },
+        {
+          "cultivo": "Cacao",
+          "inversion": "USD 1,500-2,000",
+          "costo_anual": "USD 1,200-1,600",
+          "ingreso": "USD 2,250",
+          "utilidad": "USD 600-1,050",
+          "roi": "30-70%"
+        },
+        {
+          "cultivo": "Café",
+          "inversion": "USD 2,000",
+          "costo_anual": "USD 3,000-3,500",
+          "ingreso": "USD 500",
+          "utilidad": "NEGATIVA",
+          "roi": "NEGATIVO"
+        }
+      ],
+      "conclusion_ranking": "Ganadería > Cacao > Palma > Café en rentabilidad"
+    },
+    "financiamiento_opciones": {
+      "titulo": "7.7 Opciones de Financiamiento",
+      "credito_bancario": {
+        "tasa": "8-12% anual",
+        "plazo": "10-15 años",
+        "montos": "USD 5,000-60,000",
+        "requisitos": "Propiedad tierra, plan negocio, avalista"
+      },
+      "fondos_estado": {
+        "bnf": "Crédito 5-8% tasa, 12-15 años plazo",
+        "monto": "Hasta USD 30,000 pequeño productor",
+        "requisitos": "Inscripción MAG, actividad rural, pequeño/mediano"
+      },
+      "cooperativas": {
+        "ventaja": "Tasa 6-10%, menos requisitos",
+        "acceso": "Solo si afiliado cooperativa ganadera"
+      }
+    },
+    "mejora_rentabilidad": {
+      "titulo": "7.8 Estrategias para Mejorar Rentabilidad",
+      "produccion_aumenta": [
+        "Mejor genética: Holstein vs Brahman = +50% producción (+USD 200/vaca)",
+        "Nutrición optimizada: Balanceo ración profesional = +15% producción",
+        "Sanidad preventiva: Mastitis control = +10% (menos rechazo)"
+      ],
+      "costos_reducen": [
+        "Autocultivo alimento: Siembra maíz silaje = -USD 100-200/vaca alimento",
+        "Asociación/Cooperativa: Compra conjunta insumos = -10% descuento",
+        "Ordeño mecanizado: Mini-tanque vs manual = -30% labor USD 150-200/mes"
+      ],
+      "precio_mejora": [
+        "Calidad leche (< 300,000 células): +USD 0.02-0.05/L bonificación",
+        "Directa a industria: Elimina intermediario = +USD 0.05-0.10/L",
+        "Certificación: Orgánica o trazada = +USD 0.10-0.20/L premium"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.9 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Ganadería es rentable para pequeño productor?",
+        "respuesta": "SÍ. ROI 30-50% es EXCELENTE (mejor que otros cultivos). Requiere: mínimo 20-30 vacas, manejo básico, acceso mercado leche"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto cuesta producir 1 litro leche?",
+        "respuesta": "Costo: USD 0.50-0.65/litro (incluye alimento, sanidad, labor). Si vende USD 0.28-0.32/L: margen USD 0.05-0.15/L aparente BAJO pero correcto"
+      },
+      "q3": {
+        "pregunta": "¿Ganadería vs agricultura cultivos?",
+        "respuesta": "Ganadería: ROI 30-50%, recurso tierra eficiente (animales multiplicar). Cultivos: ROI variable (Cacao 30-70%, Palma 26%, Café negativo). Ganadería MÁS segura"
+      },
+      "q4": {
+        "pregunta": "¿Escalade 10 vacas es viable?",
+        "respuesta": "NO. Ordeño manual consume 6-8 horas/día, ineficiente. Mínimo 20-30 vacas para rentabilidad. Debajo eso: sobrevive pero no ganancias reales"
+      },
+      "q5": {
+        "pregunta": "¿Precio leche es volátil?",
+        "respuesta": "SÍ pero MENOS que Palma/Café. Varía USD 0.22-0.35/L (año a año). Ganadería tiene demanda estable (alimento esencial), riesgo MENOR"
+      }
+    ]
+  }
+}

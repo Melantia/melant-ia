@@ -1,0 +1,306 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Maíz en Transición Regenerativa",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Costos transición, ingresos premium, financiamiento, comparativa convencional, ROI a largo plazo",
+  "contenido": {
+    "introduccion": {
+      "titulo": "7.1 Introducción a Economía de Transición",
+      "texto": "Transición regenerativa (años 1-3) requiere inversión inicial mayor vs convencional, pero payback 3-5 años genera ahorros perpetuos. Maíz regenerativo Ecuador: producción sustentable con certificación orgánica opcional (acceso premiums USD 250-350/ton). Este capítulo analiza financiamiento transición, comparativa ROI, rentabilidad a largo plazo.",
+      "estrategia": "Año 1-2: COSTOSO (inversión suelo). Año 3-4: EQUILIBRIO. Año 5+: ALTAMENTE RENTABLE (costos mínimos, ingresos premium)"
+    },
+    "inversion_inicial_transicion": {
+      "titulo": "7.2 Inversión Inicial - Preparación Transición",
+      "ano_1_establecimiento": {
+        "escenario": "10 hectáreas prepara transición regenerativa",
+        "desglose": [
+          {
+            "concepto": "Compost semi-maduro",
+            "cantidad": "15 ton/hectárea",
+            "costo_unitario": "USD 50/tonelada (producción local)",
+            "subtotal": "USD 7,500"
+          },
+          {
+            "concepto": "Fosfato natural (roca fosfática)",
+            "cantidad": "2,500 kg",
+            "costo": "USD 150"
+          },
+          {
+            "concepto": "Feldespato potásico",
+            "cantidad": "3,500 kg",
+            "costo": "USD 175"
+          },
+          {
+            "concepto": "Inoculación micorrizas arbusculares",
+            "cantidad": "10 hectáreas",
+            "costo": "USD 100/hectárea",
+            "subtotal": "USD 1,000"
+          },
+          {
+            "concepto": "Biofertilizantes iniciadores",
+            "cantidad": "Nitrógeno fijador + solubilizador P",
+            "costo": "USD 200-300"
+          },
+          {
+            "concepto": "Semilla abono verde (mucuna/trébol)",
+            "cantidad": "100 kg",
+            "costo": "USD 150"
+          },
+          {
+            "concepto": "Labor preparación (mulch, decompactación suave)",
+            "jornales": "50-60 jornales @ USD 15",
+            "subtotal": "USD 750-900"
+          },
+          {
+            "concepto": "Capacitación productor",
+            "horas": "20 horas consultoría técnica",
+            "costo": "USD 300-400"
+          }
+        ],
+        "total_ano_1": "USD 10,225-10,375"
+      },
+      "ano_2_mantenimiento": {
+        "concepto": "Compost mantenimiento",
+        "cantidad": "8 ton/hectárea",
+        "subtotal": "USD 4,000"
+      },
+      "inversion_acumulada_ano_2": "USD 14,225-14,375 (~USD 1,425/hectárea)"
+    },
+    "costos_operativos_comparativa": {
+      "titulo": "7.3 Costos Operativos - Maíz Regenerativo vs Convencional",
+      "tabla": [
+        {
+          "rubro": "Semilla",
+          "convencional": "USD 66/ha",
+          "regenerativo_ano_1": "USD 66/ha",
+          "regenerativo_ano_3": "USD 0 (propia)"
+        },
+        {
+          "rubro": "Fertilizante",
+          "convencional": "USD 370/ha",
+          "regenerativo_ano_1": "USD 150/ha (compost + biofertilizantes)",
+          "regenerativo_ano_3": "USD 80/ha (compost mantenimiento)"
+        },
+        {
+          "rubro": "Herbicida",
+          "convencional": "USD 25/ha",
+          "regenerativo_ano_1": "USD 40/ha (mulch + deshierbe manual)",
+          "regenerativo_ano_3": "USD 15/ha (maleza controlada biodiversidad)"
+        },
+        {
+          "rubro": "Plaguicida",
+          "convencional": "USD 50/ha",
+          "regenerativo_ano_1": "USD 20/ha (insecticida neem emergencia)",
+          "regenerativo_ano_3": "USD 5/ha (control biológico establecido)"
+        },
+        {
+          "rubro": "Fungicida",
+          "convencional": "USD 75/ha",
+          "regenerativo_ano_1": "USD 30/ha (bicarbonato prevención)",
+          "regenerativo_ano_3": "USD 10/ha (suelo supresivo establecido)"
+        },
+        {
+          "rubro": "Labor agrícola",
+          "convencional": "USD 300/ha",
+          "regenerativo_ano_1": "USD 350/ha (compost aplicación, monitoreo)",
+          "regenerativo_ano_3": "USD 250/ha (menos intervención)"
+        },
+        {
+          "rubro": "TOTAL",
+          "convencional": "USD 886/ha",
+          "regenerativo_ano_1": "USD 656/ha",
+          "regenerativo_ano_3": "USD 360/ha"
+        }
+      ],
+      "observacion": "Año 1 AHORRA USD 230/ha vs convencional. Años 3+ AHORRA USD 526/ha (60% reducción costos)"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "rendimiento": [
+        {
+          "escenario": "Bajo (transición inicial)",
+          "rendimiento": "3.5 ton/hectárea",
+          "precio": "USD 200/tonelada (mercado local)",
+          "ingreso": "USD 700/hectárea"
+        },
+        {
+          "escenario": "Medio (año 2-3)",
+          "rendimiento": "4.5 ton/hectárea",
+          "precio": "USD 200/tonelada",
+          "ingreso": "USD 900/hectárea"
+        },
+        {
+          "escenario": "Alto (año 4+, regenerativo establecido)",
+          "rendimiento": "5.0 ton/hectárea",
+          "precio": "USD 200/tonelada convencional",
+          "ingreso": "USD 1,000/hectárea"
+        }
+      ],
+      "precio_premium_organico": [
+        {
+          "certificacion": "En transición (año 1-2, sin sello oficial)",
+          "precio": "USD 220-240/tonelada (+10-20% premium local)"
+        },
+        {
+          "certificacion": "Orgánico certificado (año 3+)",
+          "precio": "USD 280-350/tonelada (40-75% premium vs convencional)",
+          "costo_certificacion": "USD 300-500/año"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad - Escenarios Transición",
+      "escenario_ano_1": {
+        "supuestos": [
+          "Inversión transición: USD 1,425/hectárea",
+          "Costos operativos: USD 656/hectárea",
+          "Rendimiento: 3.5 ton/hectárea",
+          "Precio: USD 200/tonelada"
+        ],
+        "ingresos": "3.5 × USD 200 = USD 700",
+        "costos_totales": "USD 656 + USD 100 amortización inversión = USD 756",
+        "utilidad": "USD 700 - USD 756 = -USD 56 (PÉRDIDA MARGINAL)",
+        "roi": "-4% (sacrificio año 1)"
+      },
+      "escenario_ano_2": {
+        "supuestos": [
+          "Inversión acumulada: USD 1,425/hectárea",
+          "Costos operativos: USD 656/hectárea",
+          "Rendimiento: 4.5 ton/hectárea (mejora 30%)",
+          "Precio: USD 200/tonelada"
+        ],
+        "ingresos": "4.5 × USD 200 = USD 900",
+        "costos_totales": "USD 656 + USD 70 amortización = USD 726",
+        "utilidad": "USD 900 - USD 726 = USD 174",
+        "roi": "12% (recupera inversión)"
+      },
+      "escenario_ano_3_establecido": {
+        "supuestos": [
+          "Costos operativos: USD 360/hectárea (sistema maduro)",
+          "Rendimiento: 5.0 ton/hectárea",
+          "Precio: USD 300/tonelada (certificado orgánico)",
+          "Inversión amortizada"
+        ],
+        "ingresos": "5.0 × USD 300 = USD 1,500",
+        "costos_totales": "USD 360",
+        "utilidad": "USD 1,500 - USD 360 = USD 1,140",
+        "roi": "76% (ALTAMENTE RENTABLE)"
+      },
+      "escenario_ano_5_perp": {
+        "supuestos": [
+          "Perpetuo: Año 3+ repetido indefinidamente",
+          "Total ingresos 5 años": "USD 174 + USD 1,140 × 3 = USD 3,594",
+          "Total costos 5 años": "USD 756 + USD 726 + USD 360 × 3 = USD 2,406",
+          "Utilidad neta 5 años": "USD 1,188",
+          "Promedio anual": "USD 238/hectárea/año (años 3-5)"
+        ]
+      }
+    },
+    "comparativa_rentabilidad": {
+      "titulo": "7.6 Comparativa - Maíz Regenerativo vs Convencional (5 años)",
+      "tabla": [
+        {
+          "sistema": "Convencional",
+          "ano_1_5_ingreso": "USD 700 × 5 = USD 3,500",
+          "ano_1_5_costo": "USD 886 × 5 = USD 4,430",
+          "utilidad_5a": "-USD 930 (PÉRDIDA - como maíz industrial USD 150/ton)"
+        },
+        {
+          "sistema": "Regenerativo (orgánico)",
+          "ano_1_5_ingreso": "USD 700 + USD 900 + USD 1,500 × 3 = USD 6,400",
+          "ano_1_5_costo": "USD 1,425 + USD 656 + USD 656 + USD 360 × 2 = USD 4,113",
+          "utilidad_5a": "USD 2,287 (+USD 3,217 vs convencional)"
+        }
+      ],
+      "conclusion": "Regenerativo supera convencional USD 3,217 en 5 años (+145% mejor)"
+    },
+    "financiamiento": {
+      "titulo": "7.7 Opciones de Financiamiento Transición",
+      "opcion_1_bnf": {
+        "linea": "BNF Línea Transición Agroecológica",
+        "monto": "Hasta USD 5,000/hectárea",
+        "tasa": "4-6% anual (subsidio estado)",
+        "plazo": "5-10 años",
+        "documentos": "Cédula, propiedad tierra (o arrendamiento 5+ años)",
+        "ventaja": "Tasa más baja, especial transición"
+      },
+      "opcion_2_banco_comercial": {
+        "institucion": "Banco Pichincha, Produbanco, otros",
+        "monto": "USD 2,000-10,000",
+        "tasa": "8-12% anual",
+        "plazo": "3-5 años",
+        "garantia": "Prenda tierra, hipoteca"
+      },
+      "opcion_3_cooperativa_credito": {
+        "institucion": "COAC locales",
+        "ventaja": "Más flexible,entienden agricultura",
+        "tasa": "6-10% anual",
+        "monto": "USD 1,000-5,000"
+      },
+      "opcion_4_autofinanciamiento": {
+        "estrategia": "Fases: Año 1 compost, Año 2 biofertilizantes, Año 3+ sistema completo",
+        "ventaja": "Sin deuda, pero lento (5+ años)"
+      }
+    },
+    "mejoramientos_rentabilidad": {
+      "titulo": "7.8 Estrategias para Aumentar Rentabilidad",
+      "diversificacion": [
+        "Maíz + Ganadería: Grano alimento ganado (reduce insumos), carne/leche venta premium",
+        "Maíz + Leguminosa rotación: Venta semilla leguminosa + nitrógeno para maíz",
+        "Maíz + Cultivo comercial (brócoli, zapallo): Diversificación ingresos, rotación plagas"
+      ],
+      "valor_agregado": [
+        "Harina maíz morado (antocianinas premium)",
+        "Malteado para cerveza artesanal",
+        "Semilla criolla venta a productores en transición"
+      ],
+      "mercados_premium": [
+        "Certificación orgánica (USD 50-100/hectárea/año certificación, ingresos +40-75%)",
+        "Venta directa consumidor (farmers market, consumo asociativo)",
+        "Exportación orgánico a mercados premium (USD 350-500/tonelada potencial)"
+      ]
+    },
+    "riesgos_transicion": {
+      "titulo": "7.9 Riesgos y Mitigación",
+      "riesgo_1_plagas": {
+        "descripcion": "Año 1-2 depredadores no establecidos, plagas explotan",
+        "mitigacion": "Suelta insecticida natural Trichogramma, mulch profundo protege"
+      },
+      "riesgo_2_rendimiento": {
+        "descripcion": "Producción baja años 1-2 (reconciliación suelo)",
+        "mitigacion": "Cobertura maíz con leguminosa + ganadería secundaria ingresos"
+      },
+      "riesgo_3_precio": {
+        "descripcion": "Precio commodity cae bajo USD 150/tonelada",
+        "mitigacion": "Certificación orgánica (precio +40%), contrato pre-venta"
+      },
+      "riesgo_4_financiero": {
+        "descripcion": "Deuda transición si rendimiento bajo",
+        "mitigacion": "Financiamiento escalonado (BNF flexibilidad), autofinanciamiento parcial"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.10 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Vale la pena transición si pequeño productor?",
+        "respuesta": "SÍ MÁS que convencional. Inversión USD 1,425/ha recupera 3-4 años, después perpetuo ahorros USD 500+/ha/año. Payback RÁPIDO pequeño"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto demora certificación orgánica?",
+        "respuesta": "3 años reconversión mínimo (sin químico 36 meses). Año 1 marketing 'en transición' genera 10-20% premium. Año 3 sello oficial +40-75% premium"
+      },
+      "q3": {
+        "pregunta": "¿Debo financiar transición?",
+        "respuesta": "Depende capacidad pago. Si USD 1,425 es 5-10% ingreso anual: tolerable. Si > 20%: riesgoso. Mejor escalonado (BNF flexible, autofinanciamiento parcial)"
+      },
+      "q4": {
+        "pregunta": "¿Cuál es escala mínima viable?",
+        "respuesta": "5 hectáreas (genera ingresos año 3-5: USD 5,700 neto). Debajo 3 ha: labor intensiva sin economía escala. Arriba 20 ha: potencial hasta USD 25,000+ neto años 5+"
+      },
+      "q5": {
+        "pregunta": "¿Maíz regenerativo + ganadería es viable combo?",
+        "respuesta": "EXCELENTE. Grano alimento ganado (reduce compra concentrado USD 300-500/año), estiércol fertiliza maíz (USD 100-150/año ahorrado). Sinergia genera ROI 50%+ (vs 25% maíz solo)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "capitulo": 2,
+  "titulo": "Infraestructura y Pastos para Ganadería",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Cercas, comederos, bebederos, infraestructura lechería, pastizales, rotación",
+  "contenido": {
+    "introduccion_infraestructura": {
+      "titulo": "2.1 Importancia de Infraestructura Ganadera",
+      "impacto": "Infraestructura deficiente = 30-50% pérdidas (fugas alimento, strés animal, enfermedad). Inversión inicial crítica determina viabilidad económica",
+      "componentes": [
+        "Cerca perímetro (seguridad, contención)",
+        "Pastos/forraje (70-80% costo alimentación)",
+        "Comederos (evita desperdicios)",
+        "Bebederos (hidratación continua)",
+        "Establos/corrales (ordeño, refugio)",
+        "Sala ordeño (lechería pura)"
+      ]
+    },
+    "cercas_perimetrales": {
+      "titulo": "2.2 Sistemas de Cercas",
+      "cerca_tradicional_alambre": {
+        "materiales": [
+          "Poste madera (pino/eucalipto): Vida útil 10-15 años",
+          "Alambre liso #12-14: Costo USD 0.05/metro",
+          "Postes intermedios: Cada 2-3 metros",
+          "Altura: 1.5-1.8 metros (previene saltos)"
+        ],
+        "costo_total": "USD 200-350/hectárea (USD 2,000-3,500 para 10 ha)",
+        "ventajas": "Económico, durabilidad, reparación fácil",
+        "desventajas": "Labor intensiva mantenimiento (óxido, rotura)"
+      },
+      "cerca_electrificada": {
+        "funcionamiento": "Impulsos eléctricos 2,000-3,000 voltios (doloroso, no mortal)",
+        "materiales": [
+          "Poste plástico reforzado: Durabilidad 20+ años",
+          "Alambre conductor: USD 0.15/metro",
+          "Energizador solar: USD 300-800",
+          "Tierra: Varilla cobre 1-2 metros"
+        ],
+        "costo_total": "USD 400-600/ha (MÁS caro pero menor mantenimiento)",
+        "ventajas": "Menos daño infraestructura (animal evita), bajo mantenimiento",
+        "desventajas": "Requiere mantenimiento energizador, tierra buena conductividad"
+      },
+      "cerca_hormigon_prefabricado": {
+        "materiales": "Postes/bloques hormigón prefabricados",
+        "costo": "USD 800-1,200/ha (MÁS caro, máxima durabilidad)",
+        "ventajas": "Durabilidad 50+ años, mantenimiento mínimo",
+        "desventajas": "Alto costo inicial, laborioso instalación"
+      }
+    },
+    "pastos_forrajes": {
+      "titulo": "2.3 Selección y Manejo de Pastizales",
+      "pastos_tropicales_ecuador": [
+        {
+          "pasto": "Kikuyo (Pennisetum clandestinum)",
+          "altura": "2,500-3,500 m (sierra)",
+          "produccion": "40-60 ton/ha/año materia seca",
+          "proteina": "12-15% (buena calidad)",
+          "adaptacion": "EXCELENTE sierra ecuatoriana",
+          "limitacion": "NO tolera sequía, requiere 1,500+ mm lluvia"
+        },
+        {
+          "pasto": "Rye grass (Lolium perenne)",
+          "altura": "2,000-3,500 m (sierra/transición)",
+          "produccion": "35-50 ton/ha/año",
+          "proteina": "13-16% (proteína muy alta)",
+          "adaptacion": "MUY BUENA sierra",
+          "ventaja": "Rápido rebrote (15-20 días)"
+        },
+        {
+          "pasto": "Braquiaria (Brachiaria decumbens)",
+          "altura": "1,000-2,500 m (costa/transición)",
+          "produccion": "25-40 ton/ha/año",
+          "proteina": "8-12% (menor calidad)",
+          "adaptacion": "EXCELENTE costa/caliente",
+          "ventaja": "Tolerancia sequía, plagas, suelos pobres"
+        },
+        {
+          "pasto": "Guinea (Panicum maximum)",
+          "altura": "0-2,500 m (costa/transición)",
+          "produccion": "30-50 ton/ha/año",
+          "proteina": "10-14%",
+          "adaptacion": "BUENA costa, tolerancia maleza",
+          "limitacion": "Requiere manejo (invasivo si descontrol)"
+        }
+      ],
+      "manejo_rotacional": [
+        "Principio: Descanso pasto 25-30 días entre pastoreos (rebrote completo)",
+        "Método: Dividir potrero en 8-10 subdivisiones (cerca móvil)",
+        "Pastoreo: Animal en subdivisión 2-3 días, luego siguiente",
+        "Ventaja: Producción +40% vs pastoreo continuo + mejor control plagas"
+      ],
+      "carga_animal": [
+        "Definición: Número animales/hectárea/año",
+        "Capacidad Kikuyo sierra: 3-5 vacas/ha (bien manejado)",
+        "Capacidad Braquiaria costa: 2-3 vacas/ha",
+        "Sobrepastoreo: > 6 vacas/ha = degradación suelo, erosión"
+      ],
+      "mejora_pastos": [
+        "Cal agrícola: pH < 5.5 requiere encalado (5-10 ton/ha cada 3 años)",
+        "Fertilización: N 50-100 kg/ha/año (si no asociación leguminosa)",
+        "Leguminosas: Trébol, alfalfa (fijan N, aumentan proteína)"
+      ]
+    },
+    "bebederos_comederos": {
+      "titulo": "2.4 Bebederos y Comederos",
+      "bebederos": [
+        {
+          "tipo": "Bebedero de pila (hormigón)",
+          "capacidad": "500-1,000 litros",
+          "costo": "USD 300-500",
+          "cantidad": "1 por cada 20-30 vacas",
+          "agua_diaria": "Vaca produce leche requiere 50-100 litros agua/día (3-4× su peso cuerpo)"
+        },
+        {
+          "tipo": "Bebedero portátil (plástico)",
+          "capacidad": "200-500 litros",
+          "costo": "USD 100-200",
+          "ventaja": "Movilidad en rotación de potreros"
+        },
+        {
+          "tipo": "Bebedero de malanga/manantial",
+          "costo": "USD 1,000-3,000 (alta inversión)",
+          "ventaja": "Agua limpia continua, sin bombeo"
+        }
+      ],
+      "criterios_agua": [
+        "Calidad: Libre bacteria patógena, TDS < 1,500 ppm",
+        "Acceso: Cercano potrero (< 500 metros ideal)",
+        "Continuidad: Suministro 300+ días/año mínimo"
+      ],
+      "comederos": [
+        {
+          "tipo": "Comedero simple (pila)",
+          "uso": "Alimento concentrado suplementario",
+          "costo": "USD 150-300",
+          "capacidad": "20-30 kg/día"
+        },
+        {
+          "tipo": "Silo (hormigón o metal)",
+          "uso": "Almacenaje alimento a granel",
+          "capacidad": "5-50 toneladas",
+          "costo": "USD 1,000-5,000"
+        }
+      ]
+    },
+    "infraestructura_lechereria": {
+      "titulo": "2.5 Infraestructura para Ordeño (Lechería Especializada)",
+      "sala_ordeño_basica": [
+        {
+          "componente": "Piso de hormigón",
+          "especificacion": "Antideslizante, drenaje para agua limpieza",
+          "area": "200-300 m² (para 50-100 vacas)"
+        },
+        {
+          "componente": "Equipo ordeño",
+          "tipos": [
+            "Manual: USD 0 (laborioso, 4-6 horas/día x 2 ordenos)",
+            "Ordeño portátil (mini-tanque): USD 800-1,500 (10-20 vacas)",
+            "Línea paralela: USD 3,000-5,000 (20-50 vacas)",
+            "Carrusel automático: USD 50,000+ (100+ vacas)"
+          ]
+        },
+        {
+          "componente": "Tanque enfriamiento",
+          "capacidad": "500-2,000 litros (depende rebaño)",
+          "temperatura": "Mantiene leche 4°C (conservación 48h)",
+          "costo": "USD 1,500-3,000"
+        },
+        {
+          "componente": "Cuarto limpieza/higiene",
+          "items": "Lavador pezones, desinfectante, toallas papel"
+        }
+      ],
+      "sistemas_mantenimiento": [
+        "Líneas ordeño: Desinfección diaria vapor/soda (previene mastitis)",
+        "Tanque leche: Limpieza agua 80°C post-ordeño",
+        "Labor: 6-8 horas/día (2 ordenos: 4-5 am y 2-3 pm)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.6 Preguntas Frecuentes - Infraestructura",
+      "q1": {
+        "pregunta": "¿Qué cerca elegir?",
+        "respuesta": "Alambre simple si presupuesto bajo (USD 200-350/ha). Electrificada si 50+ vacas (USD 400-600/ha, menor mantenimiento). Hormigón solo si 100+ vacas y largo plazo"
+      },
+      "q2": {
+        "pregunta": "¿Cuántas hectáreas para 50 vacas?",
+        "respuesta": "Sierra (Kikuyo): 10-15 ha (3-5 vacas/ha). Costa (Braquiaria): 15-20 ha (2-3 vacas/ha). Rotación cada 25-30 días optimiza"
+      },
+      "q3": {
+        "pregunta": "¿Agua es limitante?",
+        "respuesta": "SÍ crítica. 50 vacas ordeno = 2,500-5,000 litros agua/día. Requiere fuente confiable. Si no existe: instalar pozo (USD 3,000-5,000) o tanque recolección lluvia"
+      },
+      "q4": {
+        "pregunta": "¿Qué pasto elegir?",
+        "respuesta": "Sierra: Kikuyo o Rye grass (12-15% proteína). Costa: Braquiaria o Guinea (10-12% proteína). Rendimiento sierra 40-60 ton/ha vs costa 25-40 ton/ha"
+      },
+      "q5": {
+        "pregunta": "¿Ordeño manual o máquina?",
+        "respuesta": "Manual < 10 vacas (4-6 horas/día). Máquina mini-tanque 10-30 vacas (USD 800-1,500, ahorra 50% labor). Línea paralela > 30 vacas (USD 3,000+)"
+      }
+    ]
+  }
+}

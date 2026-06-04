@@ -1,0 +1,316 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización del Café",
+  "cultivo": "Café",
+  "seccion": "Requerimientos nutrientes, deficiencias, programa fertilización anual, fuentes fertiliznates",
+  "contenido": {
+    "introduccion_nutricion": {
+      "titulo": "3.1 Introducción a la Nutrición del Café",
+      "exportacion_nutrientes": [
+        "Nitrógeno (N): 2-4 kg/tonelada fruto fresco (baja)",
+        "Fósforo (P): 0.3-0.5 kg/tonelada (muy baja)",
+        "Potasio (K): 3-6 kg/tonelada (moderada)",
+        "Calcio (Ca): 4-8 kg/tonelada (alta)",
+        "Magnesio (Mg): 1-2 kg/tonelada",
+        "Azufre (S): 0.5-1 kg/tonelada",
+        "Micronutrientes: Zn, Fe, B, Mn, Cu (mg/kg a ppb)"
+      ],
+      "implicacion": "Para producción 2,000 kg/ha fresco (año 7+), requerimiento anual aproximado: N 50-80 kg, P 6-10 kg, K 60-120 kg",
+      "caracteristica_importante": "Café es cultivo ALTO EN POTASIO y CALCIO, distinto cacao (que es alto N, moderado K)"
+    },
+    "deficiencias_nutrientes": {
+      "titulo": "3.2 Síntomas de Deficiencias Nutrientes",
+      "deficiencia_nitrogeno": {
+        "signo": "Deficiencia N (Nitrógeno)",
+        "sintomas": [
+          "Hoja verde claro → amarillo pálido (clorótico)",
+          "Comienza en hojas viejas (movilidad N)",
+          "Ramificación pobre, crecimiento lento",
+          "Fruto pequeño, bajo brix"
+        ],
+        "diagnostico": "Hoja análisis: N foliar < 1.8% (vs 2.2-2.8% normal)",
+        "correccion": "Urea 46% N, 100-150 kg/ha/año dividido (mes 3, 6, 9)"
+      },
+      "deficiencia_fosforo": {
+        "signo": "Deficiencia P (Fósforo)",
+        "sintomas": [
+          "Hoja pequeña, color verde oscuro (a veces con tonalidad púrpura)",
+          "Crecimiento muy retardado",
+          "Floración débil o ausente",
+          "Fruto raro"
+        ],
+        "diagnostico": "Hoja análisis: P < 0.15% (vs 0.20-0.25% normal)",
+        "causa_comun": "pH bajo (< 5.0) fija P disponible → deficiencia, aunque P total presente",
+        "correccion": "Encalado (pH) + Superfosfato triple 46% P₂O₅"
+      },
+      "deficiencia_potasio": {
+        "signo": "Deficiencia K (Potasio) - FRECUENTE EN CAFÉ ECUADOR",
+        "sintomas": [
+          "Márgenes hoja amarillean ('quemadura') → secan, necróticas",
+          "Comienza en hojas viejas (movilidad K)",
+          "Fruto pequeño, bajo brix (problema CALIDAD)",
+          "Pseudo-tallo débil (lodging risk si viento)"
+        ],
+        "diagnostico": "Hoja análisis: K < 1.8% (vs 2.2-2.8% normal)",
+        "correccion": "Cloruro potásico 60% K₂O, 300-400 kg/ha/año (o sulfato K 50% K₂O)"
+      },
+      "deficiencia_calcio": {
+        "signo": "Deficiencia Ca (Calcio)",
+        "sintomas": [
+          "Hoja joven se deforma, crece retorcida",
+          "Punto de crecimiento (meristema) se quema, muere",
+          "Fruto deformado"
+        ],
+        "causa": "pH bajo (< 5.0) o suelo arenoso pobre Ca",
+        "correccion": "Encalado, CaCl o nitrato Ca soluble"
+      },
+      "deficiencia_magnesio": {
+        "signo": "Deficiencia Mg (Magnesio)",
+        "sintomas": [
+          "Hoja: margen y zona media amarilla, nervios verde (clorosis internerval)",
+          "Afecta hojas adultas principalmente",
+          "Similar a N pero patrón distinto"
+        ],
+        "diagnostico": "Hoja análisis: Mg < 0.25% (vs 0.30-0.40% normal)",
+        "correccion": "Sulfato Mg (sal de Epsom) 10% Mg, 30-50 kg/ha; o Dolomita encalado (CaMg CO₃)"
+      },
+      "deficiencia_boro": {
+        "signo": "Deficiencia B (Boro)",
+        "sintomas": [
+          "Hoja joven se deforma, crece gruesa, retorcida",
+          "Punto de crecimiento se necrosa, muere (similar Ca pero patrón boro)",
+          "Floración deficiente, caída flores"
+        ],
+        "causa": "Suelo arenoso bajo B, o pH extremo (< 5.0 o > 7.0)",
+        "correccion": "Borax 11% B, 1-2 kg/ha (foliar 0.2-0.3% en agua)"
+      }
+    },
+    "programa_fertilizacion_anual": {
+      "titulo": "3.3 Programa de Fertilización Anual Estándar",
+      "escenario": "Café productivo 3-5 años (año 3 producción 500-800 kg/ha fresco; año 4-5 1,200-1,800 kg/ha)",
+      "programa_12_meses": [
+        {
+          "mes": "Enero (post-cosecha)",
+          "evento": "Cosecha finalizada mes anterior",
+          "accion": "Fertilización 1: NPK (12-8-16) 200 g/planta = ~330 kg/ha"
+        },
+        {
+          "mes": "Febrero",
+          "evento": "Crecimiento vegetativo (nueva madera antes floración)",
+          "accion": "Fertilización 2: Urea 100 g/planta (= 166 kg N/ha)"
+        },
+        {
+          "mes": "Marzo",
+          "evento": "Iniciación floral comienza",
+          "accion": "Fertilización 3: NPK (12-8-16) 200 g/planta (alto K para floración)"
+        },
+        {
+          "mes": "Abril-Mayo",
+          "evento": "Floración plena, amarre fruto",
+          "accion": "Descanso fertilización (riego si sequía)"
+        },
+        {
+          "mes": "Junio",
+          "evento": "Desarrollo fruto (expansión celular, llenado)",
+          "accion": "Fertilización 4: NPK (12-8-16) 200 g/planta"
+        },
+        {
+          "mes": "Julio-Agosto",
+          "evento": "Fruto crecer, aproximarse madurez",
+          "accion": "Fertilización 5: Urea 100 g/planta (N para crecimiento fruto)"
+        },
+        {
+          "mes": "Septiembre",
+          "evento": "Maduración fruto, acumulación azúcares",
+          "accion": "Fertilización 6: NPK (12-8-16) alto K 250 g/planta (K máximo para brix)"
+        },
+        {
+          "mes": "Octubre-Noviembre",
+          "evento": "Fruto maduro, cosecha próxima",
+          "accion": "Descanso fertilización"
+        },
+        {
+          "mes": "Diciembre",
+          "evento": "Cosecha mes diciembre-enero",
+          "accion": "Fertilización 7: Urea 100 g/planta (post-cosecha recuperación)"
+        }
+      ],
+      "total_anual_aproximado": [
+        "Nitrógeno (N): 500-700 kg/ha/año (3-4 aplicaciones urea)",
+        "Potasio (K): 600-800 kg K₂O/ha/año (importante)",
+        "Fósforo (P): 80-150 kg P₂O₅/ha/año (bajo requerimiento)"
+      ],
+      "ajustes": "Si análisis foliar muestra deficiencia específica, incrementar elemento +30-50% en ese mes"
+    },
+    "fuentes_fertilizantes": {
+      "titulo": "3.4 Fuentes de Nutrientes - Opciones y Costos",
+      "nitrogeno_fuentes": [
+        {
+          "fuente": "Urea (46% N)",
+          "forma": "Granulado blanco",
+          "aplicacion": "Aplicar mes seco para evitar lixiviación",
+          "dosis": "100 g/planta = 166 kg/ha",
+          "costo": "USD 0.25-0.35/kg (USD 40-60/saco 50kg)",
+          "pros": "Soluble rápido, eficiente",
+          "contras": "Lixiviación lluvia fuerte"
+        },
+        {
+          "fuente": "Nitrato de Amonio (33% N)",
+          "aplicacion": "Igual urea",
+          "ventaja": "Menos lixiviación que urea",
+          "costo": "USD 0.30-0.40/kg"
+        },
+        {
+          "fuente": "Estiércol descompuesto",
+          "dosis": "5-10 toneladas/ha (otoño)",
+          "pros": "Costo muy bajo, materia orgánica",
+          "contras": "Contenido N inconsistente, labor manual"
+        }
+      ],
+      "potasio_fuentes": [
+        {
+          "fuente": "Cloruro de Potasio (60% K₂O)",
+          "forma": "Granulado rojo",
+          "dosis": "350 kg/ha = 210 kg K₂O/ha (anual dividido 3-4 aplicaciones)",
+          "costo": "USD 0.20-0.30/kg (USD 100-150/saco 100kg)",
+          "aplicacion": "Principal durante floración-fructificación (junio-septiembre)"
+        },
+        {
+          "fuente": "Sulfato de Potasio (50% K₂O)",
+          "ventaja": "Aporta S, mejor calidad que cloruro",
+          "desventaja": "Más caro (+20-30%)",
+          "recomendacion": "Si S bajo en análisis"
+        },
+        {
+          "fuente": "Caña de azúcar (ceniza)",
+          "K₂O_contenido": "10-15%",
+          "dosis": "2-3 toneladas/ha",
+          "costo": "Muy bajo (residuo)",
+          "limitacion": "Contenido variable, labor transporte"
+        }
+      ],
+      "fosforo_fuentes": [
+        {
+          "fuente": "Superfosfato Triple (46% P₂O₅)",
+          "dosis": "100 kg/ha (baja necesidad)",
+          "costo": "USD 0.25-0.40/kg",
+          "aplicacion": "Año 1 establecimiento; después solo si análisis bajo"
+        },
+        {
+          "fuente": "Superfosfato Simple (18% P₂O₅)",
+          "ventaja": "Aporta Ca (18%), cheaper",
+          "desventaja": "Triple cantidad volume para misma dosis P"
+        }
+      ],
+      "micronutrientes": [
+        {
+          "elemento": "Boro (B)",
+          "fuente": "Borax (11% B)",
+          "dosis": "1-2 kg/ha (año 1-2)",
+          "costo": "USD 1-2/kg",
+          "aplicacion": "Crítico si pH > 7.0 o suelo arenoso"
+        },
+        {
+          "elemento": "Zinc (Zn)",
+          "fuente": "Sulfato de Zinc (20% Zn)",
+          "dosis": "5-10 kg/ha",
+          "aplicacion": "Si deficiencia identificada"
+        },
+        {
+          "elemento": "Magnesio (Mg)",
+          "fuente": "Sulfato Mg 'sal Epsom' (10% Mg)",
+          "dosis": "30-50 kg/ha",
+          "aplicacion": "Foliar en pulverizador (0.2-0.3% en agua)"
+        }
+      ],
+      "fertilizantes_completos_comerciales": [
+        {
+          "producto": "NPK (12-8-16) + micronutrientes",
+          "aplicacion": "Mes 3, 6, 9 (floración, crecimiento fruto, maduración)",
+          "ventaja": "Conveniencia, dosificación uniforme",
+          "costo": "USD 0.40-0.60/kg (USD 200-300/saco 100kg)"
+        }
+      ]
+    },
+    "analisis_foliar_diagnostico": {
+      "titulo": "3.5 Análisis Foliar - Diagnóstico Nutriente",
+      "cuando_muestrear": "Mes 4-5 post-plantación (café establecimiento); después mes 6-8 anual (producción)",
+      "muestreo_tecnica": [
+        "Seleccionar 15-20 ramas de distintas plantas (estratificado campo)",
+        "Colectar 3ra hoja adulta sin enfermedad",
+        "~100 g hojas (25-30 hojas)",
+        "Lavar agua destilada (remover polvo)",
+        "Secar 65-70°C horno",
+        "Enviar laboratorio 500 g muestra"
+      ],
+      "interpretacion_rangos_normales": [
+        "Nitrógeno (N): 2.2-2.8%",
+        "Fósforo (P): 0.20-0.25%",
+        "Potasio (K): 2.2-2.8%",
+        "Calcio (Ca): 1.5-2.0%",
+        "Magnesio (Mg): 0.30-0.40%",
+        "Boro (B): 50-100 ppm",
+        "Zinc (Zn): 50-100 ppm",
+        "Hierro (Fe): 60-120 ppm"
+      ],
+      "acciones_segun_resultado": [
+        "Si K < 2.0%: Aumentar fertilización K +50 kg/ha/año",
+        "Si N < 2.0%: Aumentar urea +50 kg/ha",
+        "Si Ca < 1.2%: Encalado, CaCl aplicación",
+        "Si P < 0.18%: Verificar pH (si bajo, encalar primero)"
+      ],
+      "costo_laboratorio": "USD 30-50/análisis (vale la pena para 10+ hectáreas)"
+    },
+    "manejo_nutricion_sostenible": {
+      "titulo": "3.6 Manejo de Nutrición Sostenible y Orgánico",
+      "abonos_verdes": [
+        "Cultivo nitrogenante (leguminosa): Mucuna, Canavalia",
+        "Plantación: Entre hileras café año 1-2",
+        "Ciclo: 6-8 meses, incorporación suelo antes café segundo año",
+        "Aporte N: ~150 kg N/ha"
+      ],
+      "compost_casero": [
+        "Materia prima: Restos cosecha café, estiércol, restos poda",
+        "Tiempo elaboración: 3-4 meses",
+        "Aporte anual: 5-10 toneladas/ha (aporta 2-3% materia orgánica)"
+      ],
+      "residuos_pulpa_cafe": [
+        "Subproducto: 45-50% peso fruto fresco = pulpa",
+        "Composición: N 0.3%, K 0.8%, Ca 0.4%",
+        "Uso: Compostaje + suelo, es fertilizante lento"
+      ],
+      "certificacion_organica": [
+        "Requerimiento: 3 años sin agroquímicos",
+        "Prematura: Café orgánico Ecuador vende USD 2.50-4.50/kg (vs USD 1.50-2.50 convencional)",
+        "Limitacion: Rendimiento -10-20% (sin NPK sintético) compensado por precio premium"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.7 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Cuál es nutriente más importante en café?",
+        "respuesta": "Potasio (K). Bajo K causa hojas amarillas (quemadura), fruto pequeño (bajo brix = mala calidad), pseudo-tallo débil. Nitrógeno es segundo. Fósforo casi nunca deficiente si pH correcto"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto cuesta fertilizar 1 hectárea café/año?",
+        "respuesta": "USD 300-500/ha/año. Desglose: Urea USD 80-120, K USD 80-120, NPK completo USD 100-150, micronutrientes USD 20-30"
+      },
+      "q3": {
+        "pregunta": "¿Es posible café orgánico sin síntesis química?",
+        "respuesta": "Sí, pero rendimiento baja 10-20%. Requiere 3 años transición, compost, abono verde, estiércol. Compensa: precio premium (+50-100% Ecuador)"
+      },
+      "q4": {
+        "pregunta": "¿Cómo sé si necesito análisis foliar?",
+        "respuesta": "Si producción baja (< 1,200 kg/ha año 4+), o hoja amarilla/defectuosa visible, es CRÍTICO. Cuesta USD 30-50, ahorra USD 500+ en fertilizante innecesario"
+      },
+      "q5": {
+        "pregunta": "¿Se puede fertilizar foliar (spray)?",
+        "respuesta": "Sí, especialmente micronutrientes (Mg, B, Zn). Efectividad: 50-70% versus suelo. Usar 0.2-0.5% solución, temprano mañana/tarde (evita quemadura)"
+      },
+      "q6": {
+        "pregunta": "¿Importa el mes de fertilización?",
+        "respuesta": "Sí. K máximo floración-fructificación (junio-septiembre). N después cosecha y antes floración. Lluvia inmediata post-aplicación es ideal (fija en suelo)"
+      }
+    ]
+  }
+}

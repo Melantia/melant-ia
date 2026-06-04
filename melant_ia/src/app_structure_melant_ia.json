@@ -17,14 +17,23 @@
       {
         "id": 2,
         "titulo": "Asistente Técnico Rural",
+        "voz_principal": "Angel",
+        "genero": "Masculina",
         "items": [
           "Asistente Técnico en Cultivos",
           "Asistente Técnico Veterinario",
           "Salud y Medicina Veterinaria",
-          "Agricultura de precisión  (Uso dSe Sensores)",
+          "Agricultura de Precisión (Uso de Sensores)",
+          "Calculadora Agrícola",
+          "Calendario Lunar",
+          "Clima Inteligente",
+          "Cronograma de Siembra",
+          "Levantamiento de Lote",
+          "Inventario de Biodiversidad",
           "GPS (Medición de Terrenos)",
           "Visión Artificial",
-          "Visión Satelital"
+          "Visión Satelital",
+          "Biblioteca Técnica Rural"
         ]
       },
       {

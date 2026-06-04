@@ -5,8 +5,18 @@ let vocesConfig = null;
 
 async function cargarVocesConfig() {
   if (vocesConfig) return vocesConfig;
-  const resp = await fetch('knowledge_seeds/voces_melantia.json');
-  vocesConfig = await resp.json();
+  try {
+    const resp = await fetch('knowledge_seeds/voces_melantia.json');
+    if (!resp.ok) throw new Error('No se pudo cargar voces_melantia.json');
+    vocesConfig = await resp.json();
+  } catch {
+    const mod = await import('../knowledge_seeds/voces_melantia.js');
+    vocesConfig = mod?.default || mod?.VOCES_MELANTIA_CONFIG || null;
+  }
+
+  if (!vocesConfig || !Array.isArray(vocesConfig.modulos)) {
+    vocesConfig = { modulos: [] };
+  }
   return vocesConfig;
 }
 

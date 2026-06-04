@@ -1,0 +1,221 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas del Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Identificación, ciclo de vida, daños y control integrado de plagas",
+  "contenido": {
+    "introduccion_plagas": {
+      "titulo": "4.1 Plagas del Plátano Barraganete",
+      "contexto": "Barraganete es más resistente a plagas que Cavendish, pero igual vulnerable a principales plagas. Plagas principales: Thrips, Ácaros, Escama algodonosa. Plagas secundarias: Orugas, Chinches, Mosca del suelo.",
+      "importancia_manejo": "Control preventivo es 80% más efectivo y económico que control curativo"
+    },
+    "thrips": {
+      "titulo": "4.2 Trips/Thrips del Plátano (Chaetanaphothrips spp., Frankliniella spp.)",
+      "identificacion": {
+        "adulto": [
+          "Tamaño: 1.5-2 mm",
+          "Forma: Alargada, delgada",
+          "Color: Marrón oscuro a negro",
+          "Alas: Membranosas con flecos"
+        ],
+        "larva": [
+          "Tamaño: 0.5-1.5 mm",
+          "Color: Blanco-amarillento",
+          "Ubicación: En surcos foliares"
+        ]
+      },
+      "ciclo_biologico": {
+        "duracion_ciclo": "20-30 días (depende temperatura)",
+        "generaciones_anual": "8-12 generaciones/año",
+        "reproduccion": "Partenogénesis (hembra produce hembras sin macho)",
+        "temperatura_optima": "25-28°C",
+        "fases": [
+          "Huevo: 2-3 días (puesta en hoja)",
+          "Larva I-II: 3-5 días",
+          "Pupa: 2-4 días",
+          "Adulto: 25-30 días vida"
+        ]
+      },
+      "daños": {
+        "tipo": "Raspadura de células epidérmicas",
+        "apariencia": "Manchas plateadas (color plata) en hojas",
+        "distribucion": "Primero en envés de hojas jóvenes",
+        "progresion": "Si no controlado: 'Necrosis plateada' cubre 30-50% lámina",
+        "efecto_planta": [
+          "Reducción fotosíntesis 20-40%",
+          "Crecimiento lentificado",
+          "Retraso ciclo 2-4 semanas",
+          "Rendimiento reducido 15-30% si población alta"
+        ]
+      },
+      "monitoreo": {
+        "metodo": "Inspección semanal de hojas (mínimo 3 hojas por planta, 10 plantas)",
+        "indicador_accion": "> 5 trips/hoja o 50% hojas con síntomas plateados = intervención"
+      },
+      "control": {
+        "cultural": [
+          "Remover hojas muy dañadas (15% daño o más)",
+          "Mantener buena aireación (espaciamiento, poda de hojas muertas)",
+          "Evitar fertilización excesiva con N (reduce resistencia)"
+        ],
+        "biologico": [
+          "Depredadores naturales: Ácaros fitoseidos, Crisopeidos",
+          "Parasitoides: Thripobactrus, Megaphragma",
+          "Conservación: Evitar insecticidas de amplio espectro"
+        ],
+        "quimico": [
+          {
+            "producto": "Azadiractina (Neem 3%) @ 2-3 L/ha",
+            "dosis": "Cada 15 días si población alta",
+            "modo_accion": "Repelente, disrupción reproductiva"
+          },
+          {
+            "producto": "Abamectina 1.8% @ 1.5-2 L/ha",
+            "dosis": "Cada 20 días máximo 3 aplicaciones/ciclo",
+            "precaucion": "Tóxico a arácnidos beneficiosos"
+          },
+          {
+            "producto": "Insecticida piretroides (Cipermetrina 10%) @ 0.5-1 L/ha",
+            "dosis": "Último recurso, mata beneficiosos",
+            "alternativa": "Preferir Neem o Abamectina"
+          }
+        ]
+      }
+    },
+    "acaros": {
+      "titulo": "4.3 Ácaros Rojo (Tetranychus spp.)",
+      "identificacion": {
+        "adulto": [
+          "Tamaño: 0.3-0.5 mm (lupa necesaria)",
+          "Forma: Ovalada",
+          "Color: Rojo-marrón (aumento a rojo intenso cuando alimentándose)"
+        ],
+        "telaraña": "Fina en envés hoja, signo típico de infestación"
+      },
+      "ciclo_biologico": {
+        "generaciones": "15-20/año (más rápido que Thrips)",
+        "temperatura_optima": "20-28°C, 40-60% HR",
+        "duracion_ciclo": "5-10 días completo"
+      },
+      "daños": [
+        "Raspadura de células (similar a Thrips)",
+        "Manchas amarillas/marrones que confluyen",
+        "Necrosis foliar si población muy alta",
+        "Caída de hojas en infestación severa"
+      ],
+      "control": {
+        "quimico": [
+          {
+            "producto": "Azufre mojable (80%) @ 2-3 kg/ha",
+            "dosis": "Cada 10-14 días",
+            "ventaja": "Bajo costo, bajo riesgo tóxico"
+          },
+          {
+            "producto": "Abamectina 1.8% @ 1.5-2 L/ha",
+            "dosis": "Cada 20 días"
+          }
+        ]
+      }
+    },
+    "escama_algodonosa": {
+      "titulo": "4.4 Escama Algodonosa (Pseudococcus spp.)",
+      "identificacion": {
+        "aspecto": "Manchas blancas algodonosas en tallos, hojas, axilas",
+        "tamaño": "2-4 mm, recubierta con secreción cerosa blanca",
+        "ubicacion": "Principalmente en pseudo-tallo (base de pecíolos)"
+      },
+      "daños": [
+        "Succión de savia causa marchitamiento",
+        "Secreción de melaza favorece fumagina (hongo negro)",
+        "Debilitamiento general de planta",
+        "Susceptibilidad incrementada a otras plagas"
+      ],
+      "control": {
+        "cultural": [
+          "Remover manualmente (cepillo suave en agua con jabón)",
+          "Mejorar aireación"
+        ],
+        "quimico": [
+          {
+            "producto": "Insecticida aceite mineral (85%) @ 3-4 L/ha",
+            "modo": "Cubre escamas, sofocación",
+            "ventaja": "Bajo impacto ambiental"
+          },
+          {
+            "producto": "Imidacloprid 20% @ 0.5 L/ha",
+            "dosis": "Aplicación única suficiente generalmente"
+          }
+        ]
+      }
+    },
+    "otras_plagas": {
+      "titulo": "4.5 Otras Plagas de Menor Importancia",
+      "orugas": {
+        "genero": "Terastia, Agrius",
+        "daño": "Masticación de hojas (agujeros irregulares)",
+        "control": "Bacillus thuringiensis (Bt) o piretroides si necesario"
+      },
+      "chinche_de_la_hoja": {
+        "nombre": "Leptodictya tabida",
+        "daño": "Punteado blanquecino en hojas",
+        "control": "Abamectina o Azadiractina"
+      },
+      "mosca_del_suelo": {
+        "nombre": "Sciaridae",
+        "daño": "Larvas comen raíces en suelo muy húmedo",
+        "control": "Mejora drenaje, evitar encharcamiento"
+      }
+    },
+    "plan_mip": {
+      "titulo": "4.6 Plan Integrado de Manejo de Plagas (MIP) - Calendario Anual",
+      "mes_1_2": {
+        "actividad": "Establecimiento",
+        "monitoreo": "Inspeccionar semanalmente nuevas hojas",
+        "umbral_accion": "Si > 3 trips/hoja o 30% daño: intervenir",
+        "accion": "Azadiractina (Neem) 2 L/ha"
+      },
+      "mes_3_4": {
+        "actividad": "Expansión vegetativa",
+        "monitoreo": "Continuar semanal",
+        "accion_potencial": "Abamectina si Thrips alta, Azufre si ácaros detectados"
+      },
+      "mes_5_7": {
+        "actividad": "Floración-fructificación",
+        "precaucion": "Evitar insecticidas de amplio espectro (proteger polinizadores)",
+        "enfoque": "Monitoreo, poda de hojas dañadas"
+      },
+      "mes_8_10": {
+        "actividad": "Llenado fruto",
+        "monitoreo": "Reducir a quincenal",
+        "accion": "Si población resurge, Azadiractina nuevamente"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.7 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Es el Barraganete más resistente a plagas que Cavendish?",
+        "respuesta": "Genéticamente, Barraganete es ligeramente más resistente (genoma B aporta genes de resistencia). Pero ambos sufren plagas iguales. La diferencia real está en Sigatoka (enfermedad): Barraganete es muy resistente, Cavendish requiere fungicidas. Plagas no son diferencia significativa"
+      },
+      "q2": {
+        "pregunta": "¿Cuándo debo hacer aplicaciones de insecticida?",
+        "respuesta": "Solo cuando UMBRAL DE ACCIÓN se alcanza (> 5 trips/hoja, 50% hojas dañadas). No hay calendario fijo. Aplicaciones preventivas cada 2 semanas sin monitoreo es desperdicio de dinero e impacto ambiental"
+      },
+      "q3": {
+        "pregunta": "¿Azadiractina (Neem) funciona bien?",
+        "respuesta": "Sí, muy buen resultado con Thrips y otros ácaros. Dosis: 2-3 L/ha cada 15 días. Menos efectiva que Abamectina pero mejor para ambiente/beneficiosos. Ideal para Barraganete de exportación (menos residuos químicos)"
+      },
+      "q4": {
+        "pregunta": "¿Puedo hacer control biológico?",
+        "respuesta": "Sí, pero limitado en plátano comercial. Conservar beneficiosos es principal estrategia (evitar insecticidas de amplio espectro). Introducción de parasitoides es lentitud (varias semanas). Ideal integrar control cultural + químico selectivo"
+      },
+      "q5": {
+        "pregunta": "¿Qué hago si tengo escama algodonosa severa?",
+        "respuesta": "Combinación: (1) Remover manualmente con cepillo + agua jabonosa (labor pero efectivo), (2) Aceite mineral 85% @ 3-4 L/ha sofoca escamas, (3) Imidacloprid 20% @ 0.5 L/ha mata ninfas. Tratar cuando población pequeña"
+      },
+      "q6": {
+        "pregunta": "¿Cuál es la plaga más destructiva?",
+        "respuesta": "En plátano: Thrips es más común e impactante (reduce ciclo 2-4 semanas). Pero económicamente menos grave que Sigatoka (enfermedad) que puede hacer cultivo inviable. Plagas por sí solas raramente destruyen plátano"
+      }
+    ]
+  }
+}

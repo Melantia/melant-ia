@@ -1,0 +1,139 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Arroz Convencional",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Brusone, manchas bacterianas, virus, pudición tallo, fungicidas",
+  "contenido": {
+    "introduccion": {
+      "titulo": "5.1 Introducción a Enfermedades",
+      "texto": "Ambiente húmedo-cálido arroz = paraíso patógenos. Brusone (Magnaporthe grisea) es enfermedad #1 (~1M toneladas/año pérdida global). Ecuador: presencia variable (depende lluvia, variedad resistencia). Manejo: rotación + variedad resistencia + fungicida preventivo."
+    },
+    "brusone": {
+      "titulo": "5.2 Brusone (Magnaporthe grisea) - Enfermedad #1",
+      "biologia": {
+        "patogeno": "Hongo ascomiceto",
+        "sporas": "Conidia dispersión viento/lluvia",
+        "condiciones": "Humedad > 90%, temperatura 20-28°C óptimo"
+      },
+      "sintomas": [
+        "Hojas: Manchas romboides (lesión gris centro, borde marrón-rojo)",
+        "Cuello panícula: Ennegrecimiento = cuello podrido, panícula se cae",
+        "Tallos: Lesiones alargadas (pudrición tallo)"
+      ],
+      "etapas": [
+        {
+          "etapa": "Brusone de hoja",
+          "timing": "V6-VE",
+          "daño": "Defoliación 50-80%, plantas enanismo"
+        },
+        {
+          "etapa": "Brusone de cuello panícula",
+          "timing": "F-R1",
+          "daño": "CRÍTICA: panícula se cae, pérdida grano 100%"
+        }
+      ],
+      "control": [
+        {
+          "metodo": "Variedad resistencia",
+          "opciones": "Fedearroz 2000 (R brusone hojas), algunas INIA"
+        },
+        {
+          "metodo": "Fungicida",
+          "producto": "Azoxistrobina (SDHI)",
+          "dosis": "200-300 mL/hectárea",
+          "timing": "VE + 10 días post-floración",
+          "costo": "USD 40-60"
+        },
+        {
+          "metodo": "Alternativa",
+          "producto": "Mancozeb 80 PM",
+          "dosis": "1.5-2.0 kg/hectárea",
+          "costo": "USD 15-20",
+          "limitacion": "Menos efectivo azoxistrobina pero más barato"
+        }
+      ]
+    },
+    "manchas_bacterianas": {
+      "titulo": "5.3 Manchas Bacterianas",
+      "patogenos": [
+        {
+          "bacteria": "Xanthomonas oryzae pv. oryzae (raya bacteriana)",
+          "sintoma": "Líneas acuosas tallos → marchitez",
+          "severidad": "ALTA si lluvia frecuente"
+        },
+        {
+          "bacteria": "X. oryzae pv. oryzicola (mancha bacteriana)",
+          "sintoma": "Manchas amarillas hojas, se necrosan marrón",
+          "severidad": "MEDIA"
+        }
+      ],
+      "control": [
+        "NO hay fungicida efectivo (bacterias = difícil control químico)",
+        "Variedad resistencia: Buscar tolerancia",
+        "Drenaje oportuno: Reduce humedad foliar"
+      ]
+    },
+    "virus": {
+      "titulo": "5.4 Virus del Arroz",
+      "tipos": [
+        {
+          "virus": "RHBV (Rice Hoja Blanca Virus)",
+          "vector": "Cicadélida blanca",
+          "sintoma": "Hoja blanca, estrías cloróticas"
+        },
+        {
+          "virus": "RTSV (Rice Tungro Spherical Virus)",
+          "vector": "Cicadélida verde",
+          "sintoma": "Amarillamiento hojas, enanismo"
+        }
+      ],
+      "control": [
+        "Control vector (insecticida cigarrilla)",
+        "Rotación cultivos",
+        "Variedad tolerancia"
+      ]
+    },
+    "pudricion_tallo": {
+      "titulo": "5.5 Pudrición de Tallo (Sclerotium, Fusarium)",
+      "biologia": {
+        "patogeno": "Sclerotium rolfsii, Fusarium spp",
+        "factor": "Estrés hídrico favorece (sequía post-floración)"
+      },
+      "control": [
+        "Riego continuo (evita estrés)",
+        "Variedad tolerancia",
+        "Fungicida Trichoderma preventivo"
+      ]
+    },
+    "manejo_integrado_enferm": {
+      "titulo": "5.6 Manejo Integrado de Enfermedades",
+      "rotacion": "Mínimo 2 años sin arroz (reduce inóculo suelo)",
+      "variedad": "Prioridad: Buscar resistencia brusone + bacteria",
+      "drenaje": "Excelente (reduce humedad foliar, inhibe esporulación)",
+      "fungicida": "Preventivo (aplicación programada) > curativo (ya demasiado tarde)"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.7 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Brusone se puede prevenir sin fungicida?",
+        "respuesta": "DIFÍCIL si lluvia frecuente. Variedad resistencia + drenaje reduce 40-50%, pero fungicida preventivo VE es recomendado seguridad"
+      },
+      "q2": {
+        "pregunta": "¿Mancozeb es suficiente brusone?",
+        "respuesta": "Funciona pero 70% eficacia vs azoxistrobina 95%. Si brusone históricamente presente = azoxistrobina. Si primer año = mancozeb es aceptable"
+      },
+      "q3": {
+        "pregunta": "¿Bacteria se cura con fungicida?",
+        "respuesta": "NO bacteria ≠ hongo. Fungicida = ineficaz. Control: variedad tolerancia, drenaje, evitar ambiente húmedo"
+      },
+      "q4": {
+        "pregunta": "¿Virus arroz es problema Ecuador?",
+        "respuesta": "Bajo-moderado. RHBV/RTSV existen pero no epidémico. Control: monitoreo cicadélida (trampa amarilla), insecticida si población"
+      },
+      "q5": {
+        "pregunta": "¿Rotación 1 año es suficiente?",
+        "respuesta": "INSUFICIENTE. Mínimo 2 años sin arroz (o diferentes hospederos). Si arroz año 1, otro cultivo año 2, arroz año 3 = riesgo bajo"
+      }
+    ]
+  }
+}

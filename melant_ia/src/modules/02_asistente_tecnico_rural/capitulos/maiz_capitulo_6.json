@@ -1,0 +1,173 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Procesamiento de Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Madurez, cosecha, desgrane, secado, almacenaje, rendimiento",
+  "contenido": {
+    "introduccion_cosecha": {
+      "titulo": "6.1 Introducción a Cosecha de Maíz",
+      "importancia": "Cosecha en momento correcto determina 40% rendimiento final. Temprana = humedad alta (secado costoso). Tardía = daño pájaros, pudrición"
+    },
+    "determinacion_madurez": {
+      "titulo": "6.2 Determinación de Madurez del Grano",
+      "estadios": [
+        {
+          "estadio": "R5 (Madurez fisiológica)",
+          "dias_post_flor": "40-45 días",
+          "indicador": "Línea negra base grano (máximo peso seco)",
+          "humedad": "35-40%",
+          "accion": "NO cosechar aún (muy húmedo)"
+        },
+        {
+          "estadio": "R6 (Madurez industrial/comercial)",
+          "dias_post_flor": "55-65 días",
+          "indicador": "Grano duro, punto vitrio bajo, desprende fácil tusa",
+          "humedad": "13-15%",
+          "accion": "COSECHA lista (rendimiento máximo, almacenaje seguro)"
+        },
+        {
+          "estadio": "Post-madurez",
+          "dias_post_flor": "70+ días",
+          "indicador": "Grano muy duro, mazorca amarilla pálida",
+          "humedad": "< 10%",
+          "riesgo": "Riesgo desgrane por viento, pájaros"
+        }
+      ],
+      "test_tactil": [
+        "Presionar grano: Si cede ligeramente = R6 aproximada",
+        "Clavar uña: Si no penetra = madurez comercial"
+      ],
+      "calendario_orientativo": [
+        "R5 a R6: Usualmente 15-20 días post-floración",
+        "Variedad 115 días: Cosecha ~130 días post-siembra",
+        "Variedad 135 días: Cosecha ~150 días post-siembra"
+      ]
+    },
+    "cosecha_mecanica": {
+      "titulo": "6.3 Cosecha Mecánica vs Manual",
+      "cosecha_manual": {
+        "metodo": "Desnucamiento manual (quebrada mazorca de tallo)",
+        "aplicacion": "Pequeño productor (< 5 hectáreas)",
+        "labor": "15-20 jornales/hectárea",
+        "costo": "USD 50-80",
+        "ventaja": "Bajo costo inicial",
+        "desventaja": "Labor intensiva, lento"
+      },
+      "cosecha_mecanica": {
+        "equipo": "Cosechadora de maíz especializada",
+        "aplicacion": "Mediano-grande productor (> 10 hectáreas)",
+        "velocidad": "5-10 hectáreas/día",
+        "costo": "USD 15-25/hectárea (arrendamiento máquina)",
+        "ventaja": "Rápida, eficiente"
+      },
+      "protocolo_cosecha": [
+        "Seleccionar momento: R6 madurez comercial",
+        "Cosechar plantas sanas (rechazar enfermas)",
+        "Transportar inmediato desgrane (máximo 24 horas)"
+      ]
+    },
+    "desgrane_y_secado": {
+      "titulo": "6.4 Desgrane y Secado del Grano",
+      "desgrane_manual": {
+        "metodo": "Frotación de mazorca (desprender grano)",
+        "labor": "5-7 jornales/tonelada (tedioso)",
+        "costo": "USD 50-100/tonelada"
+      },
+      "desgrane_mecanico": {
+        "equipo": "Desgranadora (manual o motorizada)",
+        "capacidad": "100-500 kg/hora",
+        "costo": "USD 5-10/tonelada"
+      },
+      "secado_natural": {
+        "metodo": "Tendal extendido (piso/lona)",
+        "tiempo": "7-14 días (depende humedad ambiente)",
+        "humedad_final": "13-14%",
+        "costo": "USD 0 labor (productor hace)"
+      },
+      "secado_artificial": {
+        "equipo": "Secadora estacionaria (aire caliente)",
+        "tiempo": "1-2 días",
+        "humedad_final": "12-13%",
+        "costo": "USD 20-40/tonelada",
+        "ventaja": "Rápido, consistencia humedad"
+      ],
+      "control_humedad": [
+        "Medidor humedad: Chequeo regular",
+        "Bajo 13%: Almacenaje seguro",
+        "Sobre 14%: Riesgo hongo, pudrición"
+      ]
+    },
+    "almacenaje": {
+      "titulo": "6.5 Almacenaje de Grano de Maíz",
+      "condiciones": [
+        "Humedad: 12-13% (ideal)",
+        "Temperatura: Fresco (< 20°C) preferiblemente",
+        "Ventilación: Aire circulante (previene hotspots)",
+        "Plagas: Protección de roedores/pájaros"
+      ],
+      "estructuras": [
+        {
+          "tipo": "Sacos (50-60 kg)",
+          "ventaja": "Portabilidad",
+          "desventaja": "Labor separación, riesgo humedad"
+        },
+        {
+          "tipo": "Silo (200-500 toneladas)",
+          "ventaja": "Capacidad, hermético",
+          "desventaja": "Inversión USD 5,000-15,000"
+        },
+        {
+          "tipo": "Galpón con pisos",
+          "ventaja": "Bajo costo relativo",
+          "desventaja": "Requiere ventilación constante"
+        }
+      ],
+      "plazo_almacenaje": [
+        "Corto plazo (< 3 meses): Sacos simple suficiente",
+        "Largo plazo (> 6 meses): Silo hermético + control humedad"
+      ]
+    },
+    "rendimiento": {
+      "titulo": "6.6 Rendimiento de Maíz",
+      "rendimiento_grano": [
+        "Nacional Ecuador promedio: 3.2 toneladas/hectárea",
+        "Tecnificado costa: 6-8 toneladas/hectárea",
+        "Potencial genético: 10-12 toneladas/hectárea"
+      ],
+      "conversion_fresco_seco": [
+        "Maíz cosecha (13-15% humedad): 1 tonelada fresco",
+        "Después secado 12-13%: = 0.98-0.99 tonelada",
+        "Pérdida secado: 1-2% (agua liberad)"
+      ],
+      "factores_rendimiento": [
+        "Genética: 40% (híbrido vs criolla)",
+        "Nutrición: 25% (fertilización adecuada)",
+        "Agua: 20% (riego/lluvia)",
+        "Plagas/enfermedades: 15% (control)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.7 Preguntas Frecuentes - Cosecha",
+      "q1": {
+        "pregunta": "¿Cuándo debo cosechar maíz?",
+        "respuesta": "R6 madurez comercial: grano duro, 13-15% humedad, desprende fácil tusa. Normalmente 125-150 días post-siembra (depende variedad)"
+      },
+      "q2": {
+        "pregunta": "¿Cosecha temprana reduce rendimiento?",
+        "respuesta": "SÍ. Si cosecha R5 (35-40% humedad): grano lleno pero HÚMEDO = secado caro. Si cosecha R6: grano óptimo rendimiento"
+      },
+      "q3": {
+        "pregunta": "¿Cómo medir humedad grano?",
+        "respuesta": "Medidor humedad eléctrico (USD 100-300). Medir 10+ puntos diferentes sacos. Si 13-15%: listo almacenar. Si > 16%: riesgo hongo"
+      },
+      "q4": {
+        "pregunta": "¿Secado natural es suficiente?",
+        "respuesta": "Depende clima. Costa seca: SÍ (10-14 días). Costa lluvia: Difícil (requiere cubierta lona). Mejor: Secadora artificial si disponible"
+      },
+      "q5": {
+        "pregunta": "¿Puedo guardar maíz 1 año?",
+        "respuesta": "SÍ si humedad 12-13% y silo hermético. Largo plazo: riesgo insectos (weevil), hongos. Tratar con fosfuro aluminio (fumigación segura)"
+      }
+    ]
+  }
+}

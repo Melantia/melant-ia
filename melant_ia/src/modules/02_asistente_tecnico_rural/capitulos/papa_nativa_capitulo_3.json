@@ -1,0 +1,128 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Ciclo nutrientes bajo insumo, compost, biofertes, deficiencias naturales",
+  "contenido": {
+    "introduccion": {
+      "titulo": "3.1 Nutrición Papa Nativa - Bajo Insumo",
+      "texto": "Papa nativa cultivo ADAPTADO suelos pobres sierra andina. Extracción nutrientes MENOR convencional (rendimiento bajo = nutrientes bajo). Estrategia: compost casero + rotación abonos verdes, NO insumos químicos. Objetivo: autosuficiencia perpetua, sin deuda agroinsumos."
+    },
+    "extraccion_reducida": {
+      "titulo": "3.2 Extracción de Nutrientes (Reducida)",
+      "comparativa": [
+        {
+          "nutriente": "Nitrógeno",
+          "convencional": "200-300 kg/ha (20 ton × 10-15 kg/ton)",
+          "nativa": "100-150 kg/ha (12 ton × 8-12 kg/ton)"
+        },
+        {
+          "nutriente": "Fósforo",
+          "convencional": "60-80 kg/ha",
+          "nativa": "40-50 kg/ha"
+        },
+        {
+          "nutriente": "Potasio",
+          "convencional": "160-240 kg/ha",
+          "nativa": "100-150 kg/ha"
+        }
+      ]
+    },
+    "compost_casero": {
+      "titulo": "3.3 Compost Casero - Estrategia Principal",
+      "materiales": [
+        "Residuos cosecha (tallos, hojas papas)",
+        "Estiércol animal (vaca, caballo, oveja) 30%",
+        "Tierra negra/suelo 10%",
+        "Agua (mantener humedad 50-60%)"
+      ],
+      "proceso": [
+        {
+          "semana": "Semanas 1-4",
+          "temp": "70-80°C (termofílica = descomposición rápida)"
+        },
+        {
+          "semana": "Semanas 5-8",
+          "temp": "50-60°C (mesofílica = estabilización)"
+        },
+        {
+          "semana": "Semanas 9-12",
+          "temp": "20-30°C (maduración = uso listo)"
+        }
+      ],
+      "cantidad": "5-10 ton/hectárea incorporado pre-siembra"
+    },
+    "abonos_verdes": {
+      "titulo": "3.4 Abonos Verdes en Rotación",
+      "cultivos": [
+        {
+          "cultivo": "Haba (andina)",
+          "ciclo": "3-4 meses",
+          "N_fijado": "80-120 kg/ha",
+          "uso": "Post-papa, destruye pre-próxima papa"
+        },
+        {
+          "cultivo": "Lupino",
+          "ciclo": "4-5 meses",
+          "N_fijado": "100-150 kg/ha",
+          "adaptacion": "Excelente 2,000-3,000m"
+        },
+        {
+          "cultivo": "Vicia",
+          "ciclo": "3 meses",
+          "N_fijado": "60-100 kg/ha"
+        }
+      ]
+    },
+    "biofertilizantes_naturales": {
+      "titulo": "3.5 Biofertilizantes Andinos",
+      "preparados": [
+        {
+          "nombre": "Biol (fermento anaeróbico)",
+          "ingredientes": ["Estiércol animal", "Agua", "Restos vegetales"],
+          "fermentacion": "15-21 días en bolsa cerrada",
+          "uso": "Aspersión foliar 1:10 agua"
+        },
+        {
+          "nombre": "Microorganismos locales",
+          "recoleccion": "Hongos/bacterias suelo andino (bajo arado)",
+          "inoculacion": "Compost = propagación"
+        }
+      ]
+    },
+    "deficiencias_manejo": {
+      "titulo": "3.6 Deficiencias Naturales",
+      "zinc": {
+        "sintoma": "Hoja pequeña, necrosis puntual",
+        "solucion": "Compost rico, ceniza madera (K + Zn)"
+      },
+      "calcio": {
+        "sintoma": "Corazón hueco (necrosis interna)",
+        "solucion": "Encalado mínimo (1-2 ton/ha si pH muy bajo)"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.7 Preguntas Frecuentes - Nutrición Nativa",
+      "q1": {
+        "pregunta": "¿Compost casero es suficiente papa?",
+        "respuesta": "SÍ típicamente (5-10 ton/hectárea + rotación abono verde). Rendimiento 12-15 ton/ha = balance nutrientes"
+      },
+      "q2": {
+        "pregunta": "¿Biol funciona realmente?",
+        "respuesta": "Funciona 50-70% eficacia urea. Beneficio: USD 0 costo (producción propia), sostenibilidad"
+      },
+      "q3": {
+        "pregunta": "¿Haba como abono verde = ganancia doble?",
+        "respuesta": "SÍ. Haba = cosecha venta USD 300-400/ton + nitrógeno gratuito = excelente sinergia"
+      },
+      "q4": {
+        "pregunta": "¿Encalado es necesario papa nativa?",
+        "respuesta": "SOLO si pH < 5.0 (muy ácido). Nativa tolera pH 5.0-6.5 mejor que convencional"
+      },
+      "q5": {
+        "pregunta": "¿Sin fertilizante químico hay riesgo rendimiento?",
+        "respuesta": "Riesgo bajo si compost + rotación. Esperar 10-15% menor rendimiento = tradeoff por sostenibilidad/costo"
+      }
+    ]
+  }
+}

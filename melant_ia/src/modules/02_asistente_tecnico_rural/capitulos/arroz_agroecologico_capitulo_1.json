@@ -1,0 +1,105 @@
+{
+  "capitulo": 1,
+  "titulo": "Botánica y Variedades de Arroz Agroecológico",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Variedades locales, adaptación, ciclo biológico, biodiversidad arrocera",
+  "contenido": {
+    "introduccion": {
+      "titulo": "1.1 Introducción a Arroz Agroecológico",
+      "texto": "Arroz agroecológico rompe dependencia químico industrial, mantiene 3-4 ton/ha rendimiento sostenible sin insumos sintéticos. Ecuador: variedades criollas arroz (Arroz de secano andino, Arroz blanco sierra) permiten cultivo sin riego inundación (sistemas de lluvia). Objetivo: autosuficiencia nutrientes, control biológico plagas, regeneración suelo arcilloso húmedo."
+    },
+    "variedades_arroces": {
+      "titulo": "1.2 Variedades Locales vs Mejoradas",
+      "variedades_criollas": [
+        {
+          "nombre": "Arroz de secano (altura sierra)",
+          "habitat": "1,000-2,000 m, lluvia 1,000-1,500 mm/año",
+          "ciclo": "150-180 días",
+          "rendimiento": "2-3.5 ton/ha (bajo pero resiliente)",
+          "ventajas": ["Adaptado sequía sierra", "No requiere inundación", "Tolerante acidez"]
+        },
+        {
+          "nombre": "Arroz del litoral (costa)",
+          "habitat": "Manabí, Los Ríos, riego deficitario",
+          "ciclo": "120-140 días",
+          "rendimiento": "3.5-4.5 ton/ha",
+          "ventajas": ["Ciclo corto", "Buena calidad grano", "Adaptada plagas locales"]
+        }
+      ],
+      "variedades_mejoradas_agroecol": [
+        {
+          "nombre": "Híbrido INIA bajo insumo",
+          "ciclo": "110-120 días",
+          "rendimiento": "4-5 ton/ha (semi-intensivo)",
+          "caracteristica": "Menos sensible N bajo, alguna resistencia brusone"
+        }
+      ]
+    },
+    "sistema_cultivo": {
+      "titulo": "1.3 Sistemas de Cultivo Agroecológico",
+      "sistemas": [
+        {
+          "sistema": "Arroz-pesca (integración)",
+          "descripcion": "Peces en arrozal inundado = control insectos, fertilización (excretas), ingresos adicionales pesca",
+          "rendimiento_arroz": "4-5 ton/ha (ligera reducción densidad peces)",
+          "rendimiento_pesca": "500-1,000 kg peces/ha"
+        },
+        {
+          "sistema": "Arroz-leguminosa rotación",
+          "descripcion": "Arroz año 1, lupino/haba/fréjol año 2 (fija N, rompe plagas)",
+          "beneficio": "Nitrógeno 50-100 kg/ha, menor presión plagas"
+        },
+        {
+          "sistema": "Arroz secano asociado maíz",
+          "descripcion": "Arroz + maíz intercalado (nichos ambientales diferentes)",
+          "ventaja": "Diversificación ingresos, cobertura suelo"
+        }
+      ]
+    },
+    "adaptacion_cambio_climatico": {
+      "titulo": "1.4 Adaptación a Cambio Climático",
+      "riesgos": [
+        "Sequías prolongadas (sierra)",
+        "Inundaciones extremas (costa)",
+        "Plagas nuevas (temperaturas extremas)"
+      ],
+      "respuestas": [
+        {
+          "problema": "Sequía",
+          "solucion_agroecol": "Variedades secano, mulch conserva agua, retención humedad suelo vivo"
+        },
+        {
+          "problema": "Inundación",
+          "solucion": "Drenaje mejorado, surcos elevados, rotación cultivos tolerantes"
+        },
+        {
+          "problema": "Plagas nuevas",
+          "solucion": "Biodiversidad (cultivos trampa, depredadores naturales), variedades resistencia"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.5 Preguntas Frecuentes - Botánica",
+      "q1": {
+        "pregunta": "¿Arroz secano produce suficiente?",
+        "respuesta": "2-3.5 ton/ha es viable si mercado orgánico premium (USD 0.30-0.50/kg vs USD 0.15 convencional). Tradeoff: volumen bajo, margen alto"
+      },
+      "q2": {
+        "pregunta": "¿Peces en arroz realmente funcionan?",
+        "respuesta": "SÍ integración probada (FAO documenta). Peces comen mosquito larva, excretas fertilizan, ingreso extra pesca. Sistema triple ganancia"
+      },
+      "q3": {
+        "pregunta": "¿Variedad criolla produce como híbrido?",
+        "respuesta": "NO (40-50% menor rendimiento). PERO criedad a ecología local, semilla propia perpetuo, sin dependencia agroinsumo"
+      },
+      "q4": {
+        "pregunta": "¿Rotación arroz-leguminosa es viable?",
+        "respuesta": "SÍ económicamente. Leguminosa vende (USD 300-400/ton) + fertiliza suelo (USD 100-150/ha N ahorrado año siguiente)"
+      },
+      "q5": {
+        "pregunta": "¿Arroz agroecológico es certificable?",
+        "respuesta": "SÍ organismo certificador. Transición 3 años, luego sello orgánico = premium 40-75% precio"
+      }
+    ]
+  }
+}

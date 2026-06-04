@@ -2,10 +2,7 @@
 // Publicación, búsqueda y gestión de propiedades rurales
 // Integrado con Tienda MELANTIA
 
-import {
-  validarCoberturaParaCompra,
-  hablarAtencionVentas,
-} from './tienda_melantia.js';
+import { TiendaMelantia } from './04_negocios_rurales/tienda_melantia.js';
 
 const propiedades = [];
 
@@ -17,7 +14,7 @@ export function publicarPropiedad({
   descripcion,
   fotos,
 }) {
-  if (!validarCoberturaParaCompra())
+  if (!TiendaMelantia.validarCoberturaParaCompra())
     return { ok: false, error: 'Sin cobertura' };
   const propiedad = {
     id: 'prop-' + Math.floor(Math.random() * 100000),
@@ -30,7 +27,7 @@ export function publicarPropiedad({
     fecha: new Date().toISOString(),
   };
   propiedades.push(propiedad);
-  hablarAtencionVentas('Propiedad publicada correctamente.');
+  TiendaMelantia.hablarAtencionVentas('Propiedad publicada correctamente.');
   return { ok: true, propiedad };
 }
 
@@ -39,11 +36,17 @@ export function listarPropiedades() {
 }
 
 export function mostrarCatalogoPropiedades(contenedorId = 'app-menu') {
-  const cont = document.getElementById(contenedorId);
+  const cont =
+    document.getElementById(contenedorId) ||
+    document.getElementById('vista-activa') ||
+    document.getElementById('contenedor-principal') ||
+    document.body;
   if (!cont) return;
   cont.innerHTML = '<h2>Catálogo de Bienes Raíces Rurales</h2>';
   if (propiedades.length === 0) {
     cont.innerHTML += '<p>No hay propiedades registradas.</p>';
+    cont.innerHTML +=
+      '<button onclick="window.volverAlMenuPrincipal && window.volverAlMenuPrincipal()" style="margin-top:18px;background:#276749;color:#fff;padding:9px 18px;border:none;border-radius:8px;cursor:pointer;">Volver al menú principal</button>';
     return;
   }
   propiedades.forEach((p) => {
@@ -59,18 +62,26 @@ export function mostrarCatalogoPropiedades(contenedorId = 'app-menu') {
       <hr>
     `;
   });
+  cont.innerHTML +=
+    '<button onclick="window.volverAlMenuPrincipal && window.volverAlMenuPrincipal()" style="margin-top:18px;background:#276749;color:#fff;padding:9px 18px;border:none;border-radius:8px;cursor:pointer;">Volver al menú principal</button>';
 }
 
 window.comprarPropiedad = function (id) {
   const propiedad = propiedades.find((p) => p.id === id);
   if (!propiedad) return alert('Propiedad no encontrada.');
-  if (!validarCoberturaParaCompra()) return;
-  hablarAtencionVentas(
+  if (!TiendaMelantia.validarCoberturaParaCompra()) return;
+  TiendaMelantia.hablarAtencionVentas(
     'Iniciando proceso de compra para la propiedad seleccionada.'
   );
   alert(
     'Proceso de compra en desarrollo. Pronto podrás completar la transacción desde la Tienda MELANTIA.'
   );
 };
+
+export function mostrarPanel() {
+  return mostrarCatalogoPropiedades('vista-activa');
+}
+
+export default { mostrarPanel, publicarPropiedad, listarPropiedades };
 
 // Integración con la Tienda MELANTIA: puedes llamar mostrarCatalogoPropiedades() desde el panel de tienda.

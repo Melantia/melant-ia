@@ -1,0 +1,122 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Procesamiento del Arroz",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Madurez, cosecha mecánica, secado, molinería, rendimiento industrialización",
+  "contenido": {
+    "introduccion": {
+      "titulo": "6.1 Introducción a Cosecha",
+      "texto": "Arroz cosecha R6 (13-15% humedad, grano duro). Cosecha tardía = desgrane viento (pérdida), temprana = grano lechoso (secado costoso). Molinería = 30-40% pérdida peso (cáscara, salvado = subproductos). Rendimiento molinería define ingresos finales (grano blanco puro vs croto/roto)."
+    },
+    "determinacion_madurez": {
+      "titulo": "6.2 Determinación de Madurez",
+      "estadio_r6": {
+        "indicador": "75-80% panojas color paja oro (no verdes)",
+        "humedad": "13-15%",
+        "prueba": "Grano cae fácil al presionar"
+      },
+      "timing_cosecha": "Ventana 3-5 días óptima (R6 temprana a media)",
+      "riesgo_tardio": "Desgrane > 20% (viento), pájaros, pudrición"
+    },
+    "cosecha_mecanica": {
+      "titulo": "6.3 Cosecha Mecánica",
+      "cosechadora_convencional": {
+        "equipo": "Cosechadora combine de arroz",
+        "capacidad": "0.5-2 hectáreas/hora",
+        "costo": "USD 30-50/hectárea (alquiler máquina + operador)",
+        "rendimiento": "Pérdida cosecha 3-5% (inevitable)"
+      },
+      "ventajas": [
+        "Rápido (importancia fecha óptima)",
+        "Bajo daño grano",
+        "Labor intensiva mínima"
+      ],
+      "importante": "Mantener cosechadora bien calibrada (minimiza pérdida desgrane)"
+    },
+    "secado": {
+      "titulo": "6.4 Secado de Grano",
+      "humedad_inicial": "13-15% cosecha",
+      "humedad_final": "12-13% (almacenaje)",
+      "metodo_natural": [
+        "Tendal solar: 3-7 días depende clima",
+        "Secadoras estacionarias: 1-2 días"
+      ],
+      "costo": "USD 20-40/tonelada secadora artificial",
+      "calidad": "Secado lento (natural) = mejor calidad grano"
+    },
+    "molineria_proceso": {
+      "titulo": "6.5 Proceso de Molinería",
+      "paso_1_limpieza": {
+        "equipo": "Separador piedra, zaranda",
+        "objetivo": "Remover piedra, suciedad, grano inmaduro",
+        "perdida": "2-3%"
+      },
+      "paso_2_descascarado": {
+        "equipo": "Molino trituradora de cono",
+        "objetivo": "Remover cáscara",
+        "perdida": "17-20% (peso cáscara)"
+      },
+      "paso_3_pulimento": {
+        "equipo": "Pulidor cilindro",
+        "objetivo": "Remover salvado, capa aleurona",
+        "perdida": "8-12% (salvado)"
+      },
+      "paso_4_clasificacion": {
+        "equipo": "Zaranda clasificadora",
+        "grano_entero": "Grano > 3/4 largo (mayor valor)",
+        "croto": "Grano 1/4-3/4 (menor valor 50-60%)",
+        "polvo": "Harina (valor USD 0.05-0.10/kg)"
+      }
+    },
+    "rendimiento_molineria": {
+      "titulo": "6.6 Rendimiento de Molinería",
+      "ejemplo": {
+        "arroz_comun": "100 kg arroz cáscara (13% humedad)",
+        "paso_1": "- 2 kg suciedad = 98 kg limpio",
+        "paso_2": "- 18 kg cáscara (18%) = 80 kg semipulido",
+        "paso_3": "- 8 kg salvado (10%) = 72 kg blanco",
+        "clasificacion": "- 3 kg croto = 69 kg grano entero, 3 kg croto, harina variable"
+      },
+      "resumen": "100 kg cáscara → 69% grano entero + 3% croto + residuos",
+      "ratio_tipico": "65-70% rendimiento blanco para arroz común convencional"
+    },
+    "subproductos": {
+      "titulo": "6.7 Subproductos y Usos",
+      "cascara_arroz": {
+        "cantidad": "18-20% arroz cáscara",
+        "uso": "Energía (combustible calderas), cama animal, compost"
+      },
+      "salvado": {
+        "cantidad": "8-12%",
+        "uso": "Alimento ganado (proteína 12-15%), compostas orgánicas"
+      },
+      "croto": {
+        "cantidad": "3-5%",
+        "uso": "Alimento animal, cervecería fermentación"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.8 Preguntas Frecuentes - Cosecha",
+      "q1": {
+        "pregunta": "¿Cosecha tarde tiene ventaja?",
+        "respuesta": "NO. Esperar R6 media (2-3 días extra) baja desgrane pero riesgo no vale. Mejor cosechar R6 temprana, secar artificial garantiza humedad"
+      },
+      "q2": {
+        "pregunta": "¿Rendimiento molinería puede mejorar?",
+        "respuesta": "Ligeramente. Variedad+ buena salud = grano más lleno. Pero ratio 65-70% es máximo = función física cáscara/salvado peso"
+      },
+      "q3": {
+        "pregunta": "¿Salvado arroz es tóxico?",
+        "respuesta": "NO tóxico. Nutritivo (proteína 12-15%). Común alimento ganado. Salvado blanco (procesado) mejor que integral"
+      },
+      "q4": {
+        "pregunta": "¿Croto tiene mercado?",
+        "respuesta": "SÍ. Precio 50-60% grano entero. Cerveceríaså lo usan, alimento animal. No desperdiciar"
+      },
+      "q5": {
+        "pregunta": "¿Cáscara arroz tiene valor?",
+        "respuesta": "SÍ energético (combustible calderas, energía eléctrica). Algunos molinos la venden USD 10-20/tonelada"
+      }
+    ]
+  }
+}

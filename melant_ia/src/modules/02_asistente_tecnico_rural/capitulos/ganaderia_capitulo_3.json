@@ -1,0 +1,182 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Alimentación del Ganado Bovino",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Requerimientos nutricionales, pasto, suplementación, forrajes, balanceo ración",
+  "contenido": {
+    "introduccion_nutricion": {
+      "titulo": "3.1 Importancia de Nutrición Ganadera",
+      "impacto": "Alimentación es 60-70% costo producción. Deficiencia: -30% producción leche, -2-3 kg/día ganancia peso, enfermedad recurrente",
+      "soportes_vitales": [
+        "Energía (proteína + carbohidratos)",
+        "Proteína (aminoácidos esenciales)",
+        "Minerales (Ca, P, K, Mg)",
+        "Vitaminas (A, D, E)",
+        "Agua (50-100 litros/día vaca lechería)"
+      ]
+    },
+    "requerimientos_nutricionales": {
+      "titulo": "3.2 Requerimientos por Tipo Animal",
+      "vaca_lecheria_produccion": {
+        "requerimiento_diario": [
+          "Energía: 15-20 Mcal (depende producción leche, peso corporal)",
+          "Proteína: 1.2-1.5 kg/día (14-16% materia seca dieta)",
+          "Calcio: 60-80 g/día",
+          "Fósforo: 40-50 g/día",
+          "Agua: 80-100 litros/día"
+        ],
+        "calculo_ejemplo": "Vaca 600 kg produciendo 20 litros leche = Energía 18 Mcal + Proteína 1.4 kg",
+        "carencia_proteina": "Leche baja en sólidos, producción -30%, mastitis recurrente"
+      },
+      "vaca_carne_engorde": {
+        "requerimiento_diario": [
+          "Energía: 10-15 Mcal (vs leche 15-20)",
+          "Proteína: 0.8-1.1 kg/día (11-13% materia seca)",
+          "Ganancia peso esperado: 0.8-1.5 kg/día (depende edad, calidad alimento)"
+        ]
+      },
+      "ternero_crecimiento": {
+        "edad_destete": "8-12 semanas",
+        "post_destete": [
+          "Energía: 8-10 Mcal/día",
+          "Proteína: 0.6-0.8 kg/día (16-18% concentrado)",
+          "Ganancia esperada: 0.5-0.8 kg/día"
+        ]
+      }
+    },
+    "fuentes_alimentacion": {
+      "titulo": "3.3 Fuentes de Alimento",
+      "pasto_fresco": {
+        "aporte_energia": "Pasto fresco 20-30% materia seca = 0.8-1.0 Mcal/kg",
+        "produccion": [
+          "Kikuyo sierra: 40-60 ton materia fresca/ha = 8-12 ton materia seca",
+          "Rye grass: 50-70 ton/ha fresca = 10-14 ton materia seca"
+        ],
+        "calidad": [
+          "Proteína: 12-16% (EXCELENTE si joven)",
+          "Proteína: 8-10% (POBRE si viejo/lignificado)"
+        ],
+        "consumo": "Vaca consume 15-20 kg pasto fresco/día = 3-4 kg materia seca"
+      },
+      "heno_paja": {
+        "definicion": "Pasto secado al sol (6-12% humedad)",
+        "aporte": "0.7-0.9 Mcal/kg",
+        "proteina": "8-12% (depende pasto + edad cosecha)",
+        "calidad": [
+          "Buena: Cosecha pico floración (antes grano), verde color",
+          "Pobre: Cosecha tardía, gris oscuro, lignificado"
+        ],
+        "uso": "Suplementario en sequía (4-6 meses seco)",
+        "costo_ecuador": "USD 150-300/tonelada (muy variable)"
+      },
+      "silaje": {
+        "definicion": "Forraje fermentado (ensilaje) en ausencia oxígeno",
+        "produccion_ecuador": [
+          "Maíz silaje: 50-80 ton materia fresca = 15-20 ton materia seca",
+          "Sorgo silaje: 40-60 ton",
+          "Pasto ensilado: 30-40 ton"
+        ],
+        "aporte": "0.9-1.1 Mcal/kg (buena energía)",
+        "proteina": "7-10% (moderada)",
+        "ventaja": "Conservación 2+ años, más palatabilidad que heno",
+        "desventaja": "Equipo especial (trituradora, empaque), inversión USD 1,000-3,000"
+      },
+      "concentrado": {
+        "definicion": "Mezcla granos + minerales (maíz, sorgo, soya, salvado, harina pescado)",
+        "aporte": "Energía 2.5-3.0 Mcal/kg (MÁS concentrado que pasto)",
+        "proteina": "12-18% (depende formulación)",
+        "uso": "Suplementario leche (3-5 kg/día) o engorde (5-8 kg/día)",
+        "costo": "USD 250-350/tonelada Ecuador (muy variable)",
+        "ventaja": "Control nutricional preciso"
+      }
+    },
+    "balanceo_raciones": {
+      "titulo": "3.4 Balanceo de Raciones",
+      "ejemplo_vaca_lecheria_20_litros": {
+        "composicion_diaria": [
+          {
+            "alimento": "Pasto fresco Kikuyo",
+            "cantidad": "18 kg",
+            "aporte_energia": "18 × 0.9 = 16.2 Mcal",
+            "aporte_proteina": "18 × 0.14 = 2.52 kg"
+          },
+          {
+            "alimento": "Concentrado (14% proteína)",
+            "cantidad": "4 kg",
+            "aporte_energia": "4 × 2.8 = 11.2 Mcal",
+            "aporte_proteina": "4 × 0.14 = 0.56 kg"
+          }
+        ],
+        "total": [
+          "Energía total: 16.2 + 11.2 = 27.4 Mcal (requerimiento 18 Mcal) ✓ SUFICIENTE",
+          "Proteína total: 2.52 + 0.56 = 3.08 kg (requerimiento 1.4 kg) ✓ SUFICIENTE"
+        ]
+      },
+      "criterios_balanceo": [
+        "Pasto base: Cobertura 80-90% requerimiento energético",
+        "Concentrado: Suplementario 10-20% energía + proteína específica",
+        "Sales minerales: 50-80 g/día (bloque sal, premezcla vitamínica)"
+      ]
+    },
+    "deficiencias_nutricionales": {
+      "titulo": "3.5 Deficiencias Nutricionales Comunes",
+      "energia_insuficiente": {
+        "sintomas": [
+          "Cuerpo muy delgado (condición corporal 2-3/5)",
+          "Producción leche baja",
+          "Problemas reproducción (ciclos irregulares)",
+          "Mastitis recurrente"
+        ],
+        "solucion": "Aumentar pasto/alimento 2-3 kg/día"
+      },
+      "proteina_insuficiente": {
+        "sintomas": [
+          "Pelos dull/sin brillo",
+          "Leche sólidos bajos",
+          "Urea en leche < 20 mg/dL",
+          "Retraso crecimiento terneros"
+        ]
+      },
+      "fosforo_bajo": {
+        "sintomas": [
+          "Debilidad muscular",
+          "Infertilidad (ciclos anovulatorios)",
+          "Ritmo cardíaco deprimido"
+        ],
+        "causa_comun": "Pasto deficiente P (muchos pastos tropicales bajo)",
+        "correccion": "Fosfato monoamónico 25-30 g/día"
+      },
+      "calcio_bajo": {
+        "sintomas": [
+          "Fiebre de leche (hipocalcemia aguda post-parto)",
+          "Parálisis, convulsiones",
+          "Riesgo muerte si severa"
+        ],
+        "prevencion": "Aumentar Ca en dieta (calcio 100-120 g/día pre-parto)"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.6 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Cuánto alimento requiere vaca?",
+        "respuesta": "Aproximadamente 3% peso corporal en materia seca/día. Vaca 600 kg = 18 kg materia seca (40-50 kg pasto fresco o 15-18 kg heno + 3-4 kg concentrado)"
+      },
+      "q2": {
+        "pregunta": "¿Pasto solo es suficiente?",
+        "respuesta": "Para vaca carne SÍ si buena calidad. Para lechería 20L/día NO (requiere 3-5 kg concentrado). Pasto cubre 80%, concentrado 20% energía"
+      },
+      "q3": {
+        "pregunta": "¿Qué es silaje?",
+        "respuesta": "Forraje fermentado en silo (anaerobia). Conserva 2+ años, buena calidad, palatabilidad. Ventaja: Otoño-invierno (sequía) se alimenta ensilado"
+      },
+      "q4": {
+        "pregunta": "¿Sal minerals es obligatorio?",
+        "respuesta": "SÍ crítico. Pasto es deficiente P, K, Cu, Zn. Bloque sal mineral 50-80 g/día previene deficiencias costosas"
+      },
+      "q5": {
+        "pregunta": "¿Concentrado barato vs caro?",
+        "respuesta": "Concentrado barato (salvado) bajo proteína (8-10%). Caro (soya 44%) alto proteína (16-18%). Lechería requiere caro (16-18% mínimo)"
+      }
+    ]
+  }
+}

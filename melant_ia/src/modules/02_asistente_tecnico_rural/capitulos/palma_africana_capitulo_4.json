@@ -1,0 +1,131 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas de la Palma Africana",
+  "cultivo": "Palma Africana",
+  "seccion": "Identificación plagas, ciclo biológico, daños económicos, control integrado",
+  "contenido": {
+    "introduccion_plagas": {
+      "titulo": "4.1 Introducción a Plagas de Palma",
+      "plagas_principales_ecuador": [
+        "Picudo negro (Rhynchophorus palmarum): PLAGA #1, peligro total",
+        "Escarabajo capuchino (Eupalamides cyparissiae): PLAGA #2",
+        "Psocura del aceite (Opsiphanes cassiae): Lepidóptero hoja",
+        "Araña roja (Tetranychus): Rara pero posible",
+        "Hormigas cortadoras (Atta sp.): Ocasional"
+      ],
+      "peligro": "Picudo = enfermedad letal (100% mortalidad planta si infección)"
+    },
+    "picudo_negro": {
+      "titulo": "4.2 Picudo Negro (Rhynchophorus palmarum) - PLAGA #1 CRÍTICA",
+      "descripcion": "Escarabajo rojo-oscuro 25-35 mm, barrenador tallo",
+      "peligro_letal": "Larva penetra tallo → pudre punto crecimiento → MUERTE PLANTA 100%",
+      "ciclo_biologico": [
+        "Adulto: Atracción fronda herida, entra tallo por zona lesión",
+        "Huevo: Dentro galería, 3-5 días",
+        "Larva: Blanca, come tejido vascular 20-30 días",
+        "Pupa: 10-15 días"
+      ],
+      "generaciones": "2-4 generaciones/año (depende temperatura)",
+      "identificacion_infestacion": [
+        "Síntoma inicial: Hoja superior se quiebra (asimetría extraña)",
+        "Olor: Fermentación característica (huele como fermento maíz)",
+        "Orificio: Visible en tallo base (orificio redondo 3-4 mm)",
+        "Polvo: Polvo marrón alrededor orificio entrada"
+      ],
+      "atraccion_factores": [
+        "Herida fronda (poda, daño viento, enfermedad)",
+        "Pudrición tejido (Fusarium, otra enfermedad)",
+        "Flor de atracción (volatiles fermentación)"
+      ],
+      "prevencion_OBLIGATORIA": [
+        "NO heridas innecesarias (poda mínima)",
+        "Control Fusarium (evita pudrición = atracción picudo)",
+        "Insecticida preventivo si población alta en zona"
+      ],
+      "control_curativo": [
+        "Una vez adentro tallo: IMPOSIBLE tratar (muerte segura)",
+        "Corte y quema planta (erradicación emergencia)"
+      ],
+      "control_quimico_preventivo": [
+        {
+          "producto": "Fipronil inyectable",
+          "aplicacion": "Inyección tallo base mes 3-4",
+          "costo": "USD 1-2/inyección"
+        },
+        {
+          "producto": "Insecticida foliar (carbaril, piretroides)",
+          "aplicacion": "Pulverizacion preventiva estación caliente",
+          "costo": "USD 200-400/ha"
+        }
+      ],
+      "importancia_monitoreo": "Vigilancia SEMANAL durante época riesgo (lluvia + temperatura alta)"
+    },
+    "escarabajo_capuchino": {
+      "titulo": "4.3 Escarabajo Capuchino (Eupalamides cyparissiae)",
+      "descripcion": "Escarabajo 8-15 mm, color café, daño hoja",
+      "ciclo": "4-6 generaciones/año",
+      "daño": [
+        "Adulto: Mastica folíolos (comidas irregulares)",
+        "Larva: Daño raíces secundarias",
+        "Severidad: Moderada (vs Picudo que mata)"
+      ],
+      "control": [
+        "Insecticida foliar (carbaril, Neem)",
+        "Monitoreo población (umbral: > 5 adultos/hoja)"
+      ]
+    },
+    "calendario_mip": {
+      "titulo": "4.4 Calendario MIP Anual",
+      "mes_a_mes": [
+        {
+          "meses": "Enero-Marzo (Seco relativo)",
+          "plagas_riesgo": "Picudo bajo, capuchino bajo",
+          "accion": "Monitoreo visual, remoción fronda muerta"
+        },
+        {
+          "meses": "Abril-Mayo (Inicio lluvia)",
+          "plagas_riesgo": "Picudo comienza aumentar (heridas por lluvia)",
+          "accion": "Vigilancia semanal, poda mínima"
+        },
+        {
+          "meses": "Junio-Agosto (Lluvia alta)",
+          "plagas_riesgo": "Picudo MÁXIMO, capuchino moderado",
+          "accion": "Monitoreo intensivo 3-4 veces/semana, control preventivo químico si necesario"
+        },
+        {
+          "meses": "Septiembre-Octubre (Transición)",
+          "plagas_riesgo": "Plagas decrecen",
+          "accion": "Monitoreo continuado, control preventivo continua"
+        },
+        {
+          "meses": "Noviembre-Diciembre (Seco)",
+          "plagas_riesgo": "Plagas bajas",
+          "accion": "Monitoreo reducido, limpieza terreno"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.5 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Picudo negro puede matar toda la finca?",
+        "respuesta": "SÍ. Si no controlado, picudo se propaga rápido entre palmas (2-4 generaciones/año). Brote descontrolado = pérdida 50-100% plantas. Control PREVENTIVO es crítico"
+      },
+      "q2": {
+        "pregunta": "¿Cómo prevenir picudo?",
+        "respuesta": "Evitar heridas (poda mínima), control Fusarium (evita pudrición atractiva), monitoreo semanal época lluvia, insecticida preventivo si población alta zona"
+      },
+      "q3": {
+        "pregunta": "¿Qué pasa si planta tiene picudo?",
+        "respuesta": "Muerte segura 100%. Larva pudre punto crecimiento irreversible. Única acción: corte planta, quema o compostaje, replante año siguiente"
+      },
+      "q4": {
+        "pregunta": "¿Plagas son problema mayor palma?",
+        "respuesta": "NO como café/cacao. Pero Picudo es CATASTRÓFICO si brota. Razón: plagas palma son menos frecuentes pero más letales"
+      },
+      "q5": {
+        "pregunta": "¿Se puede tratar picudo dentro tallo?",
+        "respuesta": "NO. Una vez adentro, imposible tratar (muerte planta inminente). Control SOLO es prevención"
+      }
+    ]
+  }
+}

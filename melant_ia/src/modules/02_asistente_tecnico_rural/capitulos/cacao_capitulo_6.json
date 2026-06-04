@@ -1,0 +1,497 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Poscosecha del Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Determinación de madurez, cosecha, fermentación, secado y almacenamiento",
+  "contenido": {
+    "introduccion_cosecha": {
+      "titulo": "6.1 Introducción a Cosecha y Poscosecha",
+      "texto": "La calidad final del cacao es determinada 80% por poscosecha (fermentación y secado) y solo 20% por el cultivo mismo. Un cacao bien cultivado pero mal procesado resulta en grano de baja calidad. Inversamente, excelentes prácticas poscosecha pueden mejorar significativamente grano mediocre.\n\nEl objetivo de fermentación y secado es:\n(1) Eliminar pulpa mucilaginosa (fermentación)\n(2) Reducir humedad de 60% a 7-8% (secado)\n(3) Desarrollar sabor y aroma (fermentación)\n(4) Evitar contaminación y aflatoxinas\n(5) Obtener grano con características comerciales",
+      "datos_clave": [
+        "Rendimiento fresco → seco: 5-6:1 (1 ton grano fresco = 180-200 kg seco)",
+        "Humedad inicial del grano: 55-65%",
+        "Humedad final deseada: 7-8%",
+        "Período fermentación: 5-7 días (temperatura 45-50°C)",
+        "Período secado: 10-14 días (temperatura 40-60°C)"
+      ]
+    },
+    "determinacion_madurez": {
+      "titulo": "6.2 Determinación de Madurez de Frutos",
+      "importancia": "Cosecha en punto óptimo de madurez asegura rendimiento y calidad. Cacao verde tiene rendimiento bajo, cacao sobremaduro se pierde",
+      "indicadores_visuales": [
+        {
+          "indicador": "Color de vaina (Criollo, Trinitario)",
+          "maduro": "Rojo intenso a marrón oscuro",
+          "verde": "Verde intenso, sin cambio de color"
+        },
+        {
+          "indicador": "Color de vaina (Forastero)",
+          "maduro": "Amarillo dorado a naranja",
+          "verde": "Verde uniforme"
+        },
+        {
+          "indicador": "Sonido",
+          "procedimiento": "Golpear vaina con nudillo",
+          "maduro": "Sonido hueco (indica grano seco dentro)",
+          "verde": "Sonido sordo (indica grano con pulpa blanda)"
+        },
+        {
+          "indicador": "Tamaño",
+          "caracteristica": "Vainas maduras tienen 22-26 cm de largo en Criollo, 18-22 cm en Forastero"
+        }
+      ],
+      "criterio_definitivo": {
+        "prueba_corte": "Abrir vaina. Si grano está recubierto completamente con pulpa blanca translúcida (no verde) = maduro",
+        "color_grano": "Morado oscuro a violáceo (no marrón claro que indica sobremaduro)"
+      },
+      "patron_cosecha": {
+        "titulo": "Patrón de Cosecha en Cultivos Maduros",
+        "cosecha_principal": "Julio-Septiembre (80% de producción anual)",
+        "cosecha_intermedia": "Marzo-Abril (10-15%)",
+        "cosecha_esporádica": "Noviembre-Febrero (5-10%)",
+        "frecuencia_coleccion": "Cada 7-14 días en temporada alta, cada 21 días en temporada baja"
+      }
+    },
+    "operacion_cosecha": {
+      "titulo": "6.3 Operación de Cosecha",
+      "metodos": [
+        {
+          "metodo": "Corte manual con podadera",
+          "procedimiento": [
+            {
+              "paso": 1,
+              "detalles": "Usar podadera de mango largo (1.5-2m) o escalera para frutos altos"
+            },
+            {
+              "paso": 2,
+              "detalles": "Identificar vaina madura (color, sonido, tamaño)"
+            },
+            {
+              "paso": 3,
+              "detalles": "Cortar deixando collarín (2-3 cm de pedúnculo en árbol). Evitar dañar corteza del árbol"
+            },
+            {
+              "paso": 4,
+              "detalles": "Dejar caer en bolsa de tela. NO golpear o machucar frutos"
+            }
+          ],
+          "eficiencia": "Recolector competente: 200-300 frutos/día",
+          "ventajas": "Precisión en selección de maduros, bajo daño a árbol"
+        },
+        {
+          "metodo": "Golpe o derriba con vara",
+          "procedimiento": "Golpear rama que sosteniene vainas con vara de madera",
+          "riesgo_alto": "Daño a corteza, flores en rama, frutos posteriores",
+          "recomendacion": "Evitar. Solo en cosechas de emergencia"
+        }
+      ],
+      "almacenamiento_temporal": {
+        "titulo": "Almacenamiento Temporal Pre-Fermentación",
+        "duracion": "Máximo 7-10 días",
+        "condicion": "Lugar fresco, seco, ventilado. HR <70%",
+        "advertencia": "Fermentación inicia naturalmente si se demora >7 días (riesgo moho, sabores off)"
+      },
+      "rendimiento_esperado": {
+        "frutos_cosecha": "1 ton vainas verdes (fresco)",
+        "despulpa": "150-200 granos secos / vaina = 150-200 kg grano seco inicial (60% HR)"
+      }
+    },
+    "despulpado": {
+      "titulo": "6.4 Despulpado del Cacao",
+      "procedimiento": [
+        {
+          "paso": 1,
+          "titulo": "Selección de vainas",
+          "detalles": "Descartar vainas dañadas, enfermas, o mal maduras. Solo vainas con grano de color violáceo"
+        },
+        {
+          "paso": 2,
+          "titulo": "Apertura de vaina",
+          "detalles": "Cortar vaina longitudinalmente con machete. Aplicar golpe transversal con canto de machete para abrirla"
+        },
+        {
+          "paso": 3,
+          "titulo": "Extracción de granos",
+          "detalles": "Con cuchara o dedos, extraer granos recubiertos de pulpa. Separar placentas (nerviuras blancas)"
+        },
+        {
+          "paso": 4,
+          "titulo": "Depósito en contenedor",
+          "detalles": "Granos + pulpa en canasto de caña, caja de madera, o saco de malla (permite drenaje)"
+        }
+      ],
+      "rendimiento": "1 ton vainas verdes → 150-200 kg grano fresco (con pulpa, 60% humedad)"
+    },
+    "fermentacion": {
+      "titulo": "6.5 Fermentación del Cacao",
+      "importancia": "Paso CRÍTICO. Determina 60% de sabor y aroma final",
+      "quimica": {
+        "descripcion": "Proceso anaerobio (sin aire) donde bacterias y levaduras consumen azúcares de pulpa, generan calor y alcohol que penetra grano",
+        "cambios": [
+          "Muerte de embrión (almendra no germina)",
+          "Hidrolisis de proteína en aminoácidos libres (precursores sabor)",
+          "Reducción de astringencia por condensación de taninos",
+          "Desarrollo de compuestos volátiles (aroma)"
+        ]
+      },
+      "microbiologia": {
+        "titulo": "Microbiología de Fermentación",
+        "etapas": [
+          {
+            "dia": "0-1",
+            "microorganismos": "Levaduras silvestres (Saccharomyces, Candida)",
+            "temperatura": "Ambiente (25-28°C)",
+            "actividad": "Baja fermentación alcohólica"
+          },
+          {
+            "dia": "1-3",
+            "microorganismos": "Bacterias acéticas (Acetobacter, Gluconobacter)",
+            "temperatura": "Aumenta a 40-45°C",
+            "actividad": "Oxidación de etanol a ácido acético. Calor máximo"
+          },
+          {
+            "dia": "3-5",
+            "microorganismos": "Bacterias ácido-lácticas (Lactobacillus)",
+            "temperatura": "Sostenida 45-50°C",
+            "actividad": "Fermentación láctica, penetración de ácidos en grano"
+          },
+          {
+            "dia": "5-7",
+            "microorganismos": "Mohos (Aspergillus, Penicillium) - INDESEABLES si invaden",
+            "temperatura": "Disminuye a 35-40°C",
+            "actividad": "Si HR alta, mohos pueden colonizar grano (riesgo aflatoxinas)"
+          }
+        ]
+      },
+      "metodos_fermentacion": [
+        {
+          "metodo": "Fermentación en montones (Heap)",
+          "procedimiento": [
+            {
+              "paso": 1,
+              "detalles": "Apilar grano + pulpa en montón cónico en suelo. Tapas con arpillera mojada"
+            },
+            {
+              "paso": 2,
+              "detalles": "Altura: 40-60 cm. Ancho: 1-1.5 m"
+            },
+            {
+              "paso": 3,
+              "detalles": "Voltear cada 48 horas (días 1, 3, 5, 7 eventualmente)"
+            }
+          ],
+          "ventajas": "Bajo costo, método tradicional",
+          "desventajas": "Riesgo contaminación (insectos, suciedad), HR incontrolable, fermentación no uniforme"
+        },
+        {
+          "metodo": "Fermentación en cajas de madera",
+          "procedimiento": [
+            {
+              "paso": 1,
+              "detalles": "Cajas rectangulares 1×1×0.6 m con piso perforado (drenaje de jugo)"
+            },
+            {
+              "paso": 2,
+              "detalles": "Llenar de grano + pulpa, cubrir con tapa de madera"
+            },
+            {
+              "paso": 3,
+              "detalles": "Voltear cada 48 horas: trasvasar de caja a caja adyacente"
+            }
+          ],
+          "ventajas": "Mejor control de fermentación, más higiénico, reutilizable",
+          "desventajas": "Mayor costo inicial (USD 50-100/caja), requiere espacio",
+          "recomendacion": "MEJOR OPCIÓN para comercial"
+        },
+        {
+          "metodo": "Fermentación en tanques con circulación de aire",
+          "procedimiento": "Sistema industrial con tuberías de aire",
+          "ventajas": "Máximo control, fermentación uniforme",
+          "desventajas": "Costo muy alto (USD 500+), requiere electricidad"
+        }
+      ],
+      "duracion_fermentacion": {
+        "cacao_fino": "5-6 días (sabores delicados)",
+        "cacao_corriente": "6-7 días (sabores fuertes)"
+      },
+      "control_fermentacion": {
+        "temperatura": {
+          "optima": "45-50°C",
+          "medicion": "Termómetro de compost cada 24 horas, en 5 puntos del montón"
+        },
+        "color_grano": {
+          "inicio": "Morado violáceo oscuro",
+          "final": "Marrón oscuro con grietas finas",
+          "cambio": "Indicador visual de progreso"
+        },
+        "aroma": {
+          "inicio": "Ácido fuerte, vinagre",
+          "final": "Aroma a cacao fermento, menos vinagre"
+        }
+      },
+      "finalizacion": {
+        "indicadores": [
+          "Temperatura disminuye de 50°C a 40-45°C",
+          "Aroma cambia de vinagre a cacao fermentado",
+          "Grano color marrón oscuro uniforme",
+          "Al corte: color interno violáceo desaparece, marrón penetra hasta centro"
+        ],
+        "señal_parada": "Cuando temperatura no vuelve a subir después de volteo, fermentación completó"
+      }
+    },
+    "secado": {
+      "titulo": "6.6 Secado del Cacao",
+      "importancia": "Reduce humedad de 60% a 7-8%. Detiene fermentación, permite almacenamiento",
+      "objetivos": [
+        "Alcanzar humedad 7-8%",
+        "Eliminar sabores defectuosos (si existen)",
+        "Evitar contaminación fúngica",
+        "Obtener grano con color homogéneo",
+        "Permitir almacenamiento 6-12 meses"
+      ],
+      "metodos_secado": [
+        {
+          "metodo": "Secado natural al sol",
+          "procedimiento": [
+            {
+              "paso": 1,
+              "detalles": "Esparcir grano en plataforma (piso de cemento, madera, arpillera). Espesor: 5-7 cm"
+            },
+            {
+              "paso": 2,
+              "detalles": "Voltear con rastrillo cada 2-3 horas durante hora soleada (6 am - 4 pm)"
+            },
+            {
+              "paso": 3,
+              "detalles": "Proteger de lluvia con toldo móvil o techo retráctil"
+            },
+            {
+              "paso": 4,
+              "detalles": "Apilarse en sacos al final de día, extender mañana siguiente"
+            }
+          ],
+          "duracion": "10-14 días (depende radiación solar, HR ambiente)",
+          "ventajas": "Bajo costo, sin energía",
+          "desventajas": "Dependencia del clima, riesgo lluvia, contaminación",
+          "rendimiento": "1 ton grano fermentado (60% HR) → 750-800 kg grano seco (7-8% HR)"
+        },
+        {
+          "metodo": "Secado mecánico en horno",
+          "procedimiento": [
+            {
+              "paso": 1,
+              "detalles": "Cargar grano en bandejas perforadas dentro de cámara con aire caliente"
+            },
+            {
+              "paso": 2,
+              "detalles": "Temperatura: 40-60°C. Comenzar bajo (40°C) primeros 3-4 días, aumentar gradualmente a 55-60°C"
+            },
+            {
+              "paso": 3,
+              "detalles": "Movimiento de aire: circulación constante (60-80 m³/min)"
+            },
+            {
+              "paso": 4,
+              "detalles": "Duración: 6-10 días según humedad inicial"
+            }
+          ],
+          "ventajas": "Control completo, independencia del clima, protección de contaminación",
+          "desventajas": "Costo combustible (leña, gas), riesgo quemadura si temperatura >60°C",
+          "recomendacion": "RECOMENDADO para áreas lluviosas"
+        }
+      ],
+      "control_humedad": {
+        "titulo": "Control de Humedad Durante Secado",
+        "medicion": "Usar higrómetro digital o medidor de humedad (pin meter)",
+        "objetivo_final": "7-8% humedad",
+        "checkpoint": [
+          {
+            "dia": "Día 3",
+            "humedad_esperada": "40-45%"
+          },
+          {
+            "dia": "Día 6",
+            "humedad_esperada": "20-25%"
+          },
+          {
+            "dia": "Día 10-14",
+            "humedad_esperada": "7-8%"
+          }
+        ],
+        "riesgo_bajo": "HR <7% hace grano frágil, se quiebra fácilmente",
+        "riesgo_alto": "HR >8% permite reaviviramiento (rehidratación) y mohos"
+      }
+    },
+    "almacenamiento": {
+      "titulo": "6.7 Almacenamiento del Grano Seco",
+      "duracion": "Puede almacenarse 6-12 meses sin deterioro si condiciones son óptimas",
+      "condiciones_optimas": [
+        "Humedad: 7-8% (usar desecante si HR ambiente >70%)",
+        "Temperatura: 15-20°C (evitar >25°C que acelera rancidez)",
+        "Ventilación: Buena circulación de aire",
+        "Luz: Oscuridad (UV degrada compuestos aromáticos)",
+        "Limpieza: Protección de plagas, insectos, roedores"
+      ],
+      "envases": [
+        {
+          "tipo": "Sacos de arpillera",
+          "ventaja": "Transpirabilidad",
+          "desventaja": "Permeabilidad a plagas",
+          "uso": "Si almacenamiento temporal (<3 meses) y control de plagas"
+        },
+        {
+          "tipo": "Sacos de polietileno con desecante",
+          "ventaja": "Protección humedad y plagas",
+          "desventaja": "Posible condensación interna",
+          "uso": "Recomendado para almacenamiento >3 meses"
+        },
+        {
+          "tipo": "Contenedores de madera con cierre hermético",
+          "ventaja": "Máxima protección",
+          "desventaja": "Costo alto",
+          "uso": "Exportación de grano premium"
+        }
+      ],
+      "ubicacion_almacen": [
+        "Piso elevado (30-50 cm) para ventilación inferior",
+        "Alejado de paredes (dejar 50 cm) para circulación aire",
+        "Techo ventilado para evitar condensación",
+        "Control de temperatura y HR"
+      ],
+      "control_plagas": [
+        "Inspección mensual de grano",
+        "Presencia de polilla del cacao indica infestación",
+        "Tratamiento: fumigación con CO₂ o fosfina (contratista especializado)",
+        "Preventivo: almacén hermético con trampas"
+      ]
+    },
+    "control_calidad": {
+      "titulo": "6.8 Control de Calidad - Evaluación de Grano",
+      "parametros_evaluacion": [
+        {
+          "parametro": "Humedad",
+          "optimo": "7-8%",
+          "desviacion": "<6% = demasiado seco; >9% = riesgo moho"
+        },
+        {
+          "parametro": "Color",
+          "optimo": "Marrón oscuro uniforme",
+          "defecto": "Grano pálido = subfermentación; negro = sobrermentación"
+        },
+        {
+          "parametro": "Tamaño",
+          "clasificacion": "Grano grande >2.5 cm de diámetro. Medio 2-2.5 cm. Pequeño <2 cm",
+          "preferencia": "Grano grande es premium, mejor precio"
+        },
+        {
+          "parametro": "Cortesía/Grietas",
+          "defecto": "Grano con grietas longitudinales",
+          "causa": "Secado demasiado rápido, HR baja durante secado",
+          "impacto": "Menor precio (grano cracked se va a molienda, no cacao fino)"
+        },
+        {
+          "parametro": "Defectos",
+          "tipos": [
+            "Grano plano/deforme (subdesarrollo en campo)",
+            "Grano violáceo (fermentación insuficiente)",
+            "Grano oscuro con grietas (sobrefermen)",
+            "Grano con moho (almacenamiento deficiente)"
+          ],
+          "limite_comercial": "Máximo 5-10% defectos para grano comercial; <1% para premium"
+        }
+      ],
+      "prueba_corte": {
+        "procedimiento": [
+          {
+            "paso": 1,
+            "detalles": "Seleccionar 20 granos al azar de muestra"
+          },
+          {
+            "paso": 2,
+            "detalles": "Cortar cada grano longitudinalmente"
+          },
+          {
+            "paso": 3,
+            "detalles": "Observar color interno: marrón oscuro uniforme = bueno; violáceo = fermentación insuficiente; negro = sobrefermen"
+          },
+          {
+            "paso": 4,
+            "detalles": "Contabilizar defectos: grano plano, violáceo, agrietado"
+          },
+          {
+            "paso": 5,
+            "detalles": "% defectos = número granos defectuosos / 20 × 100"
+          }
+        ]
+      },
+      "clasificacion_comercial": [
+        {
+          "grado": "Fino de Aroma (AAA)",
+          "caracteristicas": "Color uniforme marrón oscuro, <2% defectos, grano grande, sabor aromático",
+          "precio": "USD 3,500-4,000/ton",
+          "mercados": "Chocolaterías finas, Europa"
+        },
+        {
+          "grado": "Superior (AA)",
+          "caracteristicas": "Marrón oscuro, 2-5% defectos, grano medio a grande, sabor bueno",
+          "precio": "USD 3,000-3,500/ton",
+          "mercados": "Chocolaterías, confitería"
+        },
+        {
+          "grado": "Comercial (A)",
+          "caracteristicas": "Marrón oscuro, 5-10% defectos, grano medio, sabor ordinario",
+          "precio": "USD 2,500-3,000/ton",
+          "mercados": "Molinos, chocolate industrial"
+        },
+        {
+          "grado": "Corriente",
+          "caracteristicas": ">10% defectos, grano pequeño, sabor defectuoso",
+          "precio": "USD 2,000-2,500/ton",
+          "mercados": "Molinos industriales"
+        }
+      ]
+    },
+    "benchmarks_rendimiento": {
+      "titulo": "6.9 Benchmarks de Rendimiento Esperado",
+      "frutos_grano": {
+        "vainas": "100 vainas verdes maduras",
+        "grano_fresco": "500-600 granos fermentados + pulpa (60% HR)",
+        "grano_seco": "75-100 kg grano seco (7-8% HR)"
+      },
+      "produccion_anual": {
+        "arboles": "100 árboles adultos en producción",
+        "frutos": "1,500-2,000 vainas/año",
+        "grano_seco": "225-300 kg grano seco/año",
+        "rendimiento": "2.25-3 ton/ha/año (en condiciones favorables, bien manejados)"
+      },
+      "nota": "Rendimiento depende: variedad (Criollo: bajo, Forastero: alto), edad (máximo: 15-25 años), manejo (fertilización, plagas, cosecha oportuna)"
+    },
+    "preguntas_frecuentes_cosecha": {
+      "titulo": "6.10 Preguntas Frecuentes - Cosecha y Poscosecha",
+      "q1": {
+        "pregunta": "¿Cómo sé si grano está bien fermentado?",
+        "respuesta": "Al corte: color marrón oscuro penetra completamente (no violáceo en centro). Aroma: cacao fermentado agradable (no vinagre). Temperatura en montón: baja después de día 5"
+      },
+      "q2": {
+        "pregunta": "¿Qué pasa si bajo fermentación es insuficiente?",
+        "respuesta": "Grano violáceo, sabor amargo-ácido, astringencia. No es comercial para chocolate fino, va a molinos industriales a precio bajo. Alarga fermentación 1-2 días más"
+      },
+      "q3": {
+        "pregunta": "¿Es seguro comer grano fermentado crudo?",
+        "respuesta": "Sí. Grano fermentado es seguro (microorganismos patógenos mueren en fermentación). Pero amargo - requiere tueste para sabor agradable"
+      },
+      "q4": {
+        "pregunta": "¿Cuándo empiezo a secar? ¿Existe un 'punto' visible?",
+        "respuesta": "Después de 5-7 días de fermentación cuando temperatura desciende bajo 45°C y aroma cambió. No hay punto mágico, depende de condiciones. Monitorear aroma + temperatura"
+      },
+      "q5": {
+        "pregunta": "¿Si lluvia llega, ¿qué debo hacer?",
+        "respuesta": "En secado natural: cubrir inmediatamente con toldo. Riesgo: moho, sabor a humedad. Si grano mojado, secar 1-2 días adicionales a menor temperatura (40°C)"
+      },
+      "q6": {
+        "pregunta": "¿Cuál es el mayor riesgo de poscosecha?",
+        "respuesta": "Aflatoxinas (Aspergillus flavus). Moho que crece si HR >80% o grano mal secado. Produce toxina carcinogénica. Prevención: fermentación completa, secado rápido a 7-8%, almacén seco"
+      }
+    }
+  }
+}

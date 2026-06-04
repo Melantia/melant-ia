@@ -1,0 +1,211 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Arroz Agroecológico",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Costos transición, ingresos premium, integración peces, ROI largo plazo",
+  "contenido": {
+    "introduccion": {
+      "titulo": "7.1 Introducción Economía Agroecológica",
+      "texto": "Arroz agroecológico Year 1-2 COSTOSO (inversióncompost, biofertilizantes, labour). Años 3+ sistema autosuficiente = ALTAMENTE RENTABLE con certificación orgánica. Sinergia peces amplía rentabilidad 30-50% vs arroz solo."
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial Transición",
+      "escenario": "10 hectáreas transición agroecológica",
+      "componentes": [
+        {
+          "concepto": "Compost preparación",
+          "cantidad": "15 ton/hectárea",
+          "costo": "USD 50/ton compra",
+          "subtotal": "USD 7,500"
+        },
+        {
+          "concepto": "Azolla inoculación",
+          "cantidad": "10 hectáreas",
+          "costo": "USD 5-10/hectárea",
+          "subtotal": "USD 50-100"
+        },
+        {
+          "concepto": "Biofertilizantes iniciadores",
+          "cantidad": "Bacillus, Azospirillum",
+          "subtotal": "USD 150-200"
+        },
+        {
+          "concepto": "Abono verde semilla",
+          "cantidad": "100-150 kg",
+          "subtotal": "USD 100-150"
+        },
+        {
+          "concepto": "Peces cría inicial",
+          "cantidad": "500-1,000 peces/hectárea × 10 ha",
+          "costo": "USD 0.50-1/pez",
+          "subtotal": "USD 2,500-5,000"
+        },
+        {
+          "concepto": "Labor preparación + capacitación",
+          "cantidad": "30 jornales + 10 horas consultoría",
+          "subtotal": "USD 450-650"
+        }
+      ],
+      "total_ano_1": "USD 10,750-13,600"
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos",
+      "desglose_ano_1_2": [
+        {
+          "rubro": "Semilla",
+          "costo": "USD 0 (propia) o USD 20-30 si compra"
+        },
+        {
+          "rubro": "Compost mantenimiento",
+          "costo": "USD 50-100/hectárea"
+        },
+        {
+          "rubro": "Biofertilizantes",
+          "costo": "USD 20-30/hectárea"
+        },
+        {
+          "rubro": "Abono verde mantenimiento",
+          "costo": "USD 15-20/hectárea"
+        },
+        {
+          "rubro": "Azolla reinoculación",
+          "costo": "USD 0 (autoperpetua)"
+        },
+        {
+          "rubro": "Labor",
+          "costo": "USD 80-100/hectárea"
+        }
+      ],
+      "total_ano_1_2": "USD 165-280/hectárea",
+      "total_ano_3": "USD 100-150/hectárea (sistema maduro)"
+    },
+    "ingresos_escenarios": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "escenario_1": {
+        "nombre": "Sin certificación (mercado local convencional)",
+        "rendimiento": "3.5 ton/hectárea",
+        "molinado": "2.45 ton blanco",
+        "precio": "USD 200/tonelada",
+        "ingreso_arroz": "USD 490/hectárea"
+      },
+      "escenario_2": {
+        "nombre": "Transición año 2 (10-20% premium local)",
+        "rendimiento": "3.5 ton/hectárea",
+        "molinado": "2.45 ton blanco",
+        "precio": "USD 220-240/tonelada",
+        "ingreso": "USD 539-588/hectárea"
+      },
+      "escenario_3": {
+        "nombre": "Orgánico certificado año 3+ (+50-75% premium)",
+        "rendimiento": "3.5 ton/hectárea",
+        "molinado": "2.45 ton blanco",
+        "precio": "USD 300-350/tonelada (orgánico mercado)",
+        "ingreso_arroz": "USD 735-857/hectárea"
+      },
+      "ingreso_peces": {
+        "rendimiento": "500-1,000 kg/hectárea peces",
+        "precio": "USD 3-4/kg peces vivos",
+        "ingreso_peces": "USD 1,500-4,000/hectárea (sorpresa bonus!)"
+      }
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "ano_1": {
+        "supuestos": [
+          "Inversión: USD 1,360/hectárea",
+          "Costos operativos: USD 180/hectárea",
+          "Rendimiento: 3.0 ton/hectárea (ajuste transición)",
+          "Precio: USD 200/tonelada"
+        ],
+        "ingreso_arroz": "2.1 ton × USD 200 = USD 420",
+        "ingreso_peces": "USD 500-1,500 (variable)",
+        "total_ingreso": "USD 920-2,420",
+        "costos_totales": "USD 180 + USD 272 amortización = USD 452",
+        "utilidad": "USD 468-1,968",
+        "roi": "34-144% (peces multiplica)"
+      },
+      "ano_3": {
+        "supuestos": [
+          "Inversión amortizada",
+          "Costos operativos: USD 125/hectárea (sistema maduro)",
+          "Rendimiento: 3.5 ton/hectárea (mejora 30%)",
+          "Precio: USD 300/tonelada (orgánico certificado)"
+        ],
+        "ingreso_arroz": "2.45 ton × USD 300 = USD 735",
+        "ingreso_peces": "USD 1,500-2,000 (establecido)",
+        "total_ingreso": "USD 2,235-2,735",
+        "costos": "USD 125",
+        "utilidad": "USD 2,110-2,610",
+        "roi": "154-191% (excelente)"
+      }
+    },
+    "comparativa_final": {
+      "titulo": "7.6 Comparativa Arroz Convencional vs Agroecológico",
+      "tabla": [
+        {
+          "item": "Inversión inicial",
+          "convencional": "USD 230/hectárea",
+          "agroecologico": "USD 1,360/hectárea"
+        },
+        {
+          "item": "Costo operativo/año (año 3+)",
+          "convencional": "USD 186/hectárea",
+          "agroecologico": "USD 125/hectárea"
+        },
+        {
+          "item": "Rendimiento grano",
+          "convencional": "6.5 ton cáscara = 4.55 ton blanco",
+          "agroecologico": "3.5 ton cáscara = 2.45 ton blanco"
+        },
+        {
+          "item": "Precio grano",
+          "convencional": "USD 200/tonelada",
+          "agroecologico": "USD 300/tonelada (orgánico)"
+        },
+        {
+          "item": "Ingreso grano año 3+",
+          "convencional": "USD 910/hectárea",
+          "agroecologico": "USD 735/hectárea"
+        },
+        {
+          "item": "Ingreso peces/subproductos",
+          "convencional": "USD 0",
+          "agroecologico": "USD 1,500-2,000/hectárea"
+        },
+        {
+          "item": "Ingreso TOTAL año 3+",
+          "convencional": "USD 910/hectárea",
+          "agroecologico": "USD 2,235-2,735/hectárea"
+        },
+        {
+          "item": "ROI año 3+",
+          "convencional": "49%",
+          "agroecologico": "154-191% (con peces)"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.7 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Arroz agroecológico es más rentable?",
+        "respuesta": "SÍ si: (1) certificación orgánica alcanzada (año 3+), (2) peces integrados (bonus 1,500-2,000/ha). Sin ambos = riesgo no viable"
+      },
+      "q2": {
+        "pregunta": "¿Inversión inicial USD 1,360 es recuperable?",
+        "respuesta": "SÍ en 2-3 años con peces. Payback = (USD 1,360 inversión) ÷ (USD 600-800 utilidad año = USD 1,700-2,200 = 1.6-2 años"
+      },
+      "q3": {
+        "pregunta": "¿Peces garantizados vender?",
+        "respuesta": "SÍ mercado local seguro (consumo proteína). Precio USD 3-4/kg = competitivo pollo USD 2-3/kg. Demanda > oferta"
+      },
+      "q4": {
+        "pregunta": "¿Rendimiento arroz 3.5 ton es suficiente?",
+        "respuesta": "Si precio + peces: SÍ. Grano solo: marginal vs convencional. Estrategia: visión total sistema (no solo grano)"
+      },
+      "q5": {
+        "pregunta": "¿Certificación orgánica cuesta cuánto?",
+        "respuesta": "USD 300-500/año organismo certificador. Inversión vale: +50-75% precio (USD 100-150 extra por tonelada = USD 245-367 / ha ingreso extra)"
+      }
+    ]
+  }
+}

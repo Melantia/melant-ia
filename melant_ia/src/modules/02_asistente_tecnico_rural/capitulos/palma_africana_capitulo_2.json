@@ -1,0 +1,272 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento del Cultivo de Palma Africana",
+  "cultivo": "Palma Africana",
+  "seccion": "Selección terreno, preparación, germoplasma, plantación, cronograma",
+  "contenido": {
+    "introduccion_establecimiento": {
+      "titulo": "2.1 Introducción al Establecimiento",
+      "importancia": "Años 0-3 son CRÍTICOS. Decisiones establecimiento determinan rentabilidad 25+ años. Palma requiere inversión MASIVA año 0 (vs café/cacao menor inversión)",
+      "factores_criticos": [
+        "Selección terreno (altitud < 500m, lluvia 2,000-5,000 mm, drenaje excelente)",
+        "Preparación suelo (profundidad > 1.5 m, pH 5.5-6.5)",
+        "Germoplasma Tenera certificado (productividad crítica)",
+        "Densidad plantación (130-150 plantas/ha estándar)",
+        "Infraestructura (caminos, estación beneficio)",
+        "Financiamiento (inversión USD 3,000-5,000/ha año 0)"
+      ],
+      "duracion_establecimiento": "12-24 meses hasta campo abierto viable"
+    },
+    "seleccion_terreno": {
+      "titulo": "2.2 Selección del Terreno",
+      "altitud": {
+        "optima": "0-300 metros",
+        "aceptable": "0-500 metros",
+        "limitante": "500-800 metros = posible pero riesgo enfermedad (Fusarium)",
+        "no_recomendado": "> 800 metros (temperatura baja, plagas/enfermedades fungales)"
+      },
+      "lluvia": {
+        "optima": "2,500-4,000 mm/año",
+        "minimo": "2,000 mm/año (requiere riego si menos)",
+        "maximo": "> 5,000 mm/año = plagas altas, encarcamiento",
+        "distribucion": "Bien distribuida (evitar sequía 3+ meses)"
+      },
+      "temperatura": {
+        "promedio": "24-32°C (tropical)",
+        "minimo": "> 20°C (frio extremo = estrés)"
+      },
+      "drenaje": {
+        "test_24h": "Excavación 30 cm agua, descenso > 10 cm/24h = EXCELENTE",
+        "interpretacion": [
+          "> 15 cm/24h = MUY BUENO",
+          "10-15 cm/24h = BUENO (aceptable)",
+          "5-10 cm/24h = MODERADO (vigilancia)",
+          "< 5 cm/24h = POBRE (NO PLANTABLE, requiere drenaje artificial costoso)"
+        ]
+      },
+      "profundidad_util": {
+        "minimo": "1.5 metros (raíces secundarias)",
+        "optimo": "2.0+ metros",
+        "test": "Excavación 2 m, buscar capa impermeable"
+      },
+      "pendiente": {
+        "optima": "0-5% (plano, mecanización)",
+        "aceptable": "5-15% (moderada)",
+        "problematica": "> 30% (erosión severa, cosecha difícil)"
+      },
+      "tipo_suelo": {
+        "optimo": "Franco profundo, volcánico",
+        "aceptable": "Franco-arenoso",
+        "evitar": "Arcilloso puro (< 30% arena), turberas"
+      }
+    },
+    "analisis_suelo_preparacion": {
+      "titulo": "2.3 Análisis de Suelo y Preparación Mecanizada",
+      "analisis_inicial": {
+        "parametros_criticos": [
+          "pH (esperar 5.5-6.5)",
+          "Materia orgánica (> 3%)",
+          "N total (200-300 mg/kg)",
+          "P disponible (10-20 mg/kg)",
+          "K disponible (80-120 mg/kg)",
+          "Micronutrientes (B, Zn, Cu, Mn, Fe)",
+          "Textura (granulometría)"
+        ],
+        "muestreo": "500g mezcla 15-20 puntos terreno"
+      },
+      "preparacion_mecanica_pesada": [
+        "Despeje: Remover árboles viejos, residuos (tractor pesado)",
+        "Arado profundo: 40-50 cm (vs café/cacao 25-30 cm)",
+        "Subsolado: Romper capas compactadas 60-80 cm profundidad (si necesario)",
+        "Rastrillado: Uniformizar, crear surcos para plantación",
+        "Tiempo: 2-3 meses entre operaciones (asentamiento suelo)"
+      ],
+      "encalado": {
+        "si_pH_menor_5_5": "Aplicar 5-10 toneladas CaCO₃/ha (vs café 2-4 ton)",
+        "razon": "Palma es muy sensible a pH bajo (deficiencia P severa)"
+      ],
+      "incorporacion_materia_organica": [
+        "Si MO < 3%: Compost 20-30 toneladas/ha",
+        "Incorporación: Arado profundo mezcla suelo"
+      ]
+    },
+    "germoplasma_material_plantacion": {
+      "titulo": "2.4 Germoplasma y Material de Plantación",
+      "tipo_material": [
+        {
+          "material": "Semilla sexual (source material)",
+          "origen": "Hibrido Tenera (Dura × Pisifera)",
+          "caracteristicas": "100% Tenera puro, variabilidad genética mínima",
+          "costo": "USD 2-5/semilla",
+          "productor": "Palmas del Ecuador (estatal), empresas privadas (INIAP variedades)"
+        },
+        {
+          "material": "Plántula vivero 12-18 meses",
+          "altura": "30-60 cm, 5-8 hojas",
+          "transporte": "Bolsa nusery, mojado constante",
+          "ventaja": "Raíces establecidas en suelo vivero",
+          "costo": "USD 1-3/planta"
+        }
+      ],
+      "certificacion_obligatoria": [
+        "Pureza Tenera (no mezcla Dura)",
+        "Sanidad (libre virus Fusarium, Phytophthora)",
+        "Origen trazable (fuente genética conocida)"
+      ],
+      "recomendacion": "Semilla certificada de Palmas del Ecuador o empresa registrada MAGAP"
+    },
+    "densidad_espaciamiento": {
+      "titulo": "2.5 Densidad de Plantación y Espaciamiento",
+      "densidad_standard": {
+        "plantas_hectarea": "130-150 plantas/ha (distancia 8 × 8.5 m típica)",
+        "configuracion": "Distancia 8 m entre líneas, 8.5 m entre plantas",
+        "resultado": "~147 plantas/ha"
+      },
+      "variaciones": [
+        {
+          "densidad": "100-120 plantas/ha",
+          "espaciamiento": "9 × 10 m",
+          "ventaja": "Mecanización más fácil, cosecha más accesible",
+          "desventaja": "Rendimiento -10-15% (menos plantas)"
+        },
+        {
+          "densidad": "150-180 plantas/ha",
+          "espaciamiento": "7 × 7.5 m",
+          "ventaja": "Mayor rendimiento (+10-15%)",
+          "desventaja": "Competencia, cosecha dificultosa"
+        }
+      ],
+      "recomendacion": "140 plantas/ha (8 × 8.5 m) es standard Ecuador"
+    },
+    "plantacion_tecnica": {
+      "titulo": "2.6 Técnica de Plantación",
+      "preparacion_hoyo": [
+        "Tamaño: 60 × 60 × 60 cm (vs café 40 × 40 × 40 cm, palma es mayor)",
+        "Distancia: 8 m × 8.5 m exacta (uso GPS o trazado cuerda)",
+        "Timing: Hoyo 2-3 semanas pre-plantación (asentamiento)"
+      ],
+      "rellenado_hoyo": [
+        "Mezcla: Suelo superficial + 10 kg compost + 100 g NPK fertilizante",
+        "Proporción: 80% suelo + 20% compost",
+        "Asentamiento: Riego para compactar, esperar 1-2 semanas"
+      ],
+      "plantacion_dia": [
+        "Extraer planta bolsa vivero (mojada, raíces húmedas)",
+        "Posicionar en hoyo: Base raíces nivel suelo (NO profundo NI superficial)",
+        "Apisonar suelo: Firma alrededor, sin compactación excesiva",
+        "Riego inmediato: 20-30 litros/planta (establecimiento raíces)",
+        "Mulch: 10-15 cm alrededor (caña, residuos) conserva humedad"
+      ],
+      "alineacion": "Plantación en triángulo equilátero o cuadrado regular (facilita mecanización)"
+    },
+    "cronograma_establecimiento": {
+      "titulo": "2.7 Cronograma de Establecimiento (Mes 0 a Mes 24)",
+      "mes_0_preparacion": [
+        "Análisis suelo laboratorio",
+        "Designación terreno, trazado GPS",
+        "Cotización vivero semilla/plántulas",
+        "Preparación maquinaria (tractor, arados)"
+      ],
+      "mes_1_2_preparacion_pesada": [
+        "Despeje árboles viejos",
+        "Arado profundo 40-50 cm",
+        "Subsolado si necesario",
+        "Encalado si pH bajo",
+        "Rastrillado final"
+      ],
+      "mes_3_trazado": [
+        "Trazado líneas plantación (GPS o cuerda)",
+        "Preparación 100-150 hoyo estándar (prueba)"
+      ],
+      "mes_4_6_preparacion_hoyo": [
+        "Excavación masiva 150-180 hoyos/ha (equipo maquinaria/labor)",
+        "Rellenado mezcla suelo + compost",
+        "Incorporación fertilizante NPK",
+        "Riego asentamiento"
+      },
+      "mes_7_8_vivero_final": [
+        "Adquisición semilla/plántulas vivero (confirmar disponibilidad)",
+        "Transporte plántulas bajo sombra, riego diario"
+      },
+      "mes_9_plantacion_masiva": [
+        "Plantación: 10-20 plantas/día/trabajador (labor intensiva)",
+        "Duración: 2-4 semanas plantación completa hectárea",
+        "Riego post-plantación: Diario primeros 15 días (20-30 L/planta)",
+        "Mulch aplicación: Alrededor cada planta"
+      ],
+      "mes_10_12_establecimiento": [
+        "Riego sostenido: 2-3 veces/semana si lluvia baja",
+        "Deshierbe: Mensual alrededor plantas",
+        "Monitoreo plagas",
+        "Fertilización ligera: 50 g NPK/planta mes 12"
+      ],
+      "mes_13_24_crecimiento_vegetativo": [
+        "Riego según lluvia (mantener 70-80% capacidad campo)",
+        "Deshierbe continuo mensual",
+        "Fertilización progresiva: 100 g/mes mes 13-18, 150 g/mes 19-24",
+        "Primera floración esperada mes 18-24 (normal)",
+        "Vigilancia: Enfermedades (Fusarium) especialmente"
+      ]
+    },
+    "errores_comunes_establecimiento": {
+      "titulo": "2.8 Errores Comunes que Arruinan Plantación",
+      "error_1_drenaje_pobre": {
+        "problema": "Plantación terreno drenaje < 5 cm/24h sin test previo",
+        "consecuencia": "Raíces anegadas año 1-2, Phytophthora, mortalidad 50-80%",
+        "remedio": "Drenaje artificial tubería costoso (USD 1,000-2,000/ha)"
+      },
+      "error_2_ph_bajo": {
+        "problema": "pH < 5.0 sin encalado previo",
+        "consecuencia": "Deficiencia P severa, crecimiento retardado, plagas oportunistas",
+        "remedio": "Encalado emergencia año 1 (menos efectivo pero posible)"
+      },
+      "error_3_germopl_mezcla": {
+        "problema": "Semilla 'no certificada' mezcla Dura/Tenera",
+        "consecuencia": "30-40% plantas producen bajo (Dura), heterogeneidad rendimiento",
+        "remedio": "Remplazo plantas Dura año 4-5 (costoso)"
+      },
+      "error_4_profundidad_hoyo": {
+        "problema": "Hoyos poco profundos (30-40 cm vs 60 cm)",
+        "consecuencia": "Raíces superficiales, sequía estrés, volcamiento viento",
+        "remedio": "Ninguno (es error permanente)"
+      },
+      "error_5_densidad_alta": {
+        "problema": "Plantación 200+ plantas/ha (vs 140 recomendado)",
+        "consecuencia": "Competencia nutrientes, humedad, enfermedad rápida spread",
+        "remedio": "Raleado year 5-6 (labor costosa)"
+      },
+      "error_6_falta_mulch": {
+        "problema": "Sin cobertura alrededor planta año 1-2",
+        "consecuencia": "Erosión, pérdida humedad, malezas dominan",
+        "remedio": "Aplicación emergencia año 1 (menos efectivo)"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.9 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cuánto cuesta establecer 1 hectárea palma?",
+        "respuesta": "USD 3,500-5,500/ha. Desglose: Preparación suelo (USD 800-1,200), Material plántulas (USD 400-600), Labor plantación (USD 800-1,200), Fertilización/manejo año 1 (USD 1,000-1,500), Infraestructura (USD 500-1,000)"
+      },
+      "q2": {
+        "pregunta": "¿Es posible establecer palma sin análisis suelo?",
+        "respuesta": "Riesgoso. Palma es sensible pH bajo. Sin análisis, riesgo pH < 5.0 = deficiencia P severa. Análisis cuesta USD 30-50, ahorra USD 500+ encalado innecesario"
+      },
+      "q3": {
+        "pregunta": "¿Palma se puede mezclar con otros cultivos?",
+        "respuesta": "Difícil. Palma es monocultivo típicamente (no tolera sombra). Algunas fincas intercalan cacao/plátano año 1-3 (antes palma adulta), pero riesgo plagas compartidas"
+      },
+      "q4": {
+        "pregunta": "¿Cuándo plantas palma en año?",
+        "respuesta": "Preferible: Inicio época lluvia (octubre-noviembre Ecuador). Así planta enraíza bien lluvia 6+ meses. Evitar plantación sequía (julio-septiembre)"
+      },
+      "q5": {
+        "pregunta": "¿Se puede mecanizar establecimiento?",
+        "respuesta": "Parcialmente. Arados/trapiches mecanizados (tractores), pero plantación = MANUAL (labor intensiva 500-800 jornales/ha)"
+      },
+      "q6": {
+        "pregunta": "¿Germopl Tenera cuesta mucho más?",
+        "respuesta": "Sí. Semilla Tenera USD 3-5 vs Dura USD 1-2. PERO rendimiento diferencia justifica (Tenera +30-40% aceite). Obligatorio Tenera rentabilidad"
+      }
+    ]
+  }
+}

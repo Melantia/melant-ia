@@ -2236,15 +2236,123 @@ class GestorEvidenciaFotos {
   }
 
   /** Guarda una ficha comercial como HTML liviano para renderizado instantáneo. */
+  _clasificarAnimalParaUGM(datosAnimal = {}) {
+    const etapa = String(datosAnimal?.etapa || datosAnimal?.categoria || '')
+      .trim()
+      .toLowerCase();
+    const sexo = String(datosAnimal?.sexo || '')
+      .trim()
+      .toLowerCase();
+    const especie = String(datosAnimal?.especie || '')
+      .trim()
+      .toLowerCase();
+
+    const esBovino =
+      !especie ||
+      especie.includes('bov') ||
+      especie.includes('vaca') ||
+      especie.includes('toro') ||
+      especie.includes('terner');
+
+    if (!esBovino) {
+      return { vacas: 0, toros: 0, terneros: 0 };
+    }
+
+    if (etapa.includes('terner') || etapa.includes('cria')) {
+      return { vacas: 0, toros: 0, terneros: 1 };
+    }
+    if (sexo === 'm' || sexo === 'macho' || etapa.includes('toro')) {
+      return { vacas: 0, toros: 1, terneros: 0 };
+    }
+    return { vacas: 1, toros: 0, terneros: 0 };
+  }
+
+  async _actualizarUGMInventarioAnimal(datosAnimal = {}) {
+    const key = 'melantia_inventario_pecuario';
+    const ugmKey = 'melantia_ugm_resumen';
+
+    let inventario = [];
+    try {
+      inventario = JSON.parse(localStorage.getItem(key) || '[]');
+    } catch {
+      inventario = [];
+    }
+
+    const id =
+      datosAnimal?.id ||
+      datosAnimal?.id_animal ||
+      `animal_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+    const normalizado = { ...datosAnimal, id };
+    const idx = inventario.findIndex((item) => String(item?.id) === String(id));
+    if (idx >= 0) inventario[idx] = { ...inventario[idx], ...normalizado };
+    else inventario.push(normalizado);
+
+    localStorage.setItem(key, JSON.stringify(inventario));
+
+    const conteo = inventario.reduce(
+      (acc, item) => {
+        const parcial = this._clasificarAnimalParaUGM(item);
+        acc.vacas += parcial.vacas;
+        acc.toros += parcial.toros;
+        acc.terneros += parcial.terneros;
+        return acc;
+      },
+      { vacas: 0, toros: 0, terneros: 0 }
+    );
+
+    const ugm = conteo.vacas * 1.0 + conteo.toros * 1.2 + conteo.terneros * 0.5;
+    const resumen = {
+      ugm,
+      animales: conteo,
+      total_animales: inventario.length,
+      fecha: new Date().toISOString(),
+      origen: 'inventario_pecuario',
+    };
+    localStorage.setItem(ugmKey, JSON.stringify(resumen));
+
+    if (window.supabase?.from) {
+      try {
+        await window.supabase.from('inventario_pecuario_ugm').upsert(
+          {
+            id: 'global',
+            vacas: conteo.vacas,
+            toros: conteo.toros,
+            terneros: conteo.terneros,
+            ugm_total: ugm,
+            total_animales: inventario.length,
+            updated_at: resumen.fecha,
+          },
+          { onConflict: 'id' }
+        );
+      } catch {
+        // Si la tabla no existe, mantenemos persistencia local para no romper flujo offline.
+      }
+    }
+
+    try {
+      window.dispatchEvent(
+        new CustomEvent('melantia:inventario:ugm_actualizada', {
+          detail: resumen,
+        })
+      );
+    } catch {
+      // Sin bloqueo.
+    }
+
+    return resumen;
+  }
+
   async guardarFichaLigera(datosAnimal) {
     const ficha = await this.generarFichaVentaDigital(datosAnimal, {
       persistirLigera: false,
     });
     const registroLigero = await this._persistirFichaLigera(datosAnimal, ficha);
+    const ugmResumen = await this._actualizarUGMInventarioAnimal(datosAnimal);
     return {
       success: true,
       id: registroLigero.id,
       ...registroLigero,
+      ugm: ugmResumen,
       mensaje: 'Ficha ligera guardada para abrir o exportar sin imagen pesada.',
     };
   }

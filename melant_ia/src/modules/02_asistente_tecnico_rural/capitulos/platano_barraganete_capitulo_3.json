@@ -1,0 +1,372 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización del Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Requerimientos nutricionales, diagnóstico y programas de fertilización",
+  "contenido": {
+    "requerimientos_nutricionales": {
+      "titulo": "3.1 Requerimientos Nutricionales del Plátano Barraganete",
+      "exportacion_nutrientes": {
+        "resumen": "Plátano es cultivo muy demandante de nutrientes. Por cada tonelada de fruto cosechado, extrae aproximadamente:",
+        "valores": [
+          "N: 3-4 kg/ton (fruto seco)",
+          "P: 0.3-0.5 kg/ton",
+          "K: 5-8 kg/ton (potasio es más importante que nitrógeno)",
+          "Ca: 1-2 kg/ton",
+          "Mg: 0.5-1 kg/ton",
+          "S: 0.2-0.4 kg/ton",
+          "Micronutrientes: B 10-30 g, Zn 30-50 g, Cu 10-20 g, Mn 50-100 g, Fe 100-200 g"
+        ],
+        "produccion_ejemplo": "Si rendimiento es 50 ton/ha/año (fresco) ≈ 10 ton/ha seco, extracción total es: N 30-40 kg, K 50-80 kg, P 3-5 kg"
+      },
+      "macronutrientes_primarios": {
+        "titulo": "Macronutrientes Primarios (N, P, K)",
+        "nitrogeno": {
+          "funcion": "Crecimiento vegetativo (hojas, pseudo-tallo), fotosíntesis",
+          "rango_optimo_hoja": "2.0-2.5% nitrógeno (base seca foliar)",
+          "rango_optimo_suelo": "100-150 ppm N disponible",
+          "sintomas_deficiencia": [
+            "Clorosis foliar (amarillamiento de hojas viejas)",
+            "Reducción tamaño hoja",
+            "Pseudo-tallo delgado, débil",
+            "Racimo pequeño (peso 30-40 kg en lugar 50-60 kg)"
+          ],
+          "sintomas_exceso": [
+            "Crecimiento vegetativo exuberante",
+            "Retraso floración (2-3 meses)",
+            "Mayor riesgo plagas/enfermedades",
+            "Caída de fruto por peso, debilidad pseudo-tallo"
+          ]
+        },
+        "fosforo": {
+          "funcion": "Desarrollo radical, energía (ATP), floración-fructificación",
+          "rango_optimo_hoja": "0.15-0.25% fósforo",
+          "rango_optimo_suelo": "15-30 ppm P disponible (Bray II)",
+          "sintomas_deficiencia": [
+            "Crecimiento muy lento, pseudo-tallo fino",
+            "Hojas azuladas-púrpuras (antocianinas)",
+            "Floración tardía o ausente",
+            "Raíces débiles, susceptibilidad a plagas"
+          ],
+          "sintomas_exceso": "Raramente tóxico, pero puede fijar micronutrientes"
+        },
+        "potasio": {
+          "funcion": "Regulación hídrica, fuerza pseudo-tallo, calidad fruto (sólidos totales)",
+          "rango_optimo_hoja": "2.5-3.5% potasio",
+          "rango_optimo_suelo": "150-200 ppm K intercambiable",
+          "sintomas_deficiencia": [
+            "Pseudo-tallo débil, propensión a volcamiento",
+            "Manchas marrones en hojas (primero viejas)",
+            "Fruto pequeño, bajo brix (menor contenido azúcar)",
+            "Mayor caída de fruto post-cosecha"
+          ],
+          "sintomas_exceso": "Raramente problema si Ca/Mg balanceados",
+          "importancia_barraganete": "Crítica: mejor calidad fruto = mejor precio export"
+        }
+      },
+      "macronutrientes_secundarios": {
+        "titulo": "Macronutrientes Secundarios (Ca, Mg, S)",
+        "calcio": {
+          "funcion": "Estructura celular, resistencia enfermedad",
+          "rango_optimo": "0.6-1.0% Ca (hoja)",
+          "relacion_ideal": "Ca:Mg = 3-4:1",
+          "sintomas_deficiencia": "Mala estructuración fruto, susceptibilidad a podredumbres, colapso celular"
+        },
+        "magnesio": {
+          "funcion": "Centro molécula clorofila, fotosíntesis",
+          "rango_optimo": "0.25-0.35% Mg (hoja)",
+          "sintomas_deficiencia": [
+            "Clorosis internerval severa (verde solo nervios)",
+            "Reducción fotosíntesis 30-50%",
+            "Caída de fruto incrementada"
+          ]
+        },
+        "azufre": {
+          "funcion": "Aminoácidos (metionina, cisteína), proteínas",
+          "rango_optimo": "0.15-0.25% S (hoja)",
+          "sintomas_deficiencia": "Clorosis foliar juvenil, crecimiento débil"
+        }
+      },
+      "micronutrientes": {
+        "titulo": "Micronutrientes (B, Zn, Cu, Mn, Fe)",
+        "boro": {
+          "funcion": "Floración, translocación carbohidratos, mecanismo células",
+          "rango_optimo": "20-50 ppm B (suelo)",
+          "sintomas_deficiencia": [
+            "Flores esteriles (ausencia racimo)",
+            "Deformación fruto ('distorsión de fruto')",
+            "Apical hook deformado"
+          ],
+          "sintomas_exceso": "Necrosis foliar marginal, toxicidad en B > 100 ppm"
+        },
+        "zinc": {
+          "funcion": "Enzimas, síntesis de proteínas, hormonas de crecimiento",
+          "rango_optimo": "2-5 ppm Zn (suelo)",
+          "sintomas_deficiencia": [
+            "Manchas bronceadas en hoja joven",
+            "Reducción tamaño lámina foliar",
+            "Pseudo-tallo muy delgado"
+          ]
+        },
+        "cobre": {
+          "funcion": "Fotosíntesis, resistencia enfermedad (fúngica)",
+          "rango_optimo": "1-3 ppm Cu (suelo)",
+          "sintomas_deficiencia": "Enrollamiento foliar, decoloración verde azulada"
+        },
+        "manganeso": {
+          "funcion": "Fotosíntesis, metabolismo N, enzimas",
+          "rango_optimo": "10-50 ppm Mn (suelo)",
+          "sintomas_deficiencia": "Clorosis internerval, mala calidad fruto"
+        },
+        "hierro": {
+          "funcion": "Fotosíntesis, transporte electrones, síntesis clorofila",
+          "rango_optimo": "5-15 ppm Fe (suelo)",
+          "sintomas_deficiencia": "Clorosis internerval severa (hojas jóvenes), pero disponible si pH óptimo"
+        }
+      }
+    },
+    "diagnostico_nutricional": {
+      "titulo": "3.2 Diagnóstico del Estado Nutricional",
+      "analisis_foliar": {
+        "procedimiento": [
+          "Tomar muestra: tercera hoja desde ápice (hoja recientemente madura)",
+          "Cantidad: 20-30 hojas por parcela/zona homogénea",
+          "Folíolo central sin vaina",
+          "Tiempo: 150-180 días post-plantación (madurez nutricional stable)"
+        ],
+        "rango_interpretacion": {
+          "tabla": [
+            { "nutriente": "N", "deficiente": "< 1.8%", "bajo": "1.8-2.0%", "optimo": "2.0-2.5%", "alto": "> 2.5%" },
+            { "nutriente": "P", "deficiente": "< 0.12%", "bajo": "0.12-0.15%", "optimo": "0.15-0.25%", "alto": "> 0.25%" },
+            { "nutriente": "K", "deficiente": "< 2.0%", "bajo": "2.0-2.5%", "optimo": "2.5-3.5%", "alto": "> 3.5%" },
+            { "nutriente": "Ca", "deficiente": "< 0.4%", "bajo": "0.4-0.6%", "optimo": "0.6-1.0%", "alto": "> 1.0%" },
+            { "nutriente": "Mg", "deficiente": "< 0.15%", "bajo": "0.15-0.25%", "optimo": "0.25-0.35%", "alto": "> 0.35%" }
+          ]
+        }
+      },
+      "observacion_visual": {
+        "procedure": "Inspeccionar síntomas visuales en planta y compararlos con patrones conocidos",
+        "clorosis_diagnostico": [
+          "Si clorosis VIEJAS → N deficiente",
+          "Si clorosis JOVENES con nervios verdes → Mg o Fe deficiente",
+          "Si pseudo-tallo débil + manchas marrones → K deficiente"
+        ]
+      },
+      "test_rapido_suelo": {
+        "metodo": "Análisis de suelo cada 12-18 meses",
+        "profundidad": "0-20 cm (zona radical mayormente)",
+        "interpretacion": "Comparar con rangos óptimos (sección 3.1)"
+      }
+    },
+    "programa_fertilizacion": {
+      "titulo": "3.3 Programa de Fertilización Integrada",
+      "etapas": [
+        {
+          "etapa": "Establecimiento (Meses 1-3)",
+          "edad_planta": "Crecimiento juvenil",
+          "objetivo": "Enraizamiento, crecimiento vegetativo inicial",
+          "dosis_mensual": [
+            "N: 20-30 kg/ha/mes",
+            "P: 5-10 kg/ha/mes",
+            "K: 30-50 kg/ha/mes",
+            "Frecuencia: 2 aplicaciones/mes (cada 15 días)"
+          ],
+          "total_etapa": "N 60-90, P 15-30, K 90-150 kg/ha"
+        },
+        {
+          "etapa": "Crecimiento Vegetativo (Meses 4-6)",
+          "edad_planta": "Expansión rápida, pseudo-tallo 3-5 metros",
+          "objetivo": "Maximizar biomasa, área foliar",
+          "dosis_mensual": [
+            "N: 30-40 kg/ha/mes",
+            "P: 5-8 kg/ha/mes",
+            "K: 50-70 kg/ha/mes",
+            "Frecuencia: 2 aplicaciones/mes"
+          ],
+          "total_etapa": "N 90-120, P 15-24, K 150-210 kg/ha"
+        },
+        {
+          "etapa": "Floración-Fructificación (Meses 7-9)",
+          "edad_planta": "Racimo en formación, llenado de fruto",
+          "objetivo": "Soporte reproducción, calidad fruto",
+          "dosis_mensual": [
+            "N: 20-30 kg/ha/mes (reducir para no retrasar madurez)",
+            "P: 8-12 kg/ha/mes (incrementar para floración)",
+            "K: 60-80 kg/ha/mes (máximo: calidad fruto)",
+            "Frecuencia: 2-3 aplicaciones/mes"
+          ],
+          "total_etapa": "N 60-90, P 24-36, K 180-240 kg/ha"
+        },
+        {
+          "etapa": "Maduración-Cosecha (Meses 10+)",
+          "edad_planta": "Fruto en maduración final",
+          "objetivo": "Completar llenado, preparar cosecha",
+          "dosis": "50% de dosis anteriores o suspender si lluvia abundante"
+        }
+      ],
+      "programa_completo_anual": {
+        "resumen": "Totales para ciclo 10 meses (350-400 ton/ha producción fresco esperada):",
+        "nitrogeno": "210-330 kg N/ha/ciclo (≈ 25-33 kg/ton fruto)",
+        "fosforo": "54-92 kg P₂O₅/ha/ciclo",
+        "potasio": "420-600 kg K₂O/ha/ciclo (crítico, 52-60 kg/ton fruto)",
+        "micronutrientes": "B 2-3 kg, Zn 5-10 kg, Cu 2-3 kg, Mn 5-10 kg/ha/ciclo"
+      }
+    },
+    "fuentes_fertilizantes": {
+      "titulo": "3.4 Fuentes de Fertilizantes Recomendadas",
+      "nitrogenadas": [
+        {
+          "fuente": "Urea (46% N)",
+          "dosis_ha": "Según programa (230-720 kg/ha/año)",
+          "costo": "USD 300-400/ton puesto finca",
+          "ventaja": "Soluble, disponibilidad inmediata",
+          "desventaja": "Lixiviación en suelos arenosos"
+        },
+        {
+          "fuente": "Nitrato de amonio (33% N)",
+          "dosis": "1.5× dosis urea",
+          "costo": "USD 350-450/ton",
+          "ventaja": "Menos lixiviación que urea",
+          "desventaja": "Más costoso"
+        },
+        {
+          "fuente": "Compost/Abono orgánico (2-4% N)",
+          "dosis": "5-10 ton/ha/ciclo",
+          "costo": "USD 100-200/ton",
+          "ventaja": "Materia orgánica, liberación lenta",
+          "desventaja": "Bajo N, requiere gran volumen"
+        }
+      ],
+      "fosfatadas": [
+        {
+          "fuente": "Superfosfato simple (18% P₂O₅)",
+          "aplicacion": "Pre-plantación o distribuido en ciclo",
+          "dosis": "300-500 kg/ha/ciclo",
+          "costo": "USD 200-300/ton"
+        },
+        {
+          "fuente": "Superfosfato triple (46% P₂O₅)",
+          "aplicacion": "Más concentrado, menor volumen",
+          "dosis": "120-200 kg/ha/ciclo",
+          "costo": "USD 450-600/ton"
+        }
+      ],
+      "potasicas": [
+        {
+          "fuente": "Cloruro de potasio (60% K₂O)",
+          "aplicacion": "Distribuida en ciclo",
+          "dosis": "700-1000 kg/ha/ciclo",
+          "costo": "USD 400-550/ton",
+          "precaucion": "Cloro puede aumentar salinidad; en suelos arenosos, considerar sulfato"
+        },
+        {
+          "fuente": "Sulfato de potasio (48% K₂O, 18% S)",
+          "aplicacion": "Alternativa en suelos salinos",
+          "dosis": "875-1250 kg/ha/ciclo",
+          "costo": "USD 600-800/ton",
+          "ventaja": "Aporte de azufre simultáneo"
+        }
+      ],
+      "micronutrientes": [
+        {
+          "producto": "Borax (11% B)",
+          "dosis": "15-25 kg/ha",
+          "costo": "USD 800-1200/ton",
+          "aplicacion": "1-2 veces en ciclo (mes 5-6, mes 8-9)"
+        },
+        {
+          "producto": "Sulfato de zinc (21% Zn)",
+          "dosis": "25-50 kg/ha/ciclo",
+          "costo": "USD 1200-1800/ton"
+        },
+        {
+          "producto": "Quelato de hierro (Fe-EDTA, 10% Fe)",
+          "dosis": "5-10 kg/ha (si síntomas clorosis)",
+          "aplicacion": "Foliar preferentemente"
+        }
+      ]
+    },
+    "metodos_aplicacion": {
+      "titulo": "3.5 Métodos de Aplicación",
+      "al_suelo": [
+        {
+          "metodo": "Broadcasting (esparcimiento a voleo)",
+          "tecnica": "Distribuir fertilizante alrededor planta en corona",
+          "distancia": "30-60 cm del pseudo-tallo",
+          "ventaja": "Rápido, bajo costo labor",
+          "desventaja": "Lixiviación si lluvia fuerte"
+        },
+        {
+          "metodo": "Aplicación en banda o puyeta",
+          "tecnica": "Hacer surquillo a 50 cm del tallo, colocar fertilizante, tapar",
+          "ventaja": "Menor lixiviación, absorción más eficiente",
+          "desventaja": "Mayor trabajo, lentitud"
+        },
+        {
+          "metodo": "Fertirrigación",
+          "tecnica": "Aplicar fertilizante disuelto en agua de riego",
+          "ventaja": "Eficiencia máxima, uniformidad, flexibilidad dosis",
+          "desventaja": "Requiere sistema riego (inversión alta)",
+          "ideal_para": "Cultivos comerciales grandes"
+        }
+      ],
+      "foliar": [
+        {
+          "aplicacion": "Complementaria a fertilización suelo",
+          "frecuencia": "Cada 15-20 días si deficiencia observada",
+          "productos": "Urea (1-2%), quelatos micronutrientes (0.1-0.2%)",
+          "mejor_momento": "Temprano en mañana o atardecer (evitar mediodía)",
+          "ventaja": "Absorción rápida, efecto inmediato"
+        }
+      ]
+    },
+    "manejo_deficiencias": {
+      "titulo": "3.6 Manejo de Deficiencias Nutricionales",
+      "protocolo_general": [
+        {
+          "paso": "1. Confirmación",
+          "actividad": "Análisis foliar o suelo para confirmar deficiencia"
+        },
+        {
+          "paso": "2. Corrección Rápida",
+          "actividad": "Aplicación foliar 1-2 veces (efecto 3-7 días)"
+        },
+        {
+          "paso": "3. Corrección de Fondo",
+          "actividad": "Aplicación al suelo para resolver a largo plazo"
+        },
+        {
+          "paso": "4. Monitoreo",
+          "actividad": "Verificación visual 2-3 semanas después"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.7 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Cuál es el nutriente más importante para plátano?",
+        "respuesta": "Potasio (K). Es 2-2.5 veces más demandado que nitrógeno. Déficit de K causa pseudo-tallo débil, volcamiento, fruto pequeño y bajo contenido azúcar. Es crítico para rentabilidad"
+      },
+      "q2": {
+        "pregunta": "¿Puedo usar puro abono orgánico?",
+        "respuesta": "No suficiente solo. Abono orgánico 10 ton/ha aporta ~200-400 kg N/ha (vs 210-330 requerido). Funciona si combinado con fertilizante mineral complementario. Para Barraganete exportación, fertilización mineral es necesaria"
+      },
+      "q3": {
+        "pregunta": "¿Cómo sé si tengo deficiencia de potasio?",
+        "respuesta": "Síntomas clave: manchas marrones en hojas viejas (primero), pseudo-tallo débil/se tuerce fácil, fruto pequeño (peso < 40 kg), caída de fruto post-cosecha incrementada. Análisis foliar confirma (< 2.0% K es deficiente)"
+      },
+      "q4": {
+        "pregunta": "¿Por qué mis plantas tienen hojas amarillas si la tierra se ve negra?",
+        "respuesta": "Puede ser: (1) Nitrógeno deficiente (amarillamiento hojas viejas primero), (2) Magnesio deficiente (amarillamiento con nervios verdes), (3) pH bajo (< 5.5) bloqueando absorción. Test dedo humedad suelo también: si muy seco, riego puede resolver"
+      },
+      "q5": {
+        "pregunta": "¿Necesito micronutrientes si abono es 'completo'?",
+        "respuesta": "Probablemente sí. Abonos 'completos' típicamente tienen B, Zn, Cu en cantidades pequeñas. Plátano demanda significativa (Boro especialmente crítico para floración). Test suelo recomienda"
+      },
+      "q6": {
+        "pregunta": "¿Cada cuánto hago análisis de suelo?",
+        "respuesta": "Recomendado cada 12-18 meses. Primero antes plantación (línea base), luego anualmente durante primeros 3 años (cambios rápidos), luego cada 2 años en producción establecida"
+      }
+    ]
+  }
+}

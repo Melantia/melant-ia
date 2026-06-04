@@ -154,3 +154,60 @@ function puedePublicarProducto(usuario) {
   }
   return false;
 }
+
+// --- API pública consumida por Suscripciones (afiliados_controller) ---
+function cargarConfigMelantios() {
+  return {
+    recompensas: RECOMPENSAS_MELANTIOS,
+    tasaCambio: TASA_CAMBIO,
+    reglas: REGLAS_MICROCREDITO_RETIRO,
+  };
+}
+
+function convertToUSD(melantios = 0) {
+  return Number(melantios || 0) / TASA_CAMBIO;
+}
+
+function convertFromUSD(usd = 0) {
+  return Math.floor(Number(usd || 0) * TASA_CAMBIO);
+}
+
+function ganarMelantioCascada(tipo = 'palabra', rol = 'socio') {
+  return calcularRecompensa(tipo, rol);
+}
+
+function validarVencimientoMelantios(items = [], diasMax = 90) {
+  const ahora = Date.now();
+  const msMax = Number(diasMax || 0) * 24 * 60 * 60 * 1000;
+  return (Array.isArray(items) ? items : []).filter((item) => {
+    const fecha = new Date(item?.fecha || item?.created_at || 0).getTime();
+    if (!fecha || Number.isNaN(fecha)) return false;
+    return ahora - fecha > msMax;
+  });
+}
+
+function validarCanjeAl50(totalProductoUSD = 0, canjeUSD = 0) {
+  const total = Number(totalProductoUSD || 0);
+  const canje = Number(canjeUSD || 0);
+  if (total <= 0) return false;
+  return canje <= total * RECOMPENSAS_MELANTIOS.limite_canje_global;
+}
+
+function liberarMelantiosPorValidacionPadrino(
+  estado = 'PENDIENTE_VALIDACION_PADRINO'
+) {
+  return estado === RECOMPENSAS_MELANTIOS.estado_inicial;
+}
+
+export {
+  cargarConfigMelantios,
+  convertToUSD,
+  convertFromUSD,
+  ganarMelantioCascada,
+  validarVencimientoMelantios,
+  validarCanjeAl50,
+  liberarMelantiosPorValidacionPadrino,
+  calcularCostoTienda,
+  calcularComisionTienda,
+  puedePublicarProducto,
+};

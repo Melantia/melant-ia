@@ -1,0 +1,239 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Selección de Semilla Criolla",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Madurez R6, selección plantas sanas, desgrane manual, almacenaje semilla criolla",
+  "contenido": {
+    "introduccion": {
+      "titulo": "6.1 Introducción a Cosecha Regenerativa",
+      "texto": "Cosecha maíz regenerativo difiere convencional en OBJETIVO: producir semilla de calidad para año siguiente (no solo grano consumo). Sistema regenerativo permite selección positiva plantas (resistencia plagas/enfermedades), perpetuación genética local. RESULTADO: Año 1-2 compra semilla, Año 3+ produce propia (USD 0 semilla, solo labor). Economía: USD 66/ha semilla ahorrada perpetuo."
+    },
+    "determinacion_madurez": {
+      "titulo": "6.2 Determinación de Madurez para Cosecha",
+      "estadio_r6": {
+        "indicador": "Línea negra base grano completamente visible",
+        "humedad": "13-15%",
+        "prueba_tactil": "Clavar uña = NO penetra, grano duro",
+        "color_tusa": "Mazorca amarilla pálida"
+      },
+      "timing_cosecha": [
+        "Óptimo: R6 temprana (15-20 días post-floración desaparecimiento estigma)",
+        "Ventana 2-3 semanas: Entre R6 temprana y R6 tardía",
+        "Tardío: Riesgo desgrane viento, pájaros, insectos POST-COSECHA"
+      ]
+    },
+    "seleccion_plantas_semilla": {
+      "titulo": "6.3 Selección de Plantas Madre para Semilla",
+      "criterios": [
+        {
+          "criterio": "Sanidad",
+          "especifico": "Rechazo total: Plagas, enfermedades foliar/vascular, estrés visible",
+          "razon": "Sanidad heredable (ambiente propicio hospedero enfermedad)"
+        },
+        {
+          "criterio": "Morfología planta",
+          "especifico": "Altura media (1.5-1.8m), tallos rectos NO torcidos",
+          "razon": "Extremos (muy alto/bajo) indican estrés o debilidad"
+        },
+        {
+          "criterio": "Inserción mazorca",
+          "especifico": "Regular altura (0.5-0.7m tallo), número mazorcas 1-2 sanas",
+          "razon": "Mazorca baja = acame riesgo, alta = nutrición mal distribuida"
+        },
+        {
+          "criterio": "Mazorca",
+          "especifico": "Forma cilíndrica regular, granos uniformes, SIN pudrición/daño",
+          "razon": "Forma mazorca heredable, uniformidad = mejor rendimiento"
+        },
+        {
+          "criterio": "Grano",
+          "especifico": "Color uniforme, vitreosidad 40-60%, tamaño mediano-grande",
+          "razon": "Grano grande = embrión grande = germinación robusta"
+        }
+      ],
+      "proporcion_seleccion": [
+        "Seleccionar 5-10% mejores plantas campo",
+        "Si 100 plantas/hectárea → 5-10 plantas semilla",
+        "Mínimo 50-100 plantas semilla per hectárea (asegurar variabilidad genética)"
+      ]
+    },
+    "cosecha_semilla": {
+      "titulo": "6.4 Cosecha de Mazorcas Semilla",
+      "metodo_manual": [
+        "Desnucamiento: Mano derecha presiona tallo, mano izquierda quiebra mazorca",
+        "Labor: 15-20 jornales/hectárea (vs cosecha comercial 5-10 jornales = más cuidado)",
+        "Costo: USD 100-150/hectárea (va semilla de valor)"
+      ],
+      "precauciones": [
+        "Cosecha en buen tiempo (NO lluvia = humedad grano sube)",
+        "Transporte inmediato galpón (máximo 24 horas exposición)",
+        "Separación física mazorcas semilla de grano comercial (contamináción riesgo)"
+      ]
+    },
+    "desgrane_seleccion_grano": {
+      "titulo": "6.5 Desgrane y Selección de Grano Semilla",
+      "metodo_manual": [
+        "Frotación: Mano fricciona grano contra grano (laborioso)",
+        "Labor: 5-10 jornales/tonelada mazorca",
+        "Beneficio: Inspección visual durante desgrane (rechazo grano defectuoso)"
+      ],
+      "metodo_mecanico": [
+        "Desgranadora: 100-500 kg/hora velocidad",
+        "Riesgo: Quiebra 5-10% grano (perjudicial semilla)",
+        "Alternativa: Desgranadora baja velocidad (costo + pero daño < 3%)"
+      ],
+      "seleccion_grano_post_desgrane": [
+        {
+          "paso": "Venteo (separación polvo/chapas)",
+          "herramienta": "Ventilador aire, criba manual",
+          "rechazo": "Material liviano (polvo), chapas tusa"
+        },
+        {
+          "paso": "Tamizado",
+          "objetivo": "Uniformidad tamaño grano",
+          "malla": "Criba 12 mm (rechaza granos muy pequeños < 8 mm)"
+        },
+        {
+          "paso": "Flotación agua",
+          "objetivo": "Densidad grano",
+          "metodo": "Inmersión 30 seg, granos que flotan = germanen débiles (rechazar)"
+        },
+        {
+          "paso": "Inspección visual manual",
+          "rechazo": "Grano deformado, manchado, atacado broca",
+          "labor": "2-4 horas/ton (tedioso pero crítico semilla)"
+        }
+      ]
+    },
+    "secado_semilla": {
+      "titulo": "6.6 Secado de Semilla - Crítico",
+      "humedad_optima": "12-13% (si < 11% = quiebre embrión, > 14% = hongoPostcosecha)",
+      "metodo_natural": [
+        {
+          "sistema": "Tendal en piso (lona/piso cemento)",
+          "duracion": "10-21 días depende humedad ambiente",
+          "ventaja": "Bajo costo (USD 0), máxima vitalidad embrión"
+        },
+        {
+          "sistema": "Cámara secado pasivo (galpón ventilado)",
+          "duracion": "3-5 días",
+          "ventaja": "Protección lluvia, secado controlado"
+        }
+      ],
+      "control_humedad": [
+        "Medidor humedad eléctrico USD 100-200 (IMPRESCINDIBLE semilla)",
+        "Chequeo diario, medir 20+ puntos diferentes",
+        "Cuando 12-13%: Trasladar a almacenaje seco"
+      ]
+    },
+    "almacenaje_semilla": {
+      "titulo": "6.7 Almacenaje de Semilla Criolla a Largo Plazo",
+      "condiciones_optimas": [
+        {
+          "parametro": "Humedad",
+          "rango": "12-13%",
+          "medida": "Medidor humedad quincenal"
+        },
+        {
+          "parametro": "Temperatura",
+          "rango": "5-15°C (frío lento metabolismo)",
+          "practica": "Galpón no calefaccionado, fresco oscuro"
+        },
+        {
+          "parametro": "Luz",
+          "rango": "Completamente oscuro",
+          "razon": "Luz activa germinación (invertida)"
+        },
+        {
+          "parametro": "Plagas",
+          "medida": "Fumigación fosfuro aluminio (PH₃ gas, seguro, USD 20-30)"
+        }
+      ],
+      "materiales_almacenaje": [
+        {
+          "envase": "Sacos papel multi-capa (kraft papel + polietileno)",
+          "ventaja": "Transpirable, evita condensación",
+          "desventaja": "3-12 meses durabilidad"
+        },
+        {
+          "envase": "Frascos vidrio con tapa hermética",
+          "ventaja": "Múltiples años, visualización",
+          "desventaja": "Frágil, limitado volumen"
+        },
+        {
+          "envase": "Botes metálicos con desecante",
+          "ventaja": "Durabilidad, hermeticidad",
+          "desventaja": "Costo USD 100-200/bote"
+        }
+      ],
+      "plazo": [
+        "Corto plazo (3-6 meses): Sacos papel suficiente",
+        "Largo plazo (1-2 años): Frasco vidrio + gel silicio desecante",
+        "Muy largo plazo (> 2 años): Criopreservación (-20°C congelador)"
+      ]
+    },
+    "vigor_germinacion": {
+      "titulo": "6.8 Test de Vigor y Germinación",
+      "test_simple": [
+        {
+          "test": "Germinación papel",
+          "metodo": "50 granos entre papel húmedo, 7 días oscuridad 25°C",
+          "resultado": "% granos germinados (mínimo > 85% para semilla)",
+          "costo": "USD 0, tiempo 10 minutos"
+        },
+        {
+          "test": "Vigor conducibilidad",
+          "metodo": "Remojo 24h fríos, medir conductividad agua (exudación celular)",
+          "resultado": "Alta conductividad = membrana débil = vigor bajo"
+        }
+      ]
+    },
+    "costos_economicos": {
+      "titulo": "6.9 Costos Económicos - Producción Semilla Propia",
+      "comparativa": [
+        {
+          "concepto": "Semilla compra comercial",
+          "costo": "USD 30-40/kg (20 kg = USD 600-800)",
+          "duracion": "1 año"
+        },
+        {
+          "concepto": "Producción semilla propia",
+          "costo_cosecha": "USD 100-150 labor especializada",
+          "costo_desgrane": "USD 50-100",
+          "costo_secado": "USD 20-40",
+          "costo_almacenaje": "USD 15-25",
+          "total": "USD 185-315 producción",
+          "rendimiento": "5,000-8,000 granos/planta = 200-400 kg semilla potencial"
+        }
+      ],
+      "payback": [
+        "Inversión año 1: USD 185-315",
+        "Año 2+: USD 0 semilla (solo labor)",
+        "Payback: 1-2 años (luego perpetuo ahorró)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.10 Preguntas Frecuentes - Cosecha y Semilla",
+      "q1": {
+        "pregunta": "¿Puedo guardar semilla 5 años?",
+        "respuesta": "SÍ si condiciones correctas (12-13% humedad, frío 5-10°C, oscuridad, desecante). Vigor disminuye 2-3%/año pero aún viable. Test germinación recomendado previo siembra"
+      },
+      "q2": {
+        "pregunta": "¿Vigencia semilla deprecia año 2?",
+        "respuesta": "NO drásticamente si guardada bien. Año 2: 95%, Año 3: 90%, Año 4: 85% germinación típico. Bajo 80%: resiembra área pequeña primero (test)"
+      },
+      "q3": {
+        "pregunta": "¿Mezcla genética si selecciono 50 plantas?",
+        "respuesta": "NO problema. Polinización abierta = recombinación aleatoria. 50 plantas = suficiente variabilidad genética 10+ generaciones selección"
+      },
+      "q4": {
+        "pregunta": "¿Fosfuro aluminio es seguro aplicar?",
+        "respuesta": "SÍ si protocolo: Sella completamente bote, PH₃ gas mata plagas 48-72h, ventilación post-aplicación 24-48h antes acceso. Requiere capacitación (USD 30-50 servicio profesional)"
+      },
+      "q5": {
+        "pregunta": "¿Test flotación agua descarta semilla buena?",
+        "respuesta": "Posible. Algunas semillas densas descienden pero vivas (no siempre correlación). Mejor: test germinación papel confirma. Flotación = screening rápido, no definitivo"
+      }
+    ]
+  }
+}

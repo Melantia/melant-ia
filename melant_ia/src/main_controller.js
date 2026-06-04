@@ -1,47 +1,214 @@
-  // Botón principal: Asistente Técnico Rural
-  const btnAsistenteRural = Array.from(document.querySelectorAll('button')).find((b) =>
-    b.textContent.trim().toLowerCase() === 'asistente técnico rural'
-  );
-  if (btnAsistenteRural) {
-    btnAsistenteRural.addEventListener('click', async () => {
-      const mod = await window.cargarModulo('AsistenteTecnicoRural');
-      mod.mostrarPanel?.();
-    });
+// ========================================================================
+// TRADUCTOR DE RUTAS DINÁMICAS - Mapeo de todos los módulos y submódulos
+// ========================================================================
+const RUTA_MODULOS = {
+  // ==================== 01. SUSCRIPCIONES ====================
+  'Gestión de Suscripciones': 'modules/gestion_suscripciones',
+  'Moneda Virtual Melantios': 'modules/moneda_virtual_melantios',
+  'Planes y Pagos': 'modules/planes_pagos',
+  Afiliados: 'modules/01_suscripciones/afiliados_controller',
+
+  // ==================== 02. ASISTENTE TÉCNICO RURAL ====================
+  'Asistente Técnico Rural':
+    'modules/02_asistente_tecnico_rural/asistente_tecnico',
+  'Asistente Técnico en Cultivos':
+    'modules/02_asistente_tecnico_rural/asistente_tecnico_cultivos',
+  'Asistente Técnico Veterinario':
+    'modules/02_asistente_tecnico_rural/asistente_tecnico_veterinario',
+  'Agricultura de Precisión':
+    'modules/02_asistente_tecnico_rural/agricultura_precision',
+  'Agricultura de Precisión (Uso de Sensores)':
+    'modules/02_asistente_tecnico_rural/agricultura_precision',
+  'GPS (Medición de Terrenos)':
+    'modules/02_asistente_tecnico_rural/gps_medicion_terrenos',
+  'Visión Artificial': 'modules/vision_artificial',
+  'Visión Satelital': 'modules/vision_satelital',
+  'Salud y Medicina Veterinaria': 'modules/salud_medicina_veterinaria',
+  'Calculadora Agrícola':
+    'modules/02_asistente_tecnico_rural/calculadora_agricola',
+  'Calendario Lunar': 'modules/02_asistente_tecnico_rural/calendario_lunar',
+  'Clima Inteligente': 'modules/clima_inteligente',
+  'Cronograma de Siembra':
+    'modules/02_asistente_tecnico_rural/cronograma_siembra',
+  'Levantamiento de Lote':
+    'modules/02_asistente_tecnico_rural/levantamiento_lote',
+  'Inventario de Biodiversidad':
+    'modules/02_asistente_tecnico_rural/InventarioBio',
+  'Biblioteca Técnica Rural':
+    'modules/02_asistente_tecnico_rural/biblioteca_tecnica_rural',
+
+  // ==================== 03. GESTIÓN DE FINCAS Y TRAZABILIDAD ====================
+  'Gestión de Fincas': 'modules/gestion_fincas_trazabilidad_hub',
+  Apicultura: 'modules/apicultura',
+  'Gestión Empresarial': 'modules/gestion_empresarial',
+  'Trazabilidad Cultivos Especiales':
+    'modules/trazabilidad_cultivos_especiales',
+  'Trazabilidad de Granjas': 'modules/trazabilidad_granjas',
+  'Trazabilidad de Café': 'modules/trazabilidad_cafe',
+  'Trazabilidad de Cacao': 'modules/trazabilidad_cacao',
+  'Trazabilidad de Plátano': 'modules/trazabilidad_platano',
+  'Trazabilidad de Aguacate': 'modules/trazabilidad_aguacate',
+  'Trazabilidad de Guanabana': 'modules/trazabilidad_guanabana',
+
+  // ==================== 04. NEGOCIOS RURALES ====================
+  'Negocios Rurales': 'modules/negocios_rurales',
+  'Tienda MELANTIA': 'modules/04_negocios_rurales/tienda_melantia',
+  'Tienda Virtual Melantia': 'modules/04_negocios_rurales/tienda_melantia',
+  'Monte su TIENDA VIRTUAL': 'modules/monte_tienda_virtual',
+  'Mercado Plátano': 'modules/mercado_platano',
+  'Mercado de Plátano': 'modules/mercado_platano',
+  'Ventas de Gestión Productiva': 'modules/ventas_gestion_productiva',
+  'Economía Melantios': 'modules/04_negocios_rurales/economy_melantios',
+
+  // ==================== 05. EMPRENDEDOR Y FINANZAS PERSONALES ====================
+  'Finanzas Personales': 'modules/finanzas_personales',
+  Emprendimientos: 'modules/05_emprendedor_finanzas_personales/emprendimientos',
+  'Registro Financiero Inteligente': 'modules/registro_financiero_inteligente',
+  'Consejos y Alertas Financieras': 'modules/consejos_alertas',
+  'Termómetro Financiero': 'modules/termometro_financiero',
+  'Gráfica Ingresos y Gastos': 'modules/grafica_ingresos_gastos',
+
+  // ==================== 06. PROYECTOS ====================
+  Proyectos: 'modules/06_proyectos/proyectos',
+  'Proyecto Captura de Carbono':
+    'modules/06_proyectos/proyecto_captura_carbono',
+  'Tesoro de Abuelos': 'modules/06_proyectos/tesoro_herbario_memoria',
+  'Saberes Folclore': 'modules/06_proyectos/saberes',
+
+  // ==================== 07. ESCUELA DE CAMPO ====================
+  'Escuela de Campo': 'modules/07_escuela de campo/escuela',
+  'Escuela de Campo Certificados':
+    'modules/07_escuela de campo/escuela_campo_certificados',
+  'Escuela Regenerativa': 'modules/07_escuela de campo/escuela_campo_regenera',
+  'Cursos Prácticos': 'modules/07_escuela de campo/practicas',
+  'Prácticas Regenerativas':
+    'modules/07_escuela de campo/practicas_regenerativas',
+
+  // ==================== 08. COMUNIDAD VIRTUAL ====================
+  'Comunidad Virtual': 'modules/comunidad_virtual_entry',
+  'Ciudadano Rural': 'modules/ciudadano_rural',
+  'Walkie Talkie': 'modules/08_comunidad_virtual/walkie_talkie',
+  'Asesoría Legal': 'modules/asesoria_legal',
+
+  // ==================== 09. ASISTENTE PREVENTIVO SALUD RURAL ====================
+  'Asistente Preventivo Salud':
+    'modules/09_asistente_preventivo_salud_rural/asistente_salud',
+  'Guía de Primeros Auxilios': 'modules/guia_primeros_auxilios',
+  'Botiquín Casero Inteligente': 'modules/botiquin_casero',
+  'Ficha Médica': 'modules/ficha_medica',
+  'Garrapatas y Salud':
+    'modules/09_asistente_preventivo_salud_rural/garrapatas_salud',
+
+  // ==================== 10. SERVICIOS FINANCIEROS MELANTIA ====================
+  'Servicios Financieros':
+    'modules/10_servicios_financieros/servicios_financieros_controller',
+  'Apertura de Cuenta Digital': 'modules/apertura_cuenta_digital',
+  'Onboarding KYC': 'modules/onboarding_kyc',
+  'Gestión de Pagos y Beneficios': 'modules/gestion_pagos_beneficios',
+  'Simulación de Perfil Financiero': 'modules/simulacion_perfil_financiero',
+  'Solicitar Microcrédito': 'modules/solicitar_microcredito',
+  'Transferencias y Movimientos': 'modules/transferencias_movimientos',
+  'Integración Bancos y Cooperativas':
+    'modules/integracion_bancos_cooperativas',
+  'Historial y Estado de Cuenta': 'modules/historial_estado_cuenta',
+
+  // ==================== 11. EVIDENCIAS Y DOCUMENTOS ====================
+  'Registro de Evidencias Fotográficas':
+    'modules/registro_evidencia_fotografica',
+  'Carpeta de Documentos': 'modules/carpeta_documentos',
+  'Descargar, Compartir e Imprimir': 'modules/descargar_compartir_imprimir',
+
+  // ==================== OTROS MÓDULOS GLOBALES ====================
+  'Bienes Raíces Rurales': 'modules/bienes_raices_rurales_real',
+  'Oportunidades Públicas': 'modules/oportunidades_publicas',
+  'Alertas del Sistema': 'modules/websocket_alertas',
+  'Don Eloy - Sabiduría Rural': 'modules/don_eloy_wisdom',
+  Notificaciones: 'modules/notificaciones',
+  'Voz Melantia': 'modules/voz_melantia',
+};
+
+function resolverRenderizadorModulo(modulo, nombreItem) {
+  if (typeof modulo?.mostrarPanel === 'function') {
+    return () => modulo.mostrarPanel();
   }
-window.AsistenteTecnicoCultivos = undefined;
-window.AsistenteTecnicoVeterinario = undefined;
-window.AgriculturaPrecision = undefined;
-window.GpsMedicionTerrenos = undefined;
-    // --- Asistente Técnico Rural: Submódulos ---
-    case 'AsistenteTecnicoCultivos':
-      if (!window.AsistenteTecnicoCultivos) {
-        const mod = await import('./modules/02_asistente_tecnico_rural/asistente_tecnico_cultivos.js');
-        window.AsistenteTecnicoCultivos = mod;
-      }
-      return window.AsistenteTecnicoCultivos;
-    case 'AsistenteTecnicoVeterinario':
-      if (!window.AsistenteTecnicoVeterinario) {
-        const mod = await import('./modules/02_asistente_tecnico_rural/asistente_tecnico_veterinario.js');
-        window.AsistenteTecnicoVeterinario = mod;
-      }
-      return window.AsistenteTecnicoVeterinario;
-    case 'AgriculturaPrecision':
-      if (!window.AgriculturaPrecision) {
-        const mod = await import('./modules/02_asistente_tecnico_rural/agricultura_precision.js');
-        window.AgriculturaPrecision = mod;
-      }
-      return window.AgriculturaPrecision;
-    case 'GpsMedicionTerrenos':
-      if (!window.GpsMedicionTerrenos) {
-        const mod = await import('./modules/02_asistente_tecnico_rural/gps_medicion_terrenos.js');
-        window.GpsMedicionTerrenos = mod;
-      }
-      return window.GpsMedicionTerrenos;
-// --- Finanzas Personales: Submódulos independientes ---
-window.RegistroFinancieroInteligente = undefined;
-window.ConsejosAlertas = undefined;
-window.TermometroFinanciero = undefined;
-window.GraficaIngresosGastos = undefined;
+  if (typeof modulo?.default === 'function') {
+    return () => modulo.default();
+  }
+  if (typeof modulo?.default?.mostrarPanel === 'function') {
+    return () => modulo.default.mostrarPanel();
+  }
+
+  if (
+    nombreItem === 'Gestión de Suscripciones' &&
+    window.SistemaAfiliados &&
+    typeof window.SistemaAfiliados.abrirPanel === 'function'
+  ) {
+    return () => {
+      window.SistemaAfiliados.init?.();
+      window.SistemaAfiliados.abrirPanel();
+    };
+  }
+
+  return null;
+}
+
+window.navegarA = async function (nombreItem) {
+  console.log('Navegando a:', nombreItem);
+
+  const appMenu = document.getElementById('app-menu');
+  const vistaActiva =
+    document.getElementById('vista-activa') ||
+    document.getElementById('contenedor-principal') ||
+    document.body;
+
+  if (appMenu && vistaActiva !== appMenu) appMenu.style.display = 'none';
+  if (vistaActiva) vistaActiva.style.display = 'block';
+
+  const ruta = RUTA_MODULOS[nombreItem];
+  if (!ruta) {
+    vistaActiva.innerHTML = `<h2>Módulo en desarrollo: ${nombreItem}</h2>
+      <button onclick="volverAlMenu()">← Volver</button>`;
+    return;
+  }
+
+  vistaActiva.innerHTML = `<h2>Cargando ${nombreItem}...</h2>`;
+
+  try {
+    const modulo = await import(`./${ruta}.js`);
+    const renderizar = resolverRenderizadorModulo(modulo, nombreItem);
+    if (renderizar) {
+      renderizar();
+      return;
+    }
+
+    vistaActiva.innerHTML = `<h2>${nombreItem}</h2>
+      <p>El módulo cargó pero no expone una vista principal.</p>
+      <button onclick="volverAlMenu()">← Volver</button>`;
+  } catch (error) {
+    console.error(`Error cargando módulo ${nombreItem}:`, error);
+    vistaActiva.innerHTML = `<h2>Error al abrir ${nombreItem}</h2>
+      <p>${error?.message || 'No fue posible cargar el módulo.'}</p>
+      <button onclick="volverAlMenu()">← Volver</button>`;
+  }
+};
+
+window.volverAlMenu = function () {
+  const appMenu = document.getElementById('app-menu');
+  const vistaActiva = document.getElementById('vista-activa');
+  if (appMenu) appMenu.style.display = 'block';
+  if (vistaActiva) vistaActiva.style.display = 'none';
+};
+
+// Botón principal: Asistente Técnico Rural
+const btnAsistenteRural = Array.from(document.querySelectorAll('button')).find(
+  (b) => b.textContent.trim().toLowerCase() === 'asistente técnico rural'
+);
+if (btnAsistenteRural) {
+  btnAsistenteRural.addEventListener('click', async () => {
+    const mod = await window.cargarModulo('AsistenteTecnicoRural');
+    mod.mostrarPanel?.();
+  });
+}
 // Ocultar splash screen tras 3 segundos
 window.addEventListener('load', () => {
   const splash = document.getElementById('splash-screen');
@@ -62,6 +229,10 @@ window.SuscripcionesMelantia = undefined;
 window.PlanesPagos = undefined;
 window.MonedaVirtualMelantios = undefined;
 window.AsistenteTecnicoRural = undefined;
+window.CronogramaSiembra = undefined;
+window.LevantamientoLote = undefined;
+window.InventarioBiodiversidad = undefined;
+window.BibliotecaTecnicaRural = undefined;
 window.FinanzasPersonales = undefined;
 window.Emprendimientos = undefined;
 window.VisionArtificial = undefined;
@@ -137,14 +308,13 @@ window.cargarModulo = async function (nombre) {
       return window.SuscripcionesMelantia;
     case 'PlanesPagos':
       if (!window.PlanesPagos) {
-        const mod = await import('./modules/01_suscripciones/planes_pagos.js');
+        const mod = await import('./modules/planes_pagos.js');
         window.PlanesPagos = mod;
       }
       return window.PlanesPagos;
     case 'MonedaVirtualMelantios':
       if (!window.MonedaVirtualMelantios) {
-        const mod =
-          await import('./modules/01_suscripciones/moneda_virtual_melantios.js');
+        const mod = await import('./modules/moneda_virtual_melantios.js');
         window.MonedaVirtualMelantios = mod;
       }
       return window.MonedaVirtualMelantios;
@@ -155,6 +325,34 @@ window.cargarModulo = async function (nombre) {
         window.AsistenteTecnicoRural = mod.default || mod;
       }
       return window.AsistenteTecnicoRural;
+    case 'CronogramaSiembra':
+      if (!window.CronogramaSiembra) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/cronograma_siembra.js');
+        window.CronogramaSiembra = mod;
+      }
+      return window.CronogramaSiembra;
+    case 'LevantamientoLote':
+      if (!window.LevantamientoLote) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/levantamiento_lote.js');
+        window.LevantamientoLote = mod;
+      }
+      return window.LevantamientoLote;
+    case 'InventarioBiodiversidad':
+      if (!window.InventarioBiodiversidad) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/InventarioBio.js');
+        window.InventarioBiodiversidad = mod;
+      }
+      return window.InventarioBiodiversidad;
+    case 'BibliotecaTecnicaRural':
+      if (!window.BibliotecaTecnicaRural) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/biblioteca_tecnica_rural.js');
+        window.BibliotecaTecnicaRural = mod;
+      }
+      return window.BibliotecaTecnicaRural;
     case 'FinanzasPersonales':
       if (!window.FinanzasPersonales) {
         const mod = await import('./modules/finanzas_personales.js');
@@ -692,130 +890,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     btnDescargar.addEventListener('click', async () => {
       const mod = await window.cargarModulo('DescargarCompartirImprimir');
       mod.mostrarPanel?.();
-    });
-  }
-});
-// main_controller.js
-// Controlador principal de MELANTIA (exposición global)
-// Toda la lógica de negocio, comunidad, salud, tienda, Melantios, Don Eloy, Angel, etc. ha sido migrada a módulos dedicados.
-// Este archivo solo expone referencias globales y comentarios según la estructura definida en app_structure_melant_ia.json
-
-// Carga dinámica solo de módulos realmente usados en la sesión
-// Ejemplo: solo exponer globalmente si el usuario accede a la sección
-window.MelantiaAsistente = undefined;
-window.SuscripcionesMelantia = undefined;
-window.AsistenteTecnicoRural = undefined;
-
-window.cargarModulo = async function (nombre) {
-  switch (nombre) {
-    case 'MelantiaAsistente':
-      if (!window.MelantiaAsistente) {
-        const mod = await import('./modules/app_core.js');
-        window.MelantiaAsistente = mod.default || mod.MelantiaAsistente;
-      }
-      return window.MelantiaAsistente;
-    case 'SuscripcionesMelantia':
-      if (!window.SuscripcionesMelantia) {
-        const mod =
-          await import('./modules/01_suscripciones/afiliados_controller.js');
-        window.SuscripcionesMelantia = mod.default || mod;
-      }
-      return window.SuscripcionesMelantia;
-    case 'AsistenteTecnicoRural':
-      if (!window.AsistenteTecnicoRural) {
-        const mod =
-          await import('./modules/02_asistente_tecnico_rural/index.js');
-        window.AsistenteTecnicoRural = mod.default || mod;
-      }
-      return window.AsistenteTecnicoRural;
-    case 'BienesRaicesRurales':
-      if (!window.BienesRaicesRurales) {
-        const mod = await import('./modules/bienes_raices_rurales.js');
-        window.BienesRaicesRurales = mod;
-      }
-      return window.BienesRaicesRurales;
-    case 'OportunidadesPublicas':
-      if (!window.OportunidadesPublicas) {
-        const mod = await import('./modules/oportunidades_publicas.js');
-        window.OportunidadesPublicas = mod;
-      }
-      return window.OportunidadesPublicas;
-    case 'MercadoPlatano':
-      if (!window.MercadoPlatano) {
-        const mod = await import('./modules/mercado_platano_controller.js');
-        window.MercadoPlatano = mod;
-      }
-      return window.MercadoPlatano;
-    default:
-      throw new Error('Módulo no reconocido: ' + nombre);
-  }
-};
-
-// Para cambios en la lógica, modificar únicamente los módulos dedicados en /modules, /controllers, etc.
-// Este archivo debe permanecer ultra-ligero y sin lógica interna.
-
-// --- INTEGRACIÓN DEL BOTÓN SUSCRIPCIONES EN LA UI PRINCIPAL ---
-window.addEventListener('DOMContentLoaded', async () => {
-  // Suscripciones
-  let btn = document.getElementById('btn-suscripciones');
-  if (!btn) {
-    btn = Array.from(document.querySelectorAll('button')).find((b) =>
-      b.textContent.trim().toLowerCase().includes('suscrip')
-    );
-  }
-  if (btn) {
-    btn.addEventListener('click', async () => {
-      const mod = await window.cargarModulo('SuscripcionesMelantia');
-      if (
-        mod &&
-        mod.SistemaAfiliados &&
-        typeof mod.SistemaAfiliados.abrirPanel === 'function'
-      ) {
-        mod.SistemaAfiliados.init?.();
-        mod.SistemaAfiliados.abrirPanel();
-      } else if (
-        window.SistemaAfiliados &&
-        typeof window.SistemaAfiliados.abrirPanel === 'function'
-      ) {
-        window.SistemaAfiliados.init?.();
-        window.SistemaAfiliados.abrirPanel();
-      } else if (typeof mod.abrirPanel === 'function') {
-        mod.init?.();
-        mod.abrirPanel();
-      }
-    });
-  }
-
-  // Bienes Raíces Rurales
-  let btnBienes = Array.from(document.querySelectorAll('button')).find((b) =>
-    b.textContent.trim().toLowerCase().includes('bienes raíces')
-  );
-  if (btnBienes) {
-    btnBienes.addEventListener('click', async () => {
-      const mod = await window.cargarModulo('BienesRaicesRurales');
-      mod.mostrarCatalogoPropiedades?.();
-    });
-  }
-
-  // Oportunidades Públicas
-  let btnOportunidades = Array.from(document.querySelectorAll('button')).find(
-    (b) => b.textContent.trim().toLowerCase().includes('oportunidades públicas')
-  );
-  if (btnOportunidades) {
-    btnOportunidades.addEventListener('click', async () => {
-      const mod = await window.cargarModulo('OportunidadesPublicas');
-      mod.mostrarOportunidadesPublicas?.();
-    });
-  }
-
-  // Mercado de Plátano
-  let btnPlatano = Array.from(document.querySelectorAll('button')).find((b) =>
-    b.textContent.trim().toLowerCase().includes('mercado de plátano')
-  );
-  if (btnPlatano) {
-    btnPlatano.addEventListener('click', async () => {
-      const mod = await window.cargarModulo('MercadoPlatano');
-      mod.mostrarPanelMercado?.();
     });
   }
 });

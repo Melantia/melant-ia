@@ -1,0 +1,127 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades de la Palma Africana",
+  "cultivo": "Palma Africana",
+  "seccion": "Enfermedades fungales, pudriciones, virales, prevención, manejo",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Introducción a Enfermedades de Palma",
+      "enfermedades_principales": [
+        "Fusarium (Vascular wilt): ENFERMEDAD #1 CRÍTICA",
+        "Phytophthora (Pudrición): ENFERMEDAD #2",
+        "Manchas foliares (Cercospora, Pestalotiora): Moderadas",
+        "Virus (Marchitez Letal): Rara en Ecuador"
+      ],
+      "caracteristica": "Palma es cultivo donde ENFERMEDADES son más problemáticas que plagas (vs café/cacao)"
+    },
+    "fusarium_vascular": {
+      "titulo": "5.2 Fusarium (Vascular Wilt) - ENFERMEDAD #1 CRÍTICA",
+      "descripcion": "Hongo suelo Fusarium oxysporum penetra raíces",
+      "sintomas": [
+        "Hoja una lado (izq o der) amarilla → marchita",
+        "Progresión: Asimetría vertical (vs Picudo ambos lados)",
+        "Fronda colgar, secar completamente",
+        "Muerte planta 3-6 meses post-síntoma inicial"
+      ],
+      "ciclo": [
+        "Esporas suelo 10+ años viabilidad",
+        "Penetración raíces heridas, o bajo estrés hídrico",
+        "Colonización vascular bloquea agua → marchitez"
+      ],
+      "factores_riesgo": [
+        "Suelo compactado (mal drenaje)",
+        "pH bajo (< 5.0)",
+        "Raíces heridas (nematodos, compactación)",
+        "Sequía (estrés hídrico)"
+      ],
+      "prevención_OBLIGATORIA": [
+        "Drenaje excelente (test 24h > 10 cm/24h)",
+        "pH corrección (encalado si < 5.5)",
+        "Evitar compactación suelo",
+        "Riego adecuado sequía"
+      ],
+      "control_curativo": "NINGUNO. Fusarium dentro planta = MUERTE segura. No existe fungicida efectivo",
+      "manejo_emergencia": [
+        "Corte y quema planta",
+        "Desinfección suelo (problema: Fusarium persiste 10+ años)",
+        "Replante diferente cultivar si hay resistencia"
+      ],
+      "variedad_resistencia": "Algunas líneas Tenera tienen resistencia (buscar certificación)"
+    },
+    "phytophthora_pudricion": {
+      "titulo": "5.3 Phytophthora (Pudrición de Raíz)",
+      "sintomas": [
+        "Marchitez (similar Fusarium pero MÁS RÁPIDA)",
+        "Pudrición visible raíces (si excava)",
+        "Muerte súbita 2-3 semanas"
+      ],
+      "ciclo": [
+        "Zoósporas agua (lluvia, riego)",
+        "Penetración raíces",
+        "Colonización rápida tejido conductor"
+      ],
+      "condiciones_favorables": [
+        "Exceso agua (encharcamiento)",
+        "Drenaje pobre",
+        "Temperatura 20-28°C (rango óptimo)"
+      ],
+      "prevención": [
+        "Drenaje excelente (test 24h OBLIGATORIO)",
+        "Evitar riego excesivo",
+        "Aplicar fungicida cobre si suelo históricamente afectado"
+      ]
+    },
+    "manchas_foliares": {
+      "titulo": "5.4 Manchas Foliares (Cercospora, Pestalotiora)",
+      "sintomas": [
+        "Manchas irregulares hoja (circulares a alargadas)",
+        "Coloración marrón-gris",
+        "Defoliación progresiva si severa"
+      ],
+      "ciclo": [
+        "Espora dispersión agua/aire",
+        "Infección 12-24 horas agua",
+        "Síntoma 5-10 días"
+      ],
+      "severidad": "Moderada (vs Fusarium/Phytophthora letales)",
+      "control": [
+        "Fungicida cobre 3-4 kg/ha si epidemia",
+        "Limpieza fronda muerta"
+      ]
+    },
+    "virus_marchitez": {
+      "titulo": "5.5 Virus de Marchitez Letal (LTFV)",
+      "descripcion": "Virus letal causó epidemias Centro América",
+      "presencia_ecuador": "RARA (riesgo bajo actualmente)",
+      "sintomas": [
+        "Marchitez rápida sin síntomas previos",
+        "Muerte 1-3 años post-infección"
+      ],
+      "transmisión": "Insecto vector (áfido Pseudococcidae)",
+      "prevención": "Germoplasma certificado libre virus, cuarentena importaciones"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.6 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Fusarium es peligro Ecuador?",
+        "respuesta": "SÍ POTENCIAL. No es epidemia actual (a diferencia Centro América), pero riesgo existe. Prevención: drenaje excelente, pH corrección, evitar compactación"
+      },
+      "q2": {
+        "pregunta": "¿Se puede salvar planta con Fusarium?",
+        "respuesta": "NO. Fusarium dentro planta = MUERTE irreversible. Única opción: corte y quema"
+      },
+      "q3": {
+        "pregunta": "¿Drenaje es realmente tan importante?",
+        "respuesta": "CRÍTICO. 80% de Phytophthora/Fusarium en Ecuador es drenaje malo. Test 24h OBLIGATORIO antes plantación"
+      },
+      "q4": {
+        "pregunta": "¿Hay palma resistente Fusarium?",
+        "respuesta": "Algunas líneas Tenera tienen resistencia. Buscar certificación 'resistente Fusarium' al comprar semilla"
+      },
+      "q5": {
+        "pregunta": "¿Fungicida preventivo puede ayudar?",
+        "respuesta": "Parcialmente para Phytophthora. Pero MEJOR es prevención (drenaje). Fungicida NO funciona Fusarium una vez dentro planta"
+      }
+    ]
+  }
+}

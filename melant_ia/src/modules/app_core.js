@@ -145,31 +145,42 @@ window.abrirModuloEspecifico = function (id, titulo) {
         <h2 style='color:#276749;margin-bottom:8px;'>${modulo.titulo}</h2>
         <p style='color:#444;font-size:1.1em;margin-bottom:18px;'>${modulo.descripcion || 'Sin descripción disponible.'}</p>`;
       if (modulo.items && modulo.items.length > 0) {
-        html += `<h4 style='margin-bottom:8px;'>Opciones disponibles:</h4><ul style='padding-left:20px;'>`;
+        html += `<h4 style='margin-bottom:8px;'>Opciones disponibles:</h4><div style='display:flex;flex-direction:column;gap:8px;'>`;
         modulo.items.forEach((item) => {
-          html += `<li style='margin-bottom:6px;'>${item}</li>`;
+          html += `<button type="button" data-submodulo="${item}" style="text-align:left;background:#F8FAFC;border:1px solid #D1D5DB;border-radius:10px;padding:10px 12px;cursor:pointer;font-size:0.98em;color:#1F2937;">${item}</button>`;
         });
-        html += `</ul>`;
+        html += `</div>`;
       }
       html += `<button onclick=\"window.volverAlMenuPrincipal()\" style=\"margin-top:24px;background:#276749;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;\">Volver al menú principal</button></div>`;
 
       contenedorMenu.innerHTML = html;
 
+      contenedorMenu.querySelectorAll('[data-submodulo]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.getAttribute('data-submodulo');
+          if (!item) return;
+          if (typeof window.navegarA === 'function') {
+            window.navegarA(item);
+          }
+        });
+      });
+
       // === CARGA DINÁMICA DE FUNCIONALIDAD DEL MÓDULO ===
       // Mapear títulos a archivos JS (ajusta según tus módulos reales)
       const moduloMap = {
-        'Tienda MELANTIA': './modules/modulo_negocios.js',
-        'Monte su TIENDA VIRTUAL': './modules/modulo_negocios.js',
-        Suscripciones: './modules/01_suscripciones/afiliados_controller.js',
+        'Tienda MELANTIA': './modulo_negocios.js',
+        'Monte su TIENDA VIRTUAL': './modulo_negocios.js',
+        Suscripciones: './01_suscripciones/afiliados_controller.js',
         'Asistente Técnico Rural':
-          './modules/02_asistente_tecnico_rural/asistencia_tecnica_rural.js',
-        'Gestión de Fincas y Trazabilidad': './modules/modulo_trazabilidad.js',
-        Proyectos: './modules/modulo_proyectos.js',
-        'Escuela de Campo': './modules/modulo_escuela.js',
-        'Mi Comunidad Virtual': './modules/modulo_comunidad.js',
-        'Asistente Preventivo de Salud': './modules/modulo_salud.js',
-        'Servicios Financieros Melantia': './modules/servicios_financieros.js',
-        'Registro Evidencias y Documentos': './modules/modulo_evidencias.js',
+          './02_asistente_tecnico_rural/asistente_tecnico.js',
+        'Gestión de Fincas y Trazabilidad':
+          './gestion_fincas_trazabilidad_hub.js',
+        Proyectos: './modulo_proyectos.js',
+        'Escuela de Campo': './modulo_escuela.js',
+        'Mi Comunidad Virtual': './modulo_comunidad.js',
+        'Asistente Preventivo de Salud': './modulo_salud.js',
+        'Servicios Financieros Melantia': './servicios_financieros.js',
+        'Registro Evidencias y Documentos': './modulo_evidencias.js',
         // Agrega aquí más módulos según tu estructura
       };
       const jsPath = moduloMap[modulo.titulo];
@@ -179,6 +190,18 @@ window.abrirModuloEspecifico = function (id, titulo) {
             // Si el módulo exporta una función principal, ejecútala
             if (typeof mod.default === 'function') {
               mod.default();
+            } else if (
+              modulo.titulo === 'Gestión de Fincas y Trazabilidad' &&
+              typeof mod.mostrarPanel === 'function'
+            ) {
+              mod.mostrarPanel();
+            } else if (
+              modulo.titulo === 'Suscripciones' &&
+              window.SistemaAfiliados &&
+              typeof window.SistemaAfiliados.abrirPanel === 'function'
+            ) {
+              window.SistemaAfiliados.init?.();
+              window.SistemaAfiliados.abrirPanel();
             } else if (typeof window.cargarDatosModulo === 'function') {
               window.cargarDatosModulo(id, modulo.titulo);
             }

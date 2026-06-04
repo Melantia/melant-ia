@@ -1,0 +1,104 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento Agroecológico del Arroz",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Cero labranza, abonos verdes, conservación agua, biodiversidad inicial",
+  "contenido": {
+    "introduccion": {
+      "titulo": "2.1 Introducción a Establecimiento Agroecológico",
+      "texto": "Establecimiento agroecológico arroz = cero labranza adaptada inundación (suelos encharcados). Desafío: mantener biodiversidad microbiota anoxia. Estrategia: mulch sobre agua, abonos verdes rotación, drenaje deficitario (riego parcial, no inundación total)."
+    },
+    "preparacion_terreno": {
+      "titulo": "2.2 Preparación Agroecológica",
+      "metodo_cero_labranza": [
+        "NO arada profunda (mata microbiota, oxidación materia orgánica)",
+        "Chiscador (subsolador) solo 30 cm si compactación severa",
+        "Incorporación mulch orgánico (residuos cosecha 5-10 ton/ha)"
+      ],
+      "nivelacion": "CRÍTICA igual convencional (sin inundación uniforme = fracaso)",
+      "drenaje_conservador": "Zanjas perimetrales pero NO drenaje interno excesivo (encharcamiento es ventaja)"
+    },
+    "abonos_verdes": {
+      "titulo": "2.3 Abonos Verdes Pre-Arroz",
+      "cultivos_opciones": [
+        {
+          "cultivo": "Mucuna",
+          "ciclo": "5-6 meses",
+          "nitrógeno": "200-300 kg/ha fijado",
+          "timing": "Destrucción 2-3 semanas pre-siembra arroz"
+        },
+        {
+          "cultivo": "Lupino (Andino)",
+          "ciclo": "4-5 meses",
+          "nitrógeno": "100-150 kg/ha",
+          "ventaja": "Adaptado sierra, altitude 1,500-2,500m"
+        },
+        {
+          "cultivo": "Alga agua dulce (si access)",
+          "ventaja": "Inoculante microbiota acuática, potasio"
+        }
+      ]
+    },
+    "manejo_agua_deficitario": {
+      "titulo": "2.4 Manejo de Agua Deficitario (Semi-inundación)",
+      "definicion": "Inundación parcial 2-5 cm vs 10 cm convencional",
+      "ventajas": [
+        "Reduce consumo agua 30-40%",
+        "Aireación mejor = oxidación raíces (radículas profundizan)",
+        "Energética menor bombeada"
+      ],
+      "desventajas": [
+        "Rendimiento -10-15% vs inundación óptima",
+        "Maleza aumenta (menos agua inhibe algunos)",
+        "Plagas menos sensibilidad (ambiguo)"
+      ],
+      "viabilidad": "Viable si lluvia complementa 500+ mm, o si cultivo ecológico (rendimiento bajo aceptable)"
+    },
+    "maleza_control": {
+      "titulo": "2.5 Control de Maleza Sin Herbicida",
+      "metodos": [
+        {
+          "metodo": "Mulch grueso (5-10 cm)",
+          "efectividad": "70-80% maleza supresor"
+        },
+        {
+          "metodo": "Inundación profunda pre-siembra",
+          "duracion": "2-3 semanas antes siembra",
+          "efecto": "Germinación maleza, luego muerte por anaerobiosis"
+        },
+        {
+          "metodo": "Deshierbe mecánico",
+          "timing": "V4-V8 (manual labor intensiva)"
+        },
+        {
+          "metodo": "Patos/peces control (integración)",
+          "agente": "Patos se alimentan maleza acuática + insectos",
+          "ingreso": "Huevos, carne patos vendible"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.6 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cero labranza funciona arroz inundado?",
+        "respuesta": "SÍ mejor que convencional (microbiota anóxica se mantiene). Mulch retiene sedimentos, beneficiosos. Prueba: parcela testigo año 1-2"
+      },
+      "q2": {
+        "pregunta": "¿Semi-inundación reduce 15% rendimiento vale?",
+        "respuesta": "SÍ si: (1) agua escasa, (2) mercado paga premium orgánico (40-75% extra). Matemática: -15% grano vs +50% precio = GANAR"
+      },
+      "q3": {
+        "pregunta": "¿Patos en arroz son problema?",
+        "respuesta": "NO si población controlada (1-2 patos/100 m²). Menos = no limpia maleza. Más = pisotean plantas, enturbian agua"
+      },
+      "q4": {
+        "pregunta": "¿Abono verde debe ser floración completa?",
+        "respuesta": "ANTES floración (B2 etapa). Máximo biomasa N es pre-floración. Post-floración = semillas caen (riego regenerar maleza)"
+      },
+      "q5": {
+        "pregunta": "¿Nivelación cero labranza es más fácil?",
+        "respuesta": "NO igual dificultad. Suelo más compactado = láser nivelación incluso más importante (no se asienta uniforme)"
+      }
+    ]
+  }
+}

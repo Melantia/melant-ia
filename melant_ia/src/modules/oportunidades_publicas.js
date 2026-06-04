@@ -1,6 +1,9 @@
 // Panel avanzado de Oportunidades Públicas
-export function mostrarPanel(contenedorId = 'app-menu') {
-  const cont = document.getElementById(contenedorId);
+export function mostrarPanel(contenedorId = 'vista-activa') {
+  const cont =
+    document.getElementById(contenedorId) ||
+    document.getElementById('contenedor-principal') ||
+    document.body;
   if (!cont) return;
   cont.innerHTML = `
     <h2>Oportunidades Públicas</h2>

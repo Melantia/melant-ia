@@ -1,0 +1,394 @@
+{
+  "capitulo": 1,
+  "titulo": "Introducción a la Botánica del Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Fundamentos botánicos, historia, características y fisiología de la planta",
+  "contenido": {
+    "introduccion_platano": {
+      "titulo": "1.1 Introducción al Plátano Barraganete",
+      "texto": "El plátano Barraganete (Musa ABB grupo) es cultivar único de origen ecuatoriano, resultado de hibridación natural entre Musa acuminata (genoma A) y Musa balbisiana (genoma B). A diferencia del banano comercial (AAA), el Barraganete se caracteriza por:\n\n(1) Resistencia excepcional a plagas y enfermedades (especialmente Sigatoka Negra)\n(2) Adaptabilidad a altitudes 0-800 m y suelos variados\n(3) Ciclo de cosecha más corto (8-10 meses vs 11-13 del banano)\n(4) Fruto de tamaño medio-grande apto para exportación\n(5) Mayor contenido de almidón (alimento humano directo)\n(6) Importancia económica creciente en Ecuador\n\nEste capítulo presenta fundamentos botánicos necesarios para cultivo exitoso.",
+      "importancia_economica": [
+        "Producción mundial: 120+ millones toneladas banano/plátano (2023)",
+        "Ecuador: segundo productor mundial (8-9 millones toneladas/año)",
+        "Plátano Barraganete: estimado 15-20% de producción ecuatoriana",
+        "Precio: USD 0.80-1.50/kg en fresco (exportación)",
+        "Demanda creciente por resistencia genética"
+      ]
+    },
+    "taxonomia_clasificacion": {
+      "titulo": "1.2 Taxonomía y Clasificación Botánica",
+      "clasificacion_cientifica": {
+        "reino": "Plantae",
+        "division": "Magnoliophyta",
+        "clase": "Monocotyledonae",
+        "orden": "Zingiberales",
+        "familia": "Musaceae",
+        "genero": "Musa",
+        "especie": "M. acuminata (A) × M. balbisiana (B)",
+        "grupo_genomico": "ABB (triploide 3n=27)",
+        "cultivar": "Barraganete"
+      },
+      "diferencias_genomicas": [
+        {
+          "cultivar": "Barraganete",
+          "genoma": "ABB (triploide)",
+          "origen": "Ecuador (mutación natural, ~1930s)",
+          "resistencia": "Muy alta a enfermedades",
+          "tamaño_fruto": "20-30 cm (medio-grande)",
+          "uso": "Exportación, mercado fresco"
+        },
+        {
+          "cultivar": "Cavendish (AAA)",
+          "genoma": "AAA (triploide)",
+          "origen": "Sudeste asiático",
+          "resistencia": "Media (requiere fungicidas)",
+          "tamaño_fruto": "18-25 cm (grande)",
+          "uso": "Exportación mundial"
+        },
+        {
+          "cultivar": "Plantain (AAB)",
+          "genoma": "AAB (triploide)",
+          "origen": "América tropical",
+          "resistencia": "Media",
+          "tamaño_fruto": "25-40 cm (muy grande)",
+          "uso": "Cocción (frito, hervido)"
+        }
+      ]
+    },
+    "origen_distribucion": {
+      "titulo": "1.3 Origen Geográfico y Distribución",
+      "historia_barraganete": {
+        "descubrimiento": "Años 1930s en Ecuador (Provincia de Los Ríos probablemente)",
+        "mecanismo_origen": "Mutación o hibridación natural espontánea entre Musa acuminata y balbisiana",
+        "primeros_cultivos": "Pequeña escala en haciendas tradicionales",
+        "expansion": "Década 1960-1970: reconocimiento de resistencia a Sigatoka Negra",
+        "formalizacion": "Años 1980-1990: programa nacional de mejoramiento genético",
+        "interes_actual": "Cambio climático genera demanda por cultivares resistentes"
+      },
+      "distribucion_mundial": [
+        {
+          "pais": "Ecuador",
+          "hectareas": "250,000-300,000 ha (estimado)",
+          "produccion_anual": "2.5-3.5 millones toneladas",
+          "porcentaje_nacional": "70-80% Cavendish AAA, 15-20% Barraganete, resto plátano"
+        },
+        {
+          "pais": "Colombia",
+          "presencia": "Creciente (importaciones de semilla Ecuador)",
+          "areas_cultivo": "Magdalena, Atlántico"
+        },
+        {
+          "pais": "Perú",
+          "presencia": "Limitada (investigación)",
+          "areas_cultivo": "Yungas, Selva central"
+        },
+        {
+          "pais": "Otros",
+          "presencia": "Experimental (Brasil, Costa Rica, Honduras)"
+        }
+      ]
+    },
+    "morfologia_planta": {
+      "titulo": "1.4 Morfología de la Planta de Plátano Barraganete",
+      "descripcion_general": "Planta herbácea monocotiledónea, con pseudo-tallo perenne que alcanza 5-7 metros de altura",
+      "sistema_radical": {
+        "titulo": "Sistema Radical",
+        "caracteristicas": [
+          "Raíces adventicias fasciculadas (sin raíz pivotante)",
+          "Profundidad: 30-60 cm máximo (mayoría en 0-30 cm)",
+          "Densidad: 400-600 raíces primarias por cormo",
+          "Diámetro: 2-8 mm en raíces primarias",
+          "Ramificación: Secundarias y terciarias abundantes"
+        ],
+        "adaptacion": "Raíces superficiales requieren drenaje excelente, mulch protector contra sequía",
+        "datos_clave": [
+          "Cormo (base subterránea): 10-20 cm diámetro, 5-10 cm profundidad",
+          "Rizoma: estructura que genera hijuelos para regeneración",
+          "Capacidad de succión muy alta (hasta 800-1000 L/planta/día en producción)"
+        ]
+      },
+      "pseudo_tallo": {
+        "titulo": "Pseudo-Tallo",
+        "composicion": "Envainaciones foliares superpuestas, no madera verdadera",
+        "caracteristicas": [
+          "Color: Verde oscuro a gris-verde (varía con edad)",
+          "Altura: 5-7 metros en madurez (Barraganete medio)",
+          "Diámetro: 40-60 cm a nivel base",
+          "Textura: Estriada, flexible, se rompe fácilmente con viento fuerte"
+        ],
+        "datos_tecnicos": [
+          "Densidad: Muy baja (~95% agua)",
+          "Peso húmedo: 70-120 kg de pseudo-tallo maduro",
+          "Durabilidad: Decrece después cosecha, se descompone 3-4 meses",
+          "Importancia estructural: Ancla sistema radical, transporta nutrientes vía haces vasculares"
+        ]
+      },
+      "sistema_foliar": {
+        "titulo": "Hojas",
+        "caracteristicas_generales": [
+          "Tipo: Compuestas pinnadas, muy grandes",
+          "Longitud: 2.5-4.5 metros (Barraganete típicamente 3-3.5 m)",
+          "Ancho: 0.8-1.2 metros",
+          "Color: Verde oscuro brillante (envés más pálido)",
+          "Textura: Lisas con nervadura central muy marcada"
+        ],
+        "estructura_hoja": {
+          "nervadura_central": "Pecíolo (1.5-2 m) + nervio medio muy robusto",
+          "lamina_foliar": "Pinnada: nervios secundarios cada 3-5 cm",
+          "margen": "Entero, a veces ligeras ondulaciones",
+          "resistencia": "Media (tiende a rasgarse con viento fuerte)"
+        },
+        "fisiologia_foliar": {
+          "duracion_hoja": "60-90 días desde emergencia a senescencia",
+          "numero_hojas": "8-12 hojas vivas en cualquier momento",
+          "velocidad_emision": "Una hoja cada 5-7 días",
+          "fotosintesis": "Muy activa (C3), requiere luminosidad alta",
+          "transpiración": "Alta (1000-1500 L/ha/día), requiere riego frecuente"
+        }
+      },
+      "inflorescencia": {
+        "titulo": "Inflorescencia y Reproducción",
+        "caracteristicas": [
+          "Tipo: Racimo compuesto (inflorescencia determinada)",
+          "Ubicación: Terminal (emerge del ápice del pseudo-tallo)",
+          "Estructura: Flores agrupadas en manos (clusters), típicamente 8-16 manos",
+          "Tamaño racimo: 40-60 kg frutos en racimo maduro (Barraganete)"
+        ],
+        "floracion": {
+          "tiempo_emision": "90-120 días después emergencia primeras hojas",
+          "duracion": "30-40 días desde primeras flores a últimas",
+          "temperatura_optima": "25-30°C para desarrollo",
+          "fotoperodo": "13-14 horas (plantas de día largo favorece floración)"
+        },
+        "estructura_flor": {
+          "flores_hermafroditas": "Solo mano basal (primera): flores femeninas funcionales",
+          "flores_masculinas": "Presente en brácteas posteriores (caducas)",
+          "polinizacion": "Principalmente por murciélagos (Artibeus spp.), también insectos",
+          "fecundacion": "Barraganete típicamente sin semillas (partenocarpia apomíctica)"
+        }
+      },
+      "fruto": {
+        "titulo": "Fruto (Mano/Dedos)",
+        "caracteristicas_generales": [
+          "Tipo: Falsa baya (bacciforme, sin semillas)",
+          "Anatomía: Pulpa (endocarpio) rodeada de exocarpio (cáscara) y mesocarpio",
+          "Tamaño Barraganete: 20-30 cm longitud, 4-6 cm diámetro",
+          "Forma: Ligeramente curvado (típico Musa)"
+        ],
+        "caracteristicas_cáscara": {
+          "color_inmaduro": "Verde oscuro",
+          "color_maduro": "Amarillo intenso (exportación), amarillo con puntos negros (consumo)",
+          "grosor": "3-5 mm",
+          "textura": "Lisa a ligeramente rugosa",
+          "desprendimiento": "Fácil (importante para pelado)"
+        },
+        "caracteristicas_pulpa": {
+          "color": "Blanco-cremoso",
+          "textura": "Compacta, harinosa (mayor almidón que banano)",
+          "aroma": "Suave a medio (menos que banano)",
+          "sabor": "Más neutro que banano, ligeramente azucarado",
+          "contenido_almidon": "18-22% (base seca, vs 15-18% banano Cavendish)"
+        },
+        "datos_fisiologicos": [
+          "Crecimiento: Máximo 8-10 mm/día en semana 2-4 post-floración",
+          "Madurez fisiológica: 90-100 días post-floración",
+          "Respiración climatérica: Muy activa post-cosecha (maduración rápida)",
+          "Etileno producción: 5-10 µL/kg/h en maduración (norma para frutos climatéricos)"
+        ]
+      }
+    },
+    "ciclo_biologico": {
+      "titulo": "1.5 Ciclo Biológico Completo",
+      "fases": [
+        {
+          "fase": "1. Fase Juvenil",
+          "duracion": "3-4 meses",
+          "evento_clave": "Hijuelo/vitro de 15-30 cm plantado",
+          "actividad": "Crecimiento radical, 2-3 hojas nuevas",
+          "condiciones": "Requiere riego frecuente, sombra parcial protectora"
+        },
+        {
+          "fase": "2. Fase de Establecimiento",
+          "duracion": "4-6 meses",
+          "evento_clave": "Emergencia pseudo-tallo definitivo, cierre de copa",
+          "actividad": "Aceleración de crecimiento radical y foliar",
+          "numero_hojas": "6-8 hojas vivas",
+          "fotosintesis": "Aumenta exponencialmente"
+        },
+        {
+          "fase": "3. Fase de Crecimiento Vegetativo",
+          "duracion": "3-4 meses",
+          "evento_clave": "Planta alcanza máximo crecimiento foliar",
+          "altura_pseudo_tallo": "4-6 metros",
+          "numero_hojas": "10-12 hojas vivas permanentes",
+          "acumulacion_biomasa": "Máxima"
+        },
+        {
+          "fase": "4. Inducción Floral",
+          "duracion": "2-4 semanas",
+          "evento_clave": "Cambio de meristema apical de vegetativo a reproductivo",
+          "factores": "Temperatura acumulada, fotoperiodo, estado nutricional",
+          "indicio_visual": "Pequeña prominencia en ápice (corazón)"
+        },
+        {
+          "fase": "5. Fase Floral/Reproductiva",
+          "duracion": "1-2 meses",
+          "evento_clave": "Emergencia inflorescencia, antesis (apertura flores)",
+          "racimo": "40-60 kg de frutos en formación",
+          "demanda": "Máxima de nutrientes y agua"
+        },
+        {
+          "fase": "6. Llenado de Fruto",
+          "duracion": "3 meses",
+          "evento_clave": "Crecimiento exponencial de dedos",
+          "peso_diario": "Incremento 50-100 g/día por racimo",
+          "consumo": "Pico de transpiración y absorción"
+        },
+        {
+          "fase": "7. Madurez y Cosecha",
+          "duracion": "1-2 semanas",
+          "evento_clave": "Racimo alcanza 95% tamaño definitivo, cosecha",
+          "edad_total": "9-10 meses desde plantación (Barraganete)",
+          "peso_racimo_final": "40-60 kg (depende manejo)"
+        }
+      ],
+      "ciclo_total": "9-10 meses para Barraganete (vs 11-13 banano AAA)"
+    },
+    "requerimientos_ambientales": {
+      "titulo": "1.6 Requerimientos Ambientales",
+      "temperatura": {
+        "optima": "25-30°C promedio anual",
+        "rango_tolerancia": "18-35°C (fuera daña fisiología)",
+        "barraganete_caracteristicas": "Mejor tolerancia a temperaturas bajas (16-18°C) que Cavendish",
+        "efectos_frio": [
+          "T < 16°C: Reduce crecimiento, ralentiza maduración fruto",
+          "T < 13°C: Daño frío (estrés oxidativo, manchas marrones)",
+          "T prolongada 14-16°C: Falla floración"
+        ],
+        "efectos_calor": [
+          "T > 35°C: Estrés hídrico, quemadura foliar",
+          "T > 38°C: Daño tejido, necrosis", 
+          "Pero: Barraganete más resistente a calor que Cavendish (2-3°C más tolerancia)"
+        ]
+      },
+      "precipitacion": {
+        "optima": "2000-3000 mm/año bien distribuida",
+        "distribucion": "Preferible 6 meses secos max 60 días consecutivos",
+        "barraganete_caracteristicas": "Adapta bien a 1500-2500 mm (más tolerante a sequía que Cavendish)",
+        "exceso_lluvia": [
+          "> 3500 mm/año: Aumento plagas/enfermedades",
+          "Hidromorfismo: Raíces superficiales saturan fácilmente"
+        ],
+        "deficit_agua": [
+          "< 1500 mm: Requiere riego intensivo (800-1200 mm/año adicionado)",
+          "Efecto: Crecimiento lento, racimos pequeños"
+        ]
+      },
+      "luz_fotoperiodo": {
+        "luz_optima": "1800-2000 horas sol/año",
+        "fotoperiodo": "Planta sensible: 13-14 horas favorece floración",
+        "efectos_sombra": [
+          "Sombra excesiva: Reducción fotosíntesis 30-50%",
+          "Serio: Alarga ciclo, reduce rendimiento 25-40%"
+        ],
+        "barraganete_tolerancia": "Buena tolerancia a sombra parcial (40-60% luz) sin afectar significativamente",
+        "importancia": "Permite sistemas agroforestales (café/plátano, cacao/plátano)"
+      },
+      "humedad_relativa": {
+        "optima": "70-85% HR",
+        "baja_hr": [
+          "HR < 60%: Incrementa transpiración, estrés hídrico",
+          "Riesgo: Daño foliar por quemadura"
+        ],
+        "alta_hr": [
+          "HR > 85% prolongada: Favorece Sigatoka Negra, otras enfermedades",
+          "Barraganete: Resistencia genética mitiga este riesgo (vs AAA vulnerable)"
+        ]
+      },
+      "altitud": {
+        "optima": "0-200 m (tierra caliente)",
+        "rango_barraganete": "0-800 m (excepcional respecto Cavendish: 0-600 m)",
+        "caracteristicas_altitud": [
+          "0-300 m: Óptima, crecimiento máximo, ciclo 9-10 meses",
+          "300-500 m: Buena (ciclo 10-11 meses, temperatura 2-3°C menor)",
+          "500-800 m: Aceptable para Barraganete (ciclo 11-12 meses, tolerancia genética)",
+          "> 800 m: Crecimiento muy lento, ciclo > 12 meses, poco viable económico"
+        ]
+      },
+      "suelo": {
+        "tipo_optimo": "Franco-volcánico, profundo (>1 m), bien drenado",
+        "pH_optimo": "6.0-7.5",
+        "tolerancia_ph": "5.5-8.0 (Barraganete muy tolerante a acidez)",
+        "fertilidad": "Requiere alto (Barraganete demanda más que Cavendish)",
+        "capacidad_intercambio": "CIC > 15 meq/100g suelo (preferible)",
+        "contaminantes": "Sensible a exceso sal (conductividad < 2 dS/m idealmente)"
+      }
+    },
+    "fisiologia_crecimiento": {
+      "titulo": "1.7 Fisiología de Crecimiento y Desarrollo",
+      "crecimiento_alometrico": {
+        "titulo": "Crecimiento Alométrico",
+        "patron": "Planta sigue patrón de crecimiento acelerado: Fase lag (lenta) → Fase exponencial (rápida) → Fase plateau (estabilización)",
+        "duracion_fases": [
+          "Lag: 0-60 días (establecimiento radical)",
+          "Exponencial: 60-240 días (máximo crecimiento height, leaf area)",
+          "Plateau: 240+ días (producción mantenimiento, enfoque en reproducción)"
+        ]
+      },
+      "indice_area_foliar": {
+        "ial_optimo": "3-4 m² área foliar / m² suelo",
+        "importancia": "Correlación directa con fotosíntesis bruta",
+        "barraganete_caracteristicas": "IAL máximo 3.5 (ligeramente menor que Cavendish 4.0)",
+        "implicacion": "Menos exigente en luz, mejor en sistemas intercalados"
+      },
+      "tasa_fotosintesis": {
+        "fotosintesis_bruta": "15-25 µmol CO₂/m²/s (pleno sol, óptima temperatura)",
+        "fotosintesis_neta": "8-12 µmol CO₂/m²/s (después compensar respiración)",
+        "punto_compensacion": "20-30 µmol fotones/m²/s (umbral luz)",
+        "punto_saturacion": "800-1200 µmol fotones/m²/s (no necesita más luz)"
+      },
+      "transpiración": {
+        "tasa_transpiración": "4-8 mm/día en condiciones óptimas",
+        "consumo_agua_ciclo": "1200-1800 mm/ciclo (riego + lluvia)",
+        "barraganete_eficiencia": "Ligero ahorro hídrico vs Cavendish (10-15% menos transpirante)",
+        "implicacion": "Requiere menos riego en zonas semiáridas"
+      },
+      "particion_biomasa": {
+        "distribucion_maduro": [
+          "Raíces: 10-15%",
+          "Pseudo-tallo: 20-25%",
+          "Hojas: 15-20%",
+          "Racimo (fruto): 45-50% (al momento cosecha)"
+        ],
+        "enfoque_cultivo": "Cultivo orientado a reproducción (racimo): 45-50% biomasa total"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.8 Preguntas Frecuentes - Botánica del Plátano Barraganete",
+      "q1": {
+        "pregunta": "¿Cuál es la diferencia exacta entre Barraganete y banano Cavendish?",
+        "respuesta": "Genómicamente: Barraganete es ABB (triploide con dos genomas B), Cavendish es AAA (triploide con tres genomas A). Prácticamente: Barraganete resiste Sigatoka Negra sin fungicidas, ciclo 1-3 meses más corto, mejor adaptación altitud 500-800 m, sabor más neutro. Cavendish es más grande, comercialmente establecido, pero requiere fungicidas costosos"
+      },
+      "q2": {
+        "pregunta": "¿Por qué es importante que el Barraganete sea de origen ecuatoriano?",
+        "respuesta": "Porque fue seleccionado naturalmente en condiciones agroecológicas ecuatorianas (altitudes, lluvias, suelos volcánicos). Significa que está adaptado genéticamente a estas condiciones. Además, Ecuador controla germoplasma, tiene experiencia de 80+ años, y cultivar es patrimonio agrícola nacional"
+      },
+      "q3": {
+        "pregunta": "¿A qué edad exacta florece el Barraganete?",
+        "respuesta": "Típicamente 90-120 días después de emergencia del tallo vegetativo definitivo. En un ciclo total: floración ocurre alrededor de mes 5-6 después de plantación. Depende de temperatura acumulada, luminosidad, y manejo nutricional"
+      },
+      "q4": {
+        "pregunta": "¿Es cierto que Barraganete tiene mayor contenido de almidón?",
+        "respuesta": "Sí. Barraganete tiene 18-22% almidón (base seca) vs Cavendish 15-18%. Esto lo hace más adecuado para cocción (frito) y productos derivados (harina). Para consumo en fresco (cru), Cavendish es más dulce por mayor contenido azúcar"
+      },
+      "q5": {
+        "pregunta": "¿Cuál es la profundidad de las raíces del plátano?",
+        "respuesta": "80-90% de raíces están en primer metro de suelo, pero máxima profundidad es 1.5-2 metros si hay drenaje. Esto explica por qué requiere buen drenaje (raíces superficiales saturan fácilmente) pero también por qué puede acceder agua profunda en sequía"
+      },
+      "q6": {
+        "pregunta": "¿Por qué el Barraganete es resistente a Sigatoka Negra?",
+        "respuesta": "Por genoma B (de Musa balbisiana). Este genoma contiene genes de resistencia a patógenos. Cavendish (AAA) carece de estos genes. La resistencia es poligénica (múltiples genes), no es inmunidad total, pero reduce enfermedad 80-90% vs Cavendish sin fungicidas"
+      }
+    ]
+  }
+}

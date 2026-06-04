@@ -1,0 +1,233 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Café",
+  "cultivo": "Café",
+  "seccion": "Enfermedades fúngicas, bacterianas, virales, identificación, prevención, manejo",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Introducción a Enfermedades del Café",
+      "enfermedades_principales": [
+        "Roya del café (Hemileia vastatrix): ENFERMEDAD #1 MUNDIAL",
+        "Ojo de pollo/Antracnosis (Colletotrichum spp.): ENFERMEDAD #2",
+        "Pudrición negra (Xanthomonas axonopodis): Bacteriana",
+        "Mancha angular (Isariopsis claudicans): Menor",
+        "Virus mosaico (Coffee leaf rust virus, etc.): Raro en Ecuador"
+      ],
+      "caracteristica": "Café arabica Ecuador tiene RESISTENCIA relativa a Roya (vs robusta vulnerabilidad), pero Antracnosis es frecuente"
+    },
+    "roya_cafe": {
+      "titulo": "5.2 Roya del Café (Hemileia vastatrix) - ENFERMEDAD #1 MUNDIAL",
+      "descripcion": "Hongo basidiomiceto, causa pústulas polvo anaranjado-herrumbre",
+      "importancia": "Destruyó 30% producción América Central 2012-2015 (epidemia)",
+      "ciclo_biologico": [
+        {
+          "etapa": "Espora uredosporas",
+          "dispersión": "Viento, agua, salpicadura",
+          "germinacion": "Estoma foliar (envés) en presencia agua 6-8 horas"
+        },
+        {
+          "etapa": "Infección",
+          "duracion": "7-21 días (depende clima, temperatura 18-25°C optima)",
+          "ubicacion": "Pústulas polvo anaranjado en envés hoja"
+        },
+        {
+          "etapa": "Esporulación",
+          "nueva_dispersión": "Nuevas sporas en 10-14 días"
+        }
+      ],
+      "generaciones": "4-8 generaciones/año (Ecuador)",
+      "sintomas": [
+        "Envés hoja: Pústulas polvo color naranja/rojizo (observar con lupa)",
+        "Haz hoja: Area clorótica amarilla (vs anaranjado envés)",
+        "Progresión: Defoliación progresiva, caída hoja",
+        "Severidad: Puede causar pérdida 30-90% rendimiento"
+      ],
+      "condiciones_favorables": [
+        "Humedad: > 90% (niebla, lluvia)",
+        "Temperatura: 15-24°C optima",
+        "Altitud: 1,000-1,800 m (Ecuador zona roya)",
+        "Sombra excesiva: > 60% (baja aireo, roya progresa)"
+      ],
+      "resistencia_variedades": [
+        "Arabica: Variedad Bourbon, Caturra: SUSCEPTIBLE",
+        "Robusta: RESISTENTE (pero no cultivada Ecuador)",
+        "Híbridos: Timor híbrido, Catimor: Resistencia intermedia (mejora Arabica)"
+      ],
+      "control_preventivo": [
+        "Distancia plantación: 3 m × 2 m (aireo adecuado)",
+        "Sombra: 30-40% (evitar > 50%)",
+        "Fertilización: N balanceado (exceso N predispone roya)",
+        "Limpieza: Remover hojas enfermas caídas"
+      ],
+      "control_quimico": [
+        {
+          "producto": "Cobre (Hidroxido cúprico 50%)",
+          "dosis": "3-4 kg/ha",
+          "frecuencia": "Cada 15-21 días (época roya: junio-octubre)",
+          "aplicacion": "Pulverización foliar (especialmente envés)",
+          "costo": "USD 4-8/kg"
+        },
+        {
+          "producto": "Azufre 80%",
+          "dosis": "2-3 kg/ha",
+          "limitacion": "Menos efectivo que cobre, pero alternativa"
+        },
+        {
+          "producto": "Triazoles (Hexaconazol, Tebuconazol)",
+          "dosis": "1-1.5 L/ha",
+          "frecuencia": "Cada 21 días",
+          "ventaja": "Altamente efectivo, residual",
+          "costo": "USD 20-30/L"
+        }
+      ]
+    },
+    "antracnosis_ojo_pollo": {
+      "titulo": "5.3 Antracnosis/Ojo de Pollo (Colletotrichum spp.)",
+      "descripcion": "Hongo, mancha circular hoja con punto negro central",
+      "importancia": "MÁS FRECUENTE Ecuador que Roya en altitud baja-media",
+      "sintomas": [
+        "Hoja: Mancha redondeada 1-5 mm, borde marrón, centro gris (aspecto 'ojo')",
+        "Fruto: Lesión similar, puede causar deformación/podredumbre",
+        "Rama: Cancros (lesiones alargadas)"
+      ],
+      "ciclo": [
+        "Espora: Lluvia dispersión",
+        "Infección: 12-36 horas con agua",
+        "Síntoma: 5-7 días visible",
+        "Generaciones: 5-6/año"
+      ],
+      "condiciones": [
+        "Lluvia frecuente (> 150 mm/mes)",
+        "Temperatura: 20-28°C (más alta que Roya)",
+        "Altitud: 600-1,600 m preferible (vs Roya 1,000-1,800)"
+      ],
+      "control": [
+        {
+          "medida": "Preventivo",
+          "acciones": "Poda removing ramas enfermas, fertilización N balanceada, aireo"
+        },
+        {
+          "medida": "Químico",
+          "opciones": [
+            "Cobre (Hidroxido cúprico) 3-4 kg/ha cada 15 días",
+            "Triazoles 1-1.5 L/ha cada 21 días",
+            "Benomilo (Benlate) 500 ppm spray"
+          ]
+        }
+      ]
+    },
+    "pudicion_negra": {
+      "titulo": "5.4 Pudrición Negra (Xanthomonas axonopodis) - Enfermedad Bacteriana",
+      "descripcion": "Bacteria Gram-negativa, causa necrosis fruto negro",
+      "sintomas": [
+        "Fruto: Mancha pequeña marrón oscuro → negra hundida (necrosis)",
+        "Progresión: Rápida, fruto puede pudrirse completo",
+        "Rechazo: Defecto no aceptable en export"
+      ],
+      "transmisión": [
+        "Agua salpicadura (lluvia, riego)",
+        "Heridas (rama quebrada, daño insecto)"
+      ],
+      "condiciones": [
+        "Lluvia intensas (> 200 mm/mes)",
+        "Temperatura: 25-30°C (calor + humedad)"
+      ],
+      "control": [
+        "Evitar heridas rama (no poda agresiva época lluvia)",
+        "Drenaje adecuado (evita encharcamiento)",
+        "Cobre preventivo en épocas de alto riesgo",
+        "Sin antibióticos bacterianos disponibles (limitación)"
+      ]
+    },
+    "virus_mosaico": {
+      "titulo": "5.5 Virus Mosaico y Roseta del Café (Virus Varios)",
+      "descripcion": "Virus transmitidos por nematodo (Xiphinema index) o insecto",
+      "sintomas": [
+        "Hoja: Mosaico amarillo verde (falta uniformidad color)",
+        "Crecimiento: Retardado, enanismo",
+        "Producción: Muy baja o nula"
+      },
+      "frecuencia": "RARO en Ecuador (clima seco relativo en altitud)",
+      "prevención": "Germoplasma certificado libre virus (vitro-plantas recomendado)",
+      "control": "No existe una vez establecido (erradicación de plantas)"
+    },
+    "manejo_integrado_enfermedades": {
+      "titulo": "5.6 Manejo Integrado de Enfermedades (MID)",
+      "pilares_prevencion": [
+        "Varietal: Elegir Bourbon/Caturra con cierta tolerancia (no inmunidad)",
+        "Cultural: Poda aireo, drenaje, limpieza residuos",
+        "Ambiental: Distancia plantación 3×2 m, sombra 30-40%",
+        "Nutricional: Fertilización balanceada (N moderado, K suficiente)",
+        "Químico: Aplicaciones preventivas (inicio síntomas, no esperar severo)"
+      ],
+      "calendario_preventivo": [
+        {
+          "mes": "Enero-Marzo",
+          "evento": "Inicio crecimiento vegetativo",
+          "enfermedad_riesgo": "Antracnosis bajo, Roya muy bajo",
+          "accion": "Monitoreo, limpieza hojas viejas"
+        },
+        {
+          "mes": "Abril-Junio",
+          "evento": "Floración, inicio lluvia creciente",
+          "enfermedad_riesgo": "Antracnosis aumenta, Roya inicia",
+          "accion": "Primera pulverización cobre/triazol mes 5-6"
+        },
+        {
+          "mes": "Julio-Octubre",
+          "evento": "Lluvia máxima, fruto en desarrollo",
+          "enfermedad_riesgo": "Roya MÁXIMA (junio-octubre), Antracnosis alta",
+          "accion": "Pulverizaciones cada 15-21 días cobre o triazoles"
+        },
+        {
+          "mes": "Noviembre-Diciembre",
+          "evento": "Cosecha, lluvia disminuye",
+          "enfermedad_riesgo": "Enfermedades decrecen",
+          "accion": "Espaciar pulverizaciones"
+        }
+      ]
+    },
+    "diagnostico_laboratorio": {
+      "titulo": "5.7 Diagnóstico de Laboratorio",
+      "muestreo": [
+        "Colectar 10-15 hojas con síntoma + borde sano",
+        "Colectar fruto con lesión",
+        "Mantener húmedo, protegido luz solar",
+        "Enviar laboratorio dentro 24-48 h"
+      ],
+      "pruebas_disponibles": [
+        "Microscopía (observación espora característica)",
+        "Cultivo (crecimiento hongo en agar)",
+        "PCR (identificación precisa, costo alto)",
+        "ELISA (virus detección)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.8 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Cómo sé si tengo Roya vs Antracnosis?",
+        "respuesta": "Roya: Polvillo naranja ENVÉS hoja (lupa), hoja amarilla lado superior. Antracnosis: Mancha redondeada borde marrón AMBOS lados hoja, punto negro centro (aspecto ojo)"
+      },
+      "q2": {
+        "pregunta": "¿Es Roya peligrosa en Ecuador?",
+        "respuesta": "En altitud > 1,200 m SÍ (zona Roya). Menos problema altitud baja 600-900 m. Arabica Ecuador tiene relativa resistencia, pero no inmunidad"
+      },
+      "q3": {
+        "pregunta": "¿Qué fungicida es mejor cobre o triazol?",
+        "respuesta": "Triazol (Hexaconazol) es más moderno, residual, menos aplicaciones. Cobre es económico, orgánico aceptado. Triazol USD 20-30/L vs Cobre USD 4-8/kg"
+      },
+      "q4": {
+        "pregunta": "¿Se puede certificar orgánico café con Roya?",
+        "respuesta": "Sí, usando cobre (permitido orgánico) + manejo cultural. Rendimiento puede bajar 20-30%, pero comando precio premium compensa"
+      },
+      "q5": {
+        "pregunta": "¿Cuándo inicio pulverizaciones?",
+        "respuesta": "Antes de ver enfermedad. Típicamente: Pulverizaciones iniciar mes 5-6 (inicio lluvia, antes Roya severa) cada 15-21 días hasta mes 10"
+      },
+      "q6": {
+        "pregunta": "¿Hay variedad café inmune a Roya?",
+        "respuesta": "NO. Robusta es resistente (pero no cultivada Ecuador). Catimor tiene resistencia intermedia (híbrido Timor × Arabica). Bourbon/Caturra son susceptibles pero tolerantes"
+      }
+    ]
+  }
+}

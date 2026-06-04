@@ -1,0 +1,117 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Procesamiento Arroz Agroecológico",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Cosecha selectiva, almacenaje natural, molinería integrada, subproductos",
+  "contenido": {
+    "introduccion": {
+      "titulo": "6.1 Introducción a Cosecha Regenerativa",
+      "texto": "Arroz agroecológico cosecha selectiva (plantas sanas solo), permite semilla propia perpetuación. Almacenaje natural (baja humedad, frío natural) evita fungicida postcosecha. Molinería: aprovechamient total (harina para gallinas, salvado compost, cáscara energía)."
+    },
+    "seleccion_plantas_semilla": {
+      "titulo": "6.2 Selección de Plantas Semilla",
+      "criterios": [
+        {
+          "criterio": "Sanidad",
+          "rechazo": "Enfermedad foliar/vascular, plagas"
+        },
+        {
+          "criterio": "Panícula",
+          "especifico": "Forma regular, granos uniformes, madurez homogénea"
+        },
+        {
+          "criterio": "Grano",
+          "especifico": "Color uniforme, vitreosidad 40-60%, tamaño mediano-grande"
+        }
+      ],
+      "proporcion": "Seleccionar 5-10% mejores panojas (100 panojas/hectárea semilla mínimo)",
+      "costo": "Labor selectiva USD 30-50/hectárea"
+    },
+    "cosecha_manual": {
+      "titulo": "6.3 Cosecha Manual Selectiva",
+      "metodo": [
+        "Hoz uso tradicional (corte tallos)",
+        "Atado en gavillas 2-3 kg",
+        "Transporte galpón inmediato"
+      ],
+      "costo": "USD 100-200/hectárea (labor intensiva)",
+      "ventaja": "Selección durante cosecha (rechaza enfermedad)"
+    },
+    "secado_natural": {
+      "titulo": "6.4 Secado Natural",
+      "metodo": [
+        {
+          "sistema": "Tendal solar (piso firme, cobertura lluvia)",
+          "duracion": "7-14 días (Ecuador clima)"
+        },
+        {
+          "sistema": "Galpón ventilado",
+          "duracion": "10-21 días (más lento, mejor calidad)"
+        }
+      ],
+      "humedad_final": "12-13% (medidor humedad recomendado)",
+      "costo": "USD 0 labor (productor mismo)"
+    },
+    "almacenaje_grano": {
+      "titulo": "6.5 Almacenaje Agroecológico",
+      "material": [
+        {
+          "envase": "Sacos tela (transpirable)",
+          "ventaja": "Costo bajo, fácil manejable"
+        },
+        {
+          "envase": "Silo hermético (vidrio, lata)",
+          "ventaja": "Long-term (1-3 años), máxima calidad"
+        }
+      ],
+      "condiciones": [
+        "Humedad: 12-13%",
+        "Temperatura: Frío (15-20°C) lentitud respiración",
+        "Luz: Oscuridad (inhibe germinación)",
+        "Plagas: Desecante (gel silicio) previene insectos"
+      ]
+    },
+    "molineria_integrada": {
+      "titulo": "6.6 Molinería Agroecológica Integrada",
+      "proceso": [
+        {
+          "paso": "Limpieza grano",
+          "objetivo": "Piedra, suciedad",
+          "residuo": "Grano muerto → alimento gallinas"
+        },
+        {
+          "paso": "Descascarado",
+          "residuo": "Cáscara 18-20% → energía (quema calderas, biogás), cama animal"
+        },
+        {
+          "paso": "Pulimento",
+          "residuo": "Salvado 8-12% → alimento ganadería (proteína 12-15%), compost"
+        }
+      ],
+      "rendimiento": "65-70% grano blanco (idéntico convencional)"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.7 Preguntas Frecuentes - Cosecha",
+      "q1": {
+        "pregunta": "¿Cosecha selectiva semilla cuesta mucho?",
+        "respuesta": "USD 30-50/hectárea labor extra. Año 1 inversión. Años 2+ semilla propia = USD 0 compra (perpetuo ahorrado USD 200-300/hectárea)"
+      },
+      "q2": {
+        "pregunta": "¿Secado natural es suficiente Ecuador?",
+        "respuesta": "SÍ clima ecuatorial. 7-14 días solar típico. Monitoreo humedad (no > 13%) previene hongo postcosecha"
+      },
+      "q3": {
+        "pregunta": "¿Grano agroecológico se vende premium?",
+        "respuesta": "SÍ si certificado orgánico (40-75% premium). Sin certificación: USD 0.15-0.20/kg vs convencional igual"
+      },
+      "q4": {
+        "pregunta": "¿Cáscara arroz tiene mercado?",
+        "respuesta": "SÍ. Energía (quema calderas = electricidad), cama animal, compost. Valor USD 10-30/tonelada"
+      },
+      "q5": {
+        "pregunta": "¿Salvado es contaminante?",
+        "respuesta": "NO alimenticio. Alimento ganado, compost. Reutilización integral = CERO desperdicio sistema"
+      }
+    ]
+  }
+}

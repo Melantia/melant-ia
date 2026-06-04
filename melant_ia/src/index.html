@@ -7,6 +7,53 @@
     <title>MELANTIA</title>
     <link rel="manifest" href="manifest.json" />
     <script src="https://unpkg.com"></script>
+    <script>
+      (function bootstrapMelantiaSignalBridge() {
+        if (typeof window === 'undefined') return;
+        if (window.MelantiaSignalBridge) return;
+
+        const nativeBridge = window.MelantiaSignalBridgeNative;
+        if (!nativeBridge || typeof nativeBridge.getCurrentRSSI !== 'function') {
+          return;
+        }
+
+        const callbacks = [];
+        const callbackName = '__melantiaOnSignalChanged';
+
+        window[callbackName] = function onSignalChangedFromNative(rssi) {
+          callbacks.forEach((cb) => {
+            try {
+              cb(Number(rssi));
+            } catch {
+              // Ignorar callbacks defectuosos.
+            }
+          });
+        };
+
+        if (typeof nativeBridge.registerSignalCallback === 'function') {
+          nativeBridge.registerSignalCallback(callbackName);
+        }
+
+        window.MelantiaSignalBridge = {
+          getCurrentRSSI() {
+            return Number(nativeBridge.getCurrentRSSI());
+          },
+          async startSignalMonitor() {
+            if (typeof nativeBridge.startSignalMonitor === 'function') {
+              nativeBridge.startSignalMonitor();
+            }
+          },
+          async stopSignalMonitor() {
+            if (typeof nativeBridge.stopSignalMonitor === 'function') {
+              nativeBridge.stopSignalMonitor();
+            }
+          },
+          onSignalChanged(cb) {
+            if (typeof cb === 'function') callbacks.push(cb);
+          },
+        };
+      })();
+    </script>
 
     <link
       rel="icon"
@@ -240,12 +287,18 @@
               const btnVoz = document.getElementById('btn-voz-general');
               if (btnVoz) {
                 btnVoz.addEventListener('click', async function() {
-                  // Aquí puedes poner tu lógica de reconocimiento de voz y decidir el submódulo
-                  // Por defecto, abre el panel principal del Asistente Técnico Rural
-                  if (window.activarSubmoduloRural) {
-                    await window.activarSubmoduloRural('Asistente Técnico en Cultivos');
-                  } else if (window.cargarDatosModulo) {
-                    window.cargarDatosModulo(2, 'Asistente Técnico Rural');
+                  try {
+                    await import('./modules/voz_interaccion_app.js');
+                    if (typeof window.activarVozMelantia === 'function') {
+                      await window.activarVozMelantia();
+                    }
+                  } catch (error) {
+                    console.error('[MELANTIA VOZ] Error activando mando de voz:', error);
+                    if (window.vozValentina) {
+                      window.vozValentina('No pude iniciar el mando de voz.');
+                    } else {
+                      alert('No pude iniciar el mando de voz.');
+                    }
                   }
                 });
               }
@@ -253,10 +306,18 @@
               const btnFoto = document.getElementById('btn-foto-rural');
               if (btnFoto) {
                 btnFoto.addEventListener('click', async function() {
-                  if (window.activarSubmoduloRural) {
-                    await window.activarSubmoduloRural('Visión Artificial');
-                  } else if (window.cargarDatosModulo) {
-                    window.cargarDatosModulo(2, 'Asistente Técnico Rural');
+                  try {
+                    await import('./modules/02_asistente_tecnico_rural/nexo_carga_dinamica_id2.js');
+                    if (typeof window.abrirFlujoFotoRuralID2 === 'function') {
+                      await window.abrirFlujoFotoRuralID2();
+                    }
+                  } catch (error) {
+                    console.error('[MELANTIA FOTO] Error abriendo flujo ID2:', error);
+                    if (window.activarSubmoduloRural) {
+                      await window.activarSubmoduloRural('Visión Artificial');
+                    } else if (window.cargarDatosModulo) {
+                      window.cargarDatosModulo(2, 'Asistente Técnico Rural');
+                    }
                   }
                 });
               }
@@ -327,10 +388,11 @@
 
     <!-- Tren de carga modularizado MELANTIA -->
     <script src="modules/app_core.js"></script>
-    <script src="modules/melantio_ui.js"></script>
     <script src="modules/modulo_negocios.js"></script>
     <!-- Puedes agregar aquí otros módulos según necesidad -->
-    <script src="main_controller.js"></script>
+     <script src="modules/app_structure_melant_ia.js"></script>
+   <script src="main_controller.js"></script
+    
     <!-- Footer institucional MELANTIA -->
     <footer
       style="

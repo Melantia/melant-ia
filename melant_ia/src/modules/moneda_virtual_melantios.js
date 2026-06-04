@@ -1,13 +1,3 @@
-export function mostrarPanel() {
-  const cont = document.getElementById('contenedor-principal') || document.body;
-  cont.innerHTML = `
-    <div class="panel-hub" style="max-width:700px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
-      <h2 style='color:#fbc02d;text-align:center;margin-bottom:24px;'>Moneda Virtual Melantios</h2>
-      <p>Consulta, transfiere y utiliza tus Melantios en el ecosistema MELANTIA.</p>
-      <button onclick="window.volverAlMenuPrincipal()" style="margin-top:32px;background:#fbc02d;color:#fff;padding:10px 28px;border:none;border-radius:8px;font-size:1em;cursor:pointer;">Volver al menú principal</button>
-    </div>
-  `;
-}
 // Moneda Virtual Melantios — Módulo centralizado
 // Submódulo de Suscripciones
 // Aquí se centraliza toda la lógica de Melantios: saldo, historial, conversión, reglas, premios, fidelidad, formas de ganar, y mantenimiento de políticas.
@@ -145,7 +135,7 @@ function mostrarPanelMonedaVirtualMelantios(contenedorId = 'app-menu') {
     btn.addEventListener('click', () => {
       if (puedeCanjear) {
         alert(
-          '¡Canje de Melantios habilitado! Aquí irá la lógica de canje real.'
+          'Canje habilitado. Selecciona un producto elegible para aplicar hasta el 25% con Melantios.'
         );
       } else {
         alert(
@@ -159,9 +149,6 @@ function mostrarPanelMonedaVirtualMelantios(contenedorId = 'app-menu') {
 // Exponer globalmente para el cargador de submódulos y toda la app
 window.mostrarPanelMonedaVirtualMelantios = mostrarPanelMonedaVirtualMelantios;
 window.MelantiosCore = MelantiosCore;
+export const mostrarPanel = mostrarPanelMonedaVirtualMelantios;
 // Export para import dinámico y compatibilidad con enrutador
-export {
-  mostrarPanelMonedaVirtualMelantios,
-  mostrarPanelMonedaVirtualMelantios as mostrarPanel,
-  MelantiosCore,
-};
+export { mostrarPanelMonedaVirtualMelantios, MelantiosCore };

@@ -1,0 +1,94 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Tizón tardío resistencia parcial, rotación, prevención cultural, fungi naturales",
+  "contenido": {
+    "introduccion": {
+      "titulo": "5.1 Introducción Enfermedades Papa Nativa",
+      "texto": "Papa nativa = RESISTENCIA parcial enfermedades fúngicas (vs convencional totalmente susceptible). Tizón tardío causa daño 30-40% vs convencional 50-80% sin fungicida. Manejo: rotación cultivos + variedad + prevención cultural (drenaje, aireación)."
+    },
+    "tizon_resistencia_parcial": {
+      "titulo": "5.2 Tizón Tardío - Resistencia Genética",
+      "genes": [
+        {
+          "gen": "R1, R2, R3 (resistencia)",
+          "ubicacion": "Papa nativa = muchos alelos R",
+          "convencional": "Pocos alelos R (suceptible)"
+        }
+      ],
+      "efecto": [
+        "Incidencia tizón 30-40% vs convencional 80-100%",
+        "Fungicida MENOS crítico (pero aún recomendado lluvia extrema)"
+      ],
+      "manejo": [
+        {
+          "estrategia": "Prevención cultural",
+          "practicas": ["Drenaje", "Aireación", "Destrucción residuos"]
+        },
+        {
+          "estrategia": "Fungicida selectivo",
+          "productos": ["Azufre mojable (menos tóxico)", "Sulfato cobre (si presión alta)"]
+        }
+      ]
+    },
+    "sarna_rotacion": {
+      "titulo": "5.3 Sarna Común - Rotación Clave",
+      "problema": "Bacteria suelo ACUMULA año tras año",
+      "solucion": [
+        "Rotación minimo 2 años (papa año 1, otros cultivos año 2-3)",
+        "Mejor: papas nativas diferentes años (bacteria especializada)"
+      ]
+    },
+    "virus_baja_presion": {
+      "titulo": "5.4 Virus - Presión Baja",
+      "razon": [
+        {
+          "factor": "Semilla propia sin certifiación = virus presente",
+          "adaptacion": "Papa nativa = tolerancia virus (vs convencional susceptible)"
+        },
+        {
+          "factor": "Ciclo largo (120-180 días) = tiempo recuperación planta"
+        }
+      ],
+      "manejo": [
+        "Selección rigurosa semilla (rechazar plantas síntomas)",
+        "Rotación cultivos (rompe ciclo vector insecto)"
+      ]
+    },
+    "antagonistas_naturales": {
+      "titulo": "5.5 Antagonistas Naturales - Hongos Beneficiosos",
+      "trichoderma": {
+        "beneficio": "Micoparasitismo Phytophthora, ocupación nicho",
+        "fuente": "Compost andino = naturalmente presente"
+      },
+      "bacillus": {
+        "beneficio": "Antagonismo bacteria sarna",
+        "fuente": "Microorganismos suelo andino"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.6 Preguntas Frecuentes - Enfermedades Nativa",
+      "q1": {
+        "pregunta": "¿Papa nativa no necesita fungicida?",
+        "respuesta": "NO fungicida raro necesario si rotación + drenaje bueno. Lluvia extrema = aplicación preventiva 1-2 veces (vs convencional 5-6 veces)"
+      },
+      "q2": {
+        "pregunta": "¿Resistencia nativa es 100%?",
+        "respuesta": "NO = parcial (30-40% protección). Lluvia muy intenso = tizón puede aparecer. Pero riesgo MUCHO menor"
+      },
+      "q3": {
+        "pregunta": "¿Azufre mojable es seguro?",
+        "respuesta": "SÍ muy seguro (fungicida más antiguo = bajo riesgo ambiental). Costo USD 20-30/hectárea"
+      },
+      "q4": {
+        "pregunta": "¿Rotación 1 año es suficiente sarna?",
+        "respuesta": "INSUFICIENTE = mínimo 2 años. Si año 1 papa-año 2 arroz-año 3 papa = 2 años descanso bacteria sarna"
+      },
+      "q5": {
+        "pregunta": "¿Semilla propia con virus afecta rendimiento?",
+        "respuesta": "Mínimamente (10-15% reducción vs libre virus). Papa nativa tolera virus mejor = convencional cae 50%+ igual virus"
+      }
+    ]
+  }
+}

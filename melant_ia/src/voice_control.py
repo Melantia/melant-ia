@@ -1,10 +1,22 @@
 
-python
 import os
 import json
 import queue
-import sounddevice as sd
-from vosk import Model, KaldiRecognizer
+
+try:
+    import sounddevice as sd
+except ImportError:
+    print("Warning: sounddevice not installed. Install with: pip install sounddevice")
+    sd = None  # type: ignore
+except Exception:
+    print("Warning: sounddevice not installed. Install with: pip install sounddevice")
+    sd = None  # type: ignore
+
+try:
+    from vosk import Model, KaldiRecognizer
+except ImportError:
+    Model = None
+    KaldiRecognizer = None
 
 class OidoValentina:
     def __init__(self):

@@ -1,15 +1,37 @@
 // Panel mínimo para integración con el enrutador dinámico MELANTIA
 export function mostrarPanel() {
-  const cont = document.getElementById('contenedor-principal') || document.body;
+  const cont =
+    document.getElementById('contenedor-principal') ||
+    document.getElementById('vista-activa') ||
+    document.body;
   cont.innerHTML = `
-    <div class="panel-especifico" style="max-width:600px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:32px 24px;">
-      <h2 style="color:#276749;">Visión Satelital</h2>
-      <p style="color:#444;font-size:1.1em;">Aquí puedes consultar imágenes NDVI y reportes satelitales.</p>
-      <button onclick="window.cargarDatosModulo(null, 'Asistente Técnico Rural')" style="margin-top:30px;padding:10px 24px;background:#276749;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:1em;">← Volver</button>
+    <div class="panel-especifico" style="max-width:760px;margin:24px auto;background:#0b0b0b;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.35);padding:24px;border:1px solid #1f2937;color:#f3f4f6;">
+      <h2 style="color:#39ff14;">Visión Satelital</h2>
+      <p style="color:#cbd5e1;font-size:1.02em;">Consulta NDVI por finca y genera recomendación técnica con lógica satelital.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0 12px;">
+        <input id="vision-finca-id" type="number" min="1" placeholder="ID finca" style="padding:8px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#f8fafc;" />
+        <button id="vision-consultar-btn" style="padding:8px 12px;border-radius:8px;border:none;background:#0ea5e9;color:#fff;cursor:pointer;">Consultar NDVI</button>
+      </div>
+      <div id="vision-satelital-contexto" style="margin-top:8px;color:#a5f3fc;"></div>
+      <div id="vision-satelital-mensaje" style="margin-top:6px;color:#d1d5db;"></div>
+      <div id="vision-satelital-imagenes" style="margin-top:14px;"></div>
+      <button onclick="window.volverAlMenu && window.volverAlMenu()" style="margin-top:18px;padding:10px 16px;background:#276749;color:#fff;border:none;border-radius:8px;cursor:pointer;">← Volver</button>
     </div>
   `;
+
+  document
+    .getElementById('vision-consultar-btn')
+    ?.addEventListener('click', () => {
+      const fincaId = Number(
+        document.getElementById('vision-finca-id')?.value || 0
+      );
+      abrirVisionSatelital('asistente_tecnico_rural', fincaId || null);
+    });
+
+  abrirVisionSatelital('asistente_tecnico_rural', null);
 }
-import { supabase } from './supabase_config.js';
+
+import { supabase, tieneConfigValida } from './supabase_config.js';
 let recomendacionesFarizzio = null;
 async function cargarRecomendacionesFarizzio() {
   if (recomendacionesFarizzio) return recomendacionesFarizzio;
@@ -38,7 +60,6 @@ function obtenerMensajeVision(contexto) {
 export async function abrirVisionSatelital(contexto, finca_id = null) {
   try {
     const modal = document.getElementById('modal-vision-satelital');
-    if (!modal) return;
     document.getElementById('vision-satelital-contexto').innerHTML =
       `<b>Contexto:</b> ${contexto ? contexto.replace('_', ' ').toUpperCase() : 'General'}`;
     document.getElementById('vision-satelital-mensaje').textContent =
@@ -48,10 +69,17 @@ export async function abrirVisionSatelital(contexto, finca_id = null) {
     document.getElementById('vision-satelital-imagenes').innerHTML =
       '<div class="loader">Cargando imagen satelital...</div>';
 
+    if (!tieneConfigValida || !supabase) {
+      document.getElementById('vision-satelital-imagenes').innerHTML =
+        '<div style="color:#fcd34d;">Configura SUPABASE_URL y SUPABASE_ANON_KEY reales para activar consulta NDVI en tiempo real. La navegacion del modulo queda activa.</div>';
+      return;
+    }
+
     // --- Consulta real a Supabase: obtener la última imagen NDVI de la finca ---
     let urlImagen = null;
     let diagnostico = '';
     let tipoCultivo = 'default';
+    let ndviPromedio = null;
     if (finca_id) {
       // Obtener tipo de cultivo desde la tabla fincas
       const fincaRes = await supabase
@@ -71,11 +99,11 @@ export async function abrirVisionSatelital(contexto, finca_id = null) {
         .limit(1);
       if (!error && data && data.length > 0) {
         // Diagnóstico básico NDVI
-        const ndvi = data[0].ndvi_promedio;
-        if (typeof ndvi === 'number') {
-          if (ndvi > 0.6) {
+        ndviPromedio = data[0].ndvi_promedio;
+        if (typeof ndviPromedio === 'number') {
+          if (ndviPromedio > 0.6) {
             diagnostico = 'excelente';
-          } else if (ndvi > 0.4) {
+          } else if (ndviPromedio > 0.4) {
             diagnostico = 'observacion';
           } else {
             diagnostico = 'alerta';
@@ -129,7 +157,7 @@ export async function abrirVisionSatelital(contexto, finca_id = null) {
           // Datos para el reporte (ajusta según tus campos reales)
           const datosReporte = {
             potrero: tipoCultivo,
-            ndvi: typeof ndvi !== 'undefined' ? ndvi : '-',
+            ndvi: typeof ndviPromedio === 'number' ? ndviPromedio : '-',
             co2: '-', // Puedes calcularlo aquí si tienes área y factor
             fecha: new Date().toISOString().slice(0, 10),
             cultivoId: null, // Si tienes el id del cultivo asociado
@@ -144,8 +172,12 @@ export async function abrirVisionSatelital(contexto, finca_id = null) {
         '<div style="color:#b91c1c;">No hay imágenes válidas disponibles para esta finca.</div>';
     }
 
-    modal.style.display = 'block';
+    if (modal) modal.style.display = 'block';
   } catch (e) {
-    alert('No se pudo cargar la visión satelital. Intente más tarde.');
+    const salida = document.getElementById('vision-satelital-imagenes');
+    if (salida) {
+      salida.innerHTML =
+        '<div style="color:#fca5a5;">No se pudo cargar la visión satelital en este momento.</div>';
+    }
   }
 }

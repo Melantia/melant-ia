@@ -1,0 +1,302 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas del Café",
+  "cultivo": "Café",
+  "seccion": "Identificación plagas, ciclo biológico, daños, monitoreo, control integrado MIP",
+  "contenido": {
+    "introduccion_plagas": {
+      "titulo": "4.1 Introducción a las Plagas del Café",
+      "plagas_principales_ecuador": [
+        "Broca del café (Hypothenemus hampei): PLAGA #1 Ecuador",
+        "Minador de la hoja (Leucoptera coffeella): PLAGA #2",
+        "Ácaros (Tetranychus sp., Oligonychus): PLAGA #3",
+        "Escama blanda (Ischnaspis longirostris)",
+        "Trips (Chaetanaphothrips spp.)"
+      ],
+      "importancia": "Plagas pueden reducir rendimiento 20-40% (si severa), causar rechazo export (fruto defectuoso). Control OPORTUNo es crítico"
+    },
+    "broca_cafe": {
+      "titulo": "4.2 Broca del Café (Hypothenemus hampei) - PLAGA #1",
+      "descripcion": "Pequeño escarabajo negro 3-4 mm, barrenador",
+      "ciclo_biologico": [
+        {
+          "etapa": "Hembra adulta",
+          "evento": "Ingresa fruto cereza, excava túneles dentro grano",
+          "duracion": "Vida adulta 3-4 meses"
+        },
+        {
+          "etapa": "Huevo",
+          "ubicacion": "Adentro grano",
+          "duracion": "3-5 días"
+        },
+        {
+          "etapa": "Larva",
+          "duracion": "9-15 días (depende temperatura)",
+          "alimento": "Embrión grano (causa defecto)"
+        },
+        {
+          "etapa": "Pupa",
+          "duracion": "3-5 días"
+        }
+      ],
+      "generaciones_anuales": "4-6 generaciones/año (Ecuador altitud)",
+      "identificacion_daño": [
+        "Fruto cereza: Pequeño orificio circular (entrada broca)",
+        "Grano seco: Agujero visible, polvo café fino (hueca interior)",
+        "Defecto: Grano flotador (hueco), rejeción export"
+      ],
+      "conducta": [
+        "Atracción: Compuesto volátil fruto maduro (fermentación)",
+        "Preferencia: Fruto rojo maduro > verde",
+        "Diapusa: Si fruto falta, adulto puede dormir meses en suelo/basura"
+      ],
+      "monitoreo": [
+        "Revisión frutos: 30-50 frutos aleatorio/semana",
+        "Calcula % infestación (ej: 5% = 5 de 100 frutos con broca)",
+        "Umbral accion: > 5% infestación = tratar"
+      ],
+      "control_integrado": [
+        {
+          "medida": "Cultural",
+          "acciones": [
+            "Cosecha oportuna: Verde-maduro, NO sobremadurar (evita atracción)",
+            "Limpieza residuos: Remover fruto caído post-cosecha",
+            "Eliminación alternativa: Fruto defectuoso en bolsa sellada"
+          ]
+        },
+        {
+          "medida": "Biológico",
+          "acciones": [
+            "Depredador: Escarabajo Phymastichus coffea parasitiza broca (introducción especial)",
+            "Honongo: Beauveria bassiana (hongo entomopatógeno) aplicación spray",
+            "Disponibilidad: Limitada, costo alto en Ecuador"
+          ]
+        },
+        {
+          "medida": "Químico",
+          "opciones": [
+            {
+              "producto": "Endosulfán (prohibido en 2020+)",
+              "historico": "Era estándar, NOW BANNED"
+            },
+            {
+              "producto": "Fipronil 5% (Regent)",
+              "dosis": "20-30 ml/aplicación/árbol",
+              "frecuencia": "Cada 20 días (época de cosecha)"
+            },
+            {
+              "producto": "Carbaril 50% (Sevin)",
+              "dosis": "1-1.5 kg/ha",
+              "aplicacion": "Pulverización foliar"
+            }
+          ]
+        }
+      ]
+    },
+    "minador_hoja": {
+      "titulo": "4.3 Minador de la Hoja (Leucoptera coffeella) - PLAGA #2",
+      "descripcion": "Pequeña mariposa 3-4 mm, larva come interior hoja",
+      "ciclo_biologico": [
+        "Huevo: En hoja, 3-5 días",
+        "Larva: Dentro mesófilo hoja (mina), 7-10 días",
+        "Pupa: En borde hoja o basura, 5-8 días"
+      ],
+      "generaciones": "5-10 generaciones/año (muy rápido)",
+      "sintomas_daño": [
+        "Hoja: Manchas traslúcidas irregulares (lesiones minadas)",
+        "Apariencia: Hoja parece quemada, deforme",
+        "Severidad: Defoliación hasta 80% en ataque fuerte"
+      },
+      "identificacion": [
+        "Mancha interior hoja vs antracnosis (mancha exterior)",
+        "Presencia micro-orificio alimenticio"
+      ],
+      "prefiere": "Altitud baja (< 1,000 m) más problemático",
+      "control": [
+        {
+          "tipo": "Cultural",
+          "medida": "Limpieza hojas caídas (elimina pupas), fertilización N mantiene vigor"
+        },
+        {
+          "tipo": "Químico",
+          "opciones": [
+            "Azadiractina (Neem) 2-3 L/ha cada 15 días (ovicida)",
+            "Abamectina 1.5-2 L/ha cada 20 días",
+            "Carbosulfán (Advantage) 3-4 L/ha"
+          ]
+        }
+      ]
+    },
+    "araña_roja": {
+      "titulo": "4.4 Ácaros (Tetranychus sp., Oligonychus) - PLAGA #3",
+      "descripcion": "Aracnido microscópico 0.3-0.5 mm, comen savia foliar",
+      "ciclo_biologico": [
+        "Huevo: En hoja, 3-4 días",
+        "Larva-Ninfa: 2-3 estadios, 4-6 días cada",
+        "Adulto: Vida 15-30 días"
+      ],
+      "generaciones": "15-20 generaciones/año (RAPIDÍSIMO en calor)",
+      "sintomas": [
+        "Hoja: Amarillo opaco ('bronceado'), secado",
+        "Tela: A veces visible tela fina (defensa acaros)",
+        "Caída hoja si severo"
+      ],
+      "prefiere": "Clima cálido seco (preferible altitud baja)",
+      "monitoreo": [
+        "Muestreo: 30 hojas aleatorio, contar ácaros vivos",
+        "Umbral: > 10 ácaros/hoja = tratar"
+      ],
+      "control": [
+        {
+          "tipo": "Cultural",
+          "medida": "Riego (aumenta humedad = ácaros bajan)"
+        },
+        {
+          "tipo": "Químico",
+          "opciones": [
+            "Azufre 80% 2-3 kg/ha (económico, efectivo)",
+            "Abamectina 1.5 L/ha cada 20 días",
+            "Hexythiazox (anti-ovicida acaros)"
+          ]
+        }
+      ]
+    },
+    "escama_blanda": {
+      "titulo": "4.5 Escama Blanda (Ischnaspis longirostris)",
+      "descripcion": "Insecto sedentario, cuerpo blando 2-3 mm",
+      "sintomas": [
+        "Rama/hoja: Costra blanca-grisácea (colonias densas)",
+        "Debilitamiento rama, caída"
+      ],
+      "ciclo_biologico": "Lento (1-2 generaciones/año), sobreinvernan en rama",
+      "control": [
+        "Aceite mineral 85% (1-2 L/ha): Sofocación asfixia",
+        "Insecticida de contacto (piretroides)"
+      ]
+    },
+    "calendario_mip_anual": {
+      "titulo": "4.6 Calendario MIP (Manejo Integrado Plagas) Mensual",
+      "calendario": [
+        {
+          "mes": "Enero-Febrero",
+          "evento": "Post-cosecha, inicio crecimiento vegetativo",
+          "plagas": "Broca (residual), minador bajo",
+          "accion": "Limpieza frutos caídos, monitoreo visual"
+        },
+        {
+          "mes": "Marzo-Abril",
+          "evento": "Inicio floración",
+          "plagas": "Minador aumenta, ácaros si calor",
+          "accion": "Monitoreo semanal, Azadiractina si necesario"
+        },
+        {
+          "mes": "Mayo-Junio",
+          "evento": "Floración, amarre fruto",
+          "plagas": "Minador alto, posible broca inicial",
+          "accion": "Pulverizaciones cada 15-20 días (Neem, Abamectina)"
+        },
+        {
+          "mes": "Julio-Agosto",
+          "evento": "Crecimiento fruto",
+          "plagas": "Broca aumenta (fruto atractivo), minador",
+          "accion": "Monitoreo broca (% infestación), pulverización cada 15 días"
+        },
+        {
+          "mes": "Septiembre-Octubre",
+          "evento": "Maduración fruto, inicio cosecha",
+          "plagas": "Broca MÁXIMO (fruto maduro), minador bajo (va finalizando)",
+          "accion": "Cosecha oportuna (NO sobremadurar), monitoreo intensivo broca, control químico si > 5%"
+        },
+        {
+          "mes": "Noviembre-Diciembre",
+          "evento": "Cosecha principal",
+          "plagas": "Broca continúa en fruto residual",
+          "accion": "Finalizar cosecha rápido, limpieza campo, eliminación residuos"
+        }
+      ]
+    },
+    "opciones_control_por_tipo": {
+      "titulo": "4.7 Opciones de Control por Tipo Plaga",
+      "control_preventivo": [
+        "Elección variedad resistente (si disponible)",
+        "Distancia plantación adecuada (favorece aire, menos humedad plagas)",
+        "Sombra moderada (30-50% reduce plagas, vs sol total)",
+        "Limpieza residuos campo",
+        "Cosecha oportuna"
+      ],
+      "control_biologico_opciones": [
+        "Depredadores: Predator ácaros Phytoseiulus (acaros benéficos)",
+        "Parasitoides: Phymastichus (parasita broca, pero de difícil cría)",
+        "Entomopatógenos: Beauveria, Isaria hongos"
+      ],
+      "control_quimico_productos": [
+        {
+          "producto": "Azadiractina (Neem natural)",
+          "concentracion": "3% active",
+          "dosis": "2-3 L/ha",
+          "frecuencia": "Cada 15 días (época alta plagas)",
+          "costo": "USD 8-12/L",
+          "ventajas": "Orgánico acepto, amplio espectro"
+        },
+        {
+          "producto": "Abamectina",
+          "concentracion": "1.8% active",
+          "dosis": "1.5-2 L/ha",
+          "frecuencia": "Cada 20 días",
+          "costo": "USD 15-20/L",
+          "target": "Ácaros, minador, trips"
+        },
+        {
+          "producto": "Carbaril (Sevin)",
+          "concentracion": "50% active",
+          "dosis": "1-1.5 kg/ha",
+          "costo": "USD 4-6/kg",
+          "amplio_espectro": "Sí (varias plagas)"
+        },
+        {
+          "producto": "Piretroides (Cipermetrina, Permetrina)",
+          "uso": "Último recurso (afecta abejas)",
+          "costo": "USD 3-8/L",
+          "advertencia": "EVITAR floración (matanza polinizadores)"
+        }
+      ]
+    },
+    "consideraciones_export": {
+      "titulo": "4.8 Consideraciones para Café de Export",
+      "residuos_maximos_permitidos": [
+        "Broca (defecto grano): < 3% (max permitido)",
+        "Minador hoja: < 1% hojas con daño severo",
+        "Ácaros: < 2% daño visible"
+      ],
+      "timing_pulverizacion": "Finalizar pulverizaciones 15 días antes cosecha (residual químico)",
+      "certificacion": "Café orgánico: PROHIBIDO químicos > 3 años"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.9 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Cuál es plaga más peligrosa café Ecuador?",
+        "respuesta": "Broca (Hypothenemus hampei). Causa daño interno grano (defecto rechazo export). Puede reducir 30-40% si no controlada. Minador segundo lugar"
+      },
+      "q2": {
+        "pregunta": "¿Cómo evito broca?",
+        "respuesta": "Cosecha oportuna (verde-maduro, NO sobremadurar). Limpiar frutos caídos campo. Si > 5% infestación, pulverizaciones cada 15 días septiembre-octubre"
+      },
+      "q3": {
+        "pregunta": "¿Es seguro usar Neem (Azadiractina)?",
+        "respuesta": "Sí, es orgánico natural. Permitido en café convencional/orgánico. Efectivo minador/ácaros. Aplicar atardecer (sensibilidad luz)"
+      },
+      "q4": {
+        "pregunta": "¿Puedo mezclar insecticidas?",
+        "respuesta": "No sin consultar etiqueta. Algunas mezclas son compatibles, otras precipitan/inefectivas. Aplicación secuencial (10-14 días) es más seguro"
+      },
+      "q5": {
+        "pregunta": "¿Qué hacer si plagas en nivel muy alto?",
+        "respuesta": "Intensificar monitoreo semanal, iniciar pulverizaciones inmediatamente cada 10-12 días. Si no controlada en 4-6 semanas, consultar extensionista agropecuaria"
+      },
+      "q6": {
+        "pregunta": "¿Cómo sé si defecto café es por plaga?",
+        "respuesta": "Broca: Agujero visible grano (defecto 'aceitoso'). Minador: Mancha traslúcida hoja. Ácaros: Hoja amarilla bronceada"
+      }
+    ]
+  }
+}

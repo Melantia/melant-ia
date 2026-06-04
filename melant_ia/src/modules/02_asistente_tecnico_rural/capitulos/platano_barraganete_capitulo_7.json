@@ -1,0 +1,441 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Cultivo de Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Costos, ingresos, rentabilidad y análisis financiero",
+  "contenido": {
+    "introduccion_economia": {
+      "titulo": "7.1 Introducción a la Economía del Barraganete",
+      "contexto": "Plátano Barraganete es cultivo perenne (15-20 años vida productiva), requiere inversión inicial pero genera flujo ingresos continuo si es exitoso. Ventaja vs Cavendish: NO requiere fungicidas costosos (30-40% reducción costos operativos).",
+      "mercado_internacional": [
+        "Producción mundial: 36-37 millones toneladas/año (mucho menos que banano)",
+        "Precio fresco: USD 0.80-1.50/kg (varía según país destino)",
+        "Demanda creciente: Por resistencia genética, mercado orgánico premium"
+      ]
+    },
+    "estructura_costos": {
+      "titulo": "7.2 Estructura de Costos",
+      "fase_1_establecimiento": {
+        "titulo": "Fase 1: Establecimiento (Años 0-2)",
+        "ano_0_preparacion": {
+          "actividades": [
+            {
+              "actividad": "Preparación terreno",
+              "costo_usd_ha": "USD 800-1,500"
+            },
+            {
+              "actividad": "Material vegetativo (hijuelos vitro o macropropagados)",
+              "cantidad": "1,100-1,400 plantas/ha (densidad 3×3 o 3.5×3)",
+              "costo_unitario": "USD 0.15-0.30 (hijuelo) o USD 1.50-3.00 (vitro)",
+              "costo_total": "USD 165-4,200/ha (rango muy amplio)"
+            },
+            {
+              "actividad": "Fertilización de base pre-plantación",
+              "costo": "USD 200-400"
+            },
+            {
+              "actividad": "Riego de establecimiento (primeras 8 semanas)",
+              "costo": "USD 150-300"
+            }
+          ],
+          "total_ano_0": "USD 1,315-6,400/ha (usa vitro: mayor costo, usa hijuelo: menor costo)"
+        },
+        "ano_1_2_mantenimiento": {
+          "ano_1": {
+            "fertilizacion": "USD 800-1,200 (programa completo 3 aplicaciones/mes)",
+            "control_malezas": "USD 300-500",
+            "plagas_enfermedades": "USD 200-300 (Neem, monitoreo)",
+            "labor_general": "USD 400-600",
+            "riego_complementario": "USD 100-200",
+            "total": "USD 1,800-2,800"
+          },
+          "ano_2": {
+            "similar": "USD 1,800-2,800 (similar a año 1)",
+            "total_anos_1_2": "USD 3,600-5,600"
+          }
+        }
+      },
+      "fase_2_produccion": {
+        "titulo": "Fase 2: Producción (Años 3+)",
+        "ano_3_produccion_inicial": {
+          "rendimiento": "100-300 kg/ha",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 900-1,200"
+            },
+            {
+              "item": "Control plagas/enfermedades",
+              "costo": "USD 250-350"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 400-600 (labor desmanillado, empaque)",
+              "calculo": "USD 2-3 por kg fruto"
+            },
+            {
+              "item": "Transporte a exportador",
+              "costo": "USD 150-250"
+            }
+          ],
+          "total_ano_3": "USD 1,700-2,400"
+        },
+        "anos_4_10_expansion": {
+          "rendimiento": "1,000-1,500 kg/ha/año",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 1,000-1,300"
+            },
+            {
+              "item": "Control plagas/enfermedades",
+              "costo": "USD 250-350"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 2,000-3,000 (USD 1.50-2.00 por kg)",
+              "justificacion": "Volumen mayor: 2-3 cosechas semanales"
+            },
+            {
+              "item": "Transporte",
+              "costo": "USD 200-300"
+            }
+          ],
+          "total_anos_4_10": "USD 3,450-4,950/ha/año"
+        },
+        "anos_11_20_madurez": {
+          "rendimiento": "1,200-1,500 kg/ha/año (estabilización)",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 1,100-1,400"
+            },
+            {
+              "item": "Control plagas/enfermedades",
+              "costo": "USD 250-400"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 2,200-3,200"
+            },
+            {
+              "item": "Transporte",
+              "costo": "USD 200-300"
+            },
+            {
+              "item": "Mantenimiento equipos, renovación plantas débiles",
+              "costo": "USD 200-300"
+            }
+          ],
+          "total_anos_11_20": "USD 3,950-5,600/ha/año"
+        }
+      }
+    },
+    "proyeccion_ingresos": {
+      "titulo": "7.3 Proyección de Ingresos",
+      "precio_referencia": {
+        "fresco_export": "USD 0.80-1.50/kg (destino determina precio)",
+        "promedio_mercado": "USD 1.10/kg (referencia típica)",
+        "rango_observado": "USD 0.90-1.40/kg en últimos 5 años"
+      },
+      "escenarios": [
+        {
+          "escenario": "CONSERVADOR",
+          "supuestos": "Precio USD 0.90/kg, rendimiento 1,000 kg/ha",
+          "ingreso_neto_produccion": "USD 900/ha/año"
+        },
+        {
+          "escenario": "REALISTA",
+          "supuestos": "Precio USD 1.10/kg, rendimiento 1,200 kg/ha",
+          "ingreso_neto_produccion": "USD 1,320/ha/año"
+        },
+        {
+          "escenario": "OPTIMISTA",
+          "supuestos": "Precio USD 1.40/kg, rendimiento 1,400 kg/ha (buen manejo)",
+          "ingreso_neto_produccion": "USD 1,960/ha/año"
+        }
+      ],
+      "ingreso_por_etapa": [
+        {
+          "ano": "Año 3",
+          "produccion": "150 kg/ha",
+          "precio_unitario": "USD 1.10",
+          "ingreso_bruto": "USD 165"
+        },
+        {
+          "ano": "Años 4-6",
+          "produccion": "800-1,000 kg/ha",
+          "precio_unitario": "USD 1.10",
+          "ingreso_bruto": "USD 880-1,100"
+        },
+        {
+          "ano": "Años 7+",
+          "produccion": "1,200-1,400 kg/ha",
+          "precio_unitario": "USD 1.10",
+          "ingreso_bruto": "USD 1,320-1,540"
+        }
+      ]
+    },
+    "analisis_rentabilidad": {
+      "titulo": "7.4 Análisis de Rentabilidad",
+      "flujo_caja_escenario_realista": {
+        "supuestos": "Precio USD 1.10/kg, plantación 1 hectárea, densidad 1,200 plantas/ha",
+        "calculo": [
+          {
+            "periodo": "Año 0",
+            "ingreso": "USD 0",
+            "costo": "-USD 2,500 (inversión: hijuelo + prep)",
+            "flujo_neto": "-USD 2,500"
+          },
+          {
+            "periodo": "Año 1",
+            "ingreso": "USD 0 (planta en crecimiento)",
+            "costo": "-USD 2,200",
+            "flujo_neto": "-USD 2,200"
+          },
+          {
+            "periodo": "Año 2",
+            "ingreso": "USD 0",
+            "costo": "-USD 2,200",
+            "flujo_neto": "-USD 2,200",
+            "acumulado": "-USD 9,100"
+          },
+          {
+            "periodo": "Año 3",
+            "ingreso": "USD 165 (150 kg @ USD 1.10)",
+            "costo": "-USD 2,000",
+            "flujo_neto": "-USD 1,835",
+            "acumulado": "-USD 10,935"
+          },
+          {
+            "periodo": "Año 4",
+            "ingreso": "USD 880 (800 kg)",
+            "costo": "-USD 3,500",
+            "flujo_neto": "-USD 2,620",
+            "acumulado": "-USD 13,555"
+          },
+          {
+            "periodo": "Año 5-6",
+            "ingreso": "USD 1,100 (1,000 kg)",
+            "costo": "-USD 3,900",
+            "flujo_neto": "-USD 2,800",
+            "acumulado_ano_6": "-USD 22,155"
+          },
+          {
+            "periodo": "Año 7+",
+            "ingreso": "USD 1,320 (1,200 kg)",
+            "costo": "-USD 4,000",
+            "flujo_neto": "-USD 2,680",
+            "nota": "Sigue negativo si solo 1,200 kg/ha"
+          }
+        ]
+      },
+      "problema_identificado": "A 1.10/kg y 1,200 kg/ha, cultivo NO es rentable (ingresos < costos). Requiere: (1) Rendimiento > 1,500 kg/ha, (2) Precio > USD 1.30/kg, o (3) Reducir costos operativos",
+      "break_even_analysis": {
+        "escenario_para_break_even": "Precio USD 1.30/kg + Rendimiento 1,400 kg/ha + Costos USD 3,500/ha",
+        "ingreso_neto_anual": "1,400 × USD 1.30 = USD 1,820",
+        "menos_costos": "-USD 3,500",
+        "resultado": "DEFICIT -USD 1,680 (sigue no viable)"
+      },
+      "conclusiones_economicas": [
+        "Barraganete a precios actuales NO es rentable como monocultivo en pequeña escala",
+        "Requiere: escala grande (10+ hectáreas), precio premium USD 1.40+, o intercalado con otros cultivos",
+        "Alternativa: Sistema agroforestal (plátano + cacao, plátano + café) diversifica ingresos"
+      ]
+    },
+    "mejora_rentabilidad": {
+      "titulo": "7.5 Estrategias de Mejora de Rentabilidad",
+      "incremento_rendimiento": [
+        {
+          "estrategia": "Manejo nutricional óptimo",
+          "efecto": "+10-15% rendimiento (1,200 → 1,400 kg/ha)",
+          "costo_adicional": "USD 200-300/ha"
+        },
+        {
+          "estrategia": "Control preventivo plagas",
+          "efecto": "Evita caída fruto, +5-10% rendimiento"
+        },
+        {
+          "estrategia": "Densidad óptima",
+          "efecto": "3 × 3 m vs 3.5 × 3 m: +5-10% densidad plantas"
+        }
+      ],
+      "premium_de_precio": [
+        {
+          "certificacion": "Fair Trade",
+          "premium": "+10-15% sobre precio base",
+          "costo_anual": "USD 500-1,000/ha (auditoría)"
+        },
+        {
+          "certificacion": "Orgánico",
+          "premium": "+15-25% sobre precio base",
+          "costo_anual": "USD 800-1,500/ha (transición 3 años)",
+          "requisito": "Sin fungicidas/insecticidas sintéticos (¡Barraganete es ideal!)"
+        },
+        {
+          "certificacion": "Rainforest Alliance",
+          "premium": "+5-10%"
+        }
+      ],
+      "sistemas_intercalados": [
+        {
+          "sistema": "Plátano + Cacao",
+          "plátano": "600-800 plantas/ha (distancia 4 × 4)",
+          "cacao": "1,500-2,000 plantas/ha (sombra de plátano)",
+          "ventaja": "Ingresos diversificados: cacao años 5+, plátano años 1+"
+        },
+        {
+          "sistema": "Plátano + Café",
+          "ventaja": "Café requiere sombra, plátano es excelente árbol sombra"
+        }
+      ],
+      "valor_agregado": [
+        {
+          "producto": "Chips de plátano frito",
+          "precio_venta": "USD 3-5/kg procesado",
+          "vs_fresco": "3-5× precio fresco",
+          "inversión_equipo": "USD 5,000-15,000"
+        },
+        {
+          "producto": "Harina de plátano",
+          "precio": "USD 4-6/kg",
+          "mercado": "Panadería, alimentos sin gluten"
+        },
+        {
+          "producto": "Plátano congelado",
+          "precio": "USD 2-3/kg (vs USD 1.10 fresco)"
+        }
+      ]
+    },
+    "modelos_economicos": {
+      "titulo": "7.6 Modelos Económicos Viables",
+      "modelo_1_pequeno_diversificado": {
+        "nombre": "Pequeño Productor (2 hectáreas) - Diversificado",
+        "composicion": "1 ha plátano + 0.5 ha cacao + 0.5 ha otros cultivos",
+        "produccion_anual": [
+          "Plátano: 1,200 kg × USD 1.10 = USD 1,320",
+          "Cacao: 600 kg × USD 3.00 = USD 1,800",
+          "Otros: USD 500 estimado"
+        ],
+        "ingreso_bruto": "USD 3,620",
+        "costos_operativos": "USD 5,000 (estimado todos cultivos)",
+        "resultado": "-USD 1,380 (AÚN DEFICIT)"
+      },
+      "modelo_2_medio_certificado": {
+        "nombre": "Productor Medio (5 hectáreas) - Certificado Orgánico",
+        "plantacion": "5 ha plátano 100% Barraganete",
+        "produccion": "6,000 kg/año × USD 1.30 (orgánico premium) = USD 7,800",
+        "costos": "5 ha × USD 3,800 = USD 19,000",
+        "resultado": "-USD 11,200 (NO VIABLE AÚN)",
+        "nota": "Requiere venta muy premium USD 2.00+/kg o rendimiento extremadamente alto"
+      },
+      "modelo_3_agroforestal_sostenible": {
+        "nombre": "Productor Sostenible (3 hectáreas) - Agroforestal",
+        "composicion": [
+          "1.5 ha plátano + cacao intercalado",
+          "1 ha café con sombra de plátano",
+          "0.5 ha árboles maderables (cedro, caoba)"
+        ],
+        "ingresos_diversificados": [
+          "Plátano: 900 kg × USD 1.10 = USD 990",
+          "Cacao: 900 kg × USD 3.00 = USD 2,700",
+          "Café: 1,500 kg × USD 1.50 = USD 2,250",
+          "Maderable: USD 500 (venta selectiva)"
+        ],
+        "ingreso_total": "USD 6,440/año",
+        "costos": "USD 6,500 (estimado)",
+        "resultado": "-USD 60 (CASI EQUILIBRIO, VIABLE A LARGO PLAZO)"
+      }
+    },
+    "financiamiento": {
+      "titulo": "7.7 Opciones de Financiamiento",
+      "requisiitos_credito": [
+        "Garantía: Tierra o activos",
+        "Plan de negocio escrito",
+        "Capacidad de pago demostrada"
+      ],
+      "opciones": [
+        {
+          "fuente": "Crédito Bancario",
+          "tasa": "8-12% anual",
+          "plazo": "5-10 años",
+          "monto": "USD 5,000-50,000+",
+          "requisitos": "Registro tierra, garantía hipotecaria"
+        },
+        {
+          "fuente": "Microcrédito ONG",
+          "tasa": "15-25% anual",
+          "plazo": "3-5 años",
+          "monto": "USD 500-5,000",
+          "requisitos": "Grupo solidario, plan simple"
+        },
+        {
+          "fuente": "Programa Estatal (MAG, BanEcuador)",
+          "tasa": "5-8% anual (subsidio estatal)",
+          "plazo": "7-10 años",
+          "monto": "USD 3,000-15,000",
+          "requisitos": "Productor elegible, priorizados pequeños"
+        },
+        {
+          "fuente": "Importador/Exportador",
+          "tipo": "Adelanto comercial",
+          "tasa": "0-5%",
+          "requisitos": "Contrato de venta futura, historial productor"
+        }
+      ]
+    },
+    "analisis_riesgo": {
+      "titulo": "7.8 Análisis de Riesgo Económico",
+      "riesgos": [
+        {
+          "riesgo": "Volatilidad de precio",
+          "impacto": "Precio cae USD 1.10 → USD 0.90: rendimiento -20%",
+          "mitigacion": "Diversificación, venta a futuro"
+        },
+        {
+          "riesgo": "Baja de rendimiento",
+          "causa": "Plagas, enfermedades, sequía",
+          "impacto": "1,200 kg → 800 kg: ingreso -33%",
+          "mitigacion": "Manejo preventivo, irrigación"
+        },
+        {
+          "riesgo": "Tasa de cambio",
+          "impacto": "USD se deprecia vs moneda local: menos ingresos",
+          "mitigacion": "Cobertura financiera (futuro)"
+        },
+        {
+          "riesgo": "Deuda no pagable",
+          "causa": "Flujo negativo continuo",
+          "mitigacion": "Análisis realista ANTES de endeudarse"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.9 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Es rentable sembrar plátano?",
+        "respuesta": "A precios actuales (USD 1.10/kg) y rendimiento típico (1,200 kg/ha), NO es rentable como monocultivo. Costos (USD 4,000/ha) > ingresos (USD 1,320/ha). Requiere: (1) Valor agregado (premium certificado), (2) Intercalado con cultivos de mayor margen (cacao, café), o (3) Escala grande con economía de escala"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto tiempo tarda recuperar inversión?",
+        "respuesta": "En mejor escenario (precio USD 1.40/kg, rendimiento 1,400 kg/ha): Nunca recupera inversión completa (ingresos anuales ≈ USD 1,960 < costos anuales ≈ USD 4,000). Es negocio de LARGO PLAZO que requiere diversificación"
+      },
+      "q3": {
+        "pregunta": "¿Qué precio necesito para que sea rentable?",
+        "respuesta": "USD 3.00+/kg para rentabilidad real (vs USD 1.10 actual). Esto requiere: certificación Premium (orgánico, Fair Trade), acceso mercado directo (exportador, cafetería fina), o valor agregado (procesamiento)"
+      },
+      "q4": {
+        "pregunta": "¿Puedo vender plátano fresco a supermercado?",
+        "respuesta": "Difícil. Supermercados compran a importadores/distribuidores centralizados, ofrecen precio bajo. Mejor: venta directa mercado local, restaurantes, cooperativa de productores"
+      },
+      "q5": {
+        "pregunta": "¿Certificación orgánica me ayuda?",
+        "respuesta": "Sí, +15-25% de premium en precio. Pero requiere: transición 3 años sin sintéticos (costo USD 1,500-2,000), auditoría anual (USD 800-1,000). Rentabilidad apenas se alcanza con certificación"
+      },
+      "q6": {
+        "pregunta": "¿Intercalar plátano con cacao?",
+        "respuesta": "Sí, excelente estrategia. Plátano sombra para cacao, flujo ingresos diversificado. Cacao genera USD 3,000-4,000/ha en años 5+, plátano USD 1,300/ha años 3+. Combinados = rentabilidad viable"
+      }
+    ]
+  }
+}

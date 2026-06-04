@@ -1,0 +1,326 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Cultivo de Café",
+  "cultivo": "Café",
+  "seccion": "Inversión inicial, costos operativos, ingresos, rentabilidad, financiamiento, modelos de negocio",
+  "contenido": {
+    "introduccion_economia": {
+      "titulo": "7.1 Introducción a la Economía del Café",
+      "ventajas_cafe_ecuador": [
+        "Precio premium: USD 1.50-2.50/kg (vs USD 1.10-1.40 promedio mundial)",
+        "Altitud natural: 800-2,200 m (costo menor drenaje vs otras)",
+        "Specialty potential: Volcánico Ecuador = cupping 82-88 (mercado premium)",
+        "Demanda creciente: Café specialty crece 3-5% anual"
+      ],
+      "riesgos": [
+        "Volatilidad precio mundial (ICE futures 80-150 USD/saco)",
+        "Ciclo alternancia (años altos, años bajos producción)",
+        "Enfermedades (Roya, Antracnosis) pueden reducir rendimiento 30-50%",
+        "Plagas (Broca) requieren control permanente (costo)"
+      ]
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial (Año 0)",
+      "escenario": "Establecimiento 1 hectárea café productivo 20+ años",
+      "componentes_costo": [
+        {
+          "concepto": "Preparación terreno",
+          "actividad": "Análisis suelo, encalado si necesario, arado, rastrillado",
+          "costo": "USD 150-300/ha"
+        },
+        {
+          "concepto": "Plantas (semilla vivero 12 meses)",
+          "cantidad": "1,667 plantas (distancia 3×2 m)",
+          "costo_unitario": "USD 0.25-0.50/planta",
+          "total": "USD 420-835/ha"
+        },
+        {
+          "concepto": "Fertilizante establec. (NPK, encalado)",
+          "cantidad": "500 kg total",
+          "costo": "USD 150-250/ha"
+        },
+        {
+          "concepto": "Árboles sombra (Chalúm, Chirimoya, Plátano)",
+          "cantidad": "150-200 árboles",
+          "costo": "USD 100-200/ha"
+        },
+        {
+          "concepto": "Trazado, plantación manual",
+          "labor": "40-50 jornales a USD 10-15/jornal",
+          "costo": "USD 400-750/ha"
+        },
+        {
+          "concepto": "Mulch, cobertura material",
+          "costo": "USD 50-100/ha"
+        },
+        {
+          "concepto": "Herramientas básicas (pala, machete, etc.)",
+          "costo": "USD 50-100/ha"
+        }
+      ],
+      "total_inversion_año_0": "USD 1,320-2,635/ha (promedio USD 1,800-2,200)",
+      "financiamiento_opciones": [
+        "Capital propio: 30-50%",
+        "Banco agrícola: 8-12% interés, 5-7 años plazo",
+        "Microcrédito: 15-25% interés, 3-5 años",
+        "Estado (MAGAP/BNF): 5-8% interés"
+      ]
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos Anuales",
+      "escenario": "Café productivo año 4+ (rendimiento 1,200-2,000 kg/ha fresco/año)",
+      "costos_por_mes": [
+        {
+          "mes": "Enero-Febrero (Post-cosecha)",
+          "actividades": "Fertilización post-cosecha, deshierbe, poda ligera",
+          "costo": "USD 200-300"
+        },
+        {
+          "mes": "Marzo-Abril (Inicio floración)",
+          "actividades": "Fertilización (NPK), monitoreo plagas, poda formación",
+          "costo": "USD 250-350"
+        },
+        {
+          "mes": "Mayo-Junio (Floración-amarre)",
+          "actividades": "Fertilización N, pulverizaciones enfermedad (inicio Roya)",
+          "costo": "USD 300-400"
+        },
+        {
+          "mes": "Julio-Agosto (Crecimiento fruto)",
+          "actividades": "Fertilización K máximo, pulverizaciones plagas, deshierbe",
+          "costo": "USD 400-500"
+        },
+        {
+          "mes": "Septiembre-Octubre (Maduración, cosecha inicio)",
+          "actividades": "Cosecha selectiva (LABOR INTENSIVA), fertilización, control Roya",
+          "costo": "USD 600-900"
+        },
+        {
+          "mes": "Noviembre-Diciembre (Cosecha principal)",
+          "actividades": "Cosecha continua, transporte, beneficio seco/lavado",
+          "costo": "USD 500-800"
+        }
+      ],
+      "total_anual_operativos": "USD 2,650-3,650/ha/año",
+      "desglose_detallado": [
+        "Fertilización (N, K, P, micro): USD 350-500/ha",
+        "Agroquímicos (fungicidas, insecticidas): USD 400-600/ha",
+        "Labor cosecha selectiva: USD 1,000-1,500/ha (50-80% costo total labor)",
+        "Labor otras (deshierbe, poda, monitoreo): USD 400-600/ha",
+        "Transporte fruto a beneficio: USD 100-150/ha",
+        "Beneficio (despulpado, secado, clasificación): USD 300-400/ha",
+        "Diversos: USD 100-200/ha"
+      ]
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "rendimiento_por_edad": [
+        {
+          "año": "Año 1",
+          "produccion": "0 kg/ha (sin fruto o minimal 50-100 kg/ha)",
+          "ingreso": "USD 0"
+        },
+        {
+          "año": "Año 2",
+          "produccion": "150-300 kg/ha fresco = 20-40 kg/ha grano seco",
+          "ingreso": "USD 60-120/ha"
+        },
+        {
+          "año": "Año 3",
+          "produccion": "500-800 kg/ha fresco = 75-120 kg/ha grano seco",
+          "ingreso": "USD 200-400/ha"
+        },
+        {
+          "año": "Año 4",
+          "produccion": "1,200-1,800 kg/ha fresco = 180-270 kg/ha grano seco",
+          "ingreso": "USD 600-1,200/ha"
+        },
+        {
+          "año": "Año 5+",
+          "produccion": "1,500-2,500 kg/ha fresco = 225-375 kg/ha grano seco",
+          "ingreso": "USD 900-1,875/ha"
+        }
+      ],
+      "precio_referencia": [
+        "Café convencional Ecuador: USD 1.50-2.00/kg grano seco",
+        "Café specialty (82-84 cupping): USD 2.50-3.50/kg",
+        "Café orgánico/Fair Trade: USD 3.00-4.50/kg",
+        "Café microlote premium (85+ cupping): USD 5.00-15.00/kg (excepcional)"
+      ],
+      "volatilidad_precio": [
+        "Ciclo 5-10 años de precio",
+        "2020: USD 0.90-1.20/kg (crisis COVID)",
+        "2022-2023: USD 1.50-2.20/kg (recuperación)",
+        "Proyección 2024+: USD 1.40-1.80/kg (base estimativa)"
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "escenario_realista": {
+        "supuestos": [
+          "Inversión año 0: USD 2,000/ha",
+          "Rendimiento año 5+: 2,000 kg/ha fresco = 300 kg/ha grano seco",
+          "Precio promedio: USD 1.70/kg grano seco",
+          "Costos operativos año 5+: USD 3,200/ha/año"
+        ],
+        "ingresos_anuales_año_5": "300 kg × USD 1.70 = USD 510/ha/año",
+        "rentabilidad": "NEGATIVA (-USD 2,690/ha/año)",
+        "analisis": "A precio USD 1.70/kg, café NO es rentable incluso año 5 producción"
+      },
+      "break_even_analysis": {
+        "para_rentabilidad": [
+          "OPCIÓN 1: Reducir costos 40% (USD 1,920/ha/año) → Requiere mecanización",
+          "OPCIÓN 2: Aumentar producción 50% (450 kg/ha grano) → Requiere mejo variedad/manejo",
+          "OPCIÓN 3: Aumentar precio 100% (USD 3.40/kg) → Requiere specialty + certificación"
+        ]
+      },
+      "modelo_rentable_2": {
+        "supuestos_alternativos": [
+          "Precio specialty: USD 3.00/kg",
+          "Rendimiento: 250 kg/ha grano (más realista altitud alta 1,600-2,000m)",
+          "Costos: USD 3,000/ha/año (control eficiente)"
+        ],
+        "ingresos": "250 kg × USD 3.00 = USD 750/ha",
+        "resultado": "USD 750 - USD 3,000 = USD -2,250 (sigue negativo)"
+      },
+      "verdadera_viabilidad": [
+        "Café INDIVIDUAL hectárea: NO RENTABLE precios actuales (2024)",
+        "Café ESCALA (10+ hectáreas): Costos operativos bajan 20-25% (economía escala)",
+        "Café + DIVERSIFICACIÓN (cacao, plátano, ganadería): VIABLE (ingresos múltiples fuentes)",
+        "Café SPECIALTY + MARCA PROPIA: USD 5-8/kg posible (café microlote trazado)"
+      ]
+    },
+    "financiamiento_modelos": {
+      "titulo": "7.6 Opciones de Financiamiento",
+      "credito_bancario": {
+        "tasa": "8-12% anual",
+        "plazo": "5-7 años",
+        "montos": "USD 1,500-5,000",
+        "requisitos": "Propiedad garantía, historial crediticio",
+        "ventaja": "Tasa baja, plazo largo"
+      },
+      "microfinanza": {
+        "tasa": "15-25% anual",
+        "plazo": "2-4 años",
+        "montos": "USD 500-3,000",
+        "requisitos": "Mínimos (grupo garantía común)",
+        "desventaja": "Tasa alta"
+      },
+      "estado_bnf": {
+        "tasa": "5-8% anual (preferencial)",
+        "plazo": "10-15 años",
+        "montos": "Limitado (competencia alta)",
+        "acceso": "MAGAP/AGROCALIDAD inscripción",
+        "ventaja": "Mejor tasa, plazo mayor"
+      },
+      "importador_adelanto": {
+        "mecánica": "Importador anticipa pago (80-90% precio futuro)",
+        "monto": "USD 2,000-10,000",
+        "plazo": "Hasta cosecha",
+        "costo_implícito": "10-20% descuento precio (vs mercado spot)",
+        "ventaja": "Rápido, sin garantía formal"
+      }
+    },
+    "modelos_negocio_viables": {
+      "titulo": "7.7 Modelos de Negocio Viables",
+      "modelo_1_agroforestal": {
+        "definicion": "Café + Cacao + Plátano en mismo terreno",
+        "ingresos_diversificados": [
+          "Café año 5+: USD 750/ha",
+          "Cacao año 4+: USD 1,500-2,000/ha",
+          "Plátano año 1-5: USD 1,500-2,500/ha (luego se retira)",
+          "TOTAL AGROFORESTAL: USD 3,750-5,250/ha"
+        ],
+        "costos_adicionales": "USD 500-800/ha (manejo múltiple cultivo)",
+        "resultado": "USD 2,450-3,950 VIABLE rentable"
+      },
+      "modelo_2_specialty": {
+        "enfoque": "Café micro-lote, trazabilidad, marca propia",
+        "precio_objetivo": "USD 5-10/kg (vs USD 1.70 commodity)",
+        "marketing": "Direct to consumer, café specialty importadores",
+        "inversión_extra": "USD 500-1,000 (branding, trazabilidad)",
+        "rendimiento_realista": "150-200 kg/ha (calidad > cantidad)",
+        "ingresos": "150 kg × USD 7/kg = USD 1,050/ha",
+        "rentabilidad": "Marginal pero posible"
+      },
+      "modelo_3_organico_fair_trade": {
+        "certificacion": "3 años transición + auditoría",
+        "precio_premium": "USD 3.50-4.50/kg (+ 100% vs convencional)",
+        "rendimiento": "Baja 15-20% vs convencional",
+        "produccion_esperada": "200 kg/ha grano",
+        "ingresos": "200 kg × USD 4.00 = USD 800/ha",
+        "ventaja": "Mercado garantizado (importadores specialty)",
+        "costo": "Auditoría annual USD 200-400"
+      },
+      "modelo_4_cafe_conventual_escala": {
+        "escala_minima": "5+ hectáreas",
+        "economía_escala": "Costos operativos bajan 25% (USD 2,400/ha)",
+        "precio_commodity": "USD 1.70/kg",
+        "produccion": "250 kg/ha (5 ha = 1,250 kg total)",
+        "ingresos": "1,250 kg × USD 1.70 = USD 2,125",
+        "costos": "5 ha × USD 2,400 = USD 12,000",
+        "resultado": "USD 2,125 - USD 12,000 = NEGATIVO aún"
+      }
+    },
+    "comparativa_cultivos": {
+      "titulo": "7.8 Comparativa de Rentabilidad: Café vs Cacao vs Plátano",
+      "comparacion_tabla": [
+        {
+          "cultivo": "Café",
+          "precio_kg": "USD 1.70-3.00",
+          "rendimiento_kg": "200-300",
+          "ingreso_ha": "USD 340-900",
+          "costo_anual": "USD 3,000-3,500",
+          "rentabilidad": "NEGATIVA (-USD 2,100-3,000)",
+          "nota": "Requiere premium/diversificación"
+        },
+        {
+          "cultivo": "Cacao",
+          "precio_kg": "USD 2.00-2.50",
+          "rendimiento_kg": "800-1,200",
+          "ingreso_ha": "USD 1,600-3,000",
+          "costo_anual": "USD 1,500-2,000",
+          "rentabilidad": "POSITIVA (+USD 600-1,500)",
+          "nota": "Viable monocultivo"
+        },
+        {
+          "cultivo": "Plátano",
+          "precio_kg": "USD 0.80-1.50",
+          "rendimiento_kg": "1,000-1,500",
+          "ingreso_ha": "USD 800-2,250",
+          "costo_anual": "USD 1,700-2,500",
+          "rentabilidad": "MARGINAL/NEGATIVA (-USD 400-1,700)",
+          "nota": "No recomendado solo; diversificación"
+        }
+      ],
+      "conclusion": "Cacao > Plátano > Café en rentabilidad monocultivo. Café viable solo diversificado o specialty"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.9 Preguntas Frecuentes - Economía Café",
+      "q1": {
+        "pregunta": "¿Es rentable plantar 1 hectárea café en Ecuador?",
+        "respuesta": "No actualmente (2024). Precio USD 1.70/kg vs costos USD 3,000-3,500/ha/año = PÉRDIDA. Requiere: (a) Specialty café USD 3-5/kg, (b) Diversificación otros cultivos, (c) Escala 5+ hectáreas"
+      },
+      "q2": {
+        "pregunta": "¿Cuándo empieza a producir café?",
+        "respuesta": "Año 1-2: Floraciones iniciales sin cosecha. Año 3: Primera cosecha pequeña (50-200 kg/ha fresco). Año 5+: Producción plena 1,500-2,500 kg/ha. Break-even año 6-8 si buena gestión"
+      },
+      "q3": {
+        "pregunta": "¿Cuánto cuesta producir 1 kg café grano seco?",
+        "respuesta": "USD 10-15/kg (costo completo incluyendo inversión amortizada). Precio mercado USD 1.70-3.00/kg (vs costo USD 10-15). Por eso NO rentable"
+      },
+      "q4": {
+        "pregunta": "¿Puedo financiar café con banco?",
+        "respuesta": "Sí. Banco agrícola: 8-12% tasa, 5-7 años. BNF: 5-8%, 10-15 años. Requiere propiedad garantía. PERO rentabilidad negativa = RIESGO crédito muy alto"
+      },
+      "q5": {
+        "pregunta": "¿Café orgánico es más rentable?",
+        "respuesta": "Teoría: +100% precio (USD 3.50-4.50/kg). Práctica: Rendimiento baja 15-20%, costo certificación USD 200-400/año. Neto: +20-30% ingreso si mercado asegurado (Fair Trade)"
+      },
+      "q6": {
+        "pregunta": "¿Café con otras plantas es viables?",
+        "respuesta": "SÍ. Agroforestal (Café + Cacao + Plátano) ingresos USD 3,750-5,250/ha (vs Café solo USD 340-900). Requiere más manejo técnico pero +400% ingreso potencial"
+      }
+    ]
+  }
+}

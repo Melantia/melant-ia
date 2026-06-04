@@ -1,0 +1,195 @@
+{
+  "capitulo": 6,
+  "titulo": "Producción Lechera y Ordeño",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Lactancia, ordeño, calidad leche, composición, conservación, sistemas producción",
+  "contenido": {
+    "introduccion_produccion": {
+      "titulo": "6.1 Introducción a Producción Lechera",
+      "importancia": "Lechería es 70% ingresos ganadería Ecuador (vs carne 30%)",
+      "produccion_nacional": [
+        "Total producción: 1.8 millones toneladas leche/año",
+        "Promedio vaca: 8-10 litros/día (3,000 litros/año) nivel nacional",
+        "Potencial vaca buenos sistema: 20-25 litros/día (7,000-9,000 litros/año)"
+      ]
+    },
+    "ciclo_lactancia": {
+      "titulo": "6.2 Ciclo de Lactancia",
+      "cronograma": [
+        {
+          "evento": "Parto (día 0)",
+          "descripcion": "Inicio lactancia"
+        },
+        {
+          "evento": "Calostro (días 1-5)",
+          "produccion": "2-4 litros/día (composición diferente)",
+          "caracteristica": "Alto proteína (10%), grasa (7%), inmunoglobulinas"
+        },
+        {
+          "evento": "Pico producción (días 30-60)",
+          "produccion": "Máxima (Holstein 25-30 L/día)",
+          "demanda_energia": "MÁXIMA (mayor que disponible → pierde peso)"
+        },
+        {
+          "evento": "Lactancia persistencia (días 60-180)",
+          "produccion": "Descenso gradual ~3% por mes",
+          "descripcion": "Producción aún buena (80% pico)"
+        },
+        {
+          "evento": "Lactancia tardía (días 180-305)",
+          "produccion": "Descenso acelerado 5-8% por mes",
+          "descripcion": "Preñada simultáneamente (demanda nutrientes feto)"
+        },
+        {
+          "evento": "Período seco (días 305-365)",
+          "produccion": "Cero producción",
+          "duracion": "60 días reposo antes próximo parto",
+          "importancia": "Glándula se regenera, animal recupera condición"
+        }
+      ],
+      "lactancia_total": "305 días × producción promedio = rendimiento/lactancia",
+      "ejemplo": "Vaca Holstein pico 25 L/día, descenso gradual: 6,000-7,500 litros/lactancia/año"
+    },
+    "ordeño_metodo": {
+      "titulo": "6.3 Métodos de Ordeño",
+      "ordeño_manual": {
+        "aplicacion": "Rebaños < 10 vacas",
+        "tiempo": "3-4 minutos por vaca",
+        "frecuencia": "2 x/día (mañana 4-5 am, tarde 2-3 pm) = 8-10 horas labor/día",
+        "costo": "USD 0 equipo, 100% labor",
+        "desventaja": "Labor intensiva, menor higiene, produción baja"
+      },
+      "ordeño_mecanico_portatil": {
+        "equipo": "Mini-tanque (20-50 litros) con compresor",
+        "aplicacion": "10-30 vacas",
+        "costo": "USD 800-1,500 inversión",
+        "tiempo": "1.5-2 minutos/vaca (ahorro 60% labor vs manual)",
+        "higiene": "MEJOR que manual (menos contacto mano-pezón)"
+      },
+      "linea_paralela": {
+        "equipo": "Tanque 200-500 L, línea de ordeño 4-8 puestos",
+        "aplicacion": "30-50 vacas",
+        "costo": "USD 3,000-5,000",
+        "tiempo": "20-25 minutos (8-10 vacas simultáneo)",
+        "produccion": "+40% vs portátil por ahorro tiempo"
+      },
+      "carrusel_espina": {
+        "equipo": "Carrusel rotatorio, 12-20 puestos",
+        "aplicacion": "> 80-100 vacas",
+        "costo": "USD 30,000-80,000 (inversión masiva)",
+        "tiempo": "60-90 minutos total 80-100 vacas",
+        "eficiencia": "MÁxima producción, costos reducidos"
+      },
+      "protocolo_ordeño": [
+        "1. Limpieza: Teta + ubres agua tibia + desinfectante",
+        "2. Sellante pre-ordeño: Chlorhexidina/yodo (1 minuto)",
+        "3. Estimulación: Manual 30-60 segundos (reflejo reflejo oxitocina)",
+        "4. Ordeño: Máquina 4-6 minutos",
+        "5. Sellante post-ordeño: Chlorhexidina/yodo (sellante pezón)"
+      ]
+    },
+    "composicion_leche": {
+      "titulo": "6.4 Composición de Leche",
+      "componentes_principales": [
+        {
+          "componente": "Agua",
+          "porcentaje": "86-88%"
+        },
+        {
+          "componente": "Proteína (caseína + suero)",
+          "porcentaje": "3.2-3.5% (Holstein)",
+          "porcentaje_jersey": "3.8-4.5% (Jersey leche premium)"
+        },
+        {
+          "componente": "Grasa (lípidos)",
+          "porcentaje": "3.5-4.5% (Holstein)",
+          "porcentaje_jersey": "5.0-6.5% (Jersey)",
+          "importancia": "Define precio (mayor grasa = mayor precio)"
+        },
+        {
+          "componente": "Lactosa (azúcar leche)",
+          "porcentaje": "4.5-4.8%"
+        },
+        {
+          "componente": "Minerales (Ca, P, K)",
+          "porcentaje": "0.8-0.9%"
+        }
+      ],
+      "variabilidad": [
+        "Raza: Jersey > grasa (5.5% vs Holstein 3.8%)",
+        "Lactancia: Grasa aumenta final lactancia",
+        "Nutrición: Deficiencia energía = grasa aumenta, sólidos bajan",
+        "Mastitis: Sólidos bajan significativamente"
+      ]
+    },
+    "calidad_leche": {
+      "titulo": "6.5 Estándares de Calidad de Leche",
+      "parametros_legales": [
+        {
+          "parametro": "Células somáticas",
+          "estandar": "< 300,000 células/ml (Resolución 2882 Ecuador)",
+          "alto": "> 500,000 = mastitis (RECHAZADA por lechería)"
+        },
+        {
+          "parametro": "Recuento bacteriano",
+          "estandar": "< 100,000 UFC/ml (buena calidad)",
+          "malo": "> 500,000 (leche fermentada, rechazo)"
+        },
+        {
+          "parametro": "Acidez titulable",
+          "estandar": "0.13-0.15 N (ácido láctico)",
+          "alto": "> 0.18 = fermentación (producto defectuoso)"
+        },
+        {
+          "parametro": "Densidad",
+          "estandar": "1.028-1.034 g/ml (indica adulteración agua si bajo)"
+        }
+      ],
+      "consecuencias_calidad_baja": [
+        "Rechazo entero (precio cero)",
+        "Descuento de precio (5-30% depende parámetro)",
+        "Procesador pierde 1-5% rendimiento (defectos calidad)"
+      ]
+    },
+    "conservacion_leche": {
+      "titulo": "6.6 Conservación de Leche",
+      "enfriamiento_inmediato": [
+        "Temperatura óptima: 4°C (máximo 8°C)",
+        "Tiempo: < 2 horas post-ordeño",
+        "Beneficio: Inhibe crecimiento bacteriano (duplicación cada 6 horas a 20°C)"
+      ],
+      "almacenaje": [
+        "Tanque refrigeración: 500-2,000 litros típico",
+        "Conservación: 48 horas a 4°C"
+      ],
+      "transporte": [
+        "Tanquero refrigerado: Recolección cada 2-3 días",
+        "Temperatura mantenida: 4°C durante transporte",
+        "Variación temperatura: +1-2°C causa problemas"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.7 Preguntas Frecuentes - Producción",
+      "q1": {
+        "pregunta": "¿Cuánto debe producir vaca buena?",
+        "respuesta": "Holstein genética buena: 20-25 L/día (6,000-7,500 L/año). Jersey: 12-15 L/día. Nacional promedio: 8-10 L/día (bajo por nutrición/genética pobre)"
+      },
+      "q2": {
+        "pregunta": "¿Cada cuánto ordeño?",
+        "respuesta": "Lechería comercial: 2 x/día (mañana 4-5 am, tarde 2-3 pm) = 12 horas entre ordenos. 3 x/día solo si vaca produce > 30 L/día"
+      },
+      "q3": {
+        "pregunta": "¿Leche de Jersey vs Holstein?",
+        "respuesta": "Jersey: Menos volumen (12-15 L) pero más grasa (5.5%), más precio/litro. Holstein: Más volumen (20-25 L) pero menos grasa (3.8%), menos precio/litro pero margen total similar"
+      },
+      "q4": {
+        "pregunta": "¿Cuáles son defectos leche común?",
+        "respuesta": "Mastitis (células altas), fermentación (acidez), contaminación bacteriana (UFC alto). Si uno ocurre: vaca RECHAZADA por industria"
+      },
+      "q5": {
+        "pregunta": "¿Período seco es importante?",
+        "respuesta": "SÍ crítico. 60 días seco: Ubres se regeneran, animal recupera condición corporal. Período seco malo = lactancia siguiente baja"
+      }
+    ]
+  }
+}

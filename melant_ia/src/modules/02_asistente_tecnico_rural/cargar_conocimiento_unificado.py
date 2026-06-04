@@ -4,6 +4,7 @@ import json
 def centralizar_conocimiento_melantia():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     SEED_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "knowledge_seeds", "03_asistente_tecnico_veterinario"))
+    SEED_CULTIVOS_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "knowledge_seeds", "02_asistente_tecnico_rural", "asistente_tecnico_cultivos"))
 
     mapa_global = {
         "expertos": {
@@ -14,7 +15,8 @@ def centralizar_conocimiento_melantia():
         },
         "imagenes_veterinaria": {},
         "guias_clinicas_md": {},
-        "modelos_costos_json": {}
+        "modelos_costos_json": {},
+        "cultivos_indexados": {}
     }
 
     # 1. Valentina: Escaneo de los 252 MB de fotos reales de enfermedades
@@ -55,12 +57,46 @@ def centralizar_conocimiento_melantia():
             except Exception as e:
                 print(f"   -> Error leyendo {archivo}: {e}")
 
+    # 3B. Indice de cultivos para nexo dinamico foto/voz en ID2
+    print("\n[ID2 CULTIVOS] Indexando archivos de cultivos para navegacion dinamica...")
+    if os.path.exists(SEED_CULTIVOS_DIR):
+        for archivo in os.listdir(SEED_CULTIVOS_DIR):
+            if not (archivo.startswith("cultivos_") and archivo.endswith('.json')):
+                continue
+            ruta = os.path.join(SEED_CULTIVOS_DIR, archivo)
+            try:
+                with open(ruta, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                clave = os.path.splitext(archivo)[0].replace('cultivos_', '')
+                nombre_visible = clave.replace('_', ' ').title()
+                mapa_global["cultivos_indexados"][clave] = {
+                    "archivo": archivo,
+                    "nombre": nombre_visible,
+                    "ruta": os.path.relpath(ruta, os.path.join(BASE_DIR, "..", "..")).replace('\\\\', '/'),
+                    "claves": list(data.keys()) if isinstance(data, dict) else []
+                }
+            except Exception as e:
+                print(f"   -> Error indexando cultivo {archivo}: {e}")
+        print(f"   -> Cultivos indexados: {len(mapa_global['cultivos_indexados'])}")
+    else:
+        print("   -> Directorio de cultivos no encontrado.")
+
     # 4. Guardar el archivo indexado final para uso de la app
-    ruta_salida = os.path.join(BASE_DIR, "conocimiento_comite_global.json")
-    with open(ruta_salida, 'w', encoding='utf-8') as f:
-        json.dump(mapa_global, f, indent=4, ensure_ascii=False)
-    
-    print(f"\n[ÉXITO DE JUNTA] Conocimiento consolidado para el Comité de Expertos en: {ruta_salida}")
+    rutas_salida = [
+        os.path.join(BASE_DIR, "conocimiento_comite_global.json"),
+        os.path.join(BASE_DIR, "..", "..", "knowledge_seeds", "02_asistente_tecnico_rural", "conocimiento_comite_global.json"),
+    ]
+
+    for ruta_salida in rutas_salida:
+        try:
+            os.makedirs(os.path.dirname(os.path.abspath(ruta_salida)), exist_ok=True)
+            with open(ruta_salida, 'w', encoding='utf-8') as f:
+                json.dump(mapa_global, f, indent=4, ensure_ascii=False)
+            print(f"   -> Consolidado guardado: {ruta_salida}")
+        except Exception as e:
+            print(f"   -> Error guardando consolidado en {ruta_salida}: {e}")
+
+    print("\n[ÉXITO DE JUNTA] Conocimiento consolidado para el Comité de Expertos.")
 
 if __name__ == "__main__":
     print("=== CONFIGURACIÓN CENTRALIZADA DEL COMITÉ DE EXPERTOS - MELANTIA ===\n")

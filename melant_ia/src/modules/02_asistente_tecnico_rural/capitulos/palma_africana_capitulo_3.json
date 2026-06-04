@@ -1,0 +1,214 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización de la Palma Africana",
+  "cultivo": "Palma Africana",
+  "seccion": "Requerimientos nutrientes, deficiencias, programa anual, aplicación, costos",
+  "contenido": {
+    "introduccion_nutricion": {
+      "titulo": "3.1 Introducción a Nutrición de Palma",
+      "exportacion_nutrientes": [
+        "Nitrógeno (N): 30-40 kg/tonelada racimo fresco (ALTO)",
+        "Fósforo (P): 2-3 kg/tonelada (bajo)",
+        "Potasio (K): 50-70 kg/tonelada (ALTÍSIMO, crítico)",
+        "Calcio (Ca): 5-8 kg/tonelada",
+        "Magnesio (Mg): 4-6 kg/tonelada",
+        "Azufre (S): 1-2 kg/tonelada"
+      ],
+      "implicacion_practica": "Para producción 20 toneladas/ha racimo/año: N 600-800 kg, K 1,000-1,400 kg requerimiento ANUAL. Palma es CONSUMIDOR MÁS VORAZ que café/cacao/plátano"
+    },
+    "deficiencias_sintomas": {
+      "titulo": "3.2 Síntomas de Deficiencias Críticas",
+      "deficiencia_nitrogeno": {
+        "sintomas": [
+          "Fronda vieja amarilla pálida",
+          "Crecimiento lento",
+          "Racimos pequeños, pocas flores"
+        ],
+        "diagnostico": "Foliar N < 2.2% (vs 2.8-3.2% normal)",
+        "correccion": "Urea 46% N, 600-800 kg/ha/año"
+      },
+      "deficiencia_potasio": {
+        "sintomas": [
+          "Fronda: Márgenes amarillos ('bronceado'), translucidez",
+          "Tallo quebradizo, débil (volteo riesgo)",
+          "Racimos muy pequeños o nulos",
+          "Fruta: Contenido aceite bajo"
+        ],
+        "frecuencia": "MÁS COMÚN Ecuador (suelos arenosos bajos K disponible)",
+        "diagnostico": "Foliar K < 2.0% (vs 2.8-3.5% normal)",
+        "correccion": "Cloruro K 60% K₂O, 1,200-1,600 kg/ha/año (dosis enorme)"
+      },
+      "deficiencia_magnesio": {
+        "sintomas": [
+          "Hoja: Clorosis internerval (márgenes verdes, zona central amarilla)",
+          "Afecta frondas medianas"
+        ],
+        "diagnostico": "Foliar Mg < 0.25% (vs 0.30-0.40% normal)",
+        "causa": "Suelo arenoso bajo Mg, o K alto (antagonismo)"
+      },
+      "deficiencia_boro": {
+        "sintomas": [
+          "Hoja joven deformada, crece retorcida",
+          "Punto crecimiento se quema (muerte meristema)"
+        ],
+        "diagnostico": "Foliar B < 20 ppm (vs 30-50 ppm normal)",
+        "causa": "Suelo arenoso, pH extremo"
+      },
+      "deficiencia_fsforo": {
+        "sintomas": [
+          "Fronda pequeña, crecimiento muy retardado",
+          "Escasas flores, racimo bajo"
+        ],
+        "diagnostico": "Foliar P < 0.12% (vs 0.16-0.20% normal)",
+        "causa": "Usualmente pH bajo (< 5.0) fija P disponible"
+      }
+    },
+    "programa_fertilizacion": {
+      "titulo": "3.3 Programa de Fertilización Anual (Año 5+ Producción Plena)",
+      "escenario": "Palma 8+ años (rendimiento 20+ toneladas racimo/ha/año)",
+      "aplicaciones_mensuales": [
+        {
+          "mes": "Enero",
+          "evento": "Post-cosecha final",
+          "aplicacion": "Urea 100 g/planta (= 14-15 kg/ha)"
+        },
+        {
+          "mes": "Febrero-Marzo",
+          "evento": "Inicio crecimiento vegetativo",
+          "aplicacion": "NPK (13-23-13) 150 g/planta (alto P floración inicio)"
+        },
+        {
+          "mes": "Abril-Mayo",
+          "evento": "Crecimiento fronda",
+          "aplicacion": "Urea 100 g/planta"
+        },
+        {
+          "mes": "Junio",
+          "evento": "Desarrollo racimo",
+          "aplicacion": "Cloruro K 200 g/planta (máximo K)"
+        },
+        {
+          "mes": "Julio",
+          "evento": "Llenado fruta",
+          "aplicacion": "NPK (13-23-13) 150 g/planta"
+        },
+        {
+          "mes": "Agosto-Septiembre",
+          "evento": "Fruta maduración",
+          "aplicacion": "Cloruro K 200 g/planta (K máximo para aceite)"
+        },
+        {
+          "mes": "Octubre",
+          "evento": "Cosecha racimo",
+          "aplicacion": "Urea 100 g/planta (post-cosecha recuperación)"
+        },
+        {
+          "mes": "Noviembre-Diciembre",
+          "evento": "Descanso relativo",
+          "aplicacion": "Micronutrientes (Borax, Sulfato Zn) si deficiencia"
+        }
+      ],
+      "total_anual": [
+        "Nitrógeno: 600-800 kg/ha (urea 46%)",
+        "Potasio: 1,200-1,600 kg/ha (K₂O, enorme cantidad)",
+        "Fósforo: 150-200 kg/ha P₂O₅"
+      ]
+    },
+    "fuentes_fertilizantes": {
+      "titulo": "3.4 Fuentes de Nutrientes - Opciones Comerciales",
+      "nitrogeno": [
+        {
+          "fuente": "Urea (46% N)",
+          "dosis": "1,300-1,700 kg/ha/año",
+          "costo": "USD 0.25-0.35/kg = USD 325-595/ha"
+        }
+      ],
+      "potasio_alta_demanda": [
+        {
+          "fuente": "Cloruro K (60% K₂O)",
+          "dosis": "2,000-2,700 kg/ha/año (enorme!)",
+          "costo": "USD 0.20-0.30/kg = USD 400-810/ha",
+          "nota": "Palma es consumidor de K MÁS VORAZ agricultura"
+        },
+        {
+          "fuente": "Sulfato K (50% K₂O)",
+          "dosis": "2,400-3,200 kg/ha/año",
+          "ventaja": "Aporta S también",
+          "costo": "USD 0.30-0.40/kg (30% más caro)"
+        }
+      ],
+      "fosforo": [
+        {
+          "fuente": "Superfosfato triple (46% P₂O₅)",
+          "dosis": "300-400 kg/ha",
+          "costo": "USD 0.30-0.50/kg"
+        }
+      ],
+      "micronutrientes": [
+        {
+          "elemento": "Boro",
+          "fuente": "Borax",
+          "dosis": "2-3 kg/ha/año"
+        },
+        {
+          "elemento": "Zinc",
+          "fuente": "Sulfato Zn",
+          "dosis": "5-10 kg/ha/año"
+        }
+      ],
+      "costo_total_anual": "USD 800-1,200/ha/año (fertilización muy costosa)"
+    },
+    "analisis_foliar_monitoreo": {
+      "titulo": "3.5 Análisis Foliar - Monitoreo Crítico",
+      "importancia": "Palma exige análisis foliar OBLIGATORIO (no opcional como cacao). Deficiencia K no visible fácilmente hasta severa",
+      "muestreo": [
+        "Mes 4-6 después plantación (año 1-2)",
+        "Después: Anual mes 6-8 (época producción)"
+      ],
+      "tecnica": [
+        "Fronda 17 (contando desde ápice 1,2,3... fronda 17 convención)",
+        "3ra hoja sin enfermedad",
+        "~100 g hoja (20-25 hojas)",
+        "Lavar agua destilada, secar 70°C",
+        "Enviar laboratorio"
+      ],
+      "interpretacion_rangos": [
+        "N: 2.8-3.2% (bajo = 2.0-2.5%)",
+        "P: 0.16-0.20%",
+        "K: 2.8-3.5% (crítico)",
+        "Ca: 0.6-0.9%",
+        "Mg: 0.30-0.40%",
+        "B: 30-50 ppm"
+      ],
+      "acciones": [
+        "Si K < 2.5%: Incrementar K +300 kg/ha",
+        "Si N < 2.5%: Incrementar N +200 kg/ha",
+        "Si B < 25 ppm: Borax 3-5 kg/ha"
+      ],
+      "costo": "USD 40-60/análisis (recomendado 1-2 veces/año)"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.6 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Cuál nutriente es MÁS importante palma?",
+        "respuesta": "Potasio (K). Bajo K causa deficiencia visible, tallo débil (volcamiento), fruto pequeño (aceite bajo). K es nutriente CRÍTICO para producción aceite"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto cuesta fertilizar palma/ha/año?",
+        "respuesta": "USD 800-1,200/ha. Muy alto (vs café USD 300-500, cacao USD 400-600). Razón: Demanda N, K, P mucho más alta palma"
+      },
+      "q3": {
+        "pregunta": "¿Se puede fertilizar foliar?",
+        "respuesta": "Parcialmente. Foliar es efectivo micronutrientes (B, Zn). NPK suelo es más importante (90% absorción raíz)"
+      },
+      "q4": {
+        "pregunta": "¿Qué pasa si no analizo suelo?",
+        "respuesta": "Riesgo alto. Sin análisis, no sabes deficiencias iniciales. Palma falla si K bajo = pérdida total rendimiento. Análisis USD 30-50 vale el precio"
+      },
+      "q5": {
+        "pregunta": "¿Puedo usar estiércol solamente?",
+        "respuesta": "NO. Estiércol aporta N, K, pero cantidad insuficiente. Palma requiere 1,000+ kg K/ha/año = IMPOSIBLE estiércol solo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición Agroecológica del Arroz",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Ciclo nutrientes anoxia, compost, biofertilizantes, deficiencias naturales",
+  "contenido": {
+    "introduccion": {
+      "titulo": "3.1 Nutrición en Arroz Agroecológico",
+      "texto": "Arroz inundado transforma mineralización = anoxia desactiva nitrificación (NO₃ → NH₄⁺), reduce movilidad P-K. Sistema agroecológico APROVECHA esto: (1) materia orgánica compost mineraliza lentamente = N disponible cuando necesita, (2) reducción ambiente favorece P-K solubilidad, (3) microbiota anaeróbica clave. Nutrición es OPUESTA convencional dependencia N mineral fondo."
+    },
+    "ciclo_nitrogeno": {
+      "titulo": "3.2 Ciclo del Nitrógeno en Anaerobiosis",
+      "proceso": [
+        {
+          "etapa": "Fijación simbiótica",
+          "agente": "Azolla (alga acuática simbiosis Anabaena)",
+          "fijacion": "100-200 kg N/ha/ciclo",
+          "practica": "Inoculación azolla pre-arroz"
+        },
+        {
+          "etapa": "Fijación libre",
+          "agente": "Cianobacterias Nostoc, anaerobiosis favorece",
+          "cantidad": "50-100 kg N/ha"
+        },
+        {
+          "etapa": "Mineralización materia orgánica",
+          "ruta": "Proteína → amino-ácidos → NH₄⁺ (disponible planta)",
+          "ventaja": "Lenta (match demanda arroz, sin lixiviación)"
+        }
+      ]
+    },
+    "azolla_estrategia": {
+      "titulo": "3.3 Azolla - Biofertilizante Acuático",
+      "definicion": "Alga flotante simbiosis cianobacteria fijadora N",
+      "cultivo": [
+        "Inoculación inicial (USD 5-10 kg azolla)",
+        "Crecimiento exponencial 7-10 días (dobla biomasa)",
+        "Cosecha parcial 50%, dejar 50% regenerar",
+        "Reinoculación cada ciclo 20-30 días"
+      ],
+      "beneficios": [
+        "Nitrógeno libre (cianobacteria fija)",
+        "Materia orgánica acumulación",
+        "Control mosquito larva (cobertura agua)",
+        "Alimento patos/peces (ganadería)"
+      ],
+      "costo": "USD 0 post-inversión (autorreplica)"
+    },
+    "compost_acuatico": {
+      "titulo": "3.4 Compost y Nutrientes en Sistema Anóxico",
+      "adaptaciones": [
+        {
+          "adaptacion": "Compost semi-anóxico",
+          "metodo": "Pila sumergida parcialmente (30-40 cm agua)",
+          "duracion": "6-8 semanas descomposición"
+        },
+        {
+          "adaptacion": "Mineralización lenta bajo agua",
+          "velocidad": "20-30% más lenta que aerobio",
+          "ventaja": "Mineralización gradual = disponibilidad durante ciclo"
+        }
+      ]
+    },
+    "biofertilizantes": {
+      "titulo": "3.5 Biofertilizantes para Arroz Anóxico",
+      "bacterias": [
+        {
+          "bacteria": "Azospirillum (libre)",
+          "funcion": "Fijación N, auxina producción",
+          "aplicacion": "Inoculación semilla pre-siembra"
+        },
+        {
+          "bacteria": "Bacillus (anóxico-tolerante)",
+          "funcion": "Solubilización P anóxia",
+          "aplicacion": "Compost inoculado"
+        }
+      ],
+      "microalga": [
+        {
+          "microalga": "Chlorella (fotosintética)",
+          "beneficio": "Oxígeno rizosfera (permite raíces profundas)"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.6 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Azolla realmente fija 100-200 kg N/ha?",
+        "respuesta": "SÍ bajo condiciones óptimas (agua 25-30°C, pH 6-7, luz suficiente). Ecuador tropical = condiciones ideales. Aumento 5-10x vs bacteria libre"
+      },
+      "q2": {
+        "pregunta": "¿Azolla requiere mantenimiento?",
+        "respuesta": "Mínimo. Crece exponencial si nutrientes disponibles (fósforo suficiente). Cosecha parcial mantiene densidad. Reinoculación annual si estrés"
+      },
+      "q3": {
+        "pregunta": "¿Anaerobiosis es problema para planta arroz?",
+        "respuesta": "NO arroz está adaptado. Problema: si inicial (floración anóxia total) = aborto flores. Pero vegetativo = ventaja"
+      },
+      "q4": {
+        "pregunta": "¿Sin urea, cómo arroz crece vegetativo?",
+        "respuesta": "Azolla + fijación libre + mineralización compost. Lento pero constante. Rendimiento 10-15% bajo convencional pero sostenible perpetuo"
+      },
+      "q5": {
+        "pregunta": "¿Fosfato natural funciona agua encharcada?",
+        "respuesta": "Incluso mejor (reducción anóxia favorece solubilización). Mancozeba ppm Fe es mayor anaerobiosis (cuidado toxicidad si bajo pH)"
+      }
+    ]
+  }
+}

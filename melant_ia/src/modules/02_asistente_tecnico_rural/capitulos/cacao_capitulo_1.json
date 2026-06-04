@@ -1,0 +1,220 @@
+{
+  "capitulo": 1,
+  "titulo": "Introducción a la Botánica del Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Fundamentos botánicos y agronómicos",
+  "contenido": {
+    "introduccion_general": {
+      "titulo": "1.1 Historia y Distribución del Cacao",
+      "texto": "El cacao (Theobroma cacao L.) es una especie tropical originaria de la región amazónica de América del Sur y América Central. Arqueológicamente, se ha demostrado que fue domesticado por culturas mesoamericanas hace más de 3,000 años. La palabra 'Theobroma' significa 'alimento de los dioses' en griego, reflejando la importancia histórica y cultural de este cultivo.\n\nActualmente, el cacao se cultiva en más de 80 países distribuidos en la banda tropical entre los 20°N y 20°S de latitud. Los principales productores son: Costa de Marfil (35% de la producción mundial), Ghana (20%), Indonesia (12%), Nigeria (5%), y Ecuador (5%). La producción mundial anual es aproximadamente 5.0-5.5 millones de toneladas de granos secos.",
+      "datos_clave": [
+        "Origen: Amazonía y Mesoamérica",
+        "Domesticación: hace +3,000 años",
+        "Producción mundial: 5.0-5.5 millones toneladas/año",
+        "Precio internacional: USD 2,500-4,000/tonelada"
+      ]
+    },
+    "taxonomia_botanica": {
+      "titulo": "1.2 Taxonomía y Clasificación Botánica",
+      "reino": "Plantae",
+      "division": "Magnoliophyta",
+      "clase": "Eudicots",
+      "orden": "Malvales",
+      "familia": "Malvaceae",
+      "genero": "Theobroma",
+      "especie": "T. cacao L.",
+      "clasificacion_comercial": {
+        "por_origen": [
+          {
+            "tipo": "Criollo",
+            "caracteristicas": "Frutos alargados, 10 surcos longitudinales, cotiledones blancos/rosados, sabor fino.",
+            "rendimiento": "Bajo (500-800 kg/ha)",
+            "precio": "Premium (USD 3,500-4,000/ton)",
+            "distribucion": "América Central, partes de Ecuador, Venezuela"
+          },
+          {
+            "tipo": "Forastero",
+            "caracteristicas": "Frutos redondeados, 10 surcos, cotiledones púrpura oscuro, sabor común/corriente.",
+            "rendimiento": "Alto (1,000-2,000 kg/ha)",
+            "precio": "Comercial (USD 2,500-3,000/ton)",
+            "distribucion": "África Occidental, Brasil, Indonesia"
+          },
+          {
+            "tipo": "Trinitario",
+            "caracteristicas": "Híbrido Criollo x Forastero, características intermedias.",
+            "rendimiento": "Intermedio a alto (800-1,800 kg/ha)",
+            "precio": "Fino (USD 3,000-3,500/ton)",
+            "distribucion": "Ecuador, Colombia, Madagascar, Indonesia"
+          }
+        ]
+      }
+    },
+    "morfologia_planta": {
+      "titulo": "1.3 Características Morfológicas",
+      "sistema_radicular": {
+        "descripcion": "El sistema radicular del cacao es principalmente fasciculado (raíces fibrosas) con una raíz pivotante poco profunda.",
+        "caracteristicas": [
+          "Raíces primarias: 2-3 cm de diámetro, se desarrollan horizontalmente",
+          "Profundidad efectiva: 40-80 cm (en suelos bien drenados puede llegar a 1.2 m)",
+          "Absorción: Las raíces finas se distribuyen en los primeros 30 cm del suelo",
+          "Micorrizas: Asociaciones simbióticas críticas para absorción de nutrientes en suelos pobres"
+        ],
+        "implicaciones_agronomicas": "Esta característica hace que el cacao sea sensible al anegamiento. Requiere terrenos con buen drenaje y preparación adequada del suelo."
+      },
+      "tallo_rama": {
+        "descripcion": "Árbol perenne que puede alcanzar 6-8 metros de altura en forma natural, pero se mantiene entre 3-5 metros en cultivo.",
+        "caracteristicas": [
+          "Tallo principal cilíndrico, con crecimiento limitado",
+          "Corteza: gris a marrón, ligeramente estriada",
+          "Ramas primarias: Se desarrollan a 1.2-1.5 metros del suelo",
+          "Sistema de ramificación: Monopódial (un tallo central dominante)",
+          "Crecimiento: De 10-40 cm/año en cultivo comercial"
+        ],
+        "poda_formar": "La poda de formación busca crear 3-5 ramas principales bien distribuidas para facilitar cosecha y aireación."
+      },
+      "hoja": {
+        "descripcion": "Las hojas del cacao son simples, alternas, de forma lanceolada a elíptica.",
+        "caracteristicas": [
+          "Longitud: 15-40 cm",
+          "Ancho: 6-16 cm",
+          "Color: Verde oscuro en el haz, más claro en el envés",
+          "Textura: Lisa en adultas, pilosa en juveniles",
+          "Nerviación: Pinnada, conspicua",
+          "Duración: Perennifolio (vida útil de la hoja: 6-8 meses)"
+        ],
+        "diagnostico_nutricional": "Las hojas reflejan el estado nutricional de la planta. Análisis foliar anual es recomendado para ajustar fertilización."
+      },
+      "flor": {
+        "descripcion": "Las flores del cacao son pequeñas, frágiles, con la característica peculiar de desarrollarse directamente en el tallo y ramas (caulifloria).",
+        "caracteristicas": [
+          "Tamaño: 1-1.5 cm de diámetro",
+          "Color: Rosa pálido a rojo oscuro según variedad",
+          "Disposición: Flores solitarias o en pequeños fascículos en nudos de tallo y ramas",
+          "Estructura: 5 sépalos, 5 pétalos modificados (labellum), androceo de 5 estaminoides y 1 tubo estaminal",
+          "Período de floración: Casi continuo, con picos según disponibilidad de agua"
+        ],
+        "polinizacion": "Las flores son polinizadas por pequeños insectos (mosquitas Forcipomyia spp.). La tasa de cuajamiento es muy baja: 1-5% de flores fecundadas producen fruto."
+      },
+      "fruto": {
+        "descripcion": "El fruto del cacao es una baya leñosa llamada 'mazorca' o 'vaina', de forma ovoide a alargada.",
+        "caracteristicas": [
+          "Longitud: 15-30 cm",
+          "Diámetro: 7-10 cm",
+          "Peso: 400-600 gramos por fruto fresco",
+          "Color en madurez: Amarillo, rojo o marrón según variedad",
+          "Textura: Corteza gruesa y dura (8-12 mm) con 10 surcos longitudinales",
+          "Interior: Contiene 30-40 almendras rodeadas de mucílago blanco"
+        ],
+        "tiempo_desarrollo": "Desde antesis (polinización) hasta madurez: 5-6 meses."
+      },
+      "semilla": {
+        "descripcion": "Las almendras de cacao son las semillas comerciales, rodeadas de un mucílago dulce.",
+        "caracteristicas": [
+          "Tamaño: 2-3 cm de largo, 1-1.5 cm de ancho",
+          "Peso: 0.8-1.2 gramos por almendra fresca",
+          "Color: Púrpura oscuro (en Forastero) o blanco/rosado (en Criollo)",
+          "Composición: 12-13% cáscaraAlmendra (cocoa butter), 12-14% proteína, 3-5% taninos",
+          "Viabilidad: Semillas pierden viabilidad si la humedad desciende por debajo de 5%"
+        ]
+      }
+    },
+    "ciclo_vegetativo": {
+      "titulo": "1.4 Ciclo Vegetativo del Cacao",
+      "etapas": [
+        {
+          "etapa": "Germinación",
+          "duracion": "2-4 semanas",
+          "caracteristicas": "Las semillas germinan en ambiente cálido (26-32°C) y húmedo. La radícula emerge primero, luego el hipocótilo."
+        },
+        {
+          "etapa": "Vivero",
+          "duracion": "3-4 meses",
+          "caracteristicas": "La plántula se desarrolla en bolsas con sustrato. Alcanza 15-25 cm y 2-3 pares de hojas verdaderas."
+        },
+        {
+          "etapa": "Establecimiento en campo",
+          "duracion": "1-2 años",
+          "caracteristicas": "Plántula trasplantada establece sistema radicular. Crecimiento lento los primeros 6-12 meses."
+        },
+        {
+          "etapa": "Crecimiento vegetativo",
+          "duracion": "2-3 años",
+          "caracteristicas": "Desarrollo acelerado de ramas y canopia. Formación de la estructura productiva."
+        },
+        {
+          "etapa": "Inicio de producción",
+          "duracion": "A partir de año 3-4",
+          "caracteristicas": "Primeras flores y frutos. Producción experimental (50-200 kg/ha)."
+        },
+        {
+          "etapa": "Producción comercial",
+          "duracion": "Años 5-25+",
+          "caracteristicas": "Producción estable y comercialmente viable (1,000-2,500 kg/ha secos)."
+        }
+      ]
+    },
+    "requerimientos_ambientales": {
+      "titulo": "1.5 Requerimientos Ambientales Detallados",
+      "temperatura": {
+        "parametro": "Temperatura media anual",
+        "optima": "24-28°C",
+        "rango_tolerable": "18-35°C",
+        "minima_critica": "15°C (detiene crecimiento)",
+        "maxima_critica": "35°C (estrés hídrico)",
+        "efecto_temp_baja": "Por debajo de 20°C: Reducción de crecimiento, floración deficiente, mayor incidencia de enfermedades fúngicas",
+        "efecto_temp_alta": "Por encima de 30°C: Aumenta transpiración, requiere mayor disponibilidad de agua, estrés en floración"
+      },
+      "precipitacion": {
+        "parametro": "Precipitación anual",
+        "optima": "1500-3000 mm",
+        "distribucion": "Bien distribuida durante todo el año",
+        "mes_critico": "Mínimo 100 mm/mes",
+        "sequía_critica": "Más de 3 meses consecutivos sin lluvia significativa",
+        "efecto_deficit": "Estrés hídrico reduce crecimiento, afecta cuajamiento de flores y desarrollo de frutos",
+        "efecto_exceso": "Más de 4000 mm/año con mala distribución: Mayor incidencia de enfermedades fúngicas, problemas de drenaje"
+      },
+      "radiacion_solar": {
+        "parametro": "Luminosidad",
+        "requerimiento": "Sombra parcial 40-50%",
+        "radiacion_optima": "150-250 mol/m²/día (PAR photosynthetically active radiation)",
+        "por_que_sombra": "Radiación solar directa excesiva causa quemaduras en frutos, aumenta transpiración, reduce producción",
+        "arboles_sombra": "Plátano (4-5m altura), Coco, Cedro, Caoba, Laurel"
+      },
+      "humedad_relativa": {
+        "parametro": "Humedad relativa promedio",
+        "optima": "70-85%",
+        "minima": "60% (causa estrés hídrico)",
+        "maxima": "95% (favorece enfermedades fúngicas)",
+        "efecto_baja_humedad": "Aumenta transpiración, reduce crecimiento, estrés en plantas jóvenes",
+        "efecto_alta_humedad": "Favorece Monilia y otras enfermedades fúngicas"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.6 Preguntas Frecuentes",
+      "preguntas": [
+        {
+          "pregunta": "¿Cuál es la diferencia entre Criollo, Forastero y Trinitario?",
+          "respuesta": "Son tres grupos botánicos de Theobroma cacao. Criollo es el tipo original, de baja productividad pero excelente sabor. Forastero es más productivo pero de sabor 'corriente'. Trinitario es el híbrido, combinando características de ambos. En la práctica comercial moderna, el Trinitario es el más cultivado."
+        },
+        {
+          "pregunta": "¿Por qué el cacao crece mejor con sombra?",
+          "respuesta": "El cacao es un árbol de sotobosque adaptado a crecer bajo el dosel del bosque tropical. La sombra previene quemaduras solares en tronco y frutos, reduce transpiración en el suelo mantiene mayor humedad, y mitiga fluctuaciones de temperatura."
+        },
+        {
+          "pregunta": "¿Cuánto tiempo tarda un cacaotal en producir?",
+          "respuesta": "Entre 3-4 años comienza la producción experimental (50-200 kg/ha). Producción comercial viable se alcanza entre años 5-6. El máximo rendimiento se logra entre años 8-15."
+        },
+        {
+          "pregunta": "¿Qué significa 'caulifloria' en cacao?",
+          "respuesta": "Es la característica de producir flores y frutos directamente en el tallo y ramas leñosas, no solo en ramas terminales. Es una adaptación tropical que favorece la polinización por insectos que habitan las grietas de la corteza."
+        }
+      ]
+    },
+    "referencias_capitulo": [
+      "FAO (2021). Cultivos tropicales: Cacao. Guía técnica integral.",
+      "Wood, G.A.R. & Lass, R.A. (2001). Cocoa (4th ed.). Blackwell Science.",
+      "ICCRI (Indonesian Cocoa Research Institute). Technical Guidelines for Cocoa Production.",
+      "World Cocoa Foundation. Cocoa Production Sustainability Guidelines."
+    ]
+  }
+}

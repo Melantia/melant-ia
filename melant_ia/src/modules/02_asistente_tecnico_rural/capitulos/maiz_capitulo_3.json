@@ -1,0 +1,150 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización del Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Requerimientos nutricionales, programa fertilización, deficiencias, análisis suelo",
+  "contenido": {
+    "introduccion_nutricion": {
+      "titulo": "3.1 Importancia de Nutrición en Maíz",
+      "impacto": "Nutrición es 40-50% de rendimiento. Deficiencias causan -30-50% producción. Maíz es cultivo muy exigente nutrientes",
+      "nutrientes_criticos": [
+        "N (Nitrógeno): Crecimiento, proteína grano",
+        "P (Fósforo): Enraizamiento, floración",
+        "K (Potasio): Resistencia estrés, firmeza tallo"
+      ]
+    },
+    "requerimientos_nutrientes": {
+      "titulo": "3.2 Requerimientos Nutricionales",
+      "extraccion_por_tonelada": [
+        "Nitrógeno: 15-20 kg N/tonelada grano",
+        "Fósforo: 3-4 kg P₂O₅/tonelada",
+        "Potasio: 4-5 kg K₂O/tonelada"
+      ],
+      "produccion_6_toneladas": [
+        "Nitrógeno: 6 ton × 18 kg = 108 kg N",
+        "Fósforo: 6 ton × 3.5 kg = 21 kg P₂O₅",
+        "Potasio: 6 ton × 4.5 kg = 27 kg K₂O"
+      ],
+      "nutrientes_secundarios": [
+        "Calcio: 3-5 kg/tonelada (si pH bajo, importante)",
+        "Magnesio: 1-2 kg/tonelada",
+        "Azufre: 0.5-1.0 kg/tonelada"
+      ],
+      "micronutrientes": [
+        "Zinc: 50-100 g/tonelada (muy importante en maíz)",
+        "Boro: 20-50 g/tonelada",
+        "Manganeso: 5-10 g/tonelada",
+        "Cobre: 5-10 g/tonelada"
+      ]
+    },
+    "programa_fertilizacion": {
+      "titulo": "3.3 Programa de Fertilización",
+      "aplicacion_base": [
+        {
+          "estadio": "Pre-siembra (fondo)",
+          "nutrientes": "P + K + materia orgánica",
+          "dosis": "Fosfato diamónico 200-300 kg/hectárea",
+          "proposito": "Enraizamiento, disponibilidad temprana"
+        },
+        {
+          "estadio": "Cobertera V6 (6 hojas)",
+          "nutrientes": "Nitrógeno principal",
+          "dosis": "Urea 300-400 kg/hectárea (150-200 kg N)",
+          "proposito": "Crecimiento vegetativo, diferenciación panoja"
+        },
+        {
+          "estadio": "Cobertera V10 (10 hojas)",
+          "nutrientes": "N complementario",
+          "dosis": "Urea 100-150 kg/hectárea (50-75 kg N)",
+          "proposito": "Finalizar crecimiento, antes floración"
+        }
+      ],
+      "riego_fertirrigacion": [
+        "Si riego disponible: Fertirrigación V8-V10",
+        "Aplicación: N fraccionar en 2-3 riegos",
+        "Beneficio: Mayor eficiencia (70% vs 50% suelo)"
+      ]
+    },
+    "deficiencias_sintomas": {
+      "titulo": "3.4 Deficiencias Nutricionales y Síntomas",
+      "nitrogeno": {
+        "sintomas": [
+          "Clorosis foliar (amarillamiento envés viejo)",
+          "Partiendo de hojas viejas (N es móvil)",
+          "Crecimiento lento, plantas pequeñas",
+          "Floración retrasada"
+        ],
+        "cuando": "Visible V6-V10 (alta demanda N)"
+      },
+      "fosforo": {
+        "sintomas": [
+          "Coloración púrpura/violeta tallos y pecíolos",
+          "Crecimiento lento desde germinación",
+          "Raíces reducidas (cortas, poco ramificadas)"
+        ],
+        "cuando": "Plantas jóvenes (V2-V6), si P bajo suelo"
+      },
+      "potasio": {
+        "sintomas": [
+          "Márgenes foliares secos (quemados)",
+          "Partiendo de hojas viejas (K móvil)",
+          "Tallos débiles, plantas caen (acame)"
+        ],
+        "cuando": "Visible V12-VT (floración)"
+      },
+      "zinc": {
+        "sintomas": [
+          "Enanismo (plantas muy pequeñas)",
+          "Rayas cloróticas entre venas",
+          "Acortamiento entre nudos"
+        ],
+        "cuando": "Temprano (V2-V4) en suelos pH > 7.5 o arenosos"
+      }
+    },
+    "analisis_suelo": {
+      "titulo": "3.5 Análisis de Suelo para Maíz",
+      "muestreo": [
+        "Profundidad: 0-30 cm (zona raíces principales)",
+        "Muestreo: Mínimo 15-20 puntos en zigzag",
+        "Cantidad: 500-1,000 g muestra compuesta",
+        "Época: 2-4 semanas antes siembra"
+      ],
+      "parametros_analizar": [
+        "pH: Óptimo 6.0-7.0 para maíz",
+        "Materia orgánica: > 2.5%",
+        "N disponible (nitratos NO₃): Depende historial",
+        "P disponible: > 20 ppm (Bray II o Mehlich III)",
+        "K disponible: > 150 ppm",
+        "Zn disponible: > 1.5 ppm (crítico maíz)"
+      ],
+      "interpretacion": [
+        "Bajo N: Aumento 50-75 kg N/hectárea",
+        "Bajo P: Agregar 100-150 kg P₂O₅/hectárea",
+        "Bajo Zn: Aplicar Zn 5-10 kg/hectárea"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.6 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Cuánto nitrógeno necesita maíz?",
+        "respuesta": "Aproximadamente 18 kg N/tonelada grano. Para 6 toneladas = 108 kg N/hectárea. En 2 aplicaciones: V6 (150-200 kg Urea) + V10 (50-75 kg Urea)"
+      },
+      "q2": {
+        "pregunta": "¿Zinc es realmente importante?",
+        "respuesta": "SÍ crítico. Maíz es muy susceptible deficiencia Zn (especialmente pH > 7.0, suelos arenosos). Deficiencia = enanismo, pérdida -50% rendimiento"
+      },
+      "q3": {
+        "pregunta": "¿Fosfato diamónico es mejor que triple superfosfato?",
+        "respuesta": "Ambos sirven. Fosfato diamónico: N + P (economía). Triple superfosfato: solo P (más concentrado). Depende plan fertilización"
+      },
+      "q4": {
+        "pregunta": "¿Maíz reutiliza N del año anterior?",
+        "respuesta": "Parcialmente. Si leguminosa anterior (fijación N): -20-30 kg N necesario. Si cereal: sin reciclaje. Análisis suelo define dosis exacta"
+      },
+      "q5": {
+        "pregunta": "¿Cobertera V10 es importante?",
+        "respuesta": "SÍ si maíz aún crece. V10-V12: diferenciación espiga (define tamaño). Nitrógeno en este punto es crítico para rendimiento"
+      }
+    ]
+  }
+}

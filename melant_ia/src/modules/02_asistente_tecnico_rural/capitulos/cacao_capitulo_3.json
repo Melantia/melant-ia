@@ -1,0 +1,560 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización del Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Gestión de nutrientes y programas de fertilización",
+  "contenido": {
+    "introduccion_nutricion": {
+      "titulo": "3.1 Introducción a la Nutrición del Cacao",
+      "texto": "El cacao es un cultivo demandante de nutrientes que requiere un manejo cuidadoso de la fertilización para mantener productividad sostenible. A diferencia de otros cultivos perennes, el cacao tiene ciclos de floración casi continuos, generando una extracción constante de nutrientes del suelo. La nutrición inadecuada resulta en reducción de rendimiento, mayor susceptibilidad a plagas y enfermedades, y deterioro de la calidad del grano.\n\nLa gestión nutricional del cacao debe basarse en:\n(1) Análisis de suelo periódicos (cada 2-3 años)\n(2) Análisis foliar anual para diagnóstico de deficiencias\n(3) Programa de fertilización balanceado según etapa del cultivo\n(4) Monitoreo de síntomas visuales\n(5) Registro de aplicaciones para ajuste continuo",
+      "datos_clave": [
+        "Extracción total (kg/ha): N (45-70), P (8-12), K (50-80)",
+        "Rendimiento esperado: 1-2 toneladas de fruto fresco = 300-600 kg de grano seco",
+        "Duración del cultivo productivo: 25-30 años",
+        "Retorno de nutrientes vía hojarasca: 30-50% del total extraído"
+      ]
+    },
+    "requerimientos_nutricionales": {
+      "titulo": "3.2 Requerimientos Nutricionales del Cacao",
+      "macronutrientes_primarios": {
+        "nitrogeno": {
+          "titulo": "Nitrógeno (N)",
+          "rango_optimo": "150-200 mg/kg (suelo) / 1.8-2.2% (hoja seca)",
+          "funciones": [
+            "Estructura proteica y clorofila - crecimiento vegetativo",
+            "Síntesis de ácidos nucleicos",
+            "Activación de enzimas"
+          ],
+          "sintomas_deficiencia": "Clorosis generalizada en hojas viejas, reducción de crecimiento, menor floración, frutos pequeños",
+          "sintomas_exceso": "Crecimiento vegetativo excesivo, menor fructificación, mayor susceptibilidad a enfermedades fungales",
+          "manejo": "Aplicar en 3-4 dosis fraccionadas coincidiendo con picos de floración y crecimiento (abril-mayo, junio-julio, septiembre-octubre, enero)"
+        },
+        "fosforo": {
+          "titulo": "Fósforo (P)",
+          "rango_optimo": "8-15 mg/kg (suelo) / 1.0-1.3% (hoja seca)",
+          "funciones": [
+            "Transferencia de energía (ATP)",
+            "Metabolismo de carbohidratos",
+            "Maduración y calidad de frutos"
+          ],
+          "sintomas_deficiencia": "Reducción de crecimiento radicular, hojas más pequeñas, coloración púrpura en pecíolos y ramas jóvenes, caída de frutos",
+          "sintomas_exceso": "Poco frecuente; puede inmovilizar micronutrientes",
+          "manejo": "Aplicar de forma fraccionada con el programa de nitrógeno. En suelos ácidos, aplicar roca fosfórica (500-1000 kg/ha) cada 3-4 años"
+        },
+        "potasio": {
+          "titulo": "Potasio (K)",
+          "rango_optimo": "80-150 mg/kg (suelo) / 1.5-2.0% (hoja seca)",
+          "funciones": [
+            "Regulación osmótica y estomatal",
+            "Traslocación de azúcares y almidones",
+            "Síntesis de proteínas",
+            "Resistencia a plagas y enfermedades"
+          ],
+          "sintomas_deficiencia": "Clorosis de bordes en hojas maduras, necrosis progresiva, frutos deformes, grietas en tallos",
+          "sintomas_exceso": "Poco frecuente; puede causar deficiencias secundarias de Mg y Ca",
+          "manejo": "Crítico en suelos arenosos con baja capacidad de intercambio catiónico. Aplicar 100-150 kg K₂O/ha/año en cultivos en producción"
+        }
+      },
+      "macronutrientes_secundarios": {
+        "calcio": {
+          "titulo": "Calcio (Ca)",
+          "rango_optimo": "1500-2500 mg/kg (suelo) / 0.8-1.2% (hoja seca)",
+          "funciones": [
+            "Estructura de pared celular",
+            "Actividad enzimática",
+            "Regulación del pH celular"
+          ],
+          "sintomas_deficiencia": "Clorosis en hojas nuevas con venas verdes (tipo internerval), necrosis de puntas y bordes de hojas jóvenes",
+          "diagnostico": "Usualmente hay disponibilidad, pero baja absorción en suelos muy ácidos",
+          "manejo": "Mantener pH 5.5-6.5 mediante encalado. Aplicar 2-3 toneladas de cal (CaCO₃) cada 3-4 años"
+        },
+        "magnesio": {
+          "titulo": "Magnesio (Mg)",
+          "rango_optimo": "100-200 mg/kg (suelo) / 0.25-0.35% (hoja seca)",
+          "funciones": [
+            "Centro de la molécula de clorofila",
+            "Activador de enzimas"
+          ],
+          "sintomas_deficiencia": "Clorosis internerval (verde en venas, amarillo entre venas) primero en hojas viejas, progresión hacia hojas nuevas",
+          "diagnostico": "Muy frecuente en suelos muy lavados o de textura arenosa",
+          "manejo": "Aplicar MgSO₄ (sulfato de magnesio) 50-100 kg/ha/año o mediante pulverizaciones foliares de Mg al 2%"
+        },
+        "azufre": {
+          "titulo": "Azufre (S)",
+          "rango_optimo": "10-20 mg/kg (suelo) / 0.10-0.15% (hoja seca)",
+          "funciones": [
+            "Síntesis de aminoácidos azufrados",
+            "Enzimas con grupos sulfhidrilos"
+          ],
+          "sintomas_deficiencia": "Clorosis generalizada similar a N pero comienza en hojas nuevas (no viejas)",
+          "manejo": "Generalmente suministrado vía sulfatos de otros nutrientes (MgSO₄, K₂SO₄); si es necesario, aplicar 30-50 kg S/ha"
+        }
+      },
+      "micronutrientes": {
+        "titulo": "Micronutrientes",
+        "descripcion": "Aunque requeridos en pequeñas cantidades, son críticos para funciones enzimáticas y regulación hormonal",
+        "elementos": [
+          {
+            "elemento": "Boro (B)",
+            "rango_optimo": "0.5-1.5 mg/kg (suelo) / 10-20 mg/kg (hoja)",
+            "funciones": "Movilización de carbohidratos, formación de flores",
+            "sintomas_deficiencia": "Esterilidad floral, frutos deformes, grietas en tallo y ramas ('stem canker')",
+            "manejo": "Aplicar 1-2 kg B/ha/año vía borato de sodio o ácido bórico"
+          },
+          {
+            "elemento": "Zinc (Zn)",
+            "rango_optimo": "0.5-2.0 mg/kg (suelo) / 15-30 mg/kg (hoja)",
+            "funciones": "Síntesis de auxinas, actividad enzimática",
+            "sintomas_deficiencia": "Clorosis internerval en hojas jóvenes, acortamiento de entrenudos, roseta de hojas",
+            "manejo": "Aplicar 2-5 kg Zn/ha/año vía sulfato de zinc (ZnSO₄) o quelatado"
+          },
+          {
+            "elemento": "Cobre (Cu)",
+            "rango_optimo": "0.2-0.5 mg/kg (suelo) / 5-10 mg/kg (hoja)",
+            "funciones": "Fotosíntesis, síntesis de lignina, resistencia a enfermedades",
+            "sintomas_deficiencia": "Decoloración azulada de hojas nuevas, enanismo, dieback de ramas",
+            "manejo": "Aplicar 1-2 kg Cu/ha/año; fungicidas cúpricos contribuyen"
+          },
+          {
+            "elemento": "Manganeso (Mn)",
+            "rango_optimo": "5-15 mg/kg (suelo) / 50-100 mg/kg (hoja)",
+            "funciones": "Fotosíntesis, metabolismo de nitrógeno",
+            "sintomas_deficiencia": "Clorosis internerval similar a Zn, puede confundirse",
+            "manejo": "Aplicar 2-4 kg Mn/ha/año; frecuentemente presente en suelos ácidos"
+          },
+          {
+            "elemento": "Hierro (Fe)",
+            "rango_optimo": "5-10 mg/kg (suelo) / 80-150 mg/kg (hoja)",
+            "funciones": "Síntesis de clorofila, cadena respiratoria",
+            "sintomas_deficiencia": "Clorosis internerval severa en hojas nuevas (verdor limitado a venas), puede avanzar a hojas completamente amarillas",
+            "manejo": "Mantener pH entre 5.5-6.5; aplicar quelatado de Fe (50-100 g/árbol vía foliar)"
+          }
+        ]
+      }
+    },
+    "diagnostico_nutricional": {
+      "titulo": "3.3 Diagnóstico del Estado Nutricional",
+      "analisis_foliar": {
+        "titulo": "Análisis Foliar",
+        "procedimiento": [
+          {
+            "paso": 1,
+            "titulo": "Selección de muestras",
+            "detalles": "Recolectar 30-40 hojas recién maduras (3-4 meses de edad) de la parte media del árbol, desde ramas fructíferas. Evitar hojas anormales, dañadas o enfermas."
+          },
+          {
+            "paso": 2,
+            "titulo": "Preparación",
+            "detalles": "Lavar con agua destilada, secar a 70°C hasta peso constante (48 horas), moler finamente y tamizar. Enviar 50g al laboratorio certificado."
+          },
+          {
+            "paso": 3,
+            "titulo": "Timing",
+            "detalles": "Realizar muestreo anual entre junio-agosto (mitad de ciclo productivo), coincidiendo con picos de crecimiento vegetativo."
+          }
+        ],
+        "interpretacion_resultados": {
+          "tabla_valores_referenciales": [
+            {
+              "nutriente": "Nitrógeno (N)",
+              "deficiente": "< 1.8%",
+              "bajo": "1.8-2.0%",
+              "optimo": "2.0-2.3%",
+              "alto": "> 2.5%"
+            },
+            {
+              "nutriente": "Fósforo (P)",
+              "deficiente": "< 0.95%",
+              "bajo": "0.95-1.05%",
+              "optimo": "1.05-1.35%",
+              "alto": "> 1.5%"
+            },
+            {
+              "nutriente": "Potasio (K)",
+              "deficiente": "< 1.3%",
+              "bajo": "1.3-1.5%",
+              "optimo": "1.5-2.0%",
+              "alto": "> 2.2%"
+            },
+            {
+              "nutriente": "Calcio (Ca)",
+              "deficiente": "< 0.7%",
+              "bajo": "0.7-0.85%",
+              "optimo": "0.85-1.2%",
+              "alto": "> 1.5%"
+            },
+            {
+              "nutriente": "Magnesio (Mg)",
+              "deficiente": "< 0.20%",
+              "bajo": "0.20-0.25%",
+              "optimo": "0.25-0.35%",
+              "alto": "> 0.4%"
+            },
+            {
+              "nutriente": "Boro (B)",
+              "deficiente": "< 8 ppm",
+              "bajo": "8-10 ppm",
+              "optimo": "10-20 ppm",
+              "alto": "> 25 ppm"
+            }
+          ]
+        },
+        "diagnostico_rapido_visual": "Aunque el análisis foliar es definitivo, se pueden reconocer deficiencias by observación de síntomas visuales para intervención inmediata"
+      },
+      "analisis_suelo": {
+        "titulo": "Análisis de Suelo",
+        "frecuencia": "Cada 2-3 años en cultivos establecidos; anualmente en plantaciones nuevas",
+        "parametros_evaluar": [
+          "pH (potencialmente disponible para absorción)",
+          "Materia orgánica (fuente de nutrientes y retención de humedad)",
+          "Nitrógeno total (N) y nitrato (NO₃⁻)",
+          "Fósforo disponible (Bray II o Olsen según pH)",
+          "Potasio intercambiable",
+          "Calcio intercambiable",
+          "Magnesio intercambiable",
+          "Capacidad de intercambio catiónico (CIC)",
+          "Saturación de bases",
+          "Boro disponible",
+          "Zinc disponible",
+          "Cobre disponible"
+        ],
+        "interpretacion_suelo": {
+          "pH": {
+            "valor": "5.5-6.5",
+            "si_menor": "Encalar 2-5 ton/ha de CaCO₃ según pH actual",
+            "si_mayor": "Aplicar azufre elemental 500-1000 kg/ha (proceso lento)"
+          },
+          "materia_organica": {
+            "valor": "> 4%",
+            "si_menor": "Incorporar 30-50 ton/ha de estiércol descompuesto o compost anualmente"
+          },
+          "potasio": {
+            "valor": "80-150 mg/kg",
+            "si_menor": "Aumentar aplicación de K₂O a 150-200 kg/ha/año"
+          }
+        }
+      }
+    },
+    "programa_fertilizacion": {
+      "titulo": "3.4 Programa de Fertilización Integrada",
+      "descripcion": "Un programa eficiente combina fuentes orgánicas (compost, estiércol) con fertilizantes minerales, ajustados según análisis de suelo y foliar.",
+      "etapa_vivero": {
+        "titulo": "Plantas en Vivero (0-4 meses)",
+        "manejo": [
+          {
+            "mes": "Semana 1-2 (germinación)",
+            "actividad": "Sin fertilizante. Usar substrato enriquecido con materia orgánica (40% compost, 60% suelo fértil)",
+            "dosis": "N/A"
+          },
+          {
+            "mes": "Semana 3-8 (crecimiento plántula)",
+            "actividad": "Aplicar fertilizante NPK balanceado cada 2 semanas vía fertiriego o foliar",
+            "dosis": "Foliar: NPK 18-18-18 al 1% (50g en 5L agua), 2 aplicaciones/semana"
+          },
+          {
+            "mes": "Semana 9-16 (endurecimiento)",
+            "actividad": "Aumentar K para fortalecer, reducir N",
+            "dosis": "NPK 10-15-25 al 1%, 1 aplicación/semana"
+          }
+        ],
+        "manejo_detallado": "En vivero, priorizar crecimiento radicular y aclimatación. No exceder N para evitar plantas débiles. Al trasplante, las plantas deben tener 20-30 cm de altura y 4-5 pares de hojas verdaderas."
+      },
+      "etapa_establecimiento": {
+        "titulo": "Plantas Trasplantadas (1-3 años post-trasplante)",
+        "objetivo": "Favorecer crecimiento vegetativo y desarrollo radicular antes de floración comercial",
+        "programa_anual": [
+          {
+            "mes": "Enero-Febrero",
+            "actividad": "Encalado si es necesario (pH < 5.5)",
+            "dosis": "2-3 ton CaCO₃/ha"
+          },
+          {
+            "mes": "Marzo",
+            "actividad": "Primera aplicación de fertilizante",
+            "dosis": "150 kg N/ha (dividir en 3 dosis: 50 kg N cada una), 40 kg P₂O₅/ha, 100 kg K₂O/ha"
+          },
+          {
+            "mes": "Mayo",
+            "actividad": "Segunda aplicación",
+            "dosis": "50 kg N/ha, 20 kg P₂O₅/ha, 60 kg K₂O/ha"
+          },
+          {
+            "mes": "Julio-Agosto",
+            "actividad": "Tercera aplicación (coincide con floración inicial)",
+            "dosis": "50 kg N/ha, 20 kg P₂O₅/ha, 80 kg K₂O/ha (aumentar K para floración y fruto)"
+          },
+          {
+            "mes": "Octubre",
+            "actividad": "Cuarta aplicación (última del año)",
+            "dosis": "50 kg N/ha, 10 kg P₂O₅/ha, 60 kg K₂O/ha"
+          }
+        ],
+        "adicionales": {
+          "materia_organica": "Aplicar 5-10 kg de compost descompuesto/árbol anualmente en junio, distribuido alrededor de la base (a 50 cm del tallo)",
+          "micronutrientes": "Boro 1 kg B/ha (borato sódico 5% a 20 kg/ha), Zinc 2 kg Zn/ha (ZnSO₄ 35% a 6 kg/ha), ambos en mayo"
+        }
+      },
+      "etapa_produccion": {
+        "titulo": "Plantas en Producción (> 3-4 años)",
+        "objetivo": "Mantener floración y fructificación continua, compensar exportación de nutrientes",
+        "programa_anual": [
+          {
+            "mes": "Enero-Febrero",
+            "actividad": "Diagnóstico: análisis de suelo y foliar del año anterior. Ajustar programa según resultados",
+            "dosis": "Según análisis"
+          },
+          {
+            "mes": "Marzo",
+            "actividad": "Aplicación N-P-K base (post-cosecha de cacao principal)",
+            "dosis": "180-200 kg N/ha, 50-60 kg P₂O₅/ha, 120-150 kg K₂O/ha"
+          },
+          {
+            "mes": "Mayo",
+            "actividad": "Aplicación micronutrientes + segunda aplicación macronutrientes",
+            "dosis": "60 kg N/ha, 20 kg P₂O₅/ha, 80 kg K₂O/ha. Micronutrientes: B 1 kg/ha, Zn 2 kg/ha, Cu 1 kg/ha"
+          },
+          {
+            "mes": "Julio",
+            "actividad": "Tercera aplicación (floración principal)",
+            "dosis": "60 kg N/ha, 15 kg P₂O₅/ha, 100 kg K₂O/ha (aumentar K para cuajamiento de fruto)"
+          },
+          {
+            "mes": "Septiembre",
+            "actividad": "Cuarta aplicación (desarrollo de frutos)",
+            "dosis": "50 kg N/ha, 15 kg P₂O₅/ha, 90 kg K₂O/ha"
+          },
+          {
+            "mes": "Noviembre",
+            "actividad": "Quinta aplicación (maduración de cacao principal)",
+            "dosis": "40 kg N/ha, 10 kg P₂O₅/ha, 70 kg K₂O/ha"
+          }
+        ],
+        "adicionales": {
+          "materia_organica": "Aplicar 10-15 kg compost/árbol/año, distribuido en 2-3 fracciones (mayo, septiembre, noviembre)",
+          "restos_cosecha": "Mantener mulch de vainas de cacao al pie para reciclaje de nutrientes"
+        },
+        "total_anual_produccion": "250-300 kg N/ha, 80-100 kg P₂O₅/ha, 450-520 kg K₂O/ha + micronutrientes"
+      }
+    },
+    "fuentes_fertilizantes": {
+      "titulo": "3.5 Fuentes de Fertilizantes y Aplicación",
+      "fertilizantes_nitrogenados": [
+        {
+          "fuente": "Urea (46% N)",
+          "ventajas": "Concentración alta, fácil disolución, bajo costo",
+          "desventajas": "Pérdidas por volatilización en aplicación foliar (máximo 2%)",
+          "aplicacion": "Granulado: dispersar al suelo en radiación de gota, riego inmediato. Foliar: 1-2%"
+        },
+        {
+          "fuente": "Sulfato de amonio (21% N)",
+          "ventajas": "Baja lixiviación, aporta S, acidificante (útil en suelos alcalinos)",
+          "desventajas": "Menor concentración requiere mayor volumen",
+          "aplicacion": "Granulado: dispersar bajo radiación. Mejor en suelos neutros-básicos"
+        },
+        {
+          "fuente": "Nitrato de amonio (34% N)",
+          "ventajas": "Alta concentración, mitad nítrica (absorción rápida), mitad amoniacal",
+          "desventajas": "Oxidante (regulación en almacenamiento), más caro",
+          "aplicacion": "Granulado directo al suelo. No usar en suelos alcalinos"
+        }
+      ],
+      "fertilizantes_fosfatados": [
+        {
+          "fuente": "Superfosfato simple (18% P₂O₅)",
+          "composicion": "P₂O₅ soluble + CaSO₄",
+          "ventajas": "Económico, aporta Ca y S",
+          "desventajas": "Baja concentración, volumen",
+          "aplicacion": "Incorporar 30-50 cm de profundidad en presiembra o fraccionado"
+        },
+        {
+          "fuente": "Superfosfato triple (45% P₂O₅)",
+          "composicion": "P₂O₅ altamente disponible",
+          "ventajas": "Alta concentración, eficiencia en suelos fijadores de P",
+          "desventajas": "Mayor costo",
+          "aplicacion": "Incorporar en presiembra o aplicar fraccionado 50 kg/ha"
+        },
+        {
+          "fuente": "Roca fosfórica (18-22% P₂O₅ total)",
+          "ventajas": "Natural, lenta liberación en suelos ácidos, mejora estructura",
+          "desventajas": "Muy lenta en suelos neutros-básicos",
+          "aplicacion": "500-1000 kg/ha cada 3-4 años, incorporado 20 cm profundidad. Suelos ácidos (pH < 6.0) solamente"
+        }
+      ],
+      "fertilizantes_potasicos": [
+        {
+          "fuente": "Cloruro de potasio (60% K₂O, KCl)",
+          "ventajas": "Alta concentración, económico",
+          "desventajas": "Aporta Cl⁻ (limitar en suelos salinos)",
+          "aplicacion": "Distribuir bajo radiación, riego inmediato. Suelos con buen drenaje"
+        },
+        {
+          "fuente": "Sulfato de potasio (50% K₂O, K₂SO₄)",
+          "ventajas": "Sin Cl⁻, aporta S, calidad de fruto",
+          "desventajas": "Mayor costo que KCl",
+          "aplicacion": "Preferido para cacao de exportación calidad alta"
+        },
+        {
+          "fuente": "Nitrato de potasio (13% N + 46% K₂O)",
+          "ventajas": "Aporta N y K, N nítrico (absorción rápida)",
+          "desventajas": "Mayor costo, menor concentración total K",
+          "aplicacion": "Aplicaciones foliares (1-2%) o complemento suelo en floración"
+        }
+      ],
+      "fertilizantes_orgánicos": [
+        {
+          "fuente": "Estiércol de bovino descompuesto (1-2% N, 0.5% P₂O₅, 1% K₂O)",
+          "caracteristicas": "Abundancia local, mejora suelo, lenta liberación",
+          "aplicacion": "30-50 ton/ha presiembra o 10-15 ton/ha anuales en cultivos establecidos. Descompuesto 6+ meses"
+        },
+        {
+          "fuente": "Compost (2-3% N, 0.8% P₂O₅, 2% K₂O)",
+          "caracteristicas": "Mejora estructura, retención humedad, microbiología",
+          "aplicacion": "5-10 kg/árbol/año distribuido alrededor de base. Incorporar superficialmente"
+        },
+        {
+          "fuente": "Vainas de cacao (0.5% N, 0.1% P₂O₅, 1.5% K₂O)",
+          "caracteristicas": "Subproducto local, recicla nutrientes",
+          "aplicacion": "Mantener como mulch en base del árbol (5-10 cm espesor). Descomposición natural 8-12 meses"
+        }
+      ],
+      "micronutrientes_comerciales": [
+        {
+          "nutriente": "Boro",
+          "producto": "Borato de sodio penta-hidratado (11.3% B)",
+          "dosis": "1-2 kg B/ha = 9-18 kg producto/ha",
+          "aplicacion": "Distribuir bajo radiación en mayo (floración). Riego inmediato"
+        },
+        {
+          "nutriente": "Zinc",
+          "producto": "Sulfato de zinc (23% Zn)",
+          "dosis": "2-4 kg Zn/ha = 9-18 kg producto/ha",
+          "aplicacion": "Suelo (incorporar) o foliar quelatado para absorción rápida"
+        },
+        {
+          "nutriente": "Cobre",
+          "producto": "Sulfato de cobre (25% Cu) o quelatado",
+          "dosis": "1-2 kg Cu/ha",
+          "aplicacion": "Fungicidas cúpricos durante control fitosanitario aportan Cu"
+        },
+        {
+          "nutriente": "Hierro",
+          "producto": "Quelato de Fe DTPA (5-10% Fe)",
+          "dosis": "50-100 g/árbol",
+          "aplicacion": "Foliar 2-3 aplicaciones. Suelo si pH muy alcalino (no efectivo)"
+        }
+      ]
+    },
+    "metodos_aplicacion": {
+      "titulo": "3.6 Métodos de Aplicación de Fertilizantes",
+      "aplicacion_suelo": {
+        "titulo": "Aplicación al Suelo",
+        "procedimiento": [
+          {
+            "paso": 1,
+            "titulo": "Delimitar zona de aplicación",
+            "detalles": "Fertilizante debe caer bajo radiación de copa (50-100 cm de tallo). Marcar círculo con cinta o cal para exactitud"
+          },
+          {
+            "paso": 2,
+            "titulo": "Distribuir fertilizante",
+            "detalles": "Esparcir uniformemente en el área delimitada. Para máxima efectividad, distribuir a mano o con esparcidor mecánico"
+          },
+          {
+            "paso": 3,
+            "titulo": "Incorporación superficial",
+            "detalles": "Mezclar fertilizante 5-10 cm en el suelo con azadón o cultivador. No enterrar profundamente (reduce disponibilidad)"
+          },
+          {
+            "paso": 4,
+            "titulo": "Riego inmediato",
+            "detalles": "Regar abundantemente (5-10 L/árbol) para iniciar disolución y transporte a raíces. Fundamental para urea"
+          }
+        ],
+        "timing": "Preferiblemente antes de lluvia predicha. Si no llueve, regar al día siguiente. En riego por goteo, aplicar sin riego inmediato no es recomendable"
+      },
+      "aplicacion_foliar": {
+        "titulo": "Aplicación Foliar",
+        "procedimiento": [
+          {
+            "paso": 1,
+            "titulo": "Preparar solución",
+            "detalles": "Disolver fertilizante en agua tibia (25-30°C) para aceleración. Agitar continuamente"
+          },
+          {
+            "paso": 2,
+            "titulo": "Ajustar pH",
+            "detalles": "Para quelatos y micronutrientes, pH óptimo es 4.5-6.0. Adicionar ácido cítrico si es necesario (0.1% en solución)"
+          },
+          {
+            "paso": 3,
+            "titulo": "Aplicar con pulverizador",
+            "detalles": "Cubrir completamente haz y envés de hojas. Usar presión baja-media (20-30 psi) para evitar daño foliar. 300-500 L agua/ha"
+          },
+          {
+            "paso": 4,
+            "titulo": "Timing óptimo",
+            "detalles": "Aplicar al atardecer (16:00-18:00) o temprano en mañana (06:00-08:00) cuando estomas están abiertos y evapotranspiración es baja"
+          }
+        ],
+        "ventajas": "Absorción rápida (24-48 horas), efectiva para deficiencias micronutrientes, menor volumen de nutriente requerido",
+        "limitaciones": "No reemplaza fertilización suelo para macronutrientes (limitada capacidad foliar); efectiva solo para correción rápida"
+      }
+    },
+    "manejo_deficiencias": {
+      "titulo": "3.7 Corrección de Deficiencias Nutricionales",
+      "protocolo_general": [
+        {
+          "paso": 1,
+          "titulo": "Confirmación diagnóstica",
+          "detalles": "Observar síntomas visuales, tomar muestras foliares, análisis de suelo. Descartar enfermedades o plagas que simulan deficiencias"
+        },
+        {
+          "paso": 2,
+          "titulo": "Aplicación correctiva rápida",
+          "detalles": "Si es macronutriente, aplicar suelo + foliar inmediatamente. Si es micronutriente, pulverizaciones foliares cada 7-10 días hasta recuperación"
+        },
+        {
+          "paso": 3,
+          "titulo": "Ajuste de programa base",
+          "detalles": "Aumentar dosis anual del nutriente deficiente en futuros ciclos para prevenir recurrencia"
+        },
+        {
+          "paso": 4,
+          "titulo": "Monitoreo",
+          "detalles": "Análisis foliar al siguiente ciclo para verificar normalización. Si persiste, investigar causas (pH, drenaje, etc.)"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.8 Preguntas Frecuentes - Nutrición del Cacao",
+      "q1": {
+        "pregunta": "¿Cada cuánto debo hacer análisis foliar?",
+        "respuesta": "Mínimo una vez por año (junio-agosto). En plantaciones nuevas o problemas recurrentes, dos veces al año (julio y enero). El análisis periódico permite detección temprana de problemas antes que causen pérdidas de rendimiento"
+      },
+      "q2": {
+        "pregunta": "¿Cómo distingo entre deficiencia de Mg y Mn?",
+        "respuesta": "Ambos producen clorosis internerval. Mg: comienza en hojas viejas, progresa hacia nuevas. Mn: puede aparecer en cualquier edad. pH bajo (< 5.0) favorece Mn disponible (toxicidad potencial). Análisis foliar disuelve la duda: Mg típicamente < 0.20%, Mn típicamente > 100 ppm"
+      },
+      "q3": {
+        "pregunta": "¿Puedo aplicar toda la dosis de N en una sola aplicación?",
+        "respuesta": "No recomendado. Aplicación fraccionada (3-4 dosis) permite: (1) mayor absorción al coincidir con picos de crecimiento, (2) menor lixiviación, (3) menor riesgo de quemazón, (4) aprovechamiento eficiente. Máximo 70-80 kg N por aplicación"
+      },
+      "q4": {
+        "pregunta": "¿Qué sucede con exceso de potasio?",
+        "respuesta": "Inmoviliza Mg y Ca, afectando disponibilidad. Síntomas: clorosis de tipo Mg en hojas viejas. Reducir K en próximas aplicaciones. Ratio K:Mg óptimo es 1.5:0.3 en análisis foliar"
+      },
+      "q5": {
+        "pregunta": "¿Puedo usar fertilizantes foliares para reemplazar fertiriego en riego por goteo?",
+        "respuesta": "No. Fertilización foliar complementa pero no reemplaza fertirriego para macronutrientes. Capacidad de absorción foliar limitada (10-15% de requerimiento anual). Use foliar para micronutrientes y correcciones rápidas; suelo para programas base"
+      },
+      "q6": {
+        "pregunta": "¿El estiércol fresco puede quemar plantas?",
+        "respuesta": "Sí. Estiércol fresco contiene amoníaco libre y sales solubles que dañan raíces. Siempre usar estiércol completamente descompuesto (6+ meses, inodoro, color oscuro, desmenuzable). Aplicar 2-3 meses antes de trasplante o en cultivos establecidos, alejado de tallo (> 50 cm)"
+      },
+      "q7": {
+        "pregunta": "¿Cómo sé si mi programa de fertilización es eficiente?",
+        "respuesta": "Indicadores: (1) análisis foliar dentro de rangos óptimos, (2) rendimiento de 1-2 ton/ha (maduro), (3) ausencia de síntomas visuales de deficiencia, (4) frutos bien conformados sin deformidades por nutrición. Compare costos de fertilizante vs ingresos por producción"
+      }
+    }
+  }
+}

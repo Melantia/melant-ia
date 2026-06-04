@@ -2,294 +2,68 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Walkie Talkie - Comunidad Virtual MELANTIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walkie Talkie MELANTIA</title>
     <style>
-      #walkie-container {
-        max-width: 400px;
-        margin: 30px auto;
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        background: #f9fafb;
-        box-shadow: 0 2px 8px #0001;
-      }
-      #mensajes-lista,
-      #audios-lista {
-        margin-bottom: 15px;
-        min-height: 40px;
-        background: #fff;
-        border-radius: 6px;
-        padding: 8px;
-        border: 1px solid #e2e8f0;
-        font-size: 15px;
-        max-height: 120px;
-        overflow-y: auto;
-      }
-      #mensaje-input {
-        width: 70%;
-        padding: 6px;
-        border-radius: 6px;
-        border: 1px solid #cbd5e1;
-        margin-right: 5px;
-      }
-      #enviar-mensaje,
-      #push-to-talk {
-        padding: 7px 12px;
-        border-radius: 6px;
-        border: none;
-        background: #3182ce;
-        color: #fff;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-      #push-to-talk {
-        background: #ed8936;
+      body {
+        margin: 0;
+        background: #f3f7f4;
+        font-family: Arial, sans-serif;
       }
     </style>
   </head>
   <body>
-    <div id="walkie-container">
-      <div
-        id="explicacion-don-eloy"
-        style="
-          background: #fefcbf;
-          color: #744210;
-          border-radius: 8px;
-          padding: 10px;
-          margin-bottom: 12px;
-          border: 1px solid #f6e05e;
-          font-size: 15px;
-        "
-      >
-        <b>Don Eloy te explica:</b><br />
-        <ul style="margin: 8px 0 0 18px; padding: 0">
-          <li>
-            Pulsa <b>Enviar</b> para mandar un mensaje de texto a la comunidad o
-            a tu grupo.
-          </li>
-          <li>
-            Pulsa <b>🎤 Push to Talk</b> para grabar y enviar un mensaje de voz
-            (máx. 3 segundos).
-          </li>
-          <li>
-            La comunicación es directa y segura entre vecinos (P2P). Si hay
-            varios conectados, el mensaje viaja por todos.
-          </li>
-          <li>
-            ¡No necesitas internet! Si hay señal mesh o red local, funciona
-            igual.
-          </li>
-        </ul>
-        <span style="color: #b91c1c; font-size: 13px"
-          >Recuerda: No uses palabras ofensivas ni política. Yo, Don Eloy,
-          modero el canal.</span
-        >
-      </div>
-      <div id="mensajes-lista"></div>
-      <input
-        id="mensaje-input"
-        type="text"
-        placeholder="Escribe un mensaje..."
-      />
-      <button id="enviar-mensaje">Enviar</button>
-      <button id="push-to-talk">🎤 Push to Talk</button>
-      <div id="audios-lista"></div>
-    </div>
-    <script src="walkie_talkie.js"></script>
-    <script src="walkie_talkie_p2p.js"></script>
-    <script>
-      // Permite abrir el walkie talkie desde otros módulos
-      window.abrirWalkieTalkie = function (contexto) {
-        // Se puede usar contexto para filtrar mensajes o mostrar info
-        // Por ahora solo muestra el panel, pero se puede expandir
-        document
-          .getElementById('walkie-container')
-          .scrollIntoView({ behavior: 'smooth' });
-        // Opcional: mostrar mensaje contextual
-        if (contexto) {
-          const explic = document.getElementById('explicacion-don-eloy');
-          if (explic) {
-            explic.innerHTML += `<div style='margin-top:8px;font-size:13px;color:#1e88e5;'>Modo rápido desde: <b>${contexto.replace('_', ' ').toUpperCase()}</b></div>`;
-          }
-        }
-      };
-      // --- Visión Satelital Global ---
-      if (!document.getElementById('modal-vision-satelital')) {
-        const modal = document.createElement('div');
-        modal.id = 'modal-vision-satelital';
-        modal.style =
-          'display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);';
-        modal.innerHTML = `
-          <div id="panel-vision-satelital" style="background:#fff;max-width:420px;margin:60px auto;padding:28px 22px;border-radius:16px;box-shadow:0 4px 32px #0003;position:relative;">
-            <button id="cerrar-vision-satelital" style="position:absolute;top:10px;right:10px;font-size:1.3em;background:none;border:none;cursor:pointer;">✖️</button>
-            <h2 style="margin-top:0;font-size:1.3em;color:#1e88e5;display:flex;align-items:center;gap:8px;">🛰️ Visión Satelital Sentinel-1/2</h2>
-            <div id="vision-satelital-contexto" style="font-size:1em;margin-bottom:10px;"></div>
-            <div id="vision-satelital-mensaje" style="font-size:0.98em;color:#444;margin-bottom:12px;"></div>
-            <label for="selector-finca" style="font-size:0.97em;color:#333;margin-bottom:6px;display:block;">Selecciona tu finca:</label>
-            <select id="selector-finca" style="width:100%;padding:7px 6px;margin-bottom:12px;border-radius:7px;border:1px solid #bbb;font-size:1em;"></select>
-            <div id="vision-satelital-imagenes" style="margin-bottom:10px;"></div>
-            <div style="font-size:0.93em;color:#888;">Límite: 1 imagen Sentinel-1/mes, 1 Sentinel-2/15 días, máx. 3 imágenes/mes por usuario.<br>Las imágenes se optimizan y almacenan en Supabase.</div>
-          </div>
-        `;
-        document.body.appendChild(modal);
-        document.getElementById('cerrar-vision-satelital').onclick = () => {
-          modal.style.display = 'none';
-        };
-      }
+    <div id="walkie-root"></div>
+    <script type="module">
+      (function bootstrapMelantiaSignalBridge() {
+        if (typeof window === 'undefined') return;
+        if (window.MelantiaSignalBridge) return;
 
-      // Modularización: importar la función desde vision_satelital.js
-      import('./vision_satelital.js').then((mod) => {
-        // Cargar fincas desde Supabase y poblar el selector
-        async function cargarFincasEnSelector() {
-          const { supabase } = await import('./supabase_config.js');
-          const { data, error } = await supabase
-            .from('fincas')
-            .select('id, nombre, tipo_cultivo');
-          const selector = document.getElementById('selector-finca');
-          selector.innerHTML = '';
-          if (error || !data || data.length === 0) {
-            selector.innerHTML =
-              '<option value="">No hay fincas registradas</option>';
-            selector.disabled = true;
-            return;
-          }
-          data.forEach((f) => {
-            const opt = document.createElement('option');
-            opt.value = f.id;
-            opt.textContent = `${f.nombre} (${f.tipo_cultivo || 'Sin cultivo'})`;
-            selector.appendChild(opt);
+        const nativeBridge = window.MelantiaSignalBridgeNative;
+        if (!nativeBridge || typeof nativeBridge.getCurrentRSSI !== 'function') {
+          return;
+        }
+
+        const callbacks = [];
+        const callbackName = '__melantiaOnSignalChanged';
+
+        window[callbackName] = function onSignalChangedFromNative(rssi) {
+          callbacks.forEach((cb) => {
+            try {
+              cb(Number(rssi));
+            } catch {
+              // Ignorar callbacks defectuosos para no romper el canal.
+            }
           });
-          selector.disabled = false;
-        }
-        window.abrirVisionSatelital = async (contexto) => {
-          await cargarFincasEnSelector();
-          const modal = document.getElementById('modal-vision-satelital');
-          modal.style.display = 'block';
-          // Esperar a que el usuario seleccione finca y luego consultar
-          const selector = document.getElementById('selector-finca');
-          selector.onchange = () => {
-            if (selector.value) {
-              mod.abrirVisionSatelital(contexto, selector.value);
-            }
-          };
-          // Si hay una finca seleccionada por defecto, lanzar consulta
-          if (selector.value) {
-            mod.abrirVisionSatelital(contexto, selector.value);
-          }
         };
-      });
 
-      // --- Integración básica ---
-      const walkie = new WalkieTalkie();
-      async function renderMensajes() {
-        // Esperar a que se carguen los mensajes si es necesario
-        if (walkie.cargarDesdeDB) await walkie.cargarDesdeDB();
-        const lista = document.getElementById('mensajes-lista');
-        lista.innerHTML = walkie
-          .obtenerMensajes()
-          .map((m, idx) => {
-            let etiqueta = '';
-            if (m.autor === walkie.moderador) {
-              etiqueta =
-                ' <span style="color:#ed8936;font-weight:bold;">[MOD]</span>';
-            }
-            let eliminarBtn = '';
-            if (window.usuarioActual === walkie.moderador) {
-              eliminarBtn = ` <button onclick="eliminarMensaje(${idx})" style="color:#fff;background:#e53e3e;border:none;border-radius:4px;padding:2px 6px;">Eliminar</button>`;
-            }
-            return `<div><b>${m.autor}:</b>${etiqueta} ${m.texto}${eliminarBtn}</div>`;
-          })
-          .join('');
-      }
-      async function renderAudios() {
-        if (walkie.cargarDesdeDB) await walkie.cargarDesdeDB();
-        const lista = document.getElementById('audios-lista');
-        lista.innerHTML = walkie
-          .obtenerAudios()
-          .map(
-            (a, idx) =>
-              `<div><b>${a.autor}:</b> <audio src="${a.blobUrl}" controls onplay="marcarEscuchado(${idx})"></audio></div>`
-          )
-          .join('');
-      }
-      // Simulación de usuario actual (cambiar a 'Don Eloy' para probar modo moderador)
-      window.usuarioActual = 'Yo'; // Cambia a 'Don Eloy' para modo moderador
-
-      document.getElementById('enviar-mensaje').onclick = async () => {
-        const input = document.getElementById('mensaje-input');
-        if (input.value.trim()) {
-          await walkie.agregarMensaje(input.value, window.usuarioActual);
-          // Enviar por P2P si está activo
-          if (window.p2pWalkie && window.p2pWalkie.estaActivo()) {
-            window.p2pWalkie.enviarMensaje({
-              tipo: 'texto',
-              texto: input.value,
-              autor: window.usuarioActual,
-              timestamp: Date.now(),
-            });
-          }
-          input.value = '';
-          await renderMensajes();
+        if (typeof nativeBridge.registerSignalCallback === 'function') {
+          nativeBridge.registerSignalCallback(callbackName);
         }
-      };
 
-      window.eliminarMensaje = async (idx) => {
-        await walkie.eliminarMensaje(idx);
-        await renderMensajes();
-      };
-
-      document.getElementById('push-to-talk').onclick = async () => {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          audio: true,
-        });
-        const recorder = new MediaRecorder(stream);
-        let chunks = [];
-        recorder.ondataavailable = (e) => chunks.push(e.data);
-        recorder.onstop = async () => {
-          const blob = new Blob(chunks, { type: 'audio/webm' });
-          const url = URL.createObjectURL(blob);
-          await walkie.agregarAudio(url, window.usuarioActual);
-          // Enviar por P2P si está activo
-          if (window.p2pWalkie && window.p2pWalkie.estaActivo()) {
-            window.p2pWalkie.enviarMensaje({
-              tipo: 'audio',
-              blob,
-              autor: window.usuarioActual,
-              timestamp: Date.now(),
-            });
-          }
-          await renderAudios();
+        window.MelantiaSignalBridge = {
+          getCurrentRSSI() {
+            return Number(nativeBridge.getCurrentRSSI());
+          },
+          async startSignalMonitor() {
+            if (typeof nativeBridge.startSignalMonitor === 'function') {
+              nativeBridge.startSignalMonitor();
+            }
+          },
+          async stopSignalMonitor() {
+            if (typeof nativeBridge.stopSignalMonitor === 'function') {
+              nativeBridge.stopSignalMonitor();
+            }
+          },
+          onSignalChanged(cb) {
+            if (typeof cb === 'function') callbacks.push(cb);
+          },
         };
-        recorder.start();
-        setTimeout(() => recorder.stop(), 3000); // 3 segundos
-      };
+      })();
 
-      window.marcarEscuchado = (idx) => {
-        const audio = walkie.obtenerAudios()[idx];
-        walkie.marcarAudioEscuchado(audio);
-        setTimeout(() => {
-          walkie.limpiarAudiosViejos();
-          renderAudios();
-        }, 30000); // 30 segundos
-      };
+      import { mostrarPanel } from './walkie_talkie.js';
 
-      // --- Inicializar P2P ---
-      window.p2pWalkie = new P2PWalkie({
-        onMensajeRecibido: async (msg) => {
-          if (msg.tipo === 'texto') {
-            await walkie.agregarMensaje(msg.texto, msg.autor);
-            await renderMensajes();
-          } else if (msg.tipo === 'audio') {
-            // Recibe blob de audio
-            const url = URL.createObjectURL(msg.blob);
-            await walkie.agregarAudio(url, msg.autor);
-            await renderAudios();
-          }
-        },
-      });
-      // Cargar mensajes/audios al iniciar
-      renderMensajes();
-      renderAudios();
+      mostrarPanel('walkie-root');
     </script>
   </body>
 </html>

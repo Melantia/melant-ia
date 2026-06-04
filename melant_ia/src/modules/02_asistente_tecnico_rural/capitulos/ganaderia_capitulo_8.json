@@ -1,0 +1,281 @@
+{
+  "capitulo": 8,
+  "titulo": "Sistema Integrado Ganadería + Maíz",
+  "cultivo": "Ganadería",
+  "seccion": "Autosuficiencia alimento, fertilización circular, economía conjunta, sostenibilidad 10+ años",
+  "contenido": {
+    "introduccion": {
+      "titulo": "8.1 Introducción Sistema Ganadería + Maíz",
+      "texto": "Ganadería + Maíz = MODELO SOSTENIBLE pequeño/mediano productor Ecuador. Problema ganadería convencional: alimento comprado USD 8,000-12,000/año (vacas). Solución: cultivar maíz propio (USD 2,000-3,000 costo) → ahorro 60-70% alimento. A cambio: estiércol ganadería abona maíz (USD 3,000-5,000 fertilizante ahorrado). Resultado: ROI integrado 85-110%, dependencia insumo externo mínima."
+    },
+    "problema_ganaderia_convencional": {
+      "titulo": "8.2 Problema Ganadería Convencional",
+      "costos": [
+        {
+          "rubro": "Alimento concentrado comprado",
+          "vacas": "25 vacas",
+          "cantidad": "25 vacas × 2.5 kg/día × 300 días = 18,750 kg/año",
+          "precio": "USD 0.35-0.45/kg (maíz mercado)",
+          "total": "USD 6,562-8,437 (60-70% presupuesto ganadería)"
+        },
+        {
+          "rubro": "Fertilizante químico (si siembra pastura/alfalfa)",
+          "cantidad": "Urea 200 kg/ha + MAP 100 kg/ha",
+          "precio": "USD 50-80/saco",
+          "total": "USD 3,000-5,000/año"
+        }
+      ],
+      "resultado": "Costo total alimento + abono = USD 10,000-12,000/año = 22-25% ingresos leche (margen fino)"
+    },
+    "solucion_maiz_propio": {
+      "titulo": "8.3 Solución: Maíz Propio como Alimento",
+      "modelo": {
+        "tierra_dedicada": "5 hectáreas maíz (out 25 hectáreas totales)",
+        "produccion": "8 ton/ha × 5 ha = 40 toneladas grano/año"
+      },
+      "consume_interno": {
+        "cantidad": "25 vacas × 800 kg grano/año = 20 toneladas",
+        "complemento": "Rastrojo (15 toneladas) + pastura = alimento balanceado"
+      },
+      "excedente": {
+        "cantidad": "20 toneladas (50% producción)",
+        "venta": "USD 0.25/kg = USD 5,000 ingreso extra"
+      },
+      "ahorro_alimento": {
+        "mercado_costo": "20 ton × USD 0.40/kg = USD 8,000",
+        "propio_costo": "5 ha × USD 480/ha = USD 2,400",
+        "ahorro": "USD 8,000 - USD 2,400 = USD 5,600 (70% reducción)"
+      }
+    },
+    "ciclo_nutrientes": {
+      "titulo": "8.4 Ciclo Cerrado Nutrientes",
+      "flujo": [
+        {
+          "paso": "1. Maíz crece",
+          "entrada": "N, P, K suelo (extrae 200-250 kg N/ha)",
+          "salida": "Grano (porte energia) + rastrojo"
+        },
+        {
+          "paso": "2. Vacas comen grano + rastrojo",
+          "digestion": "Conversión alimento a leche (3.5 kg alimento = 1 L leche)",
+          "excrecion": "Estiércol (20-25 kg/vaca/día) = 7,300-9,125 kg/vaca/año"
+        },
+        {
+          "paso": "3. Estiércol compostado/aplicado",
+          "liberacion": "N 2-3% (lento), P 1-2%, K 2-3%",
+          "disponibilidad": "150-200 kg N/ha (exacto consumo maíz)"
+        },
+        {
+          "paso": "4. Maíz consume estiércol abono",
+          "resultado": "Ciclo cierra (entrada = salida)",
+          "sostenibilidad": "10+ años sin degradación suelo"
+        }
+      ]
+    },
+    "alimento_balanceado_casero": {
+      "titulo": "8.5 Alimento Balanceado Casero (Económico)",
+      "formulacion": {
+        "componentes": [
+          {
+            "ingrediente": "Grano maíz propio (molido)",
+            "porcentaje": "70%",
+            "proteina": "PB 8-10%",
+            "energia": "EB 3.0 Mcal/kg"
+          },
+          {
+            "ingrediente": "Salvado trigo O rastrojo maíz molido",
+            "porcentaje": "15%",
+            "proteina": "PB 12-15%",
+            "funcion": "Fibra + proteína moderada"
+          },
+          {
+            "ingrediente": "Leguminosa (harina soya/haba/lupino)",
+            "porcentaje": "10%",
+            "proteina": "PB 35-45%",
+            "funcion": "Proteína complemento"
+          },
+          {
+            "ingrediente": "Minerales (sal común + calcio + fósforo)",
+            "porcentaje": "5%",
+            "especifico": "NaCl 0.5%, Ca 0.8%, P 0.6%"
+          }
+        ],
+        "resultado": {
+          "proteina": "PB 15-17% (apropiado lechería)",
+          "energia": "EB 2.8 Mcal/kg (crecimiento + leche)"
+        },
+        "costo_comparativa": {
+          "comercial": "USD 0.40/kg",
+          "casero_receta": "USD 0.12-0.15/kg (65% abaratamiento)"
+        }
+      },
+      "preparacion": [
+        "Moler grano maíz (USD 30/ton servicio molino)",
+        "Mezclar ingredientes seco",
+        "Almacenar ambiente seco, sellado 1 mes máximo"
+      ]
+    },
+    "manejo_estiercol_bioabono": {
+      "titulo": "8.6 Manejo Estiércol → Bioabono Maíz",
+      "metodos": [
+        {
+          "metodo": "Estiércol fresco directo",
+          "aplicacion": "En maíz (post-cosecha año anterior)",
+          "timing": "20-30 días pre-siembra",
+          "cantidad": "10-15 ton/hectárea (200 ton / 5 ha × 50% aplicación año 1)"
+        },
+        {
+          "metodo": "Compost 3-4 meses",
+          "proceso": "Mezcla estiércol + residuos cosecha, volteo 2 veces",
+          "beneficio": "Patógenos muerte, nutrientes estabilizan, aplicación más segura"
+        },
+        {
+          "metodo": "Biol (fermento anaeróbico)",
+          "preparacion": "Bolsa cerrada 15-21 días estiércol + agua",
+          "uso": "Aspersión foliar maíz (diluído 1:10)"
+        }
+      ],
+      "cantidad_ciclo": {
+        "produccion": "25 vacas = 200 toneladas estiércol/año",
+        "maiz_necesario": "5 hectáreas × 150 kg N/ha = 750 kg N necesario",
+        "estiercol_aporta": "200 ton × 2% N = 4,000 kg N disponible (super-oferta)",
+        "uso": "Aplicar 150 toneladas (suficiente 5 ha), 50 toneladas venta/compost almacenaje"
+      }
+    },
+    "rotacion_cultivos": {
+      "titulo": "8.7 Rotación Cultivos Integrada (4 Años)",
+      "ciclo": [
+        {
+          "año": "Año 1",
+          "parcela_A": "5 ha Maíz (estiércol aplicado)",
+          "parcela_B": "15 ha Pastura ganadera"
+        },
+        {
+          "año": "Año 2",
+          "parcela_A": "5 ha Leguminosa (frijol/haba/alfalfa)",
+          "parcela_B": "15 ha Pastura mejorada (semilla fija)"
+        },
+        {
+          "año": "Año 3",
+          "parcela_A": "5 ha Pastura temporal (rotación de potrero)",
+          "parcela_B": "15 ha Pastura mejorada (continua)"
+        },
+        {
+          "año": "Año 4",
+          "parcela_A": "5 ha Maíz (nuevamente)",
+          "resultado": "Fertilidad máxima, plagas controladas, suelo descansado"
+        }
+      ],
+      "beneficios": [
+        "Nitrógeno acumulación (leguminosa fija 60-100 kg N/ha año 2)",
+        "Plagas control (Estrategia cultivo diferente = hospedero cambio)",
+        "Pastura mejora (suelo bien preparado para siembra leguminosa)",
+        "Diversificación ingreso (leguminosa venta si excedente)"
+      ]
+    },
+    "analisis_economico": {
+      "titulo": "8.8 Análisis Económico 5 Años",
+      "escenario": {
+        "sistema": "25 vacas lechería + 5 hectáreas maíz",
+        "produccion_leche": "112,500 litros/año (25 vacas × 15 L/día × 300 días)"
+      },
+      "año_1": {
+        "ingresos": {
+          "leche": "112,500 L × USD 0.32/L = USD 36,000",
+          "maiz_excedente": "20 ton × USD 0.25/kg = USD 5,000",
+          "total": "USD 41,000"
+        },
+        "costos": {
+          "maiz_produccion": "USD 2,400",
+          "ganaderia_mantenimiento": "USD 10,000 (vacunas, veterinario)",
+          "alimento_compra": "USD 2,000 (compra pequeña complemento)",
+          "fertilizante": "USD 1,200 (bajo = estiércol)",
+          "total": "USD 15,600"
+        },
+        "utilidad": "USD 41,000 - USD 15,600 = USD 25,400",
+        "roi": "USD 25,400 / USD 30,000 inversión = 85%"
+      },
+      "ano_5": {
+        "supuestos": "Sistema optimizado, vacas producción máxima, experiencia mejora",
+        "ingresos": {
+          "leche": "112,500 L × USD 0.36/L (precio sube) = USD 40,500",
+          "maiz_excedente": "20 ton × USD 0.28/kg (precio mercado sube) = USD 5,600",
+          "estiercol_venta": "50 ton × USD 45/ton = USD 2,250 (excedente no usado)",
+          "total": "USD 48,350"
+        },
+        "costos": {
+          "maiz": "USD 2,100 (reducido = experiencia)",
+          "ganaderia": "USD 9,500 (optimizado)",
+          "alimento": "USD 1,500",
+          "fertilizante": "USD 800 (bajo)",
+          "total": "USD 13,900"
+        },
+        "utilidad": "USD 48,350 - USD 13,900 = USD 34,450",
+        "roi": "110% (inversion amortizada + utilidad operativa)"
+      },
+      "comparativa_vs_convencional": {
+        "ganaderia_sin_maiz": {
+          "ingresos": "USD 40,000 leche (igual)",
+          "costos": "USD 20,000 (alimento USD 8,000 + fertilizante USD 5,000 + otros USD 7,000)",
+          "utilidad": "USD 20,000",
+          "roi": "67%"
+        },
+        "ganaderia_con_maiz": {
+          "ingresos": "USD 48,350 (incluye maíz excedente + estiércol venta)",
+          "costos": "USD 13,900",
+          "utilidad": "USD 34,450",
+          "roi": "110%"
+        },
+        "ventaja": "USD 14,450 mayor utilidad año 5 (72% mejor rentabilidad sistema integrado)"
+      }
+    },
+    "manejo_riesgos": {
+      "titulo": "8.9 Manejo de Riesgos Sistema Integrado",
+      "riesgos": [
+        {
+          "riesgo": "Sequía maíz (reducción 40% producción)",
+          "impacto": "Necesita compra alimento 20 toneladas faltante",
+          "mitigacion": "Riego complementario (5% inversión), diversificación pastura"
+        },
+        {
+          "riesgo": "Plagas/enfermedad ganadería (25% pérdida vacas)",
+          "impacto": "Estiércol reducción 75%, maíz menos abono",
+          "mitigacion": "Vacunación calendario, bioseguridad, fondo de emergencia USD 2,000"
+        },
+        {
+          "riesgo": "Precio leche desploma (USD 0.32 → USD 0.25)",
+          "impacto": "Ingreso -22%",
+          "mitigacion": "Venta directa consumidor (USD 0.40+ posible), quesería artesanal (valor agregado)"
+        },
+        {
+          "riesgo": "Plagas maíz (Cogollero, barrenador = 30-50% pérdida)",
+          "impacto": "Alimento insuficiente, compra externamente",
+          "mitigacion": "Control integrado (rotación, MIP, semilla resistencia if disponible)"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "8.10 Preguntas Frecuentes - Sistema Integrado Ganadería",
+      "q1": {
+        "pregunta": "¿Maíz propio realmente ahorra USD 5,600?",
+        "respuesta": "SÍ. 20 ton alimento mercado = USD 8,000 (USD 0.40/kg). Propio = USD 2,400 producción. Ahorro = USD 5,600 (70%)"
+      },
+      "q2": {
+        "pregunta": "¿200 toneladas estiércol/año es mucho?",
+        "respuesta": "Aparentemente sí. PERO maíz solo = 150 ton necesario (5 ha × 30 ton/ha máximo). Excedente 50 ton = venta (USD 2,250) o compost almacenaje"
+      },
+      "q3": {
+        "pregunta": "¿Alimento balanceado casero es igual calidad?",
+        "respuesta": "SÍ si fórmula respeta PB 15-17% + EB 2.8 Mcal. Diferencia = solo costo (USD 0.12 vs USD 0.40 comercial)"
+      },
+      "q4": {
+        "pregunta": "¿ROI 110% año 5 es realista?",
+        "respuesta": "SÍ con condiciones: (1) vacas producción máxima, (2) precio leche estable, (3) plagas controladas, (4) experiencia optimización"
+      },
+      "q5": {
+        "pregunta": "¿Sistema requiere mucha labor?",
+        "respuesta": "SÍ = maíz + ganadería = trabajo continuo. Pero labor familiar viable (padres + hijos). Escala > 50 vacas = necesita empleado tiempo completo"
+      }
+    }
+  }
+}

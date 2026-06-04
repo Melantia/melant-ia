@@ -1,0 +1,140 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento y Preparación del Cultivo de Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Preparación terreno, siembra, densidad, tecnología, control maleza",
+  "contenido": {
+    "preparacion_terreno": {
+      "titulo": "2.1 Preparación del Terreno",
+      "arada_principal": [
+        "Profundidad: 25-30 cm (más que café/cacao)",
+        "Epoca: 2-3 semanas antes siembra (descomposición materia orgánica)",
+        "Beneficio: Airea suelo, controla plagas/enfermedades residuales",
+        "Equipo: Arado reversible (tractor 50-75 hp)"
+      ],
+      "rastrillado": [
+        "Objetivo: Desmenuzar grumos, nivelar terreno",
+        "Pasadas: 2-3 rastrilladas cruzadas",
+        "Beneficio: Germinación uniforme"
+      ],
+      "drenaje": [
+        "Test 24h obligatorio: > 15 cm/24h (excelente)",
+        "Si < 10 cm: Implementar drenaje subsuperficial (tubería)",
+        "Costo: USD 500-800/hectárea si drenaje necesario"
+      ],
+      "encalado": [
+        "Si pH < 5.5: Aplicar cal agrícola 5-10 toneladas/hectárea",
+        "Anticipación: 2-3 meses antes siembra",
+        "Costo: USD 50-100/hectárea"
+      ]
+    },
+    "siembra_tecnica": {
+      "titulo": "2.2 Tecnología de Siembra",
+      "metodo_manual": {
+        "aplicacion": "Pequeños productores (< 2 hectáreas)",
+        "proceso": "Siembra en hoyos (palma), 2-3 semillas/hoyo",
+        "densidad": "Irregular (mala uniformidad)",
+        "labor": "8-10 jornales/hectárea",
+        "costo": "USD 50-80 labor"
+      },
+      "sembradora_traccion_animal": {
+        "equipo": "Sembradora de maíz tirada por yunta",
+        "aplicacion": "Pequeño-mediano productor (2-5 hectáreas)",
+        "densidad": "Mejor uniformidad (vs manual)",
+        "labor": "3-4 jornales/hectárea",
+        "costo": "USD 30-50"
+      },
+      "sembradora_mecanica": {
+        "equipo": "Sembradora de precisión (tractor)",
+        "aplicacion": "Mediano-grande productor (> 5 hectáreas)",
+        "uniformidad": "Excelente (> 95% plantas germinadas)",
+        "velocidad": "5-7 hectáreas/día",
+        "costo": "USD 5-15/hectárea (arrendamiento máquina)"
+      },
+      "dosificacion_semilla": [
+        "Semilla pura: 20-25 kg/hectárea (depende tamaño grano)",
+        "Densidad final: 50,000-60,000 plantas/hectárea",
+        "Sobredosis: 10-15% para emergencia variable"
+      ]
+    },
+    "distancia_densidad": {
+      "titulo": "2.3 Distancia de Siembra y Densidad",
+      "espaciamiento": [
+        {
+          "sistema": "Surcos simples",
+          "distancia_surco": "0.75-0.85 m",
+          "distancia_planta": "0.20-0.25 m",
+          "densidad": "50,000-65,000 plantas/hectárea"
+        },
+        {
+          "sistema": "Surcos dobles (gemelos)",
+          "separacion_pares": "1.50 m",
+          "distancia_en_par": "0.20 m",
+          "distancia_planta": "0.20-0.25 m",
+          "ventaja": "Mejor mecanización, cosecha"
+        }
+      ],
+      "factores_densidad": [
+        "Híbrido moderno: 55,000-65,000 plantas/ha (más densidad toleran)",
+        "Criolla: 45,000-50,000 plantas/ha (más dinámica, susceptible competencia)",
+        "Riego: +10,000 plantas/ha (mayor densidad posible)",
+        "Sequía: -10,000 plantas/ha (reduce densidad, mejor agua por planta)"
+      ]
+    },
+    "control_maleza": {
+      "titulo": "2.4 Control de Malezas",
+      "periodo_critico": [
+        "V0 a V6 (0-40 días): MÁXIMA criticidad",
+        "Maleza en este período = -40-60% producción",
+        "Después V6: Maíz sombreador (compite maleza)"
+      ],
+      "control_preventivo": [
+        "Rotación cultivos (rompe ciclo plagas suelo)",
+        "Preparación terreno profunda (reduce semillas dormidas)",
+        "Desmalezado manual/mecánico pre-siembra"
+      ],
+      "control_mecanico": [
+        {
+          "metodo": "Aporque",
+          "cuando": "V4-V6 (4-6 hojas)",
+          "beneficio": "Controla maleza superficial, soporta plantas (vientos)"
+        }
+      ],
+      "control_quimico": [
+        {
+          "herbicida": "Atrazina 1.5-2.0 L/ha (aplicación pre-emergencia)",
+          "dosis": "Pre-emergencia inmediato post-siembra",
+          "costo": "USD 10-15/hectárea"
+        },
+        {
+          "herbicida": "Glifosato 0.5-1.0 L/ha (post-emergencia selectiva)",
+          "dosis": "V2-V4 (2-4 hojas)",
+          "costo": "USD 8-12/hectárea"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.5 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cuánta semilla necesito por hectárea?",
+        "respuesta": "20-25 kg semilla pura (50,000-60,000 plantas/hectárea). Si semilla no certificada: +10-15% más (germinación variable)"
+      },
+      "q2": {
+        "pregunta": "¿Cuándo debo sembrar maíz?",
+        "respuesta": "Depende lluvia. Costa: mayo-junio (lluvia verde), septiembre-octubre (lluvia blanca). Sierra: abril-mayo (lluvia principal)"
+      },
+      "q3": {
+        "pregunta": "¿Distancia entre plantas cuál es correcta?",
+        "respuesta": "0.20-0.25 m entre plantas en surco. Resultado: 50,000-60,000 plantas/hectárea. Más denso = competencia, menos = desperdicio espacio"
+      },
+      "q4": {
+        "pregunta": "¿Herbicida es necesario?",
+        "respuesta": "Casi SÍ obligatorio. Período V0-V6 maleza reduce rendimiento -40-60%. Mejor: Atrazina pre-emergencia (USD 10-15/hectárea)"
+      },
+      "q5": {
+        "pregunta": "¿pH bajo es problema maíz?",
+        "respuesta": "SÍ crítico. pH < 5.5 = deficiencia aluminio, manganeso. Requiere encalado 5-10 ton/hectárea antes siembra (USD 50-100)"
+      }
+    ]
+  }
+}

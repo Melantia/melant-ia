@@ -1,0 +1,324 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento del Cultivo de Café",
+  "cultivo": "Café",
+  "seccion": "Preparación de terreno, plantación técnica, germoplasma, cronograma de establecimiento",
+  "contenido": {
+    "introduccion_establecimiento": {
+      "titulo": "2.1 Introducción al Establecimiento",
+      "importancia": "Primeros 18-24 meses son críticos. Establecimiento correcto determina productividad próximos 20+ años",
+      "factores_criticos": [
+        "Selección terreno (altitud 800-2,200 m, drenaje excelente)",
+        "Preparación suelo (pH 5.5-6.5, materia orgánica > 3%)",
+        "Germoplasma certificado (semilla o vitro libre virus)",
+        "Distancia plantación (3×2 m típico = 1,667 plantas/ha)",
+        "Shade trees (30-50% sombra inicial)"
+      ],
+      "inversion_inicial": "USD 1,500-3,500/ha establecimiento (año 0)"
+    },
+    "seleccion_terreno": {
+      "titulo": "2.2 Selección del Terreno",
+      "altitud": {
+        "rango_optimo": "1,000-2,000 m (excelente)",
+        "rango_aceptable": "800-2,200 m",
+        "consecuencias_fuera_rango": [
+          "< 800 m: Temperatura alta, plagas fuertes, baja calidad",
+          "> 2,200 m: Frío extremo, ciclo muy largo, producción baja"
+        ]
+      },
+      "drenaje": {
+        "test_24h": "Excavar hoyo 30 cm profundidad, llenar agua, medir descenso",
+        "interpretacion": [
+          "> 15 cm/24h = EXCELENTE (drenaje rápido, recomendado)",
+          "10-15 cm/24h = BUENO",
+          "5-10 cm/24h = MODERADO (vigilancia necesaria)",
+          "< 5 cm/24h = POBRE (no plantable, requiere drenaje artificial costoso)"
+        ],
+        "importancia": "Cafe NO tolera encharcamiento > 2-3 días (pudrición raíces mortal)"
+      },
+      "profundidad_util": {
+        "minimo": "1.0 metro (útil para raíces)",
+        "optimo": "1.5+ metros",
+        "test": "Excavación pozo 1 m, inspeccionar si hay capas impermeables, compactación"
+      },
+      "pendiente": {
+        "optima": "10-30% (evita erosión, facilita drenaje)",
+        "evitar": [
+          "< 5%: Encharcamiento, agua estancada",
+          "> 45%: Erosión severa, erosión hídrica"
+        ]
+      },
+      "suelo_tipo": {
+        "optimo": "Franco volcánico (40% arena, 40% limo, 20% arcilla)",
+        "aceptable": "Franco, Franco-arenoso",
+        "evitar": "Arcilloso puro (< 30% arena = drenaje pobre)"
+      }
+    },
+    "analisis_suelo_preparacion": {
+      "titulo": "2.3 Análisis de Suelo y Preparación",
+      "analisis_inicial": {
+        "parametros_clave": [
+          "pH (esperar 5.5-6.5)",
+          "Materia orgánica (>3%)",
+          "N total (150-200 mg/kg)",
+          "P disponible (15-25 mg/kg)",
+          "K disponible (100-150 mg/kg)",
+          "Micronutrientes (Zn, B, Mn, Cu, Fe)",
+          "Textura (% arena, limo, arcilla)"
+        ],
+        "laboratorio": "Enviar 500g muestra suelo (mezcla 10-15 puntos terreno)"
+      },
+      "correccion_pH": {
+        "si_pH_menor_5_5": [
+          "Causa: Suelo ácido extremo, deficiencia Ca/Mg",
+          "Accion: Encalado 2-4 toneladas CaCO₃/ha (dependiendo pH inicial)",
+          "Tiempo: 2-3 meses antes plantación (para reacción)"
+        ]
+      },
+      "preparacion_mecanica": [
+        "Arado profundo: 25-30 cm (si suelo compactado)",
+        "Rastrillado: Uniformizar, remover raíces viejas",
+        "Encaladura (si ácido): Incorporar enmienda",
+        "Reposo: 3-4 semanas para asentarse"
+      ],
+      "encalado_tecnica": {
+        "dosis_ejemplo": "Si pH=5.0, aplicar 3 ton CaCO₃/ha",
+        "distribucion": "Uniforme en toda parcela, incorporar arado",
+        "fuentes": [
+          "Caliza (CaCO₃): 100% puro",
+          "Dolomita (CaMg(CO₃)₂): Si Mg bajo",
+          "Cal viva (CaO): Más rápida, cuidar aplicación (quema)"
+        ]
+      },
+      "materia_organica_aportacion": [
+        "Incorporar compost 10-20 toneladas/ha si MO < 3%",
+        "Fuentes: Estiércol descompuesto, residuos cosecha, compost",
+        "Profundidad: Mezclar en primeros 20 cm"
+      ]
+    },
+    "germoplasma_propagacion": {
+      "titulo": "2.4 Selección de Germoplasma y Propagación",
+      "metodos_propagacion": [
+        {
+          "metodo": "Semilla Sexual",
+          "origen": "Cereza madura fermentada, semilla desecada",
+          "tiempo_vivero": "8-12 meses",
+          "costo_planta": "USD 0.05-0.15",
+          "ventajas": [
+            "Bajo costo",
+            "Raíz pivotante fuerte"
+          ],
+          "desventajas": [
+            "Segregación genética (si no pureza varietal)",
+            "Variabilidad altura/producción",
+            "Riesgo enfermedades si semilla contaminada"
+          ]
+        },
+        {
+          "metodo": "Estaca (Esquejes Madera)",
+          "tecnica": "Corte de ramas 15 cm con 3-4 nudos, enraizamiento en sustrato",
+          "tiempo_vivero": "6-8 meses",
+          "costo": "USD 0.20-0.40",
+          "ventajas": [
+            "Clón exacto (todos idénticos)",
+            "Precocidad producción (-3-6 meses vs semilla)"
+          ],
+          "desventajas": [
+            "Raíz menos profunda",
+            "Requiere experiencia técnica"
+          ]
+        },
+        {
+          "metodo": "Micropropagación (In vitro)",
+          "tecnica": "Cultivo tejidos laboratorio, plantas libres virus",
+          "tiempo_vivero": "4-6 meses",
+          "costo_planta": "USD 0.50-2.00",
+          "ventajas": [
+            "Libre virus GARANTIZADO",
+            "Crecimiento vigoroso inicial"
+          ],
+          "desventajas": [
+            "Alto costo inicial",
+            "Requiere laboratorio especializado"
+          ]
+        }
+      ],
+      "recomendacion_ecuador": "Semilla sexual de variedad certificada (Bourbon, Caturra) de vivero confiable es práctico balance costo-calidad",
+      "certificacion_germoplasma": [
+        "Solicitar certificado varietal (nombre variedad, pureza)",
+        "Sanidad: Muestreo ELISA para virus (CLRV, tilting/roseta)",
+        "Origen: Vivero registrado ante MAGAP/AGROCALIDAD"
+      ]
+    },
+    "distancia_densidad": {
+      "titulo": "2.5 Distancia de Plantación y Densidad",
+      "opciones_distancia": [
+        {
+          "distancia": "3 m × 2 m",
+          "plantas_hectarea": "~1,667",
+          "pendiente": "0-15% (óptima terreno plano)",
+          "uso": "Mecanización más fácil, producción estable"
+        },
+        {
+          "distancia": "3 m × 1.5 m",
+          "plantas_hectarea": "~2,222",
+          "pendiente": "Moderada",
+          "uso": "Mayor productividad inicial, pero competencia después"
+        },
+        {
+          "distancia": "2.5 m × 2 m",
+          "plantas_hectarea": "~2,000",
+          "pendiente": "10-30% (pendiente ayuda desnivelación)"
+        }
+      ],
+      "recomendacion_ecuatoriana": "3 m × 2 m (1,667 plantas/ha) es standard, permite mecanización conservadora y podas",
+      "consideraciones": [
+        "Pendiente pronunciada: Aumentar distancia (3 × 2.5 m) para evitar escurrimiento",
+        "Futuro mecanización: 3 × 2 m permite paso tractor entre filas",
+        "Densidad inicial ALTA (> 3,000 plantas/ha) causa: competencia, cosecha difícil, enfermedad"
+      ]
+    },
+    "sombra_arboricultura": {
+      "titulo": "2.6 Sistema de Sombra y Árboles Asociados",
+      "concepto_shade_grown": "Café bajo 30-50% sombra produce: (1) mejor calidad fruto, (2) menor estrés térmico, (3) control plagas, (4) diversificación ingresos",
+      "sombra_recomendada": "30-50% (medida simple: parado en plantación mediodía, sombra de pies visible pero no completa)",
+      "arboles_sombra_ecuador": [
+        {
+          "especie": "Chalúm (Inga sp.)",
+          "ventajas": "Fijación N, leguminosa, sombra rápida, madera local",
+          "densidad": "100-150 árboles/ha"
+        },
+        {
+          "especie": "Chirimoya",
+          "ventajas": "Fruto comestible, sombra excelente, arraigamiento fuerte",
+          "densidad": "80-120 árboles/ha"
+        },
+        {
+          "especie": "Nogal",
+          "ventajas": "Fruto (nueces), madera valiosa, sombra moderada",
+          "densidad": "50-80 árboles/ha",
+          "nota": "Más para café altitud 1,600-2,200 m"
+        },
+        {
+          "especie": "Plátano",
+          "ventajas": "Ingreso inmediato, sombra temporal (5-7 años), rápido crecimiento",
+          "densidad": "400-600 plantas/ha (intercalado)",
+          "modelo": "Año 1-5: plátano produce + sombra café; Año 5-7: plátano se retira, chalúm/chirimoya ya adultos"
+        }
+      ],
+      "plantacion_sombra": [
+        "Plantar sombra 3-6 meses ANTES café (para establecimiento)",
+        "Espaciamiento: 6 × 6 m (sombra principal), 3 × 2 m (café intercalado)",
+        "Manejo: Poda anual sombra para no exceder 50%"
+      ]
+    },
+    "cronograma_plantacion": {
+      "titulo": "2.7 Cronograma de Plantación y Establecimiento",
+      "mes_0_preparacion": [
+        "Análisis suelo, encalado si necesario",
+        "Preparación mecanizada (arado, rastrillado)",
+        "Definición vivero, adquisición material"
+      ],
+      "mes_1_2_preparacion_avanzada": [
+        "Trazado líneas plantación",
+        "Preparación hoyos 40 × 40 × 40 cm, distancia 3 × 2 m",
+        "Incorporación compost/materia orgánica en hoyos"
+      ],
+      "mes_2_3_plantacion": [
+        "Seleccionar plantas vivero 12-18 meses (altura 20-30 cm)",
+        "Transporte húmedo (mojados, no expuestos)",
+        "Plantación: Extraer planta bolsa, colocar hoyo nivel almácigo bolsa",
+        "Apisonar suelo alrededor, riego inmediato 10-15 L",
+        "Colocar mulch (5-10 cm) alrededor para conservar humedad"
+      ],
+      "mes_3_6_establecimiento_inicial": [
+        "Riego: 2 veces/semana si lluvia insuficiente (< 150 mm/mes)",
+        "Deshierbe: Manual cada 4-6 semanas",
+        "Fertilización: 50 g NPK (12-8-16) por planta mes 4 y 6",
+        "Vigilancia: Plagas (ácaros), enfermedades (antracnosis)"
+      ],
+      "mes_6_12_crecimiento_vegetativo": [
+        "Riego sostenido, deshierbe continuo",
+        "Fertilización mensual: 100 g NPK por planta",
+        "Poda formación: Eliminar líder si bifurcación prematura",
+        "Vigilancia plagas incrementa (araña roja, minador hoja)"
+      ],
+      "mes_12_18_prepaproductiva": [
+        "Reducir riego gradualmente (si lluvia reestablecida)",
+        "Mantener deshierbe, fertilización",
+        "Primera floración esperada meses 16-20 (normal)",
+        "Si floración precoz (mes 12): Eliminar flores para acumular vigor",
+        "Prueba primer año: 50-200 kg/ha fresco esperado"
+      ],
+      "mes_18_24_produccion_inicial": [
+        "Segunda-tercera floración ciclo año 2",
+        "Cosecha primer café: mes 20-22 (pequeña cantidad)",
+        "Producción año 2: 300-800 kg/ha fresco"
+      ]
+    },
+    "errores_comunes_establecimiento": {
+      "titulo": "2.8 Errores Comunes en Establecimiento",
+      "error_1_drenaje_pobre": {
+        "problema": "Plantación en terreno con drenaje < 5 cm/24h (no testear previamente)",
+        "consecuencia": "Pudrición raices año 1-2, mortalidad 40-70% plantas",
+        "prevención": "TEST 24h OBLIGATORIO antes plantación",
+        "remedio": "Muy costoso: drenaje artificial (tubería subterránea)"
+      },
+      "error_2_densidad_alta": {
+        "problema": "Plantar 2,500-3,000 plantas/ha (vs recomendado 1,667)",
+        "consecuencia": [
+          "Año 1-3: Competencia nutrientes, luz",
+          "Año 4+: Plagas/enfermedades se propagan rápido, cosecha dificultosa"
+        ],
+        "remedio": "Raleado año 3-4 (costoso, demorador)"
+      },
+      "error_3_poca_sombra": {
+        "problema": "Plantación a sol directo completo (sin sombra)",
+        "consecuencia": [
+          "Estrés térmico en años 1-3",
+          "Baja calidad fruto (bajo brix)",
+          "Mayor consumo agua (riego costoso si hay sequía)"
+        ]
+      },
+      "error_4_germoplasma_mixto": {
+        "problema": "Semilla 'campesina' (mezcla variedades, virus posible)",
+        "consecuencia": "Heterogeneidad producción, defectos, enfermedades virales year 4+"
+      },
+      "error_5_pH_no_corregido": {
+        "problema": "Plantación en terreno pH < 5.0 sin encalado previo",
+        "consecuencia": "Deficiencia Ca/Mg, deficiencia P, crecimiento lento año 1-3"
+      },
+      "error_6_riego_excesivo": {
+        "problema": "Riego diario permanente año 1-2",
+        "consecuencia": "Encharcamiento, pudrición raíces, estrés oxidativo"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.9 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cuánto cuesta establecer 1 hectárea de café?",
+        "respuesta": "USD 1,500-3,500/ha dependiendo: terreno preparado (USD 0), plantas (USD 300-500 si semilla; USD 1,000-2,000 si vitro), infraestructura sombra/drenaje (USD 200-1,500), manejo año 1 (USD 300-800). Promedio: USD 2,000-3,000"
+      },
+      "q2": {
+        "pregunta": "¿Es posible plantar café sin análisis suelo?",
+        "respuesta": "Riesgoso. Sin análisis, no conoces pH, materia orgánica, deficiencias. Riesgo alto: encalado insuficiente = baja producción años 1-5. Análisis cuesta USD 20-40, ahorra USD 500+ en correcciones"
+      },
+      "q3": {
+        "pregunta": "¿Qué tan importante es la sombra?",
+        "respuesta": "MUY IMPORTANTE. Café bajo 30-50% sombra produce fruto mejor calidad (+2-3 puntos cupping), resiste estrés térmico, tiene plagas menores. Sin sombra: 10-20% menos producción, menor brix. Ecuador café specialty DEBE tener sombra"
+      },
+      "q4": {
+        "pregunta": "¿Cuál es mejor: semilla o planta de vivero?",
+        "respuesta": "Vivero 12+ meses. Así plantas establece raíces en bolsa, transporte seguro, plantación uniforma. Semilla directa en campo (antiguo) da desuniformidad, mayor mortalidad"
+      },
+      "q5": {
+        "pregunta": "¿Cada cuánto riego en establecimiento?",
+        "respuesta": "Año 1 (mes 0-12): Si lluvia < 150 mm/mes, riego 2 veces/semana (20-30 L/planta total/mes). Año 2: Si lluvias normales, riego solo sequía prolongada. Café es de secano después año 1"
+      },
+      "q6": {
+        "pregunta": "¿Se puede plantar café en pendiente fuerte (> 45%)?",
+        "respuesta": "No recomendado. Erosión severa, dificultad cosecha, agua se escurre rápido. Si es necesario: distancia 3×3 m (1,111 plantas/ha), terrazas, cobertura mulch permanente"
+      }
+    ]
+  }
+}

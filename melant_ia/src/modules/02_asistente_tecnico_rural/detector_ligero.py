@@ -3,13 +3,18 @@ from PIL import Image
 import os
 
 # 1. Manejo inteligente de la librería de IA
+Interpreter = None
 try:
-    from tensorflow.lite.python.interpreter import Interpreter
+    from tflite_runtime.interpreter import Interpreter
 except ImportError:
     try:
-        from tflite_runtime.interpreter import Interpreter
+        from tensorflow.lite.python.interpreter import Interpreter
     except ImportError:
-        print("❌ Error: No se encontró TensorFlow. Ejecuta: pip install tensorflow")
+        try:
+            from tensorflow.lite.Interpreter import Interpreter
+        except ImportError:
+            print("❌ Error: No se encontró TensorFlow Lite. Ejecuta: pip install tflite-runtime o tensorflow")
+            Interpreter = None
 
 class DetectorFitopatologico:
     def __init__(self, ruta_modelo):

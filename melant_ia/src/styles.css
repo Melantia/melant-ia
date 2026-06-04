@@ -375,3 +375,141 @@ body.modo-campo #budget-wrap {
   align-items: center;
   justify-content: center;
 }
+
+/* ===== Tema Negro Global MELANTIA ===== */
+html,
+body,
+#app-menu,
+#contenedor-principal,
+#contenedor-modulos-menu,
+#vista-activa,
+#panel-novedades {
+  background: #000 !important;
+  color: #f3f4f6 !important;
+}
+
+header,
+.card,
+.novedad-card,
+.panel-especifico,
+.panel-hub,
+.glass-card {
+  background: #0b0b0b !important;
+  color: #f3f4f6 !important;
+  border-color: #1f2937 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+label,
+span,
+a {
+  color: #f3f4f6 !important;
+}
+
+[style*='background:#fff'],
+[style*='background: #fff'],
+[style*='background:#f4f7f6'],
+[style*='background: #f4f7f6'],
+[style*='background:#F3F4F6'],
+[style*='background: #F3F4F6'] {
+  background: #0b0b0b !important;
+  color: #f3f4f6 !important;
+  border-color: #1f2937 !important;
+}
+
+/* ===== Acentos Neon MELANTIA (Verde + Azul + Dorado) ===== */
+:root {
+  --neon-verde: #39ff14;
+  --neon-azul: #00e5ff;
+  --neon-dorado: #ffd700;
+  --neon-texto: #ecfeff;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a,
+button,
+input,
+select,
+textarea,
+label {
+  font-family: 'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--neon-verde) !important;
+  text-shadow:
+    0 0 6px rgba(57, 255, 20, 0.45),
+    0 0 18px rgba(57, 255, 20, 0.2);
+}
+
+.offline-badge,
+.badge-offline,
+.novedad-n1 {
+  color: #00130a !important;
+  background: linear-gradient(135deg, var(--neon-verde), #9dff7a) !important;
+  border: 1px solid #adff99 !important;
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.4) !important;
+}
+
+button,
+.novedad-acciones button,
+#btn-radar-acceso,
+#btn-emergencia,
+#btn-gps-medidor {
+  border: 1px solid rgba(0, 229, 255, 0.8) !important;
+  box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.35),
+    inset 0 0 8px rgba(0, 229, 255, 0.12);
+}
+
+button:hover,
+.novedad-acciones button:hover {
+  border-color: var(--neon-verde) !important;
+  box-shadow:
+    0 0 12px rgba(57, 255, 20, 0.45),
+    inset 0 0 10px rgba(57, 255, 20, 0.16) !important;
+}
+
+a,
+.slogan,
+#app-slogan,
+.punto-tipo,
+#gps-titulo {
+  color: var(--neon-azul) !important;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.22);
+}
+
+.card,
+.panel-especifico,
+.panel-hub,
+.novedad-card,
+.glass-card {
+  border: 1px solid rgba(255, 215, 0, 0.35) !important;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.16),
+    0 0 22px rgba(0, 229, 255, 0.08) !important;
+}
+
+#status-banner {
+  background: linear-gradient(90deg, #073b20, #004a57, #3e2f00) !important;
+  color: var(--neon-texto) !important;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.5) !important;
+}

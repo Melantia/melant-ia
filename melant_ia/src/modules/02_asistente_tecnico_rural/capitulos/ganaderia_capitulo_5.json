@@ -1,0 +1,204 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades Principales del Ganado Bovino",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Mastitis, retención placenta, cetosis, hipocalcemia, problemas reproductivos",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Introducción a Enfermedades Ganaderas",
+      "impacto": "Enfermedades causan -30% producción + costos tratamiento USD 200-500/vaca/evento. Prevención cuesta USD 50-100/vaca/año",
+      "enfermedades_frecuentes": [
+        "Mastitis (inflamación ubres): #1 problema lechería",
+        "Cetosis (metabolismo energía): #2 lechería",
+        "Hipocalcemia (fiebre leche): #3 peri-parto",
+        "Retención placenta: #4 post-parto"
+      ]
+    },
+    "mastitis": {
+      "titulo": "5.2 Mastitis - ENFERMEDAD #1 LECHERÍA",
+      "definicion": "Inflamación tejido glándula mamaria (ubres)",
+      "tipos": [
+        {
+          "tipo": "Mastitis clínica",
+          "sintomas": [
+            "Ubres inflamadas, calientes al tacto",
+            "Leche: Grumos, sangre, aspecto seroso",
+            "Dolor (animal cojea al caminar)"
+          ],
+          "severidad": "Evidente, requiere tratamiento inmediato"
+        },
+        {
+          "tipo": "Mastitis subclínica",
+          "sintomas": [
+            "Sin síntomas visibles",
+            "PERO: Células somáticas leche > 200,000 células/ml",
+            "Impacto: Reduce producción 10-15%, calidad leche baja"
+          ],
+          "deteccion": "Test de California (indicador rápido) o conteo laboratorio"
+        }
+      ],
+      "agentes_causales": [
+        {
+          "bacteria": "Staphylococcus aureus",
+          "contagio": "Contacto (durante ordeño), altamente contagioso",
+          "resistencia": "Antibióticos: A menudo resistente (problema Ecuador)"
+        },
+        {
+          "bacteria": "Streptococcus agalactiae",
+          "contagio": "Contacto durante ordeño",
+          "resistencia": "Normalmente sensible antibióticos"
+        },
+        {
+          "bacteria": "Coliformes (E. coli, Klebsiella)",
+          "origen": "Ambiente (suelo, cama contaminada)",
+          "sintoma": "Mastitis fulminante (severa, rápida)"
+        }
+      ],
+      "prevencion_CRITICA": [
+        "Higiene ordeño: Lavado pezones agua tibia + desinfectante (Yodo/cloro)",
+        "Desinfección post-ordeño: Sellante pezón (chlorhexidina, iodo) previene ascenso bacteria",
+        "Limpieza equipos: Esterilización líneas ordeño agua 80°C diaria",
+        "Cama limpia: Cambio diaria, evita contaminación coliformes"
+      ],
+      "tratamiento": [
+        "Antibiótico intramamario (penicilina, gentamicina) 3-5 días",
+        "Antiinflamatorio sistémico (diclofenac, flunixina)",
+        "Ordeño frecuente (aliviar presión)",
+        "Culto bacteria + antibiograma (detecta resistencia)"
+      ],
+      "costo_impacto": [
+        "Costo tratamiento mastitis: USD 50-100/evento",
+        "Pérdida producción: -50% leche mientras infección",
+        "Descarte (si crónica): USD 500-1,000 valor vaca"
+      ]
+    },
+    "cetosis": {
+      "titulo": "5.3 Cetosis (Enfermedad de Acetonemia)",
+      "definicion": "Deficiencia energía post-parto (metabolismo grasa → cetona)",
+      "cuando_ocurre": [
+        "Período peri-parto (1-3 semanas post-parto)",
+        "Causa: Demanda energía lactancia > disponibilidad alimento"
+      ],
+      "sintomas": [
+        "Depresión, apatía, reducción consumo alimento",
+        "Aliento olor característico (acetona, como esmalte)",
+        "Producción leche cae 30-50%",
+        "Pérdida peso rápida (- 1-2 kg/día)",
+        "Incoordinación, ataxia (en casos severos)"
+      ],
+      "diagnostico": "Cetonas en leche/sangre (test rápido tira reactiva)",
+      "prevencion": [
+        "Alimentación pre-parto: Energía alta (2.5-3.0 Mcal/kg)",
+        "Evitar sobrecondición corporal (>3.5/5 pre-parto = riesgo cetosis)",
+        "Transición suave: Cambio dieta 2-3 semanas antes parto"
+      ],
+      "tratamiento": [
+        "Glucosa IV (500 ml 25-40% dextrosa) en casos severos",
+        "Propionato calcio (oral): 200-500 g/día × 5-7 días",
+        "Suplemento energía (concentrado extra 2-3 kg/día)"
+      ]
+    },
+    "hipocalcemia": {
+      "titulo": "5.4 Hipocalcemia (Fiebre de Leche)",
+      "definicion": "Calcio sangre bajo (< 7 mg/dL) post-parto",
+      "cuando_ocurre": [
+        "Post-parto primeras 24-72 horas",
+        "Causa: Demanda calcio para producción calostro > movilización reservas"
+      ],
+      "sintomas": [
+        "Debilidad muscular (NO se levanta, postración)",
+        "Frío cuerpo, extremidades frescas",
+        "Estreñimiento (paralítico ileus)",
+        "Muerte si no tratado (paro cardíaco)"
+      ],
+      "prevencion": [
+        "Dieta pre-parto: Relación Ca:P 1.5:1 (exceso Ca post-parto no absorbido)",
+        "Acidificación dieta pre-parto (aniónicos: sales amonio) aumenta absorción",
+        "Buena nutrición: Magnesio, vitamina D esenciales"
+      ],
+      "tratamiento_EMERGENCIA": [
+        "Calcio gluconato IV 250-500 ml (lentamente, 5-10 minutos)",
+        "Monitoreo: Riesgo arritmia cardíaca si rápido",
+        "Post-tratamiento: Calcio oral 200 g/día × 3 días"
+      ]
+    },
+    "retension_placenta": {
+      "titulo": "5.5 Retención de Placenta",
+      "definicion": "Placenta NO expulsada dentro 8-12 horas post-parto",
+      "complicaciones": [
+        "Infección uterina (metritis, piometra)",
+        "Fiebre alta (39-41°C)",
+        "Septicemia (bacteremia → shock)",
+        "Infertilidad post-parto (12+ meses)"
+      ],
+      "causas": [
+        "Deficiencia calcio (hipocalcemia = contractilidad uterina baja)",
+        "Deficiencia selenio (Se bajo = retención 2-3× más frecuente)",
+        "Gestación múltiple (gemelos)",
+        "Parto prematuro"
+      ],
+      "prevencion": [
+        "Nutrición pre-parto: Calcio 100-120 g/día, selenio 3-5 mg/día",
+        "Levadura de cerveza (selenio natural) durante gestación",
+        "Vitamina E (400-1,000 IU/día) sinergismo con selenio"
+      ],
+      "tratamiento": [
+        "Oxitocina (10-20 UI IV) x 2-3 veces para contractilidad",
+        "Antibiótico sistémico (penicilina + gentamicina)",
+        "Si NO expulsa 24-48h: Lavaje uterino + antibiótico"
+      ]
+    },
+    "problemas_reproductivos": {
+      "titulo": "5.6 Problemas Reproductivos",
+      "anestro": {
+        "definicion": "Ausencia ciclo estral (vaca no entra en celo)",
+        "causas": [
+          "Condición corporal baja (energía insuficiente)",
+          "Nutrición proteína deficiente",
+          "Problema ovárico (quiste, degeneración)"
+        ],
+        "tratamiento": "Mejora nutrición (80% de casos resuelve), hormonas si necesario"
+      },
+      "aborto": {
+        "causas": [
+          "Brucelosis (bacteria)",
+          "Virus: IBR (Infectious Bovine Rhinotracheitis), BVD (Bovine Viral Diarrhea)",
+          "Deficiencia: Vitamina A, selenio, yodo"
+        ],
+        "manejo": "Aislamiento vaca aborto, cuidado placenta/feto"
+      },
+      "distocia": {
+        "definicion": "Parto difícil, requiere intervención",
+        "causas": [
+          "Tamaño feto > capacidad pelviana",
+          "Presentación incorrecta (malposición)",
+          "Inercia uterina (contracción débil)"
+        ],
+        "riesgo": "Muerte vaca + muerte ternero si no asistido"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.7 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Mastitis es curable?",
+        "respuesta": "Clínica SÍ (antibiótico 3-5 días). Subclínica PARCIAL (tratamiento reduce células somáticas pero no siempre erradica). Prevención es MÁS importante que cura"
+      },
+      "q2": {
+        "pregunta": "¿Cetosis y fiebre leche son lo mismo?",
+        "respuesta": "NO. Cetosis: energía baja (metabolismo grasa). Hipocalcemia (fiebre leche): calcio bajo. Diferentes causas, tratamientos distintos. A veces AMBAS simultáneamente"
+      },
+      "q3": {
+        "pregunta": "¿Por qué vaca retiene placenta?",
+        "respuesta": "Causa #1: Deficiencia selenio (prevención: selenio 3-5 mg/día gestación). Causa #2: Hipocalcemia (prevención: calcio 100-120 g/día pre-parto)"
+      },
+      "q4": {
+        "pregunta": "¿Si vaca no entra celo, qué hacer?",
+        "respuesta": "Primero revisar condición corporal (si flaca = mejorar alimento). Si normal: evaluación veterinaria (quiste ovárico, infección uterina). Hormonal solo si veterinario indica"
+      },
+      "q5": {
+        "pregunta": "¿Fiebre leche es emergencia?",
+        "respuesta": "SÍ. Vaca que no se levanta post-parto = hipocalcemia hasta prueba contraria. Requiere calcio IV urgente. Sin tratamiento = muerte 24-48 horas"
+      }
+    ]
+  }
+}

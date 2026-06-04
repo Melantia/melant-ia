@@ -1,0 +1,147 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas del Arroz Convencional",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Saltamontes, barrenador, mosquito del arroz, monitoreo, control químico",
+  "contenido": {
+    "introduccion": {
+      "titulo": "4.1 Introducción a Plagas de Arroz",
+      "texto": "Arroz invitación plagas: ambiente acuático, monocultivo extenso, condiciones cálido-húmedas. Ecuador: 3-4 plagas principales = saltamontes (lepido monolea), barrenador tallo (chilo), mosquito del arroz (orseolia). Daño combinado puede alcanzar 40-50% rendimiento si descontrolado."
+    },
+    "saltamontes": {
+      "titulo": "4.2 Saltamontes del Arroz (Lepidacis monolea)",
+      "biologia": {
+        "ciclo": "3 generaciones/año",
+        "largo_vida": "Adulto 40-60 días",
+        "reproduccion": "Hembra 50-150 huevos postura"
+      },
+      "sintomas": [
+        "Esqueletizado hojas (comido solo parénquima, venas quedan)",
+        "Daño máximo V4-V8 (plantas jóvenes sensibles)",
+        "Presencia: saltamontes visibles día (búsqueda alimento)"
+      ],
+      "umbral_accion": "Muestreo: > 10 saltamontes/10 plantas = control",
+      "control": [
+        {
+          "metodo": "Insecticida",
+          "producto": "Permetrina 25 EC",
+          "dosis": "0.5-0.75 L/hectárea",
+          "costo": "USD 20-30"
+        },
+        {
+          "metodo": "Alternativa biológica",
+          "agente": "Hongos entomopatógenos (Beauveria, Metarhizium)",
+          "costo": "USD 50-80"
+        }
+      ]
+    },
+    "barrenador": {
+      "titulo": "4.3 Barrenador del Tallo (Chilo suppressalis)",
+      "biologia": {
+        "ciclo": "2-3 generaciones/año",
+        "larva": "Penetra tallos, 3-4 semanas adentro",
+        "sintoma": "Corazón blanco (tallo marchita post-floración)"
+      },
+      "daño": [
+        "Larva consume vascular (nutrientes transporte cesará)",
+        "Post-floración: panícula se seca = pérdida 30-50% grano"
+      ],
+      "monitoreo": [
+        "Trampa luz (atrae adultos nocturnos)",
+        "Revisión manual tallos (buscar perforaciones)"
+      ],
+      "umbral": "> 5 adultos/trampa luz/noche = control",
+      "control": [
+        {
+          "metodo": "Insecticida",
+          "producto": "Clorpirifós 50 EC",
+          "dosis": "1-1.5 L/hectárea",
+          "timing": "V8-VE (pre-emergencia panícula)"
+        },
+        {
+          "metodo": "Rotación cultivos",
+          "duracion": "Mínimo 2 años sin arroz (elimina pupas en rastrojos)"
+        }
+      ]
+    },
+    "mosquito_arroz": {
+      "titulo": "4.4 Mosquito del Arroz (Orseolia oryzae)",
+      "biologia": {
+        "ciclo": "5-6 generaciones/año",
+        "tamaño": "Micro (~1.5 mm)",
+        "hospedero": "Huevos bajo vaina hoja"
+      },
+      "sintoma": "Pancita blanca (hijos/macollas blanquecinos, no crecen)",
+      "epidemiologia": [
+        "Sucede V4-V6 (macollejamiento crítico)",
+        "Estrés sequía favorece (ablandamiento tejidos)"
+      ],
+      "control": [
+        {
+          "metodo": "Riego oportuno",
+          "razon": "Mantiene inundación 5-10 cm = inhibe oviposición"
+        },
+        {
+          "metodo": "Insecticida",
+          "producto": "Imidacloprid 350 SC",
+          "dosis": "20-30 mL/100 L agua",
+          "costo": "USD 15-25"
+        }
+      ]
+    },
+    "otras_plagas": {
+      "titulo": "4.5 Otras Plagas Secundarias",
+      "garrampata": {
+        "hospedero": "Huevo base hoja",
+        "daño": "Leve (rara vez económicamente importante)"
+      },
+      "trips": {
+        "daño": "Defoliación V2-V4, raro problema mayor"
+      },
+      "cochinilla": {
+        "daño": "Succión savia, plantas enanismo si población densidad"
+      }
+    },
+    "manejo_integrado": {
+      "titulo": "4.6 Manejo Integrado de Plagas",
+      "monitoreo": [
+        "Semanal V3-V10 (máxima presión)",
+        "Trapas luz (barrenador adultos)",
+        "Búsqueda visual saltamontes"
+      ],
+      "umbral_economico": [
+        "Saltamontes: > 10/10 plantas",
+        "Barrenador: > 5 adultos/trampa",
+        "Mosquito: > 30% plantas afectadas macollejamiento"
+      ],
+      "control_cultural": [
+        "Rotación cultivos (2+ años)",
+        "Destrucción rastrojos (elimina pupas)",
+        "Inundación oportuna (inhibe oviposición)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.7 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Cuál plaga es más peligrosa?",
+        "respuesta": "Barrenador corazón blanco (daño post-floración = pérdida directa grano). Saltamontes temprano pero plantas recuperan. Mosquito = problema semilleros principalmente"
+      },
+      "q2": {
+        "pregunta": "¿Trampa luz es eficaz?",
+        "respuesta": "SÍ para monitoreo barrenador. Ayuda reducir población adultos, pero no control completo. Combinar con insecticida si umbral"
+      },
+      "q3": {
+        "pregunta": "¿Rotación cultivos realmente funciona?",
+        "respuesta": "SÍ 100%. Barrenador pupas mueren sin arroz hospedero. 2 años rotación = población baja año 3. Quebra ciclo enfermedad también"
+      },
+      "q4": {
+        "pregunta": "¿Beauveria/Metarhizium función contra saltamontes?",
+        "respuesta": "Funciona pero lento (5-10 días vs 2-3 días insecticida químico). Mejor preventivo (inoculación pre-plaga) que rescate"
+      },
+      "q5": {
+        "pregunta": "¿Insecticida mata peces agua riego?",
+        "respuesta": "SÍ si peces hay en agua. Cuidado si canal riego de reservorio comunal. Mejor control temprano V3-V6 (minimiza escurrimiento)"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 // don_eloy_wisdom.js
 // Módulo de Don Eloy: historias, amofinos y sabiduría popular
 
-const HISTORIAS_JSON = './don_eloy_historias.json';
+const HISTORIAS_JSON = 'knowledge_seeds/don_eloy_historias.json';
 
 let historias = [];
 

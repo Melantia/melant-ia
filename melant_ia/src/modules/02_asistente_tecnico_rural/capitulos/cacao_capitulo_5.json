@@ -1,0 +1,433 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Agentes causales, síntomas, ciclo de vida y manejo integrado",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Introducción a las Enfermedades del Cacao",
+      "texto": "Las enfermedades fungales, bacterianas y virales constituyen limitantes severas del cacao. En América Tropical, la Moniliasis y Escoba de Bruja son responsables de pérdidas de 30-70% de cosecha si no hay control. A diferencia de plagas que son visibles, enfermedades requieren diagnóstico más cuidadoso y acción rápida.\n\nEl manejo integrado de enfermedades se basa en:\n(1) Prevención (sanidad, resistencia varietal)\n(2) Detección temprana (monitoreo de síntomas)\n(3) Control cultural (poda, quema de frutos afectados)\n(4) Control químico (fungicidas preventivos)\n(5) Mejora de condiciones ambientales (drenaje, aireación)",
+      "importancia": "Las tres enfermedades más destructivas en Ecuador son: Moniliasis, Escoba de Bruja, Podredumbre Negra. Juntas pueden causar pérdida total en cosecha principal sin manejo"
+    },
+    "moniliasis_cacao": {
+      "titulo": "5.2 Moniliasis del Cacao (Moniliophthora roreri)",
+      "sinonimos": "Vaina Seca, Frosty Pod Rot (en inglés, aunque es término erróneo)",
+      "importancia": {
+        "distribucion": "Endémica en Ecuador (1970s), Colombia, Perú, Panamá. Ausente en África y Asia",
+        "perdidas": "20-90% de cosecha según año y zona (Manabí, Sucumbíos, más afectadas)",
+        "impacto_economico": "Principal razón de abandono de cultivos en algunas regiones"
+      },
+      "agente_causal": {
+        "titulo": "Agente Causal",
+        "genero": "Moniliophthora",
+        "especie": "M. roreri",
+        "clasificacion": "Hongo ascomiceto (forma sexual) = Monilia roreri (forma asexual)",
+        "caracteristicas": [
+          "Hongo biotrófico-necrotrófico (requiere planta viva para iniciar, luego la mata)",
+          "Parasitismo obligado (no sobrevive cultivo puro en laboratorio)",
+          "Esporulación profusa en frutos afectados"
+        ]
+      },
+      "ciclo_biologico": {
+        "titulo": "Ciclo Biológico",
+        "etapas": [
+          {
+            "etapa": "Infección",
+            "detalles": "Conidios (esporas) transportadas por agua (lluvia, riego por aspersión) aterrizan en fruto. Requieren 12-18 horas de humedad para germinación. Penetración directa a través de epidermis"
+          },
+          {
+            "etapa": "Incubación",
+            "duracion": "7-14 días",
+            "temperatura_optima": "24-26°C",
+            "descripcion": "Hongo coloniza parénquima de vaina sin síntomas externos. Incubación más corta a temperatura óptima"
+          },
+          {
+            "etapa": "Síntomas",
+            "duracion": "Comienzan día 7-14 post-infección",
+            "progresion": "Mancha inicial amarilla → expansión rápida → vaina completa momificada en 3-4 semanas"
+          },
+          {
+            "etapa": "Esporulación",
+            "momento": "Cuando momificación es completa (alta humedad)",
+            "produccion": "Millones de conidios por fruto",
+            "color": "Grisáceo-blanquecino en condiciones secas"
+          },
+          {
+            "etapa": "Supervivencia",
+            "duracion": "6-12 meses",
+            "ubicacion": "En frutos momificados en árbol o caídos al suelo"
+          }
+        ],
+        "generaciones": "Teóricamente continua con lluvia. Máxima actividad: floración + lluvia (abril-julio en Ecuador)"
+      },
+      "sintomas_caracteres": {
+        "titulo": "Síntomas Característicos",
+        "estadio_1_mancha": {
+          "descripcion": "Mancha pequeña, acuosa, amarillenta",
+          "tamaño": "1-2 cm inicial",
+          "ubicacion": "Cualquier parte de vaina, pero con frecuencia lado que recibe lluvia"
+        },
+        "estadio_2_expansion": {
+          "descripcion": "Expansión rápida de mancha",
+          "velocidad": "1-2 cm/día",
+          "textura": "Área afectada se torna oscura, hundida",
+          "apariencia": "Aspecto aceitoso, húmedo"
+        },
+        "estadio_3_momificacion": {
+          "descripcion": "Vaina completa se deshidrata y momifica",
+          "duracion": "3-4 semanas desde infección",
+          "color_final": "Marrón-negruzco",
+          "textura": "Endurecida, frágil"
+        },
+        "estadio_4_esporulacion": {
+          "descripcion": "Cubierta fúngica en superficie en condiciones húmedas",
+          "color": "Grisáceo-blanco (conidios)",
+          "desaparicion": "En condiciones secas (<70% HR) desaparece esporulación pero hongo sigue viable"
+        },
+        "diferenciacion": {
+          "vs_escoba_bruja": "Monilia: vaina entera momificada. Escoba: deformación en forma de escoba",
+          "vs_podredumbre_negra": "Monilia: expansión rápida, vaina seca. Podredumbre: expansión lenta, aspecto blando, acuoso"
+        }
+      },
+      "factores_favorables": {
+        "titulo": "Factores Ambientales Favorables",
+        "lluvia": [
+          "Humedad relativa > 85% (favorece germinación conidios y esporulación)",
+          "Lluvia frecuente (dispersa conidios)",
+          "Períodos de mojado prolongado (>12 horas)"
+        ],
+        "temperatura": [
+          "Óptima: 24-26°C (incubación más corta)",
+          "Rango de actividad: 18-28°C",
+          "Estación lluviosa (abril-julio en Ecuador) = máxima presión"
+        ],
+        "cobertura": [
+          "Sombra densa (>60%) mantiene humedad alta, favorece esporulación",
+          "Bajo soleamiento reduce esporulación (conidios mueren con UV)"
+        ],
+        "drene": ["Falta de aireación", "Terrenos con drenaje deficiente"]
+      },
+      "manejo_integrado": {
+        "titulo": "Manejo Integrado de Moniliasis",
+        "control_cultural": [
+          {
+            "practica": "Recolección de frutos afectados",
+            "frecuencia": "Semanal en época de lluvia",
+            "procedimiento": "Recoger ALL frutos con síntomas (al piso y en árbol), meter en bolsa, enterrar profundo (>50 cm) o quemar. Curar heridas con pasta cicatrizante"
+          },
+          {
+            "practica": "Podas para mejorar aireación",
+            "objetivo": "Reducir humedad relativa dentro de copa",
+            "procedimiento": "Eliminar 20-30% de copa en enero, mantener radiación 40-50% en dosel"
+          },
+          {
+            "practica": "Distanciamiento correcto",
+            "spacing": "4×4 m permite mejor aireación que 3×3 m"
+          },
+          {
+            "practica": "Mejora de drenaje",
+            "actividad": "Construcción de canales en terrenos con problemas de encharcamiento"
+          },
+          {
+            "practica": "Sanitización de herramientas",
+            "procedimiento": "Desinfectar machete/sierra en 10% cloro entre árboles para no dispersar hongo"
+          }
+        ],
+        "resistencia_varietal": {
+          "titulo": "Selección de Variedades Resistentes",
+          "resistentes": [
+            "Criollo: susceptible",
+            "Forastero: susceptible",
+            "Trinitario: moderadamente resistente",
+            "Clones mejorados: ICS 95, SCA 6, EET 400, UF 667 (resistencia moderada a buena)"
+          ],
+          "recomendacion": "En zonas de alta presión (Manabí, Sucumbíos), preferir clones resistentes. Pero resistencia nunca es total; manejo sigue siendo necesario"
+        },
+        "fungicidas_preventivos": {
+          "titulo": "Control Químico Preventivo",
+          "productos": [
+            {
+              "principio_activo": "Cobre (Ca(OH)₂ + CuSO₄ = Burdeos) o Cu quelatado",
+              "presentacion": "Polvo mojable 50% Cu",
+              "dosis": "2 kg Burdeos (25% Cu) en 100 L agua",
+              "aplicacion": "Aspersión total de árbol. Cada 14 días en época de lluvia"
+            },
+            {
+              "principio_activo": "Azufre (S)",
+              "presentacion": "Polvo mojable 80% S",
+              "dosis": "2-3 kg azufre en 100 L agua",
+              "aplicacion": "Aspersión cada 7-10 días. Menos efectivo que Cu en Monilia"
+            },
+            {
+              "principio_activo": "Clorotalonil (organoclorado)",
+              "presentacion": "Concentrado 50% WP",
+              "dosis": "1.5-2 kg en 100 L agua",
+              "aplicacion": "Aspersión cada 14 días. Más costoso pero efectivo. Período carencia 21 días"
+            },
+            {
+              "principio_activo": "Trifloxystrobin (estrobilurina)",
+              "presentacion": "Concentrado dispersable 25% SC",
+              "dosis": "500 mL en 100 L agua",
+              "aplicacion": "Aspersión cada 10-14 días. Muy efectivo pero riesgo resistencia. Rotación con otros fungicidas"
+            }
+          ],
+          "programa_recomendado": [
+            {
+              "mes": "Abril (inicio lluvia)",
+              "aplicacion": "Burdeos 2% cada 14 días (abril-mayo: 2 aplicaciones)"
+            },
+            {
+              "mes": "Junio-julio",
+              "aplicacion": "Clorotalonil 1.5% cada 14 días (2 aplicaciones). Rotación con cobre"
+            },
+            {
+              "mes": "Agosto-septiembre",
+              "aplicacion": "Trifloxystrobin (si sequía disminuye) o retomar Burdeos según HR"
+            }
+          ],
+          "precauciones": [
+            "Cobre: tóxico para abejas. No aplicar durante floración",
+            "Clorotalonil: carcinogénico potencial. Usar equipo protección completo",
+            "Resistencia: rotación de fungicidas cada 2-3 ciclos es obligatorio"
+          ]
+        },
+        "manejo_integrado_fases": [
+          {
+            "fase": "Pre-lluvia (Marzo)",
+            "actividad": "Recolección exhaustiva de frutos momificados del piso y árbol. Poda de formación para aireación"
+          },
+          {
+            "fase": "Inicio lluvia (Abril)",
+            "actividad": "Fungicida preventivo semanal con Burdeos. Monitoreo semanal: conteo de frutos infestados"
+          },
+          {
+            "fase": "Lluvia establecida (Mayo-Julio)",
+            "actividad": "Recolección semanal de frutos enfermos. Fungicida cada 10-14 días"
+          },
+          {
+            "fase": "Transición/Secas (Agosto+)",
+            "actividad": "Reducir frecuencia fungicida si HR disminuye. Continuar recolección cultural"
+          }
+        ]
+      }
+    },
+    "escoba_bruja": {
+      "titulo": "5.3 Escoba de Bruja del Cacao (Crinipellis perniciosa)",
+      "importancia": {
+        "distribucion": "Ecuador, Colombia, Perú, Bolivia. Menos destructiva que Monilia pero muy importante",
+        "perdidas": "5-30% de cosecha según zona"
+      },
+      "agente_causal": {
+        "genero": "Crinipellis",
+        "especie": "C. perniciosa",
+        "clasificacion": "Basidiomiceto (hongo superior con basidios)"
+      },
+      "sintomas_caracteristicos": {
+        "titulo": "Síntomas Característicos",
+        "en_frutos": {
+          "descripcion": "Crecimiento anormal de fruto joven",
+          "caracteristica": "Deformación en forma de 'escoba': protuberancias en superficie, fruto acortado, engrosado",
+          "color": "Verde pálido a blanco-grisáceo",
+          "progresion": "Detiene crecimiento, momificación similar a Monilia pero más lenta",
+          "tiempo": "2-3 meses desde deformación hasta momificación"
+        },
+        "en_flores": {
+          "descripcion": "Hipertrofia de flores y flores abortadas",
+          "resultado": "Caída floral masiva"
+        },
+        "en_brotes": {
+          "descripcion": "Proliferación anormal de brotes",
+          "caracteristica": "Ramas engrosadas, deformadas, apariencia de 'escoba de bruja' (ramas que se ramifican en exceso)"
+        },
+        "tejido_afectado": {
+          "descripcion": "Necrosis interna sin exudación fúngica",
+          "aspecto": "Diferente de Monilia (no hay conidios grises)"
+        }
+      },
+      "ciclo_biologico": {
+        "titulo": "Ciclo Biológico",
+        "complejidad": "Ciclo más complejo que Monilia. Requiere insecto vector (Ceratocystis) para completarse",
+        "etapas": [
+          {
+            "etapa": "Infección primaria",
+            "detalles": "Basidio sporas en basidioma (esporoforpo) caen sobre flores/frutos jóvenes. Requieren humedad"
+          },
+          {
+            "etapa": "Incubación",
+            "duracion": "7-30 días"
+          },
+          {
+            "etapa": "Síntomas",
+            "detalles": "Deformación visible"
+          },
+          {
+            "etapa": "Propagación",
+            "detalles": "Requiere escarabajo vector (ambrosia) que dispersa hongos relacionados"
+          }
+        ],
+        "dependencia_vector": "Complicidad con insectos hace control más difícil"
+      },
+      "manejo": {
+        "titulo": "Manejo de Escoba de Bruja",
+        "control_cultural": [
+          {
+            "practica": "Poda de ramas deformadas",
+            "detalles": "Remover ramas 'escoba' completamente. Destruir (quemar) material. Cicatrizar herida"
+          },
+          {
+            "practica": "Recolección de frutos deformados",
+            "detalles": "Recoger frutos con síntomas antes de esporulación, quemar/enterrar"
+          }
+        ],
+        "fungicidas": {
+          "efectividad": "Menor que en Monilia. Preventivas solo",
+          "opciones": "Cobre, azufre, clorotalonil. Menos respuesta que Monilia"
+        },
+        "nota": "Escoba de Bruja es naturalmente menos severa que Monilia en Ecuador. Monilia es prioridad"
+      }
+    },
+    "podredumbre_negra": {
+      "titulo": "5.4 Podredumbre Negra del Cacao (Phytophthora megakarya)",
+      "distribucion": "Principalmente África (Ghana, Costa de Marfil). Presente en Colombia, Ecuador (poco frecuente pero severísimo)",
+      "importancia": "En zonas donde se presenta, causa pérdidas de 80-100%",
+      "agente_causal": {
+        "genero": "Phytophthora",
+        "especie": "P. megakarya",
+        "caracteristicas": "Oomiceto acuático (parásito obligado del xilema)"
+      },
+      "sintomas": {
+        "titulo": "Síntomas Característicos",
+        "en_frutos": {
+          "descripcion": "Podredumbre de fruto verde",
+          "inicio": "Mancha pequeña acuosa",
+          "progresion": "Expansión LENTA (3-7 días), a diferencia de Monilia (1-2 días)",
+          "color": "Marrón oscuro a negro",
+          "textura": "Aspecto blando, acuoso, mojado",
+          "crecimiento_micelial": "Micelio blanco bajo corteza (diferente de Monilia)"
+        },
+        "en_tejidos": {
+          "descripcion": "Podredumbre del xilema",
+          "canker": "Chancros en ramas, lesiones que giran rama = estrangulamiento"
+        }
+      },
+      "manejo": {
+        "titulo": "Manejo de Podredumbre Negra",
+        "dificultad": "Muy difícil. Control químico limitado",
+        "opciones": [
+          {
+            "estrategia": "Fungicidas cúpricos de alto cobre (10-15% Cu)",
+            "formulacion": "Caldo bordelés concentrado 8-10%",
+            "limitacion": "Baja efectividad, riesgo contaminación ambiental"
+          },
+          {
+            "estrategia": "Control cultural total: cuarentena",
+            "procedimiento": "Remover árbol afectado + 50 metros de radio. Quemar material. Desinfectar herramientas"
+          }
+        ],
+        "pronostico": "Si se detecta, requiere erradicación y vigilancia permanente"
+      }
+    },
+    "otras_enfermedades": {
+      "titulo": "5.5 Otras Enfermedades de Importancia",
+      "ceratocystis": {
+        "nombre": "Marchitez por Ceratocystis (Ceratocystis cacaofunesta)",
+        "sinonimos": "Pudrición de raíces",
+        "agente": "Hongo vasicular",
+        "sintomas": "Decoloración del xilema, marchitez rápida, muerte de árbol",
+        "manejo": "Cuarentena, erradicación de árbol + 50 m radio"
+      },
+      "fusarium": {
+        "nombre": "Marchitez por Fusarium (Fusarium solani)",
+        "ubicacion": "En heridas de injerto o poda",
+        "sintomas": "Decoloración del xilema, cancro en rama",
+        "manejo": "Poda de rama, desinfección herramienta, aplicar brea en herida"
+      },
+      "nematodos": {
+        "nombre": "Nematodos del suelo (Meloidogyne spp., Pratylenchus spp.)",
+        "hospederos": "Raíces del cacao y plantas de sombra",
+        "sintomas": "Enanismo, clorosis, marchitez",
+        "manejo": "Análisis de suelo, rotación con plantas no hospederas, en vivero usar suelo desinfectado"
+      },
+      "virus": {
+        "nombre": "Virus del Enanismo Letal del Cacao (CLVD, Cacao lethality virus)",
+        "transmision": "Mealybugs (escamas algodonosas)",
+        "sintomas": "Enanismo severo, muerte de árbol",
+        "manejo": "Control de vector (escama). Sin cura para planta infectada"
+      }
+    },
+    "diagnostico_enfermedades": {
+      "titulo": "5.6 Protocolo de Diagnóstico de Enfermedades",
+      "pasos": [
+        {
+          "paso": 1,
+          "titulo": "Observación visual completa",
+          "detalles": "Examinar frutos, flores, ramas, tallo. Buscar síntomas característicos en cada parte"
+        },
+        {
+          "paso": 2,
+          "titulo": "Diferenciación rápida",
+          "tabla": [
+            {
+              "enfermedad": "Moniliasis",
+              "vaina": "Momificada, seca",
+              "expansion": "Rápida (1-2 cm/día)",
+              "esporulacion": "Grisáceo (conidios)",
+              "aspecto": "Aceitoso al inicio"
+            },
+            {
+              "enfermedad": "Escoba de Bruja",
+              "vaina": "Deformada en escoba, no momificada rápido",
+              "expansion": "Lenta",
+              "color": "Blanco-grisáceo",
+              "aspecto": "Deformación obvia"
+            },
+            {
+              "enfermedad": "Podredumbre Negra",
+              "vaina": "Podredumbre blanda",
+              "expansion": "Lenta (3-7 días)",
+              "color": "Negro profundo",
+              "aspecto": "Blando, acuoso, mojado"
+            }
+          ]
+        },
+        {
+          "paso": 3,
+          "titulo": "Confirmación si es posible",
+          "detalles": "Recolectar muestras de lesión joven (no momificada), guardar en bolsa de plástico mojada, llevar a laboratorio para cultivo o microscopía"
+        },
+        {
+          "paso": 4,
+          "titulo": "Registro y decisión",
+          "detalles": "Documentar: fecha, ubicación en lote, número de plantas/frutos afectados. Decidir intervención"
+        }
+      ]
+    },
+    "preguntas_frecuentes_enfermedades": {
+      "titulo": "5.7 Preguntas Frecuentes - Enfermedades del Cacao",
+      "q1": {
+        "pregunta": "¿Si tengo Monilia, debo quemar todos los frutos afectados?",
+        "respuesta": "Sí, es crítico. Cada fruto momificado produce millones de esporas. Recolección semanal de 100% de síntomas es base de control. Sin esto, fungicidas son inefectivos"
+      },
+      "q2": {
+        "pregunta": "¿El fungicida preventivo detiene ya la enfermedad?",
+        "respuesta": "No. Fungicida previene nuevas infecciones. Frutos con síntomas visibles NO se curan. Control cultural (recolección) + químico (prevención) juntos"
+      },
+      "q3": {
+        "pregunta": "¿Puedo aplicar fungicida cada 7 días en lugar de 14?",
+        "respuesta": "Sí, si HR es muy alta (>85%) o lluvia frecuente. Pero aumenta costo 2x y riesgo resistencia. Monitorear HR: si HR <75%, reducir a cada 14 días"
+      },
+      "q4": {
+        "pregunta": "¿La sombra ayuda o perjudica?",
+        "respuesta": "Perjudica en Moniliasis: sombra densa mantiene HR alta, favorece esporulación. Óptimo 40-50% radiación (menos sombra que lo común). Pero sombra AYUDA en control cultural (facilita recolección)"
+      },
+      "q5": {
+        "pregunta": "¿Qué hago si detecto Podredumbre Negra?",
+        "respuesta": "Contactar inmediatamente autoridades fitosanitarias (MAG, AGROCALIDAD). Requiere cuarentena y erradicación forzosa. Es enfermedad de notificación obligatoria en muchos países"
+      },
+      "q6": {
+        "pregunta": "¿Las variedades resistentes a Monilia no necesitan fungicida?",
+        "respuesta": "Falso. Resistencia es moderada (no inmunidad). Variedades resistentes reducen incidencia 40-60%, pero sigue siendo necesario control químico + cultural"
+      }
+    }
+  }
+}

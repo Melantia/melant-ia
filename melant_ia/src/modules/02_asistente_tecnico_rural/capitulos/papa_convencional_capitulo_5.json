@@ -1,0 +1,119 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades de Papa Convencional",
+  "cultivo": "Papa Convencional",
+  "seccion": "Tizón tardío, sarna común, virus, marchitez bacteriana, rotación cultivos",
+  "contenido": {
+    "introduccion": {
+      "titulo": "5.1 Introducción a Enfermedades",
+      "texto": "Papa cultivo altamente susceptible enfermedades fúngicas = ambiente cálido-húmedo perfecto. Tizón tardío (Phytophthora infestans) causa hambruna Irlanda 1845. Ecuador sierra húmeda = tizón riesgo permanente. Manejo: variedad resistencia + fungicida preventivo + rotación cultivos."
+    },
+    "tizon_tardio": {
+      "titulo": "5.2 Tizón Tardío (Phytophthora infestans) - Enfermedad #1",
+      "biologia": {
+        "patogeno": "Oomycete (pseudo-hongo)",
+        "clima": "Humedad relativa > 90%, temperatura 15-20°C óptima"
+      },
+      "sintomas": [
+        "Follaje: manchas acuosas oscuras + anillo blanco (esporulacion) envés",
+        "Tubérculo: necrosis vascular/parda (tuberización infectada = inservible)",
+        "Epidemiologia: propagación rápida lluvia continua"
+      ],
+      "severidad": "CRÍTICA: puede perder 100% cosecha sin control",
+      "control": [
+        {
+          "metodo": "Variedad resistencia",
+          "opciones": ["Gabriela (R Gen 3)", "Itabá (R parcial)"]
+        },
+        {
+          "metodo": "Fungicida preventivo",
+          "producto": "Metalaxil + Mancozeb",
+          "dosis": "2-2.5 kg/hectárea",
+          "timing": "Cada 10-14 días desde V8 (pre-tuberización)",
+          "costo": "USD 150-250 ciclo (4-5 aplicaciones)"
+        },
+        {
+          "metodo": "Manejo cultural",
+          "practica": ["Aireacion cultivo", "Drenaje agua", "Destrucción follaje post-cosecha"]
+        }
+      ]
+    },
+    "sarna_comun": {
+      "titulo": "5.3 Sarna Común (Streptomyces scabies)",
+      "biologia": {
+        "patogeno": "Bacteria del suelo",
+        "condiciones": "pH > 6.5, suelos secos favorecen"
+      },
+      "sintomas": [
+        "Tubérculo: lesiones oscuras superficiales (cosmético, no pudrición)",
+        "Costra seca, no profunda"
+      },
+      "daño_economico": "Leve (mercado rechaza cosmético, pero comestible)",
+      "control": [
+        "pH suelo < 6.0 (acidez inhibida bacteria)",
+        "Rotación cultivos ≥ 3 años",
+        "Semilla certificada libre"
+      ]
+    },
+    "virus": {
+      "titulo": "5.4 Virus de Papa",
+      "virus_principales": [
+        {
+          "virus": "PLRV (Potato Leaf Roll Virus)",
+          "vector": "Mosca blanca",
+          "sintoma": "Hojas enrolladas amarillas, tuberculo internamente manchado"
+        },
+        {
+          "virus": "PVX (Potato Virus X)",
+          "vector": "Contacto, semilla",
+          "sintoma": "Mosaico hoja, estrías foliares"
+        },
+        {
+          "virus": "PVY (Potato Virus Y)",
+          "vector": "Pulgón, semilla",
+          "sintoma": "Verrugosidad hoja, necrosis líneas"
+        }
+      ],
+      "control": [
+        "Semilla certificada virus-free (CRÍTICO)",
+        "Control vector (mosca blanca, pulgón insecticida)",
+        "Rotación cultivos"
+      ]
+    },
+    "marchitez_bacteriana": {
+      "titulo": "5.5 Marchitez Bacteriana (Ralstonia solanacearum)",
+      "biologia": {
+        "patogeno": "Bacteria vascular",
+        "habitad": "Suelo húmedo, plantas hospederas otras"
+      },
+      "control": [
+        "Resistencia varietal",
+        "Agua riego limpia (no suelo contaminado)",
+        "Rotación cultivos 3 años"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.6 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Tizón tardío es muy grave?",
+        "respuesta": "SÍ CRÍTICO. Potencial 100% pérdida sin control. Fungicida preventivo USD 150-250 es inversión OBLIGATORIA sierra húmeda"
+      },
+      "q2": {
+        "pregunta": "¿Variedad Gabriela tiene tizón?",
+        "respuesta": "Resistencia Gen 3 significa parcial (75-85% protección). Fungicida aún recomendado lluvia excesiva (100% seguridad)"
+      },
+      "q3": {
+        "pregunta": "¿Metalaxil + Mancozeb es seguro?",
+        "respuesta": "Ampliamente usado Ecuador 30+ años. Riesgo bajo si sigue dosis recomendada"
+      },
+      "q4": {
+        "pregunta": "¿Semilla de papa comprada es segura virus?",
+        "respuesta": "Certificada = SÍ segura (test serológico obligatorio). No certificada = riesgo alto (virus oculto puede estar)"
+      },
+      "q5": {
+        "pregunta": "¿Sarna común arruina papa?",
+        "respuesta": "Cosmético solo. Pelable fácil. Daño económico = mercado premium rechaza. Comestible totalmente"
+      }
+    }
+  }
+}

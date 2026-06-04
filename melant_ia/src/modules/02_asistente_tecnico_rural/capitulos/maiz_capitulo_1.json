@@ -1,0 +1,192 @@
+{
+  "capitulo": 1,
+  "titulo": "Botánica y Fisiología del Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Taxonomía, variedades Ecuador, ciclo biológico, fisiología",
+  "contenido": {
+    "introduccion_maiz": {
+      "titulo": "1.1 Introducción al Cultivo de Maíz",
+      "importancia": "Maíz es 3er cultivo por hectáreas en Ecuador (después pastos naturales y arroz). Producción: 1.3 millones toneladas/año. Usos: Alimento humano (60%), alimento animal (30%), industria (10%)",
+      "produccion_nacional": [
+        "Superficie: 400,000 hectáreas aproximadamente",
+        "Rendimiento promedio: 3.2 toneladas grano/hectárea (nacional)",
+        "Potencial con tecnología: 6-8 toneladas/hectárea"
+      ],
+      "regiones_produccion": [
+        "Costa: Guayas, Manabí, Los Ríos (60% producción)",
+        "Sierra: Tungurahua, Pichincha, transición (20%)",
+        "Oriente: Amazonia oriental (20%)"
+      ]
+    },
+    "taxonomia_botanica": {
+      "titulo": "1.2 Taxonomía y Botánica del Maíz",
+      "clasificacion": [
+        "Reino: Plantae",
+        "Clase: Monocotyledoneae",
+        "Orden: Graminales",
+        "Familia: Poaceae (gramíneas)",
+        "Género: Zea",
+        "Especie: Zea mays L."
+      ],
+      "origen": "Mesoamérica (México actual), domesticado hace 9,000 años de teosinte silvestre",
+      "morfologia": [
+        "Tallo: Erecto, macizo (no hueco), 1.5-3.0 metros altura",
+        "Raices: Nodales (fasciculadas), sistema radicular profundo 60-80 cm",
+        "Hojas: Alternas, lanceoladas, 40-60 cm largo × 5-10 cm ancho",
+        "Inflorescencia: Espiga terminal (flores masculinas), mazorca con estigmas (flores femeninas)"
+      ],
+      "caracteristicas": [
+        "Planta monoica (flores masculinas y femeninas separadas)",
+        "Reproducción: Alógama (polinización cruzada por viento)",
+        "Ciclo: Anual (herbáceo)",
+        "Fruto: Cariopsis (grano) con testa, endospermo, germen, aleurona"
+      ]
+    },
+    "variedades_ecuador": {
+      "titulo": "1.3 Variedades de Maíz para Ecuador",
+      "maiz_hibrido": {
+        "descripcion": "Resultado cruzamiento líneas puras (F1)",
+        "heterosis": "10-30% producción mayor vs líneas puras",
+        "rendimiento": "6-8 toneladas/hectárea (potencial máximo)",
+        "costo_semilla": "USD 20-40/kg (semilla cara vs criolla)",
+        "ventaja": "Vigor, uniformidad, producción",
+        "desventaja": "Requiere semilla nueva cada año (no reutilizable)"
+      },
+      "maiz_criolla": {
+        "descripcion": "Variedades locales adaptadas (autopolinización sí permite)",
+        "rendimiento": "3-4 toneladas/hectárea",
+        "costo_semilla": "USD 0.50-1.00/kg (muy barato)",
+        "ventaja": "Semilla reutilizable, adaptación local",
+        "desventaja": "Menor producción, segregación genética"
+      },
+      "variedades_hibridas_ecuador": [
+        {
+          "variedad": "INIAP H-28",
+          "adaptacion": "Costa (0-800 m)",
+          "ciclo": "115 días",
+          "rendimiento": "7-8 toneladas/hectárea"
+        },
+        {
+          "variedad": "Dekalb DK-7088",
+          "adaptacion": "Costa-transición (0-1,500 m)",
+          "ciclo": "120 días",
+          "rendimiento": "6.5-7.5 toneladas/hectárea"
+        },
+        {
+          "variedad": "Monsanto DK-7305",
+          "adaptacion": "Transición (800-2,000 m)",
+          "ciclo": "130 días",
+          "rendimiento": "5.5-6.5 toneladas/hectárea"
+        },
+        {
+          "variedad": "INIAP H-507",
+          "adaptacion": "Sierra (1,500-2,500 m)",
+          "ciclo": "140 días",
+          "rendimiento": "4-5 toneladas/hectárea"
+        }
+      ]
+    },
+    "ciclo_biologico": {
+      "titulo": "1.4 Ciclo Biológico del Maíz",
+      "estadios": [
+        {
+          "estadio": "V0 - Germinación",
+          "dias": "Día 0-5",
+          "descripcion": "Emergencia radícula, primera hoja (coleoptilo)"
+        },
+        {
+          "estadio": "V1 - Primera hoja",
+          "dias": "Día 5-10",
+          "descripcion": "Primera hoja verdadera visible (2-3 mm)"
+        },
+        {
+          "estadio": "V6 - 6 hojas",
+          "dias": "Día 30-40",
+          "descripcion": "6 hojas completamente despliegues (diferenciación panoja)"
+        },
+        {
+          "estadio": "VT - Visiblidad de panoja terminal",
+          "dias": "Día 60-70",
+          "descripcion": "Emergencia panoja (floración masculina)"
+        },
+        {
+          "estadio": "R1 - Antesis femenina",
+          "dias": "Día 65-75",
+          "descripcion": "Estigmas visibles (floración femenina, polinización)"
+        },
+        {
+          "estadio": "R2 - Grano blando",
+          "dias": "Día 75-85",
+          "descripcion": "Grano lechoso (30-40% contenido agua)"
+        },
+        {
+          "estadio": "R3 - Grano pastoso",
+          "dias": "Día 85-100",
+          "descripcion": "Consistencia blanda (25-30% agua)"
+        },
+        {
+          "estadio": "R4 - Grano duro",
+          "dias": "Día 100-120",
+          "descripcion": "Punto vitrio bajo endospermo (15-20% agua)"
+        },
+        {
+          "estadio": "R5 - Madurez fisiológica",
+          "dias": "Día 115-130",
+          "descripcion": "Grano duro, línea negra base grano (máximo peso seco)"
+        },
+        {
+          "estadio": "R6 - Madurez industrial",
+          "dias": "Día 125-145",
+          "descripcion": "Humedad 13-15% (listo cosecha)"
+        }
+      ],
+      "ciclo_total": "De siembra a cosecha: 110-150 días (depende variedad, altitud, clima)"
+    },
+    "fisiologia_requerimientos": {
+      "titulo": "1.5 Fisiología y Requerimientos de Maíz",
+      "temperatura": [
+        "Óptima germinación: 20-30°C",
+        "Mínima: 10°C (germinación lenta)",
+        "Máxima: 35-40°C (estrés calórico)",
+        "Acumulación GDD: 1,800-2,200 grados-día (depende variedad)"
+      ],
+      "agua": [
+        "Requerimiento total: 500-800 mm lluvia/ciclo",
+        "Crítico: V6 a R1 (80-90 días, máximo consumo)",
+        "Estrés hídrico: < 200 mm/mes durante floración = -50% rendimiento"
+      ],
+      "luz": [
+        "Planta C4 (fotosinteticamente eficiente)",
+        "Foto-sensible: Días cortos (< 12 horas luz) = floración tardía en sierra"
+      ],
+      "suelo": [
+        "pH óptimo: 6.0-7.0",
+        "Textura: Franco a franco-arcilloso (no tolera compactación)",
+        "Profundidad: > 60 cm requerida (raíces profundas)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.6 Preguntas Frecuentes - Botánica",
+      "q1": {
+        "pregunta": "¿Híbrido vs criolla cuál elegir?",
+        "respuesta": "Híbrido si tecnología disponible (riego, fertilización optimizada): +50-100% producción. Criolla si subsistencia/bajo presupuesto: semilla reutilizable pero -30-40% rendimiento"
+      },
+      "q2": {
+        "pregunta": "¿Cuántos días tarda maíz?",
+        "respuesta": "Ciclo típico: 110-150 días (germinación a cosecha). Híbrido moderno 115-125 días. Sierra (altitud) = ciclo MÁS largo (130-145 días)"
+      },
+      "q3": {
+        "pregunta": "¿Maíz necesita mucha agua?",
+        "respuesta": "SÍ. Requiere 500-800 mm lluvia/ciclo. Período crítico: floración (V6 a R1). Sequía 10-15 días en floración = -30-50% rendimiento"
+      },
+      "q4": {
+        "pregunta": "¿Variedad para costa vs sierra?",
+        "respuesta": "Costa: INIAP H-28, Dekalb DK-7088 (115-120 días, tolerancia calor). Sierra: INIAP H-507, variedades 130+ días (ciclo largo, baja temperatura)"
+      },
+      "q5": {
+        "pregunta": "¿Maíz es planta tropical?",
+        "respuesta": "NO, es subtropical. Óptimo 20-30°C. > 35°C = estrés (polen no viable, reducción producción). En Ecuador sierra es más favorable que costa en algunos casos"
+      }
+    ]
+  }
+}

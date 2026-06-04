@@ -1,0 +1,243 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Poscosecha del Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Operación de cosecha, manejo, calidad y conservación de fruto",
+  "contenido": {
+    "determinacion_madurez": {
+      "titulo": "6.1 Determinación de Madurez para Cosecha",
+      "criterios_madurez": {
+        "edad_fisiologica": {
+          "indicador": "90-100 días post-floración (desde emision de flor basal)",
+          "barraganete_tipico": "Ciclo total 9-10 meses: floración mes 5-6, cosecha mes 9-10",
+          "importancia": "Edad es criterio PRIMARIO, NO esperar cambio color"
+        },
+        "cambio_color": {
+          "cosecha_para_export": "Verde oscuro a verde más claro (sin amarillamiento)",
+          "razon": "Fruto 'verde-maduro' (maduro fisiológicamente, verde en apariencia)",
+          "madurez_consumo": "Color amarillo (si destinado mercado local fresco)"
+        },
+        "angosidad_dedos": {
+          "observacion": "Dedos pierden angularidad, se redondean",
+          "apariencia": "Menos 'cuadraditos', más cilíndricos y lisos"
+        },
+        "test_presion": {
+          "metodo": "Presionar pulpa con pulgar (no uña)",
+          "maduro": "Cede ligeramente (no muy blando, no duro)",
+          "inmaduro": "Muy duro, no cede"
+        },
+        "test_sonido": {
+          "metodo": "Golpear pulpa con nudillo",
+          "maduro": "Sonido sordo (pulpa densa)",
+          "inmaduro": "Sonido resonante (hueco)"
+        }
+      },
+      "patrones_cosecha": [
+        {
+          "finca": "Típica 2-5 hectáreas",
+          "racimos_semana": "10-15 racimos/semana (depende edad plantación, distribución de plantas)"
+        },
+        {
+          "produccion_anual": "50 ton/ha/año en producción estable (10-15 racimos/ha)",
+          "distribucion": "Cosechas cada 7-10 días todo año (flujo continuo)"
+        }
+      ]
+    },
+    "operacion_cosecha": {
+      "titulo": "6.2 Operación de Cosecha",
+      "antes_cosecha": {
+        "preparacion": [
+          "Limpiar área alrededor planta (remover ramas caídas, malezas)",
+          "Verificar acceso (machete debe pasar fácil)",
+          "Preparar 'cuna' o arnés para atrapar racimo (evitar daño por caída)"
+        ]
+      },
+      "tecnica_corte": {
+        "herramienta": "Machete afilado o ciruelo (herramienta curva)",
+        "corte": [
+          "Primer corte: Remover corona de brácteas (flores residuales) con ciruelo",
+          "Segundo corte: Corte del raquis (tallo) con movimiento firme-diagonal",
+          "Tercero: Corte del pseudo-tallo si plantación destaca que reutiliza pseudo-tallo (raro)"
+        ],
+        "velocidad": "40-60 segundos por racimo (operario experimentado)"
+      },
+      "manejo_racimo": {
+        "transporte_cuna": "Arnés o cuna acolchonada evita golpe",
+        "golpes": "CRÍTICO: Mínimo 3 golpes causa magulladura → rechazo export",
+        "descenso": "Bajada controlada, no lancear"
+      },
+      "transporte_a_empaque": [
+        "Tiempo máximo: < 2 horas desde cosecha a proceso",
+        "Temperatura: Evitar sol directo (temperatura > 30°C causa estrés)",
+        "Vehículo: Plataforma baja, sin roce de costados"
+      ]
+    },
+    "procesos_poscosecha": {
+      "titulo": "6.3 Procesos de Poscosecha (Empaque)",
+      "desmanillado": {
+        "definicion": "Separación de manos (agrupaciones de dedos) del raquis",
+        "tecnica": [
+          "Manual con cuchilla de desmano",
+          "Golpe corto y firme en base cada mano",
+          "Acción rápida (< 1 minuto para todo racimo)"
+        ],
+        "objetivo": "Facilitar manipulación individual de manos"
+      },
+      "desvene": {
+        "definicion": "Remover venas (haces vasculares) del raquis",
+        "utensilio": "Cepillo de nylon suave o gasa",
+        "actividad": "Limpiar surface del fruto"
+      },
+      "clasificacion": {
+        "por_tamano": [
+          "AAA: Extra grande (> 210 g/dedo)",
+          "AA: Grande (180-210 g/dedo) [ESTÁNDAR EXPORT BARRAGANETE]",
+          "A: Medio (150-180 g/dedo)",
+          "Rechazo: < 150 g/dedo o defectos"
+        ],
+        "por_defectos": [
+          "0-1% defectos: Clase I (Export Premium)",
+          "1-3% defectos: Clase II (Export Estándar)",
+          "> 3% defectos: Descarte o mercado local"
+        ],
+        "defectos_tipicos": [
+          "Magulladura (golpes)",
+          "Mancha marrón (enfermedad post-cosecha)",
+          "Cicatriz (mal manejo)",
+          "Deformación"
+        ]
+      },
+      "empaque": {
+        "caja_standar": "Caja cartón de 20-24 kg (peso variable según tamaño fruto)",
+        "disposicion": "2 capas de 5-6 manos por capa",
+        "material_proteccion": [
+          "Papel entre capas",
+          "Espuma o papel ondulado en costados",
+          "Bolsa perforada individual por mano (opcional, si export lejano)"
+        ],
+        "etiquetado": [
+          "Código de finca",
+          "Variedad: BARRAGANETE",
+          "Fecha cosecha",
+          "Destino: Export / Nacional",
+          "Código QR (si trazabilidad requerida)"
+        ]
+      }
+    },
+    "transporte_export": {
+      "titulo": "6.4 Transporte a Exportador",
+      "enfriamiento": {
+        "temperatura_inicial": "Post-cosecha ~ 25-28°C",
+        "temperatura_transporte": "Bajar a 14-16°C (cuarto frío)",
+        "duracion": "4-6 horas enfriamiento antes embarque"
+      },
+      "contenedor": {
+        "tipo": "20 HC (contenedor refrigerado de 40 pies de altura)",
+        "temperatura_viaje": "13-14°C (constante)",
+        "humedad": "85-90%",
+        "duracion": "15-21 días a destino típico (USA, Europa, Asia)"
+      },
+      "monitoreo_durante_transporte": [
+        "Datalogger de temperatura en contenedor",
+        "Inspección visual cada 5 días si es posible",
+        "Identificación de problemas: condensación, maduración rápida, podredumbres"
+      ]
+    },
+    "maduración_controlada": {
+      "titulo": "6.5 Maduración Controlada en Destino (Ripening Room)",
+      "proceso": {
+        "temperatura_inicial": "14-16°C (llegada)",
+        "protocolo_maduracion": [
+          "Día 1-2: Incremento gradual a 18-20°C",
+          "Día 3-4: 20-22°C (ethileno introducción: 100 ppm)",
+          "Día 5-7: 22-25°C (etileno 100-200 ppm)",
+          "Día 8-10: 25-28°C (maduración progresa, ethileno control)",
+          "Total: 8-12 días para llegar a amarillo consumo"
+        ]
+      },
+      "control_etileno": "Crítico: ethileno produce color amarillo, ablandamiento",
+      "ventilacion": "Cada 6-8 horas (renovación aire 30-50% del volumen)"
+    },
+    "almacenamiento_nacional": {
+      "titulo": "6.6 Almacenamiento para Mercado Nacional",
+      "temperatura": "20-25°C (temperatura ambiente tropical)",
+      "duracion": "3-5 días máximo a temperatura ambiente (fruta climatérica madura rápido)",
+      "ubicacion": "Sombra, buena ventilación, fuera sol directo"
+    },
+    "benchmarks_rendimiento": {
+      "titulo": "6.7 Benchmarks de Rendimiento",
+      "rendimiento_campo": {
+        "racimo_fresco": "40-60 kg/racimo (Barraganete típicamente 45-55 kg)",
+        "por_planta": "40-60 kg/planta/ciclo (1 racimo por ciclo)"
+      },
+      "perdidas_poscosecha": [
+        "Desmanillado: 2-3% descarte (manos deformes, dañadas)",
+        "Clasificación: 5-10% descarte (defectos varios)",
+        "Transporte-empaque: 1-2% daño",
+        "Total: 8-15% descarte (típico)"
+      ],
+      "rendimiento_neto_export": {
+        "entrada": "50 kg racimo fresco",
+        "descarte": "-5 kg (10%)",
+        "neto_exportable": "45 kg (Clase I + II)",
+        "cajas_24kg": "1.875 cajas por racimo ≈ 2 cajas rellenas"
+      },
+      "produccion_anual_finca": {
+        "escenario_2ha": [
+          "Edad promedio plantas: 5-6 años",
+          "Cosechas/ha/año: 10-12 racimos",
+          "Producción bruta: 2 ha × 12 racimos × 50 kg = 1,200 kg/año",
+          "Descarte (10%): 120 kg",
+          "Exportable: 1,080 kg = 45 cajas"
+        ]
+      }
+    },
+    "normas_exportacion": {
+      "titulo": "6.8 Normas y Requerimientos de Exportación",
+      "certificacion": [
+        "Certificado Fitosanitario (MAGAP Ecuador)",
+        "Protocolo: Libre de Bunchy Top, plagas cuarentenables",
+        "Análisis: Residuos pesticidas (máximos permitidos por país destino)"
+      ],
+      "estandares_calidad": {
+        "usa": "USDA Grade 1 (Clase I, máx 1-2% defectos)",
+        "europa": "UNECE FFV-3 (Clase I/II, máx 3% defectos)",
+        "asía": "Varía, típicamente Clase II aceptado"
+      },
+      "trazabilidad": [
+        "Código de finca",
+        "Lote de cosecha",
+        "Fecha de cosecha",
+        "Destino final",
+        "Importador responsable"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.9 Preguntas Frecuentes - Cosecha y Poscosecha",
+      "q1": {
+        "pregunta": "¿Cómo sé exactamente cuándo cosechar?",
+        "respuesta": "Tres indicadores: (1) Edad 90-100 días post-floración (calendario es guía), (2) Color verde sin amarillo, (3) Test presión: cede ligeramente. Si dudas, mejor esperar 5-7 días más. Cosechar inmaduro causa bajo brix y problemas maduración"
+      },
+      "q2": {
+        "pregunta": "¿Cuánto tiempo toma desmanillar y empacar?",
+        "respuesta": "Operario experimentado: 3-5 minutos por racimo. Proceso: corte corona (20s) → desmanillado (60s) → desvene (30s) → clasificación/empaque (90-150s). Total: 2-3 horas para 30-40 racimos por operario"
+      },
+      "q3": {
+        "pregunta": "¿Qué rechazo de fruto es normal?",
+        "respuesta": "8-15% total. Breakdown: desmanillado 2-3% (manos rotas), clasificación 5-10% (defectos, tamaño bajo). Si > 15%, problema en cosecha (golpes, manejo) o varietal (rendimiento bajo)"
+      },
+      "q4": {
+        "pregunta": "¿Mi fruto llegó amarillo a destino. ¿Qué pasó?",
+        "respuesta": "Temperatura de transporte probablemente fue > 16°C. Ethileno se produjo, fruto maduró en tránsito. Solución: verificar temperatura datalogger en contenedor, revisar protocolo de pre-enfriamiento con exportador"
+      },
+      "q5": {
+        "pregunta": "¿Cuántas cajas salen por hectárea?",
+        "respuesta": "Finca madura (5+ años), buen manejo: 400-500 cajas 24kg/ha/año ≈ 10-12 ton/ha. Rendimiento varía con edad (año 3: 100-150 cajas, año 10: 500+ cajas)"
+      },
+      "q6": {
+        "pregunta": "¿Necesito cámara de maduración si vendo localmente?",
+        "respuesta": "No. Mercado nacional consume fruta en 3-5 días, temperatura ambiente (20-25°C) es suficiente. Cámara de maduración es SOLO para exportación lejana (USA, Europa, Asia)"
+      }
+    ]
+  }
+}

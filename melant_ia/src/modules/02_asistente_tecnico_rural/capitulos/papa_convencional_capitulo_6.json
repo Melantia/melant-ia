@@ -1,0 +1,113 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Procesamiento de Papa",
+  "cultivo": "Papa Convencional",
+  "seccion": "Madurez, cosecha mecánica, almacenaje, clasificación, rendimiento industrial",
+  "contenido": {
+    "introduccion": {
+      "titulo": "6.1 Introducción a Cosecha",
+      "texto": "Papa cosecha cuando follaje 90% senescente (amarillo/muerto), cáscara endurecida (no pela fácil). Cosecha temprana = papa inmadura (almidón bajo, cocción mala). Tardía = tubérculo expuesto, enfermedad. Ventana óptima 3-5 días. Almacenaje refrigerado (4-8°C) preserve 6-8 meses."
+    },
+    "determinacion_madurez": {
+      "titulo": "6.2 Determinación de Madurez",
+      "indicadores": [
+        "Follaje: 70-90% amarillo/marrón",
+        "Prueba presión: Cáscara resiste rascar con uña",
+        "Almidón: Densidad flotación (papas maduras hunden agua + sal)"
+      ],
+      "cosecha_oportuna": "R6 media es óptima (no esperar muerte completa follaje)"
+    },
+    "cosecha_mecanica": {
+      "titulo": "6.3 Cosecha Mecánica",
+      "equipo": {
+        "cosechadora": "Patata-cosechadora (arranca, criba tierra)",
+        "capacidad": "1-3 hectáreas/día",
+        "costo": "USD 200-400/hectárea alquiler + operador"
+      },
+      "perdida_mecanica": "5-10% (inevitable, tuberculo roto/dejado)",
+      "importante": "Calibración correcta cosechadora (profundidad, vibración)"
+    },
+    "clasificacion_calibrado": {
+      "titulo": "6.4 Clasificación y Calibrado",
+      "tamaños": [
+        {
+          "categoria": "Small (< 50 g)",
+          "uso": "Semilla, chipsl industriales",
+          "mercado": "USD 0.10-0.15/kg"
+        },
+        {
+          "categoria": "Medium (50-150 g)",
+          "uso": "Mercado mesa, papas fritas caseras",
+          "mercado": "USD 0.20-0.35/kg"
+        },
+        {
+          "categoria": "Large (> 150 g)",
+          "uso": "Industria papas rellenas/procesadas",
+          "mercado": "USD 0.15-0.25/kg (a veces menor = desperdicio)"
+        }
+      ],
+      "defectos_rechazo": [
+        "Enfermedad (tizón, sarna severa)",
+        "Daño mecánico (cortaduras)",
+        "Solanina (verde)"
+      ]
+    },
+    "almacenaje": {
+      "titulo": "6.5 Almacenaje Refrigerado",
+      "condiciones": [
+        {
+          "parametro": "Temperatura",
+          "optima": "4-8°C (dormir tubérculo = baja respiración)"
+        },
+        {
+          "parametro": "Humedad",
+          "optima": "85-90% (previene deshidratación)"
+        },
+        {
+          "parametro": "Luz",
+          "necesidad": "Oscuridad (previene solanina/verde)"
+        },
+        {
+          "parametro": "Ventilación",
+          "necesidad": "Mínima (evita etileno descomposición)"
+        }
+      ],
+      "duracion": "6-8 meses a 4°C sin deterioro",
+      "costo_almacenaje": "USD 20-40/tonelada/mes (equipo refrigeración)"
+    },
+    "subproductos": {
+      "titulo": "6.6 Subproductos y Usos",
+      "peladura": {
+        "cantidad": "10-15% peso",
+        "uso": "Alimento ganadería (fibra, energía baja)"
+      },
+      "rechazo_cosmético": {
+        "cantidad": "10-20%",
+        "uso": "Procesado harina, almidón industrial"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.7 Preguntas Frecuentes - Cosecha",
+      "q1": {
+        "pregunta": "¿Cuándo exacto debo cosechar?",
+        "respuesta": "Cuando follaje 70-90% muerto Y cáscara endurecida (prueba uña resiste). Temprano = papa acuosa. Tardío = enfermedad"
+      },
+      "q2": {
+        "pregunta": "¿Cáscara tiene valor?",
+        "respuesta": "Bajo. Alimento animal acepta, pero valor USD 20-50/tonelada. Compostable mejor opción"
+      },
+      "q3": {
+        "pregunta": "¿Papas grandes son mejor mercado?",
+        "respuesta": "NO absoluto. Medium (50-150 g) es premium (mercado fresco). Large a veces descartadas (industria solo quiere medium/small chips)"
+      },
+      "q4": {
+        "pregunta": "¿Almacenaje 4°C es caro?",
+        "respuesta": "SÍ (USD 20-40/ton/mes). PERO papa 6 meses refrigerada = venta promedio alto (precio sube off-season). ROI frecuentemente positivo"
+      },
+      "q5": {
+        "pregunta": "¿Rechazo cosmético (sarna) vende?",
+        "respuesta": "SÍ pero precio 40-50% menor. Mejor: venta local/feria (cosmético no importa consumidor final)"
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Polilla, ácaros, control cultural biodiversidad, trampa plantas",
+  "contenido": {
+    "introduccion": {
+      "titulo": "4.1 Introducción Plagas Papa Nativa",
+      "texto": "Papa nativa = RESISTENCIA genética evoluciona millenia (vs convencional susceptible). Polilla guatemalteca menos daño (vs convencional 30-50%). Estrategia: biodiversidad campo (plantas trampa, depredadores naturales), control cultural (rotación). Insecticida raro necesario."
+    },
+    "polilla_reducida": {
+      "titulo": "4.2 Polilla Guatemalteca - Presión Reducida",
+      "resistencia": "Papa nativa = genes resistencia parcial Tecia",
+      "razon": [
+        "Adaptación coevolución millenia (vs convencional reciente)",
+        "Compuestos químicos defensivos nativos (alcaloides)"
+      ],
+      "incidencia": [
+        "Convencional: 30-50% daño potencial",
+        "Nativa: 5-15% daño típico"
+      ]
+    },
+    "acaro_manejo_cultural": {
+      "titulo": "4.3 Ácaro Blanco - Control Cultural",
+      "estrategia": [
+        {
+          "practica": "Aireación cultivo",
+          "mecanismo": "Viento reduce humedad relativa (ácaro prefiere > 90% HR)"
+        },
+        {
+          "practica": "Rotación cultivos",
+          "mecanismo": "Ácaro moriría sin papa hospedero año siguiente"
+        },
+        {
+          "practica": "Residuos cosecha destrucción",
+          "mecanismo": "Ácaros hibernan en residuos = destrucción = reset"
+        }
+      ],
+      "insecticida": "Raramente necesario (solo si presión excesiva)"
+    },
+    "plantas_trampa": {
+      "titulo": "4.4 Plantas Trampa - Biodiversidad",
+      "plantas": [
+        {
+          "planta": "Ortiga (Urtica)",
+          "atrae": "Ácaro blanco (prefiere ortiga)",
+          "practica": "Establece alrededor parcela papa"
+        },
+        {
+          "planta": "Tanaceto",
+          "repele": "Polilla (olor volatil)"
+        },
+        {
+          "planta": "Ruda",
+          "repele": "Ácaros, insectos generales"
+        }
+      ]
+    },
+    "depredadores_naturales": {
+      "titulo": "4.5 Depredadores Naturales",
+      "entomofagos": [
+        {
+          "depredador": "Mariquitas (Coccinellidae)",
+          "presa": "Ácaros, pulgones"
+        },
+        {
+          "depredador": "Arañas",
+          "presa": "Polilla larva, saltamontes"
+        },
+        {
+          "depredador": "Parasitoides (abejas pequeñas)",
+          "presa": "Huevos polilla (parasitismo)"
+        }
+      ],
+      "promocion": "Flores silvestres alrededor = hábitat depredadores"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.6 Preguntas Frecuentes - Plagas Nativa",
+      "q1": {
+        "pregunta": "¿Papa nativa es resistente plagas?",
+        "respuesta": "Parcialmente sí. Polilla daño 70% menor vs convencional. NO significa inmune = monitoreo aún recomendado"
+      },
+      "q2": {
+        "pregunta": "¿Plantas trampa funcionan?",
+        "respuesta": "Funciona 40-60% casos (no 100%). Mejor: complemento biodiversidad, no sustituto único"
+      },
+      "q3": {
+        "pregunta": "¿Rotación cultivos mata ácaro?",
+        "respuesta": "SÍ ácaro muere sin hospedero papa 1 año. Año papá-otro cultivo-papa = ácaro población resetea"
+      },
+      "q4": {
+        "pregunta": "¿Flores silvestres atrae plagas?",
+        "respuesta": "NO = atrae depredadores (mariquitas, arañas), ventaja neta positiva control biológico"
+      },
+      "q5": {
+        "pregunta": "¿Neem oil funciona papa nativa?",
+        "respuesta": "Funciona ambas (20-30% reducción ácaro). PERO papa nativa menos necesita (presión menor)"
+      }
+    ]
+  }
+}

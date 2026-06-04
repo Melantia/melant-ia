@@ -1,0 +1,113 @@
+{
+  "capitulo": 1,
+  "titulo": "Botánica y Variedades de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Variedades andinas, adaptación altitud, ciclo biológico, biodiversidad",
+  "contenido": {
+    "introduccion": {
+      "titulo": "1.1 Introducción a Papa Nativa",
+      "texto": "Papa nativa = variedades domesticadas prehispánicas (7,000-10,000 años), mantenidas comunidades andinas Ecuador. 3,000+ variedades mundiales existen (Perú 4,000 variedades). Ecuador: ~200 variedades nativas localmente adaptadas, resistencia frío/sequía/plagas naturales. Rendimiento 10-15 ton/hectárea (menor convencional) PERO semilla propia perpetua + resistencia superior."
+    },
+    "variedades_nativas_ecuador": {
+      "titulo": "1.2 Variedades Nativas del Ecuador",
+      "colores": [
+        {
+          "grupo": "Papas moradas (antocianina antioxidante)",
+          "variedades": ["Morada negra", "Morada ecuatoriana", "Violeta andino"],
+          "adaptacion": "Sierra 2,200-3,000m",
+          "rendimiento": "12-15 ton/ha"
+        },
+        {
+          "grupo": "Papas amarillas (carotenoides)",
+          "variedades": ["Huayco", "Peruanita amarilla", "Tumbay"],
+          "adaptacion": "Sierra 1,800-2,500m",
+          "rendimiento": "10-14 ton/ha"
+        },
+        {
+          "grupo": "Papas blancas",
+          "variedades": ["Sabanera", "Chaucha", "Platanera"],
+          "adaptacion": "Interandino 2,000-2,800m",
+          "rendimiento": "10-13 ton/ha"
+        }
+      ]
+    },
+    "caracteristicas_nativas": {
+      "titulo": "1.3 Características Clave Papas Nativas",
+      "adaptacion": [
+        {
+          "adaptacion": "Frío extremo",
+          "mecanismo": "Ciclo largo (120-180 días) = lentitud metabolismo = supervivencia heladas"
+        },
+        {
+          "adaptacion": "Sequía",
+          "mecanismo": "Sistemas raíces profundas (vs convencional someras), cutícula gruesa"
+        },
+        {
+          "adaptacion": "Plagas nativas",
+          "mecanismo": "Resistencia genética evoluciona millenia (polilla, Phytophthora)"
+        }
+      ],
+      "desventaja": "Rendimiento bajo vs mejoradas, sensibilidad comercial"
+    },
+    "ciclo_biologico": {
+      "titulo": "1.4 Ciclo Biológico Papas Nativas",
+      "fases": [
+        {
+          "fase": "Dormancia tubérculo",
+          "caracteristica": "LARGA (60-90 días) vs convencional 30-45 días",
+          "adaptacion": "Sincroniza lluvia estacional, frío inducido"
+        },
+        {
+          "fase": "Emergencia",
+          "caracteristica": "Lenta, desuniforme (adaptación estrés)",
+          "dias": "21-35 días vs convencional 14-21"
+        },
+        {
+          "fase": "Crecimiento vegetativo",
+          "caracteristica": "Tallos múltiples, hojas pequeñas (xerofilia)"
+        },
+        {
+          "fase": "Tuberización",
+          "caracteristica": "Muchos tubérculos pequeños (distribuye riesgo) vs convencional pocos grandes"
+        },
+        {
+          "fase": "Llenado",
+          "caracteristica": "Lentitud (120-180 días totales ciclo)"
+        }
+      ]
+    },
+    "biodiversidad": {
+      "titulo": "1.5 Papas Nativas y Biodiversidad",
+      "cultivo_responsable": "Mantener variedades = patrimonio genético preserva",
+      "mercado_premium": [
+        "Color = antioxidantes (morada = antocianina)",
+        "Sabor tradicional = preferencia culinaria",
+        "Certificación origen = Denominación Origen Controlada (DOC)"
+      ],
+      "economico": "Precios premium 40-75% (USD 0.35-0.60/kg vs USD 0.25 convencional)"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.6 Preguntas Frecuentes - Botánica Nativa",
+      "q1": {
+        "pregunta": "¿Papa nativa es más nutritiva?",
+        "respuesta": "NO diferencia macro-nutrientes (almidón similar). SÍ micro: antocianina (morada), carotenoides (amarilla) = beneficios antioxidantes"
+      },
+      "q2": {
+        "pregunta": "¿Rendimiento 10-15 ton es viable?",
+        "respuesta": "SÍ si mercado premium reconoce (orgánico, color, sabor). Precio 50-75% mayor = ingresos similares convencional"
+      },
+      "q3": {
+        "pregunta": "¿Ciclo 120-180 días es problema?",
+        "respuesta": "NO si estación lluvia 5-6 meses. Sierra Ecuador = ciclo largo compatible. Convencional 90-110 días = riesgo sequía tardía"
+      },
+      "q4": {
+        "pregunta": "¿Papas nativas son resistentes tizón?",
+        "respuesta": "Sí parcial (resistencia parcial R2/R3). Fungicida preventivo aún recomendado año lluvia intenso"
+      },
+      "q5": {
+        "pregunta": "¿Puedo mezclar nativa + convencional?",
+        "respuesta": "SÍ intercalado en parcela. Riesgo: contaminación genética (si recolectas semilla, papas nativas pueden cruzarse). Mejor = parcelas separadas"
+      }
+    ]
+  }
+}

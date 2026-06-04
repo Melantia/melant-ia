@@ -1,0 +1,186 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento Regenerativo del Cultivo de Maíz",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Preparación cero labranza, rotación, abonos verdes, biodiversidad inicial",
+  "contenido": {
+    "introduccion": {
+      "titulo": "2.1 Introducción a Establecimiento Regenerativo",
+      "texto": "Establecimiento regenerativo invierte paradigma labranza convencional. En vez arada profunda (USD 300-400/ha, destruye estructura suelo, desconecta micorrizas), sistema regenerativo minimiza perturbación, siembra en piso vivo con mulch materia orgánica. Transición año 1-2 requiere más labor manual/inoculaciones, pero año 3+ se autopropulsa (suelo hace trabajo). Costo establecimiento regenerativo: USD 800-1,200/ha (vs USD 500-700 convencional) pero payback 3 años."
+    },
+    "analisis_suelo": {
+      "titulo": "2.2 Análisis de Suelo Base para Transición",
+      "parametros_criticos": [
+        {
+          "parametro": "pH",
+          "rango_optimo": "6.0-7.0",
+          "accion": "Si pH < 5.5: Encalado 1.5-2.0 ton/ha cal (respeta regenerativo, no tóxico). Si pH > 7.5: Incorporar azufre 100-150 kg/ha (lento pero sostenible)"
+        },
+        {
+          "parametro": "Materia Orgánica (%)",
+          "rango_optimo": "> 3.0% (excelente > 5%)",
+          "accion": "Bajo (< 2%): Sistema regenerativo PRIORITARIO. Aporte compost 10-20 ton/ha años 1-2. Alto (> 5%): Suelo ya regenerado, mantenimiento"
+        },
+        {
+          "parametro": "Nitrógeno mineral (ppm)",
+          "rango_optimo": "20-50 ppm",
+          "accion": "Bajo: Rotación leguminosa previa 6-12 meses (trébol, vicia, mucuna). Alto (> 80): Riesgo contaminación previa, validar agua"
+        },
+        {
+          "parametro": "Fósforo disponible (ppm Bray)",
+          "rango_optimo": "15-30 ppm",
+          "accion": "Bajo (< 10): Aplicar fosfato natural 200-300 kg/ha (lento pero sostenible 3-4 años). Alto (> 50): Riesgo compactación microbiana, monitorear"
+        },
+        {
+          "parametro": "Densidad aparente (g/cm³)",
+          "rango_optimo": "1.0-1.2 (suelo esponjoso)",
+          "accion": "Alto (> 1.3 compactado): PRIORIDAD cero labranza + mulch 5 años rehabilitación. Bajo (< 0.9): Riesgo erosión, agregar residuos compost"
+        },
+        {
+          "parametro": "Carbono microbiológico (respiración CO₂)",
+          "rango_optimo": "> 400 ppm 24h",
+          "accion": "INDICADOR biodiversidad. Bajo: Suelo muerto (químico intenso). Intervención: compost vivo + micorrizas inoculadas"
+        }
+      ]
+    },
+    "preparacion_cero_labranza": {
+      "titulo": "2.3 Preparación de Cero Labranza",
+      "metodo_tradicional_convencional": [
+        "Arada 25-30 cm profundidad: Voltea suelo",
+        "Rastrillado: Pulveriza agregados",
+        "CONSECUENCIA: Hifas micorrizas rotas, materia orgánica oxidada rápidamente, compactación (rastrillo)"
+      ],
+      "metodo_regenerativo_cero_labranza": {
+        "paso_1_diagnostico": "Muestreo estratificado profundidad 0-15, 15-30, 30-60 cm. Validar compactación con penetrómetro (> 2 Mpa = problema)",
+        "paso_2_descompactacion_suave": [
+          "Si suelo compactado: Chiscador (subsolador) profundidad 40-50 cm SIN voltear (diferencia arado)",
+          "Profundidad selectiva donde compactación detectada",
+          "Costo: USD 100-150/ha (vs USD 300+ arada)"
+        ],
+        "paso_3_mulch_organico": [
+          "Cobertura residuos cosecha anterior: 5-10 ton/ha (ensilaje maíz, paja, aserrín)",
+          "O compost semi-maduro 10-15 ton/ha si no hay residuos",
+          "Cobertura protege microbiota, reduce evaporación, inhibe maleza"
+        ],
+        "paso_4_incorporacion_superficial": [
+          "Rastra ligera solo 5-7 cm (integra mulch, no voltea)",
+          "Objetivo: Mulch distribuido uniforme, contacto suelo-materia orgánica",
+          "Costo labor: USD 30-50/ha"
+        ],
+        "paso_5_cobertura_viva": [
+          "Siembra simultánea abono verde de ciclo rápido (trébol blanco, mostaza, centeno)",
+          "Reduce erosión, genera nitrógeno (leguminosa), atrae depredadores plagas",
+          "Destrucción 2-3 semanas pre-siembra maíz (encima con hoz, sin enterrar profundo)"
+        ]
+      },
+      "ventajas_cero_labranza": [
+        "Retención humedad 30-40% mayor",
+        "Erosión 80-90% menor",
+        "Materia orgánica pierde 30% menos/año",
+        "Micorrizas colonización 2-3 años vs 5-10 labranza"
+      ]
+    },
+    "rotacion_cultivos": {
+      "titulo": "2.4 Rotación de Cultivos Regenerativa",
+      "principio": "Nunca repetir mismo género cultivo > 2 años seguidos. Manejo plagas/enfermedades, restauración nutrientes específicos",
+      "rotacion_ejemplo_4_anos": [
+        {
+          "ano_1": "Maíz regenerativo (cultivo principal)",
+          "residuo": "Ensilaje maíz 8-10 ton/ha, nitrógeno 40-50 kg/ha"
+        },
+        {
+          "ano_2": "Leguminosa (haba, arveja, fréjol)",
+          "razon": "Fija nitrógeno 60-100 kg/ha, rompe ciclo plagas maíz, raíces profundas suelo",
+          "residuo": "Biomasa 2-3 ton/ha, nitrógeno 80-120 kg/ha"
+        },
+        {
+          "ano_3": "Cultivo diverso (zapallo, brócoli, repollo)",
+          "razon": "Familia Cucurbitaceae/Brassicaceae, plagas diferentes, nutrientes distintos",
+          "residuo": "Biomasa variable, diversificación ingresos"
+        },
+        {
+          "ano_4": "Abono verde denso (mucuna, crotalaria) antes maíz",
+          "razon": "Restauración materia orgánica, cobertura completa suelo, nitrógeno"
+        }
+      ]
+    },
+    "abonos_verdes": {
+      "titulo": "2.5 Abonos Verdes y Cultivos de Servicio",
+      "definicion": "Cultivos sembrados NO para cosecha comercial sino beneficio suelo/plagas",
+      "especies_ecuador": [
+        {
+          "especie": "Mucuna pruriens",
+          "ciclo": "5-7 meses",
+          "beneficio": "Nitrógeno 200-300 kg/ha, materia orgánica 20-30 ton/ha, nematicida natural",
+          "siembra": "Inicio lluvia, destrucción 6-8 semanas pre-siembra maíz"
+        },
+        {
+          "especie": "Crotalaria spectabilis",
+          "ciclo": "4-5 meses",
+          "beneficio": "Nitrógeno 150-200 kg/ha, menos biomasa mucuna pero más rápido",
+          "siembra": "Época seca (requiere humedad inicial), ciclo corto"
+        },
+        {
+          "especie": "Trébol blanco (Trifolium repens)",
+          "ciclo": "2-3 meses",
+          "beneficio": "Nitrógeno 80-120 kg/ha, perenne (cobertura entre surcos maíz)",
+          "siembra": "Ciclo muy rápido, intercalado no secuencial"
+        },
+        {
+          "especie": "Centeno (Secale cereale)",
+          "ciclo": "3-4 meses",
+          "beneficio": "Materia orgánica 15-20 ton/ha, estructura suelo, alelopatía maleza",
+          "siembra": "Época seca, ciclo invernal sierra"
+        }
+      ]
+    },
+    "manejo_maleza": {
+      "titulo": "2.6 Manejo de Maleza sin Herbicida Químico",
+      "estrategias": [
+        {
+          "metodo": "Mulch grueso (10-15 cm)",
+          "efectividad": "80-90% control maleza, luz bloqueada",
+          "labor": "Aplicación manual, USD 200-400/hectárea"
+        },
+        {
+          "metodo": "Cobertura viva entre surcos",
+          "efectividad": "70-80% control, competencia nutrientes",
+          "cultivo": "Trébol blanco, leguminosas rastreras"
+        },
+        {
+          "metodo": "Deshierbe mecánico V4-V8",
+          "efectividad": "60-70% control, repetida cada 2-3 semanas",
+          "labor": "Manual o cultivador mecánico, 2-3 pasadas USD 150-250/ha"
+        },
+        {
+          "metodo": "Densidad siembra alta",
+          "efectividad": "50-60% control, competencia por luz/agua",
+          "practica": "Aumentar densidad 10-15% vs convencional"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.7 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cero labranza es más cara que convencional?",
+        "respuesta": "SÍ año 1-2 (compost, mulch, cobertura viva = USD 300-400/ha extra). Pero años 3+ se reduce (suelo vivo auto-sostiene). Payback 3-4 años, después ahorro perpetuo"
+      },
+      "q2": {
+        "pregunta": "¿Puedo mezclar cero labranza con herbicida?",
+        "respuesta": "NO recomendado. Herbicida mata microrganismos suelo + cubre 80% mulch benefit. Si presión maleza insoportable: Glifosato pre-siembra (limpia maleza, mantiene mulch), no post-emergencia"
+      },
+      "q3": {
+        "pregunta": "¿Abono verde reduce rendimiento maíz year 1?",
+        "respuesta": "SÍ inicial 15-25% reducción (rotación + suelo ajustándose). Años 2-3 recupera y supera. Decisión estratégica: sacrificar year 1, ganar years 2-10"
+      },
+      "q4": {
+        "pregunta": "¿Dónde consigo compost de calidad?",
+        "respuesta": "Producir propio: pilas 2×2×1m, residuos maíz+estiércol 1:1, voltear 2-3 veces, lista 4-6 meses USD 20-40/ton. O comparar local, validar maduro (olor tierra, no fermentado)"
+      },
+      "q5": {
+        "pregunta": "¿Mucuna es tóxica? He oído historias...",
+        "respuesta": "Pelos legítimamente irritantes piel. Usar guantes cosecha/destrucción. Beneficio nematicida > riesgo si precaución. Alternativa: Crotalaria no irritante pero menos biomasa"
+      }
+    ]
+  }
+}

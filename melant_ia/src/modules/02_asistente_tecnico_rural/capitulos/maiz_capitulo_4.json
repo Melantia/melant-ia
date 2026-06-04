@@ -1,0 +1,127 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas del Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Barrenador, cogollero, trips, ácaros, MIP calendario",
+  "contenido": {
+    "introduccion_plagas": {
+      "titulo": "4.1 Introducción a Plagas del Maíz",
+      "impacto": "Plagas causan -20-40% rendimiento si no controladas. En costa Ecuador, presión de plagas es ALTA (temperaturas favorables año-redondo)",
+      "plagas_principales": [
+        "Barrenador del tallo (Diatraea saccharalis): PLAGA #1",
+        "Cogollero (Spodoptera frugip erda): PLAGA #2 + virosis",
+        "Trips (Frankliniella, Thrips): Daño foliar + virus transmisión",
+        "Ácaros (Tetranychus): Bajo presión en clima seco"
+      ]
+    },
+    "barrenador_tallo": {
+      "titulo": "4.2 Barrenador del Tallo (Diatraea saccharalis)",
+      "descripcion": "Lepidóptero (mariposa), larva barrenadora",
+      "ciclo": [
+        "Adulto: Mariposa café 25-30 mm, hábito nocturno",
+        "Huevo: Puesta en envés hojas, eclosión 7-10 días",
+        "Larva: Blanca 20-25 mm, penetra tallo, consume parénquima",
+        "Pupa: Dentro galería tallo, 10-14 días",
+        "Generaciones: 3-4 ciclos/año en costa"
+      ],
+      "sintomas_daño": [
+        "Agujero redondo en tallo (entrada larva)",
+        "Polvo marrón alrededor orificio (frass)",
+        "Debilitamiento tallo → acame (vuelco plantas)",
+        "Muerte espiga (si larva penetra punto crecimiento)"
+      ],
+      "manejo_integral": [
+        "Rotación cultivos: Elimina larvas residuales suelo",
+        "Destrucción rastrojos: Post-cosecha quemar/enterrar",
+        "Variedad resistente: INIAP H-507 (relativa resistencia)",
+        "Insecticida: Permetrina 25% 0.5-1.0 L/hectárea (pulverización V4-V6)"
+      ]
+    },
+    "cogollero": {
+      "titulo": "4.3 Cogollero (Spodoptera frugiperda)",
+      "descripcion": "Lepidóptero polífago (muchos cultivos), larva defoliadora",
+      "ciclo": [
+        "Huevo: Puesta en racimos 100-300 huevos",
+        "Larva: Verde oscuro 30-35 mm, línea dorsal clara",
+        "Desarrollo larval: 4-5 estadios, 12-20 días",
+        "Pupa: En suelo, 8-12 días",
+        "Generaciones: 4-6 ciclos/año"
+      ],
+      "daño": [
+        "Estadio larval temprano: Lesiones foliares pequeñas (ventanas)",
+        "Estadio avanzado: Defoliación severa (esqueletización)",
+        "Joven: Daño cogollo (hojas nuevas)",
+        "Mazorca: Daño directo granos, facilita pudrición"
+      ],
+      "importancia_virologica": "Cogollero transmite virus (maíz enano, virus moteado)",
+      "control": [
+        "Monitoreo: Trampa de luz 2-3 x/semana",
+        "Umbral acción: > 10 larvas/100 plantas o > 30% daño foliar",
+        "Insecticida: Spinosad 0.24 L/hectárea (biológico) o Clorpirifós 1.0 L/ha"
+      ]
+    },
+    "trips": {
+      "titulo": "4.4 Trips (Frankliniella, Thrips spp)",
+      "sintomas": [
+        "Plateado/plateado área foliar (rascado epidermis)",
+        "Líneas plateadas en hojas (v600 daño)",
+        "Malformación hojas jóvenes (si ataque V2-V4)",
+        "Reducción fotosíntesis: -20-30% en casos severos"
+      ],
+      "transmision_virus": [
+        "Trips transmite virus del moteado del maíz",
+        "Importancia: Especialmente en plantas jóvenes"
+      ],
+      "control": [
+        "Acaricida/insecticida: Azadiractina (Neem) 2-3 L/ha",
+        "Aplicación: V2-V4 (preventivo)",
+        "Presión baja costa = generalmente bajo daño"
+      ]
+    },
+    "calendario_mip": {
+      "titulo": "4.5 Calendario MIP para Maíz",
+      "fase_v0_v4": [
+        "Plagas riesgo: Cogollero (estadios tempranos)",
+        "Monitoreo: Inspección 3x/semana",
+        "Acción: Insecticida preventivo si população > 10 larvas/100 plantas"
+      ],
+      "fase_v6_v12": [
+        "Plagas riesgo: Barrenador (oviposición), cogollero (larvas grandes)",
+        "Monitoreo: Trampa luz 2x/semana (barrenador adulto)",
+        "Acción: Permetrina si daño visible"
+      ],
+      "fase_vt_r1": [
+        "Plagas riesgo: Cogollero (daño mazorca), barrenador (penetración tallo)",
+        "Monitoreo: Inspección cogollo + mazorca",
+        "Acción: Clorpirifós si presencia larvas vivas"
+      ],
+      "fase_r2_r5": [
+        "Plagas riesgo: Bajo (larvas están dentro tallo/mazorca, difícil tratar)",
+        "Acción: Ninguna (destino cosecha define destino larvas)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.6 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Barrenador es plaga controlable?",
+        "respuesta": "SÍ pero difícil. Antes penetración: Permetrina V4-V6. Post-penetración: Imposible. Mejor prevención: rotación + destrucción rastrojos"
+      },
+      "q2": {
+        "pregunta": "¿Cogollero causa pérdida rendimiento?",
+        "respuesta": "SÍ variable. 20-30% defoliación = -10-15% rendimiento. Además transmite virus (daño MÁS). Monitoreo + umbral acción crítico"
+      },
+      "q3": {
+        "pregunta": "¿Insecticida orgánico es efectivo?",
+        "respuesta": "Spinosad (biológico) es BUENO para cogollero temprano. Para barrenador: químico (Permetrina) es MÁS efectivo. Depende plaga + estadio"
+      },
+      "q4": {
+        "pregunta": "¿Trampa luz es necesaria?",
+        "respuesta": "Sí para barrenador (adulto nocturno). Indica presencia población. Ayuda decisión control. Trampa luz simple: USD 50-100"
+      },
+      "q5": {
+        "pregunta": "¿Variedad resistente existe?",
+        "respuesta": "Parcialmente. INIAP H-507 tiene relativa resistencia barrenador (vs otras susceptibles). NO existe resistencia total (muy costoso genético)"
+      }
+    ]
+  }
+}

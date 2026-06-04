@@ -1,0 +1,109 @@
+{
+  "capitulo": 4,
+  "titulo": "Control Biológico de Plagas en Arroz",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Depredadores acuáticos, cultivos trampa, manejo biodiversidad arrocera",
+  "contenido": {
+    "introduccion": {
+      "titulo": "4.1 Control Biológico Arroz Acuático",
+      "texto": "Sistema acuático arroz = diferente terrestrial. Depredadores acuáticos (libélulas, escarabajos acuáticos, peces) controlan mosquito larva, saltamontes ninfas. Cultivos trampa acuáticos (plantas comestibles para insectos) desvían daño del arroz. Integración: patos, peces generan control tripla-ganancia (alimento, fertilizante, control)."
+    },
+    "depredadores_acuaticos": {
+      "titulo": "4.2 Depredadores Acuáticos",
+      "libelulas": {
+        "presa": "Larva mosquito, saltamontes nífas pequeñas",
+        "ciclo_vida": "Larva acuática 2-3 meses, adulto aéreo 2-3 meses",
+        "abundancia": "10-50 libélulas/hectárea = control suficiente"
+      },
+      "escarabajos_acuaticos": {
+        "genero": "Dytiscidae (comedores activos)",
+        "presa": "Larva mosquito, rotíferos, huevos plagas",
+        "ciclo": "1-2 años completo"
+      },
+      "peces": {
+        "especie": "Tilapia (Oreochromis), Carpa (Cyprinus)",
+        "presa": "Mosquito larva, saltamontes nífas, huevos",
+        "densidad": "500-2,000 peces/hectárea"
+      },
+      "patos": {
+        "presa": "Maleza acuática, insectos terrestres",
+        "beneficio_extra": "Huevos venta, carne, excretas fertilizante"
+      }
+    },
+    "cultivos_trampa_acuaticos": {
+      "titulo": "4.3 Cultivos Trampa Acuáticos",
+      "plantas": [
+        {
+          "planta": "Lentejas acuáticas (Lemna)",
+          "funcion": "Alimento saltamontes, desvía del arroz"
+        },
+        {
+          "planta": "Salvinia acuática",
+          "funcion": "Cobertura agua, hábitat depredadores"
+        },
+        {
+          "planta": "Jacinto acuático (Eichhornia)",
+          "funcion": "Alimento mosquito larva, control plaga"
+        }
+      ]
+    },
+    "sistema_peces_arroz": {
+      "titulo": "4.4 Sistema Integrado Peces-Arroz",
+      "manejo": [
+        {
+          "mes": "Mes 1-2 (siembra arroz)",
+          "accion": "Sin peces (evita daño plántulas)",
+          "preparacion": "Piscina de cría peces externa"
+        },
+        {
+          "mes": "Mes 3+ (V8+)",
+          "accion": "Introducción peces (500-1,000/hectárea)",
+          "beneficio": "Plantitas robustas toleran presión peces"
+        },
+        {
+          "mes": "Mes 4-5 (cosecha)",
+          "accion": "Drenaje agua, captura peces (mercado)"
+        }
+      ],
+      "rendimiento_peces": "500-1,000 kg/hectárea (especie, densidad)",
+      "precio": "USD 3-5/kg peces vivos"
+    },
+    "monitoreo_plagas": {
+      "titulo": "4.5 Monitoreo en Sistema Agroecológico",
+      "metodos": [
+        {
+          "metodo": "Observación flotante",
+          "practica": "10 min/semana observación visual agua (contar depredadores acuáticos visibles)",
+          "indicador": "Abundancia libélulas, escarabajos = control población"
+        },
+        {
+          "metodo": "Trampa agua blanca",
+          "objetvo": "Saltamontes adultos (caen agua blanca, cuentas rendimiento)"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.6 Preguntas Frecuentes - Control Biológico",
+      "q1": {
+        "pregunta": "¿Peces comen arroz germinación?",
+        "respuesta": "SÍ si introducción temprana (V0-V2). Solución: introducir V8+ cuando plantas robustas. Daño mínimo después"
+      },
+      "q2": {
+        "pregunta": "¿Depredadores acuáticos se reproducen sola?",
+        "respuesta": "SÍ autoperpetuación si hábitat establecido (2-3 años). Libélulas especialmente = densidad crece exponencial en sistema"
+      },
+      "q3": {
+        "pregunta": "¿Jacinto acuático es invasivo?",
+        "respuesta": "SÍ potencial. Cosecha parcial previene desbordamiento. Beneficio control plaga > riesgo si manejo activo"
+      },
+      "q4": {
+        "pregunta": "¿Qué pez es mejor tilapia o carpa?",
+        "respuesta": "Tilapia: omní, control larva mosquito excelente. Carpa: herbívora, maleza. Mezcla ambas = sinergia máxima"
+      },
+      "q5": {
+        "pregunta": "¿Patos dañan arroz cosecha?",
+        "respuesta": "Mínimo si patos en agua durante grano lechoso (V8-R2 no cosecha). Cosecha R6 = patos fuera. Riesgo bajo"
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Arroz Convencional",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Inversión, costos producción, ingresos, rentabilidad, comparativa otros cultivos",
+  "contenido": {
+    "introduccion": {
+      "titulo": "7.1 Introducción Economía Arroz",
+      "texto": "Arroz convencional Ecuador = cultivo establecido, mercado garantizado, pero márgenes COMPRIMIDOS (commodity global, precio USD 180-220/tonelada blanco). ROI típico 15-25% (menor que Cacao/Ganadería, similar Maíz). Diferencial: volumen producción (menor inversión/hectárea que Palma), mercado seguro compradores."
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial - Arroz Convencional",
+      "escenario": "10 hectáreas, suelo ya preparado, acceso riego",
+      "componentes": [
+        {
+          "concepto": "Levantamiento terreno (si necesario)",
+          "costo": "USD 0-300 (depende nivelación existente)"
+        },
+        {
+          "concepto": "Semilla certificada",
+          "cantidad": "600-1,000 kg (60-100 kg/ha)",
+          "costo": "USD 0.30-0.50/kg",
+          "subtotal": "USD 180-500"
+        },
+        {
+          "concepto": "Fertilizante",
+          "fondo": "Fosfato diamónico 1,000 kg + Urea 1,000 kg",
+          "subtotal": "USD 400-500"
+        },
+        {
+          "concepto": "Herbicida",
+          "cantidad": "Glifosato, 2,4-D",
+          "subtotal": "USD 150-200"
+        },
+        {
+          "concepto": "Insecticida",
+          "cantidad": "Presupuesto plagas",
+          "subtotal": "USD 100-150"
+        },
+        {
+          "concepto": "Fungicida (brusone prevención)",
+          "cantidad": "Azoxistrobina doble aplicación",
+          "subtotal": "USD 100-150"
+        },
+        {
+          "concepto": "Labor siembra + drenaje",
+          "jornales": "20-30 jornales @ USD 10-15",
+          "subtotal": "USD 200-450"
+        },
+        {
+          "concepto": "Labor cosecha mecanizada",
+          "alquiler": "USD 30-50/ha × 10",
+          "subtotal": "USD 300-500"
+        }
+      ],
+      "total_inicial": "USD 1,530-2,850"
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos por Hectárea",
+      "desglose": [
+        {
+          "rubro": "Semilla",
+          "costo": "USD 18-50"
+        },
+        {
+          "rubro": "Fertilizante",
+          "costo": "USD 40-50"
+        },
+        {
+          "rubro": "Herbicida",
+          "costo": "USD 15-20"
+        },
+        {
+          "rubro": "Insecticida",
+          "costo": "USD 10-15"
+        },
+        {
+          "rubro": "Fungicida",
+          "costo": "USD 10-15"
+        },
+        {
+          "rubro": "Labor siembra/mantenimiento",
+          "costo": "USD 20-30"
+        },
+        {
+          "rubro": "Labor cosecha (alquiler máquina)",
+          "costo": "USD 30-50"
+        }
+      ],
+      "total_operativo": "USD 143-230/hectárea"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "rendimientos": [
+        {
+          "escenario": "Bajo (suelo pobre, sequía)",
+          "rendimiento": "4.0 toneladas/hectárea cáscara",
+          "molinado": "2.8 ton blanco (70%)",
+          "precio": "USD 200/tonelada blanco",
+          "ingreso": "USD 560/hectárea"
+        },
+        {
+          "escenario": "Medio (convencional típico)",
+          "rendimiento": "6.5 ton cáscara",
+          "molinado": "4.55 ton blanco (70%)",
+          "precio": "USD 200/tonelada",
+          "ingreso": "USD 910/hectárea"
+        },
+        {
+          "escenario": "Alto (tecnificado, suelo excelente)",
+          "rendimiento": "8.0 ton cáscara",
+          "molinado": "5.6 ton blanco",
+          "precio": "USD 220/tonelada",
+          "ingreso": "USD 1,232/hectárea"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "escenario_medio": {
+        "supuestos": [
+          "Inversión: USD 230/hectárea (amortizada 5 años)",
+          "Costos operativos: USD 186/hectárea",
+          "Rendimiento: 6.5 ton cáscara = 4.55 ton blanco",
+          "Precio: USD 200/tonelada"
+        ],
+        "ingresos": "4.55 × USD 200 = USD 910",
+        "costos": "USD 186 + USD 46 amortización = USD 232",
+        "utilidad": "USD 910 - USD 232 = USD 678",
+        "roi": "USD 678 ÷ USD 1,360 (inversión 10 ha) = 50% para 10 ha = 5% ROI/ha/año (comparar 6.78% ROI promedio)"
+      },
+      "variacion_precio": [
+        {
+          "escenario": "Precio BAJO USD 150/ton",
+          "ingreso": "4.55 × USD 150 = USD 682.50",
+          "utilidad": "USD 682.50 - USD 232 = USD 450.50",
+          "roi": "33% (comprimido pero viable)"
+        },
+        {
+          "escenario": "Precio ALTO USD 250/ton",
+          "ingreso": "4.55 × USD 250 = USD 1,137.50",
+          "utilidad": "USD 1,137.50 - USD 232 = USD 905.50",
+          "roi": "66% (excelente)"
+        }
+      ]
+    },
+    "comparativa_cultivos": {
+      "titulo": "7.6 Comparativa Arroz vs Otros Cultivos",
+      "tabla": [
+        {
+          "cultivo": "Arroz",
+          "inversion": "USD 230/ha",
+          "costo_anual": "USD 186/ha",
+          "ingreso": "USD 910/ha",
+          "utilidad": "USD 678/ha",
+          "roi": "49%"
+        },
+        {
+          "cultivo": "Ganadería",
+          "inversion": "USD 2,000/vaca",
+          "costo_anual": "USD 500/vaca",
+          "ingreso": "USD 1,440/vaca",
+          "utilidad": "USD 940/vaca",
+          "roi": "47%"
+        },
+        {
+          "cultivo": "Maíz",
+          "inversion": "USD 1,900/ha",
+          "costo_anual": "USD 731/ha",
+          "ingreso": "USD 1,100/ha",
+          "utilidad": "USD 369/ha",
+          "roi": "19%"
+        }
+      ],
+      "conclusion": "Arroz ROI COMPETITIVO con Ganadería, SUPERIOR Maíz convencional"
+    },
+    "riesgos": {
+      "titulo": "7.7 Riesgos y Mitigación",
+      "riesgo_precio": {
+        "descripcion": "Commodity global, precio puede caer USD 180/ton",
+        "mitigacion": "Contratos pre-venta, diversificación cultivos"
+      },
+      "riesgo_agua": {
+        "descripcion": "Sequía = estrés producción, riego costoso",
+        "mitigacion": "Seguro agrícola, reservorio agua"
+      },
+      "riesgo_plagas": {
+        "descripcion": "Brusone, barrenador pueden reducir 30-50%",
+        "mitigacion": "Variedad resistencia, fungicida preventivo"
+      }
+    },
+    "mejora_rentabilidad": {
+      "titulo": "7.8 Estrategias Mejora Rentabilidad",
+      "produccion": [
+        "Riego optimizado (no exceso agua = depuración N)",
+        "Variedad mejorada (INIA-1 +0.5-1 ton/ha vs promedio)",
+        "Nutrición balanceada (análisis suelo, no al ojo)"
+      ],
+      "mercado": [
+        "Grano aromático (USD 350-500/ton premium)",
+        "Venta directa molinería (elimina intermediario)",
+        "Subproductos (salvado, cáscara = USD 50-150/ha ingreso extra)"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.9 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Arroz es rentable vs Ganadería?",
+        "respuesta": "Similar ROI (49% vs 47% Ganadería). Arroz: menos inversión inicial, ciclo 4 meses. Ganadería: ciclo largo pero mayor escala posible"
+      },
+      "q2": {
+        "pregunta": "¿Precio arroz sube futuro?",
+        "respuesta": "Mercado global commodity = difícil predecir. Plusvía demanda Asia, oferta estable. Mejor estrategia: eficiencia producción (bajar costos)"
+      },
+      "q3": {
+        "pregunta": "¿Cuál es escala mínima viable?",
+        "respuesta": "5 hectáreas (generas USD 3,390 neto año si medio escenario). Debajo 5 ha: riego costoso, mecanización ineficiente"
+      },
+      "q4": {
+        "pregunta": "¿Arroz + ganadería + maíz es combinación?",
+        "respuesta": "EXCELENTE sinergia. Maíz alimento ganadería, arroz diversifica ingresos, rotación rompe plagas. Escala > 20 ha recomendado"
+      },
+      "q5": {
+        "pregunta": "¿Seguro agrícola vale pena?",
+        "respuesta": "SÍ si costo < 3% ingresos (USD 27-30/ha típico). Protege sequía, brusone epidémica, otros desastres naturales"
+      }
+    ]
+  }
+}

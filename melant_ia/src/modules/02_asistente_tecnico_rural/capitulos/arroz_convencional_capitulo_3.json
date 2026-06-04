@@ -1,0 +1,137 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización del Arroz",
+  "cultivo": "Arroz Convencional",
+  "seccion": "Extracción de nutrientes, programa NPK, deficiencias, análisis foliar",
+  "contenido": {
+    "introduccion": {
+      "titulo": "3.1 Nutrición en Arroz Inundado",
+      "texto": "Arroz extrae 15-18 kg N/tonelada grano (8 ton = 120-144 kg N necesario). Ambiente inundado = mineralización lenta N (anoxia reduce nitrificación), PERO también reduce lixiviación (N se queda suelo). Programa NPK diferente convencional poroto/maíz: NITRÓGENO escalonado (no todo fondo), fósforo/potasio en fondo (anoxia reduce mobility)."
+    },
+    "extraccion_nutrientes": {
+      "titulo": "3.2 Extracción de Nutrientes",
+      "por_tonelada": [
+        {
+          "nutriente": "Nitrógeno (N)",
+          "cantidad": "15-18 kg/tonelada",
+          "8_toneladas": "120-144 kg/ha"
+        },
+        {
+          "nutriente": "Fósforo (P₂O₅)",
+          "cantidad": "4-5 kg/tonelada",
+          "8_toneladas": "32-40 kg/ha"
+        },
+        {
+          "nutriente": "Potasio (K₂O)",
+          "cantidad": "8-10 kg/tonelada",
+          "8_toneladas": "64-80 kg/ha"
+        },
+        {
+          "nutriente": "Azufre (S)",
+          "cantidad": "2-3 kg/tonelada",
+          "8_toneladas": "16-24 kg/ha"
+        },
+        {
+          "nutriente": "Zinc (Zn)",
+          "cantidad": "0.08-0.12 kg/tonelada",
+          "8_toneladas": "0.64-0.96 kg/ha"
+        }
+      ]
+    },
+    "programa_nitrogenado": {
+      "titulo": "3.3 Programa de Nitrógeno Escalonado",
+      "etapa_1": {
+        "nombre": "Fondo pre-siembra",
+        "cantidad": "30-50 kg N/hectárea",
+        "producto": "Urea (USD 10-12 saco 50 kg)",
+        "aplicacion": "Incorporado arada, 7-10 días pre-siembra"
+      },
+      "etapa_2": {
+        "nombre": "Macollejamiento (V4-V6)",
+        "cantidad": "40-60 kg N/hectárea",
+        "timing": "14-21 días post-siembra",
+        "aplicacion": "Aspersión urea en agua inundación (se disuelve)",
+        "razon": "Máxima fotosíntesis macollejamiento"
+      },
+      "etapa_3": {
+        "nombre": "Pre-floración (VE-1 semana)",
+        "cantidad": "20-30 kg N/hectárea",
+        "aplicacion": "Úrea aspersión foliar",
+        "razon": "Fortalecimiento panícula, previene aborto flores"
+      },
+      "total": "90-140 kg N/hectárea (distribuido = eficiencia máxima 70-80%)"
+    },
+    "fosforo_potasio": {
+      "titulo": "3.4 Fósforo y Potasio - Programa Fondo",
+      "fosforo": [
+        "Aplicación: 100% fondo pre-siembra",
+        "Producto: Fosfato diamónico (18-46-0) USD 12-15/saco 50 kg",
+        "Dosis: 100-150 kg/ha (25-35 kg P₂O₅)"
+      ],
+      "potasio": [
+        "Aplicación: 100% fondo",
+        "Producto: Cloruro potasio (0-0-60) USD 15-18/saco 50 kg",
+        "Dosis: 100-120 kg/ha (60-72 kg K₂O)"
+      ],
+      "razon": "Anoxia inundación reduce movilidad P-K (quedan fondo), por eso fondo garantiza disponibilidad"
+    },
+    "micronutrientes": {
+      "titulo": "3.5 Micronutrientes Críticos",
+      "zinc": {
+        "problema": "Deficiencia moteado blanco hojas (común suelos de pH alto > 7.5)",
+        "solucion": "Sulfato zinc 5-10 kg/ha fondo, o aspersión foliar 0.5% (500 g/100 L agua)"
+      },
+      "hierro": {
+        "problema": "Clorosis (amarillo entre venas) en suelos calcáreos",
+        "solucion": "Quelato hierro foliar 1-2 kg/ha, o ferric DTPA fondo"
+      },
+      "manganeso": {
+        "problema": "Menos común, estrías foliares grises",
+        "solucion": "Sulfato manganeso 5-10 kg/ha"
+      }
+    },
+    "analisis_suelo": {
+      "titulo": "3.6 Análisis de Suelo y Fertilización Recomendada",
+      "parametros": [
+        {
+          "parametro": "pH",
+          "optimo": "5.5-7.0",
+          "accion_bajo": "Si < 5.0: encalado 1-2 ton/ha cal"
+        },
+        {
+          "parametro": "Materia Orgánica",
+          "optimo": "> 2%",
+          "accion_bajo": "Si < 1%: es suelo pobre, aumenta fertilización 20-30%"
+        },
+        {
+          "parametro": "Fósforo disponible (Bray)",
+          "optimo": "15-30 ppm",
+          "bajo": "< 10 ppm = fertilización aumentada 50 kg/ha"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.7 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Aplicar TODO nitrógeno fondo como convencional?",
+        "respuesta": "NO. Arroz inundado requiere escalonado: 30-50% fondo, 50-70% en V4-V6. Fondo solo = mineralización lenta + lixiviación (anoxia), desperdicio"
+      },
+      "q2": {
+        "pregunta": "¿Zinc deficiencia es común Ecuador?",
+        "respuesta": "SÍ si suelo pH > 7.0 o bajo materia orgánica. Tratamiento fácil USD 15-20/ha. Sin tratar = pérdida 20-30% rendimiento"
+      },
+      "q3": {
+        "pregunta": "¿Urea precio caro, puedo reducir?",
+        "respuesta": "NO se recomienda. Rendimiento directo N aplicado. Si USD 200/ha nitrógeno vs USD 1,600 ingreso = ROI 8x. Reducir = riesgo"
+      },
+      "q4": {
+        "pregunta": "¿Potasio es importante arroz?",
+        "respuesta": "SÍ aunque menos que maíz. K reduce acame (tallo se quiebra), aumenta resistencia enfermedades. Deficiencia = plantas débiles"
+      },
+      "q5": {
+        "pregunta": "¿Aspersión foliar urea funciona?",
+        "respuesta": "SÍ en V4-V6 como suplencia/rescate. NO reemplaza fondo. Dosis foliar: 2-4 kg/ha en 400 L agua, aplicar temprano/tarde (evita quemadura)"
+      }
+    ]
+  }
+}

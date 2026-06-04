@@ -1,0 +1,209 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Enfermedades fúngicas, bacterianas y virales: identificación, manejo y prevención",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Enfermedades del Plátano Barraganete",
+      "ventaja_barraganete": "Principal ventaja es RESISTENCIA GENÉTICA a Sigatoka Negra (Mycosphaerella fijiensis) y Sigatoka Amarilla (M. musicola). Esto significa:",
+      "implicaciones": [
+        "NO requiere fungicidas preventivos costosos",
+        "Ciclo de cultivo se reduce 2-3 meses (menos tiempo para enfermedad",
+        "Costo de producción 30-40% menor que Cavendish",
+        "Ambientalmente más sostenible"
+      ],
+      "pero_existen": "Otras enfermedades menos importantes pero presentes"
+    },
+    "enfermedades_fungicas": {
+      "titulo": "5.2 Enfermedades Fúngicas",
+      "sigatoka_negra": {
+        "nota": "Barraganete es RESISTENTE. No es problema en Barraganete puro. Incluida para referencia si contaminación varietal"
+      },
+      "pudricion_cormo": {
+        "nombre": "Pudrición del Cormo (Pythium, Phytophthora)",
+        "agente_causal": "Pythium spp., Phytophthora cinnamomi (oomicetos, no hongos verdaderos)",
+        "condicion_favorecida": "Suelo saturado de agua, pH bajo (< 5.5), drenaje pobre",
+        "sintomas": [
+          "Marchitamiento repentino de planta joven",
+          "Pseudo-tallo se cae/colapsa",
+          "Cormo se vuelve blando, olor fétido",
+          "Raíces descompuestas"
+        ],
+        "progresion": "Rápida, 1-2 semanas desde síntoma a muerte",
+        "prevalencia": "Común en épocas lluviosas intensas",
+        "prevencion": [
+          "Buen drenaje CRÍTICO (test drenaje antes plantación)",
+          "Evitar encharcamiento",
+          "pH > 5.5 (encalar si necesario)",
+          "Camas elevadas en zonas muy húmedas"
+        ],
+        "control": [
+          "Una vez infectado: difícil curar, mejor arrancar y destruir planta",
+          "Fungicida preventivo: Metalaxil 25% @ 1 L/ha (si zona históricamente problemática)",
+          "Rotación de cultivos si severidad repetida"
+        ]
+      },
+      "mancha_sigatoka_amarilla_leve": {
+        "nombre": "Mancha por Cercospora (Cercospora fijiensis - forma imperfecta)",
+        "nota": "Raro en Barraganete puro, pero posible si ambiente muy húmedo",
+        "sintomas": "Manchas pequeñas (3-5 mm) con halo marrón claro",
+        "control": "Generalmente autolimitada, raramente requiere fungicidas"
+      },
+      "botritis": {
+        "nombre": "Pudrición Gris/Botritis (Botrytis cinerea)",
+        "condicion": "Muy alta humedad relativa (> 85%), temperatura 15-25°C",
+        "zona_afectacion": "Principalmente fruto (post-cosecha problema más que campo)",
+        "prevencion_campo": [
+          "Buena aireación",
+          "Evitar mojadura prolongada (sistema riego en suelo, no aéreo)"
+        ]
+      }
+    },
+    "enfermedades_bacterianas": {
+      "titulo": "5.3 Enfermedades Bacterianas",
+      "marchitez_bacteriana": {
+        "nombre": "Marchitez Bacteriana Vascular (Ralstonia solanacearum - raro)",
+        "riesgo": "Bajo en plátano vs tomate/papa",
+        "importancia": "Mención por completitud"
+      },
+      "xanthomonas": {
+        "nombre": "Mancha Angular (Xanthomonas campestris)",
+        "riesgo": "Muy bajo en Barraganete",
+        "nota": "Requiere lesiones foliares previas para infección"
+      }
+    },
+    "enfermedades_virales": {
+      "titulo": "5.4 Enfermedades Virales",
+      "virus_mosaico_banana": {
+        "nombre": "Virus del Mosaico del Banano (Banana Mild Mosaic Virus - BanMV)",
+        "transmision": "Por insectos áfidos, raramente problemático en América Tropical",
+        "importancia": "Baja"
+      },
+      "virus_bunchy_top": {
+        "nombre": "Virus Bunchy Top del Banano (BBTV - Babuvirus)",
+        "transmision": "Insecto vector: Penlgia nigronervosa (psílido)",
+        "sintomas": [
+          "Hojas pequeñas, deformadas (acortamiento de limbo)",
+          "Pseudotallo delgado, acortado",
+          "Racimo muy pequeño o ausente"
+        ],
+        "incidencia": "BAJO en Ecuador pero presente",
+        "importancia_export": "Si presente, RECHAZA EXPORTACIÓN (cuarentena mundial)",
+        "prevencion": [
+          "Usar material certificado libre de virus (vitro-plantas idealmente)",
+          "Desinfección de cormos"
+        ]
+      },
+      "virus_intermosaico": {
+        "nombre": "Virus Intermosaico del Banano (BIMV)",
+        "similitud": "Similar a BanMV, bajo riesgo"
+      }
+    },
+    "diagnostico": {
+      "titulo": "5.5 Protocolo de Diagnóstico de Enfermedades",
+      "paso_1_observacion": {
+        "actividad": "Inspeccionar síntomas visuales",
+        "ubicacion": "Hojas nuevas (enfermedad temprana) vs hojas viejas",
+        "documentar": [
+          "Tipo lesión: mancha, banda, halo, enrollamiento",
+          "Color: amarillo, marrón, negro, grisáceo",
+          "Distribución: uniforme, sectorial, toda hoja"
+        ]
+      },
+      "paso_2_contexto": {
+        "preguntas": [
+          "¿Cuándo iniciaron síntomas?",
+          "¿Lluvia reciente o riego excesivo?",
+          "¿Drenaje adecuado?",
+          "¿Otras plantas afectadas en finca?"
+        ]
+      },
+      "paso_3_muestreo": {
+        "si_sospecha_grave": "Enviar muestra a laboratorio de diagnóstico (foliar)",
+        "laboratorio": "Servicio nacional (MAGAP), universidades, centros de investigación"
+      }
+    },
+    "tabla_comparativa_enfermedades": {
+      "titulo": "5.6 Tabla Comparativa de Enfermedades",
+      "tabla": [
+        {
+          "enfermedad": "Sigatoka Negra",
+          "agente": "Mycosphaerella fijiensis",
+          "barraganete_resistencia": "RESISTENTE (ventaja clave)",
+          "importancia_cavendish": "CRÍTICA (fungicidas costosos)"
+        },
+        {
+          "enfermedad": "Sigatoka Amarilla",
+          "agente": "Mycosphaerella musicola",
+          "barraganete_resistencia": "RESISTENTE",
+          "importancia_cavendish": "Media"
+        },
+        {
+          "enfermedad": "Pudrición Cormo",
+          "agente": "Pythium/Phytophthora",
+          "barraganete_riesgo": "MEDIA (si drenaje malo)",
+          "prevencion": "Drenaje adecuado, pH > 5.5"
+        },
+        {
+          "enfermedad": "Virus Bunchy Top",
+          "agente": "BBTV",
+          "barraganete_riesgo": "BAJA (presente pero raro)",
+          "importancia": "Cuarentena si detectado"
+        },
+        {
+          "enfermedad": "Botritis",
+          "agente": "Botrytis cinerea",
+          "barraganete_riesgo": "BAJA (principalmente post-cosecha)",
+          "prevencion": "Buena aireación"
+        }
+      ]
+    },
+    "manejo_preventivo": {
+      "titulo": "5.7 Manejo Preventivo Integrado",
+      "medidas_culturales": [
+        "Drenaje excelente (cruciales: test drenaje pre-plantación)",
+        "Espaciamiento adecuado (3-3.5 m) para aireación",
+        "Remover hojas muertas/muy enfermas",
+        "Sanidad de herramientas (desinfectar entre plantas si enfermedad presente)",
+        "Rotación de cultivos si pudrición recurrente"
+      ],
+      "material_vegetativo": [
+        "SIEMPRE usar material certificado o desinfectado",
+        "Vitro-plantas: Ideal para garantía, costo justificado para export"
+      ],
+      "aplicacion_fungicidas": {
+        "indicacion": "Solo si realmente necesario (Barraganete NO requiere fungicidas rutinarios a diferencia Cavendish)",
+        "preventiva": "No recomendada para Barraganete sano",
+        "curativa": "Solo si enfermedad detectada y afectando > 10% área foliar"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.8 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿No necesito fungicidas si cultivo Barraganete?",
+        "respuesta": "Correcto, principalmente NO. Barraganete NO necesita fungicidas preventivos a diferencia de Cavendish (donde son CRÍTICOS costosos). Esta es ventaja comercial enorme. Si hojas amarillas por otras causas (nutrientes, edad), fungicidas no ayudan"
+      },
+      "q2": {
+        "pregunta": "¿Cómo evito pudrición del cormo?",
+        "respuesta": "Tres cosas: (1) Drenaje excelente (test 24h obligatorio), (2) pH > 5.5 (encalar si bajo), (3) Evitar encharcamiento (riego apropiado, no excesivo). Si cumples estos 3, raramente tendrás pudrición cormo"
+      },
+      "q3": {
+        "pregunta": "¿Qué es lo peor que le puede pasar a mi Barraganete?",
+        "respuesta": "En orden de severidad: (1) Suelo encharcado → pudrición cormo (muerte rápida), (2) Virus Bunchy Top (rechaza export), (3) Thrips severo (retraso ciclo), (4) Plagas/malezas (reduce rendimiento). Pero con manejo básico, Barraganete es muy resiliente"
+      },
+      "q4": {
+        "pregunta": "¿Las manchas amarillas en hoja son siempre enfermedad?",
+        "respuesta": "No. Puede ser: (1) Edad natural (hojas viejas amarillecen), (2) Deficiencia nutricional (N, Mg, especialmente), (3) Baja humedad (estrés hídrico), (4) Enfermedad (menos común en Barraganete). Inspecciona patrón: si toda hoja amarilla = edad o nutrientes; si manchas = posible enfermedad"
+      },
+      "q5": {
+        "pregunta": "¿Puedo reutilizar suelo de cultivo anterior?",
+        "respuesta": "No recomendado si hubo pudrición cormo (patógenos persisten). Si cultivo anterior fue sano, sí. Para seguridad: incorporar 20% suelo nuevo, mejorar drenaje"
+      },
+      "q6": {
+        "pregunta": "¿Cada cuánto debo inspeccionar enfermedades?",
+        "respuesta": "Mínimo semanal durante mes 1-3 (crítico). Después quincenal. En época lluviosa, incrementar a semanal. Detección temprana = 90% de solución"
+      }
+    ]
+  }
+}

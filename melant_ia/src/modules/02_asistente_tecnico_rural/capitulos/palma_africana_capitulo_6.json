@@ -1,0 +1,179 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Procesamiento de Palma Africana",
+  "cultivo": "Palma Africana",
+  "seccion": "Madurez del racimo, cosecha, extracción aceite, beneficio, clasificación",
+  "contenido": {
+    "introduccion_cosecha": {
+      "titulo": "6.1 Introducción a Cosecha de Palma",
+      "importancia": "Cosecha y procesamiento determinan 60% rendimiento aceite. Retraso cosecha = fermentación adelantada, acidez alto = precio bajo",
+      "ciclo_produccion": [
+        "Floración día 0",
+        "Formación racimo días 1-60",
+        "Maduración días 60-150 (90 días ciclo típico)",
+        "Ventana cosecha: 30-45 días (si fuera más, fermenta)"
+      ]
+    },
+    "madurez_determinacion": {
+      "titulo": "6.2 Determinación de Madurez del Racimo",
+      "metodos_identificacion": [
+        {
+          "metodo": "Color fruto",
+          "inmaduro": "Verde oscuro",
+          "maduro": "Rojo-naranja brillante",
+          "sobre_maduro": "Rojo oscuro casi negro (fermenta)"
+        },
+        {
+          "metodo": "Desprendimiento fruto",
+          "test": "Presionar fruto: debe desprenderse fácil del racimo",
+          "significado": "Madurez fisiológica"
+        },
+        {
+          "metodo": "Contenido aceite",
+          "medida": "Cálculo: % racimo rojo ÷ (% rojo + % verde) > 75% = maduro"
+        }
+      ],
+      "momento_optimo": "Cuando 80-90% fruto es rojo (vs 10-20% verde aún)",
+      "cosecha_tardía": "Si esperar a 100% rojo, comienza fermentación = acidez libre aumenta (precio cae)"
+    },
+    "metodo_cosecha": {
+      "titulo": "6.3 Método de Cosecha",
+      "herramientas": [
+        "Poda podadora larga (8-10 metros según altura)",
+        "O: Machete afilado (para racimos bajos)",
+        "O: Escalera/andamios (palmas altas > 8 m)"
+      ],
+      "tecnica_corte": [
+        "Localizar racimo en axila fronda",
+        "Corte limpio (NO golpes, daño = plagas entrada)",
+        "Racimo cae en cesta/red (NO directo suelo = magulladuras)"
+      ],
+      "cuidado_critico": [
+        "Evitar heridas tallo (Picudo entra por herida)",
+        "Racimo NO se golpea en cosecha (magulladuras = acidez fermentativa)"
+      ],
+      "frecuencia": "Cosecha cada 10-14 días (vs café selectiva 3-5 pasadas). Palma produce casi continuo"
+    },
+    "transporte_beneficio": {
+      "titulo": "6.4 Transporte a Estación de Beneficio",
+      "tiempo_critico": "< 24 horas post-cosecha (vs café/cacao < 4 horas). Razón: fermentación inicia más lento en palma, pero igual importante",
+      "transporte_cuidados": [
+        "Recipiente aireado (NO bolsa cerrada)",
+        "Protección luz directa (fermenta)",
+        "Pesaje inmediato en beneficio"
+      ],
+      "recepcion": [
+        "Inspección racimo (fruta inmadura=rechazo)",
+        "Pesaje precisión",
+        "Descarga rápida en esterilizador"
+      ]
+    },
+    "procesamiento_aceite": {
+      "titulo": "6.5 Procesamiento para Extracción Aceite",
+      "pasos_beneficio": [
+        {
+          "paso": "1. Esterilización",
+          "equipo": "Autoclave vapor 45 psi × 90 minutos",
+          "proposito": "Inactiva lipasa (previene acidez), afloja fruto de racimo",
+          "resultado": "Racimo blando, fruto separable"
+        },
+        {
+          "paso": "2. Desgranado",
+          "equipo": "Desgranador (tambor giratorio)",
+          "proceso": "Fruto se separa raquis (estructura)",
+          "output": "Fruto + raquis por separado"
+        },
+        {
+          "paso": "3. Cocción de fruto",
+          "equipo": "Cocinador vapor 45 minutos",
+          "proposito": "Ablanda fruto, acelera extracción aceite",
+          "resultado": "Fruto cocinado listo prensado"
+        },
+        {
+          "paso": "4. Prensado",
+          "equipo": "Prensa tornillo o hidráulica",
+          "proceso": "Exprime aceite crudo de fruto",
+          "rendimiento": "~20-25% peso fruto fresco = aceite crudo"
+        },
+        {
+          "paso": "5. Clarificación",
+          "metodo": "Sedimentación + centrifuga (opcional)",
+          "proposito": "Separa agua, impurezas de aceite",
+          "output": "Aceite CPO (Crude Palm Oil)"
+        },
+        {
+          "paso": "6. Almacenaje",
+          "tanque": "Acero/plástico 55-200°C (aceite líquido)",
+          "tiempo": "Hasta exportación (3-6 meses típico)"
+        }
+      ],
+      "subproductos": [
+        "Fibra racimo: Combustible caldera",
+        "Cáscara: Compost, biomasa",
+        "Residuo prensa: Alimento animal/compost"
+      ]
+    },
+    "rendimiento_conversion": {
+      "titulo": "6.6 Rendimientos de Conversión",
+      "racimo_fresco_aceite": [
+        "100 kg racimo fresco",
+        "→ 50-55 kg fruto puro (después desgrane)",
+        "→ 10-13 kg aceite CPO (20-25%)",
+        "→ 9-12 kg aceite refinado (después refinería)"
+      ],
+      "produccion_anual": [
+        "Rendimiento 20 toneladas/ha racimo fresco/año",
+        "→ 4-5 toneladas aceite CPO/ha/año",
+        "→ 3.5-4.5 toneladas aceite refinado/ha/año"
+      ],
+      "factores_rendimiento": [
+        "Variedad Tenera: +30-40% rendimiento vs Dura",
+        "Madurez cosecha: Óptima madurez = máximo aceite",
+        "Tiempo beneficio: Retraso = acidez = rendimiento económico bajo"
+      ]
+    },
+    "defectos_calidad": {
+      "titulo": "6.7 Defectos y Estándares de Calidad",
+      "acidez_libre": {
+        "medida": "Porcentaje ácido palmítico libre",
+        "estándar": [
+          "CPO premium: < 3% acidez libre",
+          "CPO estándar: 3-5%",
+          "Rechazo: > 5% (rancio, fermentado)"
+        ],
+        "causa": "Retraso post-cosecha, fermentación, mala extracción"
+      },
+      "humedad": {
+        "estandar": "< 1%",
+        "exceso": "Promueve oxidación, rancidez"
+      },
+      "impurezas": [
+        "Arena: < 25 ppm",
+        "Sólidos insolubles: < 0.5%"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.8 Preguntas Frecuentes - Cosecha",
+      "q1": {
+        "pregunta": "¿Cuándo cosechar racimo?",
+        "respuesta": "Cuando 80-90% fruto es rojo. Si 100% rojo = fermenta. Si < 75% rojo = bajo aceite. Ventana corta 30-45 días"
+      },
+      "q2": {
+        "pregunta": "¿Cada cuánto se cosecha?",
+        "respuesta": "Cada 10-14 días (ciclo corto vs café selectiva 3-5 pasadas/mes). Palma produce casi continuo"
+      },
+      "q3": {
+        "pregunta": "¿Qué es CPO?",
+        "respuesta": "Crude Palm Oil = aceite crudo extraído de fruto palma. Sin refinar aún. CPO refinado = aceite final para alimentos/biodiesel"
+      },
+      "q4": {
+        "pregunta": "¿Rendimiento palma vs soja?",
+        "respuesta": "Palma 4-5 toneladas aceite/ha/año vs soja 0.4 ton. Palma produce 10× más aceite por hectárea"
+      },
+      "q5": {
+        "pregunta": "¿Acidez libre qué significa?",
+        "respuesta": "Ácido graso libre (degradación triglicéridos). Alto = fermentación/retraso post-cosecha. CPO bueno < 3%, malo > 5% (rancio)"
+      }
+    ]
+  }
+}

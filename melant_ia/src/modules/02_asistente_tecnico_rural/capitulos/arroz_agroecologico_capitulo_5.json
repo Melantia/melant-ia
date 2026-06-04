@@ -1,0 +1,85 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Arroz Agroecológico",
+  "cultivo": "Arroz Agroecológico",
+  "seccion": "Brusone, bacteria, hongos anóxicos, biodiversidad antagonista",
+  "contenido": {
+    "introduccion": {
+      "titulo": "5.1 Enfermedades en Arroz Agroecológico",
+      "texto": "Sistemas agroecológicos con biodiversidad suelen MENOR incidencia enfermedades (supresividad biológica). Pero algunos patógenos aprovechan anaerobiosis (hongos anóxicos). Estrategia: variedad resistencia + manejo agua + antagonistas naturales."
+    },
+    "brusone_biologia": {
+      "titulo": "5.2 Brusone - Manejo Agroecológico",
+      "epidemiologia": [
+        "Sistema anóxico semi = MENOR incidencia (menos esporulación patógeno vs inundación completa)",
+        "Humedad relativa baja riego parcial = inhibición esporulación 40-50%"
+      ],
+      "prevencion": [
+        {
+          "metodo": "Variedad resistencia",
+          "buscar": "Arroz INIA con genes R brusone"
+        },
+        {
+          "metodo": "Drenaje estratégico",
+          "practica": "10-15 días pre-floración reduce humedad foliar (inhibe Magnaporthe)"
+        },
+        {
+          "metodo": "Antagonistas",
+          "microorganismo": "Trichoderma, Bacillus en compost inoculado"
+        }
+      ]
+    },
+    "hongos_anoxicos": {
+      "titulo": "5.3 Hongos Favorecidos por Anaerobiosis",
+      "hongo": "Pythium (causa damping-off V0-V2)",
+      "control": [
+        "Compost saludable inoculado Trichoderma",
+        "Drenaje previo siembra (desaturar 2-3 días)",
+        "Mulch protege (reduce contacto agua-semilla)"
+      ]
+    },
+    "bacteria": {
+      "titulo": "5.4 Bacteria - Xanthomonas",
+      "problema": "Presencia bajo anaerobiosis (inundación)",
+      "beneficio_sistema": "Sistema agroecológico multi-microbiano antagonista bacteria"
+    },
+    "virus": {
+      "titulo": "5.5 Virus - Prevención",
+      "control": "Rotación cultivos (rompe ciclo vector), variedad tolerancia, control vector insecticida neem si necesario"
+    },
+    "antagonistas_microbianos": {
+      "titulo": "5.6 Antagonistas Naturales",
+      "trichoderma": {
+        "beneficio": "Micoparasitismo Magnaporthe, producción antibióticos",
+        "aplicacion": "Inoculación compost pre-siembra"
+      },
+      "bacillus": {
+        "beneficio": "Antibióticos inhibición patógenos, estimulación defensas planta",
+        "aplicacion": "Semilla inoculación, compost"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.7 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Semi-inundación reduce brusone?",
+        "respuesta": "SÍ estimado 40-50% presión (menos esporulación). Pero no eliminate risk. Variedad resistencia PRIORITARIA"
+      },
+      "q2": {
+        "pregunta": "¿Trichoderma casero funciona?",
+        "respuesta": "Funciona 50-70% casos (calidad variable). Mejor: compra inoculante certificado universidad (USD 50-100/hectárea)"
+      },
+      "q3": {
+        "pregunta": "¿Anaerobiosis favorece enfermedades?",
+        "respuesta": "Sí Pythium, roya. PERO mayoría patógenos reducen (brusone, bacteria). Balance positivo sistema agroecológico biodiverso"
+      },
+      "q4": {
+        "pregunta": "¿Sin fungicida, cómo manejo epidemia?",
+        "respuesta": "Rápida acción: drenaje emergencia (interrumpe humedad), destrucción plantas severamente infectadas (contiene dispersión)"
+      },
+      "q5": {
+        "pregunta": "¿Bacillus realmente inhibe patógenos?",
+        "respuesta": "SÍ comprobado. Antibióticos específicos diferentes cepas. Combinación Trichoderma+Bacillus = eficacia 80-90% laboratorio"
+      }
+    ]
+  }
+}

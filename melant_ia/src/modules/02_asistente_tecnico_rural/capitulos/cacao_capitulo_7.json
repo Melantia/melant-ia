@@ -1,0 +1,638 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Cultivo de Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Análisis de costos, rentabilidad, mercados y viabilidad económica",
+  "contenido": {
+    "introduccion_economia": {
+      "titulo": "7.1 Introducción a la Economía del Cacao",
+      "texto": "El cacao es cultivo de ciclo largo (3-5 años para primera cosecha comercial) con inversión significativa, requiriendo análisis cuidadoso de viabilidad económica antes de iniciar. A diferencia de cultivos anuales, decisión de sembrar cacao compromete terreno por 25-30 años.\n\nEste capítulo proporciona herramientas para:\n(1) Calcular costos totales de establecimiento\n(2) Proyectar ingresos basado en rendimientos\n(3) Determinar punto de equilibrio\n(4) Evaluar rentabilidad a largo plazo\n(5) Identificar riesgos y oportunidades",
+      "contexto_mundial": [
+        "Producción mundial: 5.0-5.5 millones toneladas/año",
+        "Consumo mundial: 4.8-5.2 millones toneladas/año (déficit genera precios altos)",
+        "Principales productores: Costa de Marfil (35%), Ghana (20%), Indonesia (12%), Ecuador (5%)",
+        "Precio internacional: USD 2,500-4,000/tonelada grano (volatilidad muy alta)"
+      ]
+    },
+    "estructura_costos": {
+      "titulo": "7.2 Estructura de Costos en Cultivo de Cacao",
+      "periodo_analisis": "Ciclo completo de 30 años. Pero evaluación típica: primer ciclo de 5 años (establecimiento + inicio producción)",
+      "fase_establecimiento": {
+        "titulo": "Fase de Establecimiento (Años 0-2)",
+        "año_0_preparacion": {
+          "nombre": "Año 0: Preparación del Terreno",
+          "actividades": [
+            {
+              "actividad": "Limpieza y desmonte",
+              "costo_usd_ha": "USD 500-1,000 (depende cobertura inicial)",
+              "detalles": "Remover malezas, troncos, preparar suelo"
+            },
+            {
+              "actividad": "Análisis de suelo",
+              "costo_usd_ha": "USD 50-100",
+              "detalles": "Laboratorio certificado, 10-15 muestras"
+            },
+            {
+              "actividad": "Encalado si es necesario",
+              "costo_usd_ha": "USD 200-500 (si pH <5.0)",
+              "detalles": "2-3 ton CaCO₃/ha según análisis"
+            },
+            {
+              "actividad": "Establecimiento de árboles de sombra",
+              "costo_usd_ha": "USD 300-500",
+              "detalles": "Plátano, cedro, caoba. 50-100 árboles/ha"
+            },
+            {
+              "actividad": "Adquisición de material vegetativo",
+              "costo_usd_ha": "USD 1,000-1,500",
+              "detalles": "1,000-1,100 plántulas de cacao × USD 1-1.5 c/u"
+            }
+          ],
+          "total_año_0": "USD 2,050-3,600/ha"
+        },
+        "año_1_2_mantenimiento": {
+          "nombre": "Años 1-2: Mantenimiento y Crecimiento",
+          "actividades": [
+            {
+              "actividad": "Fertilización anual",
+              "costo_usd_ha": "USD 500-800/año",
+              "detalles": "150-200 kg N/ha, 40-60 kg P₂O₅, 100-150 kg K₂O + micronutrientes"
+            },
+            {
+              "actividad": "Control de malezas",
+              "costo_usd_ha": "USD 200-300/año",
+              "detalles": "Manual 2-3 deshierbes/año o herbicida"
+            },
+            {
+              "actividad": "Plagas y enfermedades",
+              "costo_usd_ha": "USD 300-500/año",
+              "detalles": "Fungicidas preventivos, control Monilia/Saltahojas"
+            },
+            {
+              "actividad": "Poda de formación y mantenimiento",
+              "costo_usd_ha": "USD 200/año",
+              "detalles": "Mano de obra para poda"
+            },
+            {
+              "actividad": "Riego si es necesario",
+              "costo_usd_ha": "USD 100-300/año",
+              "detalles": "En zonas secas o épocas de sequía"
+            }
+          ],
+          "total_año_1_2": "USD 1,300-2,100/ha/año × 2 = USD 2,600-4,200/ha"
+        }
+      },
+      "fase_produccion": {
+        "titulo": "Fase de Producción (Años 3-30)",
+        "año_3_inicio": {
+          "nombre": "Año 3: Producción Inicial",
+          "rendimiento": "100-300 kg/ha grano seco (15-30% de potencial)",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 600-800/ha"
+            },
+            {
+              "item": "Control de plagas/enfermedades",
+              "costo": "USD 400-600/ha"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 500-800/ha (USD 1.50-2.00 por kg grano seco)",
+              "detalles": "Mano de obra cosecha, fermentación, secado"
+            },
+            {
+              "item": "Transporte y comercialización",
+              "costo": "USD 100-200/ha"
+            }
+          ],
+          "total_costos_operativos": "USD 1,600-2,400/ha/año"
+        },
+        "años_4_10_expansion": {
+          "nombre": "Años 4-10: Expansión de Producción",
+          "rendimiento": "500-1,200 kg/ha grano seco (50-100% de potencial)",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 700-1,000/ha"
+            },
+            {
+              "item": "Control de plagas/enfermedades",
+              "costo": "USD 500-800/ha (intensidad aumenta)"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 1,000-1,500/ha"
+            },
+            {
+              "item": "Transporte y comercialización",
+              "costo": "USD 200-300/ha"
+            }
+          ],
+          "total_costos_operativos": "USD 2,400-3,600/ha/año"
+        },
+        "años_11_30_madurez": {
+          "nombre": "Años 11-30: Madurez Productiva",
+          "rendimiento": "1,000-2,000 kg/ha grano seco (máximo potencial)",
+          "costos_operativos": [
+            {
+              "item": "Fertilización",
+              "costo": "USD 900-1,200/ha (nutrición exportación constante)"
+            },
+            {
+              "item": "Control de plagas/enfermedades",
+              "costo": "USD 600-1,000/ha (máxima presión)"
+            },
+            {
+              "item": "Cosecha y poscosecha",
+              "costo": "USD 1,500-2,000/ha"
+            },
+            {
+              "item": "Transporte y comercialización",
+              "costo": "USD 200-300/ha"
+            },
+            {
+              "item": "Renovación/rehabilitación",
+              "costo": "USD 200-400/ha/año (acumulado para poda mayor, replante)"
+            }
+          ],
+          "total_costos_operativos": "USD 3,400-4,900/ha/año"
+        }
+      },
+      "resumen_costos_totales": {
+        "tabla": [
+          {
+            "periodo": "Año 0",
+            "actividad": "Preparación",
+            "costo_usd_ha": "USD 2,000-3,600"
+          },
+          {
+            "periodo": "Años 1-2",
+            "actividad": "Establecimiento",
+            "costo_usd_ha": "USD 2,600-4,200 (total 2 años)"
+          },
+          {
+            "periodo": "Año 3",
+            "actividad": "Producción inicial",
+            "costo_usd_ha": "USD 1,600-2,400"
+          },
+          {
+            "periodo": "Años 4-10",
+            "actividad": "Expansión",
+            "costo_usd_ha": "USD 2,400-3,600/año"
+          },
+          {
+            "periodo": "Años 11-30",
+            "actividad": "Madurez",
+            "costo_usd_ha": "USD 3,400-4,900/año"
+          }
+        ]
+      }
+    },
+    "proyeccion_ingresos": {
+      "titulo": "7.3 Proyección de Ingresos",
+      "precio_referencia": {
+        "descripcion": "Precio internacional de cacao grano seco fermentado",
+        "rango_historico": "USD 2,000-4,000/tonelada (2010-2024)",
+        "promedio_5años": "USD 2,500-3,000/tonelada",
+        "volatilidad": "Muy alta. Fluctúa 30-50% en 12 meses"
+      },
+      "rendimiento_esperado": [
+        {
+          "edad": "Año 3",
+          "rendimiento": "100-300 kg/ha",
+          "ingreso_usd_ha_min": "100 × USD 2.5 = USD 250",
+          "ingreso_usd_ha_max": "300 × USD 4.0 = USD 1,200"
+        },
+        {
+          "edad": "Años 4-7",
+          "rendimiento": "500-1,000 kg/ha",
+          "ingreso_usd_ha_min": "500 × USD 2.5 = USD 1,250",
+          "ingreso_usd_ha_max": "1,000 × USD 4.0 = USD 4,000"
+        },
+        {
+          "edad": "Años 8-30",
+          "rendimiento": "1,000-1,500 kg/ha",
+          "ingreso_usd_ha_min": "1,000 × USD 2.5 = USD 2,500",
+          "ingreso_usd_ha_max": "1,500 × USD 4.0 = USD 6,000"
+        }
+      ],
+      "escenarios_ingresos": [
+        {
+          "escenario": "PESIMISTA",
+          "supuestos": "Precio bajo USD 2.5/kg, rendimiento bajo (70% del potencial)",
+          "año_3": "100 kg × USD 2.5 = USD 250/ha",
+          "años_10_20": "700 kg × USD 2.5 = USD 1,750/ha"
+        },
+        {
+          "escenario": "REALISTA",
+          "supuestos": "Precio promedio USD 3.0/kg, rendimiento medio (80% potencial)",
+          "año_3": "200 kg × USD 3.0 = USD 600/ha",
+          "años_10_20": "1,000 kg × USD 3.0 = USD 3,000/ha"
+        },
+        {
+          "escenario": "OPTIMISTA",
+          "supuestos": "Precio alto USD 3.5/kg, rendimiento alto (100% potencial)",
+          "año_3": "300 kg × USD 3.5 = USD 1,050/ha",
+          "años_10_20": "1,200 kg × USD 3.5 = USD 4,200/ha"
+        }
+      ]
+    },
+    "analisis_rentabilidad": {
+      "titulo": "7.4 Análisis de Rentabilidad",
+      "punto_equilibrio": {
+        "titulo": "Punto de Equilibrio (Break-Even)",
+        "definicion": "Año en el cual ingresos acumulados igualan costos acumulados",
+        "calculo_escenario_realista": {
+          "supuestos": "Precio USD 3.0/kg, rendimiento 80% potencial",
+          "fase_1_costos": [
+            {
+              "item": "Año 0",
+              "costo": "USD 2,800"
+            },
+            {
+              "item": "Años 1-2",
+              "costo": "USD 6,600 (USD 3,300/año)"
+            },
+            {
+              "item": "Año 3",
+              "costo": "USD 2,000"
+            }
+          ],
+          "costos_acumulados_año_3": "USD 12,400",
+          "ingreso_año_3": "200 kg × USD 3.0 = USD 600",
+          "ingreso_neto_año_3": "USD 600 - USD 2,000 = -USD 1,400",
+          "balance_año_3": "Déficit acumulado: USD 11,800",
+          "continuacion": [
+            {
+              "año": "Año 4",
+              "rendimiento": "500 kg/ha",
+              "ingreso": "USD 1,500",
+              "costo": "USD 2,500",
+              "resultado": "-USD 1,000 (sigue deficitario)"
+            },
+            {
+              "año": "Año 5",
+              "rendimiento": "750 kg/ha",
+              "ingreso": "USD 2,250",
+              "costo": "USD 3,000",
+              "resultado": "-USD 750 (sigue deficitario)"
+            },
+            {
+              "año": "Año 6-7",
+              "rendimiento": "1,000-1,200 kg/ha",
+              "ingreso": "USD 3,000-3,600",
+              "costo": "USD 3,200",
+              "resultado": "Ingreso > Costo (PUNTO DE EQUILIBRIO ACERCÁNDOSE)"
+            },
+            {
+              "año": "Año 8+",
+              "rendimiento": "1,200-1,500 kg/ha",
+              "ingreso": "USD 3,600-4,500",
+              "costo": "USD 3,200",
+              "resultado": "GANANCIA ANUAL: USD 400-1,300/ha/año"
+            }
+          ]
+        },
+        "break_even_timing": "Año 7-8 (depende de precio y rendimiento)",
+        "implicacion": "Requiere capital para financiar 7-8 años de déficit. De lo contrario, debe vender terreno o abandonar cultivo"
+      },
+      "margen_neto": {
+        "titulo": "Margen Neto en Años de Producción Establecida",
+        "formula": "Ingreso bruto - Costos operativos",
+        "escenario_realista_año_10": {
+          "rendimiento": "1,000 kg/ha",
+          "precio": "USD 3.0/kg",
+          "ingreso_bruto": "USD 3,000/ha",
+          "costos_operativos": "USD 3,000/ha",
+          "margen_neto": "USD 0 (NO es rentable con precio bajo)"
+        },
+        "escenario_bueno_año_10": {
+          "rendimiento": "1,200 kg/ha",
+          "precio": "USD 3.5/kg",
+          "ingreso_bruto": "USD 4,200/ha",
+          "costos_operativos": "USD 3,200/ha",
+          "margen_neto": "USD 1,000/ha (24% rentabilidad)"
+        },
+        "escenario_excelente_año_10": {
+          "rendimiento": "1,500 kg/ha",
+          "precio": "USD 4.0/kg",
+          "ingreso_bruto": "USD 6,000/ha",
+          "costos_operativos": "USD 3,500/ha",
+          "margen_neto": "USD 2,500/ha (42% rentabilidad)"
+        }
+      },
+      "tir_van": {
+        "titulo": "TIR (Tasa Interna de Retorno) y VAN (Valor Actual Neto)",
+        "metodologia": "Análisis de flujo de caja sobre 30 años",
+        "supuestos_realistas": [
+          "Inversión inicial Año 0: USD 2,800/ha",
+          "Costos anuales años 1-30: promedio USD 3,000/ha",
+          "Ingresos años 3-30: USD 1,000-4,000/ha según edad",
+          "Tasa de descuento (costo capital): 10-12%"
+        ],
+        "resultados_tipicos": [
+          {
+            "escenario": "Pesimista (precio bajo, rendimiento bajo)",
+            "tir": "2-5%",
+            "van_30años": "USD -500 a USD 2,000/ha (débilmente rentable)"
+          },
+          {
+            "escenario": "Realista (precio medio, rendimiento medio)",
+            "tir": "8-12%",
+            "van_30años": "USD 5,000-12,000/ha (rentable, comparable a bonos)"
+          },
+          {
+            "escenario": "Optimista (precio alto, rendimiento alto)",
+            "tir": "15-20%",
+            "van_30años": "USD 15,000-30,000/ha (muy rentable, superior a inversiones alternativas)"
+          }
+        ],
+        "interpretation": "TIR 10-12% es aceptable para agricultura tropical. Volatilidad de precios hace riesgo significativo"
+      }
+    },
+    "volatilidad_precio": {
+      "titulo": "7.5 Volatilidad de Precio y Riesgo",
+      "mercados_internacionales": [
+        {
+          "bolsa": "ICE Futures (Nueva York)",
+          "unidad": "USD/tonelada",
+          "contrato": "Futuro a 3 meses",
+          "liquidez": "Alta"
+        },
+        {
+          "bolsa": "LIFFE (Londres)",
+          "especificacion": "Cacao de Accra",
+          "liquidez": "Media"
+        }
+      ],
+      "volatilidad_historica": [
+        {
+          "periodo": "2010-2011",
+          "precio_inicial": "USD 2,500",
+          "precio_pico": "USD 3,900 (+56%)",
+          "evento": "Conflicto político en Costa de Marfil (mayor productor)"
+        },
+        {
+          "periodo": "2015-2017",
+          "rango": "USD 3,200-3,700",
+          "volatilidad": "15-20%"
+        },
+        {
+          "periodo": "2019-2020",
+          "precio_caida": "USD 2,200 (caída de COVID-19)",
+          "recuperacion": "USD 2,800 (6 meses después)"
+        },
+        {
+          "periodo": "2023-2024",
+          "precio_reciente": "USD 3,000-4,000 (volatilidad muy alta)"
+        }
+      ],
+      "factores_volatilidad": [
+        "Clima: El Niño, sequías en principales productores",
+        "Plagas/Enfermedades: Moniliasis en Ecuador",
+        "Política: Conflictos en Costa de Marfil, Ghana",
+        "Especulación: Fondos de inversión compran/venden futuros",
+        "Tasa de cambio: Depende moneda nacional vs USD"
+      ],
+      "manejo_riesgo": [
+        {
+          "estrategia": "Diversificación de cultivos",
+          "detalles": "No sembrar 100% cacao. Combinar con plátano, palma, ganado"
+        },
+        {
+          "estrategia": "Venta a futuro (hedging)",
+          "detalles": "Productor vende cosecha en futuro a precio asegurado (contrato antes cosecha)"
+        },
+        {
+          "estrategia": "Organización en cooperativa",
+          "detalles": "Negociar precios conjuntamente, acceso a mercados mejor pagados"
+        },
+        {
+          "estrategia": "Valor agregado",
+          "detalles": "Procesar cacao a chocolate/derivados para vender a mayor precio"
+        }
+      ]
+    },
+    "modelos_produccion": {
+      "titulo": "7.6 Modelos de Producción según Escala",
+      "pequeno_productor": {
+        "tamaño": "0.5-2 hectáreas",
+        "características": [
+          "Cultivo familiar",
+          "Técnicas tradicionales",
+          "Bajo acceso a crédito"
+        ],
+        "costos_reducidos": "USD 1,500-2,000/ha/año (manejo propio, bajo insumos)",
+        "rendimiento": "600-900 kg/ha",
+        "ingreso_neto": "USD 300-800/ha/año (bajo, pero cubre subsistencia)",
+        "ventaja": "Flexibilidad, bajo riesgo capital"
+      },
+      "productor_medio": {
+        "tamaño": "2-10 hectáreas",
+        "características": [
+          "Tecnología mejorada",
+          "Control de plagas/enfermedades",
+          "Acceso a asesoramiento técnico"
+        ],
+        "costos": "USD 2,500-3,500/ha/año",
+        "rendimiento": "1,000-1,300 kg/ha",
+        "ingreso_neto": "USD 1,000-2,000/ha/año",
+        "ventaja": "Rentabilidad suficiente, escala manejable"
+      },
+      "productor_grande": {
+        "tamaño": ">10 hectáreas",
+        "características": [
+          "Inversión en infraestructura",
+          "Fermentaderos propios",
+          "Personal especializado"
+        ],
+        "costos": "USD 3,000-4,000/ha/año",
+        "rendimiento": "1,200-1,500 kg/ha",
+        "ingreso_neto": "USD 1,500-3,000/ha/año",
+        "ventaja": "Economía de escala, acceso a mejor tecnología y mercados"
+      }
+    },
+    "canales_comercializacion": {
+      "titulo": "7.7 Canales de Comercialización",
+      "cadena_tipica": [
+        {
+          "etapa": 1,
+          "actor": "Productor",
+          "actividad": "Cultiva, cosecha, fermenta, seca"
+        },
+        {
+          "etapa": 2,
+          "actor": "Acopiador/Intermediario",
+          "precio": "USD 2.0-2.5/kg (10-20% menos que precio internacional)",
+          "detalles": "Compra a productores, acopian 10-50 toneladas"
+        },
+        {
+          "etapa": 3,
+          "actor": "Exportador",
+          "precio": "USD 2.5-3.0/kg",
+          "detalles": "Exporta a chocolaterías internacionales"
+        },
+        {
+          "etapa": 4,
+          "actor": "Chocolatera/Molino",
+          "precio_final": "USD 3.0-4.0+/kg",
+          "detalles": "Transforma grano en chocolate o derivados"
+        }
+      ],
+      "opciones_productor": [
+        {
+          "opcion": "Venta directa a acopiador (típico)",
+          "ventaja": "Fácil, sin riesgo comercial",
+          "desventaja": "Precio bajo, margen pequeño"
+        },
+        {
+          "opcion": "Venta a cooperativa (mejor)",
+          "ventaja": "Precio 10-20% mayor, acceso mercados premium",
+          "desventaja": "Requiere membresía, disciplina"
+        },
+        {
+          "opcion": "Venta directa a exportador (difícil)",
+          "ventaja": "Precio máximo, relación directa",
+          "desventaja": "Requiere volumen mínimo (50+ toneladas), contactos"
+        },
+        {
+          "opcion": "Procesamiento propio (ambicioso)",
+          "ventaja": "Vender chocolate artesanal a USD 10-20/kg",
+          "desventaja": "Inversión en equipos, marketing, regulaciones"
+        }
+      ]
+    },
+    "casos_estudio": {
+      "titulo": "7.8 Casos de Estudio de Viabilidad",
+      "caso_1_finca_pequena": {
+        "nombre": "Finca Pequeña de 2 hectáreas - Productor Familiar",
+        "ubicacion": "Los Ríos, Ecuador",
+        "supuestos": [
+          "Precio promedio: USD 3.0/kg",
+          "Rendimiento: 1,000 kg/ha (edad 10+)",
+          "Costo anual: USD 3,000/ha"
+        ],
+        "calculos": {
+          "produccion_anual": "2 ha × 1,000 kg = 2,000 kg grano seco",
+          "ingreso_bruto": "2,000 × USD 3.0 = USD 6,000/año",
+          "costo_anual": "2 ha × USD 3,000 = USD 6,000/año",
+          "margen_neto": "USD 0 (CRÍTICO: no hay ganancia)",
+          "problema": "Dependencia 100% de cacao, sin márgenes"
+        },
+        "recomendacion": "Diversificar con cultivos complementarios (banano, palmito) o mejorar rendimiento a 1,300 kg/ha"
+      },
+      "caso_2_finca_media": {
+        "nombre": "Finca Media de 5 hectáreas - Productor Profesional",
+        "ubicacion": "Manabí, Ecuador",
+        "supuestos": [
+          "Precio promedio: USD 3.2/kg",
+          "Rendimiento: 1,200 kg/ha (buena gestión)",
+          "Costo anual: USD 3,200/ha"
+        ],
+        "calculos": {
+          "produccion_anual": "5 ha × 1,200 kg = 6,000 kg",
+          "ingreso_bruto": "6,000 × USD 3.2 = USD 19,200/año",
+          "costo_anual": "5 ha × USD 3,200 = USD 16,000/año",
+          "margen_neto": "USD 3,200/año (17% rentabilidad)",
+          "utilidad_neta": "USD 640/ha/año"
+        },
+        "analisis": "Rentable. Con esta finca, productor obtiene USD 3,200/año. Si suma otros cultivos, puede vivir dignamente"
+      },
+      "caso_3_finca_grande": {
+        "nombre": "Finca Grande de 20 hectáreas - Empresario Agrícola",
+        "ubicacion": "Sucumbíos, Ecuador",
+        "supuestos": [
+          "Precio promedio: USD 3.5/kg",
+          "Rendimiento: 1,300 kg/ha (máxima eficiencia)",
+          "Costo anual: USD 3,300/ha (economía de escala)"
+        ],
+        "calculos": {
+          "produccion_anual": "20 ha × 1,300 kg = 26,000 kg",
+          "ingreso_bruto": "26,000 × USD 3.5 = USD 91,000/año",
+          "costo_anual": "20 ha × USD 3,300 = USD 66,000/año",
+          "margen_neto": "USD 25,000/año (27% rentabilidad)",
+          "utilidad_neta": "USD 1,250/ha/año"
+        },
+        "analisis": "Muy rentable. Justifica inversión en fermentaderos propios, personal, certificaciones. Potencial vender a mercado premium (Fair Trade) a USD 4.0-4.5/kg"
+      }
+    },
+    "financiamiento": {
+      "titulo": "7.9 Opciones de Financiamiento",
+      "fuentes": [
+        {
+          "fuente": "Crédito bancario",
+          "tasa_interes": "8-12% anual",
+          "plazo": "5-10 años",
+          "requisitos": "Garantía (tierra), capacidad pago",
+          "ventaja": "Montos grandes, plazos largos"
+        },
+        {
+          "fuente": "Microcrédito ONG",
+          "tasa_interes": "15-20% anual",
+          "plazo": "3-5 años",
+          "requisitos": "Membresía grupo, plan de negocio",
+          "ventaja": "Flexibilidad, menos requisitos que banco"
+        },
+        {
+          "fuente": "Crédito agrícola del Estado",
+          "tasa_interes": "5-8% anual",
+          "plazo": "5-10 años",
+          "requisitos": "Cédula, tierra, plan de producción",
+          "ventaja": "Tasa muy baja",
+          "desventaja": "Trámite lento"
+        },
+        {
+          "fuente": "Apoyo de ONG/Proyectos",
+          "tipo": "Donación, capacitación gratis",
+          "requisitos": "Ser pequeño productor, zona prioritaria",
+          "ventaja": "Sin retorno financiero"
+        }
+      ],
+      "servicio_deuda": {
+        "titulo": "Cálculo de Servicio de Deuda",
+        "ejemplo": "Finca 2 hectáreas necesita USD 6,000 de crédito",
+        "supuestos": [
+          "Tasa: 10% anual",
+          "Plazo: 5 años",
+          "Cuota mensual: USD 127.07"
+        ],
+        "flujo_caja": {
+          "ingreso_anual": "USD 6,000",
+          "costo_operativo": "USD 6,000",
+          "margen_operativo": "USD 0",
+          "servicio_deuda": "-USD 1,525/año",
+          "resultado_neto": "-USD 1,525/año (DEFICIT: no puede pagar)"
+        },
+        "conclusion": "Pequeño productor SIN ganancia no puede servir deuda. Requiere diversificación o rendimiento superior"
+      }
+    },
+    "preguntas_frecuentes_economia": {
+      "titulo": "7.10 Preguntas Frecuentes - Economía del Cacao",
+      "q1": {
+        "pregunta": "¿Cuántos años tarda antes de recibir primer ingreso?",
+        "respuesta": "Primera cosecha: año 3 (100-300 kg/ha). Producción comercial (>500 kg/ha): año 5. Break-even total (recuperar inversión): año 7-8. Paciencia es crítica"
+      },
+      "q2": {
+        "pregunta": "¿Es rentable sembrar cacao hoy?",
+        "respuesta": "Sí, pero con condiciones: (1) precio promedio USD 3.0+/kg, (2) rendimiento 1,000+ kg/ha, (3) costos controlados USD 3,000-3,500/ha, (4) acceso a crédito barato. Si falla alguno, margen es muy pequeño"
+      },
+      "q3": {
+        "pregunta": "¿Qué tamaño de finca es económicamente viable?",
+        "respuesta": "Mínimo 2-3 hectáreas para sustentarse solo de cacao. Menos que eso, requiere agricultura complementaria (banano, plátano, ganadería). Óptimo: 5-10 hectáreas"
+      },
+      "q4": {
+        "pregunta": "¿Cómo protego de volatilidad de precios?",
+        "respuesta": "Opciones: (1) Vender a futuro (hedge) 50% producción, (2) unirse cooperativa con poder de negociación, (3) diversificar cultivos, (4) mejorar rendimiento para absorber precios bajos"
+      },
+      "q5": {
+        "pregunta": "¿Puedo vender a chocolate artesanal para ganar más?",
+        "respuesta": "Sí. Chocolate gourmet se vende USD 10-20/kg (vs USD 3-4 grano). Pero requiere: inversión USD 10,000-50,000, certificaciones, marketing, contactos. Factible para fincas >5 hectáreas"
+      },
+      "q6": {
+        "pregunta": "¿Qué certificación me da mejor precio?",
+        "respuesta": "Fair Trade (5-10% premium), Orgánico (5-15% premium), Single Origin/Terroir (10-20% premium). Combinadas: 15-25% sobre precio base. Requiere auditoría anual"
+      }
+    }
+  }
+}

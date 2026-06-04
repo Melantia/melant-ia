@@ -1,0 +1,97 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Almacenaje de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Cosecha manual, almacenaje fresco andino, semilla perpetua, usos culinarios",
+  "contenido": {
+    "introduccion": {
+      "titulo": "6.1 Introducción Cosecha Nativa",
+      "texto": "Papa nativa cosecha manual (sin mecanización industria). Almacenaje: método andino tradicional (frío natural, oscuridad) preserva 6-12 meses. Objetivo: semilla propia perpetuación + consumo familiar + mercado local premium."
+    },
+    "cosecha_manual": {
+      "titulo": "6.2 Cosecha Manual",
+      "metodo": [
+        "Desaporca manual (azadón) o mano",
+        "Cuidado no dañar tubérculo (heridas = pudrición)"
+      ],
+      "timing": "Cuando follaje 80-90% muerto (120-180 días ciclo)",
+      "prueba_madurez": "Cáscara endurecida (raya con uña resiste)",
+      "costo_labor": "USD 100-150/hectárea (manual intensiva)"
+    },
+    "almacenaje_andino": {
+      "titulo": "6.3 Almacenaje Andino Tradicional",
+      "almacén": {
+        "ubicacion": "Galpón fresco, 8-12°C (sierra natural)",
+        "oscuridad": "CRÍTICA (previene solanina/verde)"
+      },
+      "ventilacion": [
+        "Natural (aberturas norte/sur)",
+        "NO aire acondicionado costoso"
+      ],
+      "tecnica": [
+        "Papas en sacos tela (transpirable)",
+        "Apilado 1-1.5 metros altura",
+        "Separación 30 cm entre pilas (circulación aire)"
+      ],
+      "duracion": "6-12 meses sin deterioro (vs refrigerado 8 meses)"
+    },
+    "seleccion_semilla_cosecha": {
+      "titulo": "6.4 Selección de Semilla en Cosecha",
+      "criterios": [
+        {
+          "criterio": "Sanidad",
+          "observacion": "Rechazar tizón, pudrición, sarna severa"
+        },
+        {
+          "criterio": "Tamaño",
+          "observacion": "25-50 g (semilla óptima)"
+        },
+        {
+          "criterio": "Color",
+          "observacion": "Uniforme variedad (no manchas)"
+        }
+      ],
+      "porcentaje": "Seleccionar 5-10% mejor cosecha = semilla año próximo",
+      "proposito": "Mantener pureza genética variedad"
+    },
+    "usos_culinarios": {
+      "titulo": "6.5 Papas Nativas - Usos Culinarios",
+      "morada": {
+        "uso": "Ensaladas, colorante natural (antocianina)",
+        "precio": "USD 0.40-0.60/kg (premium)"
+      },
+      "amarilla": {
+        "uso": "Locro, sopas andinas (tradición)",
+        "precio": "USD 0.35-0.50/kg"
+      },
+      "blanca": {
+        "uso": "Múltiple (mercado general)",
+        "precio": "USD 0.25-0.35/kg"
+      },
+      "mercado": "Restaurantes gourmet, ferias agroecológicas = premium 40-75%"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.6 Preguntas Frecuentes - Cosecha Nativa",
+      "q1": {
+        "pregunta": "¿Cosecha manual es económica?",
+        "respuesta": "SÍ si escala 5-10 hectáreas (labor familiar). Menor escala = inviable USD 150/hectárea costo"
+      },
+      "q2": {
+        "pregunta": "¿Almacenaje sin refrigeración funciona?",
+        "respuesta": "SÍ excelente sierra 2,000+ m (8-12°C natural). Llanos bajos = imposible (necesita refrigeración)"
+      },
+      "q3": {
+        "pregunta": "¿Papas moradas duran mismo que blancas?",
+        "respuesta": "SÍ durabilidad idéntica. Color = solo antocianina (antioxidante), no afecta almacenaje"
+      },
+      "q4": {
+        "pregunta": "¿Vender en mercado agroecológico es viable?",
+        "respuesta": "SÍ muy viable (premium 50-75%). Pero volumen bajo (5 ton/hectárea vs 20 ton convencional). Nicho mercado"
+      },
+      "q5": {
+        "pregunta": "¿Semilla 12 meses pierde viabilidad?",
+        "respuesta": "Mínimamente (95%+ germinación todavía). Año 2 cae 80-90%. Reseleccionar cada año mantiene vigor"
+      }
+    ]
+  }
+}

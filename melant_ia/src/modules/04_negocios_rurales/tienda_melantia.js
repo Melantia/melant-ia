@@ -1,7 +1,111 @@
 // --- Helper visual para sello y reputación ---
 import { renderizarSelloSocioConfiable } from './tienda_sello_reputacion.js';
+import { TiendaUsuario } from './tienda.js';
+import { supabase, tieneConfigValida } from '../supabase_config.js';
 // Tienda Virtual MELANTIA — Administración General
 // Lógica central de la tienda global, pagos, validación de cobertura y atención de ventas
+
+const OFERTAS_KEY = 'melantia_ofertas_publicadas';
+
+function obtenerUsuarioPublicador() {
+  try {
+    const tiendaActivaRaw = localStorage.getItem('tienda_virtual_activa');
+    const tiendaActiva = tiendaActivaRaw ? JSON.parse(tiendaActivaRaw) : null;
+    if (tiendaActiva?.identidad?.nombre) {
+      return tiendaActiva.identidad;
+    }
+  } catch (_) {}
+
+  try {
+    const userRaw = localStorage.getItem('usuario_melantia');
+    const user = userRaw ? JSON.parse(userRaw) : null;
+    if (user?.nombre) return { nombre: user.nombre };
+  } catch (_) {}
+
+  return { nombre: 'productor_local' };
+}
+
+function cargarOfertas() {
+  try {
+    const raw = localStorage.getItem(OFERTAS_KEY);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_) {
+    return [];
+  }
+}
+
+function guardarOfertas(ofertas) {
+  localStorage.setItem(OFERTAS_KEY, JSON.stringify(ofertas));
+}
+
+async function cargarOfertasDesdeSupabase() {
+  if (!tieneConfigValida || !supabase) return [];
+  try {
+    const { data, error } = await supabase
+      .from('ofertas_tienda')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .limit(200);
+    if (error || !Array.isArray(data)) return [];
+    return data.map((o) => ({
+      id: o.id,
+      titulo: o.titulo,
+      precio: Number(o.precio || 0),
+      descripcion: o.descripcion,
+      publicador: o.publicador,
+      fecha: o.created_at || new Date().toISOString(),
+    }));
+  } catch (_) {
+    return [];
+  }
+}
+
+async function guardarOfertaEnSupabase(oferta) {
+  if (!tieneConfigValida || !supabase) return false;
+  try {
+    const payload = {
+      id: oferta.id,
+      titulo: oferta.titulo,
+      precio: oferta.precio,
+      descripcion: oferta.descripcion,
+      publicador: oferta.publicador,
+      created_at: oferta.fecha,
+    };
+    const { error } = await supabase
+      .from('ofertas_tienda')
+      .upsert([payload], { onConflict: 'id' });
+    return !error;
+  } catch (_) {
+    return false;
+  }
+}
+
+function renderizarListaOfertas(panel, ofertas) {
+  if (!panel) return;
+  if (!ofertas.length) {
+    panel.innerHTML = '<p>No hay ofertas publicadas aún.</p>';
+    return;
+  }
+  panel.innerHTML = `
+    <h3>Ofertas publicadas</h3>
+    <div style="display:grid;gap:10px;">
+      ${ofertas
+        .slice()
+        .reverse()
+        .map(
+          (o) => `
+          <div style="border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;">
+            <b>${o.titulo}</b> - $${Number(o.precio || 0).toFixed(2)}<br>
+            <small>Publicado por: ${o.publicador || 'productor'}</small><br>
+            <span>${o.descripcion || ''}</span>
+          </div>
+        `
+        )
+        .join('')}
+    </div>
+  `;
+}
 
 export const TiendaMelantia = {
   // Renderizar sello y reputación en la tienda (llamar desde UI principal de tienda)
@@ -112,45 +216,114 @@ export const TiendaMelantia = {
     }
   },
   // Panel principal de la tienda MELANTIA
-  mostrarPanel(contenedorId = 'app-menu') {
-    const cont = document.getElementById(contenedorId);
+  async mostrarPanel(contenedorId = 'app-menu') {
+    const cont =
+      document.getElementById(contenedorId) ||
+      document.getElementById('vista-activa') ||
+      document.getElementById('contenedor-principal') ||
+      document.body;
     if (!cont) return;
     cont.innerHTML = `
       <h2>Tienda MELANTIA — Marketplace Rural</h2>
       <button id="btn-publicar-oferta" class="btn-melantia">Publicar Oferta</button>
       <button id="btn-ver-bienes-raices" class="btn-melantia">Ver Bienes Raíces</button>
+      <button id="btn-ver-mercado-platano" class="btn-melantia">Ver Mercado de Plátano</button>
       <div id="panel-ofertas-tienda"></div>
-      <div id="panel-bienes-raices" style="display:none;"></div>
+      <div id="panel-bienes-raices" style="display:block;margin-top:14px;"></div>
+      <div id="panel-mercado-platano" style="display:block;margin-top:14px;"></div>
     `;
-    // Lógica para mostrar ofertas de la tienda (productos, servicios, etc.)
     const panelOfertas = document.getElementById('panel-ofertas-tienda');
-    panelOfertas.innerHTML = '<p>No hay ofertas publicadas aún.</p>';
+    const ofertasLocales = cargarOfertas();
+    const ofertasRemotas = await cargarOfertasDesdeSupabase();
+    const mapa = new Map();
+    ofertasLocales.forEach((o) => mapa.set(o.id, o));
+    ofertasRemotas.forEach((o) => mapa.set(o.id, o));
+    const ofertas = Array.from(mapa.values());
+    guardarOfertas(ofertas);
+    renderizarListaOfertas(panelOfertas, ofertas);
+
+    import('../modulo_negocios.js').catch(() => {
+      // Si falla esta carga, se mantiene al menos la persistencia local.
+    });
+
     // Botón para publicar oferta
     document.getElementById('btn-publicar-oferta').onclick = () => {
       panelOfertas.innerHTML = `
         <h3>Publicar nueva oferta</h3>
-        <form id="form-publicar-oferta">
+        <form id="form-publicar-oferta" style="display:grid;gap:8px;max-width:520px;">
           <input type="text" name="titulo" placeholder="Título de la oferta" required><br>
           <input type="number" name="precio" placeholder="Precio" required><br>
           <textarea name="descripcion" placeholder="Descripción" required></textarea><br>
           <button type="submit">Publicar</button>
         </form>
       `;
-      document.getElementById('form-publicar-oferta').onsubmit = (e) => {
+      document.getElementById('form-publicar-oferta').onsubmit = async (e) => {
         e.preventDefault();
         const data = Object.fromEntries(new FormData(e.target).entries());
-        // Aquí se guardaría la oferta (puedes integrar almacenamiento real)
-        panelOfertas.innerHTML = `<b>Oferta publicada:</b> ${data.titulo} — $${data.precio}<br>${data.descripcion}`;
+        const usuarioPublicador = obtenerUsuarioPublicador();
+        const oferta = {
+          id: `oferta_${Date.now()}`,
+          titulo: data.titulo,
+          precio: Number(data.precio || 0),
+          descripcion: data.descripcion,
+          publicador: usuarioPublicador.nombre,
+          fecha: new Date().toISOString(),
+        };
+
+        const actuales = cargarOfertas();
+        actuales.push(oferta);
+        guardarOfertas(actuales);
+        await guardarOfertaEnSupabase(oferta);
+
+        TiendaUsuario.publicarProducto(usuarioPublicador, oferta);
+
+        if (window.MelantiaTienda?.agregarProducto) {
+          window.MelantiaTienda.agregarProducto(oferta);
+        }
+
+        renderizarListaOfertas(panelOfertas, actuales);
         TiendaMelantia.hablarAtencionVentas('Oferta publicada correctamente.');
       };
     };
-    // Botón para ver bienes raíces
-    document.getElementById('btn-ver-bienes-raices').onclick = () => {
+    const cargarEspacioBienes = () => {
       const panelBienes = document.getElementById('panel-bienes-raices');
       panelBienes.style.display = 'block';
-      import('../bienes_raices_rurales.js').then((mod) => {
-        mod.mostrarCatalogoPropiedades('panel-bienes-raices');
+      import('../bienes_raices_rurales_real.js').then((mod) => {
+        if (typeof mod.renderizarEspacioTienda === 'function') {
+          mod.renderizarEspacioTienda('panel-bienes-raices');
+        } else if (typeof mod.mostrarCatalogoPropiedades === 'function') {
+          mod.mostrarCatalogoPropiedades('panel-bienes-raices');
+        }
       });
     };
+
+    const cargarEspacioMercadoPlatano = () => {
+      const panelMercado = document.getElementById('panel-mercado-platano');
+      panelMercado.style.display = 'block';
+      import('../mercado_platano_controller.js').then((mod) => {
+        if (typeof mod.renderizarEspacioTienda === 'function') {
+          mod.renderizarEspacioTienda('panel-mercado-platano');
+        }
+      });
+    };
+
+    // Botón para ver bienes raíces
+    document.getElementById('btn-ver-bienes-raices').onclick = () => {
+      cargarEspacioBienes();
+    };
+
+    document.getElementById('btn-ver-mercado-platano').onclick = () => {
+      cargarEspacioMercadoPlatano();
+    };
+
+    // Espacio permanente dentro de la tienda
+    cargarEspacioBienes();
+    cargarEspacioMercadoPlatano();
   },
 };
+
+export function mostrarPanel() {
+  return TiendaMelantia.mostrarPanel('vista-activa');
+}
+
+export default TiendaMelantia;

@@ -1,8 +1,6 @@
 # Curso Práctico de Postcosecha y Empaque de Plátano Barraganete
 # Escuela de Campo MELANTIA — Acceso libre y gratuito
 
-import pyttsx3
-
 CURSO = {
     "titulo": "Curso Práctico de Postcosecha y Empaque de Plátano Barraganete",
     "descripcion": "Entrenamiento gratuito para operarios, técnicos y productores sobre los pasos críticos para exportar fruta de calidad.",

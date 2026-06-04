@@ -1,0 +1,190 @@
+{
+  "capitulo": 4,
+  "titulo": "Parásitos y Sanidad Preventiva del Ganado",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Parásitos internos/externos, enfermedades preventivas, calendarios sanitarios",
+  "contenido": {
+    "introduccion_parasitos": {
+      "titulo": "4.1 Introducción a Parásitos Ganaderos",
+      "impacto": "Parásitos causan -40% producción si no controlados. Inversión sanidad USD 100-200/vaca/año evita pérdidas USD 300-500/vaca/año",
+      "tipos_parasitos": [
+        "Internos: Nemátodos GI, coccidia, trematodos",
+        "Externos: Garrapatas, moscas, piojos"
+      ]
+    },
+    "parasitos_internos": {
+      "titulo": "4.2 Parásitos Internos",
+      "nematodos_gi": {
+        "descripcion": "Gusanos gastrointestinales (Cooperia, Ostertagia, Chabertiella)",
+        "ciclo": [
+          "Huevo fecal en potrero (eclosión 7-14 días)",
+          "Larva infectiva en pasto",
+          "Ingestión: Animal come pasto contamninado",
+          "Colonia intestino: Absorción alimento, irritación"
+        ],
+        "sintomas": [
+          "Diarrea crónica (heces amarillas/acuosas)",
+          "Pérdida peso (ganancia negativa)",
+          "Retraso crecimiento terneros",
+          "Condición corporal mala (costillas visibles)",
+          "Apatía, pelo dull"
+        ],
+        "diagnostico": "Conteo huevos en heces (>500 h/g = infección moderada)",
+        "control": [
+          "Antihelmíntico (albendazol 7.5 mg/kg, ivermectina 0.2 mg/kg)",
+          "Rotación potreros (reduce carga larval)",
+          "Desparasitación 2-3 veces/año (estratégica: entrada lluvias, salida, otoño)"
+        ]
+      },
+      "coccidia": {
+        "descripcion": "Protozoario intracelular Eimeria",
+        "poblacion_riesgo": [
+          "Terneros 2-8 semanas (estrés, destete)",
+          "Hacinamiento potreros (> 5 vacas/ha)",
+          "Higiene pobre"
+        ],
+        "sintomas": [
+          "Diarrea sangre (DIFERENCIA vs nematodos amarilla)",
+          "Deshidratación rápida",
+          "Muerte si no tratado (mortalidad 10-30% en brotes)"
+        ],
+        "prevencion": [
+          "Higiene: Bebederos/comederos limpios",
+          "Densidad: < 3-4 terneros/ha",
+          "Coccidiostat (monensina, narasin) en concentrado"
+        ],
+        "tratamiento": "Sulfamidas (sulfadiacina, sulfametoxazol) 5-7 días"
+      }
+    },
+    "parasitos_externos": {
+      "titulo": "4.3 Parásitos Externos",
+      "garrapatas": {
+        "importancia": "Transmisora de enfermedades (Babesia, Anaplasma, Borreliosis)",
+        "ciclo": [
+          "Larva pasto: Espera 3-6 meses viabilidad",
+          "Enganche: En bovino, alimentación 7-21 días",
+          "Postura: 500-3,000 huevos por hembra",
+          "Generaciones/año: 4-6 (depende altitud)"
+        ],
+        "control_quimico": [
+          "Acaricidas: Piretroides (cipermetrina), organofosforados (paratión)",
+          "Aplicación: Baño inmersión, spray, pour-on",
+          "Frecuencia: Semanal a mensual (depende presión infestación)"
+        ],
+        "control_biologico": [
+          "Rotación potreros: Descanso 4-6 semanas sin bovinos = larva muere",
+          "Pastura mejorada: Riego previene zonas secas donde larva persiste"
+        ]
+      },
+      "moscas": {
+        "tipos": [
+          "Mosca de establo (irritación)",
+          "Mosca de cuerno (hematófaga)",
+          "Mosca del vientre (miasis = infecta herida)"
+        ],
+        "sintomas": [
+          "Irritación: Estrés, reducción alimento -10%",
+          "Miasis: Herida infectada → necrótica"
+        ],
+        "control": [
+          "Repelentes: Spray piretroides semanalmente",
+          "Manejo: Higiene establos, remoción estiércol"
+        ]
+      },
+      "piojos": {
+        "sintomas": [
+          "Picazón intensa",
+          "Pelo áspero, pérdida pelo en zonas",
+          "Estrés → producción -15%"
+        ],
+        "control": [
+          "Baño acaricida: Piretroides, organofosforados",
+          "Repetición: 2 baños, 7-10 días aparte (mata adulto, no huevo)"
+        ]
+      }
+    },
+    "calendario_sanitario": {
+      "titulo": "4.4 Calendario Sanitario Anual",
+      "enero": [
+        "Desparasitación antihelmíntico (salida sequía)",
+        "Vacunación: Ántrax (si no vacunado año anterior)"
+      ],
+      "febrero_marzo": [
+        "Control garrapatas: Acaricida baño (inicio lluvia)",
+        "Monitoreo: Conteo garrapatas, decisión control"
+      ],
+      "abril_mayo": [
+        "Garrapatas: Intensificar frecuencia baño (lluvia = larva prolifera)",
+        "Terneros: Primeras desparasitaciones (4-8 semanas edad)"
+      ],
+      "junio_julio": [
+        "Desparasitación 2: Nematodos GI (pico lluvia)",
+        "Vacunación: Fiebre aftosa (1 x/año obligatoria)"
+      ],
+      "agosto_septiembre": [
+        "Garrapatas: Mantener control (transición lluvia-seco)",
+        "Revisión: Condición corporal, suplementar si necesario"
+      ],
+      "octubre_noviembre": [
+        "Desparasitación 3: Antes sequía (acumula parásitos)",
+        "Terneros: Vacunación: Rinotraqueítis viral + diarrea viral bovina (5-8 meses)"
+      ],
+      "diciembre": [
+        "Garrapatas: Reducir frecuencia (seco, larva no prolifera)",
+        "Revisión estructural: Cercas, bebederos, infraestructura"
+      ]
+    },
+    "enfermedades_infecciosas": {
+      "titulo": "4.5 Enfermedades Infecciosas Principales",
+      "fiebre_aftosa": {
+        "causa": "Virus Aphthovirus",
+        "transmision": "Contacto animal-animal, aire, alimento",
+        "sintomas": [
+          "Vesículas (ampollas) encía, boca, pezones",
+          "Claudicación (vesículas pezuñas)",
+          "Salivación excesiva"
+        ],
+        "mortalidad": "Baja (2-5%) pero devastador producción",
+        "control": "Vacunación obligatoria 1x/año (campaña estatal)"
+      },
+      "brucelosis": {
+        "causa": "Bacteria Brucella",
+        "transmision": "Contacto productos parto (sangre, placenta)",
+        "sintomas": [
+          "Abortos (especialmente trimestre 3)",
+          "Retención placenta",
+          "Infertilidad post-aborto"
+        ],
+        "prevencion": "Aislamiento terneros de vacas aborto, manejo placenta"
+      },
+      "tuberculosis": {
+        "causa": "Bacteria Mycobacterium tuberculosis",
+        "transmision": "Respiratoria (tos), en lechería crítica",
+        "control": "Prueba tuberculina, sacrificio animales positivos"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.6 Preguntas Frecuentes - Parásitos",
+      "q1": {
+        "pregunta": "¿Con qué frecuencia desparasitar?",
+        "respuesta": "Estratégico 3 veces/año: entrada lluvia (marzo-abril), pico lluvia (junio-julio), antes sequía (octubre). Terneros mensuales hasta 6 meses"
+      },
+      "q2": {
+        "pregunta": "¿Garrapatas necesitan control continuo?",
+        "respuesta": "SÍ en trópico. Lluvia = proliferación. Baño semanal o 2x/mes en época seca, 1x/semana época lluvia. Presión varía según altitud/clima"
+      },
+      "q3": {
+        "pregunta": "¿Coccidia es importante en terneros?",
+        "respuesta": "SÍ crítica. Terneros 2-8 semanas son susceptibles. Diarrea sangre es emergencia. Prevención: Higiene + densidad animal baja"
+      },
+      "q4": {
+        "pregunta": "¿Rotación de acaricidas es importante?",
+        "respuesta": "SÍ. Resistencia acaricida es PROBLEMA Ecuador. Rotar: Piretroides → Organofosforados → Amitraz. No usar mismo 2 años seguidos"
+      },
+      "q5": {
+        "pregunta": "¿Vacunas son obligatorias?",
+        "respuesta": "Fiebre aftosa: SÍ obligatoria 1x/año (ley Ecuador). Otras: Ántrax, Brucelosis (según región). Consultar veterinario local"
+      }
+    ]
+  }
+}

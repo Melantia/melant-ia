@@ -1,0 +1,218 @@
+{
+  "capitulo": 8,
+  "titulo": "Sistema Integrado Maíz + Ganadería",
+  "cultivo": "Maíz",
+  "seccion": "Sinergia productiva, alimento ganadería, estiércol abono, rotación, rentabilidad integrada",
+  "contenido": {
+    "introduccion": {
+      "titulo": "8.1 Introducción Sistema Maíz + Ganadería",
+      "texto": "Maíz + Ganadería = CICLO CERRADO ideal pequeño/mediano productor. Maíz produce grano (alimento vacas) + rastrojo (forraje). Vacas producen estiércol (abono maíz) + leche/carne (ingreso). Economía integrada: ROI combinado 60-80% (vs Maíz solo 19%, Ganadería solo 50%). Objetivo: autosuficiencia alimento + fertilizante, máximo ingreso mínimo insumo externo."
+    },
+    "sinergia_basica": {
+      "titulo": "8.2 Sinergia Maíz ↔ Ganadería",
+      "flujos": [
+        {
+          "flujo": "Maíz → Ganadería",
+          "productor": "Grano maíz",
+          "uso": "Alimento concentrado vacas (USD 0.15-0.25/kg en mercado)",
+          "cantidad": "1 vaca = 2-3 kg grano/día × 365 días = 730-1,095 kg/año"
+        },
+        {
+          "flujo": "Maíz → Ganadería",
+          "productor": "Rastrojo (tallo + hoja post-cosecha)",
+          "uso": "Forraje seco (USD 0.04-0.08/kg en mercado)",
+          "cantidad": "1 vaca = 3-5 kg rastrojo/día = 1,095-1,825 kg/año"
+        },
+        {
+          "flujo": "Ganadería → Maíz",
+          "productor": "Estiércol fresco",
+          "cantidad": "1 vaca = 20-25 kg estiércol/día = 7,300-9,125 kg/año",
+          "equivalencia": "USD 40-60/ton estiércol = USD 290-547/vaca/año en fertilizante"
+        },
+        {
+          "flujo": "Ganadería → Maíz",
+          "productor": "Orina",
+          "contenido": "N disponible 30-40% estiércol",
+          "beneficio": "Absorción suelo mejora, lixiviación reducida"
+        }
+      ]
+    },
+    "dimensionamiento_sistema": {
+      "titulo": "8.3 Dimensionamiento Maíz + Ganadería",
+      "escenarios": [
+        {
+          "escenario": "Pequeño (subsistencia + mercado local)",
+          "maiz_hectareas": "2-3 hectáreas",
+          "produccion_maiz": "12-18 toneladas grano (6-9 ton/ha)",
+          "ganaderia_vacas": "10-12 vacas (lechería extensiva)",
+          "alimento_deficit": "-25% (compra maíz grano 3-4 ton/año al mercado)"
+        },
+        {
+          "escenario": "Mediano (comercial)",
+          "maiz_hectareas": "5-8 hectáreas",
+          "produccion_maiz": "30-48 toneladas grano (6-8 ton/ha tecnificado)",
+          "ganaderia_vacas": "25-30 vacas (lechería + carne)",
+          "alimento_balance": "AUTO-SUFICIENTE (0% compra externa)"
+        },
+        {
+          "escenario": "Grande (agroindustria)",
+          "maiz_hectareas": "15-20 hectáreas",
+          "produccion_maiz": "90-160 toneladas grano",
+          "ganaderia_vacas": "60-80 vacas",
+          "excedente": "+30% maíz venta mercado (ingreso extra)"
+        }
+      ]
+    },
+    "ciclo_rotacion": {
+      "titulo": "8.4 Ciclo Rotación 3-4 Años",
+      "sistema": [
+        {
+          "año": "Año 1",
+          "cultivo": "Maíz",
+          "preparacion": "Arado, compost 5-10 ton/ha",
+          "resultado": "6-8 ton grano + rastrojo"
+        },
+        {
+          "año": "Año 2",
+          "cultivo": "Leguminosa (frijol, haba, soya)",
+          "funcion": "Fija N atmosférico 60-100 kg/ha",
+          "resultado": "Rendimiento secundario + suelo N enriquecido"
+        },
+        {
+          "año": "Año 3",
+          "cultivo": "Pastura (pasto mejorado)",
+          "duracion": "12-18 meses",
+          "razon": "Ganadería come pasto, suelo descansa acumulación N"
+        },
+        {
+          "año": "Año 4",
+          "cultivo": "Maíz (nuevamente)",
+          "suelo": "Fertilidad recuperada, menor insumo químico necesario"
+        }
+      ]
+    },
+    "alimento_balanceado": {
+      "titulo": "8.5 Fórmula Alimento Balanceado Casero",
+      "receta": {
+        "componentes": [
+          {
+            "ingrediente": "Grano maíz molido",
+            "porcentaje": "60%",
+            "energia": "EB 2.8-3.0 Mcal/kg"
+          },
+          {
+            "ingrediente": "Subproducto leguminosa (harina soya/haba)",
+            "porcentaje": "20%",
+            "proteina": "PB 35-45%"
+          },
+          {
+            "ingrediente": "Sal mineral + vitaminas",
+            "porcentaje": "3%",
+            "especifico": "Ca 1.2%, P 0.8%, Mg 0.3%"
+          },
+          {
+            "ingrediente": "Salvado (fibra)",
+            "porcentaje": "17%"
+          }
+        ],
+        "resultado_final": "Alimento balanceado PB 16-18%, EB 2.8 Mcal/kg (óptimo lechería)"
+      },
+      "costo_comparativa": [
+        {
+          "opcion": "Alimento comercial mercado",
+          "precio": "USD 0.35-0.45/kg"
+        },
+        {
+          "opcion": "Alimento casero propios insumos",
+          "precio": "USD 0.12-0.18/kg (60-70% reducción costo)"
+        }
+      ]
+    },
+    "economica_integrada": {
+      "titulo": "8.6 Análisis Económico Integrado",
+      "escenario_mediano": {
+        "supuesto": "5 hectáreas maíz + 25 vacas",
+        "maiz": {
+          "produccion": "40 toneladas grano (8 ton/ha)",
+          "uso_interno": "20 toneladas (25 vacas × 800 kg/año alimento)",
+          "excedente_venta": "20 toneladas × USD 0.25/kg = USD 5,000"
+        },
+        "rastrojo": {
+          "produccion": "15 toneladas rastrojo seco",
+          "uso_interno": "Todo para ganadería (uso total)",
+          "valor_mercado": "15 ton × USD 0.06/kg = USD 900 (no vendido, autoconsumo)"
+        },
+        "ganaderia": {
+          "produccion_leche": "25 vacas × 15 litros/día × 300 días = 112,500 litros",
+          "precio_leche": "USD 0.30-0.40/litro = USD 33,750-45,000/año"
+        },
+        "estiercol_valor": {
+          "produccion": "25 vacas × 8 ton/año = 200 toneladas",
+          "valor_mercado": "USD 40-60/ton = USD 8,000-12,000",
+          "uso_interno": "Ahorrado como abono (reducción fertilizante químico USD 3,000-5,000/año)"
+        },
+        "insumos_reducidos": {
+          "fertilizante_quimico": "USD 1,500 (vs USD 5,000 sin sistema)",
+          "alimento_concentrado_compra": "USD 800 (vs USD 8,000 sin maíz propio)"
+        },
+        "ingresos_totales": {
+          "leche": "USD 39,375 (promedio USD 0.35/L)",
+          "maiz_excedente": "USD 5,000",
+          "total_bruto": "USD 44,375"
+        },
+        "costos_totales": {
+          "maiz_produccion": "USD 2,400 (5 ha × USD 480/ha costo)",
+          "ganaderia_mantenimiento": "USD 8,000 (vacunas, veterinario, pastura)",
+          "alimento_compra_deficit": "USD 800 (reducido vs USD 8,000 mercado)",
+          "fertilizante": "USD 1,500",
+          "total_costos": "USD 12,700"
+        },
+        "utilidad_neta": {
+          "resultado": "USD 44,375 - USD 12,700 = USD 31,675/año",
+          "roi": "(USD 31,675 - inversión amortizada) / inversión = 85-110%"
+        }
+      }
+    },
+    "ventajas_limitaciones": {
+      "titulo": "8.7 Ventajas vs Limitaciones",
+      "ventajas": [
+        "Ciclo cerrado = autosuficiencia alimento + fertilizante",
+        "Insumos químicos reducción 50-70% (costo + ambiental)",
+        "ROI combinado 85-110% (vs monocultura 19-50%)",
+        "Diversificación ingreso (leche + grano venta)",
+        "Resilencia climática (si sequía maíz malo = ganadería compensa)",
+        "Riesgo reducido (si plagas maíz = no depende 100% grano)"
+      ],
+      "limitaciones": [
+        "Labor intensiva (maíz + ganadería = trabajo continuo)",
+        "Capital inicial alto (maquinaria ordeño + animales USD 20,000-30,000)",
+        "Conocimiento dual requerido (agronomía + zootecnia)",
+        "Mercado leche variable (precio oscila USD 0.25-0.45/L según estación)",
+        "Riesgo enfermedad ganadera = pérdida capital animal"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "8.8 Preguntas Frecuentes - Sistema Integrado",
+      "q1": {
+        "pregunta": "¿Cuánto maíz necesito para 25 vacas?",
+        "respuesta": "5 hectáreas = 40 ton grano (8 ton/ha). 25 vacas = 20 ton/año alimento grano (autosuficiente). Excedente 20 ton venta = USD 5,000 ingreso extra"
+      },
+      "q2": {
+        "pregunta": "¿Estiércol ganadería es abono suficiente?",
+        "respuesta": "80% sí. 25 vacas = 200 ton estiércol/año. Maíz necesita 150-200 kg N/ha = aportado estiércol. 20% restante = abono verde (leguminosa) complemento"
+      },
+      "q3": {
+        "pregunta": "¿Rastrojo de maíz es alimento completo?",
+        "respuesta": "NO = complemento. Rastrojo = fibra (digestión lenta), bajo N. Combinar: 50% rastrojo + 50% grano + pastura verde = alimento balanceado"
+      },
+      "q4": {
+        "pregunta": "¿Sistema de 3 años de rotación es obligatorio?",
+        "respuesta": "NO obligatorio pero RECOMENDADO. Sin rotación: fertilidad cae 10-15%/año, plagas acumulan, insumo químico necesario aumenta. Con rotación: sostenibilidad 10+ años"
+      },
+      "q5": {
+        "pregunta": "¿ROI 85-110% es realista en año 1?",
+        "respuesta": "NO año 1 realista (año 1 ROI 60-70% por aprendizaje). Años 2-3+ = 85-110% cuando sistema optimizado, vacas máximo producción"
+      }
+    }
+  }
+}

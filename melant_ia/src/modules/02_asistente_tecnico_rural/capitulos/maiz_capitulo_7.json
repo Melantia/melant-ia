@@ -1,0 +1,241 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía del Cultivo de Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Inversión, costos producción, ingresos, rentabilidad, financiamiento",
+  "contenido": {
+    "introduccion_economia": {
+      "titulo": "7.1 Introducción a Economía del Maíz",
+      "importancia": "Maíz es cultivo más economizado en costo operativo. Rentabilidad depende escala + tecnología + precio",
+      "precio_referencia": [
+        "Precio maíz grano: USD 150-250/tonelada (promedio USD 200)",
+        "Volatilidad: Ligada precios internacionales (Chicago Board)",
+        "Riesgo precio: ALTO (commodity global)"
+      ]
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial",
+      "escenario": "Pequeño productor maíz: 10 hectáreas costa",
+      "componentes": [
+        {
+          "concepto": "Preparación terreno",
+          "arada_profunda": "2 pasadas tractor",
+          "costo": "USD 300-400/hectárea × 10 = USD 3,000-4,000"
+        },
+        {
+          "concepto": "Semilla certificada",
+          "cantidad": "10 ha × 22 kg/ha",
+          "costo_unitario": "USD 25-35/kg",
+          "total": "220 kg × USD 30 = USD 6,600"
+        },
+        {
+          "concepto": "Fertilizante base",
+          "fondo_fosfato": "Fosfato diamónico 250 kg/ha",
+          "costo": "USD 0.60/kg × 2,500 kg = USD 1,500"
+        },
+        {
+          "concepto": "Cobertera N",
+          "urea_total": "550 kg/ha × 2 aplicaciones",
+          "costo": "USD 0.40/kg × 5,500 kg = USD 2,200"
+        },
+        {
+          "concepto": "Herbicida",
+          "cantidad": "Atrazina 20 L",
+          "costo": "USD 10-15/L × 20 = USD 200-300"
+        },
+        {
+          "concepto": "Fungicida",
+          "aplicaciones": "Mancozeb 3-4 aplicaciones",
+          "costo": "USD 200-300"
+        },
+        {
+          "concepto": "Labor siembra",
+          "sembradora": "Alquiler máquina + operador",
+          "costo": "USD 100-150"
+        },
+        {
+          "concepto": "Labor cosecha",
+          "manual": "20 jornales/hectárea × USD 10-15",
+          "costo": "USD 2,000-3,000 total"
+        },
+        {
+          "concepto": "Transporte + embolse",
+          "post_cosecha": "Acarreo, desgrane, embolse",
+          "costo": "USD 500-800"
+        }
+      ],
+      "total_10_hectareas": "USD 16,200-22,000 (promedio USD 19,000)"
+    },
+    "costos_variables_operativos": {
+      "titulo": "7.3 Costos Variables por Hectárea",
+      "desglose": [
+        {
+          "rubro": "Semilla",
+          "costo": "USD 660 ÷ 10 = USD 66/ha"
+        },
+        {
+          "rubro": "Fertilizante",
+          "costo": "USD 3,700 ÷ 10 = USD 370/ha"
+        },
+        {
+          "rubro": "Herbicida",
+          "costo": "USD 250 ÷ 10 = USD 25/ha"
+        },
+        {
+          "rubro": "Fungicida",
+          "costo": "USD 250 ÷ 10 = USD 25/ha"
+        },
+        {
+          "rubro": "Insecticida",
+          "costo": "USD 150 ÷ 10 = USD 15/ha"
+        },
+        {
+          "rubro": "Labor (preparación + cosecha)",
+          "costo": "USD 2,300 ÷ 10 = USD 230/ha"
+        }
+      ],
+      "total_variable": "USD 731/hectárea"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "escenarios_rendimiento": [
+        {
+          "escenario": "Bajo (tecnología mínima)",
+          "rendimiento": "3.5 toneladas/hectárea",
+          "precio": "USD 180/tonelada",
+          "ingreso": "3.5 × USD 180 = USD 630/hectárea"
+        },
+        {
+          "escenario": "Medio (semi-tecnificado)",
+          "rendimiento": "5.5 toneladas/hectárea",
+          "precio": "USD 200/tonelada",
+          "ingreso": "5.5 × USD 200 = USD 1,100/hectárea"
+        },
+        {
+          "escenario": "Alto (tecnificado completo)",
+          "rendimiento": "7.5 toneladas/hectárea",
+          "precio": "USD 220/tonelada",
+          "ingreso": "7.5 × USD 220 = USD 1,650/hectárea"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "escenario_medio_10_hectareas": {
+        "supuestos": [
+          "Inversión año 0: USD 19,000",
+          "Costos anuales: USD 7,310 (USD 731/ha × 10)",
+          "Rendimiento: 5.5 ton/hectárea = 55 toneladas 10 ha",
+          "Precio: USD 200/tonelada"
+        ],
+        "ingresos_brutos": "55 toneladas × USD 200 = USD 11,000",
+        "costos_totales": "USD 7,310",
+        "utilidad_neta": "USD 11,000 - USD 7,310 = USD 3,690",
+        "roi": "USD 3,690 ÷ USD 19,000 = 19.4% ROI/año",
+        "payback": "USD 19,000 ÷ USD 3,690 = 5.1 años"
+      },
+      "sensibilidad": [
+        {
+          "escenario": "Rendimiento BAJO 3.5 ton/ha",
+          "ingresos": "35 ton × USD 200 = USD 7,000",
+          "utilidad": "USD 7,000 - USD 7,310 = -USD 310 (PÉRDIDA)",
+          "roi": "NEGATIVO (-1.6%)"
+        },
+        {
+          "escenario": "Rendimiento ALTO 7.0 ton/ha",
+          "ingresos": "70 ton × USD 200 = USD 14,000",
+          "utilidad": "USD 14,000 - USD 7,310 = USD 6,690",
+          "roi": "35.2% (MUY RENTABLE)"
+        },
+        {
+          "escenario": "Precio BAJO USD 150/ton",
+          "ingresos": "55 ton × USD 150 = USD 8,250",
+          "utilidad": "USD 8,250 - USD 7,310 = USD 940",
+          "roi": "4.9% (MARGINAL)"
+        },
+        {
+          "escenario": "Precio ALTO USD 250/ton",
+          "ingresos": "55 ton × USD 250 = USD 13,750",
+          "utilidad": "USD 13,750 - USD 7,310 = USD 6,440",
+          "roi": "33.9% (MUY RENTABLE)"
+        }
+      ],
+      "conclusion": "Maíz VIABLE si: (a) Rendimiento > 4.5 ton/ha, (b) Precio > USD 180/ton, (c) Costos controlados < USD 750/ha"
+    },
+    "maiz_vs_cultivos": {
+      "titulo": "7.6 Comparativa Maíz vs Otros Cultivos",
+      "tabla": [
+        {
+          "cultivo": "Maíz",
+          "inversion": "USD 1,900/ha",
+          "costo_anual": "USD 731/ha",
+          "ingreso": "USD 1,100/ha (5.5 ton)",
+          "utilidad": "USD 369/ha",
+          "roi": "19%"
+        },
+        {
+          "cultivo": "Ganadería",
+          "inversion": "USD 2,000-2,100/vaca",
+          "costo_anual": "USD 500/vaca",
+          "ingreso": "USD 1,440/vaca",
+          "utilidad": "USD 940/vaca",
+          "roi": "47%"
+        },
+        {
+          "cultivo": "Cacao",
+          "inversion": "USD 1,500-2,000/ha",
+          "costo_anual": "USD 1,200-1,600",
+          "ingreso": "USD 2,250/ha",
+          "utilidad": "USD 600-1,050/ha",
+          "roi": "30-70%"
+        },
+        {
+          "cultivo": "Palma",
+          "inversion": "USD 5,000/ha",
+          "costo_anual": "USD 1,400/ha",
+          "ingreso": "USD 2,700/ha",
+          "utilidad": "USD 1,300/ha",
+          "roi": "26%"
+        }
+      ],
+      "conclusion_ranking": "Ganadería > Cacao > Palma > Maíz en rentabilidad"
+    },
+    "estrategias_mejora": {
+      "titulo": "7.7 Estrategias para Mejorar Rentabilidad",
+      "produccion": [
+        "Híbrido vs criolla: +50-100% rendimiento (+USD 500-1,000 ingreso)",
+        "Riego (si disponible): +30-40% rendimiento (+USD 300-500)",
+        "Nutrición optimizada: +20-30% rendimiento (+USD 200-400)",
+        "Control plagas/enfermedades: Previene -30-40% pérdida"
+      ],
+      "costos": [
+        "Compra conjunta insumos: -10% descuento (cooperativa)",
+        "Siembra mecanizada: -USD 200-300 labor/hectárea",
+        "Venta directa (sin intermediario): +USD 20-50/tonelada"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.8 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Maíz es rentable?",
+        "respuesta": "Moderadamente. ROI 19% es ACEPTABLE (no excelente). Payback 5 años. Comparado otros cultivos: MÁS bajo que Cacao/Ganadería pero inversión inicial menor"
+      },
+      "q2": {
+        "pregunta": "¿Costo producción es alto?",
+        "respuesta": "USD 731/hectárea es BAJO comparado Palma (USD 1,400) o Ganadería (USD 500/vaca). Maíz es cultivo accesible pequeño productor"
+      },
+      "q3": {
+        "pregunta": "¿Precio maíz es volátil?",
+        "respuesta": "SÍ commodity. Fluctúa USD 150-250/tonelada anualmente. Riesgo precio ALTO. Contrato pre-venta puede mitigar"
+      },
+      "q4": {
+        "pregunta": "¿Maíz + ganadería es buen sistema?",
+        "respuesta": "EXCELENTE. Maíz para alimento ganado (reduce compra insumos) + ganadería genera ingresos leche. Sinergia económica"
+      },
+      "q5": {
+        "pregunta": "¿Cuál es escala mínima viable?",
+        "respuesta": "5-10 hectáreas (manual cosecha posible). Debajo 5 ha: labor muy intensiva. Encima 10 ha: mecanización justifica"
+      }
+    ]
+  }
+}

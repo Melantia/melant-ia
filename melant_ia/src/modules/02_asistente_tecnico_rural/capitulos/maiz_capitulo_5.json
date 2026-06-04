@@ -1,0 +1,130 @@
+{
+  "capitulo": 5,
+  "titulo": "Enfermedades del Maíz",
+  "cultivo": "Maíz",
+  "seccion": "Mancha gris, pudrición tallo, virus, carbón, fusarium",
+  "contenido": {
+    "introduccion_enfermedades": {
+      "titulo": "5.1 Introducción a Enfermedades del Maíz",
+      "impacto": "Enfermedades causan -15-35% rendimiento. En costa Ecuador con lluvia, presión fúngica es ALTA",
+      "enfermedades_principales": [
+        "Mancha gris (Cercospora zea-maydis): ENFERMEDAD #1 foliar",
+        "Pudrición tallo (Fusarium, Macrophomina): Debilitamiento estructura",
+        "Virus (moteado, enano, lethal): Transmitidos áfido/trips",
+        "Carbón (Ustilago): Raro pero devastador"
+      ]
+    },
+    "mancha_gris": {
+      "titulo": "5.2 Mancha Gris (Cercospora zea-maydis)",
+      "descripcion": "Hongo foliar, principal enfermedad foliar Ecuador",
+      "sintomas": [
+        "Manchas rectangulares gris-marrón (entre venas)",
+        "Patrón característico: bandas claras/oscuras paralelas",
+        "Progresión: De hojas viejas → nuevas (con clima favorable)",
+        "Severidad: Defoliación 50-80% en casos extremos"
+      ],
+      "ciclo": [
+        "Esporas: En residuos cultivo anterior",
+        "Dispersión: Lluvia, salpicadura agua",
+        "Infección: 12-24 horas mojado foliar",
+        "Síntoma: 5-10 días post-infección"
+      ],
+      "condiciones_favorables": [
+        "Humedad relativa: > 85%",
+        "Temperatura: 20-28°C (óptima)",
+        "Lluvia: Frecuente (coast Ecuador ideal)"
+      ],
+      "control_preventivo": [
+        "Rotación cultivos: Rompe ciclo esporas",
+        "Destrucción rastrojos: Quema/enterrado",
+        "Variedad tolerante: Algunos híbridos modernos tienen resistencia"
+      ],
+      "fungicida": [
+        "Mancozeb 1.5-2.0 kg/hectárea",
+        "Aplicación: Cada 10-14 días clima lluvia",
+        "Inicio: V6-V8 (pre-síntoma preventivo)",
+        "Costo: USD 20-30/hectárea × 3-4 aplicaciones"
+      ]
+    },
+    "pudricion_tallo": {
+      "titulo": "5.3 Pudrición de Tallo (Fusarium, Macrophomina)",
+      "sintomas": [
+        "Ennegrecimiento vascular interno (si corta tallo, marrón/negro)",
+        "Debilitamiento estructural",
+        "Acame (vuelco plantas, especialmente post-floración)"
+      ],
+      "ciclo": [
+        "Esporas suelo",
+        "Infección: Raíces heridas (plagas, compactación)",
+        "Colonia: Invade tallo, destruye vasculares"
+      ],
+      "factores_riesgo": [
+        "Estrés hídrico (sequía post-floración)",
+        "Compactación suelo (raíces débiles)",
+        "Presión plagas suelo altas"
+      ],
+      "control": [
+        "Drenaje: Previo (mejora estructura raíz)",
+        "Riego: Evitar estrés hídrico especialmente post-floración",
+        "Rotación: Rompe ciclo"
+      ]
+    },
+    "virus_maiz": {
+      "titulo": "5.4 Virus de Maíz",
+      "virus_importante": [
+        {
+          "virus": "Virus del moteado del maíz (MSV)",
+          "vector": "Cogollero + trips",
+          "sintomas": "Moteado amarillo-verde hojas, enanismo",
+          "daño": "-50% rendimiento si infección temprana"
+        },
+        {
+          "virus": "Virus del enanismo del maíz (MDV)",
+          "vector": "Leafhopper, áfidos",
+          "sintomas": "Plantas enanas, cloróticas",
+          "daño": "-40-60% rendimiento"
+        }
+      ],
+      "prevension": [
+        "Control de vectores: Monitoreo cogollero/trips",
+        "Variedad: Algunas son tolerantes virus"
+      ],
+      "tratamiento": "NINGUNO (virus no tiene cura). Solo prevención"
+    },
+    "carbon_del_maiz": {
+      "titulo": "5.5 Carbón del Maíz (Ustilago maydis)",
+      "rareza": "Raro en Ecuador (requiere condiciones específicas)",
+      "sintomas": [
+        "Agallas (protuberancias) en espiga, tallo, hojas",
+        "Libera polvo negro (esporas) al madurar"
+      ],
+      "control": [
+        "Destrucción agallas antes que estallen",
+        "Rotación cultivos"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "5.6 Preguntas Frecuentes - Enfermedades",
+      "q1": {
+        "pregunta": "¿Mancha gris causa mucho daño?",
+        "respuesta": "SÍ. Puede defoliar 50-80% si no controlada. En costa Ecuador con lluvia constante, es ENFERMEDAD #1 foliar. Mancozeb preventivo es importante"
+      },
+      "q2": {
+        "pregunta": "¿Fungicida es obligatorio?",
+        "respuesta": "Dependiente sequía vs lluvia. Sequia: NO necesario. Costa lluvia: SÍ muy recomendado (3-4 aplicaciones mancozeb USD 20-30/hectárea)"
+      },
+      "q3": {
+        "pregunta": "¿Virus es problema maíz?",
+        "respuesta": "SÍ si población cogollero/trips alta. Virus transmitido temprano (V2-V4) = enanismo severo (-50% rendimiento). No hay cura, solo prevención"
+      },
+      "q4": {
+        "pregunta": "¿Pudrición tallo se puede prevenir?",
+        "respuesta": "Parcialmente. Mejora drenaje, evita compactación, riego adecuado post-floración. Pero si presión muy alta: inevitable (genética determina tolerancia)"
+      },
+      "q5": {
+        "pregunta": "¿Quemante alternancia fungicida?",
+        "respuesta": "SÍ recomendado. Usar Mancozeb 2 aplicaciones, luego Azoxistrobina 1 aplicación, alternar. Previene resistencia hongo"
+      }
+    ]
+  }
+}

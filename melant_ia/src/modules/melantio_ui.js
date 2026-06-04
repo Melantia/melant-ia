@@ -97,7 +97,7 @@ window.cargarDatosModulo = function (id, titulo) {
             <button 
               class="btn-submodulo" 
               style="display:flex;align-items:center;gap:14px;padding:14px 18px;background:#f4f4f4;border:none;border-radius:8px;color:#276749;font-weight:600;font-size:1.08em;box-shadow:0 2px 8px #0001;cursor:pointer;transition:background 0.2s;"
-              onclick="window.cargarSubmodulo('${encodeURIComponent(item)}','${encodeURIComponent(modulo.titulo)}')"
+              onclick="window.navegarA('${item}')"
               onmouseover="this.style.background='#e0f7ef'" onmouseout="this.style.background='#f4f4f4'"
             >
               <span style='font-size:1.6em;'>${icon}</span>

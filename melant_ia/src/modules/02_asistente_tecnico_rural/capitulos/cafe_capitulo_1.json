@@ -1,0 +1,374 @@
+{
+  "capitulo": 1,
+  "titulo": "Introducción a la Botánica del Café",
+  "cultivo": "Café",
+  "seccion": "Fundamentos botánicos, historia, clasificación y fisiología de la planta de café",
+  "contenido": {
+    "introduccion_cafe": {
+      "titulo": "1.1 Introducción al Café (Coffea arabica)",
+      "importancia_mundial": "El café es segundo commodity comercial mundial (después petróleo), consumido por 2+ mil millones personas diariamente. Ecuador es productor importante (3-4% mundial), especializado en café de altitud",
+      "caracteristicas_cafe_ecuatoriano": [
+        "Altitud: 800-2,200 m (vs otras regiones 600-1,800 m)",
+        "Clima: 15-24°C promedio anual (frio relativo genera acidez, complejidad)",
+        "Volcánico: Suelos ricos en minerales (Pichincha, Cotopaxi, Chimborazo)",
+        "Especialización: Café de origen (single origin), cupping score 82-88 puntos (specialty)"
+      ],
+      "produccion_ecuador": [
+        "Producción: 600,000-700,000 sacos 60kg/año",
+        "Principales provincias: Pichincha, Cotopaxi, Tungurahua, Manabí",
+        "Precio: USD 1.50-2.50/kg (vs USD 1.10-1.40 promedio mundial)",
+        "Tendencia: Crecimiento demanda café specialty (+3-5% anual)"
+      ]
+    },
+    "taxonomia_clasificacion": {
+      "titulo": "1.2 Taxonomía y Clasificación Botánica",
+      "clasificacion_cientifica": {
+        "reino": "Plantae",
+        "division": "Magnoliophyta",
+        "clase": "Dicotyledonae",
+        "orden": "Gentianales",
+        "familia": "Rubiaceae",
+        "genero": "Coffea",
+        "especie": "C. arabica L.",
+        "sinonimos": "Arabica, café arábigo"
+      },
+      "especies_coffea": [
+        {
+          "especie": "Coffea arabica",
+          "origem": "Etiopía (montañas)",
+          "cromosomas": "44 (diploide 2n=44)",
+          "produccion_mundial": "~60% (principal especie)",
+          "caracteristicas": "Complejidad, acidez, aroma superior, menor cafeína (1.2%)"
+        },
+        {
+          "especie": "Coffea canephora (Robusta)",
+          "origen": "Congo Belga (Zaire)",
+          "cromosomas": "22 (diploide 2n=22)",
+          "produccion_mundial": "~40%",
+          "caracteristicas": "Resistencia plagas, alto rendimiento, cafeína alta (2-3%), menos aroma"
+        },
+        {
+          "especie": "Coffea liberica",
+          "caracteristicas": "Rara, menor importancia (<1% producción)"
+        }
+      ],
+      "variedades_arabica_principales": [
+        {
+          "variedad": "Typica",
+          "origen": "Original de Etiopía, base variedades modernas",
+          "caracteristicas": "Susceptible plagas, bajo rendimiento, excelente sabor",
+          "distribucion": "Jamaica (Blue Mountain), Yemen (Mocha), algunos lotes Ecuador"
+        },
+        {
+          "variedad": "Bourbon",
+          "origen": "Isla Bourbon (Reunión)",
+          "caracteristicas": "Más productiva que Typica (+20-30%), sabor dulce",
+          "distribucion": "Colombia, Ecuador, Perú, Brasil (antiguamente)"
+        },
+        {
+          "variedad": "Mundo Novo",
+          "origen": "Brasil (cruce natural Typica × Bourbon)",
+          "caracteristicas": "Muy productiva (+50% vs Typica), vigor alto",
+          "distribucion": "Brasil (70% producción), algunas regiones Ecuador"
+        },
+        {
+          "variedad": "Caturra",
+          "origen": "Brasil (mutación Bourbon)",
+          "caracteristicas": "Enana (1.5-2 m altura), productiva, sabor fino",
+          "distribucion": "Colombia, Ecuador, Perú (especialmente altitud 1,600-2,200 m)"
+        },
+        {
+          "variedad": "Geisha/Gerica",
+          "origen": "Etiopía, redescubierto Panamá",
+          "caracteristicas": "Extremely aromatic, floral, fruity notes, prize-winning",
+          "precio": "USD 50-500/kg (vs USD 2-4 café regular) - PREMIUM EXTREMO"
+        }
+      ],
+      "variedades_ecuatorianas_comunes": "Bourbon, Caturra, Typica (antiguamente), Mundo Novo, y mezcla natural local 'Criolla'"
+    },
+    "origen_distribucion": {
+      "titulo": "1.3 Origen Geográfico y Distribución",
+      "historia_cafe": [
+        {
+          "periodo": "2000+ años atrás",
+          "evento": "Plantas silvestres Coffea arabica en montañas Etiopía (1,500-2,200 m)",
+          "evidencia": "Aún existen poblaciones silvestres"
+        },
+        {
+          "periodo": "Siglo VII",
+          "evento": "Cultivo sistemático Arabia (Yemen principalmente)"
+        },
+        {
+          "periodo": "Siglo XVII",
+          "evento": "Expansión Oriente Medio, Turquía, llegada Europa (café como bebida de élite)"
+        },
+        {
+          "periodo": "Siglo XVIII-XIX",
+          "evento": "Plantación colonial: Java, Sumatra, América Central, Colombia, Ecuador"
+        },
+        {
+          "periodo": "Siglo XX",
+          "evento": "Brasil domina producción (1970: 70% mundial), después Vietnam Robusta"
+        }
+      ],
+      "distribucion_mundial": [
+        {
+          "region": "América Central y Andina",
+          "paises": "Colombia, Ecuador, Perú, Honduras, Guatemala",
+          "caracteristicas": "Arabica altitud, calidad premium"
+        },
+        {
+          "region": "Brasil",
+          "produccion": "35-40% mundial",
+          "variedades": "Mundo Novo principalmente"
+        },
+        {
+          "region": "Vietnam",
+          "produccion": "15-20% mundial (Robusta especialmente)",
+          "caracteristicas": "Bajo costo, volumen, mercado masivo"
+        },
+        {
+          "region": "Otros",
+          "paises": "Indonesia, Etiopía, Uganda, India"
+        }
+      ]
+    },
+    "morfologia_planta": {
+      "titulo": "1.4 Morfología de la Planta de Café",
+      "descripcion_general": "Planta leñosa semileñosa, arbusto perenne de 3-5 metros (sin poda), altura natural potencial 8-10 metros",
+      "sistema_radical": {
+        "titulo": "Sistema Radical",
+        "caracteristicas": [
+          "Raíz pivotante principal 0.5-2 metros profundidad",
+          "Raíces laterales secundarias y terciarias muy ramificadas",
+          "Concentración: 70% de raíces en primer metro de suelo"
+        ],
+        "adaptacion": "Profundidad permite acceso agua en sequía, pero vulnerable a anegamiento",
+        "importancia": "Requiere suelo profundo mínimo 1 metro (si menos, deficiencias radicales)"
+      },
+      "tallo_principal": {
+        "titulo": "Tallo (Tronco) Principal",
+        "caracteristicas": [
+          "Grosor: 4-8 cm diámetro adulto",
+          "Altura sin poda: 8-10 metros (en cultivo se mantiene 1.5-3 m por poda)",
+          "Textura: Madera semidura, flexible, se quiebra con exceso peso"
+        ],
+        "ramificacion": "Alterna en ángulo ~45 grados (característica de arabica)"
+      },
+      "hojas": {
+        "titulo": "Hojas",
+        "caracteristicas_generales": [
+          "Opuestas simples",
+          "Largo: 7-15 cm típicamente (8-12 cm promedio)",
+          "Ancho: 4-8 cm",
+          "Color: Verde oscuro brillante",
+          "Textura: Lisa, ligeramente ondulada al margen"
+        ],
+        "estructura": {
+          "peciolo": "0.5-1 cm",
+          "lamina": "Oblongada, base redondeada, ápice puntiagudo",
+          "nervadura": "Pinnada, nervios secundarios cada 1-1.5 cm"
+        },
+        "duracion": "12-18 meses en árbol (no caducas)",
+        "fotosintesis": "Activa si luz 40-60% (tolerancia buena a sombra)"
+      },
+      "flores": {
+        "titulo": "Flores",
+        "caracteristicas": [
+          "Color: Blanco puro muy fragante (olor a jazmín)",
+          "Tamaño: 1-2 cm diámetro",
+          "Ubicacion: En axilas de hojas (inflorescencia tipo ramillete)"
+        ],
+        "estructura": [
+          "Sépalos: 5",
+          "Pétalos: 5",
+          "Estambres: 5",
+          "Pistilo: 1 (ovario bicromático = 2 óvulos)"
+        ],
+        "floracion": {
+          "trigger": "Lluvia después sequía (importante en clima con estación seca)",
+          "duracion": "Flores abiertas 2-3 días",
+          "autoincompatible": "Algunos arabica requieren polinización cruzada (abejas, viento)"
+        },
+        "importancia": "Floración es signo de buen manejo (nutrientes, agua, luz adecuados)"
+      },
+      "fruto": {
+        "titulo": "Fruto (Cereza de Café)",
+        "caracteristicas": [
+          "Tipo: Drupa (fruto de hueso)",
+          "Color inmaduro: Verde",
+          "Color maduro: Rojo intenso (o amarillo variedad amarilla)",
+          "Tamaño: 12-18 mm largo, 10-15 mm diámetro",
+          "Forma: Ovalada, ligeramente aplanada"
+        ],
+        "estructura_interna": {
+          "epicarpio": "Piel externa (=cascarilla)",
+          "mesocarpio": "Pulpa mucilaginosa azucarada",
+          "endocarpio": "Piel parchmentada (pergamino)",
+          "semillas": "Dos semillas por fruto (raramente 1 = 'peaberry')",
+          "endosperma": "Grano verde, contiene cafeína 1.2%"
+        },
+        "maduracion": "90-120 días desde floración a madurez (depende altitud, temperatura)",
+        "rendimiento": "Un árbol maduro: 3-6 kg cereza fresca/año (= 0.6-1.2 kg café seco)"
+      }
+    },
+    "ciclo_biologico": {
+      "titulo": "1.5 Ciclo Biológico Completo",
+      "duracion_total": "25-30 años vida productiva (con manejo)",
+      "fases": [
+        {
+          "fase": "1. Germinación (Semillero)",
+          "duracion": "2-3 meses",
+          "evento": "Semilla en cama con musgo/arena germinan",
+          "resultado": "Plantula con 2-3 hojas"
+        },
+        {
+          "fase": "2. Vivero",
+          "duracion": "6-8 meses",
+          "evento": "Plantula en bolsa con sustrato crece",
+          "altura_final": "15-25 cm"
+        },
+        {
+          "fase": "3. Establecimiento en Campo",
+          "duracion": "6-12 meses",
+          "evento": "Plantula transplantada, enraizamiento, crecimiento vegetativo",
+          "acciones": "Manejo malezas, fertilización, riego"
+        },
+        {
+          "fase": "4. Crecimiento Vegetativo (Pre-floración)",
+          "duracion": "1-2 años",
+          "evento": "Acumulación biomasa, formación estructura ramas",
+          "altura": "0.5-1.5 metros"
+        },
+        {
+          "fase": "5. Primera Floración (Año 2-3)",
+          "duracion": "Meses 2-4",
+          "evento": "Primeras flores aparecen, inicio productividad",
+          "cosecha_primer_ano": "Baja (100-300 kg/ha fresco)"
+        },
+        {
+          "fase": "6. Producción Creciente (Años 3-6)",
+          "duracion": "Continua",
+          "produccion": "Aumento anual hasta 2,000-3,000 kg/ha fresco"
+        },
+        {
+          "fase": "7. Producción Plena (Años 7-25)",
+          "duracion": "Largo plazo",
+          "produccion": "2,000-3,500 kg/ha/año (depende variedad, manejo, altitud)",
+          "caracteristica": "Alternancia: años altos, años bajos (fisiologia de arabica)"
+        },
+        {
+          "fase": "8. Declive (Años 25+)",
+          "evento": "Producción decrece, enfermedades acumuladas",
+          "accion": "Necesaria renovación plantación"
+        }
+      ]
+    },
+    "requerimientos_ambientales": {
+      "titulo": "1.6 Requerimientos Ambientales",
+      "temperatura": {
+        "optima": "18-24°C promedio anual",
+        "rango_tolerancia": "15-28°C (fuera causa problemas)",
+        "efectos_frio": [
+          "T < 13°C: Crecimiento casi nulo",
+          "T < 10°C: Daño tisular, muerte posible"
+        ],
+        "efectos_calor": [
+          "T > 28°C: Floración irregular, estrés hídrico",
+          "T > 30°C: Quemadura foliar, maduración apresurada"
+        ],
+        "implicacion": "Café prospera en zonas FRIAS (altitud): 800-2,200 m en Ecuador"
+      },
+      "precipitacion": {
+        "optima": "1,500-3,000 mm/año",
+        "distribucion": "2-3 meses secos máximo tolerable",
+        "exceso": [
+          "> 3,500 mm/año: Plagas/enfermedades incrementan",
+          "Encharcamiento: Pudrición raíces"
+        ],
+        "deficit": [
+          "< 1,200 mm/año: Requiere riego (costo alto)",
+          "Sequía prolongada: Caída flores, bajo rendimiento"
+        ]
+      },
+      "luminosidad": {
+        "optima": "1,600-1,800 horas sol/año",
+        "sombra": "30-50% ideal (café bajo sombra)",
+        "exceso_sombra": [
+          "> 60% sombra: Reducción 40-60% rendimiento",
+          "Etiolación: Pseudo-tallo se estira, débil"
+        ],
+        "fotoperiodo": "No es crítico (café es planta día largo adaptable)"
+      },
+      "altitud": {
+        "optima_ecuador": "800-2,200 m",
+        "caracteristicas_por_altura": [
+          "0-600 m: Demasiado caliente, bajo brix, plagas altas. No recomendado",
+          "600-1,000 m: Aceptable, café 'tierra caliente'",
+          "1,000-1,600 m: Bueno, balance calidad-producción",
+          "1,600-2,000 m: Excelente, café specialty, ácido fino",
+          "> 2,000 m: Muy frío, ciclo largo (12-14 meses), pero cupping premium"
+        ]
+      },
+      "suelo": {
+        "tipo_optimo": "Franco volcánico, profundo (>1 m), drenaje excelente",
+        "pH_optimo": "5.5-6.5",
+        "riqueza": "Alto en minerales (volcánico preferible)",
+        "materia_organica": "> 3-4% (esencial)",
+        "evitar": "Suelos compactados (< 60 cm profundidad útil)"
+      }
+    },
+    "fisiologia_produccion": {
+      "titulo": "1.7 Fisiología de Producción",
+      "alternancia": {
+        "definicion": "Patrón de años de alto rendimiento seguido de año bajo",
+        "ciclo": "Típicamente bienal (año A = alto, año B = bajo) o trienal",
+        "causa": "Carbohydrato disponible desviado a producción deja poco para initio floral próximo año",
+        "manejo": "Poda, raleo, nutrición balanceada reduce alternancia"
+      },
+      "contenido_cafeina": {
+        "arabica": "1.0-1.5% (promedio 1.2%)",
+        "robusta": "2.0-3.0%",
+        "factores": "Temperatura (frio = menos cafeína), altitud (mas = menos)"
+      },
+      "acidos_especificos": [
+        "Ácido clorogénico: 5.5-8% (antioxidante, astringencia)",
+        "Ácido acético: Poco en café verde, desarrolla en tostado (acidez percibida)",
+        "Ácido cítrico, málico, linoleico: Presente en pequeñas cantidades (complejidad)"
+      ],
+      "sólidos_totales_disueltos": {
+        "definicion": "Azúcares, proteínas, minerales solubles",
+        "rango": "8-12% en café specialty",
+        "medida": "Refractómetro, 'brix' en pulpa fruto",
+        "altitud_relacion": "Mayor altitud, mayor brix (fruto mas dulce)"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.8 Preguntas Frecuentes - Botánica del Café",
+      "q1": {
+        "pregunta": "¿Cuál es la diferencia entre Arabica y Robusta?",
+        "respuesta": "Arabica (Coffea arabica): 44 cromosomas, sabor complejo con acidez, 1.2% cafeína, altitud 800-2,200 m, precio alto. Robusta (C. canephora): 22 cromosomas, sabor fuerte/amargo, 2-3% cafeína, altitud baja 200-800 m, precio bajo. Arabica es superior calidad, Robusta es producción masiva"
+      },
+      "q2": {
+        "pregunta": "¿Por qué Ecuador produce café tan bueno?",
+        "respuesta": "Por altitud (volcánica 800-2,200 m), suelo rico minerales volcánicos, temperatura constante 15-24°C. Combinación produce fruto con brix alto, acidez balanceada, notas frutales. Cafe ecuatoriano gana muchas competiciones specialty"
+      },
+      "q3": {
+        "pregunta": "¿Cuánto tarda un café en producir?",
+        "respuesta": "Primer año: floración pero pocas cereza (50-200 kg/ha). Año 2-3: inicio producción real (500-800 kg/ha fresco). Año 4-7: producción creciente hasta 2,000-3,500 kg/ha. Producción plena años 7-25. Es cultivo de largo plazo"
+      },
+      "q4": {
+        "pregunta": "¿Es verdad que flor de café huele a jazmín?",
+        "respuesta": "Sí, exactamente. Flores café son aromáticas, blancas, fragancia dulce similar jazmín. Es signo de buen manejo (árbol sano, nutrientes adecuados, agua disponible). Flores sin aroma indican estrés"
+      },
+      "q5": {
+        "pregunta": "¿Qué variedad de café produce Ecuador?",
+        "respuesta": "Principalmente Bourbon, Caturra, Typica antiguo, y criollo local. Algunas fincas experimentan Geisha. Arabica 100%. Robusta es rarísima en Ecuador (clima muy frío)"
+      },
+      "q6": {
+        "pregunta": "¿A qué edad produce más café un árbol?",
+        "respuesta": "Máxima producción: años 7-15 (edad de plena productividad). Después edad 15, comienza descenso lento. Por eso plantaciones se renuevan año 20-25"
+      }
+    ]
+  }
+}

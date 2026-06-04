@@ -101,12 +101,31 @@ const PLANES = {
     valorAgregado: '',
     metaGratis: 20,
   },
+};
 
 // Planes de la Tienda Virtual MELANTIA
 export const PLANES_TIENDA = {
-  SEMILLA: { limite: 10, precio: 0, dias: 30, prioridad: 3, almacenamiento: '50 MB' },
-  PRODUCTOR: { limite: 250, precio: 25, dias: 30, prioridad: 2, almacenamiento: '500 MB' },
-  PROFESIONAL: { limite: 1000, precio: 50, dias: 30, prioridad: 1, almacenamiento: '2 GB' }
+  SEMILLA: {
+    limite: 10,
+    precio: 0,
+    dias: 30,
+    prioridad: 3,
+    almacenamiento: '50 MB',
+  },
+  PRODUCTOR: {
+    limite: 250,
+    precio: 25,
+    dias: 30,
+    prioridad: 2,
+    almacenamiento: '500 MB',
+  },
+  PROFESIONAL: {
+    limite: 1000,
+    precio: 50,
+    dias: 30,
+    prioridad: 1,
+    almacenamiento: '2 GB',
+  },
 };
 
 export default PLANES;

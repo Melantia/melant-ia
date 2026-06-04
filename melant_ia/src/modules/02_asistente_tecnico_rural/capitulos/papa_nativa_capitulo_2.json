@@ -1,0 +1,96 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento y Siembra de Papa Nativa",
+  "cultivo": "Papa Nativa",
+  "seccion": "Semilla propia, reproducción tubérculo, rotación conservación, cero insumo",
+  "contenido": {
+    "introduccion": {
+      "titulo": "2.1 Introducción Establecimiento Nativo",
+      "texto": "Papa nativa establece sin semilla certificada externa = semilla propia seleccionada generación tras generación. Desafío: mantener genética pura (evitar contaminación), sanidad tubérculo (virus acumula si recicla continuamente). Estrategia: selección rigurosa plantas madre, rotación cultivos mínimo 1 año."
+    },
+    "seleccion_semilla_propia": {
+      "titulo": "2.2 Selección de Semilla Propia",
+      "criterios": [
+        {
+          "criterio": "Sanidad",
+          "observacion": "Plantas vigor normal, sin síntomas virus (enrollamiento, mosaico, enanismo)"
+        },
+        {
+          "criterio": "Productividad",
+          "observacion": "Plantas rendimiento alto, múltiples tubérculos"
+        },
+        {
+          "criterio": "Tipo tubérculo",
+          "observacion": "Forma/color uniforme, tamaño mediano (25-50 g semilla)"
+        }
+      ],
+      "proporcion": "Marcar 5-10% mejores plantas en cosecha = semilla año próximo",
+      "almacenaje": "Oscuridad, fresco (10-15°C), 6-12 meses máximo"
+    },
+    "sanidad_virus": {
+      "titulo": "2.3 Sanidad Viral y Rotación",
+      "problema": [
+        "Cultivo continuado (año tras año mismo terreno) = virus acumula",
+        "Generación 3-4 = rendimiento cae 30-50%"
+      ],
+      "solucion": [
+        {
+          "solucion": "Rotación cultivos",
+          "practica": "Papa año 1, otro cultivo (arroz/maíz) año 2-3, papa año 4 = reset viral"
+        },
+        {
+          "solucion": "Descanso suelo",
+          "practica": "Barbecho (descanso) 1 año cada 3 cultivados"
+        },
+        {
+          "solucion": "Test ocasional",
+          "practica": "Cada 5 años: enviar 10 tubérculos universidad test serológico (viral screening)"
+        }
+      ]
+    },
+    "preparacion_terreno_nativo": {
+      "titulo": "2.4 Preparación Terreno (Mínimo Insumo)",
+      "arada": [
+        "LIVIANA (10-15 cm profundidad) vs convencional 20-30 cm",
+        "Objetivo: no traer suelos pobres, mantener materia orgánica superficial"
+      ],
+      "compost_casero": [
+        "Preparación 3-4 meses pre-siembra",
+        "Residuos cosecha + estiércol animal (USD 0 costo si producción propia)"
+      ],
+      "sin_encalado": "Si ya pH > 5.5, no necesita (papa nativa tolera acidez mejor)"
+    },
+    "siembra": {
+      "titulo": "2.5 Siembra Papa Nativa",
+      "densidad": [
+        "Menor convencional: 15,000-20,000 plantas/hectárea",
+        "Objetivo: tubérculos más grandes (semilla propia)"
+      ],
+      "profundidad": "8-10 cm (igual convencional)",
+      "aporcado": "Una sola pasada (vs dos convencional), menor costo labor"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.6 Preguntas Frecuentes - Establecimiento Nativo",
+      "q1": {
+        "pregunta": "¿Semilla propia indefinidamente?",
+        "respuesta": "NO indefinido. Máximo 5 años continuado. Luego rotación cultivos 1-2 años, o test viral cada 5 años reset"
+      },
+      "q2": {
+        "pregunta": "¿Test viral cuesta mucho?",
+        "respuesta": "USD 50-100 laboratorio (10 tubérculos). Inversión pequeña previene desastre rendimiento"
+      },
+      "q3": {
+        "pregunta": "¿Rotación 1 año es suficiente?",
+        "respuesta": "Mínimo, idealmente 2 años sin papa = reset viral completo. Si rápido cultivado = riesgo"
+      },
+      "q4": {
+        "pregunta": "¿Compost casero da resultado?",
+        "respuesta": "SÍ excelente. Compost 3-4 meses maduro = nutrientes disponibles. Costo = labor preparación (USD 0 insumo)"
+      },
+      "q5": {
+        "pregunta": "¿Papa nativa requiere aporcado dos veces?",
+        "respuesta": "NO obligatorio una vez. Objetivo menor = costo labor reducción. Rendimiento -10% vs dos aporcados"
+      }
+    ]
+  }
+}

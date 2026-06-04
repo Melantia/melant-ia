@@ -1,0 +1,480 @@
+{
+  "biblioteca_tecnica_rural": {
+    "version": "1.0",
+    "fecha_actualizacion": "2026-05-31",
+    "idioma": "es",
+    "cultivos": {
+      "cacao": {
+        "id": "cacao_001",
+        "nombre": "Cacao (Theobroma cacao L.)",
+        "nombre_comun": "Cacao",
+        "importancia_economica": "El cacao es uno de los cultivos más importantes para la economía rural latinoamericana, especialmente en Ecuador, Colombia y Perú. Representa una fuente significativa de divisas y empleo rural. El precio internacional fluctúa entre USD 2,500 a USD 4,000 por tonelada, dependiendo de la calidad (fino o corriente). La demanda global se ha incrementado un 3-4% anual debido al aumento del consumo en mercados emergentes de Asia.",
+        "introducion": "El cacao es un cultivo perenne de importancia mundial que requiere condiciones agroecológicas específicas para su desarrollo óptimo. Se cultiva en regiones tropicales entre los 15°N y 15°S de latitud, principalmente en América, África y Asia. Su importancia radica en la producción de cacao en grano, principal materia prima para la industria del chocolate y productos derivados.",
+        "requerimientos_climaticos": {
+          "temperatura": {
+            "optima": "24-28°C",
+            "minima": "15°C",
+            "maxima": "35°C",
+            "observacion": "Temperaturas por debajo de 15°C causan reducción del crecimiento. Por encima de 35°C puede haber estrés hídrico severo."
+          },
+          "precipitacion": {
+            "anual": "1500-3000 mm",
+            "distribucion": "bien distribuida durante todo el año",
+            "mes_minimo": "100 mm",
+            "observacion": "Requiere humedad constante. Sequías mayores a 3 meses consecutivos afectan la producción."
+          },
+          "altitud": {
+            "optima": "200-600 msnm",
+            "minima": "0 msnm",
+            "maxima": "1200 msnm",
+            "observacion": "A altitudes mayores disminuye la temperatura, lo que ralentiza el crecimiento."
+          },
+          "luminosidad": {
+            "requerimiento": "Sombra parcial (40-50%)",
+            "observacion": "Cultivo de sombra. Requiere árboles acompañantes: plátano, coco, maderables."
+          }
+        },
+        "preparacion_terreno": {
+          "analisis_suelo": "Realizar análisis físico, químico y biológico antes de la siembra. pH óptimo: 6.0-6.5. Materia orgánica mínima: 3-4%.",
+          "limpieza": "Eliminación completa de malezas perennes. Erradicación de tocones y raíces de cultivos anteriores.",
+          "topografia": "Preferir terrenos con pendiente entre 10-30%. Evitar zonas con anegamiento.",
+          "drenaje": "Instalar sistemas de drenaje si el terreno tiene mala permeabilidad o hay acumulación de agua.",
+          "distanciamiento": "3m x 3m (1,111 plantas/ha) o 3m x 4m (833 plantas/ha) según la densidad deseada.",
+          "aislamiento": "Mantener distancia mínima de 50m de otros cultivos susceptibles a enfermedades."
+        },
+        "siembra": {
+          "epocas": "Preferiblemente al inicio de la estación lluviosa. En regiones con lluvia bien distribuida, puede sembrarse todo el año.",
+          "distancia_siembra": "3 x 3 m (1,111 plantas/ha) es la densidad estándar",
+          "profundidad": "La semilla se planta a 1-2 cm de profundidad. El hoyo debe tener 20-30 cm de profundidad.",
+          "preparacion_semilla": "Usar semillas certificadas de 25-35g, con contenido de humedad 35-40%. La germinación tarda 2-4 semanas.",
+          "vivero": "Las plántulas pueden levantarse en vivero por 3-4 meses antes de trasplante. Usar bolsas de 12-15 litros con sustrato de 70% tierra + 30% materia orgánica.",
+          "establecimiento": "Los cacaotales requieren 4-5 años para entrar en producción. En año 3-4 se obtiene producción experimental."
+        },
+        "fertilizacion": {
+          "niveles_nutricionales": {
+            "nitrogeno": "150-200 kg/ha/año",
+            "fosforo": "40-60 kg/ha/año",
+            "potasio": "120-150 kg/ha/año",
+            "magnesio": "40-60 kg/ha/año",
+            "calcio": "100-150 kg/ha/año"
+          },
+          "programa_anual": [
+            {
+              "mes": "Enero",
+              "actividad": "Aplicación de fertilizante de inicio (NPK 12-8-16). Dosis: 150g por árbol adulto."
+            },
+            {
+              "mes": "Marzo",
+              "actividad": "Aplicación de abono orgánico (compost). 10-15 kg por árbol."
+            },
+            {
+              "mes": "Mayo",
+              "actividad": "Fertirriego o aplicación foliar con micronutrientes (B, Zn, Cu, Mn)."
+            },
+            {
+              "mes": "Agosto",
+              "actividad": "Aplicación de fertilizante de mantenimiento (NPK 8-12-20)."
+            }
+          ],
+          "recomendaciones": "La fertilización debe estar basada en análisis foliar. Se recomienda fertilización fraccionada cada 3 meses. Usar fuentes de liberación lenta. Incorporar materia orgánica continuamente."
+        },
+        "manejo_agronomico": {
+          "poda": {
+            "formacion": "Poda de formación en años 1-3 para crear estructura adecuada. Mantener 3-5 ramas principales.",
+            "mantenimiento": "Eliminación de ramas enfermas, muertas o cruzadas. Aireación de la copa cada 2-3 años.",
+            "sanitaria": "Inmediata ante presencia de enfermedades o plagas."
+          },
+          "sombra": "Árboles acompañantes: plátano (1.5-2m altura de corte), coco, maderable (cedro, caoba). Densidad: 50-100 árboles/ha.",
+          "manejo_hierbas": "Control manual o químico selectivo. Mantener limpio un círculo de 0.5-1m alrededor del árbol.",
+          "mulching": "Cobertura con residuos de cosecha (cáscaras de cacao). 5-8 cm de espesor. Favorece conservación de humedad y aporte de materia orgánica.",
+          "riego": "En regiones con sequía, aplicar riego por goteo. 100-150mm/mes durante estación seca."
+        },
+        "plagas": [
+          {
+            "nombre": "Monilia (Moniliophthora roreri)",
+            "descripcion": "Enfermedad fúngica que afecta frutos en desarrollo. Causa pudrición parda de las almendras.",
+            "sintomas": "Frutos con manchas oscuras, deformación, momificación. Pérdidas del 20-80% de la cosecha si no se controla.",
+            "control": {
+              "preventivo": "Eliminación de frutos afectados. Poda de ramas bajas. Mejora del drenaje y aireación.",
+              "curativo": "Fungicidas cúpricos (oxicloruro de cobre 50%). Aplicar cada 14-21 días en épocas lluviosas."
+            }
+          },
+          {
+            "nombre": "Escoba de bruja (Crinipellis perniciosa)",
+            "descripcion": "Hongo que afecta brotes apicales y frutos. Mayor incidencia en regiones de alta humedad.",
+            "sintomas": "Deformación de brotes (forma de escoba), frutos deformados, muerte de flores.",
+            "control": {
+              "preventivo": "Poda de ramas afectadas. Destrucción de frutos momificados. Mejora de ventilación.",
+              "curativo": "Fungicidas sistémicos (benomilo, triazoles). Aplicar mensualmente en estación de lluvia."
+            }
+          },
+          {
+            "nombre": "Barrenador del cacao (Xyleborus affinis)",
+            "descripcion": "Insecto que perfora el tronco y ramas, causando daño interno severo.",
+            "sintomas": "Orificios en tronco, serrín fino, muerte descendente de ramas.",
+            "control": {
+              "preventivo": "Mantener árboles vigorosos. Eliminar árboles débiles o dañados.",
+              "curativo": "Inyección de insecticidas sistémicos en orificios. Poda del material afectado."
+            }
+          }
+        ],
+        "enfermedades": [
+          {
+            "nombre": "Frosty Pod Rot",
+            "agente": "Moniliophthora roreri",
+            "rango_geografico": "Mesoamérica, parte de Sur América",
+            "manejo": "Control cultural (poda, saneamiento), aplicación de fungicidas cúpricos cada 14 días en época de lluvia."
+          },
+          {
+            "nombre": "Black Pod",
+            "agente": "Phytophthora megakarya",
+            "rango_geografico": "África occidental",
+            "manejo": "Selección de material resistente, drenaje adecuado, fungicidas preventivos."
+          }
+        ],
+        "cosecha": {
+          "madurez": "Los frutos están listos 5-6 meses después de la polinización. Indicadores: color amarillo/rojo/marrón según variedad, sonido hueco al golpear.",
+          "frecuencia": "La cosecha es casi continua. Picos de producción cada 5-6 meses.",
+          "metodo": "Corte manual con navaja o machete. El fruto no debe desprenderse, debe cortarse.",
+          "rendimiento": "Plantación juvenil (4-5 años): 200-500 kg/ha. Plantación adulta (8+ años): 1,000-2,500 kg/ha de cacao seco."
+        },
+        "poscosecha": {
+          "fermentacion": "Esencial para desarrollar sabor y aroma. Duración: 5-7 días. Temperatura: 45-50°C. Volteo diario los primeros 3 días.",
+          "secado": "Reduce humedad de 60% a 7-8%. Duración: 10-14 días. Temperatura: 50-60°C. Exposición al sol con cobertura en noches.",
+          "seleccion": "Eliminar granos defectuosos, planos, germinados. Densidad mínima 1.0 g/cm³.",
+          "almacenamiento": "En ambiente fresco (12-18°C), humedad relativa 65%. Evitar humedad superior a 8% o inferior a 6%."
+        },
+        "recomendaciones_tecnicas": [
+          "Usar variedades mejoradas resistentes a enfermedades (Trinitario, Criollo Mejorado).",
+          "Implementar sistemas agroforestales con cacao como cultivo principal.",
+          "Realizar análisis foliar anualmente para ajustar fertilización.",
+          "Mantener registros detallados de producción, plagas y enfermedades.",
+          "Capacitación continua en fermentación y secado para mejorar calidad."
+        ],
+        "referencias": [
+          "FAO - Cultivo del cacao (2021)",
+          "World Cocoa Foundation - Producción sostenible",
+          "CENIPALMA - Guías técnicas para trópico"
+        ]
+      },
+      "cafe": {
+        "id": "cafe_001",
+        "nombre": "Café (Coffea arabica L.)",
+        "nombre_comun": "Café Arábica",
+        "importancia_economica": "Colombia es el 2do productor mundial. Precio: USD 1.50-2.50/lb. Emplea 500,000 familias. Es el cultivo de exportación más importante después del petróleo en muchos países.",
+        "introducion": "El café es un cultivo perenne que requiere altitudes entre 800-2,000 msnm para obtener la mejor calidad. Coffea arabica es la especie más cultivada (60-70% producción mundial), reconocida por su sabor superior. Requiere clima templado, sombra, y manejo integral.",
+        "requerimientos_climaticos": {
+          "temperatura": {
+            "optima": "18-22°C",
+            "minima": "12°C",
+            "maxima": "30°C",
+            "observacion": "Temperaturas menores a 12°C ralentizan crecimiento. Mayores a 30°C pueden causar deshidratación."
+          },
+          "precipitacion": {
+            "anual": "1500-3000 mm",
+            "distribucion": "bien distribuida",
+            "mes_minimo": "100 mm",
+            "observacion": "Requiere períodos de lluvia alternados con períodos secos para inducir floración."
+          },
+          "altitud": {
+            "optima": "1200-1800 msnm",
+            "minima": "800 msnm",
+            "maxima": "2000 msnm",
+            "observacion": "Mayor altitud = mejor calidad pero menor rendimiento. Menor altitud = mayor rendimiento pero calidad inferior."
+          },
+          "luminosidad": {
+            "requerimiento": "Sombra parcial (30-40%)",
+            "observacion": "Árboles acompañantes: cedro, chalum, guachapelí."
+          }
+        },
+        "preparacion_terreno": {
+          "analisis_suelo": "pH 5.5-6.5. Materia orgánica mínima 4%. Profundidad útil mínima 60 cm.",
+          "limpieza": "Eliminación total de malezas y residuos.",
+          "topografia": "Terrenos con pendiente 10-45%. Sistema de terrazas en pendientes mayores.",
+          "drenaje": "Imprescindible en zonas de alta precipitación.",
+          "distanciamiento": "1.5m x 1.5m (4,444 plantas/ha) o 1.5m x 2m (3,333 plantas/ha).",
+          "aislamiento": "Distancia de 1,000m de otras plantaciones."
+        },
+        "siembra": {
+          "epocas": "Inicio de estación lluviosa.",
+          "semilla": "Semillas certificadas con 30-35% de humedad. Germinación en 30-40 días.",
+          "vivero": "3-4 meses en bolsas de 15-20 litros.",
+          "trasplante": "Cuando plántula alcanza 15-20 cm de altura y 2-3 pares de hojas.",
+          "densidad": "3,000-5,000 plantas/ha según pendiente y manejo."
+        },
+        "fertilizacion": {
+          "niveles_nutricionales": {
+            "nitrogeno": "180-220 kg/ha/año",
+            "fosforo": "50-80 kg/ha/año",
+            "potasio": "100-140 kg/ha/año"
+          },
+          "programa": "Aplicación fraccionada cada 2-3 meses. Preferentemente fertirriego."
+        },
+        "plagas_enfermedades": [
+          {
+            "nombre": "Roya del café (Hemileia vastatrix)",
+            "control": "Fungicidas cúpricos. Poda sanitaria. Variedades resistentes."
+          },
+          {
+            "nombre": "Broca del café (Hypothenemus hampei)",
+            "control": "Trampas con atrayentes. Insecticidas sistémicos si es necesario."
+          }
+        ],
+        "cosecha": {
+          "madurez": "Frutos de color rojo/amarillo según variedad.",
+          "frecuencia": "2-3 cosechas anuales.",
+          "metodo": "Cosecha selectiva (solo frutos maduros) o cosecha en verde (para máquinas).",
+          "rendimiento": "1,500-2,500 kg/ha de café pergamino seco."
+        },
+        "poscosecha": {
+          "despulpado": "Dentro de 12-24 horas de cosecha.",
+          "fermentacion": "12-36 horas según altitud y temperatura.",
+          "secado": "Hasta 11% de humedad."
+        }
+      },
+      "palma_africana": {
+        "id": "palma_001",
+        "nombre": "Palma Africana (Elaeis guineensis Jacq.)",
+        "nombre_comun": "Palma de aceite",
+        "importancia_economica": "Cultivo agroindustrial de mayor rentabilidad. Precio promedio: USD 500-700/tonelada de aceite crudo. Ciclo de vida: 25-30 años. ROI: 4-5 años.",
+        "introducion": "La palma africana es el cultivo oleaginoso más productivo del mundo. Produce 3-6 toneladas de aceite/ha/año, mucho más que cualquier otra oleaginosa. Se cultiva principalmente en condiciones tropicales, entre 10°N y 10°S de latitud.",
+        "requerimientos_climaticos": {
+          "temperatura": {
+            "optima": "24-30°C",
+            "minima": "18°C",
+            "maxima": "35°C"
+          },
+          "precipitacion": {
+            "anual": "2000-4000 mm",
+            "mes_minimo": "100 mm"
+          },
+          "altitud": {
+            "rango": "0-500 msnm"
+          },
+          "luminosidad": {
+            "requerimiento": "Pleno sol"
+          }
+        },
+        "preparacion_terreno": {
+          "limpieza": "Desmalezado completo. Erradicación de malezas perennes.",
+          "topografia": "Terrenos con pendiente máxima 15%.",
+          "drenaje": "Crítico. Instalar drenajes principales y secundarios.",
+          "distanciamiento": "9m x 9m en triángulo equilátero (143-148 palmas/ha).",
+          "densidad": "143 plantas/ha es el estándar."
+        },
+        "siembra": {
+          "semilla": "Híbridos certificados. Germinación en cámara climatizada (30-32°C, 95% HR) por 3-4 meses.",
+          "vivero": "6-8 meses en bolsas de 5kg.",
+          "trasplante": "Cuando alcanza 1-1.5 metros de altura.",
+          "epocas": "Inicio de estación lluviosa."
+        },
+        "fertilizacion": {
+          "programa_anual": {
+            "nitrogeno": "300-400 kg/ha",
+            "fosforo": "80-120 kg/ha",
+            "potasio": "250-350 kg/ha",
+            "magnesio": "60-80 kg/ha",
+            "boro": "2-3 kg/ha"
+          },
+          "metodo": "Aplicación manual alrededor de la palma en círculo a 1.5m del tallo.",
+          "frecuencia": "Dos aplicaciones anuales (mayo y octubre)."
+        },
+        "manejo_agronomico": {
+          "limpias": "2-4 limpias anuales para mantener el terreno libre de malezas.",
+          "poda": "Poda anual de frondas secas, a razón de 24-26 frondas/año según edad.",
+          "cosecha": "Cuando los racimos están en fase 7-8 de maduración (coloración naranja oscuro).",
+          "plagas_principales": {
+            "picudo_rojo": "Control: feromonas, trampas luminosas, destrucción de palmas infestadas.",
+            "pudriccion_cogollo": "Control: Identificación temprana, eliminación de palmas afectadas.",
+            "anillo_rojo": "Control: Saneamiento, eliminación de insecto vector (Rhynchophorus palmarum)."
+          }
+        },
+        "cosecha": {
+          "inicio": "Año 3-4 de edad.",
+          "pico_produccion": "Años 8-15.",
+          "ciclo": "25-30 años de vida productiva.",
+          "rendimiento": "20-25 toneladas de racimos/ha/año en condiciones óptimas.",
+          "aceite_producido": "5-6 toneladas de aceite crudo/ha/año."
+        },
+        "recomendaciones": "Implementar sistemas de manejo integrado de plagas. Usar semilla certificada. Mantener registro de fertilización. Realizar análisis foliar anual."
+      }
+    },
+    "ganaderia": {
+      "bovinos": {
+        "id": "bovinos_001",
+        "nombre": "Ganadería Bovina",
+        "sistemas_produccion": [
+          {
+            "tipo": "Extensivo",
+            "descripcion": "Pastoreo en potrero. Baja densidad de animales (0.5-1 animal/ha).",
+            "ventajas": "Bajo costo inicial, amplio espacio para movimiento.",
+            "desventajas": "Baja productividad, dependencia del pasto natural."
+          },
+          {
+            "tipo": "Semi-intensivo",
+            "descripcion": "Pastoreo rotativo con suplementación. Densidad: 1-2 animales/ha.",
+            "ventajas": "Balance entre costo y productividad.",
+            "desventajas": "Requiere inversión en infraestructura."
+          },
+          {
+            "tipo": "Intensivo",
+            "descripcion": "Confinamiento total. Alimentación con concentrado + forraje picado.",
+            "ventajas": "Alta productividad, control total de alimentación.",
+            "desventajas": "Alto costo, requiere infraestructura costosa."
+          }
+        ],
+        "nutricion": {
+          "requerimientos_diarios": {
+            "energia": "10-15 Mcal EM/día según peso y función",
+            "proteina": "10-14% según etapa productiva",
+            "fibra": "18-25% fibra detergente neutro"
+          },
+          "forrajes": "Pasto de corte (saboya, king grass, maíz), heno, ensilaje.",
+          "concentrados": "Granos, subproductos agroindustriales, balanceados comerciales.",
+          "minerales": "Sal (sal mineralizada), fósforo, calcio, oligoelementos (Cu, Zn, Co, Se)."
+        },
+        "reproduccion": {
+          "edad_pubertad": {
+            "hembras": "7-9 meses (varía por raza y nutrición)",
+            "machos": "6-8 meses"
+          },
+          "edad_primer_parto": "24-30 meses en razas de carne, 30-36 meses en lecheras",
+          "ciclo_estral": "21 días promedio",
+          "duracion_lactancia": "305 días promedio",
+          "intervalo_entre_partos": "365-400 días en óptimo"
+        },
+        "sanidad": {
+          "vacunacion": {
+            "clostridiosis": "Vacunación inicial + refuerzo anual",
+            "rabia": "Vacunación inicial + refuerzo cada 3 años",
+            "brucelosis": "Solo en hembras menores a 1 año (en zonas de riesgo)",
+            "tuberculosis": "Prueba e identificación de animales positivos"
+          },
+          "enfermedades_comunes": {
+            "mastitis": "Higiene de ordeño, sellado de pezones, tratamiento con antibióticos.",
+            "diarrea": "Hidratación, probióticos, mejora de alimentación.",
+            "piojo": "Baños con ectoparasiticidas, repetir cada 14 días."
+          }
+        }
+      },
+      "porcicultura": {
+        "id": "porcinos_001",
+        "nombre": "Producción Porcina",
+        "instalaciones": {
+          "cochiquera": {
+            "area_minima": "0.75 m² por cerdo de 25-30 kg",
+            "piso": "Entablado o cemento con drenaje",
+            "ventilacion": "Natural u obligada (10-15 renovaciones/hora)",
+            "luz_natural": "Mínimo 4 horas diarias"
+          },
+          "corrales": {
+            "destetes": "Separados de adultos, temperatura 25-28°C",
+            "crecimiento": "1-2 m²/animal",
+            "engorda": "1.5-2 m²/animal",
+            "reproduccion": "3-4 m²/animal"
+          },
+          "maternidad": {
+            "jaulas": "2.2m x 1.5m con nidales para lechigadas",
+            "temperatura": "18-25°C (30°C en nidales para lechones)"
+          }
+        },
+        "alimentacion": {
+          "etapas": {
+            "lactancia": {
+              "proteina": "15-16%",
+              "energia": "3.2-3.4 Mcal ED/kg",
+              "consumo_diario": "5-8 kg"
+            },
+            "destete_crecimiento": {
+              "proteina": "16-18%",
+              "energia": "3.2 Mcal ED/kg",
+              "consumo_diario": "2-3 kg"
+            },
+            "engorda": {
+              "proteina": "13-14%",
+              "energia": "3.3 Mcal ED/kg",
+              "consumo_diario": "3-4 kg"
+            }
+          }
+        },
+        "reproduccion": {
+          "ciclo_estral": "21 días en hembras",
+          "duracion_gestacion": "114 ± 2 días",
+          "tamaño_lechigada": "10-12 lechones promedio",
+          "edad_destete": "21-28 días",
+          "edad_engorda": "4-6 meses hasta 90-100 kg"
+        }
+      },
+      "avicultura": {
+        "id": "aves_001",
+        "nombre": "Producción Avícola",
+        "tipos": [
+          {
+            "tipo": "Pollos de engorde",
+            "ciclo": "6-7 semanas",
+            "peso_final": "2.0-2.5 kg",
+            "conversión_alimenticia": "1.8-2.0",
+            "vivienda": "Galpón con densidad 12-15 aves/m²"
+          },
+          {
+            "tipo": "Gallinas ponedoras",
+            "ciclo": "16-18 meses de producción",
+            "produccion": "70-85% de postura",
+            "alimento": "16-17% proteína",
+            "vivienda": "Sistema en jaulas o piso con nidales"
+          }
+        ],
+        "bioseguridad": {
+          "medidas": [
+            "Aislamiento del galpón del exterior",
+            "Cambio de ropa y desinfección de calzado",
+            "Control de visitantes",
+            "Desinfección de equipos antes de usar",
+            "Eliminación segura de aves muertas"
+          ]
+        },
+        "enfermedades_comunes": {
+          "newcastle": "Vacunación en pulverizador a día 10.",
+          "bronquitis": "Vacunación a los 5-10 días de edad.",
+          "coccidiosis": "Anticoccidiano en alimento o agua."
+        }
+      }
+    },
+    "administracion_rural": {
+      "costos_produccion": {
+        "id": "costos_001",
+        "componentes": [
+          {
+            "rubro": "Preparación de terreno",
+            "incluye": "Limpieza, trazo, ahoyado, enmiendas."
+          },
+          {
+            "rubro": "Establecimiento",
+            "incluye": "Semillas, plantas, trasplante."
+          },
+          {
+            "rubro": "Insumos",
+            "incluye": "Fertilizantes, pesticidas, herbicidas."
+          },
+          {
+            "rubro": "Mano de obra",
+            "incluye": "Plantación, deshierbes, cosecha."
+          },
+          {
+            "rubro": "Servicios",
+            "incluye": "Riego, transporte, comercialización."
+          }
+        ]
+      },
+      "contabilidad_basica": {
+        "id": "contabilidad_001",
+        "conceptos": {
+          "ingresos": "Venta de productos, subproductos, servicios agrícolas.",
+          "egresos": "Costos de producción, servicios, impuestos.",
+          "ganancia_neta": "Ingresos - Egresos",
+          "rentabilidad": "(Ganancia neta / Inversión total) x 100"
+        }
+      }
+    }
+  }
+}

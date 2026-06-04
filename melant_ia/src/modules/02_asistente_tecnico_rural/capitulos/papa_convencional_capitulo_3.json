@@ -1,0 +1,115 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización de Papa Convencional",
+  "cultivo": "Papa Convencional",
+  "seccion": "Extracción nutrientes, programa NPK, deficiencias, calcio/boro críticos",
+  "contenido": {
+    "introduccion": {
+      "titulo": "3.1 Nutrición en Papa Convencional",
+      "texto": "Papa es cultivo muy exigente nutrientes: 20 ton/hectárea extrae ~200 kg N, 80 kg P, 200 kg K. Deficiencia = rendimiento baja, tubérculo malformado, enfermedad susceptibilidad. Ecuador sierra = suelos ácidos (pH 5-6), requerimientos encalado + NPK balanceado."
+    },
+    "extraccion_nutrientes": {
+      "titulo": "3.2 Extracción de Nutrientes",
+      "por_tonelada": [
+        {
+          "nutriente": "Nitrógeno (N)",
+          "cantidad": "10-15 kg/tonelada",
+          "20_toneladas": "200-300 kg/ha"
+        },
+        {
+          "nutriente": "Fósforo (P₂O₅)",
+          "cantidad": "3-4 kg/tonelada",
+          "20_toneladas": "60-80 kg/ha"
+        },
+        {
+          "nutriente": "Potasio (K₂O)",
+          "cantidad": "8-12 kg/tonelada",
+          "20_toneladas": "160-240 kg/ha"
+        },
+        {
+          "nutriente": "Calcio (Ca)",
+          "cantidad": "2-3 kg/tonelada",
+          "20_toneladas": "40-60 kg/ha"
+        },
+        {
+          "nutriente": "Boro (B)",
+          "cantidad": "0.1-0.15 kg/tonelada",
+          "20_toneladas": "2-3 kg/ha"
+        }
+      ]
+    },
+    "programa_npk": {
+      "titulo": "3.3 Programa NPK Escalonado",
+      "fondo_siembra": {
+        "cantidad": "NPK 15-15-15 o similar",
+        "dosis": "800-1,200 kg/hectárea",
+        "nutrientes": "120-180 kg N, 120-180 kg P₂O₅, 120-180 kg K₂O"
+      },
+      "cobertera_v8": {
+        "timing": "30-40 días post-siembra",
+        "cantidad": "Urea 200-300 kg/hectárea",
+        "objetivo": "Nitrógeno máximo crecimiento"
+      },
+      "foliar_v12": {
+        "timing": "50-70 días (tuberización)",
+        "producto": "Aspersión fosfato monopotásico + boro",
+        "beneficio": "Previene caída flores, estimula tuberización"
+      }
+    },
+    "calcio_boro": {
+      "titulo": "3.4 Calcio y Boro - Críticos Papa",
+      "calcio": {
+        "problema": "Deficiencia = sarna polvillo (internal black spot), tuberculo colapsa interior",
+        "suelos": "Ácidos sierra Ecuador = deficiente típico",
+        "solucion": "Encalado 2-3 ton/ha cal si pH < 5.5, antes siembra"
+      },
+      "boro": {
+        "problema": "Deficiencia = corazon hueco (hollow heart), tubérculo interior vacio podrido",
+        "solucion": "Ácido bórico 1-2 kg/ha fondo, o aspersión foliar 0.05% (50 g/100 L agua)"
+      }
+    },
+    "analisis_suelo": {
+      "titulo": "3.5 Análisis de Suelo y Recomendaciones",
+      "parametros": [
+        {
+          "parametro": "pH",
+          "optimo": "6.0-7.0",
+          "accion_bajo": "Si < 5.5: encalado obligatorio"
+        },
+        {
+          "parametro": "Materia Orgánica",
+          "optimo": "> 3%",
+          "accion_bajo": "Si < 2%: compost pre-siembra USD 100-200/ha"
+        },
+        {
+          "parametro": "Potasio disponible",
+          "optimo": "> 200 ppm",
+          "bajo": "< 100 ppm = aumento K₂O 50 kg/ha extra"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.6 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Papas necesitan más potasio que maíz?",
+        "respuesta": "SÍ similar extracción (maíz 150-200 kg K/ha, papa 160-240 kg K/ha). K₂O es crítico tuberización calidad"
+      },
+      "q2": {
+        "pregunta": "¿Qué es sarna polvillo?",
+        "respuesta": "Deficiencia calcio = pudrición interna tubérculo (necrosis vascular). Prevenible encalado + Ca aspersión. Sin tratar = 20-30% pérdida cosecha"
+      },
+      "q3": {
+        "pregunta": "¿Boro es realmente necesario?",
+        "respuesta": "SÍ crítico. Corazón hueco (hollow heart) es boro deficiencia. Tratamiento fácil USD 10-20/hectárea"
+      },
+      "q4": {
+        "pregunta": "¿Aspersión foliar sustituye fondo?",
+        "respuesta": "NO, complementario. Fondo es nutrientes mayores, foliar es corrección/micro-nutrientes. Ambas necesarias óptimo"
+      },
+      "q5": {
+        "pregunta": "¿Encalado vale USD 200/hectárea?",
+        "respuesta": "SÍ si pH < 5.5. Beneficio: estructura suelo, disponibilidad nutrientes. ROI 3-4x (costo 1x, beneficio 3-4 años)"
+      }
+    }
+  }
+}

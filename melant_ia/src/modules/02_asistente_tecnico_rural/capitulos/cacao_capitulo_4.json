@@ -1,0 +1,482 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas del Cacao",
+  "cultivo": "Cacao",
+  "seccion": "Identificación, ciclo de vida, daños y control integrado",
+  "contenido": {
+    "introduccion_plagas": {
+      "titulo": "4.1 Introducción a las Plagas del Cacao",
+      "texto": "Las plagas constituyen una de las principales limitantes del cultivo de cacao en América Tropical. A diferencia de otras regiones (África y Asia) donde Monilia es limitante, en Ecuador y América Latina, la diversidad de plagas es mayor, requiriendo manejo integrado adaptado a condiciones locales. Las pérdidas por plagas pueden alcanzar 20-40% si no se implementa control preventivo.\n\nLa estrategia de Manejo Integrado de Plagas (MIP) en cacao se fundamenta en:\n(1) Monitoreo semanal de poblaciones\n(2) Control cultural (prácticas preventivas)\n(3) Control biológico (enemigos naturales)\n(4) Control químico (último recurso)\n(5) Registro de intervenciones",
+      "plagas_principales": [
+        "Monilia (Moniliophthora roreri) - Enfermedad fungal en frutos",
+        "Barrenador del cacao (Xyleborus affinis y X. ferrugineus)",
+        "Saltahojas (Helopeltis spp., especialmente H. antonii y H. cincinnus)",
+        "Polilla del cacao (Ephestia spp., plagas poscosecha)",
+        "Escama algodonosa (Planococcus spp. y Phenacoccus spp.)",
+        "Ácaros (Tetranychus spp., Eutetranychus spp.)"
+      ],
+      "nota": "Este capítulo enfatiza plagas VIVAS de campo (insectos, ácaros). Ver Capítulo 5 para enfermedades fungales y bacterianas"
+    },
+    "barrenador_cacao": {
+      "titulo": "4.2 Barrenador del Cacao (Xyleborus affinis y X. ferrugineus)",
+      "descripcion_general": "Los barrenadores del cacao son escarabajos xilófagos (comedores de madera) pertenecientes a la familia Scolytidae. Son considerados plagas primarias en cacao porque dañan el cambium y xilema, principal causa de muerte de ramas y árboles jóvenes",
+      "identificacion": {
+        "titulo": "Identificación",
+        "adulto": {
+          "familia": "Scolytidae",
+          "genero": "Xyleborus",
+          "especies_principales": "X. affinis (más destructiva), X. ferrugineus",
+          "tamaño": "3-4 mm de longitud",
+          "color": "Negro brillante",
+          "forma": "Cilíndrica",
+          "caracteristicas": [
+            "Élitros (alas endurecidas) con surcos profundos longitudinales",
+            "Protuberancia frontal en cabeza (característica del género)",
+            "Dimorfismo sexual: hembras aladas, machos braquípteros (alas reducidas)",
+            "Cuerpo duro, resistente"
+          ]
+        },
+        "larva": {
+          "tamaño": "0.5-1.0 mm",
+          "color": "Blanca cremosa",
+          "forma": "C-curvada, ápoda (sin patas)",
+          "ubicacion": "Interior de galerías en madera"
+        },
+        "tunneles_galeria": {
+          "descripcion": "Las galerías son el signo más evidente de infestación",
+          "caracteristicas": [
+            "Entrada: orificio puntiagudo 1-2 mm diámetro",
+            "Galería principal: vertical, 3-5 mm diámetro",
+            "Galerías secundarias: horizontales, ramificadas",
+            "Acumulación: aserrín fino negro (frass) en galerías"
+          ]
+        }
+      },
+      "ciclo_biologico": {
+        "titulo": "Ciclo Biológico",
+        "duracion_total": "30-45 días (según temperatura: 25-30°C óptimo)",
+        "etapas": [
+          {
+            "etapa": "Huevo",
+            "duracion": "3-5 días",
+            "detalles": "Colocado dentro de galería por hembra. Número: 50-150 huevos/galería/ciclo"
+          },
+          {
+            "etapa": "Larva",
+            "duracion": "10-20 días",
+            "estadios": "3-5 estadios larvales",
+            "detalles": "Se alimenta de hongos asociados ('ambrosias') en paredes de galería, no de madera directamente. Crecimiento rápido en temperaturas altas"
+          },
+          {
+            "etapa": "Pupa",
+            "duracion": "5-8 días",
+            "detalles": "En cámara pupal al final de galería"
+          },
+          {
+            "etapa": "Adulto",
+            "detalles": "Emerge, perfora salida, abandona galería. Se dispersa a nuevos hospederos. Longevidad: 6-12 meses"
+          }
+        ],
+        "generaciones_anuales": "4-6 generaciones/año en trópicos, permitiendo explosión poblacional"
+      },
+      "daños_causados": {
+        "titulo": "Daños Causados",
+        "daño_primario": {
+          "aspecto": "Galerías en madera",
+          "consecuencia": "Debilitamiento de tejido vascular, marchitez de rama, muerte de rama (cankering)"
+        },
+        "daño_secundario": {
+          "aspecto": "Introducción de hongos ambrosia",
+          "consecuencia": "Descoloración azulada de madera, no es el insecto quien come madera sino los hongos"
+        },
+        "marchitez_de_rama": {
+          "descripcion": "Síntoma más característico",
+          "progresion": "Infestación → debilitamiento vascular → pérdida de turgencia → marchitez → muerte",
+          "tiempo": "2-4 semanas desde infestación hasta muerte completa"
+        },
+        "impacto_economico": "Pérdidas de 15-30% en cosecha si hay infestaciones severas. Plantaciones jóvenes más afectadas"
+      },
+      "signos_presencia": [
+        "Orificio oscuro (1-2 mm) en tallo/rama con acumulación de aserrín fino negro",
+        "Ramas marchitas pero con copa verduzca (diferente de enfermedades fungales)",
+        "Decoloración azulada bajo corteza (hongo ambrosia)",
+        "Presencia de insectos negros diminutos saliendo de tallo"
+      ],
+      "factores_riesgo": {
+        "titulo": "Factores de Riesgo de Infestación",
+        "hospederos_preferidos": [
+          "Plantas estresadas (sequía, deficiencias nutricionales)",
+          "Heridas recientes (podas mal cicatrizadas)",
+          "Acumulación de madera muerta (ramas caídas, podas no removidas)",
+          "Plantas debilitadas por enfermedades",
+          "Plantas jóvenes con corteza tierna"
+        ],
+        "condiciones_ambientales": [
+          "Humedad relativa > 70% (favorece hongos ambrosia)",
+          "Temperatura 25-30°C (óptima para reproducción)",
+          "Época de lluvia (plantas fisiológicamente débiles)"
+        ]
+      },
+      "manejo_cultural_preventivo": {
+        "titulo": "Control Cultural Preventivo",
+        "practicas": [
+          {
+            "practica": "Sanitización del terreno",
+            "detalles": "Remover ramas muertas, caídas, podas. No dejar madera acumulada > 3 meses. Quemar o picar ramas infestadas"
+          },
+          {
+            "practica": "Poda de formación adecuada",
+            "detalles": "Cicatrización rápida es crítica. Usar sierra desinfectada (10% cloro entre cortes), dejar collarín (no cortar raso), aplicar pasta cicatrizante"
+          },
+          {
+            "practica": "Manejo del estrés",
+            "detalles": "Riego durante sequía, fertilización adecuada, control de malezas. Plantas vigorosas resisten mejor infestaciones"
+          },
+          {
+            "practica": "Control de plantas hospederas alternas",
+            "detalles": "Árboles de sombra muertos o decadentes pueden ser fuente de plagas. Remover o reemplazar"
+          },
+          {
+            "practica": "Distanciamiento en vivero",
+            "detalles": "Plantas muy cercanas crean microclima húmedo favorable. Dejar 30-40 cm entre plantas"
+          }
+        ]
+      },
+      "monitoreo": {
+        "titulo": "Monitoreo de Barrenador",
+        "frecuencia": "Semanal en terrenos con historial de infestación. Quincenal en terrenos sin problemas",
+        "procedimiento": [
+          {
+            "paso": 1,
+            "detalles": "Recorrer plantación en patrón transversal (50-100 plantas)"
+          },
+          {
+            "paso": 2,
+            "detalles": "Inspeccionar tallos y ramas primarias por orificio de entrada con aserrín oscuro"
+          },
+          {
+            "paso": 3,
+            "detalles": "Contar plantas infestadas, ramas afectadas por planta"
+          },
+          {
+            "paso": 4,
+            "detalles": "Registrar en libreta: fecha, plantas infestadas %, severidad (1=1-2 ramas, 2=3-5 ramas, 3=>5 ramas)"
+          },
+          {
+            "paso": 5,
+            "detalles": "Nivel crítico: > 10% plantas infestadas → intervención inmediata"
+          }
+        ],
+        "trampa_monitoreo": "Cilindro de madera fresca (10 cm diámetro, 30 cm largo) colocado en campo atrae barrenadores. Revisar 2x/semana"
+      },
+      "control_quimico": {
+        "titulo": "Control Químico de Barrenador",
+        "opciones": [
+          {
+            "metodo": "Insecticida en tronco/rama",
+            "producto": "Chlorpyrifos 48% EC (Lorsban)",
+            "dosis": "50 mL en 5 L agua, verter en orificio con jeringa o pipeta",
+            "aplicacion": "Apenas se detecta galería (cuando hay aserrín fresco). Efectividad: 90-95%"
+          },
+          {
+            "metodo": "Pasta cicatrizante + insecticida",
+            "producto": "Mezclar 5 mL Chlorpyrifos en 1 kg pasta de cicatrización",
+            "aplicacion": "Después de poda de rama infestada, cubrir herida. Previene reinvasión"
+          },
+          {
+            "metodo": "Emulsión asperrable",
+            "producto": "Chlorpyrifos 48% EC o Dimethoate 40% EC",
+            "dosis": "500 mL de producto en 100 L agua",
+            "aplicacion": "Aspersión total de árbol en abril-mayo (pre-lluvia). Cubre corteza, penetra grietas. 2 aplicaciones separadas 15 días"
+          }
+        ],
+        "precauciones": [
+          "Chlorpyrifos es neurotóxico. Usar equipo protección: guantes, mascarilla respiratoria, ropa manga larga",
+          "No aplicar si hay floración (riesgo abejas, polinizadores)",
+          "Respetar período de carencia (14 días antes cosecha)",
+          "Rotación con otros insecticidas cada 2-3 ciclos (resistencia)"
+        ]
+      },
+      "control_biologico": {
+        "titulo": "Control Biológico",
+        "enemigos_naturales": [
+          {
+            "enemigo": "Parasitoides (avispas miniatura)",
+            "especificidad": "Parasitan larvas y pupas en galería",
+            "efectividad": "Controla 20-40% de población en condiciones naturales"
+          },
+          {
+            "enemigo": "Depredadores (hormigas, escarabajos cavernícolas)",
+            "especificidad": "Comen adultos antes entrada",
+            "manejo": "Proteger hormigueros, no usar insecticidas de amplio espectro"
+          }
+        ],
+        "manejo_biologico": "Mantener diversidad de enemigos naturales mediante: (1) no usar insecticidas de amplio espectro, (2) dejar residuos de poda como hábitat, (3) mantener cobertura vegetal"
+      }
+    },
+    "saltahojas_cacao": {
+      "titulo": "4.3 Saltahojas del Cacao (Helopeltis spp.)",
+      "descripcion_general": "Los saltahojas son hemípteros pequeños (3-5 mm) que perforan tejidos para succionar contenido celular. Causa 'damping off' o 'vaina seca' en frutos jóvenes y deformaciones severas. Muy destructivos en cacao en Ecuador, Colombia, Perú",
+      "identificacion": {
+        "adulto": {
+          "tamaño": "3-5 mm de longitud",
+          "color": "Marrón rojizo a gris",
+          "forma": "Ovalada, levemente aplanada",
+          "caracteristicas": [
+            "Antenas largas (casi largo del cuerpo)",
+            "Rostro (pico) largo, puntiagudo",
+            "Patas posteriores engrosadas para saltar",
+            "Alas semi-membranosas"
+          ]
+        },
+        "ninfas": {
+          "descripcion": "Similar a adultos pero más pequeños, sin alas",
+          "estadios": "5 estadios ninfales",
+          "duracion": "15-25 días total (temperatura 25°C)"
+        },
+        "huevo": {
+          "tamaño": "0.8 mm",
+          "color": "Blanco o amarillento",
+          "ubicacion": "Insertado en tejido (pecíolo, vaina floral, fruto joven)"
+        }
+      },
+      "ciclo_biologico": {
+        "titulo": "Ciclo Biológico",
+        "duracion_total": "30-45 días (huevo a adulto)",
+        "generaciones": "8-12 generaciones/año en trópicos",
+        "fecundidad": "30-50 huevos/hembra/ciclo",
+        "longevidad_adulto": "4-6 meses"
+      },
+      "daños_caracteristicos": {
+        "titulo": "Daños Caracterizados",
+        "sindrome_damping_off": {
+          "descripcion": "Necrosis de fruto joven (vaina verde)",
+          "progresion": [
+            "Puntura produce exudado lechoso",
+            "Área alrededor necrosada, amarilla",
+            "Expansión de necrosis: 1-2 cm por día",
+            "Fruto se deshidrata, se momifica",
+            "Caída de fruto o permanece como cáscara vacía"
+          ],
+          "timing_critico": "Frutos 3-8 semanas post-polinización más susceptibles"
+        },
+        "daño_hojas": {
+          "descripcion": "Punturas inyectan saliva tóxica",
+          "sintomas": "Areolas necróticas rodeadas de halo amarillo, enrollamiento de hoja"
+        },
+        "daño_flores": {
+          "descripcion": "Puntura en flores jóvenes",
+          "resultado": "Esterilidad, caída floral"
+        },
+        "impacto_rendimiento": "Pérdidas de 30-50% en floraciones principales si no se controla"
+      },
+      "signos_presencia": [
+        "Frutos jóvenes con áreas necrósicas irregulares, oscuras",
+        "Momificación de frutos en estadio 2-3 semanas",
+        "Presencia de insectos pequeños saltando al mover plantas",
+        "Oviposición visible: grieta longitudinal en hoja/vaina floral"
+      ],
+      "factores_riesgo": {
+        "titulo": "Factores de Riesgo",
+        "condiciones_favorables": [
+          "Temperatura 24-28°C (óptima multiplicación)",
+          "Humedad 70-85% (favorece actividad)",
+          "Época lluviosa (máxima actividad)",
+          "Deficiencia nutricional de plantas (menor resistencia)",
+          "Falta de control cultural"
+        ],
+        "periodo_critico": "Abril-Junio (pre-floración y floración principal en Ecuador)"
+      },
+      "manejo_cultural": {
+        "titulo": "Control Cultural Preventivo",
+        "practicas": [
+          {
+            "practica": "Poda de deshoje",
+            "detalles": "Remover 20-30% de copa en enero para eliminar huevos en hojas viejas. Reduce población inicial en 40-50%"
+          },
+          {
+            "practica": "Destrucción de frutos infestados",
+            "detalles": "Recolectar frutos momificados al suelo, quemar o enterrar profundo. Elimina poblaciones de Helopeltis refugiadas"
+          },
+          {
+            "practica": "Control de malezas hospederas",
+            "detalles": "Algunas malezas (Ricinus communis, Jatropha spp) son plantas hospederas. Controladas al erradicarlas"
+          },
+          {
+            "practica": "Manejo de sombra",
+            "detalles": "Reducir cobertura a 40-50% para desecamiento superficial, desfavorece Helopeltis"
+          }
+        ]
+      },
+      "monitoreo_saltahojas": {
+        "titulo": "Monitoreo de Saltahojas",
+        "metodo_1_visual": {
+          "procedimiento": "Revisar semanalmente 100-200 frutos jóvenes en panel de plantas",
+          "indicador": "Contabilizar frutos con necrosis fresca (< 1 semana de edad)"
+        },
+        "metodo_2_redes": {
+          "procedimiento": "Red de barrida (40 cm diámetro) en 20 plantas, 10 pasadas por planta",
+          "captura": "Saltahojas caen en red al movimiento",
+          "umbral": "> 5 insectos/10 pasadas = intervención próxima semana"
+        },
+        "metodo_3_trampas": {
+          "descripcion": "Bandejas amarillas pegajosas colocadas a nivel medio de copa",
+          "captura_semanal": "> 10 insectos = población alta"
+        },
+        "prediccion": "Monitorear en marzo-abril (pre-floración). Si población alta (>10/red), aplicar insecticida preventivamente"
+      },
+      "control_quimico_saltahojas": {
+        "titulo": "Control Químico de Saltahojas",
+        "opciones": [
+          {
+            "producto": "Imidacloprid 35% WS (Confidor)",
+            "dosis": "50 g en 100 L agua",
+            "aplicacion": "Aspersión total de árbol. 2-3 aplicaciones separadas 10-14 días. Periodo de carencia: 21 días"
+          },
+          {
+            "producto": "Dinotefuran 20% SG (Starkle)",
+            "dosis": "40 g en 100 L agua",
+            "aplicacion": "Aspersión foliar, 2 aplicaciones separadas 10 días. Sistémico, buen control"
+          },
+          {
+            "producto": "Dimethoate 40% EC (Rogor)",
+            "dosis": "500 mL en 100 L agua",
+            "aplicacion": "Opción económica, aspersión total. 3 aplicaciones cada 7-10 días. Menor efectividad pero menos residuos"
+          },
+          {
+            "producto": "Jabón potásico (bioinsecticida)",
+            "dosis": "10 L en 100 L agua",
+            "aplicacion": "Aspersión cada 5-7 días, 4-5 aplicaciones. Menos efectivo pero acepta entrada orgánica"
+          }
+        ],
+        "timing_critico": "Marzo-Abril (pre-floración) y después de floración principal (junio-julio) son períodos clave"
+      },
+      "control_biologico_saltahojas": {
+        "titulo": "Control Biológico",
+        "enemigos": [
+          {
+            "enemigo": "Avispa parasitoides (Eulophidae, Mymaridae)",
+            "parasitismo": "Hasta 30% de huevos en condiciones naturales"
+          },
+          {
+            "enemigo": "Depredadores: arañas, hormigas, chinches depredadores",
+            "efectividad": "Reducen ninfas y adultos"
+          }
+        ],
+        "manejo": "Evitar insecticidas de amplio espectro que matan parasitoides. Usar neonicotinoides en aplicación localizada"
+      }
+    },
+    "otras_plagas": {
+      "titulo": "4.4 Otras Plagas de Importancia",
+      "polilla_cacao": {
+        "nombre": "Polilla del Cacao (Ephestia spp.)",
+        "importancia": "Plaga POSCOSECHA, daño en almacenamiento",
+        "hospedero": "Granos secos (grano desecado), no fruto verde en campo",
+        "mencion": "Se detalla en protocolo de poscosecha. En campo puede afectar vainas abiertas espontáneamente"
+      },
+      "escama_algodonosa": {
+        "nombre": "Escama Algodonosa (Planococcus citri, Phenacoccus spp.)",
+        "tamaño": "1-3 mm",
+        "descripcion": "Pequeños insectos cubiertos con secreción algodonosa blanca",
+        "hospederos": "Raíces (P. citri) y follaje (Phenacoccus)",
+        "daño": "Succión de savia, necrosis de hoja, amarillamiento",
+        "control": "Imidacloprid 35 WS, 50 g/100L agua. 2 aplicaciones con 15 días intervalo"
+      },
+      "acaro_rojo": {
+        "nombre": "Ácaro Rojo (Tetranychus urticae, Eutetranychus orientalis)",
+        "tamaño": "0.3-0.5 mm",
+        "descripcion": "Ácaros que crean tela en hojas, clorosis generalizada",
+        "condicion_favorable": "Sequía, baja humedad (<60%)",
+        "daño": "Defoliación total si no se controla",
+        "control": "Azufre mojable 80%, 2-3 kg/100L agua. O Spiromesifen 150 mL/100L agua"
+      }
+    },
+    "plan_manejo_integrado": {
+      "titulo": "4.5 Plan de Manejo Integrado de Plagas (MIP) - Recomendaciones",
+      "calendario_anual": [
+        {
+          "periodo": "Enero-Febrero",
+          "plaga_riesgo": "Barrenador (pico población post-cosecha)",
+          "actividades": [
+            "Poda de deshoje (elimina huevos de Helopeltis en hojas viejas)",
+            "Recolección de frutos momificados",
+            "Sanitización de podas (quemar/picar madera muerta)"
+          ]
+        },
+        {
+          "periodo": "Marzo",
+          "plaga_riesgo": "Saltahojas (población creciente)",
+          "actividades": [
+            "Monitoreo con red de barrida (Helopeltis)",
+            "Si población > 5/10 barridas: preparar para aplicación",
+            "Aplicar insecticida sistémico preventivamente"
+          ]
+        },
+        {
+          "periodo": "Abril-Junio",
+          "plaga_riesgo": "Saltahojas (crítico en floración principal)",
+          "actividades": [
+            "Monitoreo semanal de frutos jóvenes (necrosis)",
+            "1a aplicación de insecticida (si no hecha en marzo)",
+            "2a aplicación 10-14 días después (coincide con pico de floración)",
+            "3a aplicación 10-14 días después (para proteger segunda generación de frutos)"
+          ]
+        },
+        {
+          "periodo": "Julio-Agosto",
+          "plaga_riesgo": "Barrenador + Saltahojas (floración secundaria)",
+          "actividades": [
+            "Monitoreo barrenador: buscar orificio con aserrín negro",
+            "Aplicar insecticida si barrenador > 10% plantas",
+            "Riego durante sequía (estrés predispone a barrenador)"
+          ]
+        },
+        {
+          "periodo": "Septiembre-Octubre",
+          "plaga_riesgo": "Barrenador (pico población pre-cosecha)",
+          "actividades": [
+            "Monitoreo intenso de barrenador",
+            "Aplicación insecticida si necesario (respetar carencia 14 días pre-cosecha)",
+            "Remover ramas con galerías (control cultural urgente)"
+          ]
+        },
+        {
+          "periodo": "Noviembre-Diciembre",
+          "plaga_riesgo": "General (fin de ciclo)",
+          "actividades": [
+            "Cosecha principal",
+            "Recolección de frutos infestados/momificados",
+            "Sanitización post-cosecha"
+          ]
+        }
+      ]
+    },
+    "preguntas_frecuentes_plagas": {
+      "titulo": "4.6 Preguntas Frecuentes - Plagas del Cacao",
+      "q1": {
+        "pregunta": "¿Cómo distingo Saltahojas de otras causas de fruto momificado?",
+        "respuesta": "Saltahojas: necrosis comienza en pequeña puntadura (centro visible), expansión rápida (1-2 cm/día), margen irregular, sin esporulación fúngica. Monilia: necrosis difusa, crecimiento lento (3-5 días), presencia de esporulación blanca. En duda: observar insecto vivo en fruto con lupa"
+      },
+      "q2": {
+        "pregunta": "¿Puedo usar insecticidas naturales (neem) en lugar de sintéticos?",
+        "respuesta": "Neem (Azadirachta indica) 3% EC es menos efectivo (60-70% vs 90%+ de neonicotinoides). En cultivos pequeños/orgánicos puede usarse, pero requiere 3-4 aplicaciones vs 2-3. Para plagas severas, neonicotinoides son más costo-efectivos"
+      },
+      "q3": {
+        "pregunta": "¿Qué hago si detecto barrenador después de cosecha?",
+        "respuesta": "Prioridad: remover rama infestada completa (cortar 20-30 cm bajo última galería visible). Quemar inmediatamente o picar finamente. Aplicar Chlorpyrifos en tronco si hay múltiples ramas infestadas"
+      },
+      "q4": {
+        "pregunta": "¿Pueden las plagas causar caída de flores?",
+        "respuesta": "Sí. Saltahojas pinchan flores jóvenes inyectando saliva tóxica → esterilidad floral → caída. Barrenador indirectamente (deseca rama, flores no tienen transporte de agua). Monitorear floración: si caída > 50%, buscar saltahojas"
+      },
+      "q5": {
+        "pregunta": "¿Qué resistencia a insecticidas debo esperar?",
+        "respuesta": "Saltahojas desarrolla resistencia a neonicotinoides en 3-4 años de aplicación continua. Rotación: año 1-2 imidacloprid, año 3 dinotefuran, año 4 jabón potásico o descanso. Monitoreo permite detección temprana (menor mortalidad de lo esperado)"
+      },
+      "q6": {
+        "pregunta": "¿Puedo combinar plagas y enfermedades en protocolo unificado?",
+        "respuesta": "Parcialmente. Ambos se benefician de control cultural similar (sanitización, poda). Pero: (1) control químico diferente (insecticidas vs fungicidas), (2) períodos de máxima presión diferentes. Monitorear ambos para optimizar intervenciones"
+      }
+    }
+  }
+}

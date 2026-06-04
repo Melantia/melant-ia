@@ -1,0 +1,231 @@
+{
+  "capitulo": 7,
+  "titulo": "Economía de Papa Convencional",
+  "cultivo": "Papa Convencional",
+  "seccion": "Inversión, costos producción, ingresos, rentabilidad, mercado Ecuador",
+  "contenido": {
+    "introduccion": {
+      "titulo": "7.1 Introducción Economía Papa",
+      "texto": "Papa Ecuador cultivo estratégico (seguridad alimentaria) + comercial (exportación). Rendimiento convencional 20-30 ton/hectárea (ALTO comparado maíz/arroz), pero inversión también ALTA (semilla certificada, fungicida). ROI tipico 30-50% si buen manejo."
+    },
+    "inversion_inicial": {
+      "titulo": "7.2 Inversión Inicial - Papa Convencional",
+      "escenario": "5 hectáreas transicion sierra (2,000-2,500m),",
+      "componentes": [
+        {
+          "concepto": "Semilla certificada",
+          "cantidad": "2,500 kg (500 kg/hectárea)",
+          "costo": "USD 0.60/kg",
+          "subtotal": "USD 1,500"
+        },
+        {
+          "concepto": "Preparacion terreno",
+          "cantidad": "Arada + rastrillado + nivelación",
+          "subtotal": "USD 150-250"
+        },
+        {
+          "concepto": "Compost",
+          "cantidad": "50 toneladas (10 ton/ha)",
+          "costo": "USD 50/ton",
+          "subtotal": "USD 2,500"
+        },
+        {
+          "concepto": "Encalado (si pH < 5.5)",
+          "cantidad": "10-15 toneladas cal",
+          "costo": "USD 50-80/ton",
+          "subtotal": "USD 500-1,200"
+        },
+        {
+          "concepto": "Fertilizante fondo NPK",
+          "cantidad": "NPK 15-15-15: 4,000-6,000 kg",
+          "costo": "USD 0.20/kg",
+          "subtotal": "USD 800-1,200"
+        },
+        {
+          "concepto": "Cobertera urea",
+          "cantidad": "1,000-1,500 kg",
+          "costo": "USD 0.25/kg",
+          "subtotal": "USD 250-375"
+        },
+        {
+          "concepto": "Fungicida tizón",
+          "cantidad": "Metalaxil + Mancozeb 4-5 aplicaciones",
+          "costo": "USD 150-250",
+          "subtotal": "USD 750"
+        },
+        {
+          "concepto": "Insecticida",
+          "cantidad": "Polilla + plagas",
+          "subtotal": "USD 100-150"
+        },
+        {
+          "concepto": "Labor siembra",
+          "cantidad": "Aporcado 2 pasadas",
+          "costo": "USD 50/hectárea",
+          "subtotal": "USD 250"
+        },
+        {
+          "concepto": "Labor cosecha mecanizada",
+          "cantidad": "USD 250/hectárea",
+          "subtotal": "USD 1,250"
+        }
+      ],
+      "total_inicial": "USD 8,450-10,000"
+    },
+    "costos_operativos": {
+      "titulo": "7.3 Costos Operativos por Hectárea",
+      "desglose": [
+        {
+          "rubro": "Semilla",
+          "costo": "USD 300"
+        },
+        {
+          "rubro": "Fertilizante",
+          "costo": "USD 150-200"
+        },
+        {
+          "rubro": "Fungicida/Insecticida",
+          "costo": "USD 80-100"
+        },
+        {
+          "rubro": "Labor preparacion/mantenimiento",
+          "costo": "USD 100"
+        },
+        {
+          "rubro": "Labor cosecha",
+          "costo": "USD 250"
+        }
+      ],
+      "total_operativo": "USD 880-950 por hectárea"
+    },
+    "ingresos_produccion": {
+      "titulo": "7.4 Ingresos Proyectados",
+      "rendimientos": [
+        {
+          "escenario": "Bajo (plagas/enfermedad mal controlada)",
+          "rendimiento": "15 toneladas/hectárea",
+          "precio": "USD 0.25/kg",
+          "ingreso": "USD 3,750/hectárea"
+        },
+        {
+          "escenario": "Medio (convencional típico)",
+          "rendimiento": "22 toneladas/hectárea",
+          "precio": "USD 0.30/kg",
+          "ingreso": "USD 6,600/hectárea"
+        },
+        {
+          "escenario": "Alto (tecnificado, suelo excelente)",
+          "rendimiento": "30 toneladas/hectárea",
+          "precio": "USD 0.35/kg (mercado premium)",
+          "ingreso": "USD 10,500/hectárea"
+        }
+      ]
+    },
+    "rentabilidad_analisis": {
+      "titulo": "7.5 Análisis de Rentabilidad",
+      "escenario_medio": {
+        "supuestos": [
+          "Inversión: USD 2,000/hectárea (amortizada 3 años)",
+          "Costos operativos: USD 900/hectárea",
+          "Rendimiento: 22 toneladas/hectárea",
+          "Precio: USD 0.30/kg"
+        ],
+        "ingresos": "22 ton × USD 0.30 × 1,000 kg/ton = USD 6,600",
+        "costos": "USD 900 + USD 667 amortización = USD 1,567",
+        "utilidad": "USD 6,600 - USD 1,567 = USD 5,033",
+        "roi": "USD 5,033 ÷ (USD 10,000 inversión 5 ha) = 50% para 5 ha = 10% ROI/ha/año"
+      },
+      "variacion_precio": [
+        {
+          "escenario": "Precio BAJO USD 0.20/kg",
+          "ingreso": "22 × USD 0.20 = USD 4,400",
+          "utilidad": "USD 4,400 - USD 1,567 = USD 2,833",
+          "roi": "28% (comprimido pero viable)"
+        },
+        {
+          "escenario": "Precio ALTO USD 0.40/kg",
+          "ingreso": "22 × USD 0.40 = USD 8,800",
+          "utilidad": "USD 8,800 - USD 1,567 = USD 7,233",
+          "roi": "72% (excelente)"
+        }
+      ]
+    },
+    "comparativa_cultivos": {
+      "titulo": "7.6 Comparativa Papa vs Otros Cultivos",
+      "tabla": [
+        {
+          "cultivo": "Papa",
+          "inversion": "USD 2,000/ha",
+          "costo_anual": "USD 900/ha",
+          "ingreso": "USD 6,600/ha",
+          "utilidad": "USD 5,033/ha",
+          "roi": "50%"
+        },
+        {
+          "cultivo": "Arroz Convencional",
+          "inversion": "USD 230/ha",
+          "costo_anual": "USD 186/ha",
+          "ingreso": "USD 910/ha",
+          "utilidad": "USD 678/ha",
+          "roi": "49%"
+        },
+        {
+          "cultivo": "Maíz",
+          "inversion": "USD 1,900/ha",
+          "costo_anual": "USD 731/ha",
+          "ingreso": "USD 1,100/ha",
+          "utilidad": "USD 369/ha",
+          "roi": "19%"
+        }
+      ],
+      "conclusion": "Papa ROI COMPETITIVO arroz, SUPERIOR maíz. Riesgo: inversión mayor, requiere manejo técnico"
+    },
+    "mercado": {
+      "titulo": "7.7 Mercado de Papa Ecuador",
+      "demanda": [
+        "Ecuador consume 50 kg/hab/año = 1.8M toneladas/año nacional",
+        "Exportación: Papa procesada (papas fritas) USD 200M/año"
+      ],
+      "canales": [
+        {
+          "canal": "Mercado fresco local",
+          "precio": "USD 0.20-0.35/kg",
+          "volumen": "70% cosecha"
+        },
+        {
+          "canal": "Industria papas fritas",
+          "precio": "USD 0.25-0.40/kg",
+          "volumen": "20% cosecha (quality standard)"
+        },
+        {
+          "canal": "Exportación procesada",
+          "precio": "USD 1.50-3.00/kg (valor agregado)",
+          "volumen": "10% cosecha"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "7.8 Preguntas Frecuentes - Economía",
+      "q1": {
+        "pregunta": "¿Papa es rentable Ecuador?",
+        "respuesta": "SÍ ROI 50% típico (50% mejor que arroz, 2.6x maíz). PERO inversión inicial ALTA (semilla certificada USD 1,500). Escala mínima 5 hectáreas recomendada"
+      },
+      "q2": {
+        "pregunta": "¿Precio papa sube futuro?",
+        "respuesta": "Demanda nacional creciente + exportación = precios tendencia estable/al alza. Mejor estrategia: calidad (medium size) = premium precio"
+      },
+      "q3": {
+        "pregunta": "¿Almacenaje refrigerado vale USD 20-40/ton/mes?",
+        "respuesta": "SÍ si precio off-season 50-100% mayor. Papa cosecha mayo USD 0.25/kg, almacenada agosto USD 0.40/kg = rentable"
+      },
+      "q4": {
+        "pregunta": "¿Qué es riesgo principal papa?",
+        "respuesta": "Tizón tardío (30-50% pérdida potencial). Fungicida preventivo USD 150-250 es OBLIGATORIO = seguro rendimiento"
+      },
+      "q5": {
+        "pregunta": "¿Papa + arroz + ganadería es combinación?",
+        "respuesta": "EXCELENTE. Papa estación seca (junio-septiembre), arroz lluvia (noviembre-marzo), ganadería año-redondo = ingresos diversificados"
+      }
+    ]
+  }
+}

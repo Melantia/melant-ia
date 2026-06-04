@@ -1,0 +1,169 @@
+{
+  "capitulo": 1,
+  "titulo": "Introducción a la Ganadería Bovina",
+  "cultivo": "Ganadería Bovina",
+  "seccion": "Razas, fisiología, sistemas producción, genética, selección",
+  "contenido": {
+    "introduccion_ganaderia": {
+      "titulo": "1.1 Introducción a Ganadería Bovina en Ecuador",
+      "importancia": "Ganadería es sector agrícola #1 por ingresos (antes cacao). ~3.8 millones bovinos. Producción: 1.8 millones toneladas leche/año, 250,000 toneladas carne/año",
+      "sistemas_produccion": [
+        "Lechería especializada: Holstein, Jersey (200-300 litros/año)",
+        "Doble propósito: Carne + Leche (Brahman, Pardo Suizo, Simmental)",
+        "Carne especializada: Brahman, Angus, Hereford",
+        "Criollo/Tradicional: Adaptado sierra, menor producción"
+      ],
+      "region_ecuador": [
+        "Sierra: Lechería (Pichincha, Tungurahua, Cotopaxi) 60% producción",
+        "Costa: Doble propósito/Carne (Manabí, Guayas)",
+        "Oriente: Ganadería extensiva/Carne"
+      ]
+    },
+    "razas_principales": {
+      "titulo": "1.2 Razas Principales para Ecuador",
+      "holstein": {
+        "origen": "Holanda",
+        "produccion_leche": "20-25 litros/día (6,000-7,500 litros/año)",
+        "caracteristicas": [
+          "Color blanco-negro (o rojo-blanco)",
+          "Tamaño grande 600-700 kg hembra",
+          "Cuerpo angular (para producción)",
+          "Alta demanda metabólica"
+        ],
+        "adaptacion_ecuador": "EXCELENTE sierra (altura 2,500-3,500 m, clima frío)",
+        "limitaciones": "Sensible clima caliente (> 25°C estrés calórico), requiere manejo intensivo, alimento concentrado"
+      },
+      "jersey": {
+        "origen": "Isla Jersey (UK)",
+        "produccion_leche": "12-15 litros/día (3,500-4,500 litros/año)",
+        "caracteristicas": [
+          "Color castaño claro",
+          "Tamaño pequeño 300-400 kg hembra",
+          "Leche alta en grasa (5.5-6% vs Holstein 3.5%)",
+          "Eficiente conversión alimento"
+        ],
+        "adaptacion_ecuador": "BUENA, sierra y transición",
+        "ventaja": "Menor alimento requerido (vs Holstein 25% más barato mantenimiento)"
+      },
+      "pardo_suizo": {
+        "origen": "Suiza",
+        "produccion_leche": "15-18 litros/día (4,500-5,400 litros/año)",
+        "caracteristicas": [
+          "Color pardo chocolate uniforme",
+          "Tamaño 500-600 kg",
+          "Doble propósito posible",
+          "Resistencia moderada calor"
+        ],
+        "adaptacion_ecuador": "EXCELENTE sierra+transición"
+      },
+      "brahman": {
+        "origen": "India (desarrollada USA)",
+        "produccion_leche": "8-12 litros/día (2,400-3,600 litros/año si es doble propósito)",
+        "carne": "Ganancia diaria 1.2-1.8 kg/día, peso adulto 800-1,000 kg",
+        "caracteristicas": [
+          "Giba pronunciada",
+          "Piel suelta (papada)",
+          "Color: Rojo, gris, negro",
+          "Resistencia EXCELENTE calor, parásitos, enfermedades"
+        ],
+        "adaptacion_ecuador": "EXCELENTE costa (>25°C), tolerancia maleza"
+      },
+      "simmental": {
+        "origen": "Baviera (Alemania)",
+        "produccion": "Doble propósito (15 litros leche + carne)",
+        "caracteristicas": [
+          "Color rojo-blanco o oro",
+          "Tamaño grande 600-800 kg",
+          "Musculatura buena (carne)",
+          "Leche moderada pero calidad"
+        ],
+        "adaptacion_ecuador": "BUENA sierra (transición a costa)"
+      }
+    },
+    "fisiologia_basica": {
+      "titulo": "1.3 Fisiología Básica del Bovino",
+      "digestion_rumiante": [
+        "Estómago 4 cámaras: Rumen, Retículo, Omaso, Abomaso",
+        "Rumen: Fermentación bacteriana de celulosa (pH 6.0-7.0)",
+        "Tiempo retención: 24-72 horas fibra",
+        "Conversión alimento: 6-8 kg alimento = 1 kg leche (ratio)",
+        "Calorías: 1 kg pasto seco = 0.8-1.0 Mcal energía"
+      ],
+      "ciclo_reproduccion": [
+        "Pubertad: 8-12 meses (varía raza)",
+        "Ciclo estral: 18-24 días (promedio 21 días)",
+        "Gestación: 280 días (9.3 meses)",
+        "Intervalo entre partos: 365-400 días (anual ideal)",
+        "Edad primer parto: 22-28 meses"
+      ],
+      "produccion_leche": [
+        "Lactancia dura: 305 días (tipicamente)",
+        "Pico producción: Día 30-60 post-parto",
+        "Descenso: ~3% por mes después pico",
+        "Periodo seco: 60 días antes próximo parto"
+      ],
+      "thermoregulacion": [
+        "Temperatura óptima: 10-20°C (rango confort)",
+        "Zona estrés calórico: > 25°C + humedad > 60%",
+        "Temperatura crítica: > 30°C (producción cae 30%)",
+        "Respuesta: Respiración acelerada, transpiración reducida (vs humanos)"
+      ]
+    },
+    "genética_seleccion": {
+      "titulo": "1.4 Genética y Selección Ganadera",
+      "heredabilidad_caracteres": [
+        {
+          "caracter": "Producción leche",
+          "heredabilidad": "0.35-0.45 (40-50% determinado genética)"
+        },
+        {
+          "caracter": "Grasa leche",
+          "heredabilidad": "0.50-0.60 (más hereditario)"
+        },
+        {
+          "caracter": "Proteína leche",
+          "heredabilidad": "0.45-0.55"
+        },
+        {
+          "caracter": "Ganancia peso",
+          "heredabilidad": "0.40-0.50"
+        }
+      ],
+      "criterios_seleccion": [
+        "Producción: Historial lactancia madre/abuelas",
+        "Conformación: Órgano aprehensión (pezones, ubres)",
+        "Longevidad: Número lactancias completadas",
+        "Fertilidad: Intervalo parto regular",
+        "Salud: Sin mastitis, parásitos recurrentes"
+      ],
+      "mejora_genetica": [
+        "Inseminación artificial (1990s): Acceso genética superior",
+        "Semen sexado: Seleccionar sexo (50% hembras si leche)",
+        "Genómica (reciente): Predicción genética a edad joven"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "1.5 Preguntas Frecuentes - Introducción",
+      "q1": {
+        "pregunta": "¿Qué raza elegir para Ecuador sierra?",
+        "respuesta": "Holstein si lechería pura (máxima producción, requiere manejo). Jersey si presupuesto limitado (eficiente, produce 15L/día). Pardo Suizo equilibrio"
+      },
+      "q2": {
+        "pregunta": "¿Qué raza para costa caliente?",
+        "respuesta": "Brahman o razas Brahman-cruce (Braford, Brangus). Resistencia calor. Si leche: Pardo Suizo × Brahman cruce doble propósito"
+      },
+      "q3": {
+        "pregunta": "¿Holstein produce más que Jersey?",
+        "respuesta": "SÍ cantidad (Holstein 24L/día vs Jersey 14L). Pero Jersey leche grasa cuesta MÁS (queso premium). Holstein para volumen, Jersey para margen"
+      },
+      "q4": {
+        "pregunta": "¿Puedo mezclar razas?",
+        "respuesta": "SÍ ventajoso (heterosis 5-10% producción). Ejemplo: Holstein × Jersey = producción 18-20L + eficiencia Jersey"
+      },
+      "q5": {
+        "pregunta": "¿Genética mejora rendimiento?",
+        "respuesta": "SÍ pero 40-50% (resto es alimentación, sanidad, manejo). Vaca genéticamente buena + mal alimento = mediocre. Ambos necesarios"
+      }
+    ]
+  }
+}

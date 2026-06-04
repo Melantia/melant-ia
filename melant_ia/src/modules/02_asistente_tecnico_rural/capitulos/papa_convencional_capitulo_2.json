@@ -1,0 +1,80 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento y Preparación de Papa Convencional",
+  "cultivo": "Papa Convencional",
+  "seccion": "Selección semilla, preparación terreno, densidad siembra, fertirrigación",
+  "contenido": {
+    "introduccion": {
+      "titulo": "2.1 Introducción a Establecimiento",
+      "texto": "Papa convencional requiere semilla certificada (no reciclada = degeneración viral, cosecha baja). Preparación terreno exhaustiva: suelo friable 20-30 cm profundidad (túbérulos comprimidos = malformes). Densidad siembra crítica: 25,000-30,000 plantas/hectárea = balance rendimiento vs tamaño tubérculo."
+    },
+    "seleccion_semilla": {
+      "titulo": "2.2 Selección de Semilla Certificada",
+      "tubérculo_semilla": {
+        "tamaño": "25-50 gramos (huevo pequeño)",
+        "ojos": "2-4 ojos viables por tubérculo",
+        "salud": "Libre virus: PLRV, PVX, PVY (test serológico recomendado)",
+        "generacion": "Pre-básica → Básica → Certificada (3 generaciones máximo antes degeneración)"
+      },
+      "costo": "USD 0.40-0.80 por tubérculo semilla (USD 10,000-24,000/hectárea semilla)",
+      "problematica": "Agricultores Ecuador reciclan semilla = virus acumula, rendimiento cae 30-50% generación 2-3"
+    },
+    "preparacion_terreno": {
+      "titulo": "2.3 Preparación del Terreno",
+      "arada": {
+        "profundidad": "20-30 cm (papa requiere rastrojo profundo)",
+        "numero_pasadas": "2-3 aradas (romper compactación)",
+        "equipo": "Arado moldboard + arado de disco"
+      },
+      "nivelacion": "Importante (agua encharcada = pudrición), pero menor crítico que arroz",
+      "materia_organica": "Compost 5-10 ton/ha incorporado pre-siembra (mejora estructura)",
+      "drenaje": "Zanjas laterales si suelo compactado/pesado (arcilla)"
+    },
+    "siembra": {
+      "titulo": "2.4 Método de Siembra",
+      "densidad": {
+        "objetivo": "25,000-30,000 plantas/hectárea",
+        "calculo": "Surcos 75 cm × plantas 15 cm = 8,889 plantas/hectárea (insuficiente)",
+        "ajuste": "Surcos 60 cm × plantas 10 cm = 16,667 plantas/hectárea (bajo)",
+        "optimo": "Surcos 50 cm × plantas 8 cm = 25,000 plantas/hectárea"
+      },
+      "profundidad": "8-10 cm (si menor = tubérculo expuesto luz/verde, si mayor = energía extra levantamiento)",
+      "mecanizacion": "Sembradora de precision (exactitud densidad), o manual surco"
+    },
+    "aporcado": {
+      "titulo": "2.5 Aporcado Progresivo",
+      "primera": {
+        "timing": "30-40 días post-siembra (V6-V8)",
+        "objetivo": "Cubrir tallos emergentes, proteger tuberización"
+      },
+      "segunda": {
+        "timing": "50-60 días (V10-V12)",
+        "objetivo": "Aumentar altura surco (raíces nuevas = tubérculos nuevos)"
+      },
+      "beneficio": "Cada aporcado = más tubérculos, mayor rendimiento potencial"
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.6 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Puedo reciclar mi propia semilla?",
+        "respuesta": "RIESGO ALTO. Año 2-3 virus acumula = rendimiento baja 40-50%. Mejor: semilla certificada nueva cada 2 años"
+      },
+      "q2": {
+        "pregunta": "¿Qué pasa si siembro densidad baja?",
+        "respuesta": "Tubérculos más grandes (mercado premium) PERO menos toneladas totales. Convencional = maximizar rendimiento = densidad alta"
+      },
+      "q3": {
+        "pregunta": "¿Aporcado es obligatorio?",
+        "respuesta": "NO obligatorio pero +20-30% rendimiento. Costo labor USD 50-100/hectárea vale inversión"
+      },
+      "q4": {
+        "pregunta": "¿Profundidad siembra afecta emergencia?",
+        "respuesta": "SÍ mucho. Profunda > 10 cm = gasto energía levantamiento, emergencia desuniforme. Somera < 8 cm = tuberización superficial/verde"
+      },
+      "q5": {
+        "pregunta": "¿Compost pre-siembra es necesario?",
+        "respuesta": "Beneficioso (estructura, CIC), pero no obligatorio si suelo descente. Costo USD 50-150/hectárea, ROI generalmente positivo"
+      }
+    }
+  }
+}

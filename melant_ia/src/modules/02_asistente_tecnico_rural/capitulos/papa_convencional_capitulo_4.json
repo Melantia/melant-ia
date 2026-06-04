@@ -1,0 +1,106 @@
+{
+  "capitulo": 4,
+  "titulo": "Plagas de Papa Convencional",
+  "cultivo": "Papa Convencional",
+  "seccion": "Polilla guatemalteca, Ácaro blanco, mosca blanca, control químico/biológico",
+  "contenido": {
+    "introduccion": {
+      "titulo": "4.1 Introducción a Plagas de Papa",
+      "texto": "Papa convencional cultivo ecuatoriano altamente plagas = ambiente cálido-húmedo. Polilla guatemalteca (Tecia solanivora) es #1 plaga nacional = tuberización dentro túneles = pérdida 30-50% rendimiento si descontrolado. Ecuador implementa control integrado."
+    },
+    "polilla_guatemalteca": {
+      "titulo": "4.2 Polilla Guatemalteca (Tecia solanivora) - Plaga #1",
+      "biologia": {
+        "ciclo": "3-4 generaciones/año (ciclo 30-45 días)",
+        "larva": "Penetra tubérculo, túneles internos → pudrición",
+        "daño": "30-50% rendimiento si presencia alta"
+      },
+      "sintomas": [
+        "Agujeros entrada/salida tubérculo (frass heces alrededor)",
+        "Interior túneles, larva blanca cabeza marrón",
+        "Pudrición secundaria (bacteria hongo invade túneles)"
+      ],
+      "monitoreo": [
+        "Trampas feromonas: 1 trampa/hectárea (USD 3-5)",
+        "Muestreo suelo: 10 puntos, contar pupas"
+      ],
+      "umbral_accion": "> 2 polillas/trampa/noche = control",
+      "control": [
+        {
+          "metodo": "Insecticida",
+          "producto": "Spinosad (biopesticida)",
+          "dosis": "0.5-1 L/hectárea",
+          "timing": "V10-V12 (pre-tuberización)",
+          "costo": "USD 30-50"
+        },
+        {
+          "metodo": "Fenómona sexual",
+          "funcion": "Confusión cópula machos",
+          "costo": "USD 50-100/hectárea"
+        },
+        {
+          "metodo": "Control cultural",
+          "practica": "Cosecha oportuna (no dejar tubérculo en suelo)"
+        }
+      ]
+    },
+    "acaro_blanco": {
+      "titulo": "4.3 Ácaro Blanco (Polyphagotarsonemus latus)",
+      "biologia": {
+        "tamaño": "0.2 mm (microscópico)",
+        "habitat": "Envés hojas, buds, brotes",
+        "generacion": "10-14 días ciclo (rápida reproducción)"
+      },
+      "sintomas": [
+        "Hoja crispada, amarilla, bronceado follaje",
+        "Crecimiento acortado, enanismo planta",
+        "Daño severo: plantas mueren V8-V10"
+      ],
+      "control": [
+        {
+          "metodo": "Insecticida",
+          "producto": "Azufre mojable",
+          "dosis": "3-4 kg/hectárea",
+          "costo": "USD 15-25"
+        },
+        {
+          "metodo": "Neem oil",
+          "aplicacion": "Aspersión foliar 2-3 veces c/10 días"
+        }
+      ]
+    },
+    "mosca_blanca": {
+      "titulo": "4.4 Mosca Blanca (Bemisia tabaci)",
+      "problema": "Transmisora virus PLRV (Papa Leaf Roll Virus)",
+      "daño_directo": "Succión savia, amarillamiento",
+      "daño_indirecto": "Virus = degeneración tubérculo futuro, semilla contaminada",
+      "control": [
+        "Resistencia varietal: Gabriela resistente",
+        "Insecticida sistémico: Imidacloprid 20 mL/hectárea"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "4.5 Preguntas Frecuentes - Plagas",
+      "q1": {
+        "pregunta": "¿Polilla guatemalteca presente Ecuador?",
+        "respuesta": "SÍ muy establecida (registrada 1980s). Causa 30-50% pérdida sin control. Monitoreo obligatorio convenio nacional"
+      },
+      "q2": {
+        "pregunta": "¿Trampa feromonas atrae polilla?",
+        "respuesta": "SÍ monitoreo excelente (USD 50-100/hectárea = 1-2 trampas). NO es control completo, es aviso temprano"
+      },
+      "q3": {
+        "pregunta": "¿Spinosad es tóxico?",
+        "respuesta": "Bajo (biopesticida, bacteria Spinospora). Degradación rápida (5-7 días suelo). Seguro ambiente/humano"
+      },
+      "q4": {
+        "pregunta": "¿Acaro blanco visible?",
+        "respuesta": "NO (microscópico). Síntoma = crispamiento hoja es diagnóstico. Confirmación: lupa 30x"
+      },
+      "q5": {
+        "pregunta": "¿Virus PLRV se cura?",
+        "respuesta": "NO incurable en planta infectada. Control: semilla certificada virus-free, control mosca blanca vector"
+      }
+    ]
+  }
+}

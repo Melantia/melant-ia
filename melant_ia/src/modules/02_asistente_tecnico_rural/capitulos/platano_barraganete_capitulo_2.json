@@ -1,0 +1,601 @@
+{
+  "capitulo": 2,
+  "titulo": "Establecimiento del Cultivo de Plátano Barraganete",
+  "cultivo": "Plátano Barraganete",
+  "seccion": "Planificación, preparación de terreno, selección de germoplasma y técnicas de plantación",
+  "contenido": {
+    "planificacion_predio": {
+      "titulo": "2.1 Planificación del Predio",
+      "evaluacion_inicial": {
+        "paso_1_topografia": {
+          "titulo": "Paso 1: Evaluación de Topografía",
+          "procedimiento": [
+            "Mapear curvas de nivel cada 2-5 metros",
+            "Identificar pendientes usando clinómetro",
+            "Marcar zonas de escurrimiento de agua"
+          ],
+          "criterios": [
+            "Pendiente ideal: 0-5% (plano a ligeramente ondulado)",
+            "Pendiente aceptable: 5-15% (requiere terrazo cada 30-50 m)",
+            "Pendiente máxima tolerada: 20% (costoso, erosión alta)",
+            "> 20% pendiente: NO RECOMENDADO para plátano"
+          ],
+          "implicacion_barraganete": "Plátano tolera menos pendiente que café/cacao. Raíces superficiales se erosionan fácilmente en laderas"
+        },
+        "paso_2_drenaje": {
+          "titulo": "Paso 2: Evaluación de Drenaje",
+          "test_excavacion": [
+            "Excavar hoyo 60 cm profundidad",
+            "Llenar con agua, esperar 24 horas",
+            "Medir descenso nivel agua"
+          ],
+          "interpretacion": [
+            "Descenso > 15 cm/24h: Drenaje bueno (ideal)",
+            "Descenso 5-15 cm/24h: Drenaje moderado (aceptable)",
+            "Descenso < 5 cm/24h: Drenaje pobre (PROBLEMA - requiere drenaje artificial)"
+          ],
+          "para_barraganete": "Requiere drenaje bueno-moderado. Suelos hidromórficos causa pudrición radical, colapso pseudo-tallo"
+        },
+        "paso_3_observacion": {
+          "titulo": "Paso 3: Observación de Suelo en Perfil",
+          "procedimiento": [
+            "Excavar fosa 1 metro profundidad × 1 metro ancho",
+            "Documentar capas de suelo (horizontes)",
+            "Tomar muestras cada 20 cm"
+          ],
+          "buscar": [
+            "Profundidad efectiva: ¿Cuántos cm útiles para raíces?",
+            "Capas impermeables: ¿Arcilla compactada, roca?",
+            "Estructuras especiales: ¿Canales de agua, oquedades?"
+          ]
+        }
+      },
+      "analisis_suelo": {
+        "titulo": "Análisis de Suelo Químico y Físico",
+        "procedimiento_muestreo": [
+          "Tomar 15-20 submuestras en zigzag a través del terreno",
+          "Profundidad: 0-20 cm (zona radical principalmente)",
+          "Combinar submuestras en bolsa única (muestra compuesta)",
+          "Enviar laboratorio certificado"
+        ],
+        "parametros_quimicos": {
+          "pH": {
+            "rango_optimo": "6.0-7.5",
+            "barraganete_tolerancia": "5.5-8.0 (más tolerante que Cavendish)",
+            "accion_si_bajo": "Si pH < 5.5: Encalar 2-4 ton CaCO₃/ha",
+            "accion_si_alto": "Si pH > 8.0: Aplicar azufre 500-1000 kg/ha (lento)"
+          },
+          "materia_organica": {
+            "nivel_optimo": "> 3% (muy alto para trópico)",
+            "nivel_aceptable": "2-3%",
+            "nivel_deficiente": "< 2%",
+            "accion_baja": "Incorporar compost 20-40 ton/ha antes plantación"
+          },
+          "nitrogeno": {
+            "disponible_optimo": "> 100 ppm (suelo)",
+            "deficiente": "< 50 ppm",
+            "accion": "Aplicar 150-200 kg N/ha pre-plantación vía compost u urea"
+          },
+          "fosforo": {
+            "disponible_optimo": "15-30 ppm (Bray II)",
+            "deficiente": "< 10 ppm",
+            "accion": "Aplicar 60-100 kg P₂O₅/ha pre-plantación"
+          },
+          "potasio": {
+            "disponible_optimo": "> 150 ppm (intercambiable)",
+            "deficiente": "< 100 ppm",
+            "accion": "Aplicar 200-300 kg K₂O/ha pre-plantación"
+          },
+          "calcio_magnesio": {
+            "Ca_optimo": "> 1000 ppm",
+            "Mg_optimo": "> 250 ppm",
+            "relacion_Ca_Mg": "3-4:1 (ideal para balanza nutricional)"
+          },
+          "micronutrientes": [
+            "B: 0.5-1.0 ppm",
+            "Zn: 2-5 ppm",
+            "Cu: 1-3 ppm",
+            "Mn: 10-50 ppm",
+            "Fe: 5-15 ppm"
+          ]
+        },
+        "parametros_fisicos": {
+          "textura": {
+            "ideal": "Franco o franco-arenoso",
+            "aceptable": "Franco-arcilloso (si buen drenaje)",
+            "no_recomendado": "Arcilla pura (0-10% arena), arena pura (> 80% arena)"
+          },
+          "densidad_aparente": {
+            "optima": "1.1-1.3 g/cm³",
+            "compactada": "> 1.5 g/cm³ (PROBLEMA: requiere subsolación)"
+          },
+          "porosidad": {
+            "total": "45-55% (volumen poros)",
+            "areacion": "10-15% (poros grandes para aire)"
+          }
+        }
+      },
+      "distanciamiento": {
+        "titulo": "Distanciamiento de Plantación",
+        "opciones": [
+          {
+            "distancia": "2.5 × 2.5 m (1,600 plantas/ha)",
+            "densidad": "Alta",
+            "ventaja": "Mayor producción inicial/ha",
+            "desventaja": "Competencia por luz/nutrientes, mayor enfermedad, cosecha difícil"
+          },
+          {
+            "distancia": "3 × 3 m (1,111 plantas/ha)",
+            "densidad": "Media-Alta",
+            "ventaja": "Balance producción-manejo",
+            "desventaja": "Moderado"
+          },
+          {
+            "distancia": "3.5 × 3.5 m (816 plantas/ha)",
+            "densidad": "Media",
+            "ventaja": "Mejor aireación, menos enfermedad",
+            "desventaja": "Menor producción inicial/ha"
+          },
+          {
+            "distancia": "4 × 4 m (625 plantas/ha)",
+            "densidad": "Baja",
+            "ventaja": "Máxima calidad fruto, fácil cosecha",
+            "desventaja": "Menor productividad/ha, requiere intercalado"
+          }
+        ],
+        "recomendacion_barraganete": "3 × 3 m o 3.5 × 3 m es óptimo. Barraganete tolera densidad media mejor que Cavendish (menos competencia por agua)"
+      }
+    },
+    "preparacion_terreno": {
+      "titulo": "2.2 Preparación del Terreno",
+      "cronograma": "Idealmente completar 2-3 meses antes plantación",
+      "paso_1_limpieza": {
+        "titulo": "Paso 1: Limpieza y Desmonte",
+        "actividad": "Remover vegetación existente, árboles grandes, malezas",
+        "metodos": [
+          {
+            "metodo": "Manual",
+            "herramientas": "Machete, azadón, pala",
+            "ventaja": "Bajo costo, selectivo",
+            "desventaja": "Muy lento (10-20 jornadas/ha)"
+          },
+          {
+            "metodo": "Mecánico",
+            "equipo": "Tractor con cuchilla o desbrozadora",
+            "ventaja": "Rápido (1-2 días/ha)",
+            "desventaja": "Compactación de suelo, costo USD 200-400/ha"
+          },
+          {
+            "metodo": "Químico",
+            "herbicida": "Glifosato 48% @ 2-3 L/ha (7-10 días antes desmonte)",
+            "ventaja": "Complemento útil",
+            "desventaja": "No elimina completamente, requiere remoción manual después"
+          }
+        ]
+      },
+      "paso_2_encalado": {
+        "titulo": "Paso 2: Encalado (Si pH < 5.5)",
+        "calculo_dosis": "Basado en análisis suelo (SMP o Buff pH)",
+        "dosis_tipica": [
+          "pH 5.0-5.5: 2-3 ton CaCO₃ equivalente/ha",
+          "pH 4.5-5.0: 3-4 ton CaCO₃ equivalente/ha",
+          "pH < 4.5: 4-5 ton CaCO₃ equivalente/ha"
+        ],
+        "fuentes_cal": [
+          {
+            "fuente": "Caliza agricola (CaCO₃ puro)",
+            "costo": "USD 20-40/ton (puesto finca)",
+            "finura": "90% < 100 malla (mejor reactividad)"
+          },
+          {
+            "fuente": "Cal hidratada (Ca(OH)₂)",
+            "costo": "USD 60-100/ton",
+            "ventaja": "Acción rápida, listo en 2-4 semanas"
+          },
+          {
+            "fuente": "Cal viva (CaO)",
+            "costo": "USD 80-120/ton",
+            "precaución": "Requiere hidratación previa, riesgo quemadura"
+          }
+        ],
+        "aplicacion": [
+          "Distribuir uniformemente con esparcidora",
+          "Incorporar con arado 15-20 cm profundidad",
+          "Esperar 4-6 semanas antes plantación (reacción del suelo)"
+        ]
+      },
+      "paso_3_fertilizacion_base": {
+        "titulo": "Paso 3: Fertilización de Base Pre-Plantación",
+        "objetivo": "Elevar nutrientes del suelo a niveles óptimos",
+        "programa": [
+          {
+            "nutriente": "Nitrógeno",
+            "dosis": "100-150 kg N/ha",
+            "fuente": "Urea (46% N) = 217-326 kg/ha o Compost 20-30 ton/ha"
+          },
+          {
+            "nutriente": "Fósforo",
+            "dosis": "60-100 kg P₂O₅/ha",
+            "fuente": "Superfosfato triple (46% P₂O₅) = 130-217 kg/ha"
+          },
+          {
+            "nutriente": "Potasio",
+            "dosis": "150-200 kg K₂O/ha",
+            "fuente": "Cloruro de potasio (60% K₂O) = 250-333 kg/ha"
+          },
+          {
+            "nutriente": "Micronutrientes",
+            "dosis": "B 2-3 kg, Zn 5-10 kg, Cu 2-3 kg, Mn 5-10 kg/ha",
+            "fuente": "Quelatos o sulfatos (más económico)"
+          }
+        ],
+        "metodo_aplicacion": [
+          "Distribuir fertilizantes en fajas de 1-2 metros ancho",
+          "Incorporar con arado 15-20 cm profundidad",
+          "Esperar 2-4 semanas para estabilización química"
+        ]
+      },
+      "paso_4_subsolacion": {
+        "titulo": "Paso 4: Subsolación (Si hay Compactación)",
+        "indicador": "Densidad aparente > 1.4 g/cm³ o falta de drenaje",
+        "procedimiento": [
+          "Usar subsolador o arado de vertedera profunda",
+          "Profundidad: 40-50 cm (romper capa compactada)",
+          "Pasada única, puede llevar equipo pesado"
+        ],
+        "costo": "USD 200-300/ha"
+      },
+      "paso_5_camas_o_eras": {
+        "titulo": "Paso 5: Formación de Camas o Eras (En zonas húmedas)",
+        "cuando_aplicar": "Si zona tiene drenaje marginal o lluvias muy altas",
+        "especificacion": [
+          "Altura cama: 30-40 cm sobre nivel original",
+          "Ancho: 1-1.5 m",
+          "Espacios entre camas: 0.5-1 m (para escurrimiento)"
+        ],
+        "material": "Suelo de la zona + compost 30-50%",
+        "ventaja": "Mejor aeración, drenaje garantizado",
+        "desventaja": "Costo alto, requerimiento labor significativo"
+      }
+    },
+    "seleccion_germoplasma": {
+      "titulo": "2.3 Selección de Germoplasma y Preparación de Material",
+      "tipos_material": {
+        "titulo": "Tipos de Material Vegetativo Disponible",
+        "vitro_planta": {
+          "nombre": "Vitro-Planta (Cultivo de Tejido)",
+          "caracteristicas": [
+            "Altura: 15-30 cm",
+            "Edad: 5-6 meses de cultivo in vitro",
+            "Estado: En sustrato (no barefoot)"
+          ],
+          "ventaja": [
+            "Libre de virus (certificado)",
+            "Uniforme genéticamente",
+            "Crecimiento predecible",
+            "Mayor precio = mayor costo inicial"
+          ],
+          "desventaja": [
+            "Costo: USD 1.50-3.00/planta (muy alto)",
+            "Disponibilidad: Limitada en Ecuador",
+            "Requiere manejo delicado: estrés de aclimatización"
+          ],
+          "ideal_para": "Cultivos grandes comerciales, exportación de fruta (control calidad)"
+        },
+        "cormo_multiplicacion": {
+          "nombre": "Cormo de Multiplicación",
+          "caracteristicas": [
+            "Fragmento de cormo: 50-100 g",
+            "Edad: Cosechado año anterior",
+            "Dormancia: Varios meses (requiere activación)"
+          ],
+          "ventaja": [
+            "Bajo costo: USD 0.20-0.50/cormo",
+            "Disponible localmente",
+            "Rápida brotación si manejado bien"
+          ],
+          "desventaja": [
+            "Riesgo virus (si no desinfectado)",
+            "Brotación irregular",
+            "Requiere cuarentena/desinfección"
+          ],
+          "ideal_para": "Pequeños productores, producción local"
+        },
+        "hijuelo_macro": {
+          "nombre": "Hijuelo Macropropagado",
+          "caracteristicas": [
+            "Altura: 30-60 cm (pseudo-tallo)",
+            "Edad: 8-12 semanas desde brotación",
+            "Sistema radical: Desarrollado (6-12 raíces)"
+          ],
+          "ventaja": [
+            "Disponibilidad: Muy común",
+            "Costo: USD 0.15-0.30/hijuelo",
+            "Establecimiento rápido (25-30% menor tiempo)"
+          ],
+          "desventaja": [
+            "Riesgo virus alto (si viene de fuente enferma)",
+            "Variabilidad genética (si no puro)",
+            "Requiere deshoje, empaque cuidadoso"
+          ],
+          "ideal_para": "Productor local, repoblación fincas existentes"
+        }
+      },
+      "seleccion_fuente": {
+        "titulo": "Criterios de Selección de Fuente de Germoplasma",
+        "criterios_vitales": [
+          {
+            "criterio": "Certificación sanitaria",
+            "requerimiento": "Constancia de que fuente está libre de virus bunchy top, moteado"
+          },
+          {
+            "criterio": "Variedad verificada",
+            "requerimiento": "Confirmación que es Barraganete puro (no cruce, contaminación)"
+          },
+          {
+            "criterio": "Vigor de planta madre",
+            "requerimiento": "Planta origen saludable, sin síntomas clorosis, necrosis"
+          },
+          {
+            "criterio": "Historial productivo",
+            "requerimiento": "Si posible, verificar rendimiento de finca source (40+ kg/racimo = buen vigour)"
+          }
+        ]
+      },
+      "desinfeccion_cormo": {
+        "titulo": "Desinfección de Cormos (Método Simple)",
+        "procedimiento": [
+          {
+            "paso": "1. Limpieza",
+            "actividad": "Remover raíces viejas, tejido necrótico con cuchillo estéril",
+            "duracion": "5-10 minutos/cormo"
+          },
+          {
+            "paso": "2. Inmersión en fungicida",
+            "solucion": "Benomilo 0.2% o Thiabendazol 0.1% @ 50 minutos",
+            "alternativa": "Hipoclorito de sodio 10% @ 30 minutos (económico)"
+          },
+          {
+            "paso": "3. Secado",
+            "procedimiento": "Aire seco a temperatura 20-25°C × 3-5 días",
+            "lugar": "Sombreado, buena ventilación"
+          },
+          {
+            "paso": "4. Almacenamiento",
+            "condicion": "Polietileno perforado, 18-25°C, humedad 60-70%",
+            "duracion": "Hasta 4 meses"
+          }
+        ]
+      },
+      "preparacion_hijuelo": {
+        "titulo": "Preparación de Hijuelo para Plantación",
+        "procedimiento_deshoje": [
+          {
+            "paso": "1. Seleccionar hijuelos",
+            "criterio": "Hijuelos de 30-60 cm altura, 3+ raíces visibles, vigorosos"
+          },
+          {
+            "paso": "2. Deshojar",
+            "tecnica": "Remover 70-80% de hojas (dejar solo 20-30% para fotosíntesis minimal)",
+            "razon": "Reducir transpiración durante transporte, implantación"
+          },
+          {
+            "paso": "3. Desinfectar",
+            "sumergir": "Hipoclorito 2% × 5 minutos (eliminar esporas)"
+          },
+          {
+            "paso": "4. Encajonado",
+            "material": "Caja de madera o plástico con aserrín húmedo",
+            "densidad": "20-30 hijuelos/caja pequeña"
+          }
+        ],
+        "tiempo_limite": "Desde cosecha a plantación: < 10 días (máximo 15 si refrigeración)"
+      }
+    },
+    "plantacion": {
+      "titulo": "2.4 Técnica de Plantación",
+      "distanciamiento": "Según planificación (3 × 3 m recomendado)",
+      "marcacion_distancia": [
+        "Usar cuerda y jalones",
+        "Marcar puntos con banderas o cal",
+        "Verificar alineación: puntos deben estar en línea recta (importante para cosecha posterior)"
+      ],
+      "apertura_hoyo": {
+        "paso_1": {
+          "actividad": "Excavar hoyo",
+          "dimensiones": "40 × 40 × 40 cm (cúbico)",
+          "profundidad_importante": "Mínimo 40 cm (raíces del hijuelo 20-30 cm necesitan espacio)"
+        },
+        "paso_2": {
+          "actividad": "Mezclar suelo de hoyo con compost",
+          "proporcion": "60% suelo + 40% compost maduro",
+          "cantidad": "Llenar hoyo hasta 2/3 con mezcla"
+        },
+        "paso_3": {
+          "actividad": "Incorporar fertilizante de plantación",
+          "dosis_por_hoyo": [
+            "Urea: 50-100 g",
+            "Superfosfato: 100-150 g",
+            "Cloruro potasio: 100-150 g",
+            "Micronutrientes: 10 g mezcla (quelatos)"
+          ]
+        }
+      },
+      "insercion_hijuelo": {
+        "paso_1": {
+          "actividad": "Posicionar hijuelo",
+          "profundidad": "Cuerpo del cormo debe estar a 2-3 cm bajo nivel suelo (IMPORTANTE: no muy profundo ni muy superficial)",
+          "razon_profundidad": "Si muy profundo = pudrición radical. Si muy superficial = desecación"
+        },
+        "paso_2": {
+          "actividad": "Llenar hoyo",
+          "tecnica": "Incorporar suelo mezclado alrededor hijuelo, compactando suavemente",
+          "final": "Dejar pequeña depresión en corona para retención agua (2-3 cm concavidad)"
+        },
+        "paso_3": {
+          "actividad": "Riego inmediato",
+          "volumen": "10-15 litros de agua por planta",
+          "razon": "Establecer contacto suelo-raíz, activar nutrientes"
+        }
+      },
+      "proteccion_post_plantacion": {
+        "sombreo_temporal": {
+          "necesidad": "En zonas muy soleadas o temperaturas > 30°C",
+          "metodo": "Ramas de palma, bambú formando 50-60% de sombra",
+          "duracion": "4-6 semanas hasta que hijuelo recupere vigor"
+        },
+        "mulch": {
+          "material": "Paja, hojas de banano, cascarilla de arroz",
+          "grosor": "5-10 cm alrededor planta",
+          "beneficio": "Retención humedad, control malezas, aumento materia orgánica"
+        },
+        "tutores_si_necesario": {
+          "uso": "Si zona con vientos fuertes > 40 km/h",
+          "material": "Caña o bambú amarrado sin apretar"
+        }
+      }
+    },
+    "manejo_post_plantacion": {
+      "titulo": "2.5 Manejo del Cultivo Joven (0-3 meses)",
+      "riego": {
+        "frecuencia": "Diaria o cada 2 días en primeras 3-4 semanas",
+        "volumen": "2-5 litros/planta según humedad suelo",
+        "test_humedad": "Introducir dedo a 5 cm profundidad. Si seco, regar",
+        "transicion": "Después 4-6 semanas, reducir a 2-3 riegos/semana (según lluvia)"
+      },
+      "deshierbe": {
+        "frecuencia": "Primera: 6-8 semanas. Segunda: 12-14 semanas",
+        "tecnica": "Manual con azadón, cuidado de no dañar raíces superficiales",
+        "alternativa_herbicida": "Glifosato 2% en agua @ pulverización dirigida (cuidado con goteo a planta)",
+        "zona_accion": "1-2 metros diámetro alrededor planta"
+      },
+      "control_plagas_enfermedades": {
+        "monitoreo": "Inspecciones semanales buscando: manchas foliares, enrollamiento hojas, insectos",
+        "plagas_principales": [
+          "Thrips (arañita): Si > 5 por hoja, intervenir",
+          "Escama algodonosa: Manchas blancas algodonosas",
+          "Ácaros rojos: Manchas amarillas/marrones en hoja"
+        ],
+        "enfermedades_principales": [
+          "Sigatoka Amarilla: Manchas amarillas lineales (Barraganete resistente)",
+          "Botritis: Pudrición gris si humedad muy alta",
+          "Pudrición de tallo: Si suelo encharcado"
+        ],
+        "accion_preventiva": "Buen drenaje, espaciamiento adecuado, higiene (remover hojas muertas)"
+      },
+      "poda_inicial": {
+        "momento": "Alrededor semana 8-12 si hijuelo tiene 5+ hojas vivas",
+        "procedimiento": [
+          "Remover hojas viejas/dañadas (mantener 3-4 hojas jóvenes",
+          "Si hay múltiples tallos emergentes (raro), seleccionar el más vigoroso"
+        ],
+        "no_exagerar": "Evitar sobre-poda que reduce fotosíntesis"
+      }
+    },
+    "cronograma_establecimiento": {
+      "titulo": "2.6 Cronograma de Establecimiento (Calendario Tipo)",
+      "cronograma": [
+        {
+          "semana": "Antes (-12 a -8)",
+          "actividad": "Análisis de suelo, encalado, fertilización base",
+          "duracion": "4 semanas"
+        },
+        {
+          "semana": "-8 a -4",
+          "actividad": "Limpieza terreno, preparación camas si necesario",
+          "duracion": "4 semanas"
+        },
+        {
+          "semana": "-4 a -1",
+          "actividad": "Marcación distancia, apertura hoyos",
+          "duracion": "3 semanas"
+        },
+        {
+          "semana": "0 (Semana de Plantación)",
+          "actividad": "Plantación de hijuelos, riego inicial",
+          "duracion": "1 semana"
+        },
+        {
+          "semana": "1 a 4",
+          "actividad": "Riego diario, sombreo temporal, monitoreo",
+          "duracion": "4 semanas"
+        },
+        {
+          "semana": "5 a 8",
+          "actividad": "Reducir riego, primer deshierbe",
+          "duracion": "4 semanas"
+        },
+        {
+          "semana": "9 a 12",
+          "actividad": "Poda inicial, segundo deshierbe",
+          "duracion": "4 semanas"
+        },
+        {
+          "semana": "13+",
+          "actividad": "Manejo regular (riego según lluvia, control malezas, monitoreo plagas/enfermedades)",
+          "duracion": "Continuo hasta floración (mes 5-6)"
+        }
+      ]
+    },
+    "errores_comunes": {
+      "titulo": "2.7 Errores Comunes y Cómo Evitarlos",
+      "error_1": {
+        "nombre": "Plantación muy superficial o muy profunda",
+        "consecuencia": "Cormo muy profundo = pudrición radical (Pythium, Phytophthora). Cormo muy superficial = desecación, volcamiento con viento",
+        "solucion": "Cormo debe estar 2-3 cm bajo nivel suelo exactamente"
+      },
+      "error_2": {
+        "nombre": "Riego excesivo en primeras semanas",
+        "consecuencia": "Suelo saturado = hipoxia, pudrición de raíces, colapso",
+        "solucion": "Riego frecuente pero LIGERO (no charco). Test dedo cada vez"
+      },
+      "error_3": {
+        "nombre": "No desinfectar cormos/hijuelos",
+        "consecuencia": "Introducción de virus (bunchy top moteado) que reduce rendimiento 50-80%",
+        "solucion": "SIEMPRE desinfectar con hipoclorito o fungicida"
+      },
+      "error_4": {
+        "nombre": "Distanciamiento demasiado cerrado",
+        "consecuencia": "Competencia por luz/agua/nutrientes, aumento enfermedades fúngicas",
+        "solucion": "Respetar distancia 3 × 3 m mínimo"
+      },
+      "error_5": {
+        "nombre": "Plantación en terreno con drenaje pobre",
+        "consecuencia": "Saturación permanente, pudriciones, rendimiento muy bajo",
+        "solucion": "Hacer test drenaje ANTES de plantación. Si pobre, construir camas elevadas"
+      },
+      "error_6": {
+        "nombre": "No incorporar compost o materia orgánica",
+        "consecuencia": "Suelo pobre, crecimiento lento, deficiencias nutricionales crónicas",
+        "solucion": "Incorporar 20-30 ton/ha compost en preparación"
+      }
+    },
+    "preguntas_frecuentes": {
+      "titulo": "2.8 Preguntas Frecuentes - Establecimiento",
+      "q1": {
+        "pregunta": "¿Cuál es la mejor época para plantar plátano?",
+        "respuesta": "Inicio de época lluviosa (mejor humedad, menor estrés hídrico). En Ecuador: Mayo-Julio (costa) o Agosto-Octubre (sierra). Evitar plantación en plena sequía (Agosto-Septiembre costa seca)"
+      },
+      "q2": {
+        "pregunta": "¿Puedo plantar en terreno con pendiente?",
+        "respuesta": "Sí, hasta 15% pendiente es manejable con terrazo/curvas de nivel. Evitar > 20% (erosión, drenaje difícil). Plátano tolera menos pendiente que café/cacao"
+      },
+      "q3": {
+        "pregunta": "¿Qué es mejor: vitro-planta o hijuelo?",
+        "respuesta": "Vitro: Mejor calidad genética, libre virus, pero USD 1.50-3.00/planta (caro). Hijuelo: Barato USD 0.15-0.30, disponible, pero riesgo virus. Para Barraganete resistente, hijuelo desinfectado es suficiente"
+      },
+      "q4": {
+        "pregunta": "¿Cuánto compost debo incorporar?",
+        "respuesta": "Mínimo 20-30 ton/ha pre-plantación. Si terreno muy pobre, 40-50 ton/ha es mejor. Cada hoyo: 40% del volumen debe ser compost/materia orgánica"
+      },
+      "q5": {
+        "pregunta": "¿Es necesario sombrear la plantación joven?",
+        "respuesta": "En zonas muy soleadas (> 2000 horas sol/año) o temperaturas > 32°C, sombreado 50% las primeras 4-6 semanas ayuda. En zonas nubladas, no es crítico"
+      },
+      "q6": {
+        "pregunta": "¿Cada cuánto debo regar después de plantar?",
+        "respuesta": "Primeras 3-4 semanas: diario o cada 2 días. Después: cada 2-3 días según lluvia. Test dedo: si suelo seco a 5 cm profundidad, regar. No encharcarse"
+      }
+    }
+  }
+}

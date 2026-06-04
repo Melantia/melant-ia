@@ -1,0 +1,269 @@
+{
+  "capitulo": 6,
+  "titulo": "Cosecha y Poscosecha del Café",
+  "cultivo": "Café",
+  "seccion": "Madurez, cosecha operativa, beneficio seco y lavado, clasificación, acondicionamiento, almacenaje",
+  "contenido": {
+    "introduccion_cosecha": {
+      "titulo": "6.1 Introducción a Cosecha y Poscosecha",
+      "importancia": "Poscosecha determina 80% calidad final. Proceso mal ejecutado arruina fruto excelente",
+      "fases_poscosecha": [
+        "1. Cosecha (verde-maduro, manual)",
+        "2. Beneficio seco (descascarado natural, 10-14 días secado)",
+        "3. Beneficio lavado (fermentación 12-36h, lavado, secado)",
+        "4. Clasificación (tamaño, densidad, defectos)",
+        "5. Almacenaje (temp 15-20°C, humedad 10-12%)"
+      ]
+    },
+    "madurez_fruto": {
+      "titulo": "6.2 Determinación de Madurez",
+      "madurez_fisiologica": {
+        "definicion": "Madurez real interna (composición grano óptima)",
+        "indicador_tiempo": "90-110 días post-floración (depende variedad, altitud)",
+        "variedad_diferencia": [
+          "Bourbon: 100-110 días (más lento)",
+          "Caturra: 95-105 días",
+          "Tipica: 100-115 días (más lento)"
+        ]
+      },
+      "madurez_comercial": {
+        "definicion": "Criterios prácticos cosecha (color, presión)",
+        "estadios_color": [
+          "Verde: Fruto inmaduro, NO cosechar",
+          "Rojo-cereza: IDEAL para cosecha (madurez fisiológica + comercial)",
+          "Amarillo (si variedad amarilla): Equivalente rojo",
+          "Rojo oscuro/morado: Sobre-maduro (fermentación comienza, riesgo defecto)"
+        ],
+        "test_presion": "Presionar levemente fruto maduro, debe ceder ligeramente pero no aplastarse",
+        "test_sonido": "Fruto maduro suena 'sordo' (vs verde 'claro')",
+        "visual_simple": "Mayoría fruto en rojo-cereza vívido = momento cosecha"
+      },
+      "cosecha_selectiva": {
+        "definicion": "Cosechar solo fruto rojo (descartar verde, sobre-maduro)",
+        "labores": "3-5 pasadas cosecha (15-21 días intervalo) por parcela",
+        "ventaja": "Calidad excelente, pero labor intensiva (costo alto)",
+        "rendimiento": "20-30% más alto cupping score vs cosecha en rama"
+      }
+    },
+    "metodos_cosecha": {
+      "titulo": "6.3 Métodos de Cosecha",
+      "cosecha_manual_selectiva": {
+        "tecnica": [
+          "Cesto o bolsa en cintura",
+          "Cosechador selecciona solo rojo",
+          "Cuidado NO golpear fruto (defecto 'quemadura' de cosecha)"
+        ],
+        "tiempo": "4-5 horas cosechar 20-30 kg fruto fresco/día",
+        "costo_labor": "USD 1.50-3.00 por kg fruto seco procesado (depende rendimiento)",
+        "aplicable": "Fincas pequeñas < 5 ha, café specialty"
+      },
+      "cosecha_en_rama_despulpe": {
+        "tecnica": "Cosechar rama + verde + rojo, separar después",
+        "ventaja": "Más rápido (menos labor discriminación)",
+        "desventaja": "Baja calidad (verde adentro contamina lote)",
+        "rendimiento": "Cupping score 2-4 puntos MENOS vs selectiva"
+      },
+      "mecanizacion_limitada": {
+        "maquina_vibrador": "Vibradores rama (rarísimo Ecuador, requiere terreno plano)",
+        "limitacion": "Arabica Ecuador en pendiente + sombra = mecanización impráctica"
+      }
+    },
+    "transporte_recepcion": {
+      "titulo": "6.4 Transporte y Recepción en Beneficio",
+      "tiempo_maximos": [
+        "De árbol a beneficio: < 4 horas (si > 8h, fermentación anaerobia comienza, defecto)",
+        "De beneficio a procesamiento: < 2 horas"
+      ],
+      "cuidados": [
+        "Transporte en recipientes ventilados (NO bolsa cerrada)",
+        "Protección luz solar directa (fermenta si calor + oscuridad)",
+        "Pesaje inmediato en beneficio (humedad inicial estimación)"
+      ],
+      "recepcion": [
+        "Inspección visual (hojas, ramas, contaminantes)",
+        "Tamizado (remover hojas, tierra)",
+        "Pesaje precisión (base para cálculo rendimiento)",
+        "Muestreo (pH, densidad, humedad inicial)"
+      ]
+    },
+    "beneficio_seco": {
+      "titulo": "6.5 Beneficio Seco - Método Natural",
+      "definicion": "Secar fruto COMPLETO (cereza + pulpa) en el sol",
+      "ventajas": [
+        "Bajo costo (sin agua, sin infraestructura)",
+        "Sabor cuerpo más dulce, acidez menor"
+      ],
+      "desventajas": [
+        "Riesgo lluvia (fermentación defecto)",
+        "Calidad variable (inconsistencia sol, temperatura)",
+        "Tiempo largo 2-3 semanas (si muy húmedo)"
+      ],
+      "proceso": [
+        {
+          "dia": "Día 1-3",
+          "humedad_inicial": "~60-65% (fruto recién cosechado)",
+          "actividad": "Esparcir 5-10 cm secadero, remover cada 3-4 horas",
+          "fermentacion": "Inicio fermentación anaerobia"
+        },
+        {
+          "dia": "Día 4-10",
+          "humedad": "~40-50%",
+          "actividad": "Remover 2-3 veces/día, organizar en capas"
+        },
+        {
+          "dia": "Día 11-21",
+          "humedad": "~20-30%",
+          "actividad": "Remover 1-2 veces/día",
+          "observacion": "Grano comienza 'sonar' dentro cereza (desecación complete)"
+        },
+        {
+          "dia": "Día 22+",
+          "humedad_final": "~12-13% (meta)",
+          "test": "Presión grano: debe quebrarse si dentado"
+        }
+      ],
+      "riesgo_lluvia": "Si lluvia imprevista, secar fruto puede fermenter (defecto irreversible). Tener plástico cobertura listo"
+    },
+    "beneficio_lavado": {
+      "titulo": "6.6 Beneficio Lavado - Método Fermentado",
+      "definicion": "Remover pulpa fermentación + lavado, secar solo grano",
+      "ventajas": [
+        "Calidad más uniforme",
+        "Acidez más pronunciada (sensorial)")
+        "Controla fermentación (fermentador = tanques tiempo)",
+        "Estándar export USA/Europa (café 'washed' premium)"
+      ],
+      "desventajas": [
+        "Requiere agua (500-750 L/kg grano seco)",
+        "Infraestructura (pulper, tanques)",
+        "Costo alto USD 0.50-1.50/kg grano"
+      ],
+      "proceso_detallado": [
+        {
+          "paso": "1. Despulpado",
+          "maquina": "Pulper (despulpadora)",
+          "duracion": "2-4 horas post-cosecha",
+          "resultado": "Grano fermentado sin pulpa, flotador removido",
+          "subproducto": "Pulpa (fruta) = 45-50% peso fresco (alimento animal o compost)"
+        },
+        {
+          "paso": "2. Fermentación controlada",
+          "duracion": "12-36 horas (depende temperatura)",
+          "proceso": "Grano en tanque con agua, microorganismos degradan mucílago",
+          "temperatura_ideal": "18-25°C (Ecuador rara < 20°C en fermentador)",
+          "test_finalizacion": "Mucílago debe separarse fácil ('liso' tacto)"
+        },
+        {
+          "paso": "3. Lavado",
+          "agua_fría": "Lavar grano 2-3 veces en agua corriente",
+          "resultado": "Mucílago removido, grano limpio"
+        },
+        {
+          "paso": "4. Secado",
+          "metodo": "Secadero seco o mecanizado",
+          "duracion": "10-14 días (similar fruto natural pero menos riesgo)",
+          "humedad_meta": "12-13% (verificar con higrómetro)"
+        }
+      ]
+    },
+    "clasificacion_calidad": {
+      "titulo": "6.7 Clasificación de Café por Calidad y Defectos",
+      "sistema_defectos": {
+        "defecto_primario": [
+          "Grano 'flauta' (deformado, agrietado)",
+          "Grano fermentado (olor ácido)",
+          "Grano verde (sin tostarse bien)",
+          "Grano 'quemado' (daño mecánico negro)"
+        ],
+        "defecto_secundario": [
+          "Grano pequeno (monda)",
+          "Cáscara residual (pergamino)"
+        ]
+      },
+      "clasificacion_conteo": [
+        "Specialty (85+ cupping): 0-3 defectos/300g",
+        "Clase I (80-85): 4-8 defectos/300g",
+        "Clase II (75-80): 9-23 defectos/300g",
+        "Rechazo (< 75): > 23 defectos"
+      ],
+      "tamizado_tamaño": [
+        "Tamaño 20: 7.4 mm (grandes, premium Ecuador",
+        "Tamaño 18-19: 6.4-7.2 mm (estándar export)",
+        "Tamaño 16-17: 5.2-6.2 mm (pequeño)",
+        "Monda: < 5.2 mm (descarte procesamiento)"
+      ],
+      "densidad": [
+        "Flotadores removidos (fermentación anaerobia incomplete)",
+        "Granos densos separados (cupping + alto score)"
+      ]
+    },
+    "acondicionamiento_almacenaje": {
+      "titulo": "6.8 Acondicionamiento y Almacenaje",
+      "humedad_final": {
+        "meta": "10-13% (típico 11-12%)",
+        "medicion": "Higrómetro digital (USD 20-50)",
+        "repozo": "Grano fresco 30-45 días post-secado (equilibrio humedad)"
+      },
+      "almacenaje_corto": [
+        "Sacos jute (60 kg) ventilados",
+        "Temperatura: 15-20°C",
+        "Humedad relativa: 50-70%",
+        "Tiempo: hasta 6 meses OK"
+      ],
+      "almacenaje_largo": [
+        "Contenedor hermético + desiccante (gel silica)",
+        "Temperatura: 10-15°C (refrigeración ideal)",
+        "Tiempo: 1+ años posible (degradación lenta)"
+      ],
+      "defectos_almacenaje": [
+        "Humedad > 14%: Moho, insectos",
+        "Temperatura > 25°C: Oxidación, enrancio",
+        "Luz directa: Decoloración grano"
+      ]
+    },
+    "rendimiento_grano": {
+      "titulo": "6.9 Rendimientos y Pérdidas Poscosecha",
+      "conversion_fresco_seco": [
+        "Fruto fresco: 60% humedad inicial",
+        "Post-beneficio: 11% humedad final",
+        "Rendimiento promedio: 15-20% (1 kg fresco = 0.15-0.20 kg grano seco)",
+        "Ejemplo: 2,000 kg/ha fresco → 300-400 kg/ha grano seco (depende benef"
+      ],
+      "perdidas_comunes": [
+        "Cosecha: 5-10% (fruto caído no cosechado)",
+        "Transporte: 1-2% (quebrada grano)",
+        "Beneficio seco: 10-15% (defecto, flotadores)",
+        "Beneficio lavado: 8-12% (similar)",
+        "Clasificación: 5-8% (descarte grano pequeño/defectuoso)",
+        "Total: 25-35% pérdida estándar (35-50 kg/ton fresco"
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "6.10 Preguntas Frecuentes - Cosecha y Poscosecha",
+      "q1": {
+        "pregunta": "¿Cuándo exacto cosechar café?",
+        "respuesta": "Cuando 70-80% fruto es rojo-cereza vívido. Si cosechar muy verde, bajo brix. Si esperar rojo oscuro, riesgo fermentación defecto. Mejor: múltiples pasadas selectivas"
+      },
+      "q2": {
+        "pregunta": "¿Beneficio seco o lavado para Café Ecuador?",
+        "respuesta": "Café specialty Ecuador typically LAVADO (washed = estándar premium). Costo mayor pero calidad uniforme + acidez control. Seco es opción si agua limitada (altitud seca)"
+      },
+      "q3": {
+        "pregunta": "¿Cuántos días secar café?",
+        "respuesta": "Seco natural: 15-21 días (depende humedad ambiente, lluvia). Lavado: 10-14 días post-despulpe. Meta final: humedad 11-13% verificar higrómetro"
+      },
+      "q4": {
+        "pregunta": "¿Lluvia arruina cosecha?",
+        "respuesta": "Si lluvia DURANTE secadero (café expuesto): SÍ defecto (fermentación anaerobia). Si después cosechar pero ANTES secar: parcialmente OK. Cobertura plástica es crítica"
+      },
+      "q5": {
+        "pregunta": "¿Cómo sé si café está listo almacenar?",
+        "respuesta": "Humedad final 11-13% (higrómetro). Grano debe estar duro (quebrarse si presión). Olor debe ser café tostado limpio (sin fermentado/mohoso)"
+      },
+      "q6": {
+        "pregunta": "¿Puedo guardar café cosechado más tiempo antes procesar?",
+        "respuesta": "Máximo 24-48 horas HÚMEDO (< 8h ideal). Después debe ser: secado o fermentado. Fruto fresco espera = fermentación natural (defectos aumentan)"
+      }
+    ]
+  }
+}

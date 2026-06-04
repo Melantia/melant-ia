@@ -1,0 +1,251 @@
+{
+  "capitulo": 3,
+  "titulo": "Nutrición y Fertilización Regenerativa del Maíz",
+  "cultivo": "Maíz Transición Regenerativa",
+  "seccion": "Compost, biofertilizantes, micorrizas, nutrición foliar, diagnóstico",
+  "contenido": {
+    "introduccion": {
+      "titulo": "3.1 Introducción a Nutrición Regenerativa",
+      "texto": "Nutrición regenerativa busca reemplazar 70-80% fertilizante químico (USD 370/ha) con fuentes biológicas y reciclaje nutrientes. Maíz convencional extrae 18 kg N/tonelada (5.5 ton = 99 kg N necesario). Sistema regenerativo logra 60-70% de eso vía: (1) nitrógeno fijado rotación leguminosa, (2) mineralización materia orgánica suelo, (3) micorrizas aumentan disponibilidad P-K. Suplencia: compost, biofertilizantes, abonos foliares. RESULTADO: Costo nutrición USD 80-150/ha (vs USD 370) con rendimiento 4.5-5.5 ton/ha versus 6-8 convencional = tradeoff aceptable."
+    },
+    "nitrógeno_regenerativo": {
+      "titulo": "3.2 Ciclo del Nitrógeno en Sistema Regenerativo",
+      "fuentes_n": [
+        {
+          "fuente": "Leguminosa rotación anterior",
+          "aporte": "60-100 kg N/ha (fijación simbiótica Rhizobium)",
+          "duracion": "50% disponible year 1, 30% year 2, residual year 3+",
+          "costo": "USD 0 (solo selección semilla + labor siembra)"
+        },
+        {
+          "fuente": "Mineralización materia orgánica",
+          "aporte": "20-40 kg N/ha/año (depende % MO y temperatura)",
+          "mecanismo": "Descomposición bacterias heterótrofas, libera NH4+ →NO3-",
+          "aceleradores": "Compost 10-15 ton/ha acelera 30-50%"
+        },
+        {
+          "fuente": "Fijación libre (Azotobacter, Azospirillum)",
+          "aporte": "10-20 kg N/ha/año",
+          "mecanismo": "Bacterias no-simbióticas en rizosfera, requieren materia orgánica alimento",
+          "inoculacion": "Compost inoculado USD 50-80/hectárea"
+        },
+        {
+          "fuente": "Compost residuos cultivo",
+          "aporte": "Variable 30-80 kg N/ha (según composición)",
+          "practica": "Ensilaje maíz compostado 4-6 meses = nutriente disponible"
+        }
+      ],
+      "programa_transicion": [
+        {
+          "ano": "Año 1",
+          "estrategia": "Leguminosa rotación previa aportó N, + compost 10 ton/ha (USD 300-400), Aplicación fosfato natural",
+          "rendimiento_esperado": "3.5-4.5 ton/ha (ajuste inicial)"
+        },
+        {
+          "ano": "Año 2",
+          "estrategia": "Leguminosa año 1 residual, + compost 8 ton/ha, microbiota suelo activa",
+          "rendimiento_esperado": "4.5-5.5 ton/ha (mejora 30%)"
+        },
+        {
+          "ano": "Año 3+",
+          "estrategia": "Ciclo estabilizado, rotación leguminosa continua, compost 5-8 ton/ha mantenimiento",
+          "rendimiento_esperado": "4.5-5.5 ton/ha sostenible (estable)"
+        }
+      ]
+    },
+    "fosforo_potasio": {
+      "titulo": "3.3 Fósforo y Potasio - Micorrizas como Multiplicador",
+      "problema_p_suelo": [
+        "Suelo químico: P precipitado como AlPO₄ (pH bajo) o CaPO₄ (pH alto), 95% no disponible planta",
+        "Suelo regenerativo: Micorrizas secretan ácidos orgánicos, solubilizan P precipitado, raíces extienden 100-1000x"
+      ],
+      "estrategia_fosforo": [
+        {
+          "componente": "Fosfato natural (roca fosfática)",
+          "cantidad": "200-300 kg/ha",
+          "mecanismo": "Solubilización lenta (3-5 años) por ácidos microbianos",
+          "costo": "USD 100-150/ha (one-time, beneficio perenne)"
+        },
+        {
+          "componente": "Inoculación micorrizas arbusculares",
+          "cantidad": "10 billones esporas/hectárea (comercial)",
+          "mecanismo": "Simbiosis raíz, 100-200% aumento P disponible",
+          "costo": "USD 80-120/ha"
+        },
+        {
+          "componente": "Compost microbializado",
+          "cantidad": "5-10 ton/ha",
+          "mecanismo": "Hábitat microrrizas, fuente carbono",
+          "costo": "USD 200-300/ha (simultaneo"
+        }
+      ],
+      "estrategia_potasio": [
+        {
+          "fuente": "Feldespato potásico molido",
+          "cantidad": "300-500 kg/ha",
+          "mecanismo": "Weathering lento, hongos disuelven silicato",
+          "duracion": "10+ años lentitud, pero perpetuo"
+        },
+        {
+          "fuente": "Biochar con potasio",
+          "cantidad": "10-20 ton/ha",
+          "mecanismo": "Carbón activado retiene iones K+, microbiota habita",
+          "costo": "USD 300-500/ha PERO durabilidad 20-30 años"
+        },
+        {
+          "fuente": "Ceniza madera controlada",
+          "cantidad": "2-4 ton/ha",
+          "precaución": "SÍ K pero también Ca → pH ↑ (monitorear pH > 7.5)"
+        }
+      ]
+    },
+    "biofertilizantes": {
+      "titulo": "3.4 Biofertilizantes y Promotores de Crecimiento",
+      "tipos": [
+        {
+          "tipo": "Fijadores nitrógeno libres",
+          "organismos": "Azotobacter, Azospirillum, Bacillus",
+          "beneficio": "Fijación N₂, producción auxinas (raíces profundas)",
+          "aplicacion": "Inoculación semilla USD 20-40 antes siembra"
+        },
+        {
+          "tipo": "Solubilizadores fósforo",
+          "organismos": "Bacillus megaterium, Pseudomonas fluorescens",
+          "beneficio": "Ácidos orgánicos disuelven P precipitado",
+          "aplicacion": "Inoculación compost USD 30-50/hectárea"
+        },
+        {
+          "tipo": "Micorrizas arbusculares",
+          "organismos": "Rhizophagus irregularis, Funneliformis mosseae",
+          "beneficio": "Red externa hifas, P-K disponibilidad +100-200%",
+          "aplicacion": "Inoculación cepas selectas USD 80-120/ha"
+        },
+        {
+          "tipo": "Bacterias promotoras crecimiento (PGPR)",
+          "organismos": "Bacillus, Paenibacillus, Serratia",
+          "beneficio": "Producción fitohormonas, estrés hídrico tolerancia",
+          "aplicacion": "Aspersión foliar V4-V8, USD 40-60/hectárea"
+        }
+      ]
+    },
+    "compost_manejo": {
+      "titulo": "3.5 Elaboración y Manejo de Compost de Calidad",
+      "receta_basica": [
+        {
+          "componente": "Residuos maíz (ensilaje, hojas, tallos)",
+          "proporcion": "60% volumen",
+          "razon": "Carbono alto (celulosa), relación C:N ~40:1"
+        },
+        {
+          "componente": "Estiércol fresco (vaca, gallina)",
+          "proporcion": "30% volumen",
+          "razon": "Nitrógeno, microbiota iniciador descomposición"
+        },
+        {
+          "componente": "Suelo o compost previo",
+          "proporcion": "10% volumen",
+          "razon": "Inoculante microbiota, acelerador putrefacción"
+        },
+        {
+          "componente": "Agua (humedad 50-60%)",
+          "proporcion": "Riego cada volteo",
+          "razon": "Medio microbiota, transporte nutrientes"
+        }
+      ],
+      "construccion_pila": [
+        "Dimensiones: 2×2 base, 1.5m altura (volumen ~6 m³)",
+        "Capas: Residuos 15 cm, estiércol 5 cm, suelo 2 cm, repetir",
+        "Volteos: Día 7-10 (termófila rápida), luego cada 2-3 semanas",
+        "Duración: 8-12 semanas termófila + 2-4 semanas maduración = 12-16 semanas total"
+      ],
+      "indicadores_maduracion": [
+        "Olor: Tierra fértil (NO ácido/fermentado)",
+        "Temperatura: Ambiente (20-25°C, no exotérmico)",
+        "Color: Marrón oscuro-negro uniforme",
+        "Estructura: Deshace fácilmente mano, no hilos micelios blancos",
+        "Test germinación: Watercress semilla germina > 90% en extracto compost"
+      ]
+    },
+    "nutricion_foliar": {
+      "titulo": "3.6 Nutrición Foliar Regenerativa",
+      "ventajas": [
+        "Absorción rápida (24-48h vs 5-10 días radical)",
+        "Bypass bloques suelo (compactación, pH desfavorable)",
+        "Suplencia micronutrientes deficiencias emergentes"
+      ],
+      "recetas_caseras": [
+        {
+          "nombre": "Compost té aireado",
+          "ingredientes": "Compost maduro 5 kg, agua 100L, aire (bomba acuario), melaza 1 kg",
+          "elaboracion": "24-48 horas aireación, cosecha antes fermentación",
+          "aplicacion": "Aspersión foliar V6-V12, dosis 10 L/hectárea (diluir 1:10 agua)"
+        },
+        {
+          "nombre": "Té fermentado con purín",
+          "ingredientes": "Ortigas/algas marinas 5 kg, agua 50L, estiércol 2 kg",
+          "elaboracion": "7-10 días fermentación anaeróbica, cuela",
+          "aplicacion": "V4-V8, dosis 5-10 L/ha diluido 1:5"
+        },
+        {
+          "nombre": "Extracto de algas marinas",
+          "ingredientes": "Alga deshidratada 1 kg, agua 50L",
+          "beneficio": "Micronutrientes, hormona crecimiento alginato",
+          "aplicacion": "V2-V10, dosis 5 L/ha"
+        }
+      ]
+    },
+    "diagnostico_deficiencias": {
+      "titulo": "3.7 Diagnóstico Visual de Deficiencias",
+      "sintomas": [
+        {
+          "nutriente": "Nitrógeno (N)",
+          "sintoma": "Clorosis (amarillo) hojas viejas (abajo), venas verdes",
+          "accion": "Té compost urgente, aspersión foliar urea diluida 1%"
+        },
+        {
+          "nutriente": "Fósforo (P)",
+          "sintoma": "Púrpura tallos/venas, plantas enanismo, raíces débiles",
+          "accion": "Fosfato natural si suelo, foliar ácido fosfórico diluido"
+        },
+        {
+          "nutriente": "Potasio (K)",
+          "sintoma": "Márgenes hojas secas/quemadas, crecimiento débil",
+          "accion": "Biochar potasio, ceniza madera, foliar sulfato potasa"
+        },
+        {
+          "nutriente": "Zinc (Zn)",
+          "sintoma": "Bandas cloróticas hojas (blancas hojas nuevas), enanismo",
+          "accion": "Inoculación micorrizas (solubilizan Zn), o sulfato zinc foliar 0.1%"
+        },
+        {
+          "nutriente": "Magnesio (Mg)",
+          "sintoma": "Clorosis intervenal hojas (venas verdes, fondo amarillo)",
+          "accion": "Sulfato magnesio (Epsom salt) foliar 0.5-1%"
+        }
+      ]
+    },
+    "preguntas_frecuentes": {
+      "titulo": "3.8 Preguntas Frecuentes - Nutrición",
+      "q1": {
+        "pregunta": "¿Micorrizas realmente hacen diferencia?",
+        "respuesta": "SÍ comprobado 3-5 veces más P disponible. Pero requieren: (1) suelo NO compactado, (2) materia orgánica, (3) sin pesticidas. Si suelo degradado: 2-3 años antes micorrizas colonizan"
+      },
+      "q2": {
+        "pregunta": "¿Compost casero es tan bueno como comercial?",
+        "respuesta": "SÍ si bien hecho. Comercial: consistencia verificada, beneficio inoculantes. Casero: más labor pero USD 20-40/ton (vs USD 80-150 compra). ROI 3-4 años"
+      },
+      "q3": {
+        "pregunta": "¿Fosfato natural lleva 5 años?",
+        "respuesta": "SÍ pero es one-time investment. Año 1: 30% disponible. Años 2-5: 50-70% va disponible. Años 5+: Efecto residual. One-time USD 100-150/ha → perpetuo benefit"
+      },
+      "q4": {
+        "pregunta": "¿Puedo usar purín fresco (no fermentado)?",
+        "respuesta": "NO recomendado. Fresco quema hojas, olor insoportable, patógenos presentes. Fermentado 7-10 días: seguro, olor tolerable, patógenos mueren"
+      },
+      "q5": {
+        "pregunta": "¿Biofertilizante es scam o real?",
+        "respuesta": "Real si pedigrí verificado (universidades ecuatorianas certifican). Fake: vendedores sin datos. Busca: CFU > 10^9/mL, fecha vencimiento < 6 meses, temperatura conservación"
+      }
+    ]
+  }
+}
