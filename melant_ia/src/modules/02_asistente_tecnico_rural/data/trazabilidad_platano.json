@@ -1,0 +1,12 @@
+{
+  "cultivo": "platano",
+  "lotes": [
+    {
+      "loteId": "LOTE-001",
+      "productor": "Finca Ejemplo",
+      "fechaSiembra": "2025-01-10",
+      "fechaCosecha": "2025-10-15",
+      "rendimiento_cajas_ha": 1800
+    }
+  ]
+}

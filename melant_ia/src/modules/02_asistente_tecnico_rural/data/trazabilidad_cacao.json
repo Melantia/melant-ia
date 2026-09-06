@@ -1,0 +1,34 @@
+{
+  "cultivo": "Cacao",
+  "variedad": "Nacional Fino de Aroma",
+  "siembra": {
+    "fecha_inicio": "2023-03-10",
+    "edad_plantacion": "3 años",
+    "densidad_plantas_ha": 1100
+  },
+  "suelo": {
+    "ph": 5.8,
+    "textura": "Franco-arcilloso",
+    "materia_organica": "4.2%"
+  },
+  "podas": [
+    {
+      "fecha": "2025-12-01",
+      "tipo": "Formación",
+      "observaciones": "Eliminación de ramas bajas"
+    }
+  ],
+  "fertilizacion": [
+    {
+      "epoca": "Lluvia",
+      "producto": "Gallinaza compostada",
+      "dosis_por_planta": "2 kg"
+    }
+  ],
+  "cosecha": {
+    "periodo_principal": "Abril - Agosto",
+    "rendimiento_esperado_kg_ha": 850
+  },
+  "certificaciones": ["Orgánico en transición"],
+  "estado_sanitario": "Bueno — monitoreo anual"
+}

@@ -38,7 +38,7 @@ const RUTA_MODULOS = {
     'modules/02_asistente_tecnico_rural/biblioteca_tecnica_rural',
 
   // ==================== 03. GESTIÓN DE FINCAS Y TRAZABILIDAD ====================
-  'Gestión de Fincas': 'modules/gestion_fincas_trazabilidad_hub',
+  'Gestión de Fincas': 'modules/gestion_fincas',
   Apicultura: 'modules/apicultura',
   'Gestión Empresarial': 'modules/gestion_empresarial',
   'Trazabilidad Cultivos Especiales':
@@ -371,6 +371,66 @@ window.cargarModulo = async function (nombre) {
         window.VisionArtificial = mod;
       }
       return window.VisionArtificial;
+    case 'AsistenteTecnicoCultivos':
+      if (!window.AsistenteTecnicoCultivos) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/asistente_tecnico_cultivos.js');
+        window.AsistenteTecnicoCultivos = mod.default || mod;
+      }
+      return window.AsistenteTecnicoCultivos;
+    case 'AsistenteTecnicoVeterinario':
+      if (!window.AsistenteTecnicoVeterinario) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/asistente_tecnico_veterinario.js');
+        window.AsistenteTecnicoVeterinario = mod.default || mod;
+      }
+      return window.AsistenteTecnicoVeterinario;
+    case 'SaludMedicinaVeterinaria':
+      if (!window.SaludMedicinaVeterinaria) {
+        const mod = await import('./modules/salud_medicina_veterinaria.js');
+        window.SaludMedicinaVeterinaria = mod;
+      }
+      return window.SaludMedicinaVeterinaria;
+    case 'AgriculturaPrecision':
+      if (!window.AgriculturaPrecision) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/agricultura_precision.js');
+        window.AgriculturaPrecision = mod.default || mod;
+      }
+      return window.AgriculturaPrecision;
+    case 'GpsMedicionTerrenos':
+      if (!window.GpsMedicionTerrenos) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/gps_medicion_terrenos.js');
+        window.GpsMedicionTerrenos = mod;
+      }
+      return window.GpsMedicionTerrenos;
+    case 'VisionSatelital':
+      if (!window.VisionSatelital) {
+        const mod = await import('./modules/vision_satelital.js');
+        window.VisionSatelital = mod;
+      }
+      return window.VisionSatelital;
+    case 'CalculadoraAgricola':
+      if (!window.CalculadoraAgricola) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/calculadora_agricola.js');
+        window.CalculadoraAgricola = mod;
+      }
+      return window.CalculadoraAgricola;
+    case 'CalendarioLunar':
+      if (!window.CalendarioLunar) {
+        const mod =
+          await import('./modules/02_asistente_tecnico_rural/calendario_lunar.js');
+        window.CalendarioLunar = mod;
+      }
+      return window.CalendarioLunar;
+    case 'ClimaInteligente':
+      if (!window.ClimaInteligente) {
+        const mod = await import('./modules/clima_inteligente.js');
+        window.ClimaInteligente = mod;
+      }
+      return window.ClimaInteligente;
     case 'BienesRaicesRurales':
       if (!window.BienesRaicesRurales) {
         const mod = await import('./modules/bienes_raices_rurales.js');

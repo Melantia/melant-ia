@@ -1,6 +1,5 @@
 {
   "name": "MELANTIA",
-  "short_name": "MELANTIA",
   "description": "PRODUCTIVIDAD AGROPECUARIA INTELIGENTE OFFLINE. FUNCIONA SIN INTERNET.",
   "start_url": "./index.html",
   "display": "standalone",

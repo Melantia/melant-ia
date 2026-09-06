@@ -168,11 +168,11 @@ window.abrirModuloEspecifico = function (id, titulo) {
       // === CARGA DINÁMICA DE FUNCIONALIDAD DEL MÓDULO ===
       // Mapear títulos a archivos JS (ajusta según tus módulos reales)
       const moduloMap = {
-        'Tienda MELANTIA': './modulo_negocios.js',
-        'Monte su TIENDA VIRTUAL': './modulo_negocios.js',
+        'Tienda MELANTIA': './04_negocios_rurales/tienda_melantia.js',
+        'Monte su TIENDA VIRTUAL': './04_negocios_rurales/tienda_melantia.js',
+        'Negocios Rurales': './04_negocios_rurales/negocios_rurales.js',
         Suscripciones: './01_suscripciones/afiliados_controller.js',
-        'Asistente Técnico Rural':
-          './02_asistente_tecnico_rural/asistente_tecnico.js',
+        'Asistente Técnico Rural': './02_asistente_tecnico_rural/index.js',
         'Gestión de Fincas y Trazabilidad':
           './gestion_fincas_trazabilidad_hub.js',
         Proyectos: './modulo_proyectos.js',
@@ -187,11 +187,12 @@ window.abrirModuloEspecifico = function (id, titulo) {
       if (jsPath) {
         import(jsPath)
           .then((mod) => {
-            // Si el módulo exporta una función principal, ejecútala
+            // Si el módulo exporta una función principal, ejecútala pasando el objeto módulo
             if (typeof mod.default === 'function') {
-              mod.default();
+              mod.default(modulo);
             } else if (
-              modulo.titulo === 'Gestión de Fincas y Trazabilidad' &&
+              (modulo.titulo === 'Gestión de Fincas y Trazabilidad' ||
+                modulo.titulo === 'Asistente Técnico Rural') &&
               typeof mod.mostrarPanel === 'function'
             ) {
               mod.mostrarPanel();
@@ -211,6 +212,43 @@ window.abrirModuloEspecifico = function (id, titulo) {
           });
       }
     });
+};
+
+// Función para navegar a un sub-módulo específico
+window.navegarA = function (item) {
+  console.log(`[MELANTIA] Navegando al sub-módulo: ${item}`);
+
+  // Mapeo de ítems a sus archivos JS correspondientes
+  const subModuloMap = {
+    'Tienda MELANTIA': './04_negocios_rurales/tienda_melantia.js',
+    'Ventas de Gestión Productiva':
+      './04_negocios_rurales/economia_melantia.js',
+    'Bienes Raíces Rurales': './modules/bienes_raices_rurales_real.js',
+    'Monte su TIENDA VIRTUAL': './04_negocios_rurales/tienda_config_logic.js',
+    'Oportunidades Públicas': './04_negocios_rurales/tienda_virtual_links.py', // Nota: archivos .py requieren bridge o conversión
+    'Mercado de Plátano': './mercado_platano_controller.js',
+  };
+
+  const jsPath = subModuloMap[item];
+  if (jsPath && jsPath.endsWith('.js')) {
+    import(jsPath)
+      .then((mod) => {
+        if (typeof mod.default === 'function') {
+          mod.default(item);
+        } else if (typeof mod.mostrarPanel === 'function') {
+          mod.mostrarPanel();
+        }
+      })
+      .catch((err) => {
+        console.error(`[MELANTIA] Error cargando sub-módulo ${item}:`, err);
+        alert(`No se pudo cargar el sub-módulo ${item}.`);
+      });
+  } else {
+    console.warn(`[MELANTIA] No se encontró ruta JS para el ítem: ${item}`);
+    alert(
+      `La funcionalidad para ${item} está en desarrollo o requiere un formato compatible.`
+    );
+  }
 };
 
 // Función para volver al menú principal

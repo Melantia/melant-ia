@@ -4,11 +4,16 @@ const AsistenteTecnico = {
   async cargarDatosTrazabilidad(cultivo) {
     try {
       const response = await fetch(
-        `./src/modules/asistente_tecnico_rural/data/trazabilidad_${cultivo}.json`
+        `./modules/02_asistente_tecnico_rural/data/trazabilidad_${cultivo}.json`
       );
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return await response.json();
     } catch (error) {
       console.error('Error cargando la bitácora de cacao:', error);
+      alert(
+        `No se pudo cargar la trazabilidad de "${cultivo}". Verifica tu conexión o intenta más tarde.`
+      );
+      return null;
     }
   },
 

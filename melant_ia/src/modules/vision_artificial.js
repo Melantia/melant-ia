@@ -84,8 +84,8 @@ export async function detectarObjetosEnImagen(imgElement, callback) {
 }
 
 export async function mostrarPanel() {
-  const contenedor = document.getElementById('contenedor-principal');
-  if (!contenedor) return;
+  const contenedor =
+    document.getElementById('contenedor-principal') || document.body;
 
   contenedor.innerHTML = `
     <div class="modulo-activo" style="max-width:680px;margin:0 auto;padding:20px;">

@@ -11,11 +11,18 @@ export function mostrarPanel() {
       <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:24px 0;">
         <button class="btn-submodulo" data-submodulo="AsistenteTecnicoCultivos">Asistente Técnico en Cultivos</button>
         <button class="btn-submodulo" data-submodulo="AsistenteTecnicoVeterinario">Asistente Técnico Veterinario</button>
-        <button class="btn-submodulo" data-submodulo="salud_medicina_veterinaria">Salud y Medicina Veterinaria</button>
+        <button class="btn-submodulo" data-submodulo="SaludMedicinaVeterinaria">Salud y Medicina Veterinaria</button>
         <button class="btn-submodulo" data-submodulo="AgriculturaPrecision">Agricultura de Precisión (Sensores)</button>
+        <button class="btn-submodulo" data-submodulo="CalculadoraAgricola">Calculadora Agrícola</button>
+        <button class="btn-submodulo" data-submodulo="CalendarioLunar">Calendario Lunar</button>
+        <button class="btn-submodulo" data-submodulo="ClimaInteligente">Clima Inteligente</button>
+        <button class="btn-submodulo" data-submodulo="CronogramaSiembra">Cronograma de Siembra</button>
+        <button class="btn-submodulo" data-submodulo="LevantamientoLote">Levantamiento de Lote</button>
+        <button class="btn-submodulo" data-submodulo="InventarioBiodiversidad">Inventario de Biodiversidad</button>
         <button class="btn-submodulo" data-submodulo="GpsMedicionTerrenos">GPS (Medición de Terrenos)</button>
         <button class="btn-submodulo" data-submodulo="VisionArtificial">Visión Artificial</button>
         <button class="btn-submodulo" data-submodulo="VisionSatelital">Visión Satelital</button>
+        <button class="btn-submodulo" data-submodulo="BibliotecaTecnicaRural">Biblioteca Técnica Rural</button>
       </div>
       <div style="margin:32px 0;text-align:center;">
         <input type="file" accept="image/*" capture="environment" id="input-foto-cultivo" style="display:none;" />
@@ -30,8 +37,15 @@ export function mostrarPanel() {
   Array.from(document.querySelectorAll('.btn-submodulo')).forEach((btn) => {
     btn.addEventListener('click', async (e) => {
       const modulo = btn.getAttribute('data-submodulo');
-      const mod = await window.cargarModulo(modulo);
-      mod.mostrarPanel?.();
+      try {
+        const mod = await window.cargarModulo(modulo);
+        mod?.mostrarPanel?.();
+      } catch (err) {
+        console.error(`[MELANTIA] Error al cargar ${modulo}:`, err);
+        alert(
+          `No se pudo abrir "${btn.textContent}". Intenta de nuevo o revisa tu conexión.`
+        );
+      }
     });
   });
 

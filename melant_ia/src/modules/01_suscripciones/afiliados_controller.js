@@ -487,8 +487,10 @@ import {
       this._activarAngel();
       const panel = document.getElementById('panel-novedades');
       if (!panel) return false;
+      const estado = this._estado();
+      const recibo = estado.historial_pagos[0] || null;
       panel.style.maxWidth = '1040px';
-      panel.innerHTML = `<div class="novedad-card afiliados-wrapper" data-experto="Angel">${this._contenidoPanel()}</div>`;
+      panel.innerHTML = `<div class="novedad-card afiliados-wrapper" data-experto="Angel">${reciboHtml(recibo)}</div>`;
       panel.style.display = 'block';
       this._enlazarTabs(panel);
       return true;

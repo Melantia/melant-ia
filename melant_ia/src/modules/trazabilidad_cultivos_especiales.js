@@ -128,4 +128,6 @@ const MelantiaTrazabilidadCultivosEspeciales = {
   },
 };
 
+window.MelantiaTrazabilidadCultivosEspeciales =
+  MelantiaTrazabilidadCultivosEspeciales;
 export default MelantiaTrazabilidadCultivosEspeciales;

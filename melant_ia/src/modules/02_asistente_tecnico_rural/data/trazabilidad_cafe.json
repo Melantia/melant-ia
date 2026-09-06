@@ -1,0 +1,27 @@
+{
+  "cultivo": "Café",
+  "variedad": "Typica",
+  "siembra": {
+    "fecha_inicio": "2022-06-01",
+    "altura_msnm": 1850,
+    "densidad_plantas_ha": 5000
+  },
+  "suelo": {
+    "ph": 6.0,
+    "textura": "Franco",
+    "materia_organica": "5.0%"
+  },
+  "sombrío": {
+    "especies": ["Plátano", "Poró"],
+    "cobertura": "40%"
+  },
+  "cosecha": {
+    "epoca": "Junio - Septiembre",
+    "rendimiento_esperado_qq_ha": 25
+  },
+  "procesamiento": {
+    "metodo": "Lavado",
+    "fermentacion_horas": 18,
+    "secado": "Pasto al sol"
+  }
+}
