@@ -2954,7 +2954,22 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       `docs/EP_DDL_REVISION.md` (checklist completo por tabla).
 - [x] Cero ALTER a tablas existentes → rollback = DROP en orden inverso.
 - [x] Diferidas a B2: `ep_proyecto_evidencias`, `ep_proyecto_informes`.
-- [ ] Ejecución pendiente de autorización explícita.
+### 2026-09-29 (quat) — EP-3.2/EP-3.3: DDL ejecutado y validado
+
+- [x] Backup `backups/melantia_pre_ep3.sql` (pg_dump, 32 tablas).
+- [x] Estado previo: 32 tablas · 71 FK · 100 índices · 32 PK.
+- [x] Ejecución `psql -1` (BEGIN→COMMIT único): 13 CREATE TABLE +
+      29 CREATE INDEX, sin errores.
+- [x] Estado posterior: **45 tablas** — 32 preexistentes intactas +
+      13 EP; 27 FK nuevas (17 CASCADE / 10 SET NULL); 8 UNIQUE;
+      CHECKs verificados.
+- [x] Regresión: **pytest 91/91 passed**.
+- [x] Pruebas funcionales con datos `EP3_TEST`: inserts completos,
+      CHECK/UNIQUE negativos, SET NULL (workspace→proyecto), CASCADE
+      (proyecto→participantes+vínculos). Limpieza total: 0 filas EP.
+- [x] **EP-3 cerrado.** Pendientes: `ep_proyecto_evidencias` /
+      `ep_proyecto_informes` (B2) y entitlements (B5).
+- [ ] EP-4: implementación por subetapas (EP-4A identidad profesional…).
 
 ---
 

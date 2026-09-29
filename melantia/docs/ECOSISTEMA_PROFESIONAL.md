@@ -493,12 +493,20 @@ Administración → Rol administrativo
 ## 19. Fases futuras de implementación (propuesta)
 
 ```text
-EP-0  ESTA FASE — diseño conceptual          ✅ (este documento)
-EP-1  Modelo de datos                        ⏳ propuesto en docs/EP_MODELO_DATOS.md — pendiente de aprobación
-EP-2  Repository + schemas                   (patrón levantamientos)
-EP-3  Service + endpoints                    (aislamiento por rol)
-EP-4  Workspace + profesiones                (capa de experiencia)
-EP-5  Agenda/actividades                     (entidad actividad)
+EP-0  Diseño conceptual                      ✅ (este documento)
+EP-1  Modelo de datos                        ✅ aprobado — docs/EP_MODELO_DATOS.md
+EP-2  Integración con schema real            ✅ docs/EP_INTEGRACION.md
+EP-3  DDL Ecosistema Profesional             ✅ ejecutado 2026-09-29 —
+                                              13 tablas, 45 totales
+                                              (docs/EP_DDL_REVISION.md §4)
+```
+
+Fases de implementación posteriores (renumeradas tras EP-3):
+
+```text
+EP-4  Repository + schemas + service + endpoints (por subetapas: EP-4A
+      identidad profesional, EP-4B workspaces, EP-4C proyectos…)
+EP-5  Agenda/actividades                     (servicio transversal)
 EP-6  Vínculos a recursos existentes         (fincas/lotes/levantamientos/M11)
 EP-7  Frontend workspace + proyecto          (web primero — oficina)
 EP-8  Offline/outbox con contexto proyecto   (requiere outbox previo)
@@ -507,9 +515,9 @@ EP-9  Entregables + auditoría completa
 
 ## 20. Decisiones pendientes (explícitas)
 
-> **2026-09-29:** todas tienen propuesta de resolución en
-> `docs/EP_MODELO_DATOS.md` §1–§9 — pendientes de aprobación antes de
-> cualquier DDL.
+> **2026-09-29:** todas fueron resueltas en `docs/EP_MODELO_DATOS.md`
+> §1–§11 (aprobado EP-1, ejecutado EP-3). La tabla queda como registro
+> histórico de las opciones evaluadas.
 
 | # | Decisión | Opciones | Nota |
 |---|---|---|---|

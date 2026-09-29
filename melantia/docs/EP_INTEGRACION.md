@@ -142,8 +142,9 @@ aprueba.
 EP-0 ✅ diseño conceptual          docs/ECOSISTEMA_PROFESIONAL.md
 EP-1 ✅ modelo propuesto           docs/EP_MODELO_DATOS.md (D1–D9, revisado)
 EP-2 ✅ esta revisión              verificado contra schema real
-EP-3 ⏳ DDL                        pendiente de tu autorización explícita
+EP-3 ✅ DDL ejecutado              45 tablas en melantia_db — ver
+                                   docs/EP_DDL_REVISION.md §4
 ```
 
 **EP-2 cerrado:** el modelo integra limpio con las tablas reales; 2
-enlaces diferidos a B2; 13 tablas listas para DDL cuando autorices.
+enlaces diferidos a B2; 13 tablas desplegadas y validadas (EP-3).

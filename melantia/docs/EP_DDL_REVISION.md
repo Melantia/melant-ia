@@ -2,8 +2,8 @@
 
 **Fecha:** 2026-09-29
 **Archivo revisado:** `backend/database/schema/ecosistema_profesional.sql`
-**Estado:** **NO EJECUTADO** — propuesta estática pendiente de
-autorización explícita. 0 SQL ejecutado, 0 código modificado.
+**Estado:** **EJECUTADO Y VALIDADO** en `melantia_db` (2026-09-29,
+EP-3.2/EP-3.3). Ver registro de ejecución en §4.
 
 ---
 
@@ -87,3 +87,22 @@ No bloquea el DDL pero sí el service de permisos EP-4.
 - Política multi-rol (un usuario, un rol por proyecto — hoy fijado por
   `UNIQUE(proyecto_id, usuario_id)`).
 - Flag `cliente_principal` en participantes.
+
+## 4. Registro de ejecución (EP-3.2/EP-3.3, 2026-09-29)
+
+| Campo | Resultado |
+|---|---|
+| Backup | `backups/melantia_pre_ep3.sql` — pg_dump completo (2.504 líneas, 32 CREATE TABLE) |
+| Estado previo | 32 tablas · 71 FK · 100 índices · 32 PK · 0 tablas EP |
+| Ejecución | `psql -1` — BEGIN → COMMIT único; 13 CREATE TABLE + 29 CREATE INDEX; sin errores |
+| Estado posterior | **45 tablas** — 32 preexistentes intactas (71 FK verificadas) + 13 EP |
+| FK nuevas | **27** — 17 CASCADE (contenedor/recurso) + 10 SET NULL (referencias opcionales/auditoría) |
+| Índices nuevos | **29** `idx_*` + PKs/UNIQUE automáticos |
+| UNIQUE nuevas | 8 · CHECK verificados en negativo (rol inválido y duplicado rechazados) |
+| Regresión | **pytest 91/91 passed** |
+| Funcionales | inserción completa EP, CHECK negativo, UNIQUE negativo, SET NULL (workspace→proyecto), CASCADE (proyecto→participantes+vínculos) — todas OK |
+| Limpieza | 0 restos `EP3_TEST`; 0 filas en las 13 tablas EP |
+
+**Pendientes tras ejecución:** enlaces `ep_proyecto_evidencias` /
+`ep_proyecto_informes` (bloqueados por M11/B2) y gate de entitlements
+(bloqueado por B5 — doble fuente de plan).

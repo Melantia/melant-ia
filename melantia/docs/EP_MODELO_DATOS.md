@@ -372,13 +372,13 @@ tablas futuras — queda reservado por esta decisión.
 | D8 | `ep_` en toda la familia | `ep_` solo en `ep_proyecto*` (colisión M6); resto plano | convención real del schema: prefijos solo donde hay ambigüedad |
 | D9 | `contexto:{tipo,id}` | `contexto` objeto extensible multi-clave | una operación puede llevar proyecto+actividad+workspace a la vez |
 
-Todo lo anterior sigue siendo **propuesta pendiente de aprobación**.
-
 ---
 
-**Estado EP-1:** modelo propuesto y **aprobado conceptualmente**
-(2026-09-29, con revisiones §11). **0 SQL ejecutado.**
-EP-2 (integración con tablas reales) completado en
-`docs/EP_INTEGRACION.md` — 2 enlaces diferidos a B2, 13 tablas listas.
-Siguiente paso: tu autorización del DDL controlado (patrón Etapa
-2-A/2-B1).
+**Estado EP-1:** modelo **aprobado conceptualmente** (2026-09-29, con
+revisiones §11).
+**Estado EP-2:** integración verificada — `docs/EP_INTEGRACION.md`.
+**Estado EP-3:** DDL **ejecutado y validado** en `melantia_db`
+(2026-09-29) — 13 tablas creadas, 45 tablas totales, pytest 91/91.
+Registro completo en `docs/EP_DDL_REVISION.md` §4.
+Pendientes: `ep_proyecto_evidencias`/`ep_proyecto_informes` (B2) y
+entitlements (B5).
