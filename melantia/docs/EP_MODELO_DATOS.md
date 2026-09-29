@@ -29,7 +29,7 @@ recurso referenciado puede desaparecer sin destruir el registro.
 | # | Decisión (de EP §20) | Propuesta | Estado |
 |---|---|---|---|
 | D1 | Vínculo proyecto↔recursos | **`ep_proyecto_*` por tipo** — enlaces específicos con FK real (revisado §2, §11.1) | ⏳ propuesta |
-| D2 | Workspace | **Entidad propia** `ep_workspaces` + miembros | ⏳ propuesta |
+| D2 | Workspace | **Entidad propia** `workspaces` + `workspace_miembros` | ⏳ propuesta |
 | D3 | Profesión | **Tabla de catálogo** `perfiles_profesionales` + `usuarios_perfiles` | ⏳ propuesta |
 | D4 | Actividad vs Agenda | **Separadas y transversales**: `actividades` (con contexto opcional) + `agenda_eventos` | ⏳ propuesta |
 | D5 | Ubicación del EP | **Módulo nuevo** `modules/ecosistema_profesional/` — no M6; y "ubicación" = derivada, nunca duplicada (§3.5) | ⏳ propuesta |
@@ -146,20 +146,21 @@ perfiles_profesionales            catálogo de profesiones (D3)
   id, codigo UNIQUE ('agronomo','veterinario',…), nombre, descripcion, activo
 
 usuarios_perfiles                 usuario ↔ profesión (multi-perfil)
-  usuario_id FK→usuarios, perfil_id FK, verificado BOOL, principal BOOL
-  PK (usuario_id, perfil_id)
+  id PK + usuario_id FK→usuarios, perfil_id FK, verificado BOOL,
+  principal BOOL, UNIQUE (usuario_id, perfil_id)
+  — convención junction con PK sustituta (feria_participantes)
 
-ep_workspaces                     la oficina (D2: entidad)
+workspaces                        la oficina (D2: entidad)
   id, nombre, propietario_id FK→usuarios,
   estado ('activo','archivado'), created_at, updated_at
 
-ep_workspace_miembros             equipo permanente del workspace
-  workspace_id FK, usuario_id FK, rol_workspace VARCHAR
+workspace_miembros                equipo permanente del workspace
+  id PK + workspace_id FK, usuario_id FK, rol_workspace VARCHAR
   ('propietario','socio','colaborador'), estado
-  PK (workspace_id, usuario_id)
+  UNIQUE (workspace_id, usuario_id)
 
 ep_proyectos                      la unidad de trabajo
-  id, workspace_id FK→ep_workspaces NULL   — NULL = proyecto personal
+  id, workspace_id FK→workspaces NULL   — NULL = proyecto personal
   nombre, descripcion,
   estado VARCHAR CHECK ('borrador','activo','en_pausa','cerrado','archivado'),  D7
   creado_por FK→usuarios, fecha_inicio, fecha_objetivo,
@@ -183,7 +184,7 @@ ep_proyecto_participantes         membresía + rol (permisos por proyecto)
 - **Un rol por usuario por proyecto** (PK compuesta). Si alguien
   ejerce dos roles, el service otorga el conjunto de permisos del rol
   mayor — documentar en EP-3.
-- `ep_workspaces.propietario_id` = administrador de la oficina;
+- `workspaces.propietario_id` = administrador de la oficina;
   los roles operativos por proyecto viven abajo, en participantes.
 - El aislamiento de recursos sigue siendo `usuario_id` en cada módulo;
   `ep_proyecto_participantes` solo concede **visibilidad contextual**
@@ -309,7 +310,7 @@ de `ep_proyecto_informes` apuntando a su `evidencias_documentos.id`.
 ```text
 usuarios ──┬── usuarios_perfiles ──► perfiles_profesionales
            │
-           ├── ep_workspace_miembros ──► ep_workspaces ──► ep_proyectos
+           ├── workspace_miembros ──► workspaces ──► ep_proyectos
            │                                                    │
            └── ep_proyecto_participantes ────────────────────────┘
                                                                 │
