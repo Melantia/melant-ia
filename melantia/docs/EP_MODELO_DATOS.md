@@ -382,3 +382,6 @@ revisiones §11).
 Registro completo en `docs/EP_DDL_REVISION.md` §4.
 Pendientes: `ep_proyecto_evidencias`/`ep_proyecto_informes` (B2) y
 entitlements (B5).
+**Estado EP-4A:** identidad profesional **implementada** (2026-09-29) —
+seed de 6 perfiles, `GET/POST/DELETE /api/v1/ep/perfiles*`, regla UUID
+(`perfil_id` = FK real, `codigo` semántico), pytest 114/114.

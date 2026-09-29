@@ -2969,7 +2969,22 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       (proyecto→participantes+vínculos). Limpieza total: 0 filas EP.
 - [x] **EP-3 cerrado.** Pendientes: `ep_proyecto_evidencias` /
       `ep_proyecto_informes` (B2) y entitlements (B5).
-- [ ] EP-4: implementación por subetapas (EP-4A identidad profesional…).
+### 2026-09-29 (quin) — EP-4A: identidad profesional implementada
+
+- [x] Seed `database/seeds/perfiles_profesionales.sql` ejecutado —
+      6 perfiles activos (agronomo, veterinario, tecnico_agricola,
+      topografo, administrador_finca, consultor_rural).
+- [x] Módulo nuevo `modules/ecosistema_profesional/` + repository
+      `shared/repositories/perfiles_profesionales.py`.
+- [x] Endpoints `/api/v1/ep/perfiles`: GET catálogo, GET míos,
+      POST asignar (201), DELETE desasignar (204).
+- [x] Regla UUID: `perfil_id` = FK real; `codigo` solo semántico —
+      rechazo 422 a códigos en el request.
+- [x] Aislamiento por `usuario_id` en todas las operaciones;
+      404 sin revelar existencia ajena; 409 en asignación duplicada.
+- [x] **pytest 114/114** (91 previos + 23 nuevos EP-4A).
+- [ ] Pendientes: CRUD catálogo (ADM), verificación de credenciales,
+      EP-4B workspaces (diseño primero).
 
 ---
 

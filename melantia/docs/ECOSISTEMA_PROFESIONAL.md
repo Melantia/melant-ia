@@ -504,13 +504,19 @@ EP-3  DDL Ecosistema Profesional             ✅ ejecutado 2026-09-29 —
 Fases de implementación posteriores (renumeradas tras EP-3):
 
 ```text
-EP-4  Repository + schemas + service + endpoints (por subetapas: EP-4A
-      identidad profesional, EP-4B workspaces, EP-4C proyectos…)
-EP-5  Agenda/actividades                     (servicio transversal)
-EP-6  Vínculos a recursos existentes         (fincas/lotes/levantamientos/M11)
-EP-7  Frontend workspace + proyecto          (web primero — oficina)
-EP-8  Offline/outbox con contexto proyecto   (requiere outbox previo)
-EP-9  Entregables + auditoría completa
+EP-4A Identidad profesional                  ✅ 2026-09-29 — seed 6
+                                              perfiles, /api/v1/ep/perfiles,
+                                              114/114 pytest
+EP-4B Workspaces                             ⏳ diseño pendiente
+EP-4C Proyectos
+EP-4D Participantes / roles de proyecto
+EP-4E Vínculos a recursos                    (fincas/lotes/levantamientos;
+                                              evidencias/informes → B2)
+EP-4F Actividades
+EP-4G Agenda                                 (servicio transversal §10)
+EP-5  Frontend workspace + proyecto          (web primero — oficina)
+EP-6  Offline/outbox con contexto proyecto   (requiere outbox previo)
+EP-7  Entregables + auditoría completa
 ```
 
 ## 20. Decisiones pendientes (explícitas)
