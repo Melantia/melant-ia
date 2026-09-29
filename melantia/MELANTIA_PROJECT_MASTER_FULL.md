@@ -2986,6 +2986,34 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
 - [ ] Pendientes: CRUD catálogo (ADM), verificación de credenciales,
       EP-4B workspaces (diseño primero).
 
+### 2026-09-29 (sex) — Semántica de trabajo EP (pre-EP-4C)
+
+- [x] `ECOSISTEMA_PROFESIONAL.md` §2.5: separación organizacional (EP)
+      vs agronómico/espacial (campo): Proyecto, Actividad, Evento de
+      agenda | Unidad de Gestión, Área/Sector, Operación de campo.
+- [x] Proyecto = contenedor general (no actividad ni operación);
+      Actividad = coordinación que puede referenciar una Operación,
+      nunca duplicarla.
+- [x] Colisiones registradas: `feria_operaciones` (comercial) y
+      `usuarios.sector_comunidad` (geográfico) → "operación" y "sector"
+      siempre calificados.
+- [x] UG/Área/Sector viven en el dominio espacial — el EP solo los
+      referencia, nunca tablas `ep_*`.
+
+### 2026-09-29 (sept) — EP-4B: workspaces implementado
+
+- [x] `shared/repositories/workspaces.py` +
+      `modules/ecosistema_profesional/{routes,schemas,services}/workspaces.py`.
+- [x] Endpoints `/api/v1/ep/workspaces`: crear (auto-propietario),
+      listar míos, detalle+miembros, PATCH (gestor), invitar
+      (invitado→aceptar), PATCH/DELETE miembros.
+- [x] Reglas: aislamiento 404 ajeno; gestión solo propietario/socio;
+      fundador no removible/degradable; último propietario activo
+      protegido; remoción = estado 'removido' (historial preservado).
+- [x] **pytest 146/146** (114 previos + 32 nuevos EP-4B).
+- [ ] Pendientes: transferencia de propiedad, límites por plan (B5),
+      EP-4C proyectos (diseño primero).
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA

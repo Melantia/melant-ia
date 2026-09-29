@@ -385,3 +385,7 @@ entitlements (B5).
 **Estado EP-4A:** identidad profesional **implementada** (2026-09-29) —
 seed de 6 perfiles, `GET/POST/DELETE /api/v1/ep/perfiles*`, regla UUID
 (`perfil_id` = FK real, `codigo` semántico), pytest 114/114.
+**Estado EP-4B:** workspaces **implementado** (2026-09-29) —
+`/api/v1/ep/workspaces` con miembros/roles (propietario/socio/
+colaborador), invitación→aceptar, protección del propietario fundador;
+pytest 146/146.

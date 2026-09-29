@@ -8,8 +8,9 @@ en EP-4B/EP-4C.
 """
 from fastapi import APIRouter
 
-from modules.ecosistema_profesional.routes import perfiles
+from modules.ecosistema_profesional.routes import perfiles, workspaces
 
 router = APIRouter()
 
 router.include_router(perfiles.router)
+router.include_router(workspaces.router)

@@ -69,6 +69,70 @@ Administración MELANTIA                         (operación de plataforma — e
 - "Administración MELANTIA" no forma parte del EP — lo supervisa desde
   su propio eje (`docs/ADMINISTRACION.md`).
 
+## 2.5 Semántica de trabajo: coordinación vs ejecución
+
+Antes de EP-4C se fija el vocabulario de trabajo para no mezclar la
+**capa organizacional** (EP) con el **dominio agronómico** (módulos de
+campo). Son dos mundos que se tocan solo por referencia:
+
+```text
+ORGANIZACIONAL (EP)                    AGRONÓMICO / ESPACIAL (módulos)
+─────────────────────────              ──────────────────────────────
+Workspace (oficina)                    Finca (predio — propiedad legal)
+  └── Proyecto (encargo finito)          └── Lote (parcela física)
+        ├── Participantes                      └── Unidad de Gestión /
+        ├── Vínculos → recursos                      Sector/Área (zona
+        ├── Actividades ──────referencia──▶            homogénea de manejo)
+        │    (coordinación)                            └── Operación de campo
+        └── Entregables                                (ejecución real:
+Agenda (ocurrencias en el tiempo)                       riego, poda, muestreo…)
+```
+
+| Término | Mundo | Qué es | Qué NO es |
+|---|---|---|---|
+| **Proyecto** | EP | Contenedor general de trabajo: objetivo, cliente, participantes, vínculos, entregables | una actividad, ni una operación, ni un lote |
+| **Actividad** | EP | Ítem de trabajo coordinado dentro de un contexto (`actividades.contexto_tipo`): "levantar polígono", "entregar informe" — con responsable, estado y fecha objetivo | ejecución agronómica, ni ocurrencia en agenda |
+| **Evento de agenda** | EP (transversal) | Ocupación temporal de alguien (`agenda_eventos`): cuándo/dónde ocurre algo | la actividad misma — un evento puede vincularse a una (`actividad_id`) |
+| **Unidad de Gestión (UG)** | campo | Zona homogénea de manejo agronómico dentro de un lote (o el lote entero si no se subdivide): donde se ejecuta el manejo | contenedor de trabajo, ni propiedad |
+| **Área / Sector** | campo | Subdivisión o etiqueta espacial descriptiva de lote/UG ("sector norte", "zona baja") | unidad organizacional |
+| **Operación** | campo | Ejecución agronómica real sobre una UG: fertilización, riego, muestreo, cosecha — registrada con fecha, insumos, resultado | ítem de coordinación EP |
+
+**Reglas para evitar colisiones futuras:**
+
+1. **Proyecto coordina, no ejecuta.** El trabajo físico real se
+   registra como Operación en el módulo de campo; el Proyecto solo lo
+   organiza y referencia.
+2. **Actividad coordina una operación, no la es.** Una Actividad EP
+   ("supervisar riego sector norte") puede apuntar a una Operación
+   registrada en campo, pero el registro de ejecución vive en su
+   módulo — el EP nunca lo duplica (§21).
+3. **"Operación" siempre calificada.** `feria_operaciones` ya existe
+   en el dominio comercial (transacción de feria). En campo se dirá
+   *operación agronómica / de campo* — nunca "operación" a secas.
+4. **"Sector" siempre calificado.** `usuarios.sector_comunidad` es el
+   sector geográfico-comunitario del usuario; el sector de un lote es
+   *sector agronómico* — palabra distinta, dominio distinto.
+5. **UG/Área/Sector viven en el dominio espacial** (junto a
+   fincas/lotes si el modelo físico los llega a necesitar). El EP los
+   alcanza exclusivamente por vínculos — nunca como tablas `ep_*`.
+6. **Un Proyecto ≠ un conjunto de Actividades.** El proyecto tiene
+   identidad propia (cliente, estado, entregables) aunque aún no tenga
+   actividades; y una actividad puede existir sin proyecto
+   (`contexto_tipo='general'`).
+
+Ejemplo completo:
+
+```text
+Workspace "Oficina Agronómica Andrade"
+  └── Proyecto "Plan de manejo Finca El Carmen 2026"
+        ├── Participantes: cliente (dueño), profesional responsable
+        ├── Vínculos → finca, lote 3, levantamiento norte
+        ├── Actividad "Muestreo de suelo" (fecha_objetivo)
+        │     └── referencia → Operación de campo "muestreo 12 puntos"
+        │            ejecutada sobre UG "sector norte, lote 3"
+        └── Entregable → informe de suelos
+```
+
 ## 3. Problema que resuelve
 
 Hoy las entidades de MELANTIA responden al **productor propietario de
@@ -507,7 +571,10 @@ Fases de implementación posteriores (renumeradas tras EP-3):
 EP-4A Identidad profesional                  ✅ 2026-09-29 — seed 6
                                               perfiles, /api/v1/ep/perfiles,
                                               114/114 pytest
-EP-4B Workspaces                             ⏳ diseño pendiente
+EP-4B Workspaces                             ✅ 2026-09-29 — miembros,
+                                              roles, invitación/aceptar,
+                                              protección propietario;
+                                              146/146 pytest
 EP-4C Proyectos
 EP-4D Participantes / roles de proyecto
 EP-4E Vínculos a recursos                    (fincas/lotes/levantamientos;
