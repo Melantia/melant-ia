@@ -146,6 +146,9 @@ EP-3 ✅ DDL ejecutado              45 tablas en melantia_db — ver
                                    docs/EP_DDL_REVISION.md §4
 EP-4A ✅ identidad profesional     /api/v1/ep/perfiles — 114/114 pytest
 EP-4B ✅ workspaces                /api/v1/ep/workspaces — 146/146 pytest
+EP-4C ⏳ rediseño conceptual        EP_MODELO_DATOS §12 — modelo de
+                                   trabajo ampliado (visitas, programas,
+                                   fases, presupuesto, clientes)
 ```
 
 **EP-2 cerrado:** el modelo integra limpio con las tablas reales; 2

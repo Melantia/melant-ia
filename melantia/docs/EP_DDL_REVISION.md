@@ -106,3 +106,25 @@ No bloquea el DDL pero sí el service de permisos EP-4.
 **Pendientes tras ejecución:** enlaces `ep_proyecto_evidencias` /
 `ep_proyecto_informes` (bloqueados por M11/B2) y gate de entitlements
 (bloqueado por B5 — doble fuente de plan).
+
+## 5. Adecuación tras el rediseño conceptual EP-4C (2026-09-29)
+
+El rediseño del modelo de trabajo (EP_MODELO_DATOS §12) introduce
+visita puntual, programas, fases, presupuesto y cartera de clientes.
+Evaluación del DDL ejecutado:
+
+- **Suficiente sin cambios:** `ep_proyectos` (contenedor),
+  `ep_proyecto_participantes`, `actividades`, `agenda_eventos`,
+  `audit_eventos`, `perfiles_profesionales`, `usuarios_perfiles`,
+  `workspaces`.
+- **Requiere evolución futura (no ahora):**
+  - `workspace_miembros` CHECK de rol — el plan profesional usa
+    `administrador`/`trabajador`; solo admite `propietario/socio/
+    colaborador`. Cambio depende de B5 y de aprobación explícita.
+  - Nuevas entidades documentadas en EP_MODELO_DATOS §12.10 —
+    `ep_programas`, `ep_fases`, `ep_visitas`, `ep_presupuestos`,
+    `ep_propuestas`, `clientes_profesionales`. Cada una requerirá su
+    propio DDL revisado como este documento.
+- **Membresías removidas:** sin cambio de DDL — la reactivación
+  `removido → activo` reutiliza la fila existente (decisión aprobada,
+  EP_MODELO_DATOS §10).

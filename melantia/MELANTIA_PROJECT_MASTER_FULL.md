@@ -3014,6 +3014,34 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
 - [ ] Pendientes: transferencia de propiedad, límites por plan (B5),
       EP-4C proyectos (diseño primero).
 
+### 2026-09-29 (oct) — EP-4C: rediseño conceptual (sin implementación)
+
+- [x] Modelo de trabajo ampliado documentado en `EP_MODELO_DATOS` §12:
+      Visita/Servicio puntual (sin proyecto) → Resultado → Proyecto;
+      Proyecto → Programas → Fases (IA propone → profesional aprueba) →
+      Actividades → Operaciones de campo (referenciadas, nunca duplicadas).
+- [x] Presupuesto consolidado actividad→programa→proyecto (entidad
+      futura); propuesta técnica/económica generable por IA como
+      borrador aprobable.
+- [x] Cliente profesional: cartera (entidad futura
+      `clientes_profesionales`) vs rol `cliente` en proyecto — dos
+      sentidos separados; clasificación flexible/privada.
+- [x] Visibilidad aprobada: propietario del workspace ve detalle
+      completo de sus proyectos anclados (sustituye regla anterior).
+- [x] **Decisión aprobada — membresías removidas:** `removido → activo`
+      reutilizando la fila existente (sin nueva fila ni invitación;
+      aplica a `workspace_miembros` y `ep_proyecto_participantes`).
+      Resuelve el pendiente de EP-4B sin cambio de DDL.
+- [x] Workspace: nombre mutable sin romper UUID/proyectos/historial;
+      capacidad de equipo delegada a entitlements (B5), nunca
+      hardcodeada en EP.
+- [x] Adecuación DDL: `ep_proyectos` suficiente; evolución futura
+      documentada (rol `administrador`, `ep_programas`, `ep_fases`,
+      `ep_visitas`, `ep_presupuestos`, `ep_propuestas`,
+      `clientes_profesionales`) — `EP_DDL_REVISION` §5.
+- [ ] Decisiones pendientes de aprobación: D-C1, D-C2, D-C4, D-C5,
+      D-C8 (`EP_MODELO_DATOS` §12.11). Implementación EP-4C no iniciada.
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA

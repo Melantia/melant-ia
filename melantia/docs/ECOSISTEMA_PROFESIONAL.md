@@ -341,6 +341,19 @@ ECOSISTEMA PROFESIONAL
   distinta.
 - El motor de datos y servicios es **común a todos los workspaces**;
   solo cambia la configuración/presentación.
+- **Nombre mutable (EP-4C):** renombrar el workspace ("Oficina
+  Agronómica Andrade" → "Oficina de Servicios de Fertilización
+  Andrade") no crea otro workspace ni cambia el UUID — proyectos,
+  miembros e historial permanecen. Soportado por `PATCH
+  /ep/workspaces` (EP-4B).
+- **Capacidad por plan (EP-4C):** el tamaño del equipo (propuesta base:
+  1 fundador + 1 socio + 1 administrador + 2 trabajadores + puestos
+  adicionales tarifados) es regla de **entitlements/suscripciones**,
+  nunca hardcodeada en EP — ver B5 y EP_MODELO_DATOS §12.8.
+- **Evolución futura del CHECK de roles:** el plan conceptual usa
+  fundador/socio/administrador/trabajador; el DDL ejecutado solo admite
+  `propietario/socio/colaborador` — añadir `administrador` es evolución
+  documentada en EP_MODELO_DATOS §12.9, pendiente de B5.
 
 ## 10. Agenda y operaciones
 
@@ -446,6 +459,11 @@ Proyecto → Participantes → Rol → Permisos → Recursos
 - **Regla clave:** ser miembro de un workspace no da acceso automático
   a los proyectos del workspace ni a los datos del cliente — la
   membresía es **por proyecto**.
+- **Excepción aprobada (EP-4C):** el **propietario del workspace** ve la
+  información completa de los proyectos anclados a su workspace. La
+  excepción no se extiende a socios ni demás miembros — la matriz fina
+  de permisos workspace/proyecto es diseño futuro (EP_MODELO_DATOS
+  §12.7).
 - El cliente ve solo lo que el proyecto le comparte — no toda la
   operación del profesional.
 - Los permisos actuales (`usuarios` + `get_current_user` + aislamiento
@@ -575,8 +593,12 @@ EP-4B Workspaces                             ✅ 2026-09-29 — miembros,
                                               roles, invitación/aceptar,
                                               protección propietario;
                                               146/146 pytest
-EP-4C Proyectos
-EP-4D Participantes / roles de proyecto
+EP-4C Proyectos                              ⏳ rediseño conceptual —
+                                              modelo de trabajo ampliado
+                                              (visita puntual, programas,
+                                              fases, presupuesto, clientes)
+                                              en EP_MODELO_DATOS §12
+EP-4D Participantes / roles de proyecto      (incluye removido→activo)
 EP-4E Vínculos a recursos                    (fincas/lotes/levantamientos;
                                               evidencias/informes → B2)
 EP-4F Actividades
@@ -621,3 +643,16 @@ EP-7  Entregables + auditoría completa
 
 **Fin del diseño conceptual.** Siguiente paso: aprobación del modelo de
 datos propuesto en `docs/EP_MODELO_DATOS.md` → entonces DDL controlado.
+
+---
+
+> **Nota EP-4C (2026-09-29):** el modelo de trabajo se extendió — ver
+> `docs/EP_MODELO_DATOS.md` §12. Resumen: el Proyecto sigue siendo el
+> contenedor general de coordinación (§2.5), pero el trabajo profesional
+> ya no exige Proyecto: la **Visita/Servicio puntual** existe sola y puede
+> originar un Proyecto por referencia; el Proyecto puede contener
+> **Programas** (entidad futura) con fases sugeridas por IA y aprobadas
+> por el profesional; Presupuesto consolida actividad→programa→proyecto;
+> el Cliente existe como cartera profesional (entidad futura) y como
+> rol de proyecto — dos sentidos separados. Nada de esto está
+> implementado ni altera el DDL ejecutado.

@@ -362,6 +362,14 @@ tablas futuras — queda reservado por esta decisión.
   (subproyectos)? — recomiendo posponer.
 - `estado` completo de `ep_proyectos` y transiciones permitidas.
 - Catálogo inicial de `perfiles_profesionales` (seed §36.4 del Master).
+- **Membresías removidas — DECISIÓN APROBADA (EP-4C, §17 de la tarea):**
+  `UNIQUE(workspace_id, usuario_id)` hace que remover deje una fila
+  `removido` y re-incorporar choque con ella. Se adopta la **opción A**:
+  reutilizar la membresía existente — `removido → activo` directamente,
+  sin nueva fila ni nueva invitación. La reactivación la ejecuta el
+  propietario/administrador; sin cambio de DDL. Aplica igual a
+  `ep_proyecto_participantes` (misma regla). La opción B (UNIQUE
+  parcial + historial múltiple) queda descartada para esta iteración.
 
 ## 11. Revisión crítica 2026-09-29 (bis) — cambios respecto a la primera propuesta
 
@@ -371,6 +379,194 @@ tablas futuras — queda reservado por esta decisión.
 | D5 | sin sección | §3.5: ubicación = derivada del recurso, nunca persistida en el EP | evita duplicar `coordenadas_gps`/puntos |
 | D8 | `ep_` en toda la familia | `ep_` solo en `ep_proyecto*` (colisión M6); resto plano | convención real del schema: prefijos solo donde hay ambigüedad |
 | D9 | `contexto:{tipo,id}` | `contexto` objeto extensible multi-clave | una operación puede llevar proyecto+actividad+workspace a la vez |
+
+## 12. EP-4C — rediseño conceptual del modelo de trabajo (2026-09-29)
+
+> **Solo diseño — nada implementado, nada alterado en el DDL.**
+
+### 12.1 Jerarquía del trabajo profesional
+
+El modelo anterior `Workspace → Proyecto → Participantes → Recursos`
+es insuficiente: **no todo trabajo profesional requiere un Proyecto**.
+La jerarquía definitiva propuesta:
+
+```text
+TRABAJO PROFESIONAL
+├── VISITA / SERVICIO PROFESIONAL PUNTUAL
+│     └── Resultado
+│           └── (si el cliente solicita continuidad) → PROYECTO
+│
+└── PROYECTO  (contenedor general de coordinación — §2.5 ECOSISTEMA)
+      ├── Participantes (roles de proyecto)
+      ├── Programa 1..N
+      │     ├── Fases  (IA propone → profesional aprueba)
+      │     ├── Actividades
+      │     ├── Visitas
+      │     ├── Cronograma
+      │     ├── Presupuesto consolidado
+      │     └── Resultados / entregables
+      ├── Programa 2..N …
+      ├── Presupuesto consolidado
+      └── Vínculos → fincas/lotes/levantamientos/registros
+            (referencia, nunca duplicación — §7)
+```
+
+El **Proyecto puede existir sin programas** (trabajo simple de varias
+sesiones) y la **visita puntual existe sin Proyecto ni Workspace**.
+
+### 12.2 Definiciones formales
+
+| Término | Definición | Capa |
+|---|---|---|
+| **Visita / Servicio puntual** | Trabajo profesional autocontenido e independiente: desplazamiento + inspección + registro + resultado/entregable, sin proyecto, programa ni equipo | EP |
+| **Proyecto** | Contenedor general de coordinación de un encargo profesional finito. No es actividad, ni operación de campo, ni unidad espacial | EP |
+| **Programa** | Subdivisión temática durable de un proyecto ("manejo fitosanitario", "plan de riego") con objetivo, responsable, fases, cronograma y presupuesto propios | EP — entidad futura |
+| **Fase** | Etapa ordenada dentro de un programa (diagnóstico, ejecución, evaluación). Sugerible por IA; el profesional aprueba | EP — entidad futura |
+| **Actividad** | Ítem concreto de coordinación profesional con responsable/estado/fecha (tabla `actividades` ya existe) | EP |
+| **Operación de campo** | Ejecución técnica real sobre una Unidad de Gestión (fertilización, muestreo, riego) — pertenece al módulo de dominio (M2/M3/M11), EP solo la referencia/coordina | campo |
+| **Resultado** | Entregable verificable de una visita, actividad, programa o proyecto (diagnóstico, informe, recomendación) | EP + custodia M11 (B2) |
+| **Cliente** | Dos sentidos: (A) contacto/cartera del profesional — entidad futura `clientes_profesionales`; (B) participante de un proyecto con `rol='cliente'` | EP |
+| **Presupuesto** | Desglose económico por actividad (visita, transporte, insumos, laboratorio, informe) que se consolida en programa → proyecto | EP — entidad futura |
+| **Propuesta técnica(/económica)** | Documento generable (borrador por IA, aprobación del profesional): propuesta técnica, propuesta+presupuesto, cronograma, plan de trabajo, informes | EP — generación futura |
+
+### 12.3 Flujo visita → proyecto
+
+```text
+VISITA PUNTUAL
+  (sin workspace/proyecto — trabajo profesional completo en sí mismo)
+    ↓  RESULTADO (diagnóstico, evidencias, recomendación)
+    ↓  CLIENTE SOLICITA CONTINUIDAD
+CREAR PROYECTO
+    ↓  hereda referencias — nunca copia: cliente, finca, lote/UG,
+       cultivo, diagnóstico, evidencias, resultado de la visita
+PROGRAMA(S) DE MANEJO
+```
+
+La conversión crea el proyecto y **vincula** los recursos existentes
+(la visita queda como antecedente referenciado); no duplica datos.
+
+### 12.4 Flujo IA → estructura aprobada
+
+```text
+IA PROPONE (fases/programas/plan según nombre+objetivo+contexto)
+  ↓
+PROFESIONAL REVISA
+  ↓
+PROFESIONAL MODIFICA (acepta, edita, elimina, agrega, reordena)
+  ↓
+PROFESIONAL APRUEBA
+  ↓
+ESTRUCTURA DEFINITIVA
+```
+
+Regla: la IA nunca convierte sus sugerencias en obligaciones
+técnicas — propone borradores; la estructura solo nace al aprobarse.
+
+### 12.5 Modelo de presupuesto (conceptual)
+
+```text
+Actividad → presupuesto opcional (ítems: visita, transporte,
+            insumos, laboratorio, informe, total)
+Programa  → consolidación de presupuestos de sus actividades
+Proyecto  → consolidación de programas (+ actividades sueltas)
+```
+
+Presupuesto = entidad futura por contenedor (actividad/programa/
+proyecto), no columna. La consolidación es derivada — nunca se
+persiste desconectada de sus partidas.
+
+### 12.6 Clientes profesionales (conceptual)
+
+```text
+CLIENTE (entidad)          CLIENTE (participante)
+cartera del profesional    rol='cliente' en ep_proyecto_participantes
+├── historial              └── un proyecto concreto
+├── clasificaciones
+└── N proyectos/visitas
+```
+
+- El profesional mantiene una **cartera de clientes** — entidad futura
+  `clientes_profesionales` (diseño pendiente, no implementar).
+- Clasificación **flexible y privada del profesional** (etiquetas:
+  "productor de cacao", "cliente institucional"…) — no taxonomía
+  rígida ni etiquetas subjetivas ("buen/mal cliente").
+- El comportamiento de pago se deriva de datos objetivos (facturas,
+  vencimientos, días promedio de pago) — dominio M10 futuro, no EP.
+
+### 12.7 Visibilidad y roles — tres dimensiones separadas
+
+```text
+Perfil profesional    agrónomo / veterinario / topógrafo…   (EP-4A)
+Workspace             fundador / socio / administrador /    (EP-4B + evolución)
+                      trabajador
+Proyecto              propietario / profesional_responsable
+                      / colaborador / tecnico / auditor /
+                      cliente
+```
+
+Ejemplo: un usuario es `agrónomo` (perfil) + `socio` (workspace) +
+`profesional_responsable` (proyecto) — tres ejes que no se mezclan.
+
+**Decisión de visibilidad (aprobada):** el **propietario del
+workspace ve la información completa de los proyectos anclados a su
+workspace** — sustituye la restricción anterior de "gestor ve
+existencia sin detalle". No se extiende a todos los miembros: la
+matriz de permisos fina queda como diseño futuro.
+
+### 12.8 Workspace — identidad y plan
+
+- **Nombre mutable:** renombrar ("Oficina Agronómica Andrade" →
+  "Oficina de Servicios de Fertilización Andrade") no crea otro
+  workspace ni cambia el UUID; proyectos, miembros e historial
+  permanecen. Ya soportado por `PATCH /ep/workspaces` (EP-4B).
+- **Plan profesional (referencia, no regla EP):** capacidad base
+  propuesta 1 fundador + 1 socio + 1 administrador + 2 trabajadores
+  (5 puestos) + $5 por puesto adicional. **EP nunca hardcodea estas
+  reglas** — consulta capacidades a entitlements/suscripciones (B5).
+
+### 12.9 Adecuación del DDL actual (EP-3 ya ejecutado)
+
+| Tabla EP-3 | ¿Suficiente para EP-4C? |
+|---|---|
+| `ep_proyectos` | ✅ suficiente para el contenedor (nombre, descripcion, workspace_id nullable, estados, fechas). `objetivo` puede mapearse a `descripcion` en v1; columna dedicada = evolución futura opcional |
+| `ep_proyecto_participantes` | ✅ suficiente (roles CHECK cubren cliente/responsable/etc.) |
+| `workspaces` / `workspace_miembros` | ⚠ roles CHECK `propietario/socio/colaborador` no cubren `administrador`/`trabajador` del plan propuesto — **requiere evolución futura** del CHECK cuando el plan profesional se materialice (depende de B5); `trabajador` ≈ `colaborador` hoy |
+| `actividades` | ✅ suficiente como coordinación; presupuesto por actividad = entidad futura |
+| `agenda_eventos` | ✅ suficiente (ocurrencias temporales; visitas pueden usarlo) |
+| `audit_eventos` | ✅ estructura lista; writers pendientes ADM-2 |
+| `perfiles_profesionales`/`usuarios_perfiles` | ✅ gate `tiene_perfil` para creación de proyecto |
+
+**Conclusión:** `ep_proyectos` sigue siendo suficiente para EP-4C
+como contenedor. Las entidades nuevas (programas, fases, visitas,
+clientes_profesionales, presupuestos, propuestas) son **evolución
+futura documentada**, no cambios al DDL actual.
+
+### 12.10 Entidades futuras identificadas (no crear todavía)
+
+| Entidad futura | Motivo | Dependencia |
+|---|---|---|
+| `ep_programas` | subdivisión durable del proyecto | EP-4C aprobado |
+| `ep_fases` | etapas ordenadas de programa | ep_programas |
+| `ep_visitas` (o servicios puntuales) | trabajo sin proyecto; origen de proyectos | diseño propio |
+| `ep_presupuestos` + ítems | economía por contenedor | actividades/programas |
+| `ep_propuestas` | documentos generados (IA borrador → aprobación) | programas+presupuestos |
+| `clientes_profesionales` | cartera del profesional | diseño propio |
+| `ep_proyecto_evidencias`/`_informes` | vínculos de custodia | **B2 (M11)** |
+| Evolución `workspace_miembros` CHECK | rol `administrador` (y naming trabajador) | **B5** + aprobación |
+
+### 12.11 Decisiones registradas
+
+| # | Decisión | Estado |
+|---|---|---|
+| D-C0 | Membresías removidas: `removido → activo` reutilizando la fila (aplica a workspace_miembros y ep_proyecto_participantes) | ✅ aprobada |
+| D-C1 | Proyecto sin workspace exige ≥1 perfil profesional activo (`tiene_perfil`) | ⏳ propuesta |
+| D-C2 | Objetivo obligatorio **antes** de `borrador → activo` (no para crear el borrador) | ⏳ propuesta |
+| D-C3 | Propietario del workspace ve detalle completo de proyectos anclados | ✅ aprobada |
+| D-C4 | `archivado` terminal | ⏳ propuesta |
+| D-C5 | Gestión de participantes en EP-4D | ⏳ propuesta |
+| D-C6 | Roles workspace: `administrador` + `trabajador` (5 puestos base vía entitlements) | ⏳ depende B5 — evolución futura del CHECK |
+| D-C7 | `clientes_profesionales` como entidad de cartera | ⏳ diseño futuro |
+| D-C8 | Visita puntual como trabajo sin proyecto; conversión por referencia | ⏳ propuesta |
 
 ---
 
