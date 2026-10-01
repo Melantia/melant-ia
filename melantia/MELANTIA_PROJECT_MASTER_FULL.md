@@ -4,6 +4,10 @@
 > Debe permanecer en la raíz del repositorio y actualizarse diariamente cuando cambie una decisión, se complete una tarea o aparezca un riesgo técnico.
 >
 > **Objetivo principal:** construir un MVP funcional en aproximadamente 1 mes, preparado para crecer progresivamente, con una experiencia **mobile-first, offline-first, rápida y robusta**, y con una versión Web orientada principalmente a gestión, consulta, importación/exportación y trabajo con Excel desde laptops.
+>
+> **Documento de visión:** `docs/VISION_ECOSISTEMA_MELANTIA.md` (2026-09-30) — visión de crecimiento y roadmap de largo plazo del ecosistema (Marketplace transversal, EP para negocios no agropecuarios, IA→visión→satélite→finanzas→drones→robótica→biotecnología→carbono, estrategia territorial Manabí→Costa→Sierra→Oriente). Documento de referencia: **no implementa** funcionalidades futuras; cada fase se contrasta con este Master antes de ejecutarse.
+>
+> **Licencia Institucional:** `docs/LICENCIA_INSTITUCIONAL.md` (2026-10-01) — modelo comercial/funcional aprobado: beneficiario vs líder comunitario patrocinado vs usuario independiente; niveles $5.000→20 líderes y $10.000→40 líderes; acceso institucional a Negocios Rurales sin propiedad de las plataformas; comisión 3 % independiente de la licencia.
 
 ---
 
@@ -1330,6 +1334,24 @@ Centralizar:
 ```text
 Subscription / Entitlements Service
 ```
+
+## Licencia Institucional
+
+Tipo de contrato **distinto de los planes de usuario**, para
+instituciones que ejecutan proyectos usando MELANTIA como
+infraestructura tecnológica.
+
+- `$5.000/año` → hasta **20** líderes comunitarios patrocinados.
+- `$10.000/año` → hasta **40** líderes comunitarios patrocinados.
+- Los líderes patrocinados son **seleccionados por la institución**;
+  el límite corresponde a accesos patrocinados y **NO** representa el
+  número máximo de beneficiarios del proyecto.
+- La comisión del **3 % por transacción** permanece **independiente**
+  de la licencia.
+- Condiciones diferenciadas: beneficiario del proyecto / líder
+  comunitario patrocinado / usuario MELANTIA independiente.
+
+Modelo completo en `docs/LICENCIA_INSTITUCIONAL.md`.
 
 ---
 
@@ -3161,6 +3183,31 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       partes (§13.17). Sin pagos/suscripciones/notificaciones nuevas.
 - [x] **Estado final:** D-D1…D-D7 ✅ — cierre documental completo.
       Sin código, SQL, DDL ni migraciones. Próxima fase: **EP-4E**.
+
+## 2026-10-01 — Licencia Institucional (modelo comercial/funcional)
+
+- [x] Decisión aprobada incorporada en `docs/LICENCIA_INSTITUCIONAL.md`.
+      Tres condiciones diferenciadas: **beneficiario del proyecto**
+      (participa, puede ser registrado por técnicos; no implica cuenta
+      MELANTIA ni acceso patrocinado), **líder comunitario patrocinado**
+      (seleccionado por la institución, acceso financiado por la
+      licencia) y **usuario MELANTIA independiente** (plan propio;
+      puede participar en proyectos si la institución lo autoriza).
+      Una persona puede acumular condiciones; los permisos permanecen
+      separados.
+- [x] Valores aprobados: `$5.000/año` → hasta 20 líderes patrocinados;
+      `$10.000/año` → hasta 40. El límite **no** restringe el número de
+      beneficiarios.
+- [x] Relación con Negocios Rurales: la licencia otorga **acceso** a
+      Marketplace, Ferias Virtuales, Red Social y Comercial y Bolsa
+      Agropecuaria bajo parámetros MELANTIA; las plataformas **no son
+      propiedad de la institución**. La institución puede organizar
+      actividades/ferias con imagen institucional.
+- [x] **Comisión 3 % por transacción independiente de la licencia** —
+      la licencia no la elimina ni la modifica.
+- [x] §10 actualizado en ambas versiones del Master (`_FULL` y
+      compacta) con referencia al documento.
+      Documentación pura — sin código, SQL, DDL ni migraciones.
 
 ---
 
