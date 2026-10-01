@@ -3029,7 +3029,8 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
 - [x] Visibilidad aprobada: propietario del workspace ve detalle
       completo de sus proyectos anclados (sustituye regla anterior).
 - [x] **Decisión aprobada — membresías removidas:** `removido → activo`
-      reutilizando la fila existente (sin nueva fila ni invitación;
+      reutilizando la fila existente (sin nueva fila ni nueva
+      incorporación;
       aplica a `workspace_miembros` y `ep_proyecto_participantes`).
       Resuelve el pendiente de EP-4B sin cambio de DDL.
 - [x] Workspace: nombre mutable sin romper UUID/proyectos/historial;
@@ -3039,8 +3040,127 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       documentada (rol `administrador`, `ep_programas`, `ep_fases`,
       `ep_visitas`, `ep_presupuestos`, `ep_propuestas`,
       `clientes_profesionales`) — `EP_DDL_REVISION` §5.
-- [ ] Decisiones pendientes de aprobación: D-C1, D-C2, D-C4, D-C5,
+- [ ] Decisiones pendientes de aprobación: D-C2, D-C4, D-C5,
       D-C8 (`EP_MODELO_DATOS` §12.11). Implementación EP-4C no iniciada.
+      (D-C1 resuelta en el cierre EP-4D 2026-09-30: gate = Plan
+      Profesional vigente, nunca Perfil Profesional.)
+- [x] **Commit `934f0675`** — cierre documental EP-4C.
+
+### 2026-09-29 (nov) — EP-4D: participantes, roles y permisos (diseño)
+
+- [x] **EP-4D documental completado** (`EP_MODELO_DATOS` §13) — sin
+      código/SQL/DDL/tests/commits.
+- [x] Tres dimensiones sin mezcla: perfil profesional / rol workspace /
+      rol proyecto (6 roles reales: propietario, cliente,
+      profesional_responsable, colaborador, tecnico, auditor).
+- [x] Matriz de permisos propuesta por rol de proyecto; herencia
+      workspace→proyecto solo como lectura completa del propietario del
+      workspace (decisión EP-4C) — nunca escritura ni participación
+      heredada.
+- [x] Ciclo de participación: `invitado → activo → removido → activo`
+      (reactivación sobre la misma fila); retiro revoca acceso
+      inmediato y conserva historial; sin DELETE físico.
+- [x] Tres "propiedades" distintas documentadas: propietario del
+      workspace, propietario del proyecto, profesional responsable.
+- [x] Limitaciones del DDL catalogadas (§13.13): sin estado `rechazado`,
+      UNIQUE impide multi-rol, sin `updated_at`, workspace sin
+      `administrador` (B5) — solo evolución futura.
+- [x] Auditoría futura y entitlements (B5) documentados, no
+      implementados. Acceso a proyecto ≠ acceso a recursos vinculados
+      (política fina = EP-4E).
+- [x] **D-D5 aprobada** (redacción del usuario): `propietario` y
+      `profesional_responsable` son los dos roles de gestión del
+      proyecto — participantes, estructura, contenido, actividades/
+      programas/visitas/resultados/presupuesto y transiciones de
+      cierre/archivado; sin propiedad ni autoridad sobre el workspace.
+      Terminología: "gestor" eliminado — siempre explícito.
+- [x] **Transferencia de propiedad aprobada** (§13.4.1): solo el
+      propietario inicia/ejecuta; el anterior deja de serlo y conserva
+      participación solo con otro rol; no altera perfil ni workspace;
+      propietario no removible — solo transfiere; auditoría obligatoria
+      (anterior, nuevo, ejecutor, fecha). `profesional_responsable` no
+      transfiere propiedad.
+- [x] **D-D1 aprobada (→ refinada 2026-09-30, ver bloque siguiente):**
+      la App no impone condicionantes de elegibilidad — solo usuario
+      registrado (FK). Incorporación = potestad del propietario (su
+      acuerdo basta, sin doble firma); el perfil informa, no bloquea.
+- [x] **D-D2 aprobada (→ refinada 2026-09-30, ver bloque siguiente):**
+      oferta + aceptación; nomenclatura conceptual `contrato → aceptado`
+      adoptada **solo como lenguaje** (opción A); DDL conserva
+      `invitado/activo`; renombrado físico = evolución pendiente en la
+      primera migración EP.
+- [x] **D-D6 aprobada:** `cliente` ve el consolidado/oferta del
+      presupuesto; desglose interno solo para los gestores.
+- [ ] ~~Pendiente tu aprobación~~ → **resuelto en el cierre
+      documental 2026-09-30** (bloque siguiente): D-D3, D-D4, D-D7 ✅;
+      D-C1 corregida; alcance de `tecnico` formalizado.
+
+### 2026-09-30 — EP-4D: refinamiento de autoridad e incorporación (diseño)
+
+- [x] **D-D1 refinada → "Autoridad para incorporar participantes":**
+      MELANTIA no decide quién está cualificado para participar en un
+      Proyecto. La incorporación es **decisión del propietario**;
+      cuando la naturaleza de la participación implique responsabilidad
+      o intervención técnica, el propietario podrá requerir la
+      aprobación/venia del `profesional_responsable` — la plataforma la
+      registra, nunca la impone ni la sustituye. **Ningún rol de
+      proyecto exige perfil profesional** (propietario, cliente,
+      profesional_responsable, colaborador, tecnico, auditor): el
+      perfil (EP-4A) es información declarada/verificada del
+      ecosistema, no barrera de acceso. Única exigencia física:
+      usuario registrado.
+- [x] **D-D2 refinada → "Contrato y aceptación":** "invitación" es
+      demasiado informal en un entorno profesional; la incorporación
+      se modela conceptualmente como `contrato/acuerdo → pendiente →
+      aceptado → activo`. MELANTIA registra proponente, destinatario,
+      proyecto, rol, condiciones, fechas, estado, historial y
+      evidencias/documentos — **sin actuar como autoridad
+      contractual** (la validez jurídica pertenece a las partes y a
+      la legislación aplicable). El **DDL no cambia**: `invitado` se
+      reinterpreta como *incorporación pendiente de aceptación*; el
+      renombrado físico del CHECK es decisión técnica posterior.
+- [x] Separación explícita documentada (`EP_MODELO_DATOS` §13.3.1):
+      MELANTIA = infraestructura, identidad, permisos de sistema,
+      estado, seguridad, trazabilidad y auditoría; las decisiones
+      profesionales y contractuales pertenecen a las personas
+      responsables del proyecto.
+- [ ] Nada implementado — documentación pura
+      (`EP_MODELO_DATOS` §13, `ECOSISTEMA_PROFESIONAL` nota EP-4D,
+      `EP_DDL_REVISION` §5.2).
+
+### 2026-09-30 (bis) — EP-4D: CIERRE DOCUMENTAL
+
+- [x] **Plan Profesional ≠ Perfil Profesional (regla aprobada):** el
+      acceso a las capacidades del Ecosistema Profesional depende de la
+      suscripción/Plan Profesional vigente (entitlements B5). **No se
+      exige Perfil Profesional** para crear, activar, ser propietario
+      ni gestionar un Proyecto — ejemplo válido: productor con plan de
+      $25 crea su Proyecto de cacao con asistencia IA sin Perfil
+      Profesional. `tiene_perfil` descartado como gate.
+- [x] **D-C1 corregida y aprobada:** gate comercial (Plan), nunca
+      cualificación (Perfil); tres conceptos separados: Plan habilita
+      acceso → Perfil identifica capacidad → Rol determina función en
+      el Proyecto.
+- [x] **D-D3 ✅** retiro = `removido`, revocación inmediata, historial
+      conservado. **D-D4 ✅** reactivación `removido→activo` por
+      `propietario`/`profesional_responsable`, sin re-aceptación.
+      **D-D7 ✅** participación ≠ acceso al recurso origen — la matriz
+      rol × recurso × nivel queda para **EP-4E** (siguiente fase).
+- [x] **`tecnico` formalizado:** ejecuta actividades/visitas asignadas,
+      registra resultados/evidencias y trabaja sobre recursos
+      autorizados; **no** administra participantes, roles, propiedad
+      ni cierre/archivado.
+- [x] **Recomendación de intervención profesional (§13.15):**
+      MELANTIA/IA puede recomendar contextualmente (poda, plagas,
+      suelos, viveros, riego, topografía, construcciones, procesos
+      judiciales, veterinaria, …) y advertir obligaciones externas sin
+      inventarlas — **MELANTIA recomienda, el propietario decide**.
+- [x] **Evolución futura registrada (no EP-4D):** directorio de
+      profesionales (§13.16), plan para profesionales $12 (nombre no
+      definitivo), servicios de contacto/contratación/pago entre
+      partes (§13.17). Sin pagos/suscripciones/notificaciones nuevas.
+- [x] **Estado final:** D-D1…D-D7 ✅ — cierre documental completo.
+      Sin código, SQL, DDL ni migraciones. Próxima fase: **EP-4E**.
 
 ---
 

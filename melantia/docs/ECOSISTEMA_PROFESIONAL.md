@@ -598,7 +598,17 @@ EP-4C Proyectos                              ⏳ rediseño conceptual —
                                               (visita puntual, programas,
                                               fases, presupuesto, clientes)
                                               en EP_MODELO_DATOS §12
-EP-4D Participantes / roles de proyecto      (incluye removido→activo)
+EP-4D Participantes / roles de proyecto      ⏳ diseño documental —
+                                              matriz permisos, ciclo
+                                              conceptual contrato→
+                                              pendiente→aceptado→activo
+                                              (DDL invitado→activo→
+                                              removido sin cambios),
+                                              herencia ws→proyecto solo
+                                              lectura-propietario;
+                                              §13 modelo de datos —
+                                              **cierre documental
+                                              2026-09-30: D-D1…D-D7 ✅**
 EP-4E Vínculos a recursos                    (fincas/lotes/levantamientos;
                                               evidencias/informes → B2)
 EP-4F Actividades
@@ -656,3 +666,65 @@ datos propuesto en `docs/EP_MODELO_DATOS.md` → entonces DDL controlado.
 > el Cliente existe como cartera profesional (entidad futura) y como
 > rol de proyecto — dos sentidos separados. Nada de esto está
 > implementado ni altera el DDL ejecutado.
+>
+> **Nota EP-4D (2026-09-30, refinamiento — sustituye la nota del
+> 2026-09-29):** participantes/roles/permisos del Proyecto diseñados en
+> `EP_MODELO_DATOS.md` §13. Puntos clave: las tres dimensiones (perfil
+> profesional / rol workspace / rol proyecto) no se mezclan; el
+> propietario del workspace lee completo los proyectos anclados pero la
+> escritura exige rol de proyecto; retirar revoca acceso de inmediato y
+> conserva historial; acceso al proyecto no implica acceso irrestricto
+> a los recursos vinculados (política fina = EP-4E).
+>
+> **D-D1 aprobada — "Autoridad para incorporar participantes"**
+> (refinada 2026-09-30): la incorporación es **decisión del propietario
+> del Proyecto**; cuando la naturaleza de la participación implique
+> responsabilidad o intervención técnica, el propietario podrá requerir
+> la aprobación o venia del `profesional_responsable`. **MELANTIA no
+> establece requisitos profesionales** para autorizar o impedir la
+> participación en ningún rol: el perfil profesional (EP-4A) informa,
+> no bloquea. MELANTIA registra identidad, relación, rol, estado y
+> trazabilidad — nunca impone criterios de cualificación.
+>
+> **D-D2 aprobada — "Contrato y aceptación"** (refinada 2026-09-30):
+> "invitación" es demasiado informal en un entorno profesional; la
+> incorporación se modela como `contrato/acuerdo → pendiente →
+> aceptado → activo`. La plataforma registra proponente, destinatario,
+> proyecto, rol, condiciones, fechas, estado, historial y evidencias/
+> documentos — **sin actuar como autoridad contractual** (la validez
+> jurídica pertenece a las partes y a la legislación aplicable). El
+> **DDL no cambia**: `invitado` se reinterpreta como *incorporación
+> pendiente de aceptación*; el renombrado físico del CHECK
+> (`contrato_pendiente`, `pendiente_aceptacion` u otro) es decisión
+> técnica posterior que podría requerir migración.
+>
+> D-D5 aprobada: `propietario` y `profesional_responsable` son los dos
+> roles de gestión del proyecto (sin "gestor" genérico; transferencia
+> de propiedad exclusiva del `propietario`). D-D6 aprobada: el
+> `cliente` ve el consolidado del presupuesto, nunca costos/márgenes/
+> reparto interno.
+>
+> **Cierre documental EP-4D (2026-09-30) — D-D1…D-D7 todas aprobadas:**
+>
+> - **Plan Profesional ≠ Perfil Profesional:** el acceso a las
+>   capacidades EP lo habilita la suscripción vigente; el Perfil
+>   Profesional es identidad/capacidad declarada, nunca condición para
+>   crear/activar/propietariar/gestionar un Proyecto (D-C1 corregida).
+> - **D-D3/D-D4 ✅:** retiro = `removido` con revocación inmediata +
+>   historial; reactivación `removido→activo` sin re-aceptación.
+> - **D-D7 ✅:** la participación no concede acceso completo al recurso
+>   origen — la matriz rol × recurso × nivel es diseño de EP-4E.
+> - **`tecnico` formalizado:** actividades/visitas asignadas, resultados
+>   y evidencias; sin gestión de participantes, roles, propiedad ni
+>   cierre.
+> - **Recomendación de intervención profesional:** MELANTIA/IA puede
+>   recomendar contextualmente; **nunca impone** — *MELANTIA recomienda,
+>   el propietario decide*.
+> - **Registrado como evolución futura (no EP-4D):** directorio de
+>   profesionales, plan para profesionales ($12, nombre no definitivo)
+>   y servicios de contacto/contratación/pago entre partes.
+>
+> Detalle completo, matriz de permisos por rol e informe de cierre en
+> `docs/EP_MODELO_DATOS.md` §13 (§13.3.1 autoridad, §13.15–13.17
+> principios/evolución, §13.18 informe de redacción).
+> Nada implementado.

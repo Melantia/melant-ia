@@ -128,3 +128,55 @@ Evaluación del DDL ejecutado:
 - **Membresías removidas:** sin cambio de DDL — la reactivación
   `removido → activo` reutiliza la fila existente (decisión aprobada,
   EP_MODELO_DATOS §10).
+
+### 5.1 EP-4D — adecuación de `ep_proyecto_participantes` (diseño)
+
+El DDL existente cubre el diseño EP-4D sin modificaciones inmediatas:
+los 6 roles y los 3 estados del CHECK son exactamente los que el
+modelo usa (`invitado → activo → removido → activo` sobre la misma
+fila). Limitaciones detectadas que solo requieren evolución futura si
+se aprueban (EP_MODELO_DATOS §13.13):
+
+- Sin estado `rechazado` para incorporaciones declinadas.
+- `UNIQUE(proyecto_id, usuario_id)` impide multi-rol — decisión
+  pendiente §10.
+- Sin `updated_at` — `audit_eventos` cubrirá la trazabilidad.
+- `workspace_miembros` sin rol `administrador` (depende de B5).
+
+Ningún cambio de DDL propuesto ahora.
+
+### 5.2 EP-4D — reinterpretación de `invitado` (2026-09-30)
+
+Tras el refinamiento de D-D1/D-D2 (EP_MODELO_DATOS §13.3.1 y §13.9),
+el concepto "invitación informal" se sustituye por **incorporación
+propuesta/contractual pendiente de aceptación** (`contrato/acuerdo →
+pendiente → aceptado → activo`).
+
+**El DDL físico no cambia:** el CHECK `estado IN ('invitado',
+'activo', 'removido')` se mantiene y el valor `invitado` se
+reinterpreta conceptualmente como *incorporación pendiente de
+aceptación* — no como invitación informal. Tampoco hay puerta de
+cualificación: ningún rol exige perfil profesional para participar
+(D-D1); la incorporación es decisión del propietario del proyecto,
+con venia opcional del `profesional_responsable` registrada como
+dato, nunca como condición impuesta por la plataforma.
+
+Evolución física posible — **solo si se decide en una migración
+futura**:
+
+- renombrar `invitado` → `pendiente_aceptacion` (o `contrato_pendiente`);
+- añadir `rechazado` al CHECK para incorporaciones declinadas;
+- añadir `aceptado_at` si se requiere timestamp dedicado de aceptación
+  (hoy la transición es implícita).
+
+Cualquiera de ellas requiere `ALTER TABLE` sobre el CHECK — decisión
+técnica posterior, no bloqueante para EP-4D.
+
+**Cierre documental EP-4D (2026-09-30):** D-D1…D-D7 aprobadas — el DDL
+ejecutado sigue siendo suficiente. Confirmaciones sin cambio físico:
+revocación inmediata al `removido` (D-D3), reactivación sobre la misma
+fila sin re-aceptación (D-D4), aislamiento de recursos vinculados
+(D-D7 — la política rol × recurso × nivel es de EP-4E, se implementa
+en servicios/autorización, no en este CHECK) y acceso EP por Plan
+Profesional vigente en lugar de `tiene_perfil` (D-C1 corregida — el
+gate es comercial vía suscripciones/entitlements, no cualificación).

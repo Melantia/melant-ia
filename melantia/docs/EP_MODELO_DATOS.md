@@ -366,7 +366,7 @@ tablas futuras — queda reservado por esta decisión.
   `UNIQUE(workspace_id, usuario_id)` hace que remover deje una fila
   `removido` y re-incorporar choque con ella. Se adopta la **opción A**:
   reutilizar la membresía existente — `removido → activo` directamente,
-  sin nueva fila ni nueva invitación. La reactivación la ejecuta el
+  sin nueva fila ni nueva incorporación. La reactivación la ejecuta el
   propietario/administrador; sin cambio de DDL. Aplica igual a
   `ep_proyecto_participantes` (misma regla). La opción B (UNIQUE
   parcial + historial múltiple) queda descartada para esta iteración.
@@ -534,7 +534,7 @@ matriz de permisos fina queda como diseño futuro.
 | `actividades` | ✅ suficiente como coordinación; presupuesto por actividad = entidad futura |
 | `agenda_eventos` | ✅ suficiente (ocurrencias temporales; visitas pueden usarlo) |
 | `audit_eventos` | ✅ estructura lista; writers pendientes ADM-2 |
-| `perfiles_profesionales`/`usuarios_perfiles` | ✅ gate `tiene_perfil` para creación de proyecto |
+| `perfiles_profesionales`/`usuarios_perfiles` | ✅ suficiente como identidad profesional — **sin gate `tiene_perfil`**: el acceso a funcionalidades EP lo regula el Plan Profesional vigente (suscripciones/B5), no el Perfil Profesional (D-C1 corregida 2026-09-30) |
 
 **Conclusión:** `ep_proyectos` sigue siendo suficiente para EP-4C
 como contenedor. Las entidades nuevas (programas, fases, visitas,
@@ -559,7 +559,7 @@ futura documentada**, no cambios al DDL actual.
 | # | Decisión | Estado |
 |---|---|---|
 | D-C0 | Membresías removidas: `removido → activo` reutilizando la fila (aplica a workspace_miembros y ep_proyecto_participantes) | ✅ aprobada |
-| D-C1 | Proyecto sin workspace exige ≥1 perfil profesional activo (`tiene_perfil`) | ⏳ propuesta |
+| D-C1 | **Acceso EP = Plan Profesional vigente, no Perfil Profesional** — crear/activar/ser propietario/gestionar un Proyecto exige la suscripción habilitante (Plan Profesional, vía entitlements B5); **no se exige Perfil Profesional** en ningún caso (`tiene_perfil` queda descartado como condición). Ejemplo válido: productor con Plan Profesional ($25) crea y gestiona su Proyecto de 1 ha de cacao con asistencia IA, sin Perfil Profesional | ✅ aprobada y corregida (redacción del usuario, 2026-09-30 — sustituye "proyecto sin workspace exige ≥1 perfil profesional activo") |
 | D-C2 | Objetivo obligatorio **antes** de `borrador → activo` (no para crear el borrador) | ⏳ propuesta |
 | D-C3 | Propietario del workspace ve detalle completo de proyectos anclados | ✅ aprobada |
 | D-C4 | `archivado` terminal | ⏳ propuesta |
@@ -585,3 +585,435 @@ seed de 6 perfiles, `GET/POST/DELETE /api/v1/ep/perfiles*`, regla UUID
 `/api/v1/ep/workspaces` con miembros/roles (propietario/socio/
 colaborador), invitación→aceptar, protección del propietario fundador;
 pytest 146/146.
+**Estado EP-4D:** **diseño documental CERRADO** (2026-09-30) —
+participantes/roles/permisos (§13). **D-D1…D-D7 todas aprobadas**;
+D-C1 corregida (acceso EP = Plan Profesional vigente, nunca Perfil
+Profesional — `tiene_perfil` descartado como gate). Incorporación =
+decisión del propietario (venia opcional del `profesional_responsable`
+según naturaleza técnica); ciclo conceptual `contrato → pendiente →
+aceptado → activo`; alcance de `tecnico` formalizado; recomendación
+de intervención profesional (§13.15), directorio futuro + plan $12
+(§13.16) y contratación futura (§13.17) registrados como evolución.
+**DDL sin cambios** (`invitado/activo/removido`); siguiente fase:
+**EP-4E** (matriz rol × recurso × nivel de acceso).
+
+## 13. EP-4D — Participantes, roles y permisos de Proyecto (diseño)
+
+> **Solo diseño — nada implementado, nada alterado en el DDL.**
+
+### 13.1 Tres dimensiones que no se mezclan
+
+```text
+PLAN PROFESIONAL     habilita el acceso      (suscripciones/entitlements — B5)
+PERFIL PROFESIONAL   qué es el usuario       (usuarios_perfiles — EP-4A)
+ROL DE WORKSPACE     función en la oficina   (workspace_miembros — EP-4B)
+ROL DE PROYECTO      función en el encargo   (ep_proyecto_participantes)
+```
+
+**Plan Profesional ≠ Perfil Profesional (regla aprobada 2026-09-30):**
+el acceso a las capacidades del Ecosistema Profesional depende de la
+**suscripción/Plan Profesional vigente**. El Perfil Profesional es
+identidad/capacidad profesional dentro del ecosistema — **no es
+condición para crear, activar, ser propietario ni gestionar un
+Proyecto**. Ejemplo válido: un productor/campesino contrata el Plan
+Profesional ($25), crea un Proyecto para sembrar 1 ha de cacao y usa
+la asistencia de MELANTIA/IA durante todo el proceso **sin tener
+Perfil Profesional**. `tiene_perfil` queda descartado como puerta de
+creación/activación de proyectos (D-C1 corregida).
+
+Ejemplo válido de dimensiones: `agrónomo` (perfil) + `propietario`
+(workspace) + `profesional_responsable` (proyecto A) + `auditor`
+(proyecto B).
+
+### 13.2 Modelo físico existente (verificado en el DDL ejecutado)
+
+`ep_proyecto_participantes`: `proyecto_id` CASCADE,
+`usuario_id` CASCADE, `rol` NOT NULL, `estado` DEFAULT 'invitado',
+`asignado_por` SET NULL, `created_at`;
+`UNIQUE(proyecto_id, usuario_id)`.
+
+- **Roles reales (CHECK):** `propietario`, `cliente`,
+  `profesional_responsable`, `colaborador`, `tecnico`, `auditor`.
+- **Estados reales (CHECK):** `invitado`, `activo`, `removido`.
+
+Todo lo que sigue parte de estos valores — ninguno se inventa ni se
+modifica.
+
+### 13.3 Quién puede ser participante
+
+| Pregunta | Respuesta propuesta |
+|---|---|
+| ¿Debe ser usuario registrado? | Sí — FK a `usuarios` lo exige físicamente; es la única condición técnica |
+| ¿Requiere Plan Profesional? | **Sí para operar el EP** — crear/activar/gestionar proyectos usa capacidades del Ecosistema que habilita la suscripción vigente (B5). Es un gate de **plan comercial**, no de cualificación: lo paga quien opera, no lo exige el rol de proyecto ni el participante incorporado |
+| ¿Necesita perfil profesional? | **No — para ningún rol** (D-D1 refinada 2026-09-30): MELANTIA no impone requisitos profesionales para participar; la incorporación es decisión del `propietario` del proyecto. El perfil es información visible para decidir, nunca una barrera del sistema — tabla por rol en §13.3.1 |
+| ¿Múltiples roles por usuario en un proyecto? | **No hoy** — `UNIQUE(proyecto_id, usuario_id)` fija un rol por pareja. Multi-rol queda como evolución pendiente (§10) |
+| ¿Mismo usuario en varios proyectos? | Sí — la restricción es por pareja, no global |
+| ¿Cómo se agrega? | La decisión corresponde al `propietario` del proyecto (D-D1); la venia del `profesional_responsable` solo cuando el propietario la requiera por la naturaleza técnica de la participación. El registro operativo lo ejecutan `propietario`/`profesional_responsable` (D-D5) — entra como `invitado` = *incorporación propuesta/contractual pendiente de aceptación* (§13.9) |
+| ¿Cómo se retira? | `activo → removido` — ejecutado por `propietario`/`profesional_responsable` o auto-retiro; nunca DELETE físico; **el propietario no es removible — solo transfiere propiedad** (§13.4.1) |
+| ¿Retirar revoca acceso? | **Sí, inmediato** — el acceso exige `estado='activo'` |
+| ¿Retirar borra historial? | **No** — la fila permanece; `removido→activo` reactiva (decisión aprobada §10) |
+
+#### 13.3.1 Autoridad para incorporar participantes (D-D1 refinada, 2026-09-30)
+
+Principio: **MELANTIA no decide quién está cualificado para participar
+en un Proyecto profesional.** La aplicación proporciona infraestructura,
+identidad, trazabilidad, estados y controles de seguridad; la decisión
+profesional y contractual pertenece a las personas responsables del
+Proyecto.
+
+```text
+                    PROYECTO
+                       │
+             ┌─────────┴─────────┐
+             │                   │
+       PROPIETARIO        PROFESIONAL RESPONSABLE
+             │                   │
+             └───────┬───────────┘
+                     │
+          Deciden / autorizan
+          la incorporación
+                     │
+                     ▼
+              PARTICIPANTE
+```
+
+MELANTIA queda fuera de esa decisión. Su responsabilidad empieza en:
+
+```text
+MELANTIA
+├── Identidad del usuario
+├── Registro de la relación
+├── Estado de la participación
+├── Permisos técnicos del sistema
+├── Trazabilidad
+├── Auditoría
+└── Seguridad
+```
+
+**¿MELANTIA exige perfil profesional para incorporarse con un rol?**
+
+| Rol de proyecto | ¿MELANTIA exige perfil profesional? |
+|---|---|
+| `propietario` | No |
+| `profesional_responsable` | No — no como condición impuesta por la App |
+| `tecnico` | No |
+| `auditor` | No |
+| `colaborador` | No |
+| `cliente` | No |
+
+El Perfil Profesional de EP-4A sigue existiendo, pero representa
+información/capacidades declaradas o verificadas dentro del ecosistema
+— nunca una barrera de acceso automática a un Proyecto.
+
+**La venia del profesional responsable.** La incorporación de
+participantes corresponde al propietario del Proyecto. Cuando la
+naturaleza de la participación implique responsabilidad o intervención
+técnica, el propietario podrá requerir la aprobación o venia del
+profesional responsable. La plataforma registra dicha decisión, pero no
+la sustituye ni la impone como criterio de cualificación.
+
+Separación fundamental: *MELANTIA proporciona infraestructura y control
+del sistema; las personas responsables toman las decisiones
+profesionales y contractuales.*
+
+### 13.4 Las tres propiedades que no son la misma persona
+
+```text
+Workspace "Oficina Agronómica Andrade"
+├── propietario (workspace): Usuario A   ← gobierna la oficina
+└── Proyecto "Manejo integral San José"
+      ├── propietario (proyecto): Usuario B   ← dueño del encargo
+      ├── profesional_responsable: Usuario C  ← ejecuta lo técnico
+      └── cliente: Usuario D                  ← quien contrata
+```
+
+| Rol | Implica |
+|---|---|
+| Propietario del **workspace** | lectura completa de proyectos anclados (decisión EP-4C); gobierno del equipo/oficina; **no** implica participación ni escritura en el proyecto |
+| Propietario del **proyecto** | máxima autoridad *dentro* del encargo: gestión de participantes, estados, entregables, cierre |
+| `profesional_responsable` | dirección técnica del trabajo: actividades, programas, resultados; gestión operativa de participantes — sin facultad de transferir propiedad |
+| `cliente` | lectura de lo compartido + aprobaciones; nunca gestión interna |
+
+#### 13.4.1 Transferencia de propiedad del Proyecto (regla aprobada)
+
+```text
+PROPIETARIO                          PROFESIONAL RESPONSABLE
+├── Gestión completa del proyecto    ├── Gestión operativa
+├── Transfiere la propiedad          ├── Administra participantes
+└── Tras transferir, puede seguir    ├── Modifica estructura/contenido
+    como participante con otro rol   ├── Gestiona presupuesto
+                                     ├── Cierra/archiva
+                                     └── NO transfiere propiedad
+```
+
+- Solo el `propietario` actual puede **iniciar y ejecutar** una
+  transferencia — nadie más (ni `profesional_responsable`) puede
+  transferir ni retirar la propiedad.
+- El propietario elige libremente al nuevo propietario entre
+  participantes o usuarios — MELANTIA no impone criterios de
+  elegibilidad (D-D1).
+- Al confirmarse: el nuevo pasa a `propietario`; el anterior **deja de
+  serlo** y conserva participación **solo si permanece con otro rol**.
+- La transferencia no altera automáticamente perfil profesional, rol
+  profesional ni relación con el workspace; **no transfiere** la
+  propiedad del workspace.
+- El propietario **no puede ser removido** por otro participante — la
+  única vía para dejar de ser propietario es la transferencia iniciada
+  y confirmada por él mismo (D-D3 ajustada).
+- Auditoría obligatoria (cuando exista `shared/audit`): propietario
+  anterior, nuevo propietario, fecha/hora, ejecutor, proyecto.
+
+### 13.5 Matriz de permisos propuesta (rol de proyecto)
+
+| Operación | prop. ws* | prop. proy | prof_resp | cliente | colab | tecnico | auditor |
+|---|---|---|---|---|---|---|---|
+| Ver proyecto | R | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Ver participantes | R | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Agregar/retirar participante | — | ✅ | ✅ | — | — | — | — |
+| Cambiar rol de participante | — | ✅ | ✅ | — | — | — | — |
+| Editar datos del proyecto | — | ✅ | ✅ | — | — | — | — |
+| Definir/modificar objetivo | — | ✅ | ✅ | — | — | — | — |
+| Cambiar estado | — | ✅ | ✅ | — | — | — | — |
+| Crear/editar actividad | — | ✅ | ✅ | — | ✅ propia | ✅ asignada | — |
+| Crear/editar programa | — | ✅ | ✅ | — | — | — | — |
+| Crear visita | — | ✅ | ✅ | — | ✅ | ✅ asignada | — |
+| Registrar resultados/evidencias | — | ✅ | ✅ | — | ✅ propia | ✅ asignada | — |
+| Consultar resultados | R | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Gestionar presupuesto | — | ✅ | ✅ | consolidado ✅ | — | — | — |
+| Crear propuesta técnica | — | ✅ | ✅ | — | — | — | — |
+| Documentos/evidencias | R | ✅ | ✅ | compartidos | ✅ | ✅ | ✅ solo lectura |
+| Cerrar proyecto | — | ✅ | ✅ | — | — | — | — |
+| Archivar proyecto | — | ✅ | ✅ | — | — | — | — |
+
+`prop. ws*` = propietario del workspace ancla — acceso de **lectura
+completa** aprobado (EP-4C); no escritura ni gestión dentro del
+proyecto salvo que además sea participante. **No** se extiende a
+socio/administrador/trabajador — pendiente de matriz futura.
+
+**`tecnico` resuelto (alcance formalizado 2026-09-30):** ejecuta
+actividades asignadas, gestiona visitas asignadas, registra resultados
+y evidencias correspondientes, y trabaja sobre los recursos/contenidos
+que tenga autorizados. **No puede:** administrar participantes,
+cambiar roles, transferir ni modificar la propiedad del Proyecto,
+cerrarlo ni archivarlo. La autorización detallada sobre recursos
+vinculados es diseño de EP-4E (D-D7 ✅).
+`cliente` ya resuelto: ve el consolidado/oferta del presupuesto, no el
+desglose interno (D-D6 ✅) — sin costos internos, márgenes, reparto ni
+estructura interna de costos.
+Nota terminológica (D-D5): en EP-4D no se usa el término "gestor" —
+la gestión del proyecto pertenece explícitamente a `propietario` y
+`profesional_responsable`.
+Nota de autoridad (D-D1 refinada): la matriz muestra la **capacidad
+operativa de registro**; la decisión de incorporar corresponde al
+`propietario`, que podrá requerir la venia del `profesional_responsable`
+cuando la participación implique responsabilidad técnica — MELANTIA
+registra esa decisión, nunca la impone (§13.3.1).
+
+### 13.6 Herencia Workspace → Proyecto
+
+```text
+Visibilidad:   propietario ws → ve proyectos anclados (completo)
+Lectura:       propietario ws → sí; resto del ws → solo por participación
+Edición:       nunca heredada — exige rol de proyecto
+Administración del proyecto: solo `propietario` y
+`profesional_responsable` del proyecto (D-D5 ✅)
+Participación: nunca heredada — se otorga proyecto a proyecto
+```
+
+### 13.7 Estados del proyecto y participación
+
+`archivado` (D-C4, terminal) implica: solo lectura histórica; sin
+nuevos participantes, retiros, actividades, presupuesto ni documentos
+nuevos. `cerrado` congela la ejecución pero conserva consulta y
+custodia de entregables. `en_pausa` suspende modificaciones operativas;
+la gestión sigue disponible para `propietario` y
+`profesional_responsable`.
+
+### 13.8 Seguridad y aislamiento
+
+- Participante ajeno → 404 (el proyecto es indistinguible de
+  inexistente — como en EP-4A/4B).
+- El `rol` se verifica **server-side en cada operación sensible**;
+  nunca se confía en el frontend ni en `usuario_id` del request.
+- Identidad: solo `get_current_user` (JWT). El participante referenciado
+  (`usuario_id` al incorporar) es dato, nunca autoridad.
+- Acceso al proyecto ≠ acceso irrestricto a los recursos vinculados:
+  `ep_proyecto_*` enlaza, pero la política fina sobre cada recurso
+  (¿quién del proyecto puede abrir la finca?) es diseño futuro de EP-4E.
+
+### 13.9 Ciclo de vida de la participación — contrato y aceptación
+
+```text
+Nomenclatura conceptual (D-D2 refinada 2026-09-30):
+
+  CONTRATO / ACUERDO ──→ PENDIENTE ──→ ACEPTADO ──→ ACTIVO
+  (propuesta del                                          │
+   propietario)                                           ▼
+                                                      REMOVIDO
+                                        (reactivación → ACTIVO)
+
+DDL físico (sin cambios):   invitado → activo → removido → (reactivación) activo
+```
+
+En un entorno profesional, "invitación" resulta demasiado informal: la
+relación se modela como **incorporación propuesta/contractual pendiente
+de aceptación**. Desde ya, el estado físico `invitado` se interpreta
+con ese significado; el renombrado físico del CHECK
+(`contrato_pendiente`, `pendiente_aceptacion` u otro) es una decisión
+técnica posterior que podría requerir DDL — se decide en la primera
+migración EP (evaluar también si `workspace_miembros` adopta la misma
+nomenclatura).
+
+**Qué registra la plataforma** de cada incorporación:
+
+- quién propone/incorpora (`asignado_por` — ya existe en el DDL);
+- a quién se dirige (`usuario_id`) y en qué proyecto (`proyecto_id`);
+- rol acordado (`rol`);
+- condiciones registradas y evidencias/documentos asociados (entidad
+  futura — hoy solo existe la fila de participación);
+- fecha de propuesta (`created_at`), aceptación y fecha de aceptación
+  (hoy implícita en la transición `invitado→activo`; timestamp dedicado
+  = evolución opcional ya catalogada en §13.13);
+- estado e historial de la participación.
+
+**MELANTIA no actúa como autoridad contractual**: no asume que todo
+acuerdo registrado sea jurídicamente válido. La validez jurídica
+depende de las partes y de la legislación aplicable — la plataforma
+registra la relación y su trazabilidad, nada más.
+
+- `removido` preserva historial y bloquea acceso inmediatamente.
+- Reactivación = UPDATE de la misma fila (D-C0 aprobado) — ejecutada
+  por `propietario` o `profesional_responsable`; propuesta
+  `removido→activo` directo sin re-aceptación (D-D4 ⏳).
+- Estado `rechazado` (incorporación declinada) no existe en el CHECK —
+  evolución futura si se necesita; hoy el declinado puede registrarse
+  como `removido` o permanecer `invitado` (pendiente de aceptación)
+  sin efecto.
+
+### 13.10 Auditoría futura (shared/audit — no implementado)
+
+Eventos a auditar cuando exista `shared/audit` (ADM-2):
+`participante.agregado`, `participante.removido`, `participante.
+reactivado`, `rol.cambiado`, `propietario.transferido` (anterior,
+nuevo, ejecutor, fecha — §13.4.1), `estado.cambiado`,
+`proyecto.creado/cerrado/archivado`. Modelo conceptual únicamente.
+
+### 13.11 Entitlements
+
+Capacidad de equipos/plazas nunca se escribe en EP — regla EP-4C
+mantenida. Los límites se resuelven contra B5 en el service, sin
+`if miembros >= N` en el módulo.
+
+### 13.12 Cliente — dos sentidos
+
+(A) **Cliente como entidad de cartera** — `clientes_profesionales`
+futuro: identidad del cliente reutilizable en N proyectos/visitas;
+clasificación flexible privada del profesional.
+(B) **Cliente como rol** — `rol='cliente'` en
+`ep_proyecto_participantes`: la participación dentro de un encargo.
+La tabla física de cartera NO se diseña en EP-4D.
+
+### 13.13 Limitaciones del DDL detectadas (evolución documentada)
+
+| Limitación | Impacto | Resolución |
+|---|---|---|
+| Sin estado `rechazado` | una incorporación declinada queda como `invitado` (pendiente de aceptación) o `removido` prematuro | evolución futura del CHECK si se requiere |
+| `UNIQUE` impide multi-rol | un usuario con dos funciones (ej. cliente+colaborador) no es representable | decisión pendiente §10 |
+| Sin `updated_at` en participantes | cambios de rol/estado no dejan timestamp de modificación | `audit_eventos` cubrirá trazabilidad; columna = evolución opcional |
+| `workspace_miembros` sin `administrador` | ya registrado §12.9 | depende de B5 |
+
+### 13.14 Decisiones de EP-4D — estado al 2026-09-30 (cierre documental)
+
+Todas aprobadas. D-D1/D-D2 con redacción del usuario refinada; D-D3…
+D-D7 cerradas en el cierre documental del 2026-09-30.
+
+| # | Decisión | Propuesta |
+|---|---|---|
+| D-D1 | **Autoridad para incorporar participantes** — la incorporación es decisión del `propietario` del Proyecto; cuando la naturaleza del trabajo implique responsabilidad o intervención técnica, el propietario podrá requerir la venia del `profesional_responsable`. **MELANTIA no establece requisitos profesionales para autorizar o impedir la participación en ningún rol** — única exigencia física: usuario registrado; la plataforma registra identidad, relación, rol, estado y trazabilidad, sin sustituir ni imponer criterios de cualificación (§13.3.1) | **✅ aprobada y refinada** (redacción del usuario, 2026-09-30 — sustituye la versión "sin condicionantes de elegibilidad" del 2026-09-29; renombrada de "requisitos para ser participante") |
+| D-D2 | Incorporación modelada como **contrato/acuerdo → pendiente → aceptado → activo**: propuesta del propietario + aceptación del usuario. La plataforma registra proponente, destinatario, proyecto, rol, condiciones, fechas, estado, historial y evidencias/documentos asociados — **sin actuar como autoridad contractual** (la validez jurídica pertenece a las partes y a la legislación aplicable). El DDL conserva `invitado → activo`, reinterpretado como *incorporación pendiente de aceptación*; el renombrado físico del CHECK es decisión posterior que podría requerir DDL | **✅ aprobada y refinada** (redacción del usuario, 2026-09-30 — amplía la opción A del 2026-09-29) |
+| D-D3 | Retiro = `removido` con revocación inmediata + historial conservado; **el `propietario` no es removible — su única vía de salida es la transferencia de propiedad iniciada y confirmada por él mismo** (§13.4.1, operación distinta de retirar/reactivar participantes) | **✅ aprobada** (cierre documental 2026-09-30) |
+| D-D4 | Reactivación `removido→activo` por `propietario`/`profesional_responsable`, sin re-aceptación | **✅ aprobada** (cierre documental 2026-09-30) |
+| D-D5 | **`propietario` y `profesional_responsable` son los dos roles con capacidad de gestión del proyecto** — ambos administran participantes, estructura, contenido operativo, actividades/programas/visitas/resultados/presupuesto y las transiciones de cierre/archivado; `profesional_responsable` no adquiere propiedad ni autoridad sobre el workspace; **la transferencia de propiedad es facultad exclusiva del `propietario`** — regla completa en §13.4.1. Terminología: "gestión del proyecto" = explícitamente estos dos roles | **✅ aprobada** (redacción del usuario, 2026-09-29) |
+| D-D6 | `cliente` ve el **consolidado/oferta** del presupuesto; el desglose interno (costos, márgenes) es solo de `propietario`/`profesional_responsable` | **✅ aprobada** (2026-09-29) |
+| D-D7 | **Aislamiento de recursos vinculados** — la participación en un Proyecto NO concede automáticamente acceso completo al recurso origen: el vínculo `ep_proyecto_*` permite referencia contextual, pero no transfiere propiedad ni concede acceso general al módulo de origen. La matriz `rol de proyecto × tipo de recurso × nivel de acceso` es diseño de EP-4E | **✅ aprobada** (cierre documental 2026-09-30) |
+
+### 13.15 Recomendación de intervención profesional (principio aprobado 2026-09-30)
+
+MELANTIA **no impone** al propietario la contratación o incorporación
+de un profesional. Sin embargo, MELANTIA/IA puede detectar necesidades
+de conocimiento especializado dentro del Proyecto y **recomendar** la
+intervención de un profesional — siempre de forma contextual al
+Proyecto, actividad, fase, incidencia o riesgo.
+
+Ejemplos de necesidades recomendables: poda especializada (cacao),
+plagas o enfermedades, recuperación de suelos, mejoramiento de
+cultivos, diseño de viveros, diseño de invernaderos, sistemas de
+riego, levantamientos topográficos, construcciones, procesos
+judiciales, actividades veterinarias y otras necesidades técnicas
+específicas.
+
+- La recomendación **no equivale a obligación** impuesta por MELANTIA.
+- Cuando existan obligaciones legales o regulatorias externas,
+  MELANTIA puede **advertir** que el usuario verifique los requisitos
+  aplicables — sin inventar ni declarar como obligatorio algo que no
+  esté sustentado.
+
+> **Principio: MELANTIA puede recomendar. El propietario decide.**
+
+### 13.16 Directorio futuro de profesionales y plan para profesionales (capacidad futura — NO EP-4D)
+
+Capacidad registrada, **sin implementación en EP-4D**:
+
+- MELANTIA podrá construir progresivamente una **base/directorio de
+  profesionales** que decidan participar en la plataforma.
+  Información potencial: identidad, especialidades, Perfil
+  Profesional, ubicación, zona de cobertura, disponibilidad, medios
+  de contacto, estado del plan, historial de participación permitido
+  y otras capacidades que se definan posteriormente.
+- La recomendación de profesionales considerará, entre otros:
+  especialidad requerida, ubicación del Proyecto/productor, zona de
+  cobertura, disponibilidad y **estado activo del plan profesional
+  del especialista**.
+- **Concepto comercial futuro — plan para profesionales ($12, nombre
+  comercial no definitivo):** los profesionales que quieran recibir
+  notificaciones/oportunidades dentro de MELANTIA deberán disponer de
+  ese plan activo, sujeto al diseño comercial definitivo. Objetivo:
+  aparecer como profesional disponible, recibir notificaciones y
+  oportunidades compatibles con sus especialidades, gestionar
+  disponibilidad/cobertura y recibir solicitudes de contacto.
+- **No implementar ahora** pagos, suscripciones ni notificaciones
+  nuevas.
+
+### 13.17 Contacto, contratación y pago — evolución futura (fuera de EP-4D)
+
+El acuerdo profesional, el precio y la prestación del servicio
+pertenecen inicialmente a **las partes**; MELANTIA no interviene como
+parte contractual por defecto. Dependiendo del número de profesionales
+participantes y de la evolución del Ecosistema, podrá diseñarse
+posteriormente un servicio específico de: solicitud de servicios,
+contratación, cotización, pagos, seguimiento, reputación, comprobación
+de prestación y otros servicios profesionales. **Todo fuera de EP-4D.**
+
+### 13.18 Informe de redacción — refinamiento y cierre 2026-09-30
+
+Qué cambió respecto a la versión del 2026-09-29 y por qué:
+
+| Cambio | Antes | Después | Motivo |
+|---|---|---|---|
+| D-D1 | "La App no impone condicionantes de elegibilidad" | **"Autoridad para incorporar participantes"** (§13.3.1) | MELANTIA no decide quién está cualificado: la decisión es del propietario del proyecto, con venia opcional del `profesional_responsable` registrada — nunca impuesta — cuando la participación implique responsabilidad técnica |
+| Requisito de perfil | implícito por rol | **Ningún rol exige perfil profesional** (tabla §13.3.1) | El perfil (EP-4A) es información declarada/verificada del ecosistema, no barrera de acceso |
+| D-D2 | "contrato → aceptado" como lenguaje | **`contrato/acuerdo → pendiente → aceptado → activo`** + lista explícita de datos registrados (§13.9) | "Invitación" es informal para relaciones profesionales; MELANTIA registra la relación **sin actuar como autoridad contractual** |
+| `invitado` (DDL) | valor pendiente de renombrar | **reinterpretado** como *incorporación pendiente de aceptación*; renombrado físico = decisión técnica posterior con migración | permite adoptar el concepto ya, sin tocar el CHECK |
+| D-C1 | "proyecto sin workspace exige ≥1 perfil profesional (`tiene_perfil`)" | **Plan Profesional vigente habilita el acceso EP; Perfil Profesional nunca es condición** (§12.11, §13.1) | resuelve la tensión con D-D1: gate comercial (suscripción), nunca gate de cualificación |
+| D-D3/D-D4 | ⏳ | **✅ aprobadas** (retiro = revocación inmediata + historial; reactivación `removido→activo` sin re-aceptación) | cierre documental |
+| D-D7 | remitida a EP-4E | **✅ aprobada** — participación ≠ acceso al recurso origen; matriz rol×recurso×nivel en EP-4E | cierre documental |
+| `tecnico` | alcance ⏳ | **formalizado** (§13.5): ejecuta actividades/visitas asignadas, registra resultados/evidencias; sin gestión de participantes, roles, propiedad ni cierre | cierre documental |
+| Nuevo | — | §13.15 recomendación de intervención profesional (*MELANTIA recomienda, el propietario decide*); §13.16 directorio futuro + plan profesionales $12; §13.17 contacto/contratación/pago = evolución fuera de EP-4D | cierre documental |
+
+**Estado final de decisiones (2026-09-30):** D-D1 ✅ refinada,
+D-D2 ✅ refinada, D-D3 ✅, D-D4 ✅, D-D5 ✅, D-D6 ✅, D-D7 ✅.
+D-C1 ✅ corregida. Sin cambios de código, SQL ni DDL.
+**Siguiente fase: EP-4E** — autorización detallada de recursos
+vinculados (matriz rol × recurso × nivel de acceso).
+
+---
