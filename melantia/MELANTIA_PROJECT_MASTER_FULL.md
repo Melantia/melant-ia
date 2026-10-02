@@ -3209,6 +3209,24 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       compacta) con referencia al documento.
       Documentación pura — sin código, SQL, DDL ni migraciones.
 
+## 2026-10-01 (bis) — EP-4E: Autorización y acceso (diseño aprobado)
+
+- [x] Modelo `rol × recurso × nivel` (`ninguno/consulta/crear/editar/
+      administrar`) con **techos de rol** anti-escalamiento; herencia
+      mínima (propietario ws solo lectura — D-C3); acceso a recursos
+      vinculados **solo contextual** por endpoints EP — el módulo origen
+      mantiene aislamiento `usuario_id` (D-D7 resuelta).
+- [x] Nueva tabla propuesta `ep_proyecto_concesiones` (grants por
+      tipo/instancia, registro histórico, unicidad solo sobre activas,
+      revocadas al remover y **nunca reviven** al reactivar — E1
+      corregida por decisión del usuario).
+- [x] Decisiones E1–E9 todas aprobadas/corregidas; `visible_cliente`
+      diferido. Documento: `EP_MODELO_DATOS.md` §14.
+- [x] DDL propuesto en `migraciones/m3_ep4e_autorizacion.sql` —
+      **NO ejecutado**; pendiente revisión → `psql -1` → implementación
+      (`autorizacion.py`, `require_ep_access`, writers `audit_eventos`)
+      → tests.
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA

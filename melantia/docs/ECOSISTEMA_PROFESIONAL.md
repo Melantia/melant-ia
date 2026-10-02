@@ -609,7 +609,14 @@ EP-4D Participantes / roles de proyecto      ⏳ diseño documental —
                                               §13 modelo de datos —
                                               **cierre documental
                                               2026-09-30: D-D1…D-D7 ✅**
-EP-4E Vínculos a recursos                    (fincas/lotes/levantamientos;
+EP-4E Autorización y acceso                 ✅ diseño aprobado
+                                              2026-10-01 — matriz
+                                              rol×recurso×nivel, techos
+                                              de rol, herencia mínima,
+                                              concesiones contextuales
+                                              (EP_MODELO_DATOS §14);
+                                              DDL propuesto sin ejecutar
+EP-4E-bis Vínculos a recursos               (fincas/lotes/levantamientos;
                                               evidencias/informes → B2)
 EP-4F Actividades
 EP-4G Agenda                                 (servicio transversal §10)
@@ -728,3 +735,18 @@ datos propuesto en `docs/EP_MODELO_DATOS.md` → entonces DDL controlado.
 > `docs/EP_MODELO_DATOS.md` §13 (§13.3.1 autoridad, §13.15–13.17
 > principios/evolución, §13.18 informe de redacción).
 > Nada implementado.
+>
+> **Nota EP-4E (2026-10-01) — autorización y acceso, diseño aprobado:**
+> modelo `rol de proyecto × tipo de recurso × nivel de acceso` con
+> niveles `ninguno<consulta<crear<editar<administrar`, **techos de rol**
+> anti-escalamiento (cliente/auditor ≤ consulta; tecnico/colaborador ≤
+> editar), herencia mínima (solo propietario del workspace lee proyectos
+> anclados — D-C3; la escritura nunca se hereda), acceso a recursos
+> vinculados **solo contextual** por endpoints EP (el módulo origen
+> mantiene aislamiento por `usuario_id`) y tabla propuesta
+> `ep_proyecto_concesiones` para grants por instancia/tipo — revocadas
+> al remover al participante y **nunca reviven** al reactivar. Nueve
+> decisiones E1–E9 aprobadas; `visible_cliente` diferido. Detalle en
+> `docs/EP_MODELO_DATOS.md` §14. DDL en
+> `backend/database/migraciones/m3_ep4e_autorizacion.sql` —
+> **pendiente de revisión y ejecución**; nada implementado.

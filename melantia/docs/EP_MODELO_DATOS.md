@@ -882,9 +882,9 @@ depende de las partes y de la legislación aplicable — la plataforma
 registra la relación y su trazabilidad, nada más.
 
 - `removido` preserva historial y bloquea acceso inmediatamente.
-- Reactivación = UPDATE de la misma fila (D-C0 aprobado) — ejecutada
-  por `propietario` o `profesional_responsable`; propuesta
-  `removido→activo` directo sin re-aceptación (D-D4 ⏳).
+- Reactivación = UPDATE de la misma fila (D-C0 + D-D4 ✅) — ejecutada
+  por `propietario` o `profesional_responsable`; `removido→activo`
+  directo, sin volver a `invitado` ni re-aceptación.
 - Estado `rechazado` (incorporación declinada) no existe en el CHECK —
   evolución futura si se necesita; hoy el declinado puede registrarse
   como `removido` o permanecer `invitado` (pendiente de aceptación)
@@ -1015,5 +1015,175 @@ D-D2 ✅ refinada, D-D3 ✅, D-D4 ✅, D-D5 ✅, D-D6 ✅, D-D7 ✅.
 D-C1 ✅ corregida. Sin cambios de código, SQL ni DDL.
 **Siguiente fase: EP-4E** — autorización detallada de recursos
 vinculados (matriz rol × recurso × nivel de acceso).
+
+## 14. EP-4E — Autorización y acceso (diseño aprobado 2026-10-01)
+
+> **Diseño aprobado — sin implementación.** DDL propuesto generado en
+> `backend/database/migraciones/m3_ep4e_autorizacion.sql` y reflejado
+> en `schema/ecosistema_profesional.sql` §8 — **pendiente de revisión
+> humana y ejecución**. Nada ejecutado en PostgreSQL.
+
+### 14.1 Regla fundamental
+
+La participación en un proyecto **no** otorga acceso automático a todos
+los recursos relacionados (D-D7). El permiso efectivo se determina de
+forma explícita y contextual:
+
+```text
+PERMISO EFECTIVO =
+    max( nivel_base(rol, recurso_tipo),          -- matriz (código)
+         grant(participante, tipo, recurso_id) ) -- ep_proyecto_concesiones
+    LIMITADO POR techo(rol)                      -- anti-escalamiento (E2)
+    Y EXIGIENDO participante.estado = 'activo'
+    Y (instancia vinculada) vínculo ep_proyecto_<tipo> existente
+    Y (grant) vigente_hasta no cumplido
+```
+
+Niveles ordenados: `ninguno` < `consulta` < `crear` < `editar` <
+`administrar`. La matriz por defecto vive en **código** (versionada y
+testeada); las concesiones volátiles viven en **datos**
+(`ep_proyecto_concesiones`).
+
+### 14.2 Matriz aprobada (rol × recurso × nivel)
+
+Ejes: `P` propietario · `PR` profesional_responsable · `CL` cliente ·
+`CO` colaborador · `TE` tecnico · `AU` auditor · `PW` propietario del
+workspace ancla sin ser participante.
+
+| Recurso | P | PR | CL | CO | TE | AU | PW |
+|---|---|---|---|---|---|---|---|
+| Proyecto (datos/estado) | administrar | administrar* | consulta | consulta | consulta | consulta | consulta |
+| Participantes | administrar | administrar* | consulta | consulta | consulta | consulta | consulta |
+| Vínculos `ep_proyecto_*` | administrar | administrar | consulta | consulta | consulta | consulta | consulta |
+| Actividades del proyecto | administrar | administrar | consulta | crear/editar propias | crear/editar asignadas | consulta | consulta |
+| Agenda (eventos) | propia + consulta eventos de actividades | ídem | consulta eventos del proyecto | ídem P | ídem P | consulta | consulta |
+| Recursos vinculados (instancia) | administrar contextual | administrar contextual | consulta | consulta (+editar si grant) | consulta (+editar si grant) | consulta | consulta |
+| Historial (`audit_eventos` ctx) | consulta | consulta | ninguno | ninguno | ninguno | consulta | consulta |
+
+\* PR administra todo **excepto** transferir propiedad y retirar/
+degradar al propietario (§13.4.1, D-D5). "Contextual" = solo a través
+del proyecto, nunca por el endpoint del módulo origen (E5).
+
+**Recursos futuros documentados** (se confirman al crearlos):
+programas/fases `adm|adm|cons|cons|cons|cons`; visitas `adm|adm|cons|
+crear*|crear/editar asignada|cons`; resultados `adm|adm|cons compart.|
+crear propio|crear asignado|cons`; presupuesto `adm|adm|**cons
+consolidado** (D-D6)|cons si se comparte|ninguno|cons`; propuestas
+`adm|adm|cons/aprobar|ninguno|ninguno|cons`; evidencias/documentos (B2)
+`adm|adm|cons compart.|crear en contexto|crear en contexto|cons`;
+cartera clientes `adm propia|—|—|—|—|—`.
+
+### 14.3 Techos de rol (E2 ✅ — anti-escalamiento)
+
+| Rol | Techo |
+|---|---|
+| `propietario` | administrar |
+| `profesional_responsable` | administrar (salvo propiedad/transferencia) |
+| `tecnico`, `colaborador` | **editar** |
+| `auditor`, `cliente` | **consulta** |
+
+Los grants **nunca** elevan por encima del techo: un propietario no
+puede conceder `administrar` a un técnico ni escritura a un cliente.
+Protege D-D5/D-D6 contra concesiones mal emitidas.
+
+### 14.4 Herencia (E5 ✅)
+
+- **Workspace → Proyecto:** solo el propietario del workspace ancla,
+  **lectura completa** (D-C3). Ningún otro miembro hereda nada; la
+  escritura nunca se hereda (§13.6).
+- **Proyecto → recursos:** el rol da el nivel base de la matriz; no es
+  acceso total.
+- **Proyecto → recurso origen (D-D7):** el vínculo concede acceso a la
+  **instancia enlazada solo por endpoints EP**
+  (`/ep/proyectos/{id}/recursos/...`). Los endpoints del módulo origen
+  mantienen aislamiento por `usuario_id` y **no consultan** `ep_*` —
+  cero acceso indirecto al universo del dueño. Desvincular corta el
+  acceso contextual al instante; borrar el recurso corta el vínculo
+  (CASCADE) y deja los grants inertes.
+
+### 14.5 Ciclo de vida de las concesiones (E1 ✅ corregida)
+
+```text
+ACTIVO → REMOVIDO → concesiones activas → 'revocada'
+         (service revoca en la misma operación; registra
+          revocado_por / revocado_at; la fila NO se borra)
+REMOVIDO → ACTIVO (reactivación, misma fila — D-C0/D-D4)
+         → recupera SOLO el nivel base del rol actual;
+         → las concesiones revocadas NO reviven:
+           re-otorgar = nueva fila 'activa' (nunca "permisos fantasma")
+```
+
+Razón aprobada: la reactivación devuelve la *pertenencia* al proyecto,
+no los permisos especiales — el proyecto, responsables y recursos
+pudieron cambiar durante la ausencia.
+
+### 14.6 Tabla propuesta `ep_proyecto_concesiones` (E3/E9 ✅)
+
+```text
+id, proyecto_id FK→ep_proyectos CASCADE,
+participante_id FK→ep_proyecto_participantes CASCADE,
+recurso_tipo CHECK ('finca','lote','levantamiento','registro',
+                    'actividad','documento','presupuesto','resultado'),
+recurso_id UUID NULL            -- suave, sin FK (precedente D9
+                                --  contexto_*); NULL = todo el tipo
+nivel CHECK ('consulta','crear','editar')   -- nunca 'administrar'
+otorgado_por FK→usuarios SET NULL,
+vigente_hasta TIMESTAMPTZ NULL,
+estado CHECK ('activa','revocada') DEFAULT 'activa',
+revocado_por FK→usuarios SET NULL, revocado_at TIMESTAMPTZ,
+created_at
+```
+
+**Unicidad solo sobre activas** (E9 corregida — sin `UNIQUE` de tabla,
+que admitiría duplicados con `recurso_id NULL` y bloquearía la
+re-otorgación tras revocar):
+
+```sql
+CREATE UNIQUE INDEX uq_ep_concesiones_activa_instancia
+    ON ep_proyecto_concesiones (participante_id, recurso_tipo, recurso_id)
+    WHERE estado = 'activa' AND recurso_id IS NOT NULL;
+CREATE UNIQUE INDEX uq_ep_concesiones_activa_tipo
+    ON ep_proyecto_concesiones (participante_id, recurso_tipo)
+    WHERE estado = 'activa' AND recurso_id IS NULL;
+```
+
+Cambiar el nivel de una concesión = revocar la activa + crear nueva
+(409 si ya existe una activa equivalente) — el historial siempre queda.
+
+### 14.7 Componentes propuestos (pendientes de fase de implementación)
+
+- `services/autorizacion.py`: `resolver_permiso()` con matriz + grants +
+  techos + estados.
+- Dependency `require_ep_access(recurso_tipo, nivel_min)` — checks
+  server-side; ajeno/no participante → 404 indistinguible.
+- `shared/repositories/ep_autorizacion.py`.
+- Grant automático por `responsable_id` en actividades: la "asignada"
+  resuelve en service sin fila de concesión (E6 ✅).
+- Writers a `audit_eventos` desde EP para operaciones sensibles —
+  la tabla existe (E7 ✅; ADM-2 solo consume).
+- Placeholders `require_role`/`require_subscription`/
+  `check_resource_limit`/`verify_resource_ownership` de
+  `core/dependencies.py`: **no usar** hasta implementarse (E8 ✅).
+- `visible_cliente` selectivo: **diferido** (E4) — cliente ve avance,
+  resultados/entregables compartidos y presupuesto consolidado; nunca
+  costos, márgenes ni estructura interna.
+
+### 14.8 Decisiones EP-4E — estado al 2026-10-01
+
+| # | Decisión | Estado |
+|---|---|---|
+| E1 | Concesiones se **revocan al remover** y **no reviven** al reactivar; re-otorgar = fila nueva | ✅ aprobada (corregida por el usuario — sustituye "grants sobreviven") |
+| E2 | Techos de rol duros (anti-escalamiento) | ✅ aprobada |
+| E3 | `recurso_id` sin FK física (precedente `contexto_*`) | ✅ aprobada |
+| E4 | Visibilidad selectiva `visible_cliente` | ✅ **diferida** |
+| E5 | Acceso a recursos vinculados solo por endpoints EP contextuales | ✅ aprobada |
+| E6 | "Asignada" vía `responsable_id` sin fila de concesión | ✅ aprobada |
+| E7 | EP escribe `audit_eventos` (tabla existente) | ✅ aprobada |
+| E8 | Placeholders de `dependencies.py` no se usan | ✅ aprobada |
+| E9 | `ep_proyecto_concesiones`: nombre OK; unicidad = 2 índices parciales sobre activas; `revocado_por`/`revocado_at` | ✅ aprobada (corregida) |
+
+**Siguiente paso:** revisión humana del DDL propuesto
+(`backend/database/migraciones/m3_ep4e_autorizacion.sql`) → ejecución
+con `psql -1` → implementación del service/dependency → tests.
 
 ---

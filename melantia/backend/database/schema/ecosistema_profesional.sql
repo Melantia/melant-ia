@@ -1,8 +1,10 @@
 -- ===========================================================================
 -- MELANTIA — ECOSISTEMA PROFESIONAL (EP-3)
 -- ===========================================================================
--- ESTADO: PROPUESTA APROBADA CONCEPTUALMENTE — **NO EJECUTADO**.
--- Pendiente de autorización explícita para ejecutar en melantia_db.
+-- ESTADO: §1–§7 EJECUTADOS en melantia_db (2026-09-29, commit EP-3 —
+-- 13 tablas, docs/EP_DDL_REVISION.md §4).
+-- §8 (ep_proyecto_concesiones, EP-4E): DISEÑO APROBADO 2026-10-01 —
+-- **pendiente de ejecución** vía migraciones/m3_ep4e_autorizacion.sql.
 -- Diseño: docs/ECOSISTEMA_PROFESIONAL.md + docs/EP_MODELO_DATOS.md
 -- Integración verificada: docs/EP_INTEGRACION.md
 --
@@ -264,6 +266,48 @@ CREATE TABLE IF NOT EXISTS audit_eventos (
 
 
 -- ===========================================================================
+-- 8. CONCESIONES CONTEXTUALES (EP-4E — diseño aprobado 2026-10-01)
+--    Grants por participante sobre tipo/instancia de recurso del
+--    proyecto. Registro histórico: las revocadas NO se borran.
+--    Unicidad solo sobre 'activa' (índices parciales) — permite
+--    re-otorgar tras revocar y resuelve el caso recurso_id IS NULL.
+--    EP_MODELO_DATOS §14.
+-- ===========================================================================
+
+CREATE TABLE IF NOT EXISTS ep_proyecto_concesiones (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    proyecto_id UUID NOT NULL
+        REFERENCES ep_proyectos(id) ON DELETE CASCADE,
+    participante_id UUID NOT NULL
+        REFERENCES ep_proyecto_participantes(id) ON DELETE CASCADE,
+    -- Qué se concede: tipo siempre; instancia opcional (NULL = todos
+    -- los recursos de ese tipo dentro del proyecto).
+    recurso_tipo VARCHAR(40) NOT NULL
+        CHECK (recurso_tipo IN (
+            'finca', 'lote', 'levantamiento', 'registro',
+            'actividad', 'documento', 'presupuesto', 'resultado'
+        )),
+    recurso_id UUID,                    -- referencia suave, sin FK —
+                                        -- deliberado (precedente D9:
+                                        -- actividades.contexto_id y
+                                        -- audit_eventos.contexto_id)
+    nivel VARCHAR(20) NOT NULL
+        CHECK (nivel IN ('consulta', 'crear', 'editar')),
+                                        -- 'administrar' nunca se
+                                        -- concede por grant (techo E2)
+    otorgado_por UUID
+        REFERENCES usuarios(id) ON DELETE SET NULL,
+    vigente_hasta TIMESTAMPTZ,          -- NULL = indefinido
+    estado VARCHAR(30) NOT NULL DEFAULT 'activa'
+        CHECK (estado IN ('activa', 'revocada')),
+    revocado_por UUID
+        REFERENCES usuarios(id) ON DELETE SET NULL,
+    revocado_at TIMESTAMPTZ,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
+
+
+-- ===========================================================================
 -- ÍNDICES
 -- ===========================================================================
 
@@ -331,6 +375,21 @@ CREATE INDEX IF NOT EXISTS idx_audit_accion
     ON audit_eventos(accion);
 CREATE INDEX IF NOT EXISTS idx_audit_fecha
     ON audit_eventos(created_at);
+
+-- EP-4E — unicidad de concesiones SOLO sobre activas
+CREATE UNIQUE INDEX IF NOT EXISTS uq_ep_concesiones_activa_instancia
+    ON ep_proyecto_concesiones (participante_id, recurso_tipo, recurso_id)
+    WHERE estado = 'activa' AND recurso_id IS NOT NULL;
+CREATE UNIQUE INDEX IF NOT EXISTS uq_ep_concesiones_activa_tipo
+    ON ep_proyecto_concesiones (participante_id, recurso_tipo)
+    WHERE estado = 'activa' AND recurso_id IS NULL;
+
+CREATE INDEX IF NOT EXISTS idx_ep_concesiones_proyecto
+    ON ep_proyecto_concesiones(proyecto_id);
+CREATE INDEX IF NOT EXISTS idx_ep_concesiones_participante
+    ON ep_proyecto_concesiones(participante_id);
+CREATE INDEX IF NOT EXISTS idx_ep_concesiones_recurso
+    ON ep_proyecto_concesiones(recurso_tipo, recurso_id);
 
 
 -- ===========================================================================
