@@ -1,0 +1,51 @@
+{
+  "fuente": "MELANTIA - Migrado de melant_ia/src/modules/02_asistente_tecnico_rural/calculadora_agricola.js",
+  "descripcion": "Parámetros técnicos de cultivos prioritarios de Ecuador: marcos de plantación, requerimiento NPK y captura de carbono.",
+  "cultivos": {
+    "cacao": {
+      "nombre": "Cacao",
+      "distancia_filas_m": 3.0,
+      "distancia_plantas_m": 3.0,
+      "npk_kg_ha_min": 250,
+      "npk_kg_ha_max": 400,
+      "co2_t_ha_anio_min": 2.5,
+      "co2_t_ha_anio_max": 4.0
+    },
+    "cafe": {
+      "nombre": "Café",
+      "distancia_filas_m": 2.5,
+      "distancia_plantas_m": 1.0,
+      "npk_kg_ha_min": 300,
+      "npk_kg_ha_max": 500,
+      "co2_t_ha_anio_min": 2.0,
+      "co2_t_ha_anio_max": 3.5
+    },
+    "palma": {
+      "nombre": "Palma",
+      "distancia_filas_m": 9.0,
+      "distancia_plantas_m": 9.0,
+      "npk_kg_ha_min": 600,
+      "npk_kg_ha_max": 900,
+      "co2_t_ha_anio_min": 5.0,
+      "co2_t_ha_anio_max": 8.0
+    },
+    "maiz": {
+      "nombre": "Maíz",
+      "distancia_filas_m": 0.8,
+      "distancia_plantas_m": 0.2,
+      "npk_kg_ha_min": 150,
+      "npk_kg_ha_max": 250,
+      "co2_t_ha_anio_min": 0.5,
+      "co2_t_ha_anio_max": 1.0
+    },
+    "platano": {
+      "nombre": "Plátano",
+      "distancia_filas_m": 3.0,
+      "distancia_plantas_m": 2.0,
+      "npk_kg_ha_min": 400,
+      "npk_kg_ha_max": 600,
+      "co2_t_ha_anio_min": 1.0,
+      "co2_t_ha_anio_max": 2.0
+    }
+  }
+}

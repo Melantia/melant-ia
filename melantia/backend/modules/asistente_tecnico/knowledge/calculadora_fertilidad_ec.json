@@ -1,0 +1,67 @@
+{
+  "calculadora_fertilidad_ec": {
+    "niveles_criticos": {
+      "materia_organica_pct": {
+        "bajo": 2.0,
+        "optimo_min": 2.0,
+        "optimo_max": 5.0,
+        "alerta_app": "Nivel Bajo: Mejorar con compost, abonos verdes o bioles."
+      },
+      "nitrogeno_mg_kg": {
+        "bajo": 20,
+        "optimo_min": 20,
+        "optimo_max": 40,
+        "alerta_app": "Nivel Bajo: Aplicar abonos orgánicos ricos en N o urea."
+      },
+      "fosforo_mg_kg": {
+        "bajo": 12,
+        "optimo_min": 15,
+        "optimo_max": 25,
+        "alerta_app": "Nivel Bajo: El sensor detecta deficiencia. Aplique roca fosfórica o compost enriquecido."
+      },
+      "potasio_cmol_kg": {
+        "bajo": 0.2,
+        "optimo_min": 0.3,
+        "optimo_max": 0.6,
+        "alerta_app": "Nivel Bajo: Riesgo de frutos pequeños. Aplique ceniza de madera o sulfato de potasio."
+      },
+      "calcio_cmol_kg": {
+        "bajo": 3.0,
+        "optimo_min": 3.0,
+        "optimo_max": 6.0,
+        "alerta_app": "Nivel Bajo: Aplicar yeso agrícola o cal dolomita."
+      },
+      "magnesio_cmol_kg": {
+        "bajo": 1.0,
+        "optimo_min": 1.0,
+        "optimo_max": 2.0,
+        "alerta_app": "Nivel Bajo: Aplicar sales de Epsom o cal dolomita."
+      },
+      "ph_suelo": {
+        "acido": 5.5,
+        "neutro": 7.0,
+        "alerta_app": "Suelo Ácido: El sensor marca pH bajo. Se recomienda encalado con Cal Dolomita."
+      }
+    },
+    "requerimientos_por_cultivo_kg_ha": [
+      {
+        "cultivo": "Maiz Duro",
+        "extraccion_N": 150,
+        "extraccion_P2O5": 60,
+        "extraccion_K2O": 120
+      },
+      {
+        "cultivo": "Arroz",
+        "extraccion_N": 120,
+        "extraccion_P2O5": 40,
+        "extraccion_K2O": 140
+      },
+      {
+        "cultivo": "Banano",
+        "extraccion_N": 250,
+        "extraccion_P2O5": 60,
+        "extraccion_K2O": 600
+      }
+    ]
+  }
+}
