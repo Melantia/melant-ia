@@ -1,4 +1,4 @@
-# MELANTIA — exclusiones mínimas de versionado
+# MELANTIA — exclusiones de versionado
 # Secretos / entorno local
 .env
 .env.*
@@ -10,3 +10,27 @@ venv/
 # Caché Python
 __pycache__/
 *.pyc
+
+# Editores (config local, no canónica)
+.cursor/
+.vscode/
+
+# Node / build frontend
+node_modules/
+dist/
+
+# Datos masivos y binarios (datasets, modelos vosk)
+datasets/
+models/
+cacao/
+musaceas/
+*.zip
+*.xlsx
+*.csv
+*.mdl
+*.fst
+
+# Snapshots / dumps / extracciones legacy
+melantia_old_version/
+.legacy_extract/
+backups/
