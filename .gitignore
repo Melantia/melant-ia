@@ -1,0 +1,12 @@
+# MELANTIA — exclusiones mínimas de versionado
+# Secretos / entorno local
+.env
+.env.*
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Caché Python
+__pycache__/
+*.pyc

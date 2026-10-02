@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  melantia_db:
+    image: docker.io/library/postgres:16-alpine
+    container_name: melantia_postgres_local
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: melantia_offline_2026
+      POSTGRES_DB: melantia_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - melantia_postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  melantia_postgres_data:
+    driver: local
