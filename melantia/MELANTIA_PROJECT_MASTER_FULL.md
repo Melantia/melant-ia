@@ -10,6 +10,8 @@
 > **Licencia Institucional:** `docs/LICENCIA_INSTITUCIONAL.md` (2026-10-01) — modelo comercial/funcional aprobado: beneficiario vs líder comunitario patrocinado vs usuario independiente; niveles $5.000→20 líderes y $10.000→40 líderes; acceso institucional a Negocios Rurales sin propiedad de las plataformas; comisión 3 % independiente de la licencia.
 >
 > **Actualización MVP (2026-10-08):** §43 incorpora las decisiones aprobadas de experiencia de usuario (Mi Producción, navegación principal), horizonte de validación de 24 meses / meta 10.000 usuarios, Offline First + Smart Sync/Supervivencia, seguridad, roles administrativos L0–L5, credenciales administrativas y Puerto MELANTIA como capacidad futura. §44 = checklist de cierre del MVP. §45 = contradicciones documentales y pendientes registrados (no resueltos). Documentación especializada de referencia: `docs/patrimonio/seguridad_soberana/` (01–08 + `MATRIZ_CREDENCIALES_ROLES_PERMISOS_ALCANCES_V1.md`).
+>
+> **Bitácora técnica:** `MELANTIA_ESTADO_IMPLEMENTACION.md` — estado real de implementación, evidencias (tests, commits, migraciones) y siguientes hitos. Este Master sigue siendo la autoridad de arquitectura y decisiones; la bitácora registra la ejecución verificable.
 
 ---
 
@@ -3962,3 +3964,7 @@ PC-05, PC-07, PC-08, PC-09 (matriz credenciales v1 §16); P-05
 |---|---|---|
 | 2026-10-08 | §43 (decisiones MVP: Mi Producción, navegación, 24 meses/10.000 usuarios, Smart Sync, roles L0–L5, credenciales, Puerto MELANTIA, futuro-no-MVP) + §44 (checklist de cierre) + §45 (contradicciones/pendientes) + nota de encabezado | Actualización documental aprobada — sin código, SQL, config ni commit |
 | 2026-10-08 | Resolución documental de contradicciones: P-01 (RC-01), P-02 (RC-04), P-03 (PC-06), P-04 (RC-06), P-07 (PC-01), P-08 (PC-02) resueltas; P-05 pendiente de entitlements/nombres; P-06 aclarada. Notas en §10, §43.12, §43.13, §43.19; harmonización de docs 05–08, 17 (F7a), 21 (F7a.1) y matriz de credenciales | Resolución documental aprobada — sin código, SQL, config ni commit |
+| 2026-10-20 | Saneamiento del entorno: venv mínimo, PostgreSQL 16.15 portable en `.pg16/`, esquema+m2–m6 en `melantia_db`/`melantia_test`, seeds geográficos DPA (24/221/1042), cuarentena `.legacy_extract/`, suite 412 passed — detalle en `MELANTIA_ESTADO_IMPLEMENTACION.md` §D | Ejecución verificada en repo |
+| 2026-10-21 | Auditoría Git + commits clasificados (`0ee6c548`..`3c2b1710`), migración **m7** (UNIQUE INEC cantones/parroquias, 9 tests) aplicada en ambas bases, suite 421 passed — §D del estado | Ejecución verificada en repo |
+| 2026-10-21 | **Gestión de Fincas end-to-end** en rama `feat/gestion-fincas-end-to-end` (`73f4b32c` + `5b061f5d`): CRUD `/api/v1/fincas`+`/lotes`+`/geografia`, UI React real, 23 E2E, suite 444 passed, lint/build OK — §F del estado | Ejecución verificada en repo |
+| 2026-10-21 | Creación de `MELANTIA_ESTADO_IMPLEMENTACION.md` (bitácora técnica viva) + enlace en encabezado — jerarquía: este Master = autoridad; el estado = evidencia | Cambio documental — sin código, SQL ni commit |
