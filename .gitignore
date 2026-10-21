@@ -42,7 +42,7 @@ nueva_supabase.env
 .pg16/
 
 # Supabase CLI — metadatos locales (project-ref, links)
-supabase/.temp/
+**/supabase/.temp/
 
 # Artefactos locales / herramientas — no versionar
 *.exe
