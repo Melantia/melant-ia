@@ -1,5 +1,0 @@
-{
-  "imagenes": [
-    // Cada entrada: { "id": "uuid", "tipo": "cultivo|animal|evidencia", "nombre": "", "fecha": "", "ruta": "", "notas": "" }
-  ]
-}
