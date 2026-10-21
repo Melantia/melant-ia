@@ -160,6 +160,9 @@ El registro original permanece conservado.
 
 # 4. ARQUITECTURA OFFLINE-FIRST
 
+> 📋 Especificación técnica de diseño (propuesta, no implementada):
+> [`docs/SYNC_OFFLINE_FIRST_DESIGN.md`](docs/SYNC_OFFLINE_FIRST_DESIGN.md).
+
 ```text
                    SIN INTERNET
                        |
@@ -3968,3 +3971,5 @@ PC-05, PC-07, PC-08, PC-09 (matriz credenciales v1 §16); P-05
 | 2026-10-21 | Auditoría Git + commits clasificados (`0ee6c548`..`3c2b1710`), migración **m7** (UNIQUE INEC cantones/parroquias, 9 tests) aplicada en ambas bases, suite 421 passed — §D del estado | Ejecución verificada en repo |
 | 2026-10-21 | **Gestión de Fincas end-to-end** en rama `feat/gestion-fincas-end-to-end` (`73f4b32c` + `5b061f5d`): CRUD `/api/v1/fincas`+`/lotes`+`/geografia`, UI React real, 23 E2E, suite 444 passed, lint/build OK — §F del estado | Ejecución verificada en repo |
 | 2026-10-21 | Creación de `MELANTIA_ESTADO_IMPLEMENTACION.md` (bitácora técnica viva) + enlace en encabezado — jerarquía: este Master = autoridad; el estado = evidencia | Cambio documental — sin código, SQL ni commit |
+| 2026-10-21 | Diseño offline-first y sincronización: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` (propuesta, no implementada) enlazado desde §4 — detalle en `MELANTIA_ESTADO_IMPLEMENTACION.md` §D/§H | Cambio documental — sin código, SQL ni commit |
+| 2026-10-21 | Revisión del diseño sync: cursor incremental corregido a contador transaccional por ámbito `sync_cursors` (§4.6 del diseño); decisiones aprobadas — Expo+dev builds, `expo-sqlite`, object storage tras abstracción, retención 90 días, migraciones en etapas `m8`/`m9` pendientes de autorización de implementación | Cambio documental — sin código, SQL ni ejecución de migraciones |

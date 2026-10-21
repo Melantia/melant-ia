@@ -1,7 +1,7 @@
 # MELANTIA — ESTADO DE IMPLEMENTACIÓN Y BITÁCORA TÉCNICA
 
 > **Última revisión:** 2026-10-21 · **Rama verificada:** `feat/gestion-fincas-end-to-end`
-> **Último commit de código verificado:** `5b061f5d` · Suite: **444 passed, 0 skipped, 0 errors**
+> **Último commit verificado:** `280740ef` · Suite: **444 passed, 0 skipped, 0 errors**
 
 ---
 
@@ -61,7 +61,7 @@ diferencia se registra como conflicto pendiente.
 | Geografía y migraciones | **IMPLEMENTADO Y VERIFICADO** | Catálogo DPA/INEC 24/221/1.042 con UNIQUE en los 3 niveles (`migracion_inicial` + m2–m7); seeds idempotentes |
 | Pruebas automatizadas | **IMPLEMENTADO Y VERIFICADO** | 444 passed contra `melantia_test`; conftest fail-closed |
 | Aplicación móvil | **DISEÑADO, NO IMPLEMENTADO** | React Native aprobado en Master (§2); no existe proyecto móvil en el repo |
-| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** | Base servidor: `registros_campo` + dedup `hash_transaccion` (m6) + `dispositivos`/`sesiones` (m4) + `sync_status` en trazabilidad. Cliente: solo `localStorage` (prohibido para cola); sin cola persistente ni sync engine |
+| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (diseño propuesto) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `sync_status` en DDL trazabilidad, `audit_eventos`. Cliente: solo caché localStorage de lectura; sin cola ni sync engine ni app móvil. Diseño completo en `docs/SYNC_OFFLINE_FIRST_DESIGN.md` — pendiente de aprobación |
 | Administración General | **DISEÑADO, NO IMPLEMENTADO** | Concepto completo en §42 + `docs/ADMINISTRACION.md`; sin rutas `/api/v1/admin/*` ni roles admin en código |
 | Trazabilidad | **IMPLEMENTADO PARCIALMENTE** | Schema completo (plantillas, fases, eventos, cadena de custodia); sin API dedicada; evidencias tiene router propio |
 | Evidencias | **IMPLEMENTADO PARCIALMENTE** | Router `/api/evidencias` + UI M11 existen; verificador SHA-256 por confirmar |
@@ -181,6 +181,36 @@ rutas `/api/v1/admin/*` todavía.
   verificarla. Si falla, siguiente sospechoso: perfil
   `%APPDATA%\pgAdmin` (renombrable; regenera limpio pero pierde
   servidores guardados — copiar antes).
+
+### 2026-10-21 — Diseño offline-first y sincronización (documental)
+
+- Auditoría real del repo: cimiento existente localizado
+  (`client_operation_id` m2/B1, `hash_transaccion` m6,
+  `dispositivos`/`sesiones` m4, `sync_status` en DDL trazabilidad,
+  `audit_eventos`, `updated_at` mantenido por repo) y brechas
+  confirmadas (sin React Native/Expo, sin cola, sin endpoints sync,
+  fincas/lotes/hatos sin metadatos de sync).
+- Creado `docs/SYNC_OFFLINE_FIRST_DESIGN.md`: arquitectura,
+  contrato conceptual push/pull, idempotencia (`client_operation_id`
+  canónico + ledger `sync_operaciones`), changelog `sync_cambios`
+  con cursor `seq`, política de conflictos por `version`, evidencias
+  en 2 fases con SHA-256, evaluación de persistencia móvil
+  (SQLite propuesto) y matriz m2–m7.
+- **Dictamen migraciones:** sí necesarias, en dos etapas aprobadas —
+  `m8_sync_infraestructura` (`sync_operaciones` + `sync_cambios` +
+  `sync_cursors`) y `m9_sync_metadatos_entidades` (`version`,
+  `deleted_at`, `client_operation_id`, `dispositivo_origen_id` en
+  fincas/lotes/hatos). Nombres conformes a la convención
+  `m<N>_<desc>.sql` verificada. Pendientes de autorización;
+  **no implementadas**.
+- Revisión final del diseño (misma fecha): cursor corregido de
+  `BIGSERIAL` ingenuo a **contador transaccional por ámbito**
+  `sync_cursors` (BIGSERIAL no garantiza orden de commit —
+  escenario documentado en §4.6 del diseño); decisiones aprobadas
+  incorporadas: Expo + development builds, `expo-sqlite`, object
+  storage tras abstracción, retención 90 días con reconciliación
+  que conserva ops locales pendientes.
+- Tarea exclusivamente documental: cero cambios de código, SQL o BD.
 
 ---
 
@@ -305,10 +335,10 @@ en `suscripciones/schemas.py`, `datetime.utcnow()` en
 | # | Pendiente | Prioridad / nota |
 |---|---|---|
 | 1 | Merge/integración de `feat/gestion-fincas-end-to-end` a la rama de trabajo | Decisión del propietario del repo |
-| 2 | Almacenamiento local persistente móvil (IndexedDB web/PWA; Keychain/Keystore nativo) | Hito offline-first; `localStorage` prohibido para la cola |
-| 3 | Cola de sincronización + sync engine incremental + reintentos | Hito offline-first |
-| 4 | Idempotencia y resolución de conflictos en flujos | Reusar patrón m6 (`hash_transaccion` dedup) |
-| 5 | Decidir si hace falta **m8** (metadatos sync en fincas/lotes: `version`, `deleted_at`, `device_id`, `hash_transaccion`) | **No asumir obligatoria**: definir tras el diseño global de sync |
+| 2 | Stack móvil: decisión Expo vs RN bare + persistencia local (SQLite propuesto) | Hito offline-first F0/F1 — ver `docs/SYNC_OFFLINE_FIRST_DESIGN.md` §3, §13 |
+| 3 | Cola de sincronización + sync engine incremental + reintentos | Hito offline-first F2–F3; contrato propuesto en el diseño |
+| 4 | Idempotencia y resolución de conflictos en flujos | Convención propuesta: `client_operation_id` transversal (patrón B1) + `version` para conflictos |
+| 5 | Migraciones de sync — dictamen: **sí necesarias**, en dos etapas: `m8_sync_infraestructura` (`sync_operaciones`+`sync_cambios`+`sync_cursors`) y `m9_sync_metadatos_entidades` (metadatos en fincas/lotes/hatos) | Etapas aprobadas como diseño; **pendiente de autorización** de implementación, no aplicadas |
 | 6 | M3: hatos, animales individuales, eventos de trazabilidad | Ampliación del módulo |
 | 7 | Auditoría transversal (`audit_eventos` writers, ADM-2) + verificador SHA-256 evidencias | Antes de exponer trazabilidad pública |
 | 8 | Excel import/export/validación, dashboard, reportes | Semana-4 del plan MVP |
@@ -334,7 +364,7 @@ el estado final del hito actual.
 | `shared/repositories/audit.py` separado de auditoría admin futura | Diseño conceptual; repo existe, writers pendientes (ADM-2) | §42, docs/ADMINISTRACION.md |
 | Gestión administrativa de releases separada del mecanismo técnico de actualización | Diseño conceptual | docs/ADMINISTRACION.md |
 | CRUD Gestión de Fincas conectado a PostgreSQL | **Implementado y verificado** (444 tests, rama `feat/gestion-fincas-end-to-end`) | Módulo 3 |
-| Aplicación móvil y sincronización completa | Pendiente de implementación | §2, §16, Offline First |
+| Aplicación móvil y sincronización completa | Diseño técnico propuesto en `docs/SYNC_OFFLINE_FIRST_DESIGN.md`; implementación pendiente | §2, §4–§6, Offline First |
 | Panel funcional de Administración General | Pendiente de implementación | §42 |
 
 ---
@@ -344,6 +374,8 @@ el estado final del hito actual.
 | Fecha | Cambio | Fuentes verificadas | Estado |
 |---|---|---|---|
 | 2026-10-21 | Creación del documento: estado al 2026-10-21, hitos 10-20/10-21, m7, Gestión de Fincas, incidencia pgAdmin | `git log` (`0ee6c548`..`5b061f5d`), suite 444 ejecutada, OpenAPI, `docs/*`, Master FULL | Verificado |
+| 2026-10-21 | Registro del diseño offline-first (`docs/SYNC_OFFLINE_FIRST_DESIGN.md`): auditoría de cimiento sync existente, dictamen de migraciones, deuda §H actualizada | Auditoría de schemas m2–m7, módulos, `frontend/src/shared/offline/`, `package.json`; commit `280740ef` | Verificado |
+| 2026-10-21 | Revisión final del diseño sync: cursor corregido a `sync_cursors` transaccional por scope (BIGSERIAL ≠ orden de commit); decisiones aprobadas incorporadas (Expo+dev builds, expo-sqlite, object storage, retención 90 d, etapas m8/m9) | `docs/SYNC_OFFLINE_FIRST_DESIGN.md` §4.6/§13; convención de nombres de migraciones verificada en `migraciones/` + `DB_MIGRATION_EXECUTION_PHASE1.md` | Verificado |
 
 <!--
 Mantener esta tabla al día con cada hito verificado.
