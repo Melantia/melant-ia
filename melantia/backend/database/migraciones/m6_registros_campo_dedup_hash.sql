@@ -1,0 +1,86 @@
+-- ===========================================================================
+-- MIGRACIÓN M6 — Deduplicación de incentivos en registros_campo
+-- FIX-01 Lote 1 · cierra la carrera TOCTOU del abono de Melantios
+-- Versión 2026-10-10 · ⚠️  PROPUESTA — NO EJECUTAR sin autorización
+--                        explícita del propietario.
+--
+-- EJECUCIÓN (cuando se autorice): en una única transacción —
+--
+--     psql -1 -f backend/database/migraciones/m6_registros_campo_dedup_hash.sql
+--
+--   (psql -1 envuelve el archivo en una transacción; el BEGIN/COMMIT
+--    interno es segunda garantía si se corre sin -1. Un fallo a mitad
+--    revierte la migración completa.)
+--
+-- ALCANCE (un solo objeto nuevo; cero ALTER sobre columnas/datos —
+-- migración aditiva, rollback = DROP INDEX):
+--
+--   uq_registros_campo_dedup — UNIQUE parcial sobre
+--       (usuario_id, hash_transaccion) con predicado
+--       WHERE hash_transaccion IS NOT NULL.
+--
+--   Semántica del predicado:
+--   - hash_transaccion NULL → fuera del índice: los registros sin
+--     clave de dedup conservan el comportamiento actual (cada uno
+--     inserta; no hay dedup posible sin clave).
+--   - usuario_id NULL → los NULL son distintos entre sí en UNIQUE:
+--     filas históricas sin usuario jamás colisionan ni bloquean el
+--     índice. FIX-01 garantiza que todo registro nuevo lleva el
+--     usuario autenticado (NOT NULL en la práctica, sin endurecer el
+--     esquema en este lote).
+--   - Mismo (usuario_id, hash_transaccion) → el segundo INSERT
+--     rechaza con SQLSTATE 23505 (UniqueViolation), que el endpoint
+--     ya traduce a 409 Conflict sin abono (backend/main.py).
+--
+--   Por qué NO CONCURRENTLY: la tabla en melantia_db está vacía a la
+--   fecha de esta propuesta; CREATE INDEX simple bloquea escrituras
+--   solo milisegundos. CONCURRENTLY no puede ejecutarse dentro de la
+--   transacción -1 requerida por la convención del proyecto. Si antes
+--   de aplicar la tabla creciera de forma relevante, replantear con
+--   ejecución CONCURRENTLY fuera de transacción (requiere relajar -1).
+--
+--   Índice existente idx_registros_campo_hash (hash_transaccion solo)
+--   queda cubierto en parte por el nuevo índice compuesto para
+--   consultas (usuario_id, hash); se conserva porque también soporta
+--   búsquedas por hash solo. Revisión de solapamiento = decisión
+--   separada.
+--
+-- PRE-CHEQUEOS (ejecutados 2026-10-10 sobre melantia_db — resultados
+-- entre corchetes; repetir antes de aplicar en otra base):
+--
+--   SELECT count(*) FROM registros_campo;                          [0]
+--   SELECT usuario_id, hash_transaccion, count(*)
+--   FROM registros_campo
+--   WHERE hash_transaccion IS NOT NULL
+--   GROUP BY 1, 2 HAVING count(*) > 1;                     [0 filas]
+--   -- sin duplicados históricos: el índice se crea limpio.
+--   -- Si aparecieran duplicados en otra base, resolución manual
+--   -- (conservar la fila más antigua, compensar incentivos) ANTES
+--   -- de aplicar; nunca deduplicar automáticamente.
+--
+-- VERIFICACIÓN POST-APLICACIÓN:
+--
+--   SELECT indexdef FROM pg_indexes
+--   WHERE tablename='registros_campo'
+--     AND indexname='uq_registros_campo_dedup';
+--   -- Debe mostrar:
+--   --   ... ON registros_campo (usuario_id, hash_transaccion)
+--   --   WHERE hash_transaccion IS NOT NULL
+--
+--   -- Duplicado rechazado (espera ERROR 23505):
+--   -- INSERT INTO registros_campo (usuario_id, tipo_registro,
+--   --     hash_transaccion) VALUES ('<uuid>', 'plaga', 'h1');
+--   -- INSERT INTO registros_campo (usuario_id, tipo_registro,
+--   --     hash_transaccion) VALUES ('<uuid>', 'plaga', 'h1');
+--
+--   -- NULL siempre admitido (espera 2 filas):
+--   -- INSERT ... VALUES ('<uuid>', 'plaga', NULL);  -- ×2
+-- ===========================================================================
+
+BEGIN;
+
+CREATE UNIQUE INDEX IF NOT EXISTS uq_registros_campo_dedup
+    ON registros_campo (usuario_id, hash_transaccion)
+    WHERE hash_transaccion IS NOT NULL;
+
+COMMIT;
