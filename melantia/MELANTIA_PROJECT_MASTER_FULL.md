@@ -3365,6 +3365,70 @@ Inspección previa a la implementación (Fase F). Estado real:
    `GestionFincas.jsx` real (listar/crear finca, lotes por finca).
 4. Después: metadatos sync (m8) + hatos + eventos de trazabilidad.
 
+## 2026-10-21 — Hito IMPLEMENTADO: Gestión de Fincas end-to-end
+
+El plan anterior quedó ejecutado y verificado. Módulo M3 real:
+
+**Backend** — `backend/modules/gestion_fincas/` (convención EP:
+router agregador + `routes/` + `schemas/` + `services/` →
+`shared/repositories/`). Montado en main.py bajo `/api/v1`
+(convención de módulos modernos asistente/EP; los routers internos
+llevan prefijo `/fincas` y `/geografia`):
+
+| Método | Ruta | Función |
+|---|---|---|
+| POST | `/api/v1/fincas` | Crear finca (201) |
+| GET | `/api/v1/fincas` | Listar solo las propias (+conteos) |
+| GET | `/api/v1/fincas/{id}` | Detalle con lotes (404 si ajena) |
+| PATCH | `/api/v1/fincas/{id}` | Edición parcial campos permitidos |
+| POST | `/api/v1/fincas/{id}/lotes` | Crear lote (201) |
+| GET | `/api/v1/fincas/{id}/lotes` | Listar lotes de finca propia |
+| PATCH | `/api/v1/fincas/{id}/lotes/{lote_id}` | Editar lote de finca propia |
+| GET | `/api/v1/geografia/provincias|cantones|parroquias` | Catálogo DPA/INEC (filtros por padre) |
+
+**Seguridad:** identidad solo vía `get_current_user`; schemas con
+`extra="forbid"` (intento de cambiar `usuario_id` → 422); recurso
+ajeno o inexistente → **404 indistinguible**; UPDATE con
+`AND usuario_id` en la cláusula (doble alcance lote→finca→usuario);
+todo parametrizado. Sin DELETE físico — soft-delete queda para el
+hito de sincronización.
+
+**Geo DPA/INEC:** `_resolver_geo` valida existencia en catálogo y
+coherencia por FK real; los niveles superiores ausentes se derivan
+(enviar solo `parroquia_id` completa cantón+provincia).
+
+**Repositorios:** `shared/repositories/fincas.py` ampliado
+(aditivo: `obtener_finca_completa`, `listar_fincas_usuario_resumen`,
+`insertar_/actualizar_finca`, `insertar_/actualizar_lote`; la lectura
+de lotes ahora devuelve `finca_id`+timestamps) y nuevo
+`shared/repositories/geografia.py` (catálogo solo-lectura,
+reusable por registro de usuarios/levantamientos).
+
+**Frontend:** `GestionFincas.jsx` reescrito funcional +
+`fincas.service.js` nuevo sobre `apiClient`/`errors.js`. Lista con
+conteos, alta con selects geo en cascada (24/221/1042 reales),
+detalle con lotes, edición, alta de lote y cambio de estado
+sanitario. Estados de carga/vacío/error. Ya estaba montado en
+AppShell (módulo 3) — sin cambios de navegación.
+
+**Pruebas:** `test_gestion_fincas_api.py` — 23 E2E nuevas contra
+`melantia_test` con 2 usuarios (crear, derivación geo, geo
+incoherente/inexistente 422, sin auth 401, listar solo propias,
+detalle propia/ajena/inexistente, PATCH propia/ajena/sin
+campos/intento de cambio de dueño, lotes CRUD + doble alcance 404,
+área negativa 422, catálogo geo, persistencia real verificada en BD,
+rutas en OpenAPI).
+
+**Regresión:** **444 passed** (421 + 23), 0 skipped, 0 errors.
+`npm run lint` 0 errores (mismas 2 warnings preexistentes);
+`npm run build` OK (110 módulos).
+
+**Pendiente para próximos hitos:** metadatos sync
+(`version`, `deleted_at`, `hash_transaccion`, `device_id` en
+fincas/lotes → probable m8 dentro del diseño de sincronización),
+hatos ganaderos, eventos de trazabilidad, escrituras en
+`audit_eventos` (ADM-2).
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA

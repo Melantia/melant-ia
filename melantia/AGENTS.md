@@ -44,7 +44,7 @@ MELANTIA_TEST_DATABASE_URL="postgresql://postgres@localhost:5432/melantia_test" 
 ```
 
 Sin la variable, los tests de BD hacen skip explícito (conftest
-fail-closed). Estado 2026-10-21: **421 passed, 0 skipped**.
+fail-closed). Estado 2026-10-21: **444 passed, 0 skipped**.
 
 ## Orden de aplicación del schema (docs/DB_MIGRATION_EXECUTION_PHASE1.md)
 
@@ -79,6 +79,12 @@ npm run build
 - `melantia/{assets,business,core_python,data,.pytest_cache}` son
   directorios **vacíos** con ACL de Windows restrictiva (git los
   reporta "permission denied"); pendiente decisión de borrado.
+- Módulos nuevos: convención EP — `router.py` agregador +
+  `routes/` + `schemas/` + `services/` → `shared/repositories/`.
+  Routers delgados, SQL en repos, `get_db`+`get_current_user`,
+  404 indistinguible para recurso ajeno, prefijo `/api/v1/*`.
+  Referencia viva: `modules/gestion_fincas/` +
+  `tests/test_gestion_fincas_api.py`.
 - NUNCA commitear: `.env`, `.pg16/`, `venv/`, `../API OpenRouter/`
   (contiene `antigua_clave/` con credenciales), dumps `*.backup.gz`,
   `pgadmin4.exe`.
