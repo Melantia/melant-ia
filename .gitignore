@@ -34,3 +34,18 @@ musaceas/
 melantia_old_version/
 .legacy_extract/
 backups/
+
+# Credenciales temporales I0.1 (nunca versionar)
+nueva_supabase.env
+
+# PostgreSQL portable local (binarios + datos — regenerable)
+.pg16/
+
+# Supabase CLI — metadatos locales (project-ref, links)
+supabase/.temp/
+
+# Artefactos locales / herramientas — no versionar
+*.exe
+*.backup.gz
+*.tar.gz
+API OpenRouter/
