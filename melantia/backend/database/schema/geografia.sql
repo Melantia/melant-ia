@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS cantones (
     provincia_id INT NOT NULL
         REFERENCES provincias(id) ON DELETE CASCADE,
     nombre VARCHAR(100) NOT NULL,
-    codigo_inec VARCHAR(10) NOT NULL
+    codigo_inec VARCHAR(10) UNIQUE NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS parroquias (
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS parroquias (
     canton_id INT NOT NULL
         REFERENCES cantones(id) ON DELETE CASCADE,
     nombre VARCHAR(100) NOT NULL,
-    codigo_inec VARCHAR(10) NOT NULL
+    codigo_inec VARCHAR(10) UNIQUE NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS ciiu (
