@@ -34,7 +34,7 @@ portable en `.pg16/` (EDB binaries 16.15-5, gitignored):
 
 Auth `trust` en localhost — solo desarrollo. Bases:
 `melantia_db` (app) y `melantia_test` (suite; ambas con schema
-completo + migraciones m2–m6 + seeds geográficos aplicados).
+completo + migraciones m2–m7 + seeds geográficos aplicados).
 
 ## Tests
 
@@ -44,7 +44,7 @@ MELANTIA_TEST_DATABASE_URL="postgresql://postgres@localhost:5432/melantia_test" 
 ```
 
 Sin la variable, los tests de BD hacen skip explícito (conftest
-fail-closed). Estado 2026-10-20: **412 passed, 0 skipped**.
+fail-closed). Estado 2026-10-21: **421 passed, 0 skipped**.
 
 ## Orden de aplicación del schema (docs/DB_MIGRATION_EXECUTION_PHASE1.md)
 
@@ -53,7 +53,7 @@ extensions → geografia → usuarios → auth_puente → sesiones →
 gestion_fincas → modulos/{animales, labores_pecuarias} → trazabilidad →
 modulos/negocios_rurales_v2 → evidencias → registros_campo →
 mediciones_campo → levantamientos → suscripciones →
-ecosistema_profesional → migraciones m2→m6 → seeds/*
+ecosistema_profesional → migraciones m2→m7 → seeds/*
 ```
 
 ## Frontend
@@ -72,3 +72,13 @@ npm run build
   (`## YYYY-MM-DD — Registro diario`), regla §25 del master.
 - `.legacy_extract/` es la cuarentena de código legacy/prototipos
   (gitignored).
+- Migraciones en `backend/database/migraciones/`: convención
+  m2–m7 = header PROPUESTA + pre-chequeos + `BEGIN;`/`COMMIT;` +
+  `IF NOT EXISTS`, aditivas. Ejecutar con `psql -1 -f` (los warnings
+  de transacción son cosméticos, documentados en m7).
+- `melantia/{assets,business,core_python,data,.pytest_cache}` son
+  directorios **vacíos** con ACL de Windows restrictiva (git los
+  reporta "permission denied"); pendiente decisión de borrado.
+- NUNCA commitear: `.env`, `.pg16/`, `venv/`, `../API OpenRouter/`
+  (contiene `antigua_clave/` con credenciales), dumps `*.backup.gz`,
+  `pgadmin4.exe`.

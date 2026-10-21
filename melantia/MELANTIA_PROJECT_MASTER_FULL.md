@@ -3271,9 +3271,59 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       preexistentes en DocumentosYImpresion.jsx), `npm run build` OK.
 - [x] `AGENTS.md` creado: bootstrap completo del entorno
       (venv, pg16 portable, orden de schema, comandos de test).
-- [ ] **Pendiente saneamiento:** commit del barrido `melant_ia/src/`
-      en git (raíz `E:\Desktop\MELANTIA`); decidir destino del dump
-      Supabase `../db_cluster-*.backup.gz`.
+- [x] **Pendiente saneamiento RESUELTO (2026-10-21):** barrido
+      `melant_ia/` commiteado (`7678e7c9`); material externo al
+      proyecto fuera del tracking. El dump Supabase
+      `../db_cluster-*.backup.gz` sigue fuera del repo (no se
+      commitea — binario de respaldo local).
+
+## 2026-10-21 — Auditoría Git, commits clasificados, m7 (UNIQUE INEC)
+
+- [x] **Auditoría Git completa (Fase A/B):** raíz real
+      `E:\Desktop\MELANTIA`, rama `ep/ecosistema-profesional-ddl`.
+      Árbol versionado vive en `melantia/` (subdir del repo).
+      Trabajo acumulado clasificado y commiteado por responsabilidad
+      (10 commits, `0ee6c548..228ba09f`):
+      - `0ee6c548` chore(repo): .gitignore ampliado + install.ps1
+      - `7678e7c9` chore(legacy): retiro de `melant_ia/` (26k líneas)
+      - `cf0b37e8` docs: patrimonio, seguridad, planes DB/geo, AGENTS
+      - `5318d88e` feat(auth): identidad, sesiones, puente Supabase
+      - `1c377d91` test(db): aislamiento fail-closed de BD de pruebas
+      - `a4ad64bf` feat(backend): cli, mantenimiento, payphone,
+        asistente, suscripciones
+      - `0d943113` feat(db): migración inicial + m6 + seeds geo INEC
+      - `a3d6b3a5` feat(frontend): app React/Vite, módulos M2–M5
+      - `2b8f7585` chore(supabase): esquema legado
+      - `ea5a4a74` chore(repo): fix patrón supabase/.temp anidado
+      - `228ba09f` feat(db): m7 UNIQUE codigo_inec
+      Quedan fuera del tracking (a nivel raíz del repo, no del
+      proyecto): `API OpenRouter/` (incluye `antigua_clave/` —
+      material de credenciales, no commitear jamás), `Documentos/`,
+      logos, `pgadmin4.exe`, `staff_controller.js`, dump Supabase.
+- [x] **Auditoría geográfica (C.1)** en `melantia_db` y
+      `melantia_test`: 0 duplicados INEC, 0 malformados, 0 huérfanos
+      FK, prefijos prov→cantón→parroquia coherentes, conteos exactos
+      24/221/1042.
+- [x] **Migración m7** `m7_geografia_inec_unicidad.sql`:
+      `uq_cantones_codigo_inec` + `uq_parroquias_codigo_inec`
+      (CREATE UNIQUE INDEX IF NOT EXISTS, aditiva, transaccional,
+      rollback = DROP INDEX). `geografia.sql` declara UNIQUE inline
+      para instalaciones nuevas. Aplicada y verificada en ambas bases.
+      Convención m2–m6 respetada: header PROPUESTA + pre-chequeos
+      documentados + BEGIN/COMMIT. Nota: `psql -1` + BEGIN/COMMIT
+      interno emite warnings cosméticos (documentado en el header).
+- [x] **Tests m7** `test_m7_geografia_inec.py` (9): validación
+      estática del SQL (transaccional, idempotente, sin DROP/DELETE/
+      ALTER/TRUNCATE) + ejecución real en schema temporal aislado:
+      índices creados, duplicado rechazado (23505), idempotencia.
+- [x] **Regresión completa (Fase D):** **421 passed** (412 + 9 m7),
+      0 skipped, 0 errors. `npm run lint` 0 errores (mismas 2
+      warnings preexistentes). `npm run build` OK (109 módulos).
+- [ ] **Pendiente/observado:** directorios `melantia/{assets,
+      business, core_python, data, .pytest_cache}` inaccesibles por
+      ACL de Windows pero **vacíos** — git los marca "permission
+      denied" al enumerar; inofensivos, pendiente decidir borrado
+      (requiere confirmación del usuario).
 
 ---
 
