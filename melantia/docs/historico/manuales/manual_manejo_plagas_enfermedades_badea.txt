@@ -1,0 +1,40 @@
+MANUAL DE MANEJO DE PLAGAS Y ENFERMEDADES DE LA BADEA
+Escuela de Campo MELANT IA
+
+1. Introducción
+La badea es susceptible a diversas plagas y enfermedades que afectan la calidad y el rendimiento del cultivo. Un manejo integrado y preventivo es clave para la producción sostenible.
+
+2. Plagas principales
+- Mosca de la fruta (Anastrepha spp.):
+  - Daño: Larvas en frutos, pudrición y caída prematura.
+  - Manejo: Monitoreo con trampas, destrucción de frutos caídos, bolsas protectoras, control biológico.
+  - Imagen: assets/badea_mosca_fruta.jpg
+- Ácaros (Tetranychus spp.):
+  - Daño: Amarillamiento y caída de hojas.
+  - Manejo: Riego adecuado, extractos botánicos, control biológico con ácaros benéficos.
+  - Imagen: assets/badea_acaros.jpg
+
+3. Enfermedades principales
+- Fusariosis (Fusarium spp.):
+  - Daño: Marchitez y pudrición de raíces y tallos.
+  - Manejo: Rotación de cultivos, plantas sanas, biofungicidas, manejo de humedad.
+  - Imagen: assets/badea_fusariosis.jpg
+- Antracnosis (Colletotrichum spp.):
+  - Daño: Manchas oscuras en frutos y tallos, caída prematura de frutos.
+  - Manejo: Poda sanitaria, caldo bordelés, manejo de residuos, selección de plantas sanas.
+  - Imagen: assets/badea_antracnosis.jpg
+
+4. Recomendaciones generales
+- Monitorear el cultivo semanalmente.
+- Mantener la biodiversidad y el control biológico.
+- Usar productos permitidos en agricultura orgánica/regenerativa.
+- Consultar recursos multimedia MELANT IA para identificación visual precisa.
+
+---
+
+AVISO DE TRANSPARENCIA Y BASE CIENTÍFICA
+Toda la información técnica, recomendaciones de manejo, fichas de cultivo, alertas y precios presentados en esta aplicación provienen de fuentes oficiales y científicas reconocidas en Ecuador y Sudamérica. Entre ellas destacan el INIAP (Instituto Nacional de Investigaciones Agropecuarias), Agrocalidad, SIPA (Sistema de Información Pública Agropecuaria), y organismos internacionales como CIMMYT, CIP, FAO, FLAR, IICA y universidades de la región.
+La app MELANT IA cita y enlaza los manuales, boletines y protocolos originales de estas instituciones en cada ficha técnica y en la sección “Saber más”. El objetivo es brindar información de carácter técnico-educativo, actualizada y validada, para la toma de decisiones productivas y comerciales responsables.
+La información aquí contenida no reemplaza la asesoría directa de técnicos certificados ni exime del cumplimiento de normativas locales. Se recomienda a los usuarios consultar siempre las fuentes originales y, ante dudas, contactar a INIAP, Agrocalidad o el MAG.
+
+© 2026 MELANT IA. Uso libre con atribución. Manual offline con imágenes y QR de validación.

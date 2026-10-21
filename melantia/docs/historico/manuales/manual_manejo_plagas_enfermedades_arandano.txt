@@ -1,0 +1,66 @@
+MANUAL DE MANEJO DE PLAGAS Y ENFERMEDADES DEL ARÁNDANO
+Escuela de Campo MELANT IA
+
+1. Introducción
+El arándano es susceptible a diversas plagas y enfermedades que afectan la calidad y el rendimiento del cultivo. Un manejo integrado y preventivo es clave para la producción sostenible.
+
+2. Plagas principales
+- Drosophila suzukii (mosca de alas manchadas):
+  - Daño: Larvas en frutos maduros, ablandamiento y pudrición.
+  - Manejo: Monitoreo con trampas, cosecha oportuna, uso de mallas, control biológico con parasitoides.
+  - Imagen: assets/arandano_drosophila.jpg
+- Trips (Frankliniella spp.):
+  - Daño: Cicatrices y deformaciones en flores y frutos.
+  - Manejo: Extracción manual, trampas adhesivas azules, extractos botánicos, control biológico.
+  - Imagen: assets/arandano_trips.jpg
+
+3. Enfermedades principales
+- Botrytis cinerea (moho gris):
+  - Daño: Pudrición blanda en frutos y flores, favorecida por alta humedad.
+  - Manejo: Ventilación, reducción de humedad, aplicación de biofungicidas, remoción de partes afectadas.
+  - Imagen: assets/arandano_botrytis.jpg
+- Antracnosis (Colletotrichum spp.):
+  - Daño: Manchas oscuras en frutos y tallos, caída prematura de frutos.
+  - Manejo: Poda sanitaria, aplicación de caldo bordelés, manejo de residuos, selección de plantas sanas.
+  - Imagen: assets/arandano_antracnosis.jpg
+
+4. Recomendaciones generales
+- Monitorear el cultivo semanalmente.
+- Mantener la biodiversidad y el control biológico.
+- Usar productos permitidos en agricultura orgánica/regenerativa.
+- Consultar recursos multimedia MELANT IA para identificación visual precisa.
+
+---
+
+AVISO DE TRANSPARENCIA Y BASE CIENTÍFICA
+Toda la información técnica, recomendaciones de manejo, fichas de cultivo, alertas y precios presentados en esta aplicación provienen de fuentes oficiales y científicas reconocidas en Ecuador y Sudamérica. Entre ellas destacan el INIAP (Instituto Nacional de Investigaciones Agropecuarias), Agrocalidad, SIPA (Sistema de Información Pública Agropecuaria), y organismos internacionales como CIMMYT, CIP, FAO, FLAR, IICA y universidades de la región.
+La app MELANT IA cita y enlaza los manuales, boletines y protocolos originales de estas instituciones en cada ficha técnica y en la sección “Saber más”. El objetivo es brindar información de carácter técnico-educativo, actualizada y validada, para la toma de decisiones productivas y comerciales responsables.
+La información aquí contenida no reemplaza la asesoría directa de técnicos certificados ni exime del cumplimiento de normativas locales. Se recomienda a los usuarios consultar siempre las fuentes originales y, ante dudas, contactar a INIAP, Agrocalidad o el MAG.
+
+© 2026 MELANT IA. Uso libre con atribución. Manual offline con imágenes y QR de validación.
+
+---
+
+RECETAS DE BIOINSUMOS Y DOSIS ESPECÍFICAS
+
+Bocashi (Abono Fermentado) (Arándanos, Hortalizas, Frutales)
+Ingredientes:
+- 100 kg de estiércol fresco
+- 100 kg de salvado de arroz o afrecho
+- 10 kg de carbón vegetal molido
+- 10 kg de tierra de bosque
+- 10 kg de ceniza
+- 5 kg de cal agrícola
+- 10 L de melaza
+- 10 L de microorganismos eficientes (EM)
+- Agua suficiente para humedecer
+Preparación:
+1. Mezclar todos los ingredientes en capas sobre una lona.
+2. Humedecer hasta que al apretar la mezcla salga una gota de agua.
+3. Tapar con lona y remover cada 2 días durante 15 días.
+4. El bocashi estará listo cuando huela a tierra fresca y no a amoníaco.
+Dosis de uso: Aplicar 2-4 t/ha al momento de la siembra o trasplante.
+
+DOSIS ESPECÍFICAS PARA ARÁNDANOS:
+- Bocashi: 2 t/ha en trasplante y 1 t/ha en mantenimiento anual.
+- Biol: 1 litro por bomba de 20L cada 15 días en crecimiento activo.

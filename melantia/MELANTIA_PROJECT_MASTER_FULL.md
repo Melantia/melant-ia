@@ -8,6 +8,8 @@
 > **Documento de visión:** `docs/VISION_ECOSISTEMA_MELANTIA.md` (2026-09-30) — visión de crecimiento y roadmap de largo plazo del ecosistema (Marketplace transversal, EP para negocios no agropecuarios, IA→visión→satélite→finanzas→drones→robótica→biotecnología→carbono, estrategia territorial Manabí→Costa→Sierra→Oriente). Documento de referencia: **no implementa** funcionalidades futuras; cada fase se contrasta con este Master antes de ejecutarse.
 >
 > **Licencia Institucional:** `docs/LICENCIA_INSTITUCIONAL.md` (2026-10-01) — modelo comercial/funcional aprobado: beneficiario vs líder comunitario patrocinado vs usuario independiente; niveles $5.000→20 líderes y $10.000→40 líderes; acceso institucional a Negocios Rurales sin propiedad de las plataformas; comisión 3 % independiente de la licencia.
+>
+> **Actualización MVP (2026-10-08):** §43 incorpora las decisiones aprobadas de experiencia de usuario (Mi Producción, navegación principal), horizonte de validación de 24 meses / meta 10.000 usuarios, Offline First + Smart Sync/Supervivencia, seguridad, roles administrativos L0–L5, credenciales administrativas y Puerto MELANTIA como capacidad futura. §44 = checklist de cierre del MVP. §45 = contradicciones documentales y pendientes registrados (no resueltos). Documentación especializada de referencia: `docs/patrimonio/seguridad_soberana/` (01–08 + `MATRIZ_CREDENCIALES_ROLES_PERMISOS_ALCANCES_V1.md`).
 
 ---
 
@@ -1288,6 +1290,12 @@ Items:
 ---
 
 # 10. PLANES Y LÍMITES
+
+> **Catálogo histórico.** El catálogo comercial del MVP es
+> **$5 / $10 / $15** (§43.11); los nombres «Básico / Standard /
+> Profesional» de esta sección se conservan como histórico. Nombres
+> comerciales y entitlements definitivos: **pendientes de definición**
+> (§45, P-05). No hardcodear valores en código.
 
 Los límites pertenecen al backend y no deben depender únicamente de React.
 
@@ -3227,6 +3235,46 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       (`autorizacion.py`, `require_ep_access`, writers `audit_eventos`)
       → tests.
 
+## 2026-10-20 — Saneamiento del entorno + suite en verde
+
+- [x] **Auditoría MVP vs §21:** inventario verificado del repo.
+      Resumen: Fundación (S1) completa salvo seeds geográficos;
+      Campo/Offline (S2) solo a nivel schema+repositories — sin
+      cliente móvil ni sync engine; Negocios (S3) parcial — Bolsa
+      incompatible con schema v2 (C5); Web/Excel (S4) web existe,
+      Excel/dashboard/verificador pendientes.
+- [x] **Entorno Python:** `venv/` provisionado con subconjunto mínimo
+      de `backend/requirements.txt` (sin tensorflow/opencv — los tests
+      no los importan). `psycopg[binary]` requerido en Windows sin
+      libpq del sistema.
+- [x] **PostgreSQL 16.15-5 portable** en `.pg16/` (binarios EDB
+      oficiales, SHA-256 verificado, gitignored, auth `trust`
+      localhost — solo dev). No hay Docker/Podman en la máquina.
+- [x] **Schema completo aplicado** a `melantia_db` y `melantia_test`
+      (pasos 0–8 de `DB_MIGRATION_EXECUTION_PHASE1` + auth_puente,
+      sesiones, levantamientos, mediciones_campo, migraciones m2–m6).
+      49 tablas.
+- [x] **Seeds geográficos creados** (`seeds/provincias.sql`,
+      `cantones.sql`, `parroquias.sql`): 24 + 221 + 1.042 filas con
+      `codigo_inec` oficial DPA, idempotentes. Fuente CC-BY-4.0
+      citada en cabecera. **Pendiente:** `UNIQUE` en
+      `cantones.codigo_inec` y `parroquias.codigo_inec` (el schema
+      no lo declara; los seeds se protegen con NOT EXISTS).
+- [x] **Suite en verde:** 412 passed, 0 skipped, 0 errors con
+      `MELANTIA_TEST_DATABASE_URL` configurada (los 39 tests de BD
+      ya no se omiten).
+- [x] **Código muerto en cuarentena:** `modules/asistente_tecnico_rural/`
+      (prototipo Ángel, sin referencias) y
+      `negocios_rurales/Controllers.py` (draft FastAPI perdido en
+      frontend) → `.legacy_extract/frontend_drafts/`.
+- [x] **Verificación:** `npm run lint` 0 errores (2 warnings
+      preexistentes en DocumentosYImpresion.jsx), `npm run build` OK.
+- [x] `AGENTS.md` creado: bootstrap completo del entorno
+      (venv, pg16 portable, orden de schema, comandos de test).
+- [ ] **Pendiente saneamiento:** commit del barrido `melant_ia/src/`
+      en git (raíz `E:\Desktop\MELANTIA`); decidir destino del dump
+      Supabase `../db_cluster-*.backup.gz`.
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA
@@ -3302,3 +3350,461 @@ backend/admin/
 ```
 
 Decisiones pendientes DA1–DA6 en `docs/ADMINISTRACION.md` §11.
+
+---
+
+# 43. ACTUALIZACIÓN DEL MVP — DECISIONES APROBADAS (2026-10-08)
+
+> Sección de actualización documental. Incorpora únicamente decisiones
+> funcionales, arquitectónicas y de roadmap ya aprobadas. No sustituye ni
+> elimina las decisiones históricas de §1–§42; donde exista tensión con
+> documentos especializados, se registra en §45 como pendiente.
+
+## 43.1 Nueva definición del MVP — horizonte de validación
+
+- **Horizonte inicial de análisis y crecimiento: 24 meses.**
+- **Objetivo de crecimiento aproximado: 10.000 usuarios.**
+- Durante esos 24 meses MELANTIA debe validar: utilidad real, adopción,
+  retención, actividad productiva, actividad comercial, funcionamiento
+  Offline First, sostenibilidad económica, necesidades territoriales y
+  demanda de servicios.
+
+**Regla:** los 24 meses NO implican apertura automática de Puertos
+MELANTIA. El período existe para:
+
+```text
+INVESTIGAR → VALIDAR → MEDIR → ANALIZAR → DECIDIR
+```
+
+La apertura de un Puerto dependerá posteriormente de: usuarios, usuarios
+activos, concentración territorial, demanda, volumen de operaciones,
+actividad comercial, necesidades logísticas, conectividad, costes,
+ingresos potenciales, sostenibilidad, impacto y capacidad operativa.
+
+- **No existe regla rígida** tipo "100 usuarios = abrir Puerto".
+- Los 10.000 usuarios son **meta de crecimiento**, no condición
+  automática de apertura de Puertos.
+- Compatibilidad: el "MVP de ~1 mes" de §1 es el horizonte de
+  construcción inicial; los 24 meses son el horizonte de validación y
+  crecimiento posterior — no se contradicen.
+
+## 43.2 Principio de diseño del MVP
+
+> **"ARQUITECTURA COMPLEJA POR DENTRO → EXPERIENCIA SENCILLA POR FUERA"**
+
+MELANTIA oculta la complejidad técnica al usuario común. La interfaz usa
+lenguaje comprensible y presenta las capacidades agrupadas según las
+necesidades reales del usuario. El usuario no debe conocer la estructura
+interna de módulos, repositorios, trazabilidad, evidencias ni registros
+de campo.
+
+## 43.3 Experiencia principal: MI PRODUCCIÓN
+
+**Decisión aprobada:** "MI PRODUCCIÓN" es la entrada principal del
+usuario a su actividad productiva.
+
+- Mi Producción **no elimina ni fusiona** los dominios técnicos internos;
+  es una **capa de experiencia de usuario** que integra visualmente:
+  Gestión de Fincas, Cultivos, Lotes, Producción agrícola, Producción
+  pecuaria, Animales, Actividades productivas, Cosechas, Postcosecha,
+  Trazabilidad, Evidencias, Resultados e indicadores.
+- Arquitectura interna intacta: `gestion_fincas`, `trazabilidad`,
+  `registros_campo`, `evidencias` y demás dominios especializados siguen
+  existiendo como dominios técnicos.
+
+```text
+INTERFAZ:               MI PRODUCCIÓN
+ARQUITECTURA INTERNA:   Gestión de Fincas + Registros de Campo
+                        + Trazabilidad + Evidencias + Producción
+                        + demás dominios especializados
+```
+
+## 43.4 Navegación principal del MVP
+
+Propuesta aprobada de experiencia principal (capa UX — los módulos
+técnicos internos pueden ser diferentes):
+
+```text
+🏠 INICIO
+🌱 MI PRODUCCIÓN
+🤖 ASISTENTE TÉCNICO RURAL
+🛒 NEGOCIOS / MARKETPLACE
+👥 MI COMUNIDAD
+📋 MI AGENDA
+🔔 NOTIFICACIONES
+```
+
+## 43.5 Mi Producción — alcance
+
+```text
+MI PRODUCCIÓN
+├── Fincas
+├── Cultivos
+├── Lotes
+├── Producción agrícola
+├── Producción pecuaria
+├── Animales
+├── Actividades productivas
+├── Cosechas
+├── Postcosecha
+├── Trazabilidad
+├── Evidencias
+└── Resultados/indicadores
+```
+
+Objetivo: **"Registrar y gestionar la realidad productiva del usuario."**
+
+Diferenciación obligatoria:
+
+```text
+MI PRODUCCIÓN:      registra y gestiona la realidad del productor.
+ASISTENTE TÉCNICO:  analiza, orienta y ayuda a tomar decisiones.
+```
+
+## 43.6 Asistente Técnico Rural
+
+Pilar principal del MVP. Usa, cuando corresponda y con permisos
+adecuados, información contextual proveniente de Mi Producción — **sin
+duplicar** información que pertenece a Mi Producción.
+
+Capacidades mantenidas: conocimiento técnico, cultivos, calculadoras,
+calendarios, recomendaciones, veterinaria, animales, apicultura,
+agricultura de precisión, sensores, clima, GPS, IA, conocimiento
+consolidado.
+
+## 43.7 Negocios / Marketplace — flujo aprobado
+
+Segundo pilar comercial del MVP. Flujo:
+
+```text
+EXPLORAR → SELECCIONAR → PREPARAR INTENCIÓN → SOLICITAR DISPONIBILIDAD
+→ VENDEDOR CONFIRMA → COMPRADOR CONFIRMA CONDICIONES → ACCIÓN/PAGO
+→ CONFIRMACIÓN → ENTREGA → EVIDENCIA → CIERRE
+```
+
+Reglas:
+
+- No existe pago antes de confirmar disponibilidad.
+- Si el comprador solicita 10 y el vendedor dispone de 6, **no se
+  modifica silenciosamente la intención**: el comprador decide comprar 6,
+  modificar o cancelar.
+- Comisión MELANTIA del **3 %** (permanece separada de comisiones del
+  proveedor financiero — coherente con A2, Phase 2).
+- MELANTIA **no asume custodia de fondos**.
+- Las operaciones monetarias críticas requieren **validación online**.
+
+## 43.8 Mi Comunidad
+
+Tercer pilar funcional, claramente diferenciado de Negocios/Marketplace:
+comunicación comunitaria, avisos, participación, servicios ciudadanos,
+orientación y funciones comunitarias. **No** es la red comercial del
+Marketplace.
+
+## 43.9 Mi Agenda / Mis Actividades
+
+Vista transversal que puede integrar actividades de: producción,
+asistencia técnica, Marketplace, servicios, proyectos, profesionales y
+operaciones futuras — **sin duplicar** entidades ni actividades.
+
+## 43.10 Notificaciones
+
+Servicio transversal: puede informar sobre producción, asistencia
+técnica, Marketplace, operaciones, sincronización, seguridad, comunidad y
+finanzas.
+
+**Regla:** una notificación **no constituye por sí misma una
+confirmación financiera**.
+
+## 43.11 Planes de suscripción — visión comercial inicial
+
+Planes base previstos para la etapa inicial:
+
+```text
+PLAN $5 · PLAN $10 · PLAN $15
+```
+
+**Pendiente (no inventar ni hardcodear):** definición exacta de
+capacidades por plan, límites, entitlements, coste real, margen,
+retención y punto de equilibrio. Relación con los planes históricos
+Básico/Standard/Profesional de §10: pendiente de armonización (§45).
+
+## 43.12 Offline First
+
+Decisiones ya aprobadas, mantenidas. Regla fundamental:
+
+> **"OFFLINE PERMITE PREPARAR; LAS ACCIONES CRÍTICAS Y MONETARIAS
+> NECESITAN VALIDACIÓN ONLINE."**
+
+Elementos: cola persistente, ID único, `idempotency_key`, sincronización
+automática, prioridades P1/P2/P3, reintentos, conflictos, batería,
+Wi-Fi, datos móviles, conectividad intermitente.
+
+Operaciones financieras aceptadas offline (RC-01, aprobada 2026-10-08):
+
+- pueden prepararse, validarse localmente y ser aceptadas/selladas por
+  el usuario sin conectividad — la aceptación offline es **irrevocable
+  por el usuario**;
+- permanecen almacenadas en la cola persistente y se sincronizan
+  automáticamente con conectividad válida;
+- `ACEPTADA_OFFLINE` **no significa** pagada, transferida, cobrada,
+  retirada ni liquidada;
+- **no expiran por TTL** (RC-04) — permanecen hasta resolución válida
+  (`CONFIRMADA`, `RECHAZADA`, `CONFLICTO`, `CANCELADA_CONFIRMADA` con
+  evidencia u otra aprobada); el TTL por plan de F7a.1 sigue vigente
+  para el resto de la cola;
+- solo pasan a `CONFIRMADA` tras validación del servidor y, cuando
+  aplique, del proveedor financiero autorizado.
+
+Flujo canónico:
+
+```text
+BORRADOR → PREPARADA_OFFLINE → ACEPTADA_OFFLINE
+→ PENDIENTE_CONFIRMACION_RED → ENVIADA → VALIDANDO → CONFIRMADA
+(+ ramas RECHAZADA / CONFLICTO / REQUIERE_REVISION)
+```
+
+La regla anterior de F7a/F7a.1 «financieras: ni siquiera encolables»
+quedó **SUPERADA** (texto histórico conservado en docs 17/21).
+
+## 43.13 Smart Sync / Supervivencia
+
+Reglas aprobadas (especificación completa: `seguridad_soberana/05`,
+diseño: `06`, revisión: `07`, decisiones: `08`):
+
+Batería/conectividad:
+
+| Condición | Política |
+|---|---|
+| Wi-Fi + ≥50 % | Sincronización normal |
+| Wi-Fi + <50 % | Prioridades / procesos ligeros |
+| Wi-Fi + energía | Sincronización completa |
+| Datos móviles + ≥50 % | Operaciones autorizadas |
+| Datos móviles + <50 % | Prioridades críticas |
+| Datos móviles + energía | Sincronización **controlada**: prioriza P1/P2, evita transferencias pesadas no urgentes; **no** equivale a Wi-Fi+energía (RC-06) |
+| Sin conectividad | Cola local persistente |
+
+Ventanas de búsqueda de conectividad:
+
+- **Días:** lunes, jueves, viernes, sábado, domingo.
+- **Horarios:** 10:00 · 13:00 · 16:00 · 19:00 · 00:00.
+- **Cada ventana:** 5 búsquedas, cada 10 minutos; si hay sincronización
+  exitosa → detener las búsquedas y esperar la siguiente ventana.
+
+Objetivo: **mínimo una sincronización efectiva diaria** cuando exista
+una oportunidad real de conectividad.
+
+## 43.14 Seguridad — decisiones aprobadas (sin implementación)
+
+Root of Trust · KEK/DEK · cifrado · blind index · protección de
+evidencias · seguridad Offline First · separación de funciones · doble
+autorización · auditoría · controles administrativos · credenciales ·
+futuro FIDO2/WebAuthn.
+
+FIDO2: **futuro** — no implementar ahora; la arquitectura queda
+preparada. Referencia: `seguridad_soberana/02` (diseño soberano),
+`MATRIZ_CREDENCIALES_ROLES_PERMISOS_ALCANCES_V1.md`.
+
+## 43.15 Roles administrativos
+
+Decisiones aprobadas (matriz completa:
+`seguridad_soberana/MATRIZ_CREDENCIALES_ROLES_PERMISOS_ALCANCES_V1.md`):
+
+```text
+L5 Fundador
+L4 Administrador / Coordinador General
+L3 Economista
+L3 Auditor / Contador
+L3 Especialista Técnico
+L2 Coordinador Territorial
+L0 Usuario/Cliente
+```
+
+Existen **tres taxonomías independientes**:
+
+1. Rol administrativo MELANTIA (L0–L5).
+2. Rol del control plane (doc 02 §7.1: operador, custodio, propietario,
+   desarrollador, infraestructura, auditor).
+3. Rol EP-4E (roles de proyecto).
+
+**Ninguna taxonomía concede automáticamente permisos de otra.** En EP-4E
+el propietario del proyecto determina los roles dentro de su proyecto.
+
+## 43.16 L0 — Usuario/Cliente MELANTIA
+
+Definición aprobada: L0 es el **cliente base** de MELANTIA.
+
+- Puede contratar una o varias suscripciones.
+- Puede tener uno o varios **perfiles funcionales**: Productor,
+  Comprador, Vendedor, Emprendedor, Profesional, Empresario y otros
+  futuros.
+- Los perfiles **no** son roles administrativos.
+- L0 **no** representa jerarquía administrativa.
+
+## 43.17 Credenciales administrativas
+
+- **MVP:** credencial manual segura.
+- **Futuro:** FIDO2/WebAuthn, llaves físicas USB/NFC, credenciales no
+  exportables, revocación desde administración.
+
+Fundador:
+
+| Credencial | Uso |
+|---|---|
+| **ML-001-D** | credencial diaria |
+| **ML-001-E** | break-glass / contingencia — físicamente separada, uso excepcional, auditoría reforzada |
+
+Separación de funciones y doble autorización se mantienen (matriz §14
+del documento de credenciales).
+
+## 43.18 Gobierno y continuidad
+
+- **Fundador:** propietario de MELANTIA.
+- **Persona A:** hija del fundador; representante temporal designada en
+  caso de incapacidad/ausencia del fundador.
+- **Persona B:** Administrador / Coordinador General.
+- **Contingencia:** A + B pueden activar representación temporal.
+  **No es sucesión permanente.**
+
+Toda decisión importante sigue el ciclo:
+
+```text
+PROBLEMA/OPORTUNIDAD → INVESTIGACIÓN → DATOS → ANÁLISIS
+→ COSTO/BENEFICIO → RIESGOS → SOSTENIBILIDAD → ALTERNATIVAS
+→ DECISIÓN → IMPLEMENTACIÓN → MEDICIÓN → AUDITORÍA/REVISIÓN
+```
+
+## 43.19 Economista — decisión aprobada
+
+El Economista **no aprueba ni ejecuta las operaciones financieras de los
+usuarios**.
+
+Funciones: análisis económico, viabilidad, sostenibilidad, costes,
+modelos de negocio, crecimiento, análisis de reclamaciones, resolución
+de conflictos, análisis de Puertos, apoyo a crecimiento comercial.
+
+En incidentes: `Economista + Administrador/Persona B`; cuando
+corresponda también Fundador, Auditor/Contador y la entidad financiera
+involucrada.
+
+No puede modificar dinero, credenciales críticas ni reglas fundamentales
+unilateralmente.
+
+Resuelto (PC-06, 2026-10-08): el "aprobar determinadas operaciones" de
+la matriz v1 se refiere al **dominio económico interno** de MELANTIA
+(análisis, decisiones de negocio, actas, evaluación de Puertos) —
+nunca a operaciones financieras de usuarios. Matriz armonizada en
+§5.3/§16/§18.
+
+En incidente financiero la cadena es:
+
+```text
+USUARIO → SISTEMA → ADMINISTRADOR/RESPONSABLE → ECONOMISTA
+(cuando corresponda) → PROVEEDOR FINANCIERO (cuando corresponda)
+→ AUDITOR/FUNDADOR según gravedad
+```
+
+## 43.20 Puerto MELANTIA — capacidad futura (no implementar)
+
+Definición aprobada:
+
+> **"PUERTO MELANTIA = ECOSISTEMA DE SERVICIOS MELANTIA"**
+
+Es un scope organizacional/operativo propio. Tipos: Puerto MELANTIA
+Sencillo · Puerto MELANTIA Matriz/Completo · Puerto MELANTIA Propio.
+
+- No existe cantidad fija ni regla automática por número de usuarios.
+- La decisión dependerá de: demanda, usuarios, concentración,
+  operaciones, logística, conectividad, costes, ingresos,
+  sostenibilidad, impacto y capacidad operativa.
+- El análisis se desarrolla durante los primeros 24 meses (§43.1).
+
+## 43.21 Futuro — fuera del MVP
+
+Preparables arquitectónicamente, **no implementables por anticipación**:
+
+FIDO2 físico · Puertos MELANTIA · Wallet propia como custodia de dinero
+· escrow propio · drones · robótica · biotecnología avanzada · visión
+satelital avanzada · Mesh · RaaS · AgTech-as-a-Service · infraestructura
+física · expansión territorial avanzada.
+
+---
+
+# 44. CHECKLIST DE CIERRE DEL MVP
+
+> Estado por columna: **[A] documentación/decisión aprobada** ·
+> **[B] implementación pendiente** · **[C] validación/pruebas pendientes**
+> · **[D] futuro fuera del MVP**.
+
+| Área | Ítem | Estado |
+|---|---|---|
+| SEGURIDAD | Root of Trust | A (diseño doc 02; custodia pendiente decisión RoT) |
+| SEGURIDAD | cifrado (campos, objetos, cola, backups) | A diseño / B implementación (S2.x) |
+| SEGURIDAD | claves (jerarquía KEK/DEK, custodia) | A diseño / B |
+| SEGURIDAD | backups cifrados + 3-2-1 + restore | A diseño / B (S3.x) + C drill |
+| SEGURIDAD | recuperación (break-glass, procedimientos) | A diseño / B |
+| SEGURIDAD | rate limiting | A diseño / B (S0.7) |
+| SEGURIDAD | sesiones (F7a/F7a.1: 30 d, RT backend, snapshot 72 h) | A decisión cerrada / B |
+| SEGURIDAD | auditoría (shared/audit, simetría admin) | A diseño / B (ADM-2) |
+| OFFLINE FIRST | cola persistente (id, tipo, prioridad, estado, idempotency_key, deps) | A spec 05 / B |
+| OFFLINE FIRST | sync (motor, ventanas, confirmación servidor) | A spec 05+diseño 06 / B |
+| OFFLINE FIRST | idempotencia | A diseño / B |
+| OFFLINE FIRST | conflictos (revisión, nunca borrado) | A / B |
+| OFFLINE FIRST | prioridades P1/P2/P3 | A / B |
+| OFFLINE FIRST | supervivencia (batería 50 %, calendario, ventanas) | A / B |
+| OFFLINE FIRST | pruebas sin Internet | C |
+| MI PRODUCCIÓN | fincas, lotes, cultivos | B |
+| MI PRODUCCIÓN | animales, actividades, cosechas | B |
+| MI PRODUCCIÓN | trazabilidad, evidencias, GPS | B (M3/M11 existentes en parte) |
+| MI PRODUCCIÓN | capa UX Mi Producción | A decisión / B |
+| ASISTENTE TÉCNICO | conocimiento, consultas, contexto productivo | B parcial |
+| ASISTENTE TÉCNICO | biblioteca, calculadoras | B parcial |
+| ASISTENTE TÉCNICO | validación de recomendaciones | C |
+| MARKETPLACE | publicaciones, disponibilidad | B |
+| MARKETPLACE | intención → confirmación → pago → QR → entrega → evidencia → cierre | A flujo / B |
+| MARKETPLACE | reputación | B |
+| MARKETPLACE | comisión 3 % | A (M4.transacciones) / B |
+| COMUNIDAD | comunicación, avisos, participación, servicios | B |
+| SUSCRIPCIONES | planes $5/$10/$15 | A visión comercial / pendiente entitlements (§45) |
+| SUSCRIPCIONES | entitlements, pagos, renovación | B + pendiente definición |
+| UX/UI | navegación simplificada, Mi Producción | A decisión / B |
+| UX/UI | perfiles, suscripciones | B |
+| UX/UI | móvil, gama baja, accesibilidad | B + C |
+| E2E | registro, login, suscripción | B/C |
+| E2E | Mi Producción + offline + sincronización | B/C |
+| E2E | Asistente | B/C |
+| E2E | Marketplace: operación → pago → evidencia → cierre | B/C |
+| FUTURO | FIDO2 físico, Puertos, Wallet custodia, escrow, drones, robótica, biotech, satelital, Mesh, RaaS, AgTech-aaS, infra física, expansión | D |
+
+---
+
+# 45. CONTRADICCIONES Y PENDIENTES DOCUMENTALES
+
+Registro de tensiones documentales. Resueltas por decisión aprobada
+2026-10-08: **P-01, P-02, P-03, P-04, P-07, P-08**; aclarada: **P-06**;
+pendiente: **P-05** (regla §23.7: no inventar soluciones):
+
+| # | Tema | Tensión | Referencia / Resolución |
+|---|---|---|---|
+| P-01 | Financieras offline | §43.12 "aceptadas offline" vs F7a/F7a.1 "ni siquiera encolables" | **RESUELTO 2026-10-08** — RC-01 (doc 08): financieras encolables vía `ACEPTADA_OFFLINE` (irrevocable por el usuario); confirmación solo servidor/proveedor; "ni siquiera encolables" de F7a/F7a.1 SUPERADA (texto histórico conservado) |
+| P-02 | TTL de cola | §43.12 "no expiran por TTL" vs TTL 15 d/45 d por plan de F7a.1 | **RESUELTO 2026-10-08** — RC-04 (doc 08): vigencia diferenciada — financieras `ACEPTADA_OFFLINE` sin TTL; resto de la cola conserva TTL por plan; datos de campo nunca borrados por antigüedad |
+| P-03 | Economista | §43.19 "no aprueba operaciones financieras de usuarios" vs matriz v1 "puede aprobar determinadas operaciones" | **RESUELTO 2026-10-08** — PC-06 (matriz credenciales v1): "aprobar determinadas operaciones" = dominio económico interno; nunca operaciones financieras de usuarios; matriz §5.3/§18 armonizada |
+| P-04 | Datos móviles + energía | §43.13 "sincronización controlada" amplía el caso que doc 05 §10 limitaba a Wi-Fi+energía | **RESUELTO 2026-10-08** — RC-06 (doc 08): datos móviles+energía = sincronización CONTROLADA (P1/P2, sin pesadas no urgentes); formalizado en doc 05 §7/§9 y doc 06 §14 |
+| P-05 | Planes $5/$10/$15 vs Básico/Standard/Profesional (§10) | Dos nomenclaturas de planes; entitlements pendientes | **PENDIENTE DE DEFINICIÓN** — catálogo MVP $5/$10/$15 aprobado; nombres comerciales y entitlements por definir; §10 marcado como catálogo histórico |
+| P-06 | Licencia Institucional ($5.000/$10.000) vs planes personales | Ejes distintos (institucional vs usuario) — coexisten | **ACLARADO** — sin contradicción real: licencia institucional y planes personales son ejes distintos que coexisten; pendiente solo claridad editorial en documentación comercial |
+| P-07 | Mapeo L-roles ↔ control plane ↔ roles admin ADM | Tres taxonomías declaradas independientes; falta tabla de correspondencia | **RESUELTO 2026-10-08** — PC-01: las tres taxonomías son independientes por diseño; ninguna concede permisos de otra; las correspondencias conceptuales son ilustrativas, no un mapeo |
+| P-08 | Credencial MANUAL vs MFA-FIDO2 admin | Doc 02 §7.2 prescribe FIDO2 para admin; MVP usa manual | **RESUELTO 2026-10-08** — PC-02: MVP con credencial manual segura; FIDO2 diferido a la etapa prevista (~6 meses); modifica autenticación, no autorización; prescripción FIDO2 del doc 02 SUPERADA para el MVP |
+
+**Pendientes que permanecen** (sin decisión): RC-02, RC-03, RC-05,
+RC-07, RC-09, RC-10, RC-13, RC-15, DT-01…DT-06 (doc 08); PC-03, PC-04,
+PC-05, PC-07, PC-08, PC-09 (matriz credenciales v1 §16); P-05
+(entitlements/nombres de planes) — más los pendientes históricos
+(RoT/S2.1, CI/CD, secret manager, PostGIS B1, auth B3, DA1–DA6).
+
+---
+
+## Registro de actualización
+
+| Fecha | Cambio | Autoría |
+|---|---|---|
+| 2026-10-08 | §43 (decisiones MVP: Mi Producción, navegación, 24 meses/10.000 usuarios, Smart Sync, roles L0–L5, credenciales, Puerto MELANTIA, futuro-no-MVP) + §44 (checklist de cierre) + §45 (contradicciones/pendientes) + nota de encabezado | Actualización documental aprobada — sin código, SQL, config ni commit |
+| 2026-10-08 | Resolución documental de contradicciones: P-01 (RC-01), P-02 (RC-04), P-03 (PC-06), P-04 (RC-06), P-07 (PC-01), P-08 (PC-02) resueltas; P-05 pendiente de entitlements/nombres; P-06 aclarada. Notas en §10, §43.12, §43.13, §43.19; harmonización de docs 05–08, 17 (F7a), 21 (F7a.1) y matriz de credenciales | Resolución documental aprobada — sin código, SQL, config ni commit |
