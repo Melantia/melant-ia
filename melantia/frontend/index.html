@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#276749" />
+    <title>MELANTIA</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://unpkg.com"></script>
+    <script>
+      (function bootstrapMelantiaSignalBridge() {
+        if (typeof window === 'undefined') return;
+        if (window.MelantiaSignalBridge) return;
+
+        const nativeBridge = window.MelantiaSignalBridgeNative;
+        if (
+          !nativeBridge ||
+          typeof nativeBridge.getCurrentRSSI !== 'function'
+        ) {
+          return;
+        }
+
+        const callbacks = [];
+        const callbackName = '__melantiaOnSignalChanged';
+
+        window[callbackName] = function onSignalChangedFromNative(rssi) {
+          callbacks.forEach((cb) => {
+            try {
+              cb(Number(rssi));
+            } catch {
+              // Ignorar callbacks defectuosos.
+            }
+          });
+        };
+
+        if (typeof nativeBridge.registerSignalCallback === 'function') {
+          nativeBridge.registerSignalCallback(callbackName);
+        }
+
+        window.MelantiaSignalBridge = {
+          getCurrentRSSI() {
+            return Number(nativeBridge.getCurrentRSSI());
+          },
+          async startSignalMonitor() {
+            if (typeof nativeBridge.startSignalMonitor === 'function') {
+              nativeBridge.startSignalMonitor();
+            }
+          },
+          async stopSignalMonitor() {
+            if (typeof nativeBridge.stopSignalMonitor === 'function') {
+              nativeBridge.stopSignalMonitor();
+            }
+          },
+          onSignalChanged(cb) {
+            if (typeof cb === 'function') callbacks.push(cb);
+          },
+        };
+      })();
+    </script>
+
+    <link
+      rel="icon"
+      type="image/webp"
+      href="src/storage/assets/icono_melantia.webp"
+    />
+    <link rel="apple-touch-icon" href="storage/assets/icono_melantia.webp" />
+    <link
+      rel="apple-touch-icon"
+      href="src/storage/assets/icono_melantia.webp"
+    />
+
+    <link rel="stylesheet" href="src/index.css" />
+    <!-- CSS de afiliados solo para móviles -->
+    <link
+      rel="stylesheet"
+      href="modules/01_suscripciones/afiliados_controller.css"
+      media="(max-width: 600px)"
+    />
+  </head>
+  <body>
+    <!-- Banner de estado offline -->
+    <div id="splash-screen" style="display: none;">
+      <img
+        src="storage/assets/melantia_idle.webp"
+        alt="Melantia en reposo"
+        class="img-idle"
+      />
+      <h1>MELANT IA</h1>
+    </div>
+    <div
+      id="status-banner"
+      style="
+        background: #27ae60;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        font-weight: bold;
+        font-size: 0.95em;
+        letter-spacing: 1px;
+      "
+    >
+      🟢 Sistema Local Activo | FUNCIONA SIN INTERNET
+    </div>
+
+    <!-- BudgetGuard — Barra de Energía de Consulta -->
+    <div id="budget-wrap" style="display: none;">
+      <span id="budget-label"
+        >✅ Zona Segura — $0.00/$15.00 • 0/50 consultas</span
+      >
+      <div class="budget-barra-cont">
+        <div id="budget-barra"></div>
+      </div>
+    </div>
+
+    <!-- Panel de Novedades del Equipo MELANTIA -->
+    <div id="panel-novedades"></div>
+
+    <!-- ==========================================
+         RADAR DE COBERTURA — Brújula de Señal
+         ========================================== -->
+    <div id="panel-radar" style="display: none;">
+      <h2>📶 BUSCADOR DE COBERTURA</h2>
+      <p class="radar-sub">
+        Camina lentamente — MELANTIA te guiará con voz y vibración
+      </p>
+      <div id="radar-circulo">🐇</div>
+      <div id="radar-etiqueta">🔴 SIN SEÑAL</div>
+      <div class="radar-barra-cont">
+        <div id="radar-barra"></div>
+      </div>
+      <button
+        id="radar-btn-actualizar"
+        onclick="
+          RadarCobertura.cerrar();
+          actualizarConocimientos(false);
+        "
+      >
+        ⚡ Señal OK — Actualizar ahora
+      </button>
+      <div id="radar-historial"></div>
+      <button
+        onclick="document.getElementById('panel-radar').style.display='none'"
+        style="
+          margin-top: 20px;
+          background: transparent;
+          color: #76c7c0;
+          border: 1px solid #76c7c0;
+          border-radius: 8px;
+          padding: 8px 20px;
+          cursor: pointer;
+          font-size: 0.85em;
+        "
+      >
+        Cerrar brujula
+      </button>
+    </div>
+
+    <!-- Botón flotante: Brújula de señal -->
+    <button
+      id="btn-radar-acceso"
+      title="Buscar cobertura"
+      style="position: fixed; bottom: 20px; right: 20px; z-index: 50; background: #276749; border-radius: 50%; width: 45px; height: 45px; color: white;"
+      onclick="document.getElementById('panel-radar').style.display='block'"
+    >
+      📶
+    </button>
+
+    <!-- Botón flotante: Emergencia de plaga -->
+    <button
+      id="btn-emergencia"
+      title="Actualizar en emergencia (plaga urgente)"
+      style="position: fixed; bottom: 75px; right: 20px; z-index: 50; background: #c0392b; border-radius: 50%; width: 45px; height: 45px; color: white;"
+    >
+      ⚠️
+    </button>
+
+    <!-- Botón flotante: Medidor GPS de áreas -->
+    <button
+      id="btn-gps-medidor"
+      title="Medir hectáreas con GPS"
+      style="position: fixed; bottom: 130px; right: 20px; z-index: 50; background: #2980b9; border-radius: 50%; width: 45px; height: 45px; color: white;"
+      onclick="document.getElementById('panel-gps').style.display='block'"
+    >
+      📐
+    </button>
+
+    <!-- Panel: GPS Medidor de Áreas -->
+    <div id="panel-gps" style="display: none; position: fixed; top: 10%; left: 10%; z-index: 100; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+      <p id="gps-titulo">📐 MEDIDOR DE HECTÁREAS</p>
+      <p id="gps-subtitulo">Toca el mapa para marcar vértices del polígono</p>
+      <canvas id="gps-canvas" width="420" height="260" style="border: 1px solid #ccc;"></canvas>
+      <div id="gps-resultado">
+        <p>🌍 <strong id="gps-area-ha">— ha</strong> &nbsp;|&nbsp; <strong id="gps-area-m2">— m²</strong></p>
+        <p>Perímetro: <strong id="gps-perimetro">—</strong></p>
+        <p>📍 UTM: <strong id="gps-utm">esperando GPS…</strong></p>
+        <p>🔵 Vértices: <strong id="gps-nPuntos">0</strong></p>
+      </div>
+      <div class="gps-acciones" style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
+        <button onclick="document.getElementById('panel-gps').style.display='none'">✖ Salir</button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         PUNTO DE ANCLAJE PARA LA INTERFAZ DE REACT
+         ========================================== -->
+    <div id="root"></div>
+
+    <!-- LLAMADA AL SCRIPT PRINCIPAL DE COMPILACIÓN DE VITE -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

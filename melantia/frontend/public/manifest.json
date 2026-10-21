@@ -1,0 +1,15 @@
+{
+  "name": "MELANTIA",
+  "description": "PRODUCTIVIDAD AGROPECUARIA INTELIGENTE OFFLINE. FUNCIONA SIN INTERNET.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#276749",
+  "theme_color": "#276749",
+  "icons": [
+    {
+      "src": "storage/assets/icono_melantia.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
