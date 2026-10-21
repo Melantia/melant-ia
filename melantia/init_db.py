@@ -26,18 +26,17 @@ def initialize_database():
     3. schema/modulos/*.sql - Esquemas de módulos de negocio
     4. seeds/*.sql - Datos iniciales (si existen)
     """
-    print(f"[MELANTIA] Inicializando base de datos: {settings.db_name}")
-    print(f"[MELANTIA] Host: {settings.db_host}:{settings.db_port}")
+    if settings.database_url_override:
+        print("[MELANTIA] Inicializando base de datos vía DATABASE_URL")
+    else:
+        print(f"[MELANTIA] Inicializando base de datos: {settings.db_name}")
+        print(f"[MELANTIA] Host: {settings.db_host}:{settings.db_port}")
 
     try:
-        # Conectar a PostgreSQL
-        conn = psycopg.connect(
-            host=settings.db_host,
-            port=settings.db_port,
-            database=settings.db_name,
-            user=settings.db_user,
-            password=settings.db_password
-        )
+        # Conectar a PostgreSQL — DATABASE_URL tiene precedencia sobre
+        # MELANTIA_DB_*; sin credencial, database_url lanza RuntimeError
+        # (fail-closed, sin exponer valores — Etapa 1 C2).
+        conn = psycopg.connect(settings.database_url)
 
         conn.autocommit = True
         cursor = conn.cursor()

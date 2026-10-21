@@ -20,20 +20,25 @@ La lógica de negocio específica debe permanecer en sus respectivos módulos.
 import asyncio
 import logging
 import sys
-from datetime import datetime, timedelta, timezone
+import uuid
+from datetime import datetime, timezone
 from enum import Enum
-from pathlib import Path
 from typing import Optional
 
 import uvicorn
-from fastapi import BackgroundTasks, FastAPI, HTTPException, Request, status
+from fastapi import (
+    BackgroundTasks, Depends, FastAPI, HTTPException, Request, status
+)
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
+from psycopg.errors import UniqueViolation
 
 from core.config import settings
+from core.dependencies import get_current_user
 from core.exceptions import MelantiaException
-from database import get_db_connection, db_pool, sync_db_pool
+from database import get_db_connection, init_pools
+from core.security import require_jwt_secret_for_legacy
 from contextlib import asynccontextmanager
 
 # ============================================================================
@@ -45,10 +50,6 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 logger = logging.getLogger("melantia.backend")
-
-# Directorio raíz de almacenamiento de archivos del backend.
-# Se usa como límite de seguridad al eliminar evidencias físicas.
-STORAGE_DIR: Path = settings.storage_dir
 
 # ============================================================================
 # LIFESPAN HANDLER - Gestión del ciclo de vida de la aplicación
@@ -67,12 +68,20 @@ async def lifespan(app: FastAPI):
         settings.app_version,
         settings.environment,
     )
+    # Etapa 1 C1: fail-closed — la rama legacy HS256 exige clave
+    # explícita antes de aceptar solicitudes; si falta, el arranque
+    # aborta aquí sin exponer valores.
+    require_jwt_secret_for_legacy()
+
+    # Etapa 1 C2: init_pools() valida DATABASE_URL/MELANTIA_DB_PASS
+    # antes de abrir la primera conexión.
     logger.info(
         "[MELANTIA] Iniciando pools de conexión a base de datos (%s:%s/%s)...",
         settings.db_host,
         settings.db_port,
         settings.db_name,
     )
+    db_pool, sync_db_pool = init_pools()
     await db_pool.open()
     sync_db_pool.open()
     logger.info("[MELANTIA] Pools de conexión iniciados correctamente")
@@ -244,9 +253,11 @@ class EvidenciaDocumentoSchema(BaseModel):
 class ClasificacionFotoSchema(BaseModel):
     """
     Información enviada por el módulo de diagnóstico rural.
-    """
 
-    usuario_id: str = Field(..., min_length=1)
+    La identidad del usuario NO forma parte del body: se deriva
+    exclusivamente del JWT autenticado (FIX-01). Un `usuario_id`
+    enviado por el cliente se ignora.
+    """
 
     lote_id: Optional[str] = None
 
@@ -426,91 +437,6 @@ async def recalcular_score_productivo(usuario_id: str) -> None:
 
 
 # ============================================================================
-# WORKER - LIMPIEZA SELECTIVA
-# ============================================================================
-
-async def ejecutar_limpieza_quincenal_selectiva() -> None:
-    """
-    Limpia registros temporales antiguos.
-
-    Se preservan los registros marcados como conocimiento activo.
-    """
-
-    logger.info("[MELANTIA WORKER] Iniciando limpieza selectiva...")
-
-    # Trabajamos en UTC.
-    limite_tiempo = datetime.now(timezone.utc) - timedelta(days=15)
-
-    try:
-        async with get_db_connection() as (conn, cursor):
-            cursor = None
-
-            cursor = await conn.execute(
-                """
-                SELECT id, foto_url
-                FROM registros_campo
-                WHERE created_at < %s
-                  AND es_activo_conocimiento = FALSE
-                """,
-                (limite_tiempo,),
-            )
-
-            registros_a_borrar = await cursor.fetchall()
-
-            eliminados = 0
-
-            for registro in registros_a_borrar:
-
-                foto_url = registro.get("foto_url")
-
-                # ----------------------------------------------------------
-                # ELIMINACIÓN SEGURA DEL ARCHIVO
-                # ----------------------------------------------------------
-
-                if foto_url:
-
-                    try:
-                        ruta_archivo = await asyncio.to_thread(Path(foto_url).resolve)
-
-                        # Solo permitimos eliminar archivos dentro
-                        # del almacenamiento de MELANTIA.
-                        ruta_archivo.relative_to(STORAGE_DIR)
-
-                        if await asyncio.to_thread(ruta_archivo.is_file):
-                            await asyncio.to_thread(ruta_archivo.unlink)
-
-                    except (ValueError, OSError) as error:
-                        logger.warning(
-                            "No se eliminó archivo fuera del almacenamiento permitido: %s",
-                            error,
-                        )
-
-                # ----------------------------------------------------------
-                # ELIMINACIÓN DEL REGISTRO
-                # ----------------------------------------------------------
-
-                cursor = await conn.execute(
-                    """
-                    DELETE FROM registros_campo
-                    WHERE id = %s
-                    """,
-                    (registro["id"],),
-                )
-
-                eliminados += 1
-
-            await conn.commit()
-
-            logger.info(
-                "[MELANTIA WORKER] Registros eliminados: %s",
-                eliminados,
-            )
-
-    except Exception as error:
-        logger.exception("Error en ciclo de limpieza quincenal")
-
-
-# ============================================================================
 # ENDPOINT - RUTA RAÍZ
 # ============================================================================
 
@@ -544,12 +470,19 @@ def read_root():
 async def clasificar_evidencia_campo(
     data: ClasificacionFotoSchema,
     background_tasks: BackgroundTasks,
+    usuario_id: str = Depends(get_current_user),
 ):
     """
     Registra una clasificación de campo.
 
     También genera el incentivo correspondiente y solicita
     el recalculo del indicador productivo en segundo plano.
+
+    FIX-01: la identidad proviene exclusivamente del JWT
+    (`get_current_user` — rama Supabase o legacy según el
+    discriminador de emisor). El body ya no admite `usuario_id`;
+    un `lote_id` debe pertenecer a una finca del usuario
+    autenticado.
     """
 
     fecha_actual = datetime.now(timezone.utc)
@@ -563,8 +496,50 @@ async def clasificar_evidencia_campo(
             cursor = None
 
             # ----------------------------------------------------------
+            # TITULARIDAD DEL LOTE (si se declara)
+            # ----------------------------------------------------------
+            # Un lote ajeno o inexistente se reporta como 404 —
+            # indistinguible, sin revelar a quién pertenece.
+
+            if data.lote_id:
+
+                try:
+                    uuid.UUID(data.lote_id)
+                except (ValueError, AttributeError, TypeError):
+                    raise HTTPException(
+                        status_code=status.HTTP_404_NOT_FOUND,
+                        detail="Lote no encontrado.",
+                    )
+
+                cursor = await conn.execute(
+                    """
+                    SELECT 1
+                    FROM lotes l
+                    JOIN fincas f ON f.id = l.finca_id
+                    WHERE l.id = %s
+                      AND f.usuario_id = %s
+                    LIMIT 1
+                    """,
+                    (
+                        data.lote_id,
+                        usuario_id,
+                    ),
+                )
+
+                if not await cursor.fetchone():
+                    raise HTTPException(
+                        status_code=status.HTTP_404_NOT_FOUND,
+                        detail="Lote no encontrado.",
+                    )
+
+            # ----------------------------------------------------------
             # PROTECCIÓN CONTRA DUPLICADOS
             # ----------------------------------------------------------
+            # NOTA (residual documentado): este SELECT es fast-path;
+            # la carrera TOCTOU solo se cierra con el índice UNIQUE
+            # parcial propuesto en migración m6 (pendiente de
+            # autorización). El UniqueViolation ya se traduce a 409
+            # para cuando el índice exista.
 
             if data.hash_transaccion:
 
@@ -577,7 +552,7 @@ async def clasificar_evidencia_campo(
                     LIMIT 1
                     """,
                     (
-                        data.usuario_id,
+                        usuario_id,
                         data.hash_transaccion,
                     ),
                 )
@@ -619,7 +594,7 @@ async def clasificar_evidencia_campo(
             cursor = await conn.execute(
                 sql_registro,
                 (
-                    data.usuario_id,
+                    usuario_id,
                     data.lote_id,
                     data.tipo_registro.value,
                     f"Soporte de conocimiento de "
@@ -652,7 +627,7 @@ async def clasificar_evidencia_campo(
                 FROM usuarios_suscripciones
                 WHERE usuario_id = %s
                 """,
-                (data.usuario_id,),
+                (usuario_id,),
             )
 
             existe_suscripcion = await cursor.fetchone()
@@ -677,7 +652,7 @@ async def clasificar_evidencia_campo(
                     )
                     """,
                     (
-                        data.usuario_id,
+                        usuario_id,
                         fecha_actual,
                     ),
                 )
@@ -695,7 +670,7 @@ async def clasificar_evidencia_campo(
                     """,
                     (
                         fecha_actual,
-                        data.usuario_id,
+                        usuario_id,
                     ),
                 )
 
@@ -711,7 +686,7 @@ async def clasificar_evidencia_campo(
 
             background_tasks.add_task(
                 recalcular_score_productivo,
-                data.usuario_id,
+                usuario_id,
             )
 
             return {
@@ -731,8 +706,20 @@ async def clasificar_evidencia_campo(
     except HTTPException:
         raise
 
-    except Exception as error:
+    except UniqueViolation:
+        # Defensa de segundo nivel (m6 pendiente): si el índice UNIQUE
+        # de hash_transaccion existe, el INSERT concurrente duplicado
+        # aterriza aquí — nunca como 500 ni con doble abono.
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="Esta evidencia ya fue procesada.",
+        )
 
+    except Exception:
+
+        logger.exception(
+            "Error interno clasificando evidencia de campo"
+        )
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Error interno en el motor transaccional de MELANTIA.",
@@ -747,17 +734,37 @@ async def clasificar_evidencia_campo(
     "/api/finanzas/perfil-bancario/{usuario_id}",
     tags=["Servicios Financieros"],
 )
-async def obtener_perfil_bancario_kyc(usuario_id: str):
+async def obtener_perfil_bancario_kyc(
+    usuario_id: str,
+    usuario_autenticado: str = Depends(get_current_user),
+):
     """
-    Obtiene información productiva del usuario.
+    Obtiene información productiva del usuario autenticado.
 
-    NOTA:
-    Este endpoint necesita autenticación/autorización antes
-    de utilizarse en producción.
+    FIX-02: el `usuario_id` de la ruta debe coincidir con la
+    identidad validada por el backend. Un identificador ajeno o
+    malformado devuelve el mismo 404 que un perfil inexistente
+    (sin revelar a quién pertenece). No existe rol de lectura
+    ajena en este lote.
 
     El score mostrado es un indicador productivo interno
     de MELANTIA y no una aprobación crediticia.
     """
+
+    try:
+        solicitado = str(uuid.UUID(usuario_id))
+        autenticado = str(uuid.UUID(usuario_autenticado))
+    except (ValueError, AttributeError, TypeError):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Perfil de productor no encontrado.",
+        )
+
+    if solicitado != autenticado:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Perfil de productor no encontrado.",
+        )
 
     try:
 
@@ -861,43 +868,15 @@ async def obtener_perfil_bancario_kyc(usuario_id: str):
     except HTTPException:
         raise
 
-    except Exception as error:
+    except Exception:
 
+        logger.exception(
+            "Error interno consultando perfil productivo"
+        )
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Error interno consultando el perfil productivo.",
         )
-
-
-# ============================================================================
-# ENDPOINT - LIMPIEZA QUINCENAL
-# ============================================================================
-
-@app.post(
-    "/api/sistema/cron-quincenal",
-    status_code=status.HTTP_202_ACCEPTED,
-    tags=["Administración del Sistema"],
-)
-def forzar_cron_quincenal(
-    background_tasks: BackgroundTasks,
-):
-    """
-    Lanza manualmente el proceso de limpieza.
-
-    Posteriormente puede conectarse a un scheduler automático.
-    """
-
-    background_tasks.add_task(
-        ejecutar_limpieza_quincenal_selectiva
-    )
-
-    return {
-        "status": "accepted",
-        "mensaje": (
-            "Ciclo de limpieza quincenal "
-            "lanzado en segundo plano."
-        ),
-    }
 
 
 # ============================================================================

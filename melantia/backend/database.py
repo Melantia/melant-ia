@@ -12,23 +12,46 @@ from core.exceptions import MelantiaException
 
 # CONFIGURACIÓN DEL POOL DE CONEXIONES ASÍNCRONAS (Psycopg 3)
 # Ideal para soportar las múltiples peticiones concurrentes del ecosistema agropecuario
-db_pool = AsyncConnectionPool(
-    conninfo=settings.database_url,
-    min_size=settings.db_pool_min_size,
-    max_size=settings.db_pool_max_size,
-    open=False, # Se abre explícitamente en el ciclo de vida de FastAPI
-    kwargs={"row_factory": dict_row} # convención del proyecto: acceso por nombre
-)
+#
+# Pools perezosos (Etapa 1 C2): se construyen en init_pools(), no al
+# importar el módulo — así `settings.database_url` valida la config
+# (DATABASE_URL o MELANTIA_DB_PASS) antes de abrir la primera
+# conexión, sin romper imports de módulos que no usan la BD.
+db_pool: Optional[AsyncConnectionPool] = None
+sync_db_pool: Optional[ConnectionPool] = None
 
-# Pool síncrono para compatibilidad temporal con módulos existentes
-# Nota: Este pool síncrono será eliminado cuando todos los módulos migren a async
-sync_db_pool = ConnectionPool(
-    conninfo=settings.database_url,
-    min_size=settings.db_sync_pool_min_size,
-    max_size=settings.db_sync_pool_max_size,
-    open=False,
-    kwargs={"row_factory": dict_row}
-)
+
+def init_pools():
+    """
+    Construye (una sola vez) los pools async y sync sin abrir
+    conexiones — `open=False` y la apertura real ocurre en el
+    lifespan de FastAPI o en la primera llamada a
+    get_db_connection()/get_db_connection_sync().
+
+    Devuelve (db_pool, sync_db_pool). Si falta la credencial de
+    PostgreSQL, settings.database_url lanza RuntimeError aquí —
+    antes de abrir cualquier conexión, sin exponer valores.
+    """
+    global db_pool, sync_db_pool
+    if db_pool is None:
+        db_pool = AsyncConnectionPool(
+            conninfo=settings.database_url,
+            min_size=settings.db_pool_min_size,
+            max_size=settings.db_pool_max_size,
+            open=False, # Se abre explícitamente en el ciclo de vida de FastAPI
+            kwargs={"row_factory": dict_row} # convención del proyecto: acceso por nombre
+        )
+    # Pool síncrono para compatibilidad temporal con módulos existentes
+    # Nota: Este pool síncrono será eliminado cuando todos los módulos migren a async
+    if sync_db_pool is None:
+        sync_db_pool = ConnectionPool(
+            conninfo=settings.database_url,
+            min_size=settings.db_sync_pool_min_size,
+            max_size=settings.db_sync_pool_max_size,
+            open=False,
+            kwargs={"row_factory": dict_row}
+        )
+    return db_pool, sync_db_pool
 
 @asynccontextmanager
 async def get_db_connection():
@@ -36,6 +59,7 @@ async def get_db_connection():
     Administrador de contexto asíncrono para transacciones de MELANTIA.
     Entrega tanto la conexión como el cursor ya configurado con dict_row.
     """
+    init_pools()
     async with db_pool.connection() as conn:
         # Configuramos dict_row para mapear registros directamente a diccionarios de Python
         async with conn.cursor(row_factory=dict_row) as cursor:
@@ -58,6 +82,7 @@ def get_db_connection_sync():
     DEPRECATED: Este método será eliminado cuando todos los módulos migren a async.
     Prefiera usar get_db_connection() async en nuevo código.
     """
+    init_pools()
     with sync_db_pool.connection() as conn:
         with conn.cursor(row_factory=dict_row) as cursor:
             try:
