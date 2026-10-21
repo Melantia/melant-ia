@@ -49,6 +49,49 @@ class AccionEP:
     RESPONSABLE_CAMBIADO = "ep.responsable_cambiado"
 
 
+class AccionSesion:
+    """
+    Eventos de seguridad de sesión/dispositivo (F7a Fase ①, doc 21 §4).
+
+    Son EVIDENCIA de auditoría: registrar uno de estos eventos nunca
+    bloquea nada por sí solo — la decisión de riesgo vive en el
+    servicio de sesión (Fase ②), igual que la autorización vive en
+    EP fuera de este módulo.
+    """
+
+    SESION_CREADA = "sesion.creada"
+    SESION_REVOCADA = "sesion.revocada"
+    SESION_EXPIRADA = "sesion.expirada"
+    SESION_SOSPECHOSA = "sesion.sospechosa"
+    DISPOSITIVO_NUEVO = "dispositivo.nuevo"
+    DISPOSITIVO_REVOCADO = "dispositivo.revocado"
+    REAUTENTICACION = "sesion.reautenticacion"
+    SENAL_RIESGO = "seguridad.senal_riesgo"
+    UBICACION_INUSUAL = "seguridad.ubicacion_inusual"
+    POSIBLE_REPLAY = "seguridad.posible_replay"
+    CAMBIO_CRITICO = "seguridad.cambio_critico"
+
+
+class AccionAuth:
+    """
+    Eventos del flujo de autenticación F7a Fase ③ (login, registro,
+    refresh). Misma tabla audit_eventos, misma regla: evidencia —
+    nunca decisión ni bloqueo por sí solos.
+
+    En `detalle` jamás van: password, tokens, pepper, claves ni el
+    email sintético completo (solo `huella` — prefijo HMAC de la
+    identidad canónica, no reversible).
+    """
+
+    LOGIN = "auth.login"
+    LOGIN_RECHAZADO = "auth.login_rechazado"
+    REGISTRO = "auth.registro"
+    REGISTRO_FALLIDO = "auth.registro_fallido"
+    REGISTRO_COMPENSADO = "auth.registro_compensado"
+    REFRESH = "auth.refresh"
+    REFRESH_RECHAZADO = "auth.refresh_rechazado"
+
+
 # ============================================================================
 # WRITER GENÉRICO
 # ============================================================================
@@ -168,4 +211,41 @@ async def auditar_participante(
         contexto_tipo="proyecto",
         contexto_id=proyecto_id,
         detalle=detalle,
+    )
+
+
+# ============================================================================
+# SESIONES — eventos de seguridad (F7a Fase ①)
+# ============================================================================
+
+async def auditar_sesion(
+    conn,
+    accion: str,
+    sesion_id: UUID,
+    actor_id: Optional[UUID] = None,
+    dispositivo_id: Optional[UUID] = None,
+    detalle: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """
+    Registra un evento de seguridad de sesión sobre audit_eventos.
+
+    Convención: objeto = la sesión afectada; contexto = el
+    dispositivo (referencia suave, como todos los contexto_*). El
+    actor es quien/qué originó el evento; actor_id=None →
+    actor_tipo='sistema' (revocación automática, barrido de
+    expiración, detector de replay).
+
+    Evidencia, no decisión: este evento no bloquea ni revoca — la
+    lógica de riesgo se implementa en la capa de servicio (Fase ②).
+    """
+    return await registrar_evento(
+        conn,
+        accion=accion,
+        actor_id=actor_id,
+        objeto_tipo="sesion",
+        objeto_id=sesion_id,
+        contexto_tipo="dispositivo",
+        contexto_id=dispositivo_id,
+        detalle=detalle,
+        actor_tipo="usuario" if actor_id else "sistema",
     )

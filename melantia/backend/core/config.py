@@ -55,16 +55,45 @@ class Settings(BaseSettings):
     db_host: str = Field(default="localhost", alias="MELANTIA_DB_HOST", description="Host de PostgreSQL")
     db_name: str = Field(default="melantia_db", alias="MELANTIA_DB_NAME", description="Nombre de la base de datos")
     db_user: str = Field(default="postgres", alias="MELANTIA_DB_USER", description="Usuario de PostgreSQL")
-    db_password: str = Field(default="melantia_offline_2026", alias="MELANTIA_DB_PASS", description="Contraseña de PostgreSQL")
+    # Sin valor por defecto (Etapa 1 C2): la contraseña jamás vive en el
+    # código. None = database_url falla cerrada hasta provisionarla.
+    db_password: Optional[str] = Field(default=None, alias="MELANTIA_DB_PASS", description="Contraseña de PostgreSQL — sin valor por defecto")
     db_port: int = Field(default=5432, alias="MELANTIA_DB_PORT", description="Puerto de PostgreSQL")
+
+    # URL de conexión completa — precedencia sobre las variables
+    # MELANTIA_DB_* separadas (convención de PR1).
+    database_url_override: Optional[str] = Field(default=None, alias="DATABASE_URL", description="URL completa de PostgreSQL — precede a MELANTIA_DB_*")
 
     # ============================================================================
     # CONFIGURACIÓN DE SUPABASE
     # ============================================================================
 
     supabase_url: Optional[str] = Field(default=None, description="URL de Supabase")
-    supabase_service_role_key: Optional[str] = Field(default=None, description="Service Role Key de Supabase")
-    supabase_anon_key: Optional[str] = Field(default=None, alias="VITE_SUPABASE_ANON_KEY", description="Anonymous Key de Supabase")
+    supabase_service_role_key: Optional[str] = Field(default=None, description="Service Role Key de Supabase (LEGACY — prohibida, no usar)")
+    supabase_anon_key: Optional[str] = Field(default=None, alias="VITE_SUPABASE_ANON_KEY", description="Anonymous Key de Supabase (LEGACY — prohibida, no usar)")
+    supabase_secret_key: Optional[str] = Field(default=None, alias="SUPABASE_SECRET_KEY", description="sb_secret_* backend-only — Admin API")
+    supabase_publishable_key: Optional[str] = Field(default=None, alias="VITE_SUPABASE_PUBLISHABLE_KEY", description="sb_publishable_* — grants públicos server-side")
+
+    # Secreto del emisor local HS256 (rama legacy §10) — fuente única
+    # para security.py, mismo patrón que pepper_identidad/vault_key.
+    # None + flag ON = fail-closed en arranque.
+    jwt_secret_key: Optional[str] = Field(default=None, alias="MELANTIA_JWT_SECRET_KEY", description="Secreto JWT del emisor local HS256 — sin valor por defecto")
+
+    # Transición JWT local (HS256) → Supabase (ES256) — D4.2 §10.
+    # OFF retira la rama legacy; los tokens locales mueren por exp a los
+    # 30 min sin revocación adicional.
+    auth_legacy_issuer_enabled: bool = Field(default=True, alias="AUTH_LEGACY_ISSUER_ENABLED", description="Aceptar JWT local HS256 durante la transición")
+
+    # Pepper para derivar email sintético HMAC (D4.2 §6) — secreto
+    # server-side separado de cualquier clave Supabase. None = la
+    # derivación falla cerrada hasta que se provisione (pendiente).
+    pepper_identidad: Optional[str] = Field(default=None, alias="PEPPER_IDENTIDAD", description="Pepper HMAC para email sintético — sin valor por defecto")
+
+    # Clave del vault de sesión (F7a.1 §9): cifra refresh_token_enc
+    # en `sesiones`. Vive solo en .env — jamás en BD ni en código.
+    # None = la custodia de RT falla cerrada (no hay degradación a
+    # texto plano: si no hay clave, el RT simplemente no se guarda).
+    session_vault_key: Optional[str] = Field(default=None, alias="MELANTIA_SESSION_VAULT_KEY", description="Clave de cifrado del vault de sesión — sin valor por defecto")
 
     # ============================================================================
     # CONFIGURACIÓN DE ALMACENAMIENTO
@@ -133,7 +162,19 @@ class Settings(BaseSettings):
 
     @property
     def database_url(self) -> str:
-        """Genera la URL de conexión a PostgreSQL."""
+        """
+        URL de conexión a PostgreSQL. `DATABASE_URL` tiene precedencia;
+        si no está, se construye desde MELANTIA_DB_* y exige
+        MELANTIA_DB_PASS — sin credencial, falla cerrada sin exponer
+        valores en el error.
+        """
+        if self.database_url_override:
+            return self.database_url_override
+        if not self.db_password:
+            raise RuntimeError(
+                "Configuración de base de datos incompleta: define "
+                "DATABASE_URL o MELANTIA_DB_PASS"
+            )
         return f"postgresql://{self.db_user}:{self.db_password}@{self.db_host}:{self.db_port}/{self.db_name}"
 
     @property

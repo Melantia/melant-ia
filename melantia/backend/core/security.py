@@ -8,7 +8,6 @@ Proporciona métodos base para:
 - Integración con Supabase Auth
 - Validación de permisos y roles
 """
-import os
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
 
@@ -29,10 +28,40 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 # CONFIGURACIÓN DE JWT
 # ============================================================================
 
-# Clave secreta para JWT (en producción debe venir de variable de entorno)
-SECRET_KEY = os.getenv("MELANTIA_JWT_SECRET_KEY", "melantia_secret_key_change_in_production_2026")
+# Clave secreta del emisor local HS256 (rama legacy D4.2 §10).
+# Fuente única: Settings (alias MELANTIA_JWT_SECRET_KEY) — el mismo
+# sistema centralizado que pepper_identidad/session_vault_key.
+# Sin valor por defecto en el código (Etapa 1 C1): una clave ausente
+# o corta se trata como "sin clave" — firmar/verificar fallan
+# cerrado. Solo se exige con AUTH_LEGACY_ISSUER_ENABLED activo.
+SECRET_KEY = settings.jwt_secret_key
+SECRET_KEY_MIN_LEN = 32
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+
+def _jwt_secret_valido() -> bool:
+    """
+    True si la clave HS256 local está presente y tiene longitud
+    segura. Comprueba solo existencia y longitud — jamás registra
+    ni expone el valor.
+    """
+    return bool(SECRET_KEY and len(SECRET_KEY) >= SECRET_KEY_MIN_LEN)
+
+
+def require_jwt_secret_for_legacy() -> None:
+    """
+    Fail-closed de arranque (Etapa 1 C1): si la rama legacy HS256
+    sigue habilitada, exige una clave explícita y válida antes de
+    aceptar solicitudes por ella. Con la rama OFF no se exige la
+    clave — ya no se utiliza. El mensaje jamás contiene la clave.
+    """
+    if settings.auth_legacy_issuer_enabled and not _jwt_secret_valido():
+        raise RuntimeError(
+            "AUTH_LEGACY_ISSUER_ENABLED activo pero "
+            "MELANTIA_JWT_SECRET_KEY no está configurada o es demasiado "
+            f"corta (mínimo {SECRET_KEY_MIN_LEN} caracteres)"
+        )
 
 
 # ============================================================================
@@ -81,6 +110,11 @@ def create_access_token(data: Dict[str, Any], expires_delta: Optional[timedelta]
     Returns:
         Token JWT codificado
     """
+    if not _jwt_secret_valido():
+        raise RuntimeError(
+            "MELANTIA_JWT_SECRET_KEY no está configurada o es inválida"
+        )
+
     to_encode = data.copy()
 
     if expires_delta:
@@ -104,6 +138,8 @@ def decode_access_token(token: str) -> Optional[Dict[str, Any]]:
     Returns:
         Payload del token si es válido, None si es inválido o expiró
     """
+    if not _jwt_secret_valido():
+        return None  # sin clave válida no hay verificación: rechazo
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         return payload
@@ -297,6 +333,7 @@ __all__ = [
     'verify_token',
     'get_user_id_from_token',
     'get_token_payload',
+    'require_jwt_secret_for_legacy',
     # Supabase Auth
     'SupabaseAuth',
     'supabase_auth',

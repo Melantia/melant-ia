@@ -8,11 +8,14 @@ Define las dependencias inyectables en los endpoints de FastAPI:
 - Validación de usuario actual
 - Verificación de permisos
 """
+import base64
+import json
 from typing import Optional, Generator
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 from database import get_db_connection, get_db_connection_sync
+from core.config import settings
 from core.security import (
     verify_token,
     get_user_id_from_token,
@@ -98,11 +101,80 @@ def get_db_sync():
 # DEPENDENCIA DE USUARIO AUTENTICADO
 # ============================================================================
 
+def _leer_iss_sin_verificar(token: str) -> Optional[str]:
+    """
+    Lee el claim `iss` del payload JWT SIN verificar la firma.
+
+    Solo discrimina el emisor para elegir validador (D4.2 §10 —
+    los tokens locales HS256 no llevan iss y caen a la rama
+    legacy); el claim en claro jamás se usa para autorizar: la
+    verificación criptográfica ocurre después en el validador
+    correspondiente. Un iss presente pero desconocido se rechaza —
+    no hay fallback silencioso.
+    """
+    try:
+        partes = token.split(".")
+        if len(partes) != 3:
+            return None
+        payload = partes[1] + "=" * (-len(partes[1]) % 4)
+        iss = json.loads(base64.urlsafe_b64decode(payload)).get("iss")
+        return iss if isinstance(iss, str) else None
+    except Exception:
+        return None
+
+
+async def _resolver_usuario_supabase(token: str) -> str:
+    """
+    Rama Supabase del discriminador (D4.2 §5.2/§9):
+
+        JWKS ES256 → claims → puente (auth.users.id → usuarios.id)
+        → sesiones.estado='activa' → str(usuarios.id)
+
+    La verificación del estado de sesión hace que la revocación
+    MELANTIA sea efectiva aunque el AT siga criptográficamente
+    válido (residual ≤3600 s — F7a.1 §5).
+    """
+    from core.supabase_jwt import SupabaseTokenError, get_supabase_verifier
+    from modules.auth.sesion_service import (
+        SesionError, resolver_usuario_desde_claims,
+    )
+
+    try:
+        claims = await get_supabase_verifier().verificar(token)
+    except SupabaseTokenError as e:
+        if e.motivo == "jwks_no_disponible":
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Servicio de autenticación no disponible.",
+            )
+        raise InvalidTokenError(
+            "Token de autenticación inválido o expirado"
+        )
+
+    async with get_db_connection() as (conn, _cursor):
+        try:
+            return await resolver_usuario_desde_claims(conn, claims)
+        except SesionError as e:
+            if e.motivo == "puente_suspendido":
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Cuenta suspendida.",
+                )
+            raise InvalidTokenError(
+                "Token de autenticación inválido o expirado"
+            )
+
+
 async def get_current_user(
     credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
 ) -> str:
     """
     Dependencia para obtener el ID del usuario actual desde el token JWT.
+
+    Transición dual (D4.2 §10): el `iss` del token elige el
+    validador — ES256/JWKS+puente para Supabase, HS256 local para
+    el legado (solo si AUTH_LEGACY_ISSUER_ENABLED). En ambas ramas
+    el contrato es el mismo: devuelve str(usuarios.id).
 
     Uso en endpoints:
         @app.get("/profile")
@@ -123,6 +195,22 @@ async def get_current_user(
         raise AuthenticationError("Token de autenticación no proporcionado")
 
     token = credentials.credentials
+    iss = _leer_iss_sin_verificar(token)
+
+    issuer_supabase = (
+        f"{settings.supabase_url.rstrip('/')}/auth/v1"
+        if settings.supabase_url else None
+    )
+
+    if issuer_supabase and iss == issuer_supabase:
+        return await _resolver_usuario_supabase(token)
+    if iss is not None:
+        # emisor desconocido: sin fallback silencioso (§10)
+        raise InvalidTokenError("Token de autenticación inválido o expirado")
+
+    # Rama legacy — HS256 local, controlada por flag de transición
+    if not settings.auth_legacy_issuer_enabled:
+        raise InvalidTokenError("Emisor local deshabilitado")
 
     # Verificar token
     if not verify_token(token):
@@ -158,6 +246,9 @@ async def get_current_user_optional(
     """
     if credentials is None:
         return None
+
+    if not settings.auth_legacy_issuer_enabled:
+        return None  # OFF retira la rama legacy también aquí (§10)
 
     token = credentials.credentials
 
