@@ -3325,6 +3325,46 @@ Validar el modelo conceptual → si se aprueba, EP-1 (modelo de datos).
       denied" al enumerar; inofensivos, pendiente decidir borrado
       (requiere confirmación del usuario).
 
+## 2026-10-21 — Preparación hito: Gestión de Fincas end-to-end
+
+Inspección previa a la implementación (Fase F). Estado real:
+
+**Base reutilizable ya existente:**
+- `shared/repositories/fincas.py` — adaptador de lectura M3↔M2
+  (listar/obtener fincas y lotes, área, conteo de animales) con
+  aislamiento `usuario_id` ya en SQL. Firmas estables; M2 las consume.
+- `schema/gestion_fincas.sql` — `fincas`, `lotes`, `hatos_ganaderos`,
+  `practicas_regenerativas` con FKs, CHECKs e índices. UUIDs nativos.
+- `dispositivos`/`sesiones` (m4) dan `device_id` real para sync.
+- `registros_campo.hash_transaccion` + `uq_registros_campo_dedup`
+  (m6) = patrón de idempotencia offline ya probado en concurrencia.
+- `trazabilidades`/`trazabilidad_eventos` ya tienen `sync_status`.
+
+**Brechas detectadas para el hito:**
+- `fincas`/`lotes`/`hatos` carecen de metadatos offline-first
+  (`device_id`, `version`, `deleted_at`, `sync_status`,
+  `hash_transaccion`) → probable migración m8 cuando el hito exija
+  sync (no necesaria para CRUD web básico).
+- Sin módulo `backend/modules/gestion_fincas/` — crear siguiendo la
+  convención EP: `router.py` agregador + `routes/` + `schemas/` +
+  `services/` (router delgado, SQL en services, `get_db` +
+  `get_current_user`, 404 indistinguible para recurso ajeno).
+- `GestionFincas.jsx` es stub con datos hardcodeados; `apiClient.js`
+  ya existe (axios + Bearer + 401→clearSession).
+- `require_role`/`verify_resource_ownership` en core/dependencies
+  son placeholders — para M3 basta ownership por `usuario_id` en SQL
+  (como hace el adaptador existente).
+
+**Plan del hito (propuesto):**
+1. `backend/modules/gestion_fincas/` — CRUD fincas + lotes
+   (POST/GET/PATCH; sin DELETE físico: futuro soft-delete).
+   Endpoints `/api/v1/fincas`, `/api/v1/fincas/{id}/lotes`.
+2. Tests E2E patrón `test_ep_proyectos_api.py` (TestClient +
+   overrides + semilla en `melantia_test` con UUIDs prefijados).
+3. Frontend: `services/fincas.service.js` sobre apiClient +
+   `GestionFincas.jsx` real (listar/crear finca, lotes por finca).
+4. Después: metadatos sync (m8) + hatos + eventos de trazabilidad.
+
 ---
 
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA
