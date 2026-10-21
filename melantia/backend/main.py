@@ -120,6 +120,9 @@ from modules.asistente_tecnico.router import (
 from modules.ecosistema_profesional.router import (
     router as ep_router,
 )
+from modules.gestion_fincas.router import (
+    router as gestion_fincas_router,
+)
 
 
 # ============================================================================
@@ -940,6 +943,12 @@ app.include_router(
     ep_router,
     prefix="/api/v1/ep",
     tags=["Ecosistema Profesional"],
+)
+
+app.include_router(
+    gestion_fincas_router,
+    prefix="/api/v1",
+    tags=["Gestión de Fincas"],
 )
 
 

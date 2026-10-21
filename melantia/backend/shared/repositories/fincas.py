@@ -67,8 +67,9 @@ async def listar_lotes_finca(conn, finca_id: str) -> List[Dict[str, Any]]:
     async with conn.cursor(row_factory=dict_row) as cursor:
         await cursor.execute(
             """
-            SELECT id, nombre_lote, cultivo_principal, variedad,
-                   fecha_siembra, area_metros_cuadrados, estado_salud_lote
+            SELECT id, finca_id, nombre_lote, cultivo_principal, variedad,
+                   fecha_siembra, area_metros_cuadrados,
+                   estado_salud_lote, created_at, updated_at
             FROM lotes
             WHERE finca_id = %s
             ORDER BY nombre_lote
@@ -134,3 +135,178 @@ async def contar_animales_finca(conn, finca_id: str) -> int:
         )
         fila = await cursor.fetchone()
         return int(fila["total"]) if fila else 0
+
+
+# ============================================================================
+# ESCRITURA — Módulo 3 (Gestión de Fincas)
+# Las funciones de arriba son el adaptador de lectura M2↔M3; estas son
+# las operaciones del CRUD del módulo. Mismas reglas: psycopg3 async,
+# dict_row, conexión inyectada, parámetros posicionales.
+# ============================================================================
+
+_CAMPOS_FINCA_EDITABLES = (
+    "nombre", "provincia_id", "canton_id", "parroquia_id",
+    "coordenadas_gps", "ciiu_id", "tipo_pyme",
+)
+
+_CAMPOS_LOTE_EDITABLES = (
+    "nombre_lote", "cultivo_principal", "variedad", "fecha_siembra",
+    "area_metros_cuadrados", "estado_salud_lote",
+)
+
+
+async def listar_fincas_usuario_resumen(
+    conn, usuario_id: str
+) -> List[Dict[str, Any]]:
+    """Fincas del usuario con conteo de lotes y hatos (vista de lista)."""
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            """
+            SELECT
+                f.id, f.nombre, f.tipo_pyme, f.coordenadas_gps,
+                f.provincia_id, f.canton_id, f.parroquia_id,
+                p.nombre AS provincia,
+                c.nombre AS canton,
+                pa.nombre AS parroquia,
+                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id)
+                    AS num_lotes,
+                (SELECT COUNT(*) FROM hatos_ganaderos h
+                 WHERE h.finca_id = f.id) AS num_hatos,
+                f.created_at, f.updated_at
+            FROM fincas f
+            LEFT JOIN provincias p  ON f.provincia_id = p.id
+            LEFT JOIN cantones c    ON f.canton_id = c.id
+            LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
+            WHERE f.usuario_id = %s
+            ORDER BY f.nombre
+            """,
+            (usuario_id,),
+        )
+        return await cursor.fetchall()
+
+
+async def obtener_finca_completa(
+    conn, finca_id: str
+) -> Optional[Dict[str, Any]]:
+    """Finca con todos sus campos, nombres geo y conteos de lotes/hatos."""
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            """
+            SELECT
+                f.id, f.usuario_id, f.nombre, f.tipo_pyme,
+                f.provincia_id, f.canton_id, f.parroquia_id,
+                f.coordenadas_gps, f.ciiu_id,
+                p.nombre AS provincia,
+                c.nombre AS canton,
+                pa.nombre AS parroquia,
+                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id)
+                    AS num_lotes,
+                (SELECT COUNT(*) FROM hatos_ganaderos h
+                 WHERE h.finca_id = f.id) AS num_hatos,
+                f.created_at, f.updated_at
+            FROM fincas f
+            LEFT JOIN provincias p  ON f.provincia_id = p.id
+            LEFT JOIN cantones c    ON f.canton_id = c.id
+            LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
+            WHERE f.id = %s
+            """,
+            (finca_id,),
+        )
+        return await cursor.fetchone()
+
+
+async def insertar_finca(
+    conn, usuario_id: str, campos: Dict[str, Any]
+) -> Dict[str, Any]:
+    """
+    Inserta una finca del usuario. `campos` ya viene depurado por el
+    service (solo claves de _CAMPOS_FINCA_EDITABLES).
+    """
+    columnas = ["usuario_id", *campos.keys()]
+    valores = [usuario_id, *campos.values()]
+    placeholders = ", ".join(["%s"] * len(columnas))
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            f"""
+            INSERT INTO fincas ({", ".join(columnas)})
+            VALUES ({placeholders})
+            RETURNING id, usuario_id, nombre, provincia_id, canton_id,
+                      parroquia_id, coordenadas_gps, ciiu_id, tipo_pyme,
+                      created_at, updated_at
+            """,
+            tuple(valores),
+        )
+        return await cursor.fetchone()
+
+
+async def actualizar_finca(
+    conn, finca_id: str, usuario_id: str, campos: Dict[str, Any]
+) -> Optional[Dict[str, Any]]:
+    """
+    UPDATE parcial de campos editables de una finca PROPIA. La cláusula
+    usuario_id impide tocar fincas ajenas: si no hay fila, el service
+    responde 404 indistinguible.
+    """
+    asignaciones = [f"{k} = %s" for k in campos]
+    valores = [*campos.values(), finca_id, usuario_id]
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            f"""
+            UPDATE fincas
+            SET {", ".join(asignaciones)},
+                updated_at = CURRENT_TIMESTAMP
+            WHERE id = %s AND usuario_id = %s
+            RETURNING id, usuario_id, nombre, provincia_id, canton_id,
+                      parroquia_id, coordenadas_gps, ciiu_id, tipo_pyme,
+                      created_at, updated_at
+            """,
+            tuple(valores),
+        )
+        return await cursor.fetchone()
+
+
+async def insertar_lote(
+    conn, finca_id: str, campos: Dict[str, Any]
+) -> Dict[str, Any]:
+    """Inserta un lote en una finca (propiedad ya verificada en service)."""
+    columnas = ["finca_id", *campos.keys()]
+    valores = [finca_id, *campos.values()]
+    placeholders = ", ".join(["%s"] * len(columnas))
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            f"""
+            INSERT INTO lotes ({", ".join(columnas)})
+            VALUES ({placeholders})
+            RETURNING id, finca_id, nombre_lote, cultivo_principal,
+                      variedad, fecha_siembra, area_metros_cuadrados,
+                      estado_salud_lote, created_at, updated_at
+            """,
+            tuple(valores),
+        )
+        return await cursor.fetchone()
+
+
+async def actualizar_lote(
+    conn, lote_id: str, finca_id: str, campos: Dict[str, Any]
+) -> Optional[Dict[str, Any]]:
+    """
+    UPDATE parcial de un lote vinculado a `finca_id` (la propiedad de la
+    finca ya se verificó en el service). None → el lote no pertenece a
+    esa finca → 404 indistinguible.
+    """
+    asignaciones = [f"{k} = %s" for k in campos]
+    valores = [*campos.values(), lote_id, finca_id]
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            f"""
+            UPDATE lotes
+            SET {", ".join(asignaciones)},
+                updated_at = CURRENT_TIMESTAMP
+            WHERE id = %s AND finca_id = %s
+            RETURNING id, finca_id, nombre_lote, cultivo_principal,
+                      variedad, fecha_siembra, area_metros_cuadrados,
+                      estado_salud_lote, created_at, updated_at
+            """,
+            tuple(valores),
+        )
+        return await cursor.fetchone()
