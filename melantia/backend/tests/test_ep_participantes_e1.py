@@ -16,7 +16,7 @@ import pytest
 from fastapi.testclient import TestClient
 from psycopg.rows import dict_row
 
-from core.config import settings
+from conftest import pg_error_conexion, test_db_url
 from core.dependencies import get_current_user, get_db
 from main import app
 
@@ -41,9 +41,14 @@ def run(coro):
 
 
 async def _conn():
-    return await psycopg.AsyncConnection.connect(
-        settings.database_url, autocommit=False, row_factory=dict_row
-    )
+    # Solo la BD de pruebas: test_db_url valida aislamiento y hace
+    # skip sin la variable; jamás toca la BD de la aplicación.
+    try:
+        return await psycopg.AsyncConnection.connect(
+            test_db_url(), autocommit=False, row_factory=dict_row
+        )
+    except psycopg.OperationalError as e:
+        pg_error_conexion(e)   # 28P01/3D000/otros → fail; solo sin servidor → skip
 
 
 async def _semilla():
