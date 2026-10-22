@@ -33,8 +33,9 @@ portable en `.pg16/` (EDB binaries 16.15-5, gitignored):
 ```
 
 Auth `trust` en localhost — solo desarrollo. Bases:
-`melantia_db` (app) y `melantia_test` (suite; ambas con schema
-completo + migraciones m2–m7 + seeds geográficos aplicados).
+`melantia_db` (app; m2–m7) y `melantia_test` (suite; **m2–m9**
++ seeds geográficos — m8/m9 de sincronización aún no aplicadas a
+la base de desarrollo).
 
 ## Tests
 
@@ -53,7 +54,8 @@ extensions → geografia → usuarios → auth_puente → sesiones →
 gestion_fincas → modulos/{animales, labores_pecuarias} → trazabilidad →
 modulos/negocios_rurales_v2 → evidencias → registros_campo →
 mediciones_campo → levantamientos → suscripciones →
-ecosistema_profesional → migraciones m2→m7 → seeds/*
+ecosistema_profesional → migraciones m2→m9 → seeds/*
+(m8/m9 solo en melantia_test por ahora)
 ```
 
 ## Frontend
@@ -73,7 +75,7 @@ npm run build
 - `.legacy_extract/` es la cuarentena de código legacy/prototipos
   (gitignored).
 - Migraciones en `backend/database/migraciones/`: convención
-  m2–m7 = header PROPUESTA + pre-chequeos + `BEGIN;`/`COMMIT;` +
+  m2–m9 = header PROPUESTA + pre-chequeos + `BEGIN;`/`COMMIT;` +
   `IF NOT EXISTS`, aditivas. Ejecutar con `psql -1 -f` (los warnings
   de transacción son cosméticos, documentados en m7).
 - `melantia/{assets,business,core_python,data,.pytest_cache}` son

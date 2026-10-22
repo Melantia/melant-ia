@@ -194,6 +194,30 @@ equivalente. Prefijo coherente con la convención `/api/v1/*`.
 tabla): `nombre`, `fingerprint_hash` futuro. Devuelve `dispositivo_id`
 que el móvil guarda y envía en cada lote. Reusa m4 sin cambios de DDL.
 
+### 4.1b Modelo de ámbito (scope) — resolución [IMPLEMENTADO en m8]
+
+El `scope` es una cadena con prefijo que determina **a quién pertenece
+un cursor, un changelog y un pull**:
+
+- **`usr:<usuario_uuid>`** — datos personales. Es el **único ámbito
+  habilitado** por esta infraestructura: la autorización existente es
+  `usuario_id` del token, así que el servicio de sync solo debe aceptar
+  `scope == 'usr:<usuario del token>'`. La mera existencia de una fila
+  en `sync_cursors`/`sync_cambios` **no concede acceso** a otro
+  usuario — el scope se valida contra el token en cada request, igual
+  que el 404 indistinguible de Gestión de Fincas.
+- **`wks:<workspace_uuid>` / `prj:<proyecto_uuid>`** — reservados para
+  espacios EP compartidos. Se habilitarán cuando exista autorización
+  por scope (la autorización de EP-4E es por participante+recurso, no
+  por scope de sync — integración es decisión de implementación
+  futura, no de esta fase).
+- **Cursores independientes por scope:** cada scope tiene su propia
+  secuencia (`sync_cursors` PK por scope).
+- **Orden determinista de bloqueos:** el bump de cursor se hace
+  siempre como último paso de la transacción y, si una operación
+  futura tocara varios scopes, en `ORDER BY scope` — mismo orden en
+  todos los writers elimina el interbloqueo entre cursors.
+
 ### 4.2 Subida — `POST /api/v1/sync/push`
 
 ```jsonc
@@ -261,13 +285,45 @@ El repo tiene dos mecanismos que **no se sustituyen entre sí**:
   registro de incentivo) chocan por contenido. Sigue vigente en
   `registros_campo`/`evidencias_documentos` para su caso original.
 
-**[PROPUESTO] Convención:** `client_operation_id` = mecanismo
-transversal de idempotencia de sync para todas las entidades; el
-servidor lo registra en tabla ledger `sync_operaciones`
-`(usuario_id, client_operation_id)` con UNIQUE parcial (mismo patrón
-exacto que m2/m6: `WHERE client_operation_id IS NOT NULL`).
-`hash_transaccion` se conserva donde ya existe con su semántica de
-contenido — no se migra ni renombra.
+**[IMPLEMENTADO en m8 — `melantia_test`] Convención:**
+`client_operation_id` = mecanismo transversal de idempotencia de sync
+para todas las entidades; el servidor lo registra en el ledger
+`sync_operaciones` con `UNIQUE(usuario_id, client_operation_id)` (el
+patrón m2/m6, pero NOT NULL: una fila sin clave no sería recuperable
+en un reintento). `hash_transaccion` se conserva donde ya existe con
+su semántica de contenido — no se migra ni renombra.
+
+**Huella de la solicitud (`payload_hash`, corrección FAIL-01):** el
+ledger guarda `payload_hash VARCHAR(64) NOT NULL` = SHA-256 hex de la
+solicitud canónica. Serialización canónica (ambos lados idénticos):
+
+```text
+sha256_hex( json_canon({
+  "scope", "entity_type", "entity_id|null",
+  "accion", "base_version|null", "payload"      // null explícito
+}) )
+json_canon: claves ordenadas, separadores mínimos (",",":"),
+Unicode literal, UTF-8; números tal cual los envía el cliente.
+```
+
+Semántica obligatoria al reintentar (la aplica el futuro servicio de
+sync; **el esquema ya la hace posible y está probada a nivel BD**):
+
+- **A — misma clave y mismo hash:** devolver el `resultado` guardado
+  marcado `duplicate`; la operación de negocio NO se re-ejecuta.
+- **B — misma clave y hash distinto:** error explícito estable
+  `idempotency_key_reuse` (HTTP 409); cero cambio de negocio; el
+  resultado previo jamás se devuelve como si correspondiera.
+- **C — concurrentes con la misma clave:** la inserción especulativa
+  del UNIQUE bloquea a la segunda hasta el commit/rollback de la
+  primera; al resolverse se comparan hashes (casos A/B). Imposible
+  ejecutar dos operaciones de negocio con la misma clave.
+- **D — rollback:** la fila del ledger revierte con la misma
+  transacción; nunca queda registrado éxito de una operación no
+  confirmada. Otra transacción puede tomar el relevo de la clave.
+
+Pruebas: `test_m8_m9_sync_infraestructura.py` — casos A/B/C/D con
+PostgreSQL real (`test_pg_ledger_*`, `test_hash_canonico_*`).
 
 ### 4.5 Bajada — `GET /api/v1/sync/pull?cursor=<seq>&limit=N`
 
@@ -307,13 +363,20 @@ incorrecta por una razón sutil y crítica**:
 > cliente. La secuencia garantiza unicidad y crecimiento de
 > asignación, **no orden de commit**.
 
-#### Mecanismo elegido: cursor transaccional por ámbito [APROBADO]
+#### Mecanismo elegido: cursor transaccional por ámbito [APROBADO → IMPLEMENTADO en m8 y validado por prueba concurrente]
+
+> **Estado 2026-10-21:** implementado en `m8_sync_infraestructura.sql`
+> (aplicada a `melantia_test`; `melantia_db` pendiente de revisión) y
+> probado con dos transacciones concurrentes reales — commits fuera de
+> orden, rollback y pull intermedio
+> (`test_pg_cursor_commits_fuera_de_orden`, `test_pg_cursor_rollback_no_deja_hueco`
+> en `backend/tests/test_m8_m9_sync_infraestructura.py`).
 
 El pull ya se filtra por usuario; el cursor se serializa por el mismo
 ámbito con una fila-contador por `usuario_id` (el "ámbito de sync"):
 
 ```sql
--- [PROPUESTO — no existe aún]
+-- [IMPLEMENTADO — m8, aplicada a melantia_test]
 sync_cursors (
     scope     TEXT PRIMARY KEY,        -- 'usr:<usuario_id>'
     last_seq  BIGINT NOT NULL DEFAULT 0
@@ -588,22 +651,29 @@ respuesta del servidor en el mismo ciclo push.
 | `evidencias_documentos` | `hash_transaccion` UNIQUE | Falta flujo de archivo (storage, reanudación) — decisión de storage pendiente | metadatos de upload en tabla auxiliar de sesiones de subida | Diferido (hito evidencias) |
 | `dispositivos` | existe (m4) | sin `last_seen_at` actualizado por sync (columna ya existe) | el push actualiza `last_seen_at` — sin DDL | No |
 | `mediciones_campo` | vértices con UNIQUE (B2) | `usuario_id` nullable | endurecer cuando entre al sync | Diferido |
-| **Ledger de operaciones** | no existe | Sin ledger no hay reintento reproducible del lote | `sync_operaciones(id, usuario_id, client_operation_id, entity_type, entity_id, resultado JSONB, created_at)` + UNIQUE parcial `(usuario_id, client_operation_id)` | **Sí (m8)** |
+| **Ledger de operaciones** | no existe | Sin ledger no hay reintento reproducible del lote; sin `payload_hash` una clave reutilizada con otro contenido se descartaría en silencio (FAIL-01) | `sync_operaciones(id, usuario_id, client_operation_id, payload_hash, entity_type, entity_id, resultado JSONB, created_at)` + UNIQUE `(usuario_id, client_operation_id)` | **Sí (m8)** |
 | **Changelog + cursor para pull** | no existe | Sin changelog no hay bajada incremental; `BIGSERIAL` solo no garantiza orden de commit | `sync_cambios(scope, seq, ...)` + `sync_cursors(scope, last_seq)` — cursor transaccional por ámbito (§4.6) | **Sí (m8)** |
 
 ### 9.2 Conclusión sobre las migraciones
 
 **Sí hace falta migración — y se organiza en dos etapas separadas
-[APROBADO 2026-10-21]:**
+[APROBADO e IMPLEMENTADO 2026-10-21 — solo en `melantia_test`;
+`melantia_db` pendiente de revisión del diff]:**
 
-- **Etapa 1 — `m8_sync_infraestructura.sql`:** `sync_operaciones`
-  (ledger) + `sync_cambios` (changelog) + `sync_cursors` (contador
-  por ámbito). Tres tablas nuevas, cero ALTER → aditiva, sin riesgo
-  sobre datos existentes.
-- **Etapa 2 — `m9_sync_metadatos_entidades.sql`:** `version`,
-  `deleted_at`, `client_operation_id` (+índices parciales patrón m2)
-  y `dispositivo_origen_id` en `fincas`, `lotes`, `hatos_ganaderos`;
-  cursor del dispositivo en `dispositivos` si se confirma §5.1.
+- **Etapa 1 — `m8_sync_infraestructura.sql` [APLICADA en test]:**
+  `sync_operaciones` (ledger) + `sync_cambios` (changelog) +
+  `sync_cursors` (contador por ámbito) + función `sync_next_seq`
+  (única vía de asignación; concentra el orden de bloqueos).
+  Tres tablas nuevas, cero ALTER.
+- **Etapa 2 — `m9_sync_metadatos_entidades.sql` [APLICADA en test]:**
+  `version` (+CHECK >0), `deleted_at`, `dispositivo_origen_id` en
+  `fincas`, `lotes`, `hatos_ganaderos` + `ultimo_pull_seq` en
+  `dispositivos` + índices parciales de filas activas.
+  **`client_operation_id` NO va en las entidades** — es clave de la
+  operación y vive en el ledger `sync_operaciones`, que ya resuelve
+  reintentos por `(usuario_id, client_operation_id)`; copiarlo a cada
+  entidad duplicaría la clave sin uso (decisión corregida respecto al
+  borrador inicial).
 
 **Convención de nombres verificada:** las migraciones son
 `m<N>_<descripcion>.sql` con **entero secuencial** (`m2`…`m7`) y el
@@ -707,7 +777,17 @@ update/delete vía sync — pero nunca después de exponerlos.
   primer borrador, que no garantizaba orden de commit.
 - **2026-10-21:** retención de tombstones/changelog = 90 días como
   propuesta inicial a validar operativamente; reconciliación completa
-  conserva siempre las ops locales pendientes (§5.1).
+  conserva siempre las ops locales pendientes (§5.1). Sin proceso
+  automático de purga — se diseñará cuando existan cursores de
+  dispositivo demostrables.
+- **2026-10-21 (implementación):** m8+m9 aplicadas a `melantia_test` —
+  15 pruebas nuevas verdes, incluida la concurrente de cursores.
+  `melantia_db` NO tocada (pendiente de revisión).
+- **2026-10-22 (corrección FAIL-01):** `payload_hash VARCHAR(64) NOT
+  NULL` en el ledger + semántica A–D de reintentos (§4.4), probada con
+  concurrencia real. m8 corregida **antes de cualquier commit**;
+  `melantia_test` re-aplicada (tabla vacía recreada);
+  `melantia_db` sigue intacta.
 
 ### Propuestas en este documento (pendientes de aprobación)
 
@@ -721,13 +801,12 @@ update/delete vía sync — pero nunca después de exponerlos.
 
 ### Pendientes de decisión del usuario
 
-1. Autorización para implementar m8 y m9 (pueden ir juntas o m9
-   diferida, nunca después de exponer update/delete por sync).
+1. Revisar el diff y autorizar la aplicación de m8+m9 a
+   `melantia_db` (solo aplicadas a `melantia_test` por ahora).
 2. Proveedor concreto del object storage (configuración, no código).
 3. Validación operativa de la ventana de retención de 90 días.
-4. ¿Pull filtrado estrictamente por `usuario_id`, o algunas entidades
-   (catálogo geográfico) con cursor global? (Recomendado: geografía
-   por endpoint propio versionado, no por changelog.)
+4. Integración de scopes `wks:`/`prj:` cuando exista autorización EP
+   por ámbito (§4.1b).
 
 ---
 
@@ -737,3 +816,5 @@ update/delete vía sync — pero nunca después de exponerlos.
 |---|---|---|
 | 2026-10-21 | Creación — auditoría real del repo (schemas m2–m7, módulos, frontend offline, package.json) | `git show` HEAD `280740ef`; archivos citados en §1 |
 | 2026-10-21 | Revisión final: corrección del cursor (BIGSERIAL ingenuo → `sync_cursors` transaccional por scope, §4.6); decisiones incorporadas — Expo+dev builds/`expo-sqlite` (§3), evidencias dos niveles con abstracción de storage (§7), retención 90 d + reconciliación (§5.1), migraciones en dos etapas m8/m9 con convención de nombres verificada (§9.2) | Decisión del usuario 2026-10-21; convención `m<N>_<desc>.sql` en `backend/database/migraciones/` y orden manual en `docs/DB_MIGRATION_EXECUTION_PHASE1.md` |
+| 2026-10-21 | Implementación m8+m9 **en `melantia_test`**: scope model resuelto (§4.1b, solo `usr:` habilitado); `client_operation_id` queda en el ledger, no en entidades; `ultimo_pull_seq` en `dispositivos`; 15 tests verdes incl. concurrencia real (fuera de orden + rollback) | `m8_sync_infraestructura.sql`, `m9_sync_metadatos_entidades.sql`, `test_m8_m9_sync_infraestructura.py`; rama `feat/sync-offline-first-m8-m9` |
+| 2026-10-22 | Corrección FAIL-01 (auditoría): `payload_hash NOT NULL` en `sync_operaciones` + serialización canónica y semántica A–D documentadas (§4.4); m8 re-aplicada a `melantia_test` (drop de tabla vacía sin dependientes + re-ejecución `-1`); tests ampliados a 20/20 verdes incl. concurrencia misma-clave con commit y rollback | `test_pg_ledger_concurrencia_misma_clave`, `test_pg_misma_clave_hash_distinto_detectable`, `_hash_op`; `melantia_db` verificada intacta |
