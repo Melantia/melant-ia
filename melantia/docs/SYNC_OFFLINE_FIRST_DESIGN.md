@@ -285,7 +285,7 @@ El repo tiene dos mecanismos que **no se sustituyen entre sí**:
   registro de incentivo) chocan por contenido. Sigue vigente en
   `registros_campo`/`evidencias_documentos` para su caso original.
 
-**[IMPLEMENTADO en m8 — `melantia_test`] Convención:**
+**[IMPLEMENTADO en m8 — `melantia_test` y `melantia_db`] Convención:**
 `client_operation_id` = mecanismo transversal de idempotencia de sync
 para todas las entidades; el servidor lo registra en el ledger
 `sync_operaciones` con `UNIQUE(usuario_id, client_operation_id)` (el
@@ -366,7 +366,8 @@ incorrecta por una razón sutil y crítica**:
 #### Mecanismo elegido: cursor transaccional por ámbito [APROBADO → IMPLEMENTADO en m8 y validado por prueba concurrente]
 
 > **Estado 2026-10-21:** implementado en `m8_sync_infraestructura.sql`
-> (aplicada a `melantia_test`; `melantia_db` pendiente de revisión) y
+> (aplicada a `melantia_test` el 2026-10-21 y a `melantia_db` el
+> 2026-10-22, con respaldo verificado) y
 > probado con dos transacciones concurrentes reales — commits fuera de
 > orden, rollback y pull intermedio
 > (`test_pg_cursor_commits_fuera_de_orden`, `test_pg_cursor_rollback_no_deja_hueco`
@@ -376,7 +377,7 @@ El pull ya se filtra por usuario; el cursor se serializa por el mismo
 ámbito con una fila-contador por `usuario_id` (el "ámbito de sync"):
 
 ```sql
--- [IMPLEMENTADO — m8, aplicada a melantia_test]
+-- [IMPLEMENTADO — m8, aplicada a melantia_test y melantia_db]
 sync_cursors (
     scope     TEXT PRIMARY KEY,        -- 'usr:<usuario_id>'
     last_seq  BIGINT NOT NULL DEFAULT 0
@@ -657,15 +658,15 @@ respuesta del servidor en el mismo ciclo push.
 ### 9.2 Conclusión sobre las migraciones
 
 **Sí hace falta migración — y se organiza en dos etapas separadas
-[APROBADO e IMPLEMENTADO 2026-10-21 — solo en `melantia_test`;
-`melantia_db` pendiente de revisión del diff]:**
+[APROBADO e IMPLEMENTADO — `melantia_test` 2026-10-21, `melantia_db`
+2026-10-22 tras respaldo verificado]:**
 
-- **Etapa 1 — `m8_sync_infraestructura.sql` [APLICADA en test]:**
+- **Etapa 1 — `m8_sync_infraestructura.sql` [APLICADA en ambas]:**
   `sync_operaciones` (ledger) + `sync_cambios` (changelog) +
   `sync_cursors` (contador por ámbito) + función `sync_next_seq`
   (única vía de asignación; concentra el orden de bloqueos).
   Tres tablas nuevas, cero ALTER.
-- **Etapa 2 — `m9_sync_metadatos_entidades.sql` [APLICADA en test]:**
+- **Etapa 2 — `m9_sync_metadatos_entidades.sql` [APLICADA en ambas]:**
   `version` (+CHECK >0), `deleted_at`, `dispositivo_origen_id` en
   `fincas`, `lotes`, `hatos_ganaderos` + `ultimo_pull_seq` en
   `dispositivos` + índices parciales de filas activas.
@@ -787,7 +788,15 @@ update/delete vía sync — pero nunca después de exponerlos.
   NULL` en el ledger + semántica A–D de reintentos (§4.4), probada con
   concurrencia real. m8 corregida **antes de cualquier commit**;
   `melantia_test` re-aplicada (tabla vacía recreada);
-  `melantia_db` sigue intacta.
+  `melantia_db` intacta en ese momento.
+- **2026-10-22 (aplicación a desarrollo):** m8+m9 aplicadas a
+  `melantia_db` con respaldo verificado (restauración a base temporal
+  comparada 1:1 en 12 métricas antes de migrar). Verificación:
+  52 tablas (49+3), 9 columnas m9, UNIQUE del ledger, `payload_hash`
+  NOT NULL, smoke de `sync_next_seq` con rollback sin residuo; datos
+  geo intactos. Los endpoints push/pull, el servicio de sync y el
+  cliente móvil siguen pendientes: esto es infraestructura de BD, no
+  sincronización completa.
 
 ### Propuestas en este documento (pendientes de aprobación)
 
@@ -801,8 +810,8 @@ update/delete vía sync — pero nunca después de exponerlos.
 
 ### Pendientes de decisión del usuario
 
-1. Revisar el diff y autorizar la aplicación de m8+m9 a
-   `melantia_db` (solo aplicadas a `melantia_test` por ahora).
+1. ~~Aplicación de m8+m9 a `melantia_db`~~ — **hecho 2026-10-22**
+   (respaldo + restauración verificados antes de aplicar).
 2. Proveedor concreto del object storage (configuración, no código).
 3. Validación operativa de la ventana de retención de 90 días.
 4. Integración de scopes `wks:`/`prj:` cuando exista autorización EP
@@ -818,3 +827,4 @@ update/delete vía sync — pero nunca después de exponerlos.
 | 2026-10-21 | Revisión final: corrección del cursor (BIGSERIAL ingenuo → `sync_cursors` transaccional por scope, §4.6); decisiones incorporadas — Expo+dev builds/`expo-sqlite` (§3), evidencias dos niveles con abstracción de storage (§7), retención 90 d + reconciliación (§5.1), migraciones en dos etapas m8/m9 con convención de nombres verificada (§9.2) | Decisión del usuario 2026-10-21; convención `m<N>_<desc>.sql` en `backend/database/migraciones/` y orden manual en `docs/DB_MIGRATION_EXECUTION_PHASE1.md` |
 | 2026-10-21 | Implementación m8+m9 **en `melantia_test`**: scope model resuelto (§4.1b, solo `usr:` habilitado); `client_operation_id` queda en el ledger, no en entidades; `ultimo_pull_seq` en `dispositivos`; 15 tests verdes incl. concurrencia real (fuera de orden + rollback) | `m8_sync_infraestructura.sql`, `m9_sync_metadatos_entidades.sql`, `test_m8_m9_sync_infraestructura.py`; rama `feat/sync-offline-first-m8-m9` |
 | 2026-10-22 | Corrección FAIL-01 (auditoría): `payload_hash NOT NULL` en `sync_operaciones` + serialización canónica y semántica A–D documentadas (§4.4); m8 re-aplicada a `melantia_test` (drop de tabla vacía sin dependientes + re-ejecución `-1`); tests ampliados a 20/20 verdes incl. concurrencia misma-clave con commit y rollback | `test_pg_ledger_concurrencia_misma_clave`, `test_pg_misma_clave_hash_distinto_detectable`, `_hash_op`; `melantia_db` verificada intacta |
+| 2026-10-22 | Aplicación de m8+m9 a `melantia_db` tras respaldo `melantia_db_pre_m8_m9_20261022.dump` (SHA-256 `912d8e35…60c6f`) con restauración desechable comparada; commits `974baf08`/`57b33a3d` | psql exit 0 en ambas; introspección post (52 tablas, 9 columnas, NOT NULL, UNIQUE); smoke `sync_next_seq` con rollback |

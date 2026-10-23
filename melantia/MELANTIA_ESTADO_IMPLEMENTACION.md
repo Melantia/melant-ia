@@ -1,7 +1,7 @@
 # MELANTIA — ESTADO DE IMPLEMENTACIÓN Y BITÁCORA TÉCNICA
 
-> **Última revisión:** 2026-10-21 · **Rama verificada:** `feat/gestion-fincas-end-to-end`
-> **Último commit verificado:** `280740ef` · Suite: **444 passed, 0 skipped, 0 errors**
+> **Última revisión:** 2026-10-22 · **Rama verificada:** `feat/sync-offline-first-m8-m9`
+> **Último commit verificado:** `57b33a3d` · Suite: **464 passed, 0 skipped, 0 errors**
 
 ---
 
@@ -55,13 +55,13 @@ diferencia se registra como conflicto pendiente.
 |---|---|---|
 | Backend FastAPI | **IMPLEMENTADO Y VERIFICADO** | `backend/main.py` con 7 routers montados; arranque con pools psycopg3; handler `MelantiaException`; suite 444 en verde |
 | Frontend React/Vite | **IMPLEMENTADO PARCIALMENTE** | Shell + módulos M2–M5 montados en `AppShell.jsx`; build y lint OK; dashboard/Excel/reportes pendientes |
-| PostgreSQL | **IMPLEMENTADO Y VERIFICADO** | 16.15-5 portable en `.pg16/`; `melantia_db` (49 tablas) y `melantia_test` vivas con esquema + m2–m7 + seeds |
+| PostgreSQL | **IMPLEMENTADO Y VERIFICADO** | 16.15-5 portable en `.pg16/`; `melantia_db` (52 tablas) y `melantia_test` vivas con esquema + m2–m9 + seeds |
 | Autenticación y aislamiento | **IMPLEMENTADO Y VERIFICADO** | JWT dual (Supabase ES256/JWKS + legado HS256 con flag); `get_current_user` real; aislamiento `usuario_id` probado E2E en fincas y EP |
 | Gestión de Fincas | **IMPLEMENTADO Y VERIFICADO** | CRUD fincas + lotes end-to-end (API + UI real); 23 tests E2E; ver §F |
 | Geografía y migraciones | **IMPLEMENTADO Y VERIFICADO** | Catálogo DPA/INEC 24/221/1.042 con UNIQUE en los 3 niveles (`migracion_inicial` + m2–m7); seeds idempotentes |
 | Pruebas automatizadas | **IMPLEMENTADO Y VERIFICADO** | 444 passed contra `melantia_test`; conftest fail-closed |
 | Aplicación móvil | **DISEÑADO, NO IMPLEMENTADO** | React Native aprobado en Master (§2); no existe proyecto móvil en el repo |
-| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (diseño aprobado + infraestructura en test) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync implementada (m8+m9) solo en `melantia_test`**: ledger `sync_operaciones`, changelog `sync_cambios`, cursor transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id` en fincas/lotes/hatos — probada con concurrencia real. Cliente: sin cola ni sync engine ni app móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
+| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (infraestructura de BD implementada en ambas bases; protocolo/servicio pendiente) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync (m8+m9) aplicada en `melantia_test` y `melantia_db`**: ledger `sync_operaciones` con `payload_hash`, changelog `sync_cambios`, cursor transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id` en fincas/lotes/hatos — probada con concurrencia real. Pendiente: endpoints push/pull, servicio de sync, cliente móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
 | Administración General | **DISEÑADO, NO IMPLEMENTADO** | Concepto completo en §42 + `docs/ADMINISTRACION.md`; sin rutas `/api/v1/admin/*` ni roles admin en código |
 | Trazabilidad | **IMPLEMENTADO PARCIALMENTE** | Schema completo (plantillas, fases, eventos, cadena de custodia); sin API dedicada; evidencias tiene router propio |
 | Evidencias | **IMPLEMENTADO PARCIALMENTE** | Router `/api/evidencias` + UI M11 existen; verificador SHA-256 por confirmar |
@@ -259,6 +259,31 @@ rutas `/api/v1/admin/*` todavía.
   distinto, concurrencia misma clave con commit y rollback).
 - **`melantia_db` verificada intacta** tras toda la operación.
 
+### 2026-10-22 — Aplicación controlada de m8/m9 a `melantia_db`
+
+- **Respaldo previo verificado:** `pg_dump -Fc` →
+  `…\AppData\Local\MELANTIA\backups\melantia_db_pre_m8_m9_20261022.dump`
+  (fuera de la raíz Git; 191.814 bytes; SHA-256
+  `912d8e35e7cc788730c418477c7bb8ad3eef431f8964809cc32fcf0070660c6f`).
+- **Restauración de prueba real:** `pg_restore` a base temporal
+  `melantia_restore_check_m8` exit 0; comparada 1:1 con `melantia_db`
+  (49 tablas, 14 funciones, 4 secuencias, 174 índices, 111 PK/108 FK/
+  61 CHECK, 2 extensiones, geo 24/221/1.042, 6 perfiles, 8 triggers).
+  Base temporal eliminada tras verificar su nombre.
+- **Aplicación:** m8 (exit 0, verificada) → m9 (exit 0) sobre
+  `melantia_db`, rama `feat/sync-offline-first-m8-m9`, commits
+  `974baf08`/`57b33a3d`. Ejecutadas con `psql -1`; los warnings
+  "already/no transaction in progress" se documentaron — cada
+  archivo conservó atomicidad propia (BEGIN/COMMIT interno).
+- **Verificación post:** 52 tablas (3 `sync_*`), `sync_next_seq`,
+  9 columnas m9, `dispositivos.ultimo_pull_seq`, UNIQUE del ledger,
+  `payload_hash` NOT NULL, 3 índices parciales; smoke transaccional
+  de `sync_next_seq` retornó 1,2 y se revirtió — **cero residuo**.
+  Datos previos intactos: geo 24/221/1.042, perfiles 6, triggers 8.
+- **Sigue pendiente:** endpoints push/pull, servicio de
+  sincronización, cliente móvil — infraestructura de BD ≠ sync
+  completa.
+
 ---
 
 ## E. Base de datos y entorno
@@ -270,8 +295,8 @@ rutas `/api/v1/admin/*` todavía.
 | Parada | `.pg16/pgsql/bin/pg_ctl.exe -D .pg16/data stop` |
 | psql | `.pg16/pgsql/bin/psql.exe -U postgres -h localhost -d melantia_db` |
 | Auth | `trust` en localhost — **solo desarrollo** |
-| Base app | `melantia_db` — 49 tablas + m2–m7 + seeds (**sin m8/m9** — pendiente) |
-| Base tests | `melantia_test` — misma base **+ m8/m9 aplicadas**; conftest exige URL explícita (fail-closed) |
+| Base app | `melantia_db` — **52 tablas: esquema + m2–m9 + seeds** (m8/m9 aplicadas 2026-10-22 con respaldo verificado) |
+| Base tests | `melantia_test` — idéntica (m2–m9); conftest exige URL explícita (fail-closed) |
 
 **Esquema aplicado** (`backend/database/schema/`): extensions →
 geografia → usuarios → auth_puente → sesiones → gestion_fincas →
@@ -387,7 +412,7 @@ en `suscripciones/schemas.py`, `datetime.utcnow()` en
 | 2 | Stack móvil: decisión Expo vs RN bare + persistencia local (SQLite propuesto) | Hito offline-first F0/F1 — ver `docs/SYNC_OFFLINE_FIRST_DESIGN.md` §3, §13 |
 | 3 | Cola de sincronización + sync engine incremental + reintentos | Hito offline-first F2–F3; contrato propuesto en el diseño |
 | 4 | Idempotencia y resolución de conflictos en flujos | Convención propuesta: `client_operation_id` transversal (patrón B1) + `version` para conflictos |
-| 5 | Migraciones de sync — **m8+m9 implementadas y aplicadas a `melantia_test`**; pendiente revisión para `melantia_db` | Infraestructura validada por prueba concurrente; aplicación a dev pendiente de autorización |
+| 5 | Migraciones de sync — **m8+m9 aplicadas a `melantia_test` y `melantia_db`** (2026-10-22, respaldo verificado) | Infraestructura validada; sigue pendiente el servicio push/pull |
 | 6 | M3: hatos, animales individuales, eventos de trazabilidad | Ampliación del módulo |
 | 7 | Auditoría transversal (`audit_eventos` writers, ADM-2) + verificador SHA-256 evidencias | Antes de exponer trazabilidad pública |
 | 8 | Excel import/export/validación, dashboard, reportes | Semana-4 del plan MVP |
@@ -427,6 +452,7 @@ el estado final del hito actual.
 | 2026-10-21 | Revisión final del diseño sync: cursor corregido a `sync_cursors` transaccional por scope (BIGSERIAL ≠ orden de commit); decisiones aprobadas incorporadas (Expo+dev builds, expo-sqlite, object storage, retención 90 d, etapas m8/m9) | `docs/SYNC_OFFLINE_FIRST_DESIGN.md` §4.6/§13; convención de nombres de migraciones verificada en `migraciones/` + `DB_MIGRATION_EXECUTION_PHASE1.md` | Verificado |
 | 2026-10-21 | Implementación m8+m9 **solo en `melantia_test`**: scope `usr:` resuelto, `client_operation_id` en ledger (no entidades), 15 tests nuevos incl. prueba concurrente real de cursores — rama `feat/sync-offline-first-m8-m9` | `m8_*.sql`, `m9_*.sql` aplicados con `psql -1`; `test_m8_m9_sync_infraestructura.py` 15/15 | Verificado |
 | 2026-10-22 | Corrección FAIL-01: `payload_hash` en ledger + semántica A–D; m8 re-aplicada en `melantia_test` tras verificar vacío/dependencias; tests 20/20; `melantia_db` intacta verificada | m8 corregida + `test_m8_m9_sync_infraestructura.py`; psql `\d`/counts pre y post | Verificado |
+| 2026-10-22 | Aplicación de m8+m9 a `melantia_db` tras respaldo verificado por restauración real (`melantia_db_pre_m8_m9_20261022.dump`, SHA-256 `912d8e35…60c6f`); 52 tablas/9 columnas/UNIQUE/NOT NULL verificados; smoke `sync_next_seq` con rollback sin residuo; procedimiento psql corregido (ON_ERROR_STOP, sin `-1` sobre archivos con BEGIN/COMMIT propio) | `pg_restore` exit 0 + comparación 12 métricas; introspección post-aplicación de `melantia_db` | Verificado |
 
 <!--
 Mantener esta tabla al día con cada hito verificado.

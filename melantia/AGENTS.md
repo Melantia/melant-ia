@@ -33,9 +33,9 @@ portable en `.pg16/` (EDB binaries 16.15-5, gitignored):
 ```
 
 Auth `trust` en localhost — solo desarrollo. Bases:
-`melantia_db` (app; m2–m7) y `melantia_test` (suite; **m2–m9**
-+ seeds geográficos — m8/m9 de sincronización aún no aplicadas a
-la base de desarrollo).
+`melantia_db` (app) y `melantia_test` (suite) — **ambas con m2–m9**
++ seeds geográficos (m8/m9 aplicadas a dev el 2026-10-22 con respaldo
+verificado: `…/MELANTIA/backups/melantia_db_pre_m8_m9_20261022.dump`).
 
 ## Tests
 
@@ -55,7 +55,7 @@ gestion_fincas → modulos/{animales, labores_pecuarias} → trazabilidad →
 modulos/negocios_rurales_v2 → evidencias → registros_campo →
 mediciones_campo → levantamientos → suscripciones →
 ecosistema_profesional → migraciones m2→m9 → seeds/*
-(m8/m9 solo en melantia_test por ahora)
+(m8/m9 ya aplicadas en melantia_test y melantia_db)
 ```
 
 ## Frontend
@@ -76,8 +76,24 @@ npm run build
   (gitignored).
 - Migraciones en `backend/database/migraciones/`: convención
   m2–m9 = header PROPUESTA + pre-chequeos + `BEGIN;`/`COMMIT;` +
-  `IF NOT EXISTS`, aditivas. Ejecutar con `psql -1 -f` (los warnings
-  de transacción son cosméticos, documentados en m7).
+  `IF NOT EXISTS`, aditivas.
+  **Procedimiento corregido (2026-10-22):** los archivos llevan su
+  propio control transaccional, así que NO se combinan con `psql -1`
+  (la doc de PostgreSQL advierte que `-1` pierde efecto cuando el
+  script gestiona sus propias transacciones). Ejecución canónica:
+  `psql -v ON_ERROR_STOP=1 -f <archivo>` — el BEGIN/COMMIT interno del
+  archivo es el dueño único de la transacción; ON_ERROR_STOP hace
+  fallar el proceso con código de salida distinto de 0. Después de
+  cada archivo: comprobar el código de salida y el esquema resultante
+  y NO continuar con el siguiente archivo si hubo error. Toda
+  aplicación parcial ENTRE archivos (p.ej. m8 aplicada, m9 fallida)
+  se conserva y se documenta — nunca se improvisa una reversión; la
+  recuperación usa el respaldo verificado previo.
+  Nota histórica: m2–m9 se aplicaron con `-1` + transacción interna;
+  los warnings "already/no transaction in progress" fueron cosméticos
+  y los resultados se verificaron con conteos e introspección (m7:
+  ambas bases; m8/m9: `melantia_test` 2026-10-21 y `melantia_db`
+  2026-10-22 con la misma verificación).
 - `melantia/{assets,business,core_python,data,.pytest_cache}` son
   directorios **vacíos** con ACL de Windows restrictiva (git los
   reporta "permission denied"); pendiente decisión de borrado.
