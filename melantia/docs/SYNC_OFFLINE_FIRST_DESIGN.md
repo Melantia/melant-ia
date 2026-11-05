@@ -331,17 +331,17 @@ sync; **el esquema ya la hace posible y está probada a nivel BD**):
 Pruebas: `test_m8_m9_sync_infraestructura.py` — casos A/B/C/D con
 PostgreSQL real (`test_pg_ledger_*`, `test_hash_canonico_*`).
 
-### 4.5 Bajada — `GET /api/v1/sync/pull?cursor=<seq>&limit=N` [PENDIENTE — no implementado]
+### 4.5 Bajada — `GET /api/v1/sync/pull?device_id=<uuid>&cursor=<seq>&limit=N` [IMPLEMENTADO I-4, commit `50568e72`, 2026-11-04]
 
 ```jsonc
 {
   "changes": [
     { "seq": 1042, "entity_type": "finca", "entity_id": "uuid",
-      "op": "upsert", "data": {...}, "server_version": 4 },
+      "op": "upsert", "data": {...}, "entity_version": 4 },
     { "seq": 1043, "entity_type": "lote", "entity_id": "uuid",
-      "op": "delete", "data": null }
+      "op": "delete", "data": null, "entity_version": 5 }
   ],
-  "next_cursor": "1043",
+  "next_cursor": 1043,
   "has_more": false
 }
 ```
@@ -352,6 +352,23 @@ transacción local: si cae a mitad, reintenta desde el último cursor
 confirmado (los cambios son `upsert`/`delete` idempotentes, reaplicar
 es seguro). Paginación por `seq`, no por offset — inmune a inserciones
 durante la descarga.
+
+Semántica implementada (I-4): `device_id` obligatorio en query y
+verificado contra la sesión exacta del token (mismo vínculo H-1 que
+push); `cursor` entero ≥0 (default 0; <0 → 422); `limit` 1–500
+(default 100); consulta `seq > cursor ORDER BY seq ASC LIMIT
+limit+1` — el stream se sirve completo, sin filtros por
+`entity_type`; `has_more` por la fila extra; `next_cursor` = último
+seq **incluido** (página vacía → `next_cursor = cursor`); `cursor >
+last_seq` del scope → **409 `future_cursor`** sin servir ni tocar
+metadatos. ACK implícito (Alternativa B): el cursor recibido es la
+posición persistida del cliente — `dispositivos.ultimo_pull_seq`
+solo refleja ese cursor (`GREATEST` + tope `last_seq`, monótono por
+dispositivo), **metadato de seguimiento, NO suelo seguro de purga**.
+No existe aún retención/purga, `min_seq`, snapshot ni
+`requires_full_resync` — sin retención no hay detección posible de
+cursor obsoleto. El CRUD web aún no emite a `sync_cambios`: sus
+cambios NO llegan al pull hasta integrar los writers.
 
 ### 4.6 El cursor incremental — diseño corregido
 
@@ -751,8 +768,9 @@ F2  m8 (infra sync) + POST /api/v1/sync/push (entidades M3)
      commit 5c8b6fe6, 2026-11-04]
 F2b m9 (metadatos entidad) [IMPLEMENTADO junto a m8]
 F3  GET /api/v1/sync/pull + changelog + Web muestra datos sync
-    [PENDIENTE — incluye integrar los writers del CRUD web al
-     changelog: hoy el CRUD web no emite a sync_cambios]
+    [PARCIAL: pull implementado I-4 (commit 50568e72); sigue
+     pendiente integrar los writers del CRUD web al changelog —
+     hoy el CRUD web no emite a sync_cambios]
 F4  Evidencias 2 fases + SHA-256 + reanudación
 F5  Conflictos UI (móvil resolución + Web corrección-versionada)
 F6  Sync de registros_campo/levantamientos/eventos (ampliar alcance)
@@ -824,6 +842,19 @@ update/delete vía sync — pero nunca después de exponerlos.
   tombstones/purga, integración de los writers web al changelog (el
   CRUD web actual no emite a `sync_cambios`), más tipos de entidad,
   cliente móvil y cola offline.
+- **2026-11-04 (implementación I-4):** `GET /api/v1/sync/pull`
+  — commit `50568e72` (rama `feat/sync-offline-first-m8-m9`, 5
+  archivos). `device_id` en query verificado contra la sesión
+  exacta del token; paginación `seq > cursor ORDER BY seq ASC
+  LIMIT limit+1`; `next_cursor` = último incluido; cursor <0 → 422,
+  > `last_seq` → 409 `future_cursor`. ACK implícito por cursor
+  recibido (Alternativa B): `ultimo_pull_seq` monótono y acotado,
+  metadato de seguimiento — no suelo de purga. Suite: 555 passed,
+  0 skipped (ejecutada antes del commit). **Pendiente:** writers
+  web→changelog, update/delete, conflictos por `version`,
+  tombstones, retención/`min_seq`/snapshot/`requires_full_resync`,
+  más entidades, cliente móvil offline-first — la sincronización
+  bidireccional completa sigue pendiente.
 
 ### Propuestas en este documento (pendientes de aprobación)
 
@@ -856,3 +887,4 @@ update/delete vía sync — pero nunca después de exponerlos.
 | 2026-10-22 | Corrección FAIL-01 (auditoría): `payload_hash NOT NULL` en `sync_operaciones` + serialización canónica y semántica A–D documentadas (§4.4); m8 re-aplicada a `melantia_test` (drop de tabla vacía sin dependientes + re-ejecución `-1`); tests ampliados a 20/20 verdes incl. concurrencia misma-clave con commit y rollback | `test_pg_ledger_concurrencia_misma_clave`, `test_pg_misma_clave_hash_distinto_detectable`, `_hash_op`; `melantia_db` verificada intacta |
 | 2026-10-22 | Aplicación de m8+m9 a `melantia_db` tras respaldo `melantia_db_pre_m8_m9_20261022.dump` (SHA-256 `912d8e35…60c6f`) con restauración desechable comparada; commits `974baf08`/`57b33a3d` | psql exit 0 en ambas; introspección post (52 tablas, 9 columnas, NOT NULL, UNIQUE); smoke `sync_next_seq` con rollback |
 | 2026-11-04 | Marcas de implementación I-2: §4.2 push [IMPLEMENTADO create-only], §4.5 pull [PENDIENTE], §12 F2/F2b implementadas con nota writers web→changelog pendiente, §13 decisión registrada | commit `5c8b6fe6` (`git show`); suite 517 passed pre-commit; `MELANTIA_ESTADO_IMPLEMENTACION.md` §D |
+| 2026-11-04 | Marcas de implementación I-4: §4.5 pull [IMPLEMENTADO] con contrato real (device_id en query, entity_version, 422/409, ACK implícito B, ultimo_pull_seq metadato); §12 F3 parcial (writers web pendiente); §13 decisión registrada | commit `50568e72` (`git show`); suite 555 passed pre-commit; `MELANTIA_ESTADO_IMPLEMENTACION.md` §D |
