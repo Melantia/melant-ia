@@ -269,6 +269,60 @@ async def ultimo_seq(conn, scope: str) -> Optional[int]:
         return int(fila["last_seq"]) if fila else None
 
 
+async def cambios_desde_cursor(
+    conn, scope: str, cursor: int, limit_plus_one: int
+) -> list:
+    """
+    Página incremental del changelog: todos los eventos del scope
+    con seq > cursor, en orden ascendente. El caller pide limit+1
+    para decidir has_more sin consulta extra. El stream se sirve
+    COMPLETO — ningún filtro por entity_type puede ocultar seqs.
+    """
+    async with conn.cursor(row_factory=dict_row) as cur:
+        await cur.execute(
+            """
+            SELECT seq, entity_type, entity_id, op, data,
+                   entity_version
+            FROM sync_cambios
+            WHERE scope = %s AND seq > %s
+            ORDER BY seq ASC
+            LIMIT %s
+            """,
+            (scope, cursor, limit_plus_one),
+        )
+        return await cur.fetchall()
+
+
+async def confirmar_pull_seq(
+    conn, dispositivo_id: UUID, cursor: int, last_seq: int
+) -> None:
+    """
+    ACK implícito del cursor enviado por el dispositivo
+    (Alternativa B de la auditoría I-4): el cursor declara la
+    última secuencia que el cliente ya persistió en su tx local.
+
+    Monótono por dispositivo (GREATEST): una petición antigua o
+    repetida jamás hace retroceder el valor. Con tope en last_seq
+    (máximo confirmado del scope): el ACK nunca supera lo que el
+    servidor confirmó — LEAST defensivo aunque el service ya
+    rechaza cursores futuros.
+
+    ultimo_pull_seq es metadato de seguimiento: NO es suelo seguro
+    de purga (un dispositivo restaurado puede reenviar un cursor
+    menor mientras el valor conserva el máximo anterior).
+    """
+    async with conn.cursor(row_factory=dict_row) as cur:
+        await cur.execute(
+            """
+            UPDATE dispositivos
+            SET ultimo_pull_seq = GREATEST(
+                COALESCE(ultimo_pull_seq, 0), LEAST(%s, %s))
+            WHERE id = %s
+            """,
+            (cursor, last_seq, str(dispositivo_id)),
+        )
+
+
 # ============================================================================
 # SNAPSHOTS — estado confirmado de la entidad para el changelog
 # ============================================================================

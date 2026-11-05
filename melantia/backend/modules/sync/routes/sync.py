@@ -6,11 +6,18 @@ HTTP 200 siempre que el sobre sea válido: los resultados individuales
 por operación van en el cuerpo (applied/duplicate/conflict/error),
 conforme a docs §4.3 — un lote no es atómico ni todo-o-nada.
 """
-from fastapi import APIRouter, Depends
+from uuid import UUID
+
+from fastapi import APIRouter, Depends, Query
 
 from core.dependencies import get_db
 from modules.sync.auth import SyncIdentity, get_sync_identity
-from modules.sync.schemas import SyncPushRequest, SyncPushResponse
+from modules.sync.schemas import (
+    SyncPullResponse,
+    SyncPushRequest,
+    SyncPushResponse,
+)
+from modules.sync.services import pull as svc_pull
 from modules.sync.services import push as svc
 
 router = APIRouter(prefix="/sync", tags=["Sincronización"])
@@ -34,4 +41,31 @@ async def push(
     conn, _ = db
     return await svc.procesar_push(
         conn, identidad.usuario_id, identidad.session_id, data
+    )
+
+
+@router.get("/pull", response_model=SyncPullResponse)
+async def pull(
+    device_id: UUID = Query(...),
+    cursor: int = Query(0, ge=0),
+    limit: int = Query(100, ge=1, le=500),
+    identidad: SyncIdentity = Depends(get_sync_identity),
+    db=Depends(get_db),
+):
+    """
+    Descarga incremental del changelog del scope autenticado.
+
+    `cursor` = última secuencia que el dispositivo ya persistió en su
+    transacción local (0 = dispositivo nuevo). La página que se
+    entrega aquí NO queda confirmada por el servidor: el siguiente
+    cursor enviado actúa como ACK (Alternativa B).
+    """
+    conn, _ = db
+    return await svc_pull.procesar_pull(
+        conn,
+        identidad.usuario_id,
+        identidad.session_id,
+        device_id,
+        cursor,
+        limit,
     )

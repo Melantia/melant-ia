@@ -69,3 +69,29 @@ class SyncOpResult(BaseModel):
 class SyncPushResponse(BaseModel):
     results: List[SyncOpResult]
     pull_cursor_hint: Optional[int] = None
+
+
+# ============================================================================
+# PULL — descarga incremental del changelog (I-4)
+# ============================================================================
+#
+# Contrato §4.5 del diseño: cada change es una fila de sync_cambios.
+# `scope`/`actor_id`/`created_at` no se exponen: el scope ya es el
+# del token, el actor no es necesario para aplicar el cambio y `seq`
+# ya ordena. `op` admite los valores del DDL ('upsert','delete');
+# hoy solo existen 'upsert' — no se inventan eventos delete.
+
+
+class SyncChange(BaseModel):
+    seq: int
+    entity_type: str
+    entity_id: UUID
+    op: str
+    data: Optional[Dict[str, Any]] = None
+    entity_version: Optional[int] = None
+
+
+class SyncPullResponse(BaseModel):
+    changes: List[SyncChange]
+    next_cursor: int
+    has_more: bool
