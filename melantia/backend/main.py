@@ -123,6 +123,9 @@ from modules.ecosistema_profesional.router import (
 from modules.gestion_fincas.router import (
     router as gestion_fincas_router,
 )
+from modules.sync.router import (
+    router as sync_router,
+)
 
 
 # ============================================================================
@@ -949,6 +952,12 @@ app.include_router(
     gestion_fincas_router,
     prefix="/api/v1",
     tags=["Gestión de Fincas"],
+)
+
+app.include_router(
+    sync_router,
+    prefix="/api/v1",
+    tags=["Sincronización"],
 )
 
 

@@ -216,14 +216,25 @@ async def obtener_finca_completa(
 
 
 async def insertar_finca(
-    conn, usuario_id: str, campos: Dict[str, Any]
+    conn,
+    usuario_id: str,
+    campos: Dict[str, Any],
+    entity_id: Optional[Any] = None,
 ) -> Dict[str, Any]:
     """
     Inserta una finca del usuario. `campos` ya viene depurado por el
     service (solo claves de _CAMPOS_FINCA_EDITABLES).
+
+    `entity_id` (opcional): UUID asignado por el cliente en el push de
+    sincronización — se inserta como PK en lugar del DEFAULT
+    uuid_generate_v4(). Los llamadores web no lo pasan y conservan el
+    comportamiento actual.
     """
     columnas = ["usuario_id", *campos.keys()]
     valores = [usuario_id, *campos.values()]
+    if entity_id is not None:
+        columnas.insert(0, "id")
+        valores.insert(0, str(entity_id))
     placeholders = ", ".join(["%s"] * len(columnas))
     async with conn.cursor(row_factory=dict_row) as cursor:
         await cursor.execute(
@@ -266,11 +277,22 @@ async def actualizar_finca(
 
 
 async def insertar_lote(
-    conn, finca_id: str, campos: Dict[str, Any]
+    conn,
+    finca_id: str,
+    campos: Dict[str, Any],
+    entity_id: Optional[Any] = None,
 ) -> Dict[str, Any]:
-    """Inserta un lote en una finca (propiedad ya verificada en service)."""
+    """
+    Inserta un lote en una finca (propiedad ya verificada en service).
+
+    `entity_id` (opcional): UUID del cliente vía sync — mismo contrato
+    que insertar_finca; sin él se usa el DEFAULT del esquema.
+    """
     columnas = ["finca_id", *campos.keys()]
     valores = [finca_id, *campos.values()]
+    if entity_id is not None:
+        columnas.insert(0, "id")
+        valores.insert(0, str(entity_id))
     placeholders = ", ".join(["%s"] * len(columnas))
     async with conn.cursor(row_factory=dict_row) as cursor:
         await cursor.execute(
