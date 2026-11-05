@@ -1,7 +1,7 @@
 # MELANTIA — ESTADO DE IMPLEMENTACIÓN Y BITÁCORA TÉCNICA
 
 > **Última revisión:** 2026-11-05 · **Rama verificada:** `feat/sync-offline-first-m8-m9`
-> **Último hito validado:** I-6 (commit `feat(sync): support optimistic updates with conflict detection`) · Suite: **588 passed, 0 skipped, 0 errors**
+> **Último hito validado:** I-7 (push delete + tombstones + B-3, pendiente de commit) · Suite: **612 passed, 0 skipped, 0 errors**
 > (suite ejecutada antes del commit de cierre)
 
 ---
@@ -62,7 +62,7 @@ diferencia se registra como conflicto pendiente.
 | Geografía y migraciones | **IMPLEMENTADO Y VERIFICADO** | Catálogo DPA/INEC 24/221/1.042 con UNIQUE en los 3 niveles (`migracion_inicial` + m2–m7); seeds idempotentes |
 | Pruebas automatizadas | **IMPLEMENTADO Y VERIFICADO** | 444 passed contra `melantia_test`; conftest fail-closed |
 | Aplicación móvil | **DISEÑADO, NO IMPLEMENTADO** | React Native aprobado en Master (§2); no existe proyecto móvil en el repo |
-| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (infraestructura BD + push create + pull incremental implementados; update/delete/móvil pendientes) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync (m8+m9) aplicada en `melantia_test` y `melantia_db`**: ledger `sync_operaciones` con `payload_hash` SHA-256, changelog `sync_cambios`, asignación transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id`. **I-2 implementado (commit `5c8b6fe6`):** `POST /api/v1/sync/push` create-only de `finca`/`lote`, UUID de cliente, una tx por op, idempotencia por ledger, vínculo token→sesión→dispositivo. **I-4 implementado (commit `50568e72`):** `GET /api/v1/sync/pull` — descarga incremental por `seq ASC` con paginación `limit+1`, `next_cursor`/`has_more`, cursor independiente por dispositivo, ACK implícito por cursor recibido, `ultimo_pull_seq` monótono, cursor futuro → 409. **I-5 implementado (commit `028a041e`):** writers Web→changelog — crear/actualizar finca y lote + aplicar levantamiento emiten `upsert` atómico con `version = version+1` en updates. **I-6 implementado:** `update` en push con concurrencia optimista — `base_version` obligatoria (422), predicado `version=base_version` (TOCTOU), conflicto → `server_state` persistido en ledger (rejugable), sin escritura ni seq. Conflictos: detección+persistencia+estado implementados; resolución automática e UI pendientes. Pendiente: delete/tombstones, retención/purga/`requires_full_resync`, más entidades, cliente móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
+| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (infraestructura BD + push create + pull incremental implementados; update/delete/móvil pendientes) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync (m8+m9) aplicada en `melantia_test` y `melantia_db`**: ledger `sync_operaciones` con `payload_hash` SHA-256, changelog `sync_cambios`, asignación transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id`. **I-2 implementado (commit `5c8b6fe6`):** `POST /api/v1/sync/push` create-only de `finca`/`lote`, UUID de cliente, una tx por op, idempotencia por ledger, vínculo token→sesión→dispositivo. **I-4 implementado (commit `50568e72`):** `GET /api/v1/sync/pull` — descarga incremental por `seq ASC` con paginación `limit+1`, `next_cursor`/`has_more`, cursor independiente por dispositivo, ACK implícito por cursor recibido, `ultimo_pull_seq` monótono, cursor futuro → 409. **I-5 implementado (commit `028a041e`):** writers Web→changelog — crear/actualizar finca y lote + aplicar levantamiento emiten `upsert` atómico con `version = version+1` en updates. **I-6 implementado:** `update` en push con concurrencia optimista — `base_version` obligatoria (422), predicado `version=base_version` (TOCTOU), conflicto → `server_state` persistido en ledger (rejugable), sin escritura ni seq. Conflictos: detección+persistencia+`server_state` implementados; resolución automática e UI pendientes. **I-7 implementado:** `delete` en push — soft-delete (`deleted_at`+`version+1`) con `base_version` obligatoria y predicado `version=base_version AND deleted_at IS NULL` (TOCTOU), tombstone `op='delete'` atómico en `sync_cambios`, conflicto/idempotencia como I-6, finca con lotes activos→`has_dependents` (Opción A: borrar lotes primero), B-3: filtros `deleted_at IS NULL` en lecturas/updates web y repos — tombstoned = inexistente (sin resurrección). Pendiente: retención/purga/`requires_full_resync`, más entidades, cliente móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
 | Administración General | **DISEÑADO, NO IMPLEMENTADO** | Concepto completo en §42 + `docs/ADMINISTRACION.md`; sin rutas `/api/v1/admin/*` ni roles admin en código |
 | Trazabilidad | **IMPLEMENTADO PARCIALMENTE** | Schema completo (plantillas, fases, eventos, cadena de custodia); sin API dedicada; evidencias tiene router propio |
 | Evidencias | **IMPLEMENTADO PARCIALMENTE** | Router `/api/evidencias` + UI M11 existen; verificador SHA-256 por confirmar |
@@ -396,11 +396,11 @@ rutas `/api/v1/admin/*` todavía.
   push confirmado entre páginas). `melantia_db` intacta.
 - **Pendiente:** writers web→changelog (el CRUD web no emite —
   sus cambios NO aparecen en pull y no se finge que aparecen),
-  update/delete, conflictos por `version`, tombstones, retención/
-  purga/`min_seq`/snapshot/`requires_full_resync` (sin detección
-  de cursor obsoleto posible aún), más tipos de entidad, cliente
-  móvil offline-first. La sincronización bidireccional completa
-  sigue pendiente.
+  conflictos por `version`, retención/purga/`min_seq`/snapshot/
+  `requires_full_resync` (sin detección de cursor obsoleto
+  posible aún), más tipos de entidad, cliente móvil
+  offline-first. La sincronización bidireccional completa sigue
+  pendiente.
 
 ### 2026-11-05 — Sync Push I-6: update con concurrencia optimista
 
@@ -435,6 +435,57 @@ rutas `/api/v1/admin/*` todavía.
 - **Pendiente:** `delete`/tombstones, resolución automática e UI
   de conflictos, retención/purga/`requires_full_resync`, más
   entidades, cliente móvil.
+
+### 2026-11-05 — Sync Push I-7: delete con tombstones + B-3
+
+- `POST /api/v1/sync/push` admite `action='delete'` para
+  `finca`/`lote` (commit de cierre pendiente — alcance
+  implementado y validado). `create`/`update`/`pull` intactos.
+- `base_version` obligatoria en `delete` → 422 del sobre si
+  falta (misma regla que `update`).
+- Soft-delete: `deleted_at = CURRENT_TIMESTAMP` +
+  `version = version + 1` — nunca `DELETE FROM`; identidad e
+  historial conservados.
+- Concurrencia optimista: predicado
+  `version = base_version AND deleted_at IS NULL` en el propio
+  UPDATE (TOCTOU igual que I-6). Versión distinta → `conflict`
+  + `server_state` persistido en el ledger y rejugable, sin
+  escritura ni seq.
+- Tombstone: evento `op='delete'` en `sync_cambios` con la
+  `entity_version` incrementada, en la misma tx que el
+  soft-delete — Pull I-4 lo transporta sin cambios de contrato.
+- **Opción A (política aprobada):** delete de finca con lotes
+  activos → error `has_dependents`, sin modificar finca ni
+  lotes; el usuario elimina los lotes uno a uno y reintenta.
+  `has_dependents` NO se persiste en el ledger: el reintento
+  debe re-evaluar (la finca puede ya no tener dependientes).
+  `bloquear_finca` (`FOR UPDATE`) serializa delete-finca vs
+  INSERT concurrente de lote — la FK `lotes.finca_id` toma
+  FOR KEY SHARE sobre la fila padre.
+- **B-3 resuelta:** `deleted_at IS NULL` en
+  `listar_fincas_usuario`, `obtener_finca`, `listar_lotes_finca`,
+  `obtener_lote`, `actualizar_area_lote`, `actualizar_finca`,
+  `actualizar_lote`, `listar_fincas_usuario_resumen` (conteos de
+  lotes excluyen tombstoned) y `obtener_finca_completa`. Entidad
+  tombstoned → `not_found` indistinguible en web y sync; ni
+  update web ni update sync la resucita; segundo delete sobre la
+  misma entidad (clave nueva) → `not_found`, sin doble tombstone.
+- `fila_finca`/`fila_lote` (sync repo) NO filtran `deleted_at` —
+  intencional: `server_state` y snapshots del changelog pueden
+  necesitar la fila tombstoned.
+- Pruebas: 24 nuevas E2E (`test_sync_push_delete_api.py`) —
+  delete aplicado, 422 sin `base_version`, ajena/inexistente→
+  `not_found`, conflicto por versión y rejugable, doble
+  tombstone→`not_found`, duplicate idempotente, rollback
+  integral post-soft-delete, `has_dependents` (con/sin lote,
+  orden en el sobre, tras borrar lotes), B-3 web+sync, pull
+  `op='delete'`+orden, aislamiento, auth real.
+- Suite completa: **612 passed, 0 skipped, 0 errors** —
+  ejecutada antes del commit de cierre. `melantia_db` intacta.
+- **Pendiente:** resolución automática e UI de conflictos,
+  retención/purga/`min_seq`/snapshot/`requires_full_resync`,
+  M-1 (`expires_at` global), más entidades (hatos), cliente
+  móvil offline-first.
 
 ---
 
@@ -544,6 +595,7 @@ metadatos de sincronización (`version`, `deleted_at`, `device_id`,
 | idem, post-correcciones I-2 (push create) | 2026-11-04 | **517 passed** (+53: 20 canonical + 33 push E2E), 0 skipped, 0 errors — ejecutada antes del commit `5c8b6fe6` |
 | idem, post-I-4 (pull incremental) | 2026-11-04 | **555 passed** (+38 pull E2E), 0 skipped, 0 errors — ejecutada antes del commit `50568e72` |
 | idem, post-I-5+I-6 | 2026-11-05 | **588 passed** (+11 integración web→changelog +22 push update E2E), 0 skipped, 0 errors — ejecutada antes del commit de cierre I-6 |
+| idem, post-I-7 | 2026-11-05 | **612 passed** (+24 push delete/tombstone/B-3 E2E), 0 skipped, 0 errors — ejecutada antes del commit de cierre I-7 |
 | `npm run lint` | 2026-10-20/21 | 0 errores; 2 warnings preexistentes en `DocumentosYImpresion.jsx` (`visualizarFichaDigital`, `evidenciasFiltradas` sin uso) |
 | `npm run build` | 2026-10-21 | OK — 110 módulos, dist generado |
 | m7 en psql `-1` | 2026-10-21 | Aplicada en ambas bases; warnings cosméticos documentados en el header de m7 |
@@ -576,7 +628,7 @@ en `suscripciones/schemas.py`, `datetime.utcnow()` en
 | 11 | Borrado de directorios vacíos con ACL (`assets/`, `business/`, `core_python/`, `data/`, `.pytest_cache/`) | Requiere confirmación del usuario |
 | 12 | Warnings deprecación (`Field(example=)`, `utcnow()`) | Higiene, no urgente |
 | 13 | M-1 global: `resolver_usuario_desde_claims` no exige `expires_at` | Corregido solo en el scope sync (`sesion_autenticada_activa`); pendiente a nivel plataforma |
-| 14 | B-3: `_finca_propia` no filtra `deleted_at` | Inerte en I-2/I-4 (ningún camino escribe tombstones); exigir filtro cuando exista soft-delete |
+| 14 | ~~B-3: `_finca_propia` no filtra `deleted_at`~~ | **RESUELTA en I-7** — filtros `deleted_at IS NULL` en lecturas/updates web y sync; tombstoned se comporta como inexistente |
 | 15 | Writers web → `sync_cambios` no integrados | Los cambios del CRUD web NO aparecen en pull (limitación real verificada por test); integración en la fase de writers correspondiente |
 | 16 | Retención/purga/`min_seq`/snapshot/`requires_full_resync` | No implementados: sin política de retención no hay detección de cursor obsoleto posible; `ultimo_pull_seq` es metadato, no suelo de purga |
 
@@ -616,6 +668,7 @@ el estado final del hito actual.
 | 2026-11-04 | **I-4 Sync Pull incremental**: `GET /api/v1/sync/pull?device_id&cursor&limit` — página `seq ASC` con `limit+1`/`has_more`/`next_cursor` (último incluido), cursor negativo→422, futuro→409 `future_cursor`, ACK implícito por cursor recibido con `ultimo_pull_seq` monótono y acotado (metadato, no suelo de purga), `last_seen_at` actualizado, misma seguridad token→sesión→dispositivo de I-2; commit `50568e72` (5 archivos); suite **555 passed** ejecutada antes del commit; `melantia_db` intacta | `backend/modules/sync/services/pull.py`, `routes/sync.py`, `schemas.py`, `shared/repositories/sync.py`, `test_sync_pull_api.py`; `git show 50568e72` | Verificado |
 | 2026-11-05 | **I-5 Writers Web→changelog**: `_emitir_changelog` en crear/actualizar finca y lote + aplicar levantamiento; `version=version+1` en los 3 UPDATEs web; eventos `upsert` atómicos consumibles por pull; commit `028a041e` (8 archivos); suite 566 passed | `services/{fincas,lotes}.py`, `services/levantamientos.py`, `repositories/{sync,fincas}.py`, `test_web_changelog_integration.py`; `git show 028a041e` | Verificado |
 | 2026-11-05 | **I-6 Push update con concurrencia optimista**: `update` para finca/lote — `base_version` obligatoria (422), predicado `version=base_version` (TOCTOU), conflicto→`server_state` persistido en ledger (rejugable, sin escritura/seq), allowlist por schema, propiedad indistinguible, idempotencia aplicada y conflictiva; suite **588 passed** ejecutada antes del commit; `melantia_db` intacta | `modules/sync/schemas.py`, `services/push.py`, `shared/repositories/fincas.py`, `test_sync_push_{api,update_api}.py` | Verificado |
+| 2026-11-05 | **I-7 Push delete + tombstones + B-3**: `delete` para finca/lote — soft-delete `deleted_at`+`version+1` con `base_version` y predicado TOCTOU `version=base_version AND deleted_at IS NULL`, tombstone `op='delete'` atómico, conflicto+`server_state` como I-6, `has_dependents` si la finca tiene lotes activos (Opción A; FOR UPDATE serializa vs INSERTs de lotes vía FK), B-3: `deleted_at IS NULL` en lecturas/updates (tombstoned=inexistente, sin resurrección, 2.º tombstone→`not_found`); suite **612 passed** ejecutada antes del commit; `melantia_db` intacta | `modules/sync/{schemas,services/push}.py`, `shared/repositories/fincas.py`, `test_sync_push_{api,delete_api}.py` | Verificado |
 
 <!--
 Mantener esta tabla al día con cada hito verificado.

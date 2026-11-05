@@ -750,7 +750,7 @@ def test_push_entity_type_fuera_allowlist(api):
         _op(etype="transaccion_financiera",
             payload={"nombre": "No permitido"}),
         _op(etype="finca", entity_id=str(uuid.uuid4()),
-            action="delete", payload={"nombre": "X"}),
+            action="merge", payload={"nombre": "X"}),
     ])
     res = r.json()["results"]
     assert res[0]["status"] == "error"

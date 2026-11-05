@@ -46,9 +46,11 @@ class SyncOperation(BaseModel):
             raise ValueError(
                 "base_version no aplica a operaciones create"
             )
-        if self.action == "update" and self.base_version is None:
+        if self.action in ("update", "delete") and (
+            self.base_version is None
+        ):
             raise ValueError(
-                "base_version es obligatoria en update"
+                "base_version es obligatoria en update/delete"
             )
         return self
 

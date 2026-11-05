@@ -66,15 +66,21 @@ from shared.sync_canonical import hash_operacion
 
 logger = logging.getLogger("melantia.sync")
 
-# Allowlist del incremento I-6 — create + update, solo fincas y
-# lotes. delete queda fuera hasta el hito de tombstones.
+# Allowlist I-7 — create + update + delete (soft-delete con
+# tombstone), solo fincas y lotes.
 _ENTITY_TYPES = ("finca", "lote")
-_ACTIONS = ("create", "update")
+_ACTIONS = ("create", "update", "delete")
 
 # Restricciones UNIQUE reales del DDL — para distinguir colisiones
 # por e.diag.constraint_name (B-1), nunca por suposición.
 _UQ_LEDGER = "uq_sync_operaciones_client_op"
 _PK_ENTIDADES = {"fincas_pkey", "lotes_pkey"}
+
+
+class _DependientesActivos(MelantiaException):
+    """I-7: delete de finca rechazado por lotes activos —
+    error de negocio identificable `has_dependents` (Opción A:
+    el usuario elimina los lotes uno a uno antes de la finca)."""
 
 
 class _LoteSyncPayload(LoteCreate):
@@ -207,10 +213,16 @@ async def _procesar_operacion(
                 entidad = await _crear_lote(
                     conn, usuario_id, dispositivo_id, op
                 )
-        else:  # update — concurrencia optimista (I-6)
-            entidad, conflicto = await _actualizar_entidad(
-                conn, usuario_id, op
-            )
+        else:
+            if op.action == "update":
+                # update — concurrencia optimista (I-6)
+                entidad, conflicto = await _actualizar_entidad(
+                    conn, usuario_id, op
+                )
+            else:  # delete — soft-delete + tombstone (I-7)
+                entidad, conflicto = await _eliminar_entidad(
+                    conn, usuario_id, op
+                )
             if conflicto is not None:
                 # version_mismatch: nada se escribe en dominio ni
                 # changelog — solo el resultado en el ledger, para
@@ -234,13 +246,14 @@ async def _procesar_operacion(
 
         seq = await sync_repo.siguiente_seq(conn, scope)
         version = int(entidad["version"])
+        op_changelog = "delete" if op.action == "delete" else "upsert"
         await sync_repo.insertar_cambio(
             conn,
             scope,
             seq,
             op.entity_type,
             op.entity_id,
-            "upsert",
+            op_changelog,
             entidad,
             version,
             usuario_id,
@@ -283,6 +296,13 @@ async def _procesar_operacion(
     except (ForeignKeyViolation, CheckViolation) as e:
         await conn.rollback()
         return _error_op(op, "validation", _detalle_seguro(e))
+    except _DependientesActivos:
+        # I-7/Opción A: la finca tiene lotes activos — error de
+        # negocio identificable, sin escritura ni persistencia
+        # (el resultado no se registra; el reintento tras borrar
+        # los lotes debe re-evaluar).
+        await conn.rollback()
+        return _error_op(op, "has_dependents")
     except ResourceNotFoundError:
         # 404 de dominio (finca padre ajena/inexistente vía
         # _finca_propia): indistinguible por diseño (M-2).
@@ -468,7 +488,9 @@ async def _actualizar_entidad(
         propia = actual and propietario == str(usuario_id)
         finca_padre_id = str(actual["finca_id"]) if actual else None
 
-    if not actual or not propia:
+    if not actual or not propia or actual.get("deleted_at"):
+        # B-3 (I-7): una entidad tombstoned se comporta como
+        # inexistente — un update nunca la resucita.
         raise ResourceNotFoundError(
             op.entity_type.capitalize(), str(op.entity_id)
         )
@@ -546,3 +568,86 @@ async def _campos_update(
     if not campos:
         raise DomainValidationError("Ningún campo a actualizar")
     return campos
+
+
+# ============================================================================
+# DOMINIO — delete: soft-delete + tombstone (I-7)
+# ============================================================================
+
+async def _eliminar_entidad(
+    conn, usuario_id: str, op: SyncOperation
+) -> Tuple[Optional[Dict[str, Any]], Optional[Dict[str, Any]]]:
+    """
+    Soft-delete con concurrencia optimista. Devuelve
+    (entidad_tombstoned, None) si se aplicó, o (None, server_state)
+    si hay conflicto — sin tombstone, sin changelog, sin seq.
+
+    Entidad ajena/inexistente → ResourceNotFoundError (el caller la
+    traduce a 'not_found' indistinguible). Entidad ya tombstoned →
+    ResourceNotFoundError igual: por B-3 se comporta como
+    inexistente y nunca se emite un segundo tombstone.
+
+    Finca con lotes activos → _DependientesActivos (Opción A
+    aprobada: el usuario borra los lotes antes que la finca).
+    `bloquear_finca` (FOR UPDATE) serializa la comprobación contra
+    INSERTs concurrentes de lotes — la FK `lotes.finca_id` toma
+    FOR KEY SHARE sobre la fila padre.
+    """
+    if op.entity_type == "finca":
+        actual = await sync_repo.fila_finca(conn, op.entity_id)
+        propia = actual and str(actual["usuario_id"]) == str(usuario_id)
+        finca_padre_id = str(op.entity_id)
+    else:
+        actual = await sync_repo.fila_lote(conn, op.entity_id)
+        propietario = await sync_repo.propietario_lote(
+            conn, op.entity_id
+        )
+        propia = actual and propietario == str(usuario_id)
+        finca_padre_id = str(actual["finca_id"]) if actual else None
+
+    if not actual or not propia or actual.get("deleted_at"):
+        raise ResourceNotFoundError(
+            op.entity_type.capitalize(), str(op.entity_id)
+        )
+
+    if int(actual["version"]) != int(op.base_version):
+        return None, _estado_servidor(actual)
+
+    if op.entity_type == "finca":
+        # Serializar delete-vs-insert-lote ANTES de comprobar
+        # dependientes (misma tx → lock hasta commit).
+        await fincas_repo.bloquear_finca(conn, str(op.entity_id))
+        if await fincas_repo.contar_lotes_activos_finca(
+            conn, str(op.entity_id)
+        ):
+            raise _DependientesActivos(
+                f"La finca {op.entity_id} tiene lotes activos"
+            )
+        borrada = await fincas_repo.eliminar_finca(
+            conn, str(op.entity_id), usuario_id, op.base_version
+        )
+    else:
+        borrada = await fincas_repo.eliminar_lote(
+            conn, str(op.entity_id), finca_padre_id, op.base_version
+        )
+    if not borrada:
+        # TOCTOU: la versión cambió o la entidad fue tombstoned
+        # entre la lectura y el UPDATE — conflicto con el estado
+        # vigente (o not_found si ya no existe como activa).
+        vigente = (
+            await sync_repo.fila_finca(conn, op.entity_id)
+            if op.entity_type == "finca"
+            else await sync_repo.fila_lote(conn, op.entity_id)
+        )
+        if vigente and not vigente.get("deleted_at"):
+            return None, _estado_servidor(vigente)
+        raise ResourceNotFoundError(
+            op.entity_type.capitalize(), str(op.entity_id)
+        )
+
+    entidad = (
+        await sync_repo.fila_finca(conn, op.entity_id)
+        if op.entity_type == "finca"
+        else await sync_repo.fila_lote(conn, op.entity_id)
+    )
+    return entidad, None

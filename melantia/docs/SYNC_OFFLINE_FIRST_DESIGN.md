@@ -218,7 +218,7 @@ un cursor, un changelog y un pull**:
   futura tocara varios scopes, en `ORDER BY scope` — mismo orden en
   todos los writers elimina el interbloqueo entre cursors.
 
-### 4.2 Subida — `POST /api/v1/sync/push` [IMPLEMENTADO: create (I-2, `5c8b6fe6`) + update con concurrencia optimista (I-6, 2026-11-05) — `finca`/`lote`]
+### 4.2 Subida — `POST /api/v1/sync/push` [IMPLEMENTADO: create (I-2, `5c8b6fe6`) + update (I-6) + delete soft-delete/tombstone (I-7, 2026-11-05) — `finca`/`lote`]
 
 ```jsonc
 {
@@ -872,6 +872,20 @@ update/delete vía sync — pero nunca después de exponerlos.
   (ejecutada antes del commit). **Pendiente:** delete/tombstones,
   resolución automática e UI de conflictos, retención/`min_seq`/
   snapshot/`requires_full_resync`, más entidades, móvil.
+
+- **2026-11-05 (implementación I-7):** `action='delete'` en
+  push — soft-delete `deleted_at`+`version+1`, `base_version`
+  obligatoria (422), predicado `version=base_version AND
+  deleted_at IS NULL` (TOCTOU), tombstone `op='delete'` atómico
+  (Pull lo transporta sin cambios), conflicto+`server_state`
+  como I-6, `has_dependents` si la finca tiene lotes activos
+  (Opción A; FOR UPDATE serializa vs INSERTs de lotes vía FK).
+  **B-3 resuelta:** `deleted_at IS NULL` en lecturas/updates
+  web y sync — tombstoned=inexistente, sin resurrección,
+  segundo tombstone → `not_found`. Suite: **612 passed**.
+  **Pendiente:** resolución automática/UI de conflictos,
+  retención/`min_seq`/snapshot/`requires_full_resync`, más
+  entidades, móvil.
 
 ### Propuestas en este documento (pendientes de aprobación)
 

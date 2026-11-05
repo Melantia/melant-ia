@@ -34,6 +34,7 @@ async def listar_fincas_usuario(conn, usuario_id: str) -> List[Dict[str, Any]]:
             LEFT JOIN cantones c    ON f.canton_id = c.id
             LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
             WHERE f.usuario_id = %s
+              AND f.deleted_at IS NULL
             ORDER BY f.nombre
             """,
             (usuario_id,),
@@ -56,6 +57,7 @@ async def obtener_finca(conn, finca_id: str) -> Optional[Dict[str, Any]]:
             LEFT JOIN cantones c    ON f.canton_id = c.id
             LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
             WHERE f.id = %s
+              AND f.deleted_at IS NULL
             """,
             (finca_id,),
         )
@@ -72,6 +74,7 @@ async def listar_lotes_finca(conn, finca_id: str) -> List[Dict[str, Any]]:
                    estado_salud_lote, created_at, updated_at
             FROM lotes
             WHERE finca_id = %s
+              AND deleted_at IS NULL
             ORDER BY nombre_lote
             """,
             (finca_id,),
@@ -91,6 +94,7 @@ async def obtener_lote(conn, lote_id: str) -> Optional[Dict[str, Any]]:
             FROM lotes l
             JOIN fincas f ON l.finca_id = f.id
             WHERE l.id = %s
+              AND l.deleted_at IS NULL
             """,
             (lote_id,),
         )
@@ -113,8 +117,10 @@ async def actualizar_area_lote(
                 version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = %s
+              AND deleted_at IS NULL
               AND finca_id IN (
                   SELECT id FROM fincas WHERE usuario_id = %s
+                    AND deleted_at IS NULL
               )
             RETURNING id, finca_id, nombre_lote, area_metros_cuadrados
             """,
@@ -169,8 +175,8 @@ async def listar_fincas_usuario_resumen(
                 p.nombre AS provincia,
                 c.nombre AS canton,
                 pa.nombre AS parroquia,
-                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id)
-                    AS num_lotes,
+                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id
+                   AND l.deleted_at IS NULL) AS num_lotes,
                 (SELECT COUNT(*) FROM hatos_ganaderos h
                  WHERE h.finca_id = f.id) AS num_hatos,
                 f.created_at, f.updated_at
@@ -179,6 +185,7 @@ async def listar_fincas_usuario_resumen(
             LEFT JOIN cantones c    ON f.canton_id = c.id
             LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
             WHERE f.usuario_id = %s
+              AND f.deleted_at IS NULL
             ORDER BY f.nombre
             """,
             (usuario_id,),
@@ -200,8 +207,8 @@ async def obtener_finca_completa(
                 p.nombre AS provincia,
                 c.nombre AS canton,
                 pa.nombre AS parroquia,
-                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id)
-                    AS num_lotes,
+                (SELECT COUNT(*) FROM lotes l WHERE l.finca_id = f.id
+                   AND l.deleted_at IS NULL) AS num_lotes,
                 (SELECT COUNT(*) FROM hatos_ganaderos h
                  WHERE h.finca_id = f.id) AS num_hatos,
                 f.created_at, f.updated_at
@@ -210,6 +217,7 @@ async def obtener_finca_completa(
             LEFT JOIN cantones c    ON f.canton_id = c.id
             LEFT JOIN parroquias pa ON f.parroquia_id = pa.id
             WHERE f.id = %s
+              AND f.deleted_at IS NULL
             """,
             (finca_id,),
         )
@@ -281,7 +289,8 @@ async def actualizar_finca(
             SET {", ".join(asignaciones)},
                 version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
-            WHERE id = %s AND usuario_id = %s{cond_version}
+            WHERE id = %s AND usuario_id = %s
+              AND deleted_at IS NULL{cond_version}
             RETURNING id, usuario_id, nombre, provincia_id, canton_id,
                       parroquia_id, coordenadas_gps, ciiu_id, tipo_pyme,
                       created_at, updated_at
@@ -352,11 +361,99 @@ async def actualizar_lote(
             SET {", ".join(asignaciones)},
                 version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
-            WHERE id = %s AND finca_id = %s{cond_version}
+            WHERE id = %s AND finca_id = %s
+              AND deleted_at IS NULL{cond_version}
             RETURNING id, finca_id, nombre_lote, cultivo_principal,
                       variedad, fecha_siembra, area_metros_cuadrados,
                       estado_salud_lote, created_at, updated_at
             """,
             tuple(valores),
+        )
+        return await cursor.fetchone()
+
+
+# ============================================================================
+# SOFT-DELETE — tombstones (I-7). Ninguna función borra físicamente:
+# el tombstone conserva identidad e historial; deleted_at IS NULL en
+# lecturas/updates ordinarios hace la entidad inexistente (B-3).
+# ============================================================================
+
+async def bloquear_finca(conn, finca_id: str) -> None:
+    """
+    `SELECT … FOR UPDATE` sobre la fila de la finca — serializa el
+    delete de la finca contra INSERTs de lotes concurrentes: la FK de
+    `lotes.finca_id` toma FOR KEY SHARE sobre la fila padre, que
+    bloquea con FOR UPDATE. Sin este lock, un lote podría insertarse
+    entre la comprobación de dependientes y el tombstone.
+    """
+    async with conn.cursor() as cursor:
+        await cursor.execute(
+            "SELECT 1 FROM fincas WHERE id = %s FOR UPDATE",
+            (finca_id,),
+        )
+        await cursor.fetchone()
+
+
+async def contar_lotes_activos_finca(conn, finca_id: str) -> int:
+    """Lotes NO tombstoned de la finca — regla has_dependents (I-7)."""
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            """
+            SELECT COUNT(*) AS n
+            FROM lotes
+            WHERE finca_id = %s AND deleted_at IS NULL
+            """,
+            (finca_id,),
+        )
+        return (await cursor.fetchone())["n"]
+
+
+async def eliminar_finca(
+    conn, finca_id: str, usuario_id: str, base_version: int
+) -> Optional[Dict[str, Any]]:
+    """
+    Soft-delete de una finca propia con concurrencia optimista:
+    `deleted_at = NOW()` + `version+1` solo si `version = base_version`
+    y aún no está eliminada — predicado TOCTOU idéntico al update.
+    0 filas → conflicto (otra tx cambió la versión) o ya tombstoned.
+    """
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            """
+            UPDATE fincas
+            SET deleted_at = CURRENT_TIMESTAMP,
+                version = version + 1,
+                updated_at = CURRENT_TIMESTAMP
+            WHERE id = %s AND usuario_id = %s
+              AND deleted_at IS NULL
+              AND version = %s
+            RETURNING id, version
+            """,
+            (finca_id, usuario_id, base_version),
+        )
+        return await cursor.fetchone()
+
+
+async def eliminar_lote(
+    conn, lote_id: str, finca_id: str, base_version: int
+) -> Optional[Dict[str, Any]]:
+    """
+    Soft-delete de un lote vinculado a `finca_id` con predicado
+    optimista `version = base_version` y `deleted_at IS NULL` —
+    mismo contrato TOCTOU que eliminar_finca.
+    """
+    async with conn.cursor(row_factory=dict_row) as cursor:
+        await cursor.execute(
+            """
+            UPDATE lotes
+            SET deleted_at = CURRENT_TIMESTAMP,
+                version = version + 1,
+                updated_at = CURRENT_TIMESTAMP
+            WHERE id = %s AND finca_id = %s
+              AND deleted_at IS NULL
+              AND version = %s
+            RETURNING id, version
+            """,
+            (lote_id, finca_id, base_version),
         )
         return await cursor.fetchone()
