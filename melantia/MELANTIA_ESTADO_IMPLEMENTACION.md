@@ -1,7 +1,8 @@
 # MELANTIA — ESTADO DE IMPLEMENTACIÓN Y BITÁCORA TÉCNICA
 
-> **Última revisión:** 2026-10-22 · **Rama verificada:** `feat/sync-offline-first-m8-m9`
-> **Último commit verificado:** `57b33a3d` · Suite: **464 passed, 0 skipped, 0 errors**
+> **Última revisión:** 2026-11-04 · **Rama verificada:** `feat/sync-offline-first-m8-m9`
+> **Último commit verificado:** `5c8b6fe6` · Suite: **517 passed, 0 skipped, 0 errors**
+> (suite ejecutada antes del commit)
 
 ---
 
@@ -61,7 +62,7 @@ diferencia se registra como conflicto pendiente.
 | Geografía y migraciones | **IMPLEMENTADO Y VERIFICADO** | Catálogo DPA/INEC 24/221/1.042 con UNIQUE en los 3 niveles (`migracion_inicial` + m2–m7); seeds idempotentes |
 | Pruebas automatizadas | **IMPLEMENTADO Y VERIFICADO** | 444 passed contra `melantia_test`; conftest fail-closed |
 | Aplicación móvil | **DISEÑADO, NO IMPLEMENTADO** | React Native aprobado en Master (§2); no existe proyecto móvil en el repo |
-| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (infraestructura de BD implementada en ambas bases; protocolo/servicio pendiente) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync (m8+m9) aplicada en `melantia_test` y `melantia_db`**: ledger `sync_operaciones` con `payload_hash`, changelog `sync_cambios`, cursor transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id` en fincas/lotes/hatos — probada con concurrencia real. Pendiente: endpoints push/pull, servicio de sync, cliente móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
+| Offline / sincronización | **IMPLEMENTADO PARCIALMENTE** (infraestructura BD + push create implementados; pull/update/delete/móvil pendientes) | Base servidor real: `client_operation_id` (m2/B1), dedup `hash_transaccion` (m6), `dispositivos`/`sesiones` (m4), `audit_eventos`. **Infraestructura sync (m8+m9) aplicada en `melantia_test` y `melantia_db`**: ledger `sync_operaciones` con `payload_hash`, changelog `sync_cambios`, cursor transaccional `sync_cursors`+`sync_next_seq`, metadatos `version`/`deleted_at`/`dispositivo_origen_id` en fincas/lotes/hatos. **I-2 implementado (commit `5c8b6fe6`):** `POST /api/v1/sync/push` create-only de `finca`/`lote` con UUID de cliente, una transacción por op, idempotencia por ledger, vínculo token→sesión→dispositivo (Supabase; legacy rechazado). Pendiente: pull, update/delete, conflictos por `version`, tombstones, writers web→changelog (el CRUD web aún no emite a `sync_cambios`), más entidades, cliente móvil. Diseño: `docs/SYNC_OFFLINE_FIRST_DESIGN.md` |
 | Administración General | **DISEÑADO, NO IMPLEMENTADO** | Concepto completo en §42 + `docs/ADMINISTRACION.md`; sin rutas `/api/v1/admin/*` ni roles admin en código |
 | Trazabilidad | **IMPLEMENTADO PARCIALMENTE** | Schema completo (plantillas, fases, eventos, cadena de custodia); sin API dedicada; evidencias tiene router propio |
 | Evidencias | **IMPLEMENTADO PARCIALMENTE** | Router `/api/evidencias` + UI M11 existen; verificador SHA-256 por confirmar |
@@ -284,6 +285,71 @@ rutas `/api/v1/admin/*` todavía.
   sincronización, cliente móvil — infraestructura de BD ≠ sync
   completa.
 
+### 2026-11-04 — Sync Push I-2: create de finca/lote end-to-end
+
+- Commit `5c8b6fe6` en `feat/sync-offline-first-m8-m9` (14
+  archivos: 2 modificados + 12 nuevos). Sin migraciones: usa la
+  infraestructura m8/m9 ya aplicada en `melantia_db` y
+  `melantia_test`.
+- `POST /api/v1/sync/push` — módulo `backend/modules/sync/` con la
+  convención EP (router agregador + `routes/` + `schemas/` +
+  `services/` → `shared/repositories/`). Sobre
+  `{device_id, operations[1..50]}`; cada op lleva
+  `client_operation_id`/`entity_id` UUID asignados por el cliente.
+  Resultados por operación (`applied`/`duplicate`/`conflict`/
+  `error`): el lote no es atómico — una tx por operación.
+- Alcance create-only: `entity_type ∈ {finca, lote}`,
+  `action='create'`; allowlist por op con error individual.
+- Idempotencia: inserción especulativa en `sync_operaciones` como
+  primer paso de la tx; `UNIQUE(usuario_id, client_operation_id)`
+  bloquea a la concurrente hasta su commit/rollback;
+  `payload_hash` SHA-256 canónico distingue `duplicate` de
+  `idempotency_key_reuse`. Dominio + `sync_next_seq` + changelog
+  `sync_cambios` + resultado del ledger confirman o revierten
+  juntos.
+- Seguridad (auditoría I-2 aplicada): **H-1** — la sesión EXACTA
+  del token se vincula por `session_id` verificado (claim JWT,
+  nunca decodificado sin firma) → `sesiones.auth_session_id` +
+  `estado='activa'` + `expires_at > now` +
+  `sesiones.dispositivo_id == device_id` del sobre + dispositivo
+  propio y activo. Ninguna otra sesión activa del usuario
+  sustituye el vínculo; la procedencia registrada
+  (`dispositivo_origen_id`, `sync_operaciones.dispositivo_id`) es
+  la del dispositivo de la sesión autenticada. Credenciales
+  legacy HS256 sin `session_id` verificable → 401 controlado
+  (solo en este endpoint; `get_current_user` global intacto).
+  **M-1** (scope sync): `expires_at` se exige de verdad — una
+  'activa' vencida no barrida no pasa. **M-2**:
+  `ResourceNotFoundError` → `not_found` indistinguible; cualquier
+  otra `MelantiaException`/inesperada → rollback + log +
+  `internal` (la infraestructura ya no se disfraza de 404).
+  **B-1**: colisiones UNIQUE clasificadas por
+  `diag.constraint_name` (`uq_sync_operaciones_client_op` → flujo
+  idempotente; `fincas_pkey`/`lotes_pkey` → política de
+  propiedad; otras → `internal`). **B-2**: `base_version` no nulo
+  en `create` → 422 del sobre en el schema.
+- **B-3 registrado para I-3:** `_finca_propia` no filtra
+  `deleted_at` — inerte hoy (ningún camino escribe tombstones);
+  exigir filtro cuando exista soft-delete.
+- Pruebas (ejecutadas antes del commit): 20 unitarias
+  canon/schema + 33 E2E push contra `melantia_test` — auth real
+  con tokens ES256 firmados de prueba + JWKS simulado (sesión
+  correcta/otra sesión del mismo usuario/dispositivo ajeno/
+  revocada/vencida-activa/legacy/sin puente), idempotencia
+  intra-lote y entre requests, concurrencia real misma clave con
+  conexiones independientes, rollback integral verificado hasta
+  `sync_cursors.last_seq`, `DatabaseConnectionError` → `internal`
+  (no `not_found`), `create`+`base_version` → 422. Suite
+  completa: **517 passed, 0 skipped, 0 errors**.
+- `melantia_db` intacta tras las pruebas
+  (`sync_operaciones`/`sync_cambios` = 0).
+- **Pendiente:** `GET /api/v1/sync/pull`, `update`/`delete`,
+  conflictos por `version`, tombstones y purga, más tipos de
+  entidad, writers web integrados al changelog (el CRUD web
+  actual no emite a `sync_cambios`), cliente móvil Expo+SQLite y
+  cola offline. M-1 global de `resolver_usuario_desde_claims`
+  (sin `expires_at`) queda pendiente a nivel plataforma.
+
 ---
 
 ## E. Base de datos y entorno
@@ -389,6 +455,7 @@ metadatos de sincronización (`version`, `deleted_at`, `device_id`,
 | idem, post-Gestión-Fincas | 2026-10-21 | **444 passed** (+23 E2E M3), 0 skipped, 0 errors |
 | idem, post-m8/m9 | 2026-10-21 | **459 passed** (+15 sync infra), 0 skipped, 0 errors — `melantia_test` con m8/m9 |
 | idem, post-FAIL-01 (`payload_hash`) | 2026-10-22 | **464 passed** (+5 idempotencia), 0 skipped, 0 errors |
+| idem, post-correcciones I-2 (push create) | 2026-11-04 | **517 passed** (+53: 20 canonical + 33 push E2E), 0 skipped, 0 errors — ejecutada antes del commit `5c8b6fe6` |
 | `npm run lint` | 2026-10-20/21 | 0 errores; 2 warnings preexistentes en `DocumentosYImpresion.jsx` (`visualizarFichaDigital`, `evidenciasFiltradas` sin uso) |
 | `npm run build` | 2026-10-21 | OK — 110 módulos, dist generado |
 | m7 en psql `-1` | 2026-10-21 | Aplicada en ambas bases; warnings cosméticos documentados en el header de m7 |
@@ -410,9 +477,9 @@ en `suscripciones/schemas.py`, `datetime.utcnow()` en
 |---|---|---|
 | 1 | Merge/integración de `feat/gestion-fincas-end-to-end` a la rama de trabajo | Decisión del propietario del repo |
 | 2 | Stack móvil: decisión Expo vs RN bare + persistencia local (SQLite propuesto) | Hito offline-first F0/F1 — ver `docs/SYNC_OFFLINE_FIRST_DESIGN.md` §3, §13 |
-| 3 | Cola de sincronización + sync engine incremental + reintentos | Hito offline-first F2–F3; contrato propuesto en el diseño |
-| 4 | Idempotencia y resolución de conflictos en flujos | Convención propuesta: `client_operation_id` transversal (patrón B1) + `version` para conflictos |
-| 5 | Migraciones de sync — **m8+m9 aplicadas a `melantia_test` y `melantia_db`** (2026-10-22, respaldo verificado) | Infraestructura validada; sigue pendiente el servicio push/pull |
+| 3 | Cola de sincronización + sync engine incremental + reintentos | Push create implementado (I-2, commit `5c8b6fe6`); pendiente `GET /api/v1/sync/pull` y la cola del lado cliente |
+| 4 | Idempotencia y resolución de conflictos en flujos | Idempotencia por ledger + `payload_hash` implementada en push create; conflictos por `version` pendientes con update/delete |
+| 5 | Migraciones de sync — **m8+m9 aplicadas a `melantia_test` y `melantia_db`** (2026-10-22, respaldo verificado) | Infraestructura usada por I-2; pendiente el pull y los demás acciones |
 | 6 | M3: hatos, animales individuales, eventos de trazabilidad | Ampliación del módulo |
 | 7 | Auditoría transversal (`audit_eventos` writers, ADM-2) + verificador SHA-256 evidencias | Antes de exponer trazabilidad pública |
 | 8 | Excel import/export/validación, dashboard, reportes | Semana-4 del plan MVP |
@@ -420,6 +487,8 @@ en `suscripciones/schemas.py`, `datetime.utcnow()` en
 | 10 | Administración General (`/api/v1/admin/*`, roles L0–L5) | **Solo cuando corresponda** a su fase aprobada |
 | 11 | Borrado de directorios vacíos con ACL (`assets/`, `business/`, `core_python/`, `data/`, `.pytest_cache/`) | Requiere confirmación del usuario |
 | 12 | Warnings deprecación (`Field(example=)`, `utcnow()`) | Higiene, no urgente |
+| 13 | M-1 global: `resolver_usuario_desde_claims` no exige `expires_at` | Corregido solo en el scope sync (`sesion_autenticada_activa`); pendiente a nivel plataforma |
+| 14 | B-3: `_finca_propia` no filtra `deleted_at` | Inerte en I-2 (ningún camino escribe tombstones); exigir filtro en I-3 antes de crear lotes bajo fincas eliminadas |
 
 **Siguiente hito técnico recomendado:** diseño e implementación
 controlada de la **sincronización offline-first** (almacenamiento
@@ -453,6 +522,7 @@ el estado final del hito actual.
 | 2026-10-21 | Implementación m8+m9 **solo en `melantia_test`**: scope `usr:` resuelto, `client_operation_id` en ledger (no entidades), 15 tests nuevos incl. prueba concurrente real de cursores — rama `feat/sync-offline-first-m8-m9` | `m8_*.sql`, `m9_*.sql` aplicados con `psql -1`; `test_m8_m9_sync_infraestructura.py` 15/15 | Verificado |
 | 2026-10-22 | Corrección FAIL-01: `payload_hash` en ledger + semántica A–D; m8 re-aplicada en `melantia_test` tras verificar vacío/dependencias; tests 20/20; `melantia_db` intacta verificada | m8 corregida + `test_m8_m9_sync_infraestructura.py`; psql `\d`/counts pre y post | Verificado |
 | 2026-10-22 | Aplicación de m8+m9 a `melantia_db` tras respaldo verificado por restauración real (`melantia_db_pre_m8_m9_20261022.dump`, SHA-256 `912d8e35…60c6f`); 52 tablas/9 columnas/UNIQUE/NOT NULL verificados; smoke `sync_next_seq` con rollback sin residuo; procedimiento psql corregido (ON_ERROR_STOP, sin `-1` sobre archivos con BEGIN/COMMIT propio) | `pg_restore` exit 0 + comparación 12 métricas; introspección post-aplicación de `melantia_db` | Verificado |
+| 2026-11-04 | **I-2 Sync Push create (finca/lote)**: `POST /api/v1/sync/push` con UUID de cliente, una tx por op, ledger idempotente `payload_hash` (duplicate/`idempotency_key_reuse`), changelog+cursor transaccionales, vínculo token→sesión→dispositivo (Supabase real; legacy rechazado, H-1), `expires_at` exigido (M-1 scope sync), errores infra≠`not_found` (M-2), UNIQUE por `constraint_name` (B-1), `base_version` en create rechazado (B-2), B-3 documentado; commit `5c8b6fe6` (14 archivos); suite **517 passed** ejecutada antes del commit; `melantia_db` intacta | `backend/modules/sync/`, `shared/repositories/sync.py`, `shared/sync_canonical.py`, `test_sync_{canonical,push_api}.py`; `git show 5c8b6fe6` | Verificado |
 
 <!--
 Mantener esta tabla al día con cada hito verificado.
