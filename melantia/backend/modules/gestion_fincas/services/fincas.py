@@ -28,6 +28,7 @@ from modules.gestion_fincas.schemas.fincas import (
 )
 from shared.repositories import fincas as repo
 from shared.repositories import geografia as geo_repo
+from shared.repositories import sync as sync_repo
 
 logger = logging.getLogger("melantia.fincas")
 
@@ -115,6 +116,9 @@ async def crear_finca(
     )
     campos = {k: v for k, v in campos.items() if v is not None}
     nueva = await repo.insertar_finca(conn, usuario_id, campos)
+    # I-5: el evento del changelog confirma en la MISMA transacción
+    # que la finca — snapshot post-escritura compatible con pull.
+    await _emitir_changelog(conn, usuario_id, "finca", nueva["id"])
     await conn.commit()
     logger.info(
         "[FINCAS] finca %s creada por usuario %s", nueva["id"], usuario_id
@@ -169,6 +173,35 @@ async def actualizar_finca(
     )
     if not fila:
         raise FincaNotFoundError(str(finca_id))
+    # I-5: changelog atómico con el UPDATE (version ya incrementada).
+    await _emitir_changelog(conn, usuario_id, "finca", finca_id)
     await conn.commit()
     logger.info("[FINCAS] finca %s actualizada por %s", finca_id, usuario_id)
     return await repo.obtener_finca_completa(conn, str(finca_id))
+
+
+async def _emitir_changelog(
+    conn, usuario_id: str, entity_type: str, entity_id
+) -> None:
+    """
+    Registra el evento 'upsert' de una escritura Web en sync_cambios
+    (I-5). Snapshot completo post-escritura — mismo contrato que los
+    eventos del push, consumible por GET /api/v1/sync/pull. La
+    secuencia y la fila confirman junto al dominio en el commit del
+    caller: si algo falla, ni entidad, ni changelog, ni seq quedan.
+    """
+    scope = sync_repo.scope_de_usuario(usuario_id)
+    fila = (
+        await sync_repo.fila_finca(conn, entity_id)
+        if entity_type == "finca"
+        else await sync_repo.fila_lote(conn, entity_id)
+    )
+    await sync_repo.emitir_upsert(
+        conn,
+        scope,
+        entity_type,
+        fila["id"],
+        fila,
+        fila.get("version"),
+        usuario_id,
+    )

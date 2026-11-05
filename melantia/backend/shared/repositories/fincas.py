@@ -110,6 +110,7 @@ async def actualizar_area_lote(
             """
             UPDATE lotes
             SET area_metros_cuadrados = %s,
+                version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = %s
               AND finca_id IN (
@@ -265,6 +266,7 @@ async def actualizar_finca(
             f"""
             UPDATE fincas
             SET {", ".join(asignaciones)},
+                version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = %s AND usuario_id = %s
             RETURNING id, usuario_id, nombre, provincia_id, canton_id,
@@ -323,6 +325,7 @@ async def actualizar_lote(
             f"""
             UPDATE lotes
             SET {", ".join(asignaciones)},
+                version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
             WHERE id = %s AND finca_id = %s
             RETURNING id, finca_id, nombre_lote, cultivo_principal,

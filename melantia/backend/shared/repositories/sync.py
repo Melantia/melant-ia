@@ -254,6 +254,29 @@ async def insertar_cambio(
         return await cursor.fetchone()
 
 
+async def emitir_upsert(
+    conn,
+    scope: str,
+    entity_type: str,
+    entity_id,
+    data: Optional[Dict[str, Any]],
+    entity_version: Optional[int],
+    actor_id: str,
+) -> Dict[str, Any]:
+    """
+    Evento 'upsert' del changelog para una escritura NO sincronizada
+    (escritores Web — I-5): asigna seq transaccional e inserta la fila
+    de sync_cambios en la MISMA transacción que el dominio. No hace
+    commit: el caller confirma dominio + changelog juntos — si falla,
+    ambos revierten (incluido el seq reservado).
+    """
+    seq = await siguiente_seq(conn, scope)
+    return await insertar_cambio(
+        conn, scope, seq, entity_type, entity_id,
+        "upsert", data, entity_version, actor_id,
+    )
+
+
 async def ultimo_seq(conn, scope: str) -> Optional[int]:
     """
     last_seq actual del scope (post-commit de las ops del lote —

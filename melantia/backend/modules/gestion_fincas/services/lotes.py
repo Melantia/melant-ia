@@ -13,7 +13,10 @@ from uuid import UUID
 
 from core.exceptions import LoteNotFoundError, ValidationError
 from modules.gestion_fincas.schemas.lotes import LoteCreate, LoteUpdate
-from modules.gestion_fincas.services.fincas import _finca_propia
+from modules.gestion_fincas.services.fincas import (
+    _emitir_changelog,
+    _finca_propia,
+)
 from shared.repositories import fincas as repo
 
 logger = logging.getLogger("melantia.lotes")
@@ -34,6 +37,8 @@ async def crear_lote(
     await _finca_propia(conn, finca_id, usuario_id)
     campos = data.model_dump(exclude_unset=True)
     nuevo = await repo.insertar_lote(conn, str(finca_id), campos)
+    # I-5: changelog atómico con el INSERT.
+    await _emitir_changelog(conn, usuario_id, "lote", nuevo["id"])
     await conn.commit()
     logger.info(
         "[LOTES] lote %s creado en finca %s por %s",
@@ -60,6 +65,8 @@ async def actualizar_lote(
     )
     if not fila:
         raise LoteNotFoundError(str(lote_id))
+    # I-5: changelog atómico con el UPDATE (version ya incrementada).
+    await _emitir_changelog(conn, usuario_id, "lote", lote_id)
     await conn.commit()
     logger.info(
         "[LOTES] lote %s de finca %s actualizado por %s",

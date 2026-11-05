@@ -782,12 +782,21 @@ def test_pull_tipo_entidad_desconocido_se_entrega(api):
     assert body["changes"][0]["entity_type"] == "hato_futuro"
 
 
-def test_pull_web_crud_no_emite_changelog(api):
-    """El CRUD web actual NO escribe en sync_cambios: una finca
-    creada por la vía web no aparece en pull (limitación real y
-    documentada — no se finge cobertura)."""
+def test_pull_web_crud_emite_changelog(api):
+    """I-5 integró los writers web al changelog: una finca creada
+    por la vía web SÍ aparece en pull como evento 'upsert' con
+    entity_version 1 (antes de I-5 no emitía — documentado en
+    docs/SYNC_OFFLINE_FIRST_DESIGN.md §4.5/§12)."""
     _override(U_A)
     r = api.post("/api/v1/fincas", json={"nombre": "Finca Solo Web"})
     assert r.status_code == 201
+    fid = r.json()["id"]
     r2 = _pull(api, D_A, cursor=0)
-    assert r2.json()["changes"] == []
+    body = r2.json()
+    assert len(body["changes"]) == 1
+    evt = body["changes"][0]
+    assert evt["entity_type"] == "finca"
+    assert evt["entity_id"] == fid
+    assert evt["op"] == "upsert"
+    assert evt["entity_version"] == 1
+    assert evt["data"]["nombre"] == "Finca Solo Web"

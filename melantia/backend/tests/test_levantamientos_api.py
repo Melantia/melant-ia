@@ -329,7 +329,17 @@ LOTE_ROW = {
 
 def test_aplicar_actualiza_lote_y_estado(conn_factory):
     aplicado = {**LEV_CERRADO, "estado": "aplicado"}
-    conn = _FakeConn(results=[LEV_CERRADO, LOTE_ROW, aplicado, PUNTOS_4])
+    # I-5: tras guardar_resultado, _emitir_changelog ejecuta 3
+    # consultas más (fila_lote → sync_next_seq → insertar_cambio)
+    # dentro de la misma transacción, antes del commit.
+    lote_full = {**LOTE_ROW, "version": 2}
+    sync_seq = {"sync_next_seq": 1}
+    cambio_ret = {"scope": f"usr:{USER_A}", "seq": 1,
+                  "created_at": NOW}
+    conn = _FakeConn(results=[
+        LEV_CERRADO, LOTE_ROW, aplicado,
+        lote_full, sync_seq, cambio_ret, PUNTOS_4,
+    ])
     conn_factory(conn)
     r = client.post(f"{BASE}/{LEV}/aplicar")
     assert r.status_code == 200

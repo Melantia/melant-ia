@@ -34,6 +34,7 @@ from modules.asistente_tecnico.schemas.levantamientos import (
     PuntoGPSCaptura,
 )
 from modules.asistente_tecnico.services import geodesia
+from modules.gestion_fincas.services.fincas import _emitir_changelog
 from shared.repositories import fincas as repo_fincas
 from shared.repositories import levantamientos as repo
 
@@ -255,6 +256,12 @@ async def aplicar_levantamiento(
     )
     if not actualizado:
         raise ResourceNotFoundError("Levantamiento", levantamiento_id)
+    # I-5: la actualización de área del lote es una escritura de
+    # dominio — su evento de changelog confirma en la misma
+    # transacción que el lote y el resultado del levantamiento.
+    await _emitir_changelog(
+        conn, usuario_id, "lote", lote["id"]
+    )
     await conn.commit()
 
     logger.info(
