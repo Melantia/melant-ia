@@ -28,8 +28,9 @@ Autenticación del sobre (H-1): la sesión MELANTIA exacta del token
 no vencida, ser del usuario y pertenecer al dispositivo declarado
 — ninguna otra sesión activa del usuario sirve de sustituto.
 """
+import json
 import logging
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, Tuple
 from uuid import UUID
 
 from psycopg.errors import CheckViolation, ForeignKeyViolation, UniqueViolation
@@ -41,8 +42,14 @@ from core.exceptions import (
     ResourceNotFoundError,
     ValidationError as DomainValidationError,
 )
-from modules.gestion_fincas.schemas.fincas import FincaCreate
-from modules.gestion_fincas.schemas.lotes import LoteCreate
+from modules.gestion_fincas.schemas.fincas import (
+    FincaCreate,
+    FincaUpdate,
+)
+from modules.gestion_fincas.schemas.lotes import (
+    LoteCreate,
+    LoteUpdate,
+)
 from modules.gestion_fincas.services.fincas import (
     _finca_propia,
     _resolver_geo,
@@ -59,9 +66,10 @@ from shared.sync_canonical import hash_operacion
 
 logger = logging.getLogger("melantia.sync")
 
-# Allowlist del incremento I-2 — create-only, solo fincas y lotes.
+# Allowlist del incremento I-6 — create + update, solo fincas y
+# lotes. delete queda fuera hasta el hito de tombstones.
 _ENTITY_TYPES = ("finca", "lote")
-_ACTIONS = ("create",)
+_ACTIONS = ("create", "update")
 
 # Restricciones UNIQUE reales del DDL — para distinguir colisiones
 # por e.diag.constraint_name (B-1), nunca por suposición.
@@ -190,14 +198,39 @@ async def _procesar_operacion(
 
     # --- Dominio + cursor + changelog + resultado: una sola tx ---
     try:
-        if op.entity_type == "finca":
-            entidad = await _crear_finca(
-                conn, usuario_id, dispositivo_id, op
+        if op.action == "create":
+            if op.entity_type == "finca":
+                entidad = await _crear_finca(
+                    conn, usuario_id, dispositivo_id, op
+                )
+            else:
+                entidad = await _crear_lote(
+                    conn, usuario_id, dispositivo_id, op
+                )
+        else:  # update — concurrencia optimista (I-6)
+            entidad, conflicto = await _actualizar_entidad(
+                conn, usuario_id, op
             )
-        else:
-            entidad = await _crear_lote(
-                conn, usuario_id, dispositivo_id, op
-            )
+            if conflicto is not None:
+                # version_mismatch: nada se escribe en dominio ni
+                # changelog — solo el resultado en el ledger, para
+                # que un reintento idéntico reproduzca el conflicto.
+                await sync_repo.actualizar_resultado_operacion(
+                    conn,
+                    ledger["id"],
+                    {
+                        "status": "conflict",
+                        "server_state": conflicto,
+                    },
+                )
+                await conn.commit()
+                return SyncOpResult(
+                    client_operation_id=op.client_operation_id,
+                    status="conflict",
+                    entity_id=op.entity_id,
+                    code="version_mismatch",
+                    server_state=conflicto,
+                )
 
         seq = await sync_repo.siguiente_seq(conn, scope)
         version = int(entidad["version"])
@@ -286,6 +319,17 @@ async def _resolver_duplicado(
     )
     resultado = fila["resultado"] if fila else None
     if fila and fila["payload_hash"] == h and resultado:
+        if resultado.get("status") == "conflict":
+            # Reintento idéntico de una op que ya fue rechazada por
+            # versión: se reproduce el mismo conflicto y estado —
+            # el reintento resuelto usa otra client_operation_id.
+            return SyncOpResult(
+                client_operation_id=op.client_operation_id,
+                status="conflict",
+                entity_id=op.entity_id,
+                code="version_mismatch",
+                server_state=resultado.get("server_state"),
+            )
         return SyncOpResult(
             client_operation_id=op.client_operation_id,
             status="duplicate",
@@ -378,3 +422,127 @@ async def _crear_lote(
         conn, str(data.finca_id), campos, entity_id=op.entity_id
     )
     return await sync_repo.fila_lote(conn, nuevo["id"])
+
+
+# ============================================================================
+# DOMINIO — update con concurrencia optimista (I-6)
+# ============================================================================
+
+def _estado_servidor(fila: Optional[Dict[str, Any]]) -> Dict[str, Any]:
+    """Snapshot JSON-seguro de la fila actual del servidor, para
+    `server_state` en conflictos: el cliente lo necesita completo
+    para resolver (fechas/UUID/Decimal serializados como str)."""
+    if not fila:
+        return {}
+    return json.loads(
+        json.dumps(fila, ensure_ascii=False, default=str)
+    )
+
+
+async def _actualizar_entidad(
+    conn, usuario_id: str, op: SyncOperation
+) -> Tuple[Optional[Dict[str, Any]], Optional[Dict[str, Any]]]:
+    """
+    Update con concurrencia optimista. Devuelve
+    (entidad_nueva, None) si la versión coincidió y se aplicó, o
+    (None, server_state) si hay conflicto — sin tocar la entidad,
+    sin changelog, sin consumir seq.
+
+    Propiedad indistinguible: entidad inexistente o ajena →
+    ResourceNotFoundError (el caller la traduce a 'not_found').
+
+    TOCTOU: además de comparar `version` leída vs `base_version`,
+    el UPDATE exige `version = base_version` en el predicado —
+    si una transacción concurrente subió la versión entre ambas,
+    el UPDATE no toca fila y se clasifica conflicto igual.
+    """
+    if op.entity_type == "finca":
+        actual = await sync_repo.fila_finca(conn, op.entity_id)
+        propia = actual and str(actual["usuario_id"]) == str(usuario_id)
+        finca_padre_id = None
+    else:
+        actual = await sync_repo.fila_lote(conn, op.entity_id)
+        propietario = await sync_repo.propietario_lote(
+            conn, op.entity_id
+        )
+        propia = actual and propietario == str(usuario_id)
+        finca_padre_id = str(actual["finca_id"]) if actual else None
+
+    if not actual or not propia:
+        raise ResourceNotFoundError(
+            op.entity_type.capitalize(), str(op.entity_id)
+        )
+
+    if int(actual["version"]) != int(op.base_version):
+        return None, _estado_servidor(actual)
+
+    campos = await _campos_update(conn, actual, op)
+
+    if op.entity_type == "finca":
+        actualizada = await fincas_repo.actualizar_finca(
+            conn,
+            str(op.entity_id),
+            usuario_id,
+            campos,
+            base_version=op.base_version,
+        )
+    else:
+        actualizada = await fincas_repo.actualizar_lote(
+            conn,
+            str(op.entity_id),
+            finca_padre_id,
+            campos,
+            base_version=op.base_version,
+        )
+    if not actualizada:
+        # TOCTOU real: otra tx incrementó la versión entre la
+        # lectura y el UPDATE — conflicto con el estado vigente.
+        vigente = (
+            await sync_repo.fila_finca(conn, op.entity_id)
+            if op.entity_type == "finca"
+            else await sync_repo.fila_lote(conn, op.entity_id)
+        )
+        return None, _estado_servidor(vigente or actual)
+
+    nueva = (
+        await sync_repo.fila_finca(conn, op.entity_id)
+        if op.entity_type == "finca"
+        else await sync_repo.fila_lote(conn, op.entity_id)
+    )
+    return nueva, None
+
+
+async def _campos_update(
+    conn, actual: Dict[str, Any], op: SyncOperation
+) -> Dict[str, Any]:
+    """
+    Payload → campos editables. Los schemas FincaUpdate/LoteUpdate
+    (extra="forbid") son la allowlist: id, usuario_id, version,
+    deleted_at y todo campo no declarado se rechazan por schema —
+    el caller lo clasifica 'validation'. Misma regla geo que la
+    vía web (_resolver_geo sobre el estado actual).
+    """
+    if op.entity_type == "finca":
+        data = FincaUpdate.model_validate(op.payload)
+        campos = data.model_dump(exclude_unset=True)
+        if not campos:
+            raise DomainValidationError("Ningún campo a actualizar")
+        geo_keys = {"provincia_id", "canton_id", "parroquia_id"}
+        if geo_keys & campos.keys():
+            prov, cant, parr = await _resolver_geo(
+                conn,
+                campos.get("provincia_id", actual["provincia_id"]),
+                campos.get("canton_id", actual["canton_id"]),
+                campos.get("parroquia_id", actual["parroquia_id"]),
+            )
+            campos.update(
+                {"provincia_id": prov, "canton_id": cant,
+                 "parroquia_id": parr}
+            )
+        return campos
+
+    data = LoteUpdate.model_validate(op.payload)
+    campos = data.model_dump(exclude_unset=True)
+    if not campos:
+        raise DomainValidationError("Ningún campo a actualizar")
+    return campos

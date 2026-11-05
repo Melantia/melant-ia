@@ -218,7 +218,7 @@ un cursor, un changelog y un pull**:
   futura tocara varios scopes, en `ORDER BY scope` — mismo orden en
   todos los writers elimina el interbloqueo entre cursors.
 
-### 4.2 Subida — `POST /api/v1/sync/push` [IMPLEMENTADO I-2, commit `5c8b6fe6`, 2026-11-04 — create-only `finca`/`lote`]
+### 4.2 Subida — `POST /api/v1/sync/push` [IMPLEMENTADO: create (I-2, `5c8b6fe6`) + update con concurrencia optimista (I-6, 2026-11-05) — `finca`/`lote`]
 
 ```jsonc
 {
@@ -856,6 +856,23 @@ update/delete vía sync — pero nunca después de exponerlos.
   más entidades, cliente móvil offline-first — la sincronización
   bidireccional completa sigue pendiente.
 
+- **2026-11-05 (implementación I-5):** writers Web→changelog —
+  `_emitir_changelog` (commit `028a041e`) en crear/actualizar
+  finca/lote + aplicar levantamiento; `version=version+1` en los
+  UPDATEs web; eventos `upsert` atómicos consumibles por pull.
+  Suite: 566 passed.
+- **2026-11-05 (implementación I-6):** `action='update'` en push
+  — commit local `feat(sync): support optimistic updates with
+  conflict detection`. `base_version` obligatoria (422);
+  comparación + predicado `version=base_version` (TOCTOU);
+  allowlist por schema (`id`/`usuario_id`/`version`/`deleted_at`
+  no editables); conflicto → `server_state` persistido en el
+  ledger y rejugable, sin escritura/changelog/seq. Propiedad
+  indistinguible (404 ajena/inexistente). Suite: **588 passed**
+  (ejecutada antes del commit). **Pendiente:** delete/tombstones,
+  resolución automática e UI de conflictos, retención/`min_seq`/
+  snapshot/`requires_full_resync`, más entidades, móvil.
+
 ### Propuestas en este documento (pendientes de aprobación)
 
 - Contrato `/api/v1/sync/push` + `/api/v1/sync/pull` por lotes con
@@ -888,3 +905,4 @@ update/delete vía sync — pero nunca después de exponerlos.
 | 2026-10-22 | Aplicación de m8+m9 a `melantia_db` tras respaldo `melantia_db_pre_m8_m9_20261022.dump` (SHA-256 `912d8e35…60c6f`) con restauración desechable comparada; commits `974baf08`/`57b33a3d` | psql exit 0 en ambas; introspección post (52 tablas, 9 columnas, NOT NULL, UNIQUE); smoke `sync_next_seq` con rollback |
 | 2026-11-04 | Marcas de implementación I-2: §4.2 push [IMPLEMENTADO create-only], §4.5 pull [PENDIENTE], §12 F2/F2b implementadas con nota writers web→changelog pendiente, §13 decisión registrada | commit `5c8b6fe6` (`git show`); suite 517 passed pre-commit; `MELANTIA_ESTADO_IMPLEMENTACION.md` §D |
 | 2026-11-04 | Marcas de implementación I-4: §4.5 pull [IMPLEMENTADO] con contrato real (device_id en query, entity_version, 422/409, ACK implícito B, ultimo_pull_seq metadato); §12 F3 parcial (writers web pendiente); §13 decisión registrada | commit `50568e72` (`git show`); suite 555 passed pre-commit; `MELANTIA_ESTADO_IMPLEMENTACION.md` §D |
+| 2026-11-05 | Marcas I-5/I-6: §4.2 push ampliado a create+update con concurrencia optimista (base_version, TOCTOU, conflicto+server_state, idempotencia conflictiva); §13 decisiones I-5 e I-6 registradas | commits `028a041e` + cierre I-6 (`git show`); suites 566/588 passed; `MELANTIA_ESTADO_IMPLEMENTACION.md` §D |

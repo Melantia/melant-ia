@@ -36,14 +36,19 @@ class SyncOperation(BaseModel):
     client_created_at: Optional[datetime] = None
 
     @model_validator(mode="after")
-    def _base_version_no_aplica_a_create(self):
-        """Un create no tiene versión previa que comparar:
-        base_version debe venir omitido o null. Rechazarlo aquí
-        (422 del sobre) evita que el hash de idempotencia varíe por
-        un campo sin significado (B-2)."""
+    def _base_version_segun_accion(self):
+        """create: no tiene versión previa que comparar —
+        base_version debe venir omitido o null (B-2).
+        update (I-6): la concurrencia optimista exige declarar la
+        versión que el dispositivo conoció — sin ella el servidor
+        no puede detectar modificaciones concurrentes."""
         if self.action == "create" and self.base_version is not None:
             raise ValueError(
                 "base_version no aplica a operaciones create"
+            )
+        if self.action == "update" and self.base_version is None:
+            raise ValueError(
+                "base_version es obligatoria en update"
             )
         return self
 
@@ -64,6 +69,7 @@ class SyncOpResult(BaseModel):
     server_version: Optional[int] = None
     code: Optional[str] = None
     detail: Optional[str] = None
+    server_state: Optional[Dict[str, Any]] = None
 
 
 class SyncPushResponse(BaseModel):

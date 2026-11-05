@@ -252,15 +252,28 @@ async def insertar_finca(
 
 
 async def actualizar_finca(
-    conn, finca_id: str, usuario_id: str, campos: Dict[str, Any]
+    conn,
+    finca_id: str,
+    usuario_id: str,
+    campos: Dict[str, Any],
+    base_version: Optional[int] = None,
 ) -> Optional[Dict[str, Any]]:
     """
     UPDATE parcial de campos editables de una finca PROPIA. La cláusula
     usuario_id impide tocar fincas ajenas: si no hay fila, el service
     responde 404 indistinguible.
+
+    `base_version` (opcional, I-6 sync): el predicado exige además
+    `version = base_version` — protección TOCTOU de la concurrencia
+    optimista: si otra transacción ya incrementó la versión, el
+    UPDATE no toca filas y el caller clasifica conflicto.
     """
     asignaciones = [f"{k} = %s" for k in campos]
     valores = [*campos.values(), finca_id, usuario_id]
+    cond_version = ""
+    if base_version is not None:
+        cond_version = " AND version = %s"
+        valores.append(base_version)
     async with conn.cursor(row_factory=dict_row) as cursor:
         await cursor.execute(
             f"""
@@ -268,7 +281,7 @@ async def actualizar_finca(
             SET {", ".join(asignaciones)},
                 version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
-            WHERE id = %s AND usuario_id = %s
+            WHERE id = %s AND usuario_id = %s{cond_version}
             RETURNING id, usuario_id, nombre, provincia_id, canton_id,
                       parroquia_id, coordenadas_gps, ciiu_id, tipo_pyme,
                       created_at, updated_at
@@ -311,15 +324,27 @@ async def insertar_lote(
 
 
 async def actualizar_lote(
-    conn, lote_id: str, finca_id: str, campos: Dict[str, Any]
+    conn,
+    lote_id: str,
+    finca_id: str,
+    campos: Dict[str, Any],
+    base_version: Optional[int] = None,
 ) -> Optional[Dict[str, Any]]:
     """
     UPDATE parcial de un lote vinculado a `finca_id` (la propiedad de la
     finca ya se verificó en el service). None → el lote no pertenece a
     esa finca → 404 indistinguible.
+
+    `base_version` (opcional, I-6 sync): predicado optimista
+    `version = base_version` — mismo contrato TOCTOU que
+    actualizar_finca.
     """
     asignaciones = [f"{k} = %s" for k in campos]
     valores = [*campos.values(), lote_id, finca_id]
+    cond_version = ""
+    if base_version is not None:
+        cond_version = " AND version = %s"
+        valores.append(base_version)
     async with conn.cursor(row_factory=dict_row) as cursor:
         await cursor.execute(
             f"""
@@ -327,7 +352,7 @@ async def actualizar_lote(
             SET {", ".join(asignaciones)},
                 version = version + 1,
                 updated_at = CURRENT_TIMESTAMP
-            WHERE id = %s AND finca_id = %s
+            WHERE id = %s AND finca_id = %s{cond_version}
             RETURNING id, finca_id, nombre_lote, cultivo_principal,
                       variedad, fecha_siembra, area_metros_cuadrados,
                       estado_salud_lote, created_at, updated_at
