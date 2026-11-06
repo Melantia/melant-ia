@@ -148,6 +148,69 @@ def test_sesion_sospechosa_bloquea():
     assert _motivo(conn) == "sesion_no_activa"
 
 
+# ============================================================================
+# M-1 — expires_at en la autenticación global
+# ============================================================================
+
+def test_sesion_activa_pero_vencida_bloquea():
+    """estado='activa' + expires_at pasado → sesion_no_activa (el
+    estado solo no basta: M-1 exige vigencia temporal real)."""
+    conn = _FakeConn([
+        PUENTE_ACTIVO,
+        {**SESION_ACTIVA,
+         "expires_at": NOW - timedelta(seconds=1)},
+    ])
+    assert _motivo(conn) == "sesion_no_activa"
+
+
+def test_sesion_activa_vigente_resuelve():
+    """expires_at futuro → resolución normal del usuario (la
+    regresión del caso base ya cubierto sigue en el test de
+    entrada, pero se refuerza con margen explícito)."""
+    conn = _FakeConn([
+        PUENTE_ACTIVO,
+        {**SESION_ACTIVA,
+         "expires_at": datetime.now(timezone.utc)
+         + timedelta(days=30)},
+    ])
+    uid = run(
+        sesion_service.resolver_usuario_desde_claims(conn, CLAIMS)
+    )
+    assert uid == str(USUARIO)
+
+
+def test_sesion_expira_en_el_limite_bloquea():
+    """expires_at == instante de evaluación → vencida (<=):
+    la igualdad no concede margen."""
+    conn = _FakeConn([
+        PUENTE_ACTIVO,
+        {**SESION_ACTIVA,
+         "expires_at": datetime.now(timezone.utc)},
+    ])
+    assert _motivo(conn) == "sesion_no_activa"
+
+
+def test_sesion_expires_at_nulo_bloquea():
+    """expires_at=None → sesion_no_activa, no TypeError/500:
+    fail-closed ante datos anómalos (DDL lo hace NOT NULL)."""
+    conn = _FakeConn([
+        PUENTE_ACTIVO,
+        {**SESION_ACTIVA, "expires_at": None},
+    ])
+    assert _motivo(conn) == "sesion_no_activa"
+
+
+def test_sesion_expires_at_naive_bloquea():
+    """expires_at naive (sin tz) → sesion_no_activa: nunca se
+    asume una zona horaria arbitraria (no fail-open implícito)."""
+    conn = _FakeConn([
+        PUENTE_ACTIVO,
+        {**SESION_ACTIVA,
+         "expires_at": datetime.now() + timedelta(days=30)},
+    ])
+    assert _motivo(conn) == "sesion_no_activa"
+
+
 def test_sub_malformado():
     conn = _FakeConn()
     assert _motivo(conn, {**CLAIMS, "sub": "no-es-uuid"}

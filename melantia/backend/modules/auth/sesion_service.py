@@ -24,12 +24,15 @@ Invariantes (no negociables):
   memoria — su custodia cifrada espera la decisión de gestión de
   claves (pendiente, reportado al usuario).
 """
+import logging
 import uuid
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 from uuid import UUID
 
 from shared.repositories import audit, auth_puente, sesiones
+
+logger = logging.getLogger("melantia.sesion_service")
 
 # F7a.1 §4/§8: dos refresh del mismo session_id en <5 s = colisión
 # (el patrón legítimo es ~1 refresh/hora).
@@ -97,6 +100,25 @@ async def resolver_usuario_desde_claims(
     if sesion is None:
         raise SesionError("sesion_inexistente")
     if sesion["estado"] != "activa":
+        raise SesionError("sesion_no_activa")
+    # M-1: la autenticación global exige además sesión no vencida —
+    # antes solo el scope sync verificaba expires_at, así una
+    # sesión 'activa' pero vencida seguía autorizando la API web.
+    # Fail-closed también ante datos anómalos: expires_at nulo o
+    # naive (imposible según el DDL timestamptz NOT NULL, pero si
+    # apareciera) se trata como sesión inválida, nunca como válida
+    # — la anomalía queda en logs, no en un 500 ni en un bypass.
+    expira = sesion["expires_at"]
+    if (
+        expira is None
+        or expira.tzinfo is None
+        or expira <= datetime.now(timezone.utc)
+    ):
+        if expira is None or expira.tzinfo is None:
+            logger.warning(
+                "[SESION] expires_at anómalo (%r) en sesión %s",
+                expira, sesion.get("id"),
+            )
         raise SesionError("sesion_no_activa")
 
     return str(puente["usuario_id"])
