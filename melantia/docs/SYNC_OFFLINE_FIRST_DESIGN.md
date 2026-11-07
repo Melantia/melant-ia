@@ -762,15 +762,21 @@ serialización del contrato. Con PostgreSQL real: todo lo que toque
 
 ```text
 F0  Stack móvil Expo + development builds [DECIDIDO] + esqueleto app
+    [IMPLEMENTADO: esqueleto Expo SDK 58 con tabs + NativeWind en
+     mobile/, commit 9fe79a73]
 F1  SQLite local + sync_queue + captura de fincas/lotes offline (móvil)
+    [IMPLEMENTADO: SQLite WAL + migraciones user_version, sync_queue
+     persistente, auth+dispositivo, captura con tx atómica, engine
+     push/pull, auto-sync Wi-Fi — commits 580f5e4b + 624d36be;
+     validación en dispositivo físico pendiente]
 F2  m8 (infra sync) + POST /api/v1/sync/push (entidades M3)
     [IMPLEMENTADO: m8/m9 en ambas bases; push create finca/lote,
      commit 5c8b6fe6, 2026-11-04]
 F2b m9 (metadatos entidad) [IMPLEMENTADO junto a m8]
 F3  GET /api/v1/sync/pull + changelog + Web muestra datos sync
-    [PARCIAL: pull implementado I-4 (commit 50568e72); sigue
-     pendiente integrar los writers del CRUD web al changelog —
-     hoy el CRUD web no emite a sync_cambios]
+    [PARCIAL: pull implementado I-4 (commit 50568e72) y writers web
+     integrados I-5 (commit 028a041e); pendiente: Web muestra datos
+     de sync en UI]
 F4  Evidencias 2 fases + SHA-256 + reanudación
 F5  Conflictos UI (móvil resolución + Web corrección-versionada)
 F6  Sync de registros_campo/levantamientos/eventos (ampliar alcance)

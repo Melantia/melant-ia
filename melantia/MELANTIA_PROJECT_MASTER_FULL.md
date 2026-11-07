@@ -3436,6 +3436,23 @@ hatos ganaderos, eventos de trazabilidad, escrituras en
 
 ---
 
+## 2026-11-05 — Registro diario
+
+- **I-7 cerrado**: push delete + tombstones + B-3 para finca/lote
+  (Opción A `has_dependents`, FOR UPDATE) — commit `1733ac5c`,
+  suite 612.
+- **M-1 cerrado**: expiración global de sesiones fail-closed —
+  commit `02f3af7d`, suite **617 passed, 0 skipped**.
+- **F0 + F1 móvil**: esqueleto Expo SDK 58 (`9fe79a73`) y cliente
+  offline-first completo (`580f5e4b` + `624d36be`): SQLite WAL +
+  `sync_queue` persistente, auth cédula, captura atómica, push/pull,
+  auto-sync Wi-Fi. `tsc` 0 errores. **Pendiente validación en
+  dispositivo físico** (dev build + `.env` del proyecto Supabase).
+- **Auditoría npm `mobile/`**: 5 hallazgos = 2 advisories
+  (glob/minimatch, solo tooling Node) — riesgo bajo aceptado y
+  diferido, registrado en ESTADO §H fila 17 (`42196012`).
+- Documentación §H actualizada: filas 5, 13, 15 resueltas; 17 nueva.
+
 # 42. ADMINISTRACIÓN GENERAL DEL ECOSISTEMA MELANTIA
 
 > Estado: **diseño conceptual documentado, NO implementado.**
