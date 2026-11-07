@@ -7,6 +7,7 @@ import '../global.css';
 
 import { useColorScheme } from '@/components/useColorScheme';
 import { AuthProvider, useAuth } from '../context/AuthContext';
+import { SyncProvider } from '../context/SyncContext';
 import LoginScreen from './login';
 
 export {
@@ -44,7 +45,9 @@ export default function RootLayout() {
 
   return (
     <AuthProvider>
-      <RootLayoutNav />
+      <SyncProvider>
+        <RootLayoutNav />
+      </SyncProvider>
     </AuthProvider>
   );
 }
@@ -60,6 +63,9 @@ function RootLayoutNav() {
       ) : (
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="fincas/index" options={{ title: 'Mis Fincas' }} />
+          <Stack.Screen name="fincas/nueva" options={{ title: 'Nueva finca' }} />
+          <Stack.Screen name="fincas/lote" options={{ title: 'Nuevo lote' }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
         </Stack>
       )}

@@ -1,5 +1,6 @@
 // Dashboard F0 — bienvenida MELANTIA (placeholder offline-first).
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { router } from 'expo-router';
 
 export default function DashboardScreen() {
   return (
@@ -9,14 +10,14 @@ export default function DashboardScreen() {
         Bienvenido. Tu finca, lotes y sincronización offline-first
         se habilitan aquí (F1).
       </Text>
-      <View className="mt-8 rounded-2xl bg-white p-5 shadow-sm">
-        <Text className="text-sm font-semibold text-slate-500">
-          ESTADO DE SINCRONIZACIÓN
+      <TouchableOpacity
+        className="mt-8 rounded-2xl bg-emerald-700 p-5 shadow-sm"
+        onPress={() => router.push('/fincas')}>
+        <Text className="text-lg font-bold text-white">Mis Fincas</Text>
+        <Text className="mt-1 text-sm text-emerald-100">
+          Registra fincas y lotes aunque no haya señal.
         </Text>
-        <Text className="mt-2 text-lg text-slate-800">
-          Cola offline: 0 operaciones pendientes
-        </Text>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
